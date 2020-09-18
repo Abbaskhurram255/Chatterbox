@@ -1,2 +1,1 @@
-# JS-bot-by-Alex
- A Javascript-based bot created by Alex
+Chatterbox, a bot by Alex
