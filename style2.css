@@ -1,0 +1,67 @@
+input{
+ margin: 0 5px ;
+ letter-spacing: 0.7px;
+ outline: none;
+ border: 3px solid rgba(0,0,225,0.4);
+ height: 48px;
+ border-radius: 5px;
+ width: 75%;
+ background: rgba(45,100,100,0.3);
+ color: rgba(220,220,220,0.9);
+ font-family: 'Grandstander', sans-serif;
+}
+input::placeholder{
+    color: black;
+}
+h2 {
+ font-size: 40px;
+ color: rgba(5,5,5,0.7);
+ text-align: center;
+ text-shadow: 4px 1px 3px lightgray;
+ font-family: 'Roboto', sans-serif;
+}
+
+#message {
+ padding: 25px;
+ border-radius: 4px;
+ box-shadow: 0 2px 5px 0 rgba(2,2,2,0.5);
+ text-align: left;
+ height: 50%;
+ width: 82%;
+ color: rgba(255,255,255,0.9);
+ margin-top: 25px;
+ letter-spacing: 2px;
+ line-spacing;
+ word-spacing;
+ font-family: 'Josefin Sans', sans-serif;
+ font-size: 20px;
+ 
+}
+.container{
+    display: block;
+    align-content: left;
+    justify-content;
+}
+
+button {
+ width: 20%;
+ outline: none;
+ height: 40px;
+ border: 1px solid white;
+ border-radius: 5px;
+ background: rgba(26,26,56,0.5);
+ box-shadow: 0 4px 5px 0 rgba(30,30,30,0.3);
+}
+
+
+body {
+  background: linear-gradient(to right, rgba(20,10,148,0.3), rgba(10,20,158,0.5));
+}
+
+#searchInput:active {
+	background-color: rgba(225,165,0,0.8);
+}
+
+button:active {
+  color: lightgray;
+}

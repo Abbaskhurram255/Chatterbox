@@ -1,0 +1,92 @@
+
+#time {
+ position: fixed;
+ right: 20px;
+ font-family: 'Josefin Sans', sans-serif;
+ top: 13px;
+ border: 1px solid rgba(0,0,0,0.8);
+ padding: 4px;
+ border-radius: 14px 0 14px 0;
+ /*background:linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,0,1));*/
+ background: linear-gradient(to right, lightcyan, aqua, skyblue);
+ color: #000;
+ height: 4.9vh; 
+ width: 14vh;
+}
+
+input{
+ margin: 0 5px ;
+ letter-spacing: 0.7px;
+ outline: none;
+ border: 3px solid rgba(0,0,225,0.4);
+ height: 48px;
+ border-radius: 5px;
+ width: 75%;
+ background: rgba(45,100,100,0.3);
+ color: rgba(0,0,0,0.7);
+ font-family: 'Grandstander', helvetica;
+}
+
+input::placeholder{
+    color: rgba(0,0,0,0.7);
+}
+h2 {
+ font-size: 40px;
+ font-family: 'Roboto', sans-serif;
+ color: rgba(5,5,5,0.7);
+ text-align: center;
+ text-shadow: 3px 2px 2px lightgray;
+}
+
+#message {
+ padding: 25px;
+ border-radius: 4px;
+ background: linear-gradient(to right, rgba(0,255,0,0.4), rgba(0,255,204,0.6));
+ /* color:rgba(255,0,0,0.9); */ /*use it if you want black font-color for #message */
+ box-shadow: 0 2px 5px 0 rgba(2,2,2,0.5);
+ text-align: left;
+ height: 50%;
+ width: 82%;
+ color: rgba(5,5,10,0.9);
+ font-size: 20px;
+ font-family: 'Josefin Sans', sans-serif;
+ margin-top: 25px;
+ letter-spacing: 2px;
+ line-spacing;
+ word-spacing;
+ overflow;
+ 
+}
+.container{
+    display: block;
+    align-content: left;
+}
+
+button {
+ width: 20%;
+ outline: none;
+ height: 40px;
+ border: 1px solid white;
+ border-radius: 5px;
+ background: rgba(46,46,116,0.5);
+ box-shadow: 1px 4px 5px 1px rgba(30,30,30,0.3);
+}
+
+
+body {
+  background: linear-gradient(to right, rgba(0,255,255,0.4), rgba(40,180,1650,0.6));
+}
+
+#searchInput:active {
+	background-color: rgba(130,130,132,0.6);
+}
+
+button:active {
+  color: lightgray;
+}
+
+/*
+#time:active {
+  color: lightgray;
+}
+*/
