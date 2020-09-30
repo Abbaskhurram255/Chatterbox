@@ -15,11 +15,6 @@ window.onload = () => {
   animation: 'scale',
   duration: 1200,
  });
- tippy('#message', {
-  content: 'Response section. Click me to dismiss the popup.',
-  animation: 'scale',
-  duration: 500,
- });
 
  //optional* $(document).ready(function(){
  	$('#message').animate({height:'toggle', opacity: 'toggle'}, 5);
@@ -44,10 +39,8 @@ var bday = prompt(
     userName !== 'undefined') && (
     userName.length != 0 ||
     userName != '')) {
-   alert("Welcome " + userName +
-    ". I'm your virtual assistant.");
-   console.log("Welcome " +
-    userName);
+   alert(`Welcome ${userName}. I'm your virtual assistant.`);
+   console.log("Welcome " + userName);
   } else {
    alert("Welcome, user!");
    console.log("Welcome, user!");
@@ -77,7 +70,9 @@ var bday = prompt(
    q13 =
    /(date)|(time)|(day)/gi,
    q14 =
-   /(hi)|(hello)|(hey)|(hola)/gi;
+   /(hi)|(hello)|(hey)|(hola)|(howdy)/gi,
+   q15 = /(tic tac toe)/gi,
+   q16 = /(weather)|(temperature)|(wind pressure)|((hot|rainy|cloudy) day)/;
 
   function ask() {
    var q = document.querySelector(
@@ -114,6 +109,7 @@ var bday = prompt(
     $('#message').animate({height:'toggle', opacity: 'toggle'}, 800);
     let age = calc_age(new Date(
      bday));
+     let b = detect.parse(navigator.userAgent);
     msg =
      "<em style='font-weight:600;'>";
     msg +=
@@ -125,6 +121,7 @@ var bday = prompt(
      bday + '</li>' +
      "<li>Your age: " +
      age + "</li></ul></em>";
+     msg += 
     $output.html(msg);
     console.log(msg);
     $('#message').delay(10000).animate({height:'toggle', opacity: 'toggle'}, 800);
@@ -283,7 +280,13 @@ console.log(msg);
         $output.html(msg);
         console.log(msg);
         $('#message').delay(10000).animate({height:'toggle', opacity: 'toggle'}, 800);
-       } else {
+       } else if (q15.test(q)) {
+        let gameWin = window.open('./tic-tac-toe-master/index.html', '_blank', "width=500,height=500,resizable=yes,toolbar=no,menubar=no");
+        if (gameWin) { window.focus(); } else { alert('Please turn on popups on this site.'); }
+      } else if (q16.test(q)) {
+        let weatherWin = window.open('./weather/index.html', '_blank');
+        if (weatherWin) { window.focus(); } else { alert('Please turn on popups on this site.'); }
+      } else {
         $('#message').animate({height:'toggle', opacity: 'toggle'}, 800);
         msg =
          "<code>Sorry, the program is still under development.</code>";
@@ -408,7 +411,7 @@ console.log(msg);
   /* Query function, enable it in case JQuery fails to run
      function $(x) {return document.querySelector(x);} 
 Another method for it:
- // create a global '$' variable
+  create a global '$' variable:
 window.$ = function(selector) {
   return document.querySelector(selector);
 };
