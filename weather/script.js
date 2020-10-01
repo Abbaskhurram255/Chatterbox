@@ -3,10 +3,14 @@ const form = document.querySelector(".top-banner form");
 const input = document.querySelector(".top-banner input");
 const msg = document.querySelector(".top-banner .msg");
 const list = document.querySelector(".ajax-section .cities");
-/*PUT YOUR OWN KEY HERE - THIS MIGHT NOT WORK
-SUBSCRIBE HERE: https://home.openweathermap.org/users/sign_up*/
 const apiKey = "218c8b437c70fc5bc33279042c7b2746";
 
+//auto-detect the location on startup
+window.onload = function() {
+  $.get("https://api.ipdata.co/?api-key=test", function (response) {
+  $(".top-banner input").val(`${response.city}, ${response.country_code}`);
+}, "jsonp");
+}
 form.addEventListener("submit", e => {
   e.preventDefault();
   let inputVal = input.value;
