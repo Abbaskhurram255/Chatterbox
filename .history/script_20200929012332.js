@@ -10,7 +10,6 @@ window.onload = () => {
  } else {
   log("Failed to load JQuery :(");
  }
- //adding a tooltop on the input
  const tippy1 = document.querySelector('#searchInput');
  tippy(tippy1, {
   content: "Try asking for <strong onclick=\"$('#searchInput').val($(this).html());\" onmouseover=\"$(this).css('cursor', 'pointer');\">the weather</strong> or your <strong onclick=\"document.querySelector('#searchInput').value = 'whats my ' + this.innerHTML;\" onmouseover=\"$(this).css('cursor', 'pointer')\">name</strong>, <strong onclick=\"document.querySelector('#searchInput').value = 'whats my ' + this.innerHTML;\" onmouseover=\"$(this).css('cursor', 'pointer')\">age</strong>, or <strong onclick=\"document.querySelector('#searchInput').value = 'whats my ' + this.innerHTML;\" onmouseover=\"$(this).css('cursor', 'pointer')\">bday</strong>",
@@ -35,10 +34,9 @@ window.onload = () => {
 
  //optional* $(document).ready(function(){
  	$('#message').animate({height:'toggle', opacity: 'toggle'}, 5);
-/* (referred to the animation) or you could use this instead: $('#message').slideToggle(); */
+/* (referred to the animation:) or you could use this instead: $('#message').slideToggle(); */
  //optional* });
 } //end block of window.onload method
-
 $(document).ready(function() {
  //JQuery functions go here
 });
@@ -53,7 +51,10 @@ userName = capFirstletter(
 var age;
 var bday = prompt(
   "What's your day? Note: We ask for your birthday only for statistical purposes.\nAccepted format *: YYYY(separator)m(separator)d");
-  if ((userName != null && userName.length != 0) && (/^[a-z]+$/gi.test(userName) && userName != '')) {
+  if ((userName != null &&
+    typeof userName === 'string') && (
+    userName.length != 0 &&
+    userName instanceof String)) {
    alert(`Welcome ${userName}. I'm your virtual assistant.`);
    console.log(`Welcome ${userName}`);
   } else {
@@ -68,17 +69,17 @@ var bday = prompt(
    q3 =
    /(who am I[?]?)|(my bio)|(what do you know about me[?]?)/gi,
    q4 =
-   /(how are you[?]?)|(how('?ve?| have) you been[?]?)/gi,
+   /(how are you[?]?)|(how are you doing[?]?)|(how've you been)|(how have you been[?]?)/gi,
    q5 =
    /((what'?s?|show) my name[?]?)/gi,
-   q6 = /(what'?s? your name[?]?)|(what (can I|do you want me to) call you[?]?)/gi,
+   q6 = /(what'?s? your name[?]?)|(what call you[?]?)/gi,
    q7 = /what are you[?]?/gi,
    q8 =
    /((what'?s?|show) my (birthday|b-day|bday|day)[?]?)/gi,
    q9 =
    /(how old am I[?]?)|((show|what'?s?) my age[?]?)/gi,
    q10 =
-   /(call me by another name)|(change my name)/gi,
+   /(call me by another name)|(change my name)|(call me [a-z])/gi,
    q11 =
    /(change my (dob|bday|day|birthday))/gi,
    q12 = /am I nice[?]?/gi,
@@ -86,16 +87,15 @@ var bday = prompt(
    /what (date|time|day) ?is? ?it?|(date)|(time)/gi,
    q14 =
    /(hi)|(hello)|(hey)|(hola)|(howdy)/gi,
-   q15 = /(tic tac toe)|(game)/gi,
+   q15 = /(tic tac toe)/gi,
    q16 = /(weather)|(temperature)|((hot|rainy|cloudy|sunny) day)/gi,
    q17 = /^$/,
-   q18 = /(calculator)|(calc)|(calculate)/gi,
+   q18 = /(calculator)|(calc)/gi,
    q19 = /(tts)|(speech engine)|(text to speech)|(ebook to audiobook)/gi,
    q20 = /notes/gi,
    q21 = /(todo)|(reminder)/gi,
    q22 = /(music)|(songs)/gi,
-   q23 = /(contact?s?)|(address book)/gi,
-   q24 = /random (stuff|fun)/gi;
+   q23 = /(contact?s?)|(address book)/gi;
 
   function ask() {
    const q = document.querySelector(
@@ -108,7 +108,10 @@ var bday = prompt(
    	$('#message').animate({height:'toggle', opacity: 'toggle'}, 800);
    	/* or you could use this instead: $('#message').delay(10000).slideToggle(800); */
     msg = "Nothing much";
-    if ((userName != null && userName.length != 0) && (/^[a-z]+$/gi.test(userName) && userName != '')) {
+    if ((userName != null &&
+      typeof userName === 'string') && (
+      userName.length != 0 &&
+      userName instanceof String)) {
      msg += ` ${userName}, sup with you?`;
     } else {
      msg += ", sup with you?";
@@ -152,14 +155,14 @@ var bday = prompt(
     $('#message').delay(10000).animate({height:'toggle', opacity: 'toggle'}, 800);
    } else if (q5.test(q)) {
     $('#message').animate({height:'toggle', opacity: 'toggle'}, 800);
-     msg = `Your name is ${userName}. Want it changed? <a onclick="$('#searchInput').val('Change my name');" onmouseover="$(this).css('cursor', 'pointer')" style="color:rgba(0,0,255,0.9);text-decoration:underline;">Click here</a>`;
+     msg = `Your name is ${userName}. Want it changed? <a onclick="$('#searchInput').val('Change my name');" style="color:rgba(0,0,255,0.9);text-decoration:underline;">Click here</a>`;
      $output.html(msg);
       console.log(msg);
       $('#message').delay(10000).animate({height:'toggle', opacity: 'toggle'}, 800);
    } else if (q6.test(q)) {
     $('#message').animate({height:'toggle', opacity: 'toggle'}, 800);
     msg =
-     "Call me Chatterbox :D";
+     "I am your assistant. My name is Chattetbox... Funny, isnt it? :D";
     $output.html(msg);
     console.log(msg);
     $('#message').delay(10000).animate({height:'toggle', opacity: 'toggle'}, 800);
@@ -172,10 +175,10 @@ var bday = prompt(
     $('#message').delay(10000).animate({height:'toggle', opacity: 'toggle'}, 800);
    } else if (q8.test(q)) {
     $('#message').animate({height:'toggle', opacity: 'toggle'}, 800);
-    if ((bday != null && bday !==
+    if ((bday != null || bday !==
       'undefined') && (bday.length !=
-      0 && bday != '')) {
-     msg = `Your day is ${bday}`;
+      0 || bday != '')) {
+     msg = `You day is ${bday}`;
      log(msg);
     } else {
      bday = prompt(
@@ -189,9 +192,9 @@ var bday = prompt(
            $('#message').delay(10000).animate({height:'toggle', opacity: 'toggle'}, 800);
     } else if (q9.test(q)) {
      $('#message').animate({height:'toggle', opacity: 'toggle'}, 800);
-     if ((bday != null && bday !==
+     if ((bday != null || bday !==
        'undefined') && (bday
-       .length != 0 && bday != ''
+       .length != 0 || bday != ''
       )) {
       age = calc_age(new Date(
        bday));
@@ -227,7 +230,10 @@ var bday = prompt(
         userName = capFirstletter(
           userName);
        console.log(`New username: ${userName}`);
-       if ((userName != null && userName.length != 0) && (/^[a-z]+$/gi.test(userName) && userName != '')) {
+       if ((userName != null &&
+        typeof userName === 'string') && (
+        userName.length != 0 &&
+        userName instanceof String)) {
         msg =
         `&#128077; Sucess. I'll call you ${userName} from now on &#128521;`;
         console.log(msg);
@@ -251,11 +257,11 @@ var bday = prompt(
        "Are you sure?");
       if (cfm) {
        bday = prompt(
-        "Resubmit your bday. The format should be: YYYY(separator)m(separator)d\nNote: We ask for your birthday only for statistical proposes.");
-        if ((bday != null &&
+        "Reset your bday. The format should be: YYYY(separator)m(separator)d\nNote: We ask for your birthday only for statistical proposes.");
+        if ((bday != null ||
           bday !==
           'undefined') && (bday
-          .length != 0 && bday != ''
+          .length != 0 || bday != ''
          )) {
          msg =
           `&#128077; Success. Your new bday is ${bday}&#9786;`;
@@ -288,7 +294,7 @@ console.log(msg);
         $('#message').delay(10000).animate({height:'toggle', opacity: 'toggle'}, 800);
        } else if (q14.test(q)) {
         $('#message').animate({height:'toggle', opacity: 'toggle'}, 800);
-        msg = "Hey there &#128075;, want some assistance? Try asking me for <a onclick='$(\"#searchInput\").val($(this).html());' onmouseover='$(this).css(\"cursor\", \"pointer\")' style='font-weight:500;font-style:italic;color:rgba(0,0,255,0.9);text-decoration:underline;'>current date and time</a>";
+        msg = "Hey there &#128075;, want some assistance? Try asking me for <a onclick='$(\"#searchInput\").val($(this).html());' style='font-weight:500;font-style:italic;color:rgba(0,0,255,0.9);text-decoration:underline;'>current date and time</a>";
         $output.html(msg);
         console.log(msg);
         $('#message').delay(10000).animate({height:'toggle', opacity: 'toggle'}, 800);
@@ -323,14 +329,10 @@ console.log(msg);
       } else if (q23.test(q)) {
         let contactsWin = window.open('./js-contact-app-master/dist', '_blank');
         if (contactsWin) { window.focus(); log("Opened Contacts"); } else { alert('Please turn on popups on this site.'); }
-        } else if (q24.test(q)) {
-        	let randStuff = ['./calc/', './music/', './tts/', './js-contact-app-master/dist', './notes-app-project-master/', './tic-tac-toe-master/', './weather', './todo-app-project-master/'];
-        let randStuffWin = window.open(randStuff[Math.floor(Math.random() * randStuff.length)], '_blank');
-        if (randStuffWin) { window.focus(); log("Opened a random app"); } else { alert('Please turn on popups on this site.'); }
       } else {
         $('#message').animate({height:'toggle', opacity: 'toggle'}, 800);
         msg =
-         "Sorry, the program is still under development.";
+         "<code>Sorry, the program is still under development.</code>";
         $output.html(msg);
         console.log(msg);
         $('#message').delay(10000).animate({height:'toggle', opacity: 'toggle'}, 800);
@@ -483,8 +485,7 @@ window.$ = function(selector) {
   return /\((.*)\)/.exec(new Date().toString())[1];
 }
 
-// Speech Engine section
-//start block
+// Speech Engine func
 const playButton = document.querySelector('#askBtn');
 const mesg = document.querySelector('#message');
 const textInput = document.querySelector('#searchInput');
@@ -493,7 +494,7 @@ let currentCharacter;
 if ('speechSynthesis' in window) {
   log("Speech Synthesis is supported!");
 playButton.addEventListener('click', () => {
-if (mesg.innerText != '') {
+if (mesg.innerText != '' && mesg.innerText.length != 0) {
   if (speechSynthesis.speaking) {
   stopText();
 } else {
@@ -508,6 +509,8 @@ if (mesg.innerText != '') {
 })
 }
 
+//Speech Synthesis section
+//start block
 const utterance = new SpeechSynthesisUtterance();
 utterance.addEventListener('end', () => {
   textInput.disabled = false;
@@ -526,8 +529,8 @@ function playText(text) {
   window.speechSynthesis.onvoiceschanged = function() {
     voices = window.speechSynthesis.getVoices();
 }
-utterance.voice = voices.filter(function(voice) { return voice.name == 'Microsoft Zira Desktop - English (United States)'; })[0];
-  /*Or set this if you want Microsoft's default female voice: utterance.voice = voices[10]*/
+utterance.voice = voices.filter(function(voice) { return voice.name == 'Microsoft Zira Desktop - English (United States)'; })[0]
+  /*Or set if you want Microsoft's default female voice: utterance.voice = voices[10]*/
   /* Or if you just wanna use default male voice (MS David_En-US), just don't set any voice.*/
   utterance.pitch = 1.5;
   utterance.voiceURI = "native";
@@ -546,5 +549,4 @@ function stopText() {
   speechSynthesis.resume();
   speechSynthesis.cancel();
 }
-//end block
- 
+

@@ -35,10 +35,9 @@ window.onload = () => {
 
  //optional* $(document).ready(function(){
  	$('#message').animate({height:'toggle', opacity: 'toggle'}, 5);
-/* (referred to the animation) or you could use this instead: $('#message').slideToggle(); */
+/* (referred to the animation:) or you could use this instead: $('#message').slideToggle(); */
  //optional* });
 } //end block of window.onload method
-
 $(document).ready(function() {
  //JQuery functions go here
 });
@@ -68,7 +67,7 @@ var bday = prompt(
    q3 =
    /(who am I[?]?)|(my bio)|(what do you know about me[?]?)/gi,
    q4 =
-   /(how are you[?]?)|(how('?ve?| have) you been[?]?)/gi,
+   /(how are you[?]?)|(how are you doing[?]?)|(how('ve| have) you been[?]?)/gi,
    q5 =
    /((what'?s?|show) my name[?]?)/gi,
    q6 = /(what'?s? your name[?]?)|(what (can I|do you want me to) call you[?]?)/gi,
@@ -86,16 +85,15 @@ var bday = prompt(
    /what (date|time|day) ?is? ?it?|(date)|(time)/gi,
    q14 =
    /(hi)|(hello)|(hey)|(hola)|(howdy)/gi,
-   q15 = /(tic tac toe)|(game)/gi,
+   q15 = /(tic tac toe)/gi,
    q16 = /(weather)|(temperature)|((hot|rainy|cloudy|sunny) day)/gi,
    q17 = /^$/,
-   q18 = /(calculator)|(calc)|(calculate)/gi,
+   q18 = /(calculator)|(calc)|(calculate))/gi,
    q19 = /(tts)|(speech engine)|(text to speech)|(ebook to audiobook)/gi,
    q20 = /notes/gi,
    q21 = /(todo)|(reminder)/gi,
    q22 = /(music)|(songs)/gi,
-   q23 = /(contact?s?)|(address book)/gi,
-   q24 = /random (stuff|fun)/gi;
+   q23 = /(contact?s?)|(address book)/gi;
 
   function ask() {
    const q = document.querySelector(
@@ -152,7 +150,7 @@ var bday = prompt(
     $('#message').delay(10000).animate({height:'toggle', opacity: 'toggle'}, 800);
    } else if (q5.test(q)) {
     $('#message').animate({height:'toggle', opacity: 'toggle'}, 800);
-     msg = `Your name is ${userName}. Want it changed? <a onclick="$('#searchInput').val('Change my name');" onmouseover="$(this).css('cursor', 'pointer')" style="color:rgba(0,0,255,0.9);text-decoration:underline;">Click here</a>`;
+     msg = `Your name is ${userName}. Want it changed? <a onclick="$('#searchInput').val('Change my name');" style="color:rgba(0,0,255,0.9);text-decoration:underline;">Click here</a>`;
      $output.html(msg);
       console.log(msg);
       $('#message').delay(10000).animate({height:'toggle', opacity: 'toggle'}, 800);
@@ -288,7 +286,7 @@ console.log(msg);
         $('#message').delay(10000).animate({height:'toggle', opacity: 'toggle'}, 800);
        } else if (q14.test(q)) {
         $('#message').animate({height:'toggle', opacity: 'toggle'}, 800);
-        msg = "Hey there &#128075;, want some assistance? Try asking me for <a onclick='$(\"#searchInput\").val($(this).html());' onmouseover='$(this).css(\"cursor\", \"pointer\")' style='font-weight:500;font-style:italic;color:rgba(0,0,255,0.9);text-decoration:underline;'>current date and time</a>";
+        msg = "Hey there &#128075;, want some assistance? Try asking me for <a onclick='$(\"#searchInput\").val($(this).html());' style='font-weight:500;font-style:italic;color:rgba(0,0,255,0.9);text-decoration:underline;'>current date and time</a>";
         $output.html(msg);
         console.log(msg);
         $('#message').delay(10000).animate({height:'toggle', opacity: 'toggle'}, 800);
@@ -323,10 +321,6 @@ console.log(msg);
       } else if (q23.test(q)) {
         let contactsWin = window.open('./js-contact-app-master/dist', '_blank');
         if (contactsWin) { window.focus(); log("Opened Contacts"); } else { alert('Please turn on popups on this site.'); }
-        } else if (q24.test(q)) {
-        	let randStuff = ['./calc/', './music/', './tts/', './js-contact-app-master/dist', './notes-app-project-master/', './tic-tac-toe-master/', './weather', './todo-app-project-master/'];
-        let randStuffWin = window.open(randStuff[Math.floor(Math.random() * randStuff.length)], '_blank');
-        if (randStuffWin) { window.focus(); log("Opened a random app"); } else { alert('Please turn on popups on this site.'); }
       } else {
         $('#message').animate({height:'toggle', opacity: 'toggle'}, 800);
         msg =
