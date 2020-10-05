@@ -204,6 +204,7 @@ var bday = prompt(
      } else {
       bday = prompt(
        "Can't show your age on account of not knowing your bday. Please submit your bday first.\nSupported format: YYYY(separator)m(separator)d");
+       bday = capFirstletter(bday);
        age = calc_age(new Date(
         bday)); msg = 'You are ' +
        age;

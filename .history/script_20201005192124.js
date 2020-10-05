@@ -204,6 +204,7 @@ var bday = prompt(
      } else {
       bday = prompt(
        "Can't show your age on account of not knowing your bday. Please submit your bday first.\nSupported format: YYYY(separator)m(separator)d");
+       bday = capFirstletter(bday);
        age = calc_age(new Date(
         bday)); msg = 'You are ' +
        age;
@@ -263,7 +264,6 @@ var bday = prompt(
         } else {
          bday = prompt(
           "Couldn't change your bday. Try resubmitting it.\nNote: We ask for your birthday only for statistical purposes.");
-          bday = capFirstletter(bday);
           msg =
           `&#128077; Success. Your new bday is ${bday}&#9786;`;
 console.log(msg);

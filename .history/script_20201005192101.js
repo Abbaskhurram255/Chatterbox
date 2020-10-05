@@ -252,7 +252,6 @@ var bday = prompt(
       if (cfm) {
        bday = prompt(
         "Resubmit your bday. The format should be: YYYY(separator)m(separator)d\nNote: We ask for your birthday only for statistical proposes.");
-        bday = capFirstletter(bday);
         if ((bday != null &&
           /^[0-9a-zA-Z\s]+$/gi.test(bday)) && (bday
           .length != 0 && bday != ''
@@ -263,7 +262,6 @@ var bday = prompt(
         } else {
          bday = prompt(
           "Couldn't change your bday. Try resubmitting it.\nNote: We ask for your birthday only for statistical purposes.");
-          bday = capFirstletter(bday);
           msg =
           `&#128077; Success. Your new bday is ${bday}&#9786;`;
 console.log(msg);
