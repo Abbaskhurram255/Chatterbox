@@ -254,7 +254,7 @@ var bday = prompt(
         "Resubmit your bday. The format should be: YYYY(separator)m(separator)d\nNote: We ask for your birthday only for statistical proposes.");
         bday = capFirstletter(bday);
         if ((bday != null &&
-          /^[0-9a-zA-Z(-\.\_\s\/)]+$/gi.test(bday)) && (bday
+          /^[0-9a-zA-Z\s]+$/gi.test(bday)) && (bday
           .length != 0 && bday != ''
          )) {
          msg =
