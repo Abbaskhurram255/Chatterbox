@@ -342,7 +342,7 @@ console.log(msg);
       }
       */
 
-     /* A function that capitalizes each first letter of a phrase (string actually) */
+     /* A function that capitalizes each first letter of a string */
       function toTitleCase(phrase) {
   return phrase
     .toLowerCase()

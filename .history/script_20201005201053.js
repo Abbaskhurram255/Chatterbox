@@ -224,7 +224,8 @@ var bday = prompt(
        userName = prompt(
         'What do you want me to call you?',
         userName);
-        userName = toTitleCase(userName);
+        userName = toTitleCase(
+          userName);
        console.log(`New username: ${userName}`);
        if ((userName != null && userName.length != 0) && (/^[a-z\s]+$/gi.test(userName) && userName != '')) {
         msg =
@@ -234,7 +235,8 @@ var bday = prompt(
         userName = prompt(
          "Couldn't change your name. Try resubmitting it."
         );
-        userName = toTitleCase(userName);
+        userName = toTitleCase(
+          userName);
         msg =
          `&#128077; Sucess. I'll call you ${userName} from now on &#128521;`;
         console.log(msg);
@@ -342,7 +344,7 @@ console.log(msg);
       }
       */
 
-     /* A function that capitalizes each first letter of a phrase (string actually) */
+     /* A function that capitalizes each first letter of a string */
       function toTitleCase(phrase) {
   return phrase
     .toLowerCase()
