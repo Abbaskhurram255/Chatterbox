@@ -499,7 +499,7 @@ if (mesg.innerText != '') {
         snack.className = 'show';
         setTimeout(function(){
           snack.className = snack.className.replace("show", ""); }, 5000);
-         }
+  }
 });
 } else {
   log("Speech Synthesis isn't supported by your browser")

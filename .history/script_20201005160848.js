@@ -497,9 +497,8 @@ if (mesg.innerText != '') {
  //Show a snackbar each time Speech Synthesis reads the text
  snack.innerText = "Speech synthesis is ongoing. You can't enter text in the input field until it finishes reading.";
         snack.className = 'show';
-        setTimeout(function(){
-          snack.className = snack.className.replace("show", ""); }, 5000);
-         }
+        setTimeout(function(){ snack.className = snack.className.replace("show", ""); }, 5000);
+  }
 });
 } else {
   log("Speech Synthesis isn't supported by your browser")
