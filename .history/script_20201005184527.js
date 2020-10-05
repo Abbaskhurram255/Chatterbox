@@ -53,7 +53,7 @@ userName = toTitleCase(
 var age;
 var bday = prompt(
   "What's your day? Note: We ask for your birthday only for statistical purposes.\nAccepted format *: YYYY(separator)m(separator)d");
-  if ((userName != null && userName.length != 0) && (/^[a-z\s]+$/gi.test(userName) && userName != '')) {
+  if ((userName != null && userName.length != 0) && (/^[a-z]+$/gi.test(userName) && userName != '')) {
    alert(`Welcome ${userName}. I'm your virtual assistant.`);
    console.log(`Welcome ${userName}`);
   } else {
@@ -226,7 +226,7 @@ var bday = prompt(
         userName = capFirstletter(
           userName);
        console.log(`New username: ${userName}`);
-       if ((userName != null && userName.length != 0) && (/^[a-z\s]+$/gi.test(userName) && userName != '')) {
+       if ((userName != null && userName.length != 0) && (/^[a-z]+$/gi.test(userName) && userName != '')) {
         msg =
         `&#128077; Sucess. I'll call you ${userName} from now on &#128521;`;
         console.log(msg);
@@ -333,16 +333,13 @@ console.log(msg);
        }
       }
 
-      /* A function that capitalizes first letter of a string, but not each
-      function capFirstletter(
+      /* function that capitalizes first-letter of a word */
+      /*function capFirstletter(
       string) {
        return string[0]
        .toUpperCase() + string.slice(
          1);
-      }
-      */
-
-     /* A function that capitalizes each first letter of a string */
+      }*/
       function toTitleCase(phrase) {
   return phrase
     .toLowerCase()

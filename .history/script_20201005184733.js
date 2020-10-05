@@ -333,16 +333,13 @@ console.log(msg);
        }
       }
 
-      /* A function that capitalizes first letter of a string, but not each
-      function capFirstletter(
+      /* function that capitalizes first-letter of a word */
+      /*function capFirstletter(
       string) {
        return string[0]
        .toUpperCase() + string.slice(
          1);
-      }
-      */
-
-     /* A function that capitalizes each first letter of a string */
+      }*/
       function toTitleCase(phrase) {
   return phrase
     .toLowerCase()
