@@ -179,8 +179,8 @@ var bday = prompt(
    q20 = /notes/i,
    q21 = /(todo)|(reminder)|(remind me)/i,
    q22 = /(music)|(songs?)/i,
-   q23 = /(random (stuff|tools|apps))|(apps|tools)/i,
-   q24 = /(random (fun|games))|(bored)|(games)/i,
+   q23 = /(random (stuff|tools|apps))|(tools)/i,
+   q24 = /(random (fun|games?))|(bored)|(games)|(play a game)/i,
    q25 = /breakout/i,
    q26 = /flappy ?bird/i,
    q27 = /hangman/i,
@@ -816,3 +816,27 @@ function stopText() {
 }
 //end block
  
+
+  const modal = document.getElementById("myModal");
+  let closeBtn = document.getElementsByClassName("close")[0];
+  closeBtn.onclick = function() {
+    modal.style.display = "none";
+  }
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+function showFeatures() {
+  modal.style.display = "block";
+  stopText();
+}
+//end block of modal fn
+
+function showLicense() {
+  let licWin = window.open('./License/', '_blank');
+        if (licWin) { window.focus(); log("Revealed the licensed"); } else { alert('Please turn on popups on this site.'); }
+        stopText();
+}
+
