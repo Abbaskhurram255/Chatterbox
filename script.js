@@ -195,7 +195,8 @@ var bday = prompt(
    q36 = /(mi|miles) to (km|kilometers)/i,
    q37 = /(km|kilometers) to (mi|miles)/i,
    q38 = /what (date|day) was it yesterday/i,
-   q39 = /what (date|day) will it be tomorrow/i;
+   q39 = /what (date|day) will it be tomorrow/i,
+   q40 = /monopoly/i;
 
   function ask() {
    const q = document.querySelector(
@@ -351,7 +352,7 @@ var bday = prompt(
        console.log(`New username: ${userName}`);
        if ((userName != null && userName.length != 0) && (/^[a-z\s]+$/gi.test(userName) && userName != '')) {
         msg =
-        `&#128077; Sucess. I'll call you ${userName} from now on &#128521;`;
+        `&#128076; Success. I'll call you ${userName} from now on &#128521;`;
         console.log(msg);
        } else {
         userName = prompt(
@@ -359,7 +360,7 @@ var bday = prompt(
         );
         userName = toTitleCase(userName);
         msg =
-         `&#128077; Sucess. I'll call you ${userName} from now on &#128521;`;
+         `&#128076; Success. I'll call you ${userName} from now on &#128521;`;
         console.log(msg);
        }
         $output.html(msg);
@@ -375,13 +376,13 @@ var bday = prompt(
         "Resubmit your bday. The format should be: YYYY(separator)m(separator)d\nNote: We ask for your birthday only for statistical proposes.");
         if ((bday != null && /^[0-9a-zA-Z(-\.\_\s\/)]+$/gi.test(bday)) && (bday != '' && /^\d{4}[\/.,-\s](\d{1,2}|\b(\w*(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\w*)\b)[\/.,-\s]\d{1,2}$/gi.test(bday))) {
          msg =
-          `&#128077; Success. Your new bday is ${bday}&#9786;`;
+          `&#128076; Success. Your new bday is ${bday}&#9786;`;
          console.log(msg);
         } else {
          bday = prompt(
           "Couldn't change your bday. Try resubmitting it.\nNote: We ask for your birthday only for statistical purposes.");
           msg =
-          `&#128077; Success. Your new bday is ${bday}&#9786;`;
+          `&#128076; Success. Your new bday is ${bday}&#9786;`;
 console.log(msg);
          }
          $output.html(msg);
@@ -466,7 +467,7 @@ console.log(msg);
         msg = "";
         $output.html(msg);
         } else if (q24.test(q)) {
-        	let games = ['./tic-tac-toe-master/', './2D-Breakout-Game-JavaScript-master/', './FlappyBird-JavaScript-master/', './Javascript-Pacman-master/', './hangman-master/', './Rock-Paper-Scissor-master'];
+        	let games = ['./tic-tac-toe-master/', './2D-Breakout-Game-JavaScript-master/', './FlappyBird-JavaScript-master/', './Javascript-Pacman-master/', './hangman-master/', './Rock-Paper-Scissor-master', './Monopoly-master'];
         let gamesWin = window.open(games[Math.floor(Math.random() * games.length)], '_blank');
         if (gamesWin) { window.focus(); log("Launched a random game"); } else { alert('Please turn on popups on this site.'); }
         stopText();
@@ -474,43 +475,43 @@ console.log(msg);
         $output.html(msg);
       } else if (q25.test(q)) {
         let breakOutWin = window.open('./2D-Breakout-Game-JavaScript-master/', '_blank', "width=460,height=550,resizable=no,toolbar=no,menubar=no");
-        if (breakOutWin) { window.focus(); } else { alert('Please turn on popups on this site.'); }
+        if (breakOutWin) { window.focus(); log("Opened Breakout"); } else { alert('Please turn on popups on this site.'); }
         stopText();
         msg = "";
         $output.html(msg);
       } else if (q26.test(q)) {
         let flappyBirdWin = window.open('./FlappyBird-JavaScript-master/', '_blank', "width=380,height=630,resizable=no,toolbar=no,menubar=no");
-        if (flappyBirdWin) { window.focus(); } else { alert('Please turn on popups on this site.'); }
+        if (flappyBirdWin) { window.focus(); log("Opened FlappyBird"); } else { alert('Please turn on popups on this site.'); }
         stopText();
         msg = "";
         $output.html(msg);
       } else if (q27.test(q)) {
         let hangManWin = window.open('./hangman-master/', '_blank');
-        if (hangManWin) { window.focus(); } else { alert('Please turn on popups on this site.'); }
+        if (hangManWin) { window.focus(); log("Opened Hangman"); } else { alert('Please turn on popups on this site.'); }
         stopText();
         msg = "";
         $output.html(msg);
       } else if (q28.test(q)) {
         let pacManWin = window.open('./Javascript-Pacman-master/', '_blank', "width=527,height=527,resizable=no,toolbar=no,menubar=no");
-        if (pacManWin) { window.focus(); } else { alert('Please turn on popups on this site.'); }
+        if (pacManWin) { window.focus(); log("Opened Pacman"); } else { alert('Please turn on popups on this site.'); }
         stopText();
         msg = "";
         $output.html(msg);
       } else if (q29.test(q)) {
-        let stonePSWin = window.open('./Rock-Paper-Scissor-master/', '_blank', "width=830,height=710,resizable=no,toolbar=no,menubar=no");
-        if (stonePSWin) { window.focus(); } else { alert('Please turn on popups on this site.'); }
+        let RockPSWin = window.open('./Rock-Paper-Scissor-master/', '_blank', "width=830,height=710,resizable=no,toolbar=no,menubar=no");
+        if (RockPSWin) { window.focus(); log("Opened Rock Paper Scissor"); } else { alert('Please turn on popups on this site.'); }
         stopText();
         msg = "";
         $output.html(msg);
       } else if (q30.test(q)) {
         let lyricsAppWin = window.open('./lyrics-search-master/', '_blank');
-        if (lyricsAppWin) { window.focus(); } else { alert('Please turn on popups on this site.'); }
+        if (lyricsAppWin) { window.focus(); log("Opened Lyricopedia"); } else { alert('Please turn on popups on this site.'); }
         stopText();
         msg = "";
         $output.html(msg);
       } else if (q31.test(q)) {
         let curConvAppWin = window.open('./Currency-Converter-JS-master/', '_blank', "width=600,height=800,resizable=no,toolbar=no,menubar=no");
-        if (curConvAppWin) { window.focus(); } else { alert('Please turn on popups on this site.'); }
+        if (curConvAppWin) { window.focus(); log("Opened curConv"); } else { alert('Please turn on popups on this site.'); }
         stopText();
         msg = "";
         $output.html(msg);
@@ -586,6 +587,12 @@ console.log(msg);
     msg = tomorrow();
     $output.html(msg);
     $('#message').delay(10000).slideFadeToggle(800);
+  } else if (q40.test(q)) {
+    let monopolyWin = window.open('./Monopoly-master/', '_blank');
+    if (monopolyWin) { window.focus(); log("Opened Monopoly"); } else { alert('Please turn on popups on this site.'); }
+    stopText();
+    msg = "";
+    $output.html(msg);
       } else {
         $('#message').slideFadeToggle(800);
         msg =
@@ -835,8 +842,8 @@ function showFeatures() {
 //end block of modal fn
 
 function showLicense() {
-  let licWin = window.open('./License/', '_blank');
-        if (licWin) { window.focus(); log("Revealed the licensed"); } else { alert('Please turn on popups on this site.'); }
+  let showLicWin = window.open('./License/', '_blank');
+        if (showLicWin) { window.focus(); log("Revealed the license"); } else { alert('Please turn on popups on this site!'); }
         stopText();
 }
 
