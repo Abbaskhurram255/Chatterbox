@@ -632,7 +632,7 @@ state the exclusion of warranty; and each file should have at least
 the "copyright" line and a pointer to where the full notice is found.
 
     Chatterbox... it assists you!
-    Copyright (C) 2020 Alex Puth
+    Copyright (C) 2020  Alex Puth (aka Khurram)
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
