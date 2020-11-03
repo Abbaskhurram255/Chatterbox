@@ -7,7 +7,7 @@ const apiKey = "218c8b437c70fc5bc33279042c7b2746";
 
 //auto-detect the location on startup
 window.onload = function() {
-  $.get("https://api.ipdata.co/?api-key=test", function (response) {
+  $.get("https://api.ipdata.co/?api-key=63a8b1ef829b0a90909b1bb7e9c931fe1ffb70e27378da4c302e22c7", function (response) {
   $(".top-banner input").val(`${response.city}, ${response.country_code}`);
 }, "jsonp");
 }
