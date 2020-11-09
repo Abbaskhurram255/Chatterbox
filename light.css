@@ -6,7 +6,8 @@
   top: 13px;
   border: 1px solid rgba(0,0,0,0.8);
   padding: 4px;
-  border-radius: 15px 0 15px 0;
+  box-shadow: 0 2px 5px 0 rgba(2, 2, 2, 0.5);
+  border-radius: 16px 0 16px 0;
   /*background:linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,0,1));*/
   background: linear-gradient(to right, lightcyan, aqua, skyblue);
   color: #000;
@@ -168,12 +169,19 @@
  /* end */
  
  .navbar-container {
-   width: 75%;
+   width: 55%;
    position: absolute;
    display: inline;
    overflow-x: hidden;
    margin-left: 8px;
  }
+
+ /* if screen width is greater than 768px (which is equal to 8 in), set navbar's width to 25% */
+ @media screen and (min-width: 768px) {
+  .navbar-container {
+    width: 30%;
+  }
+}
  
  .menu-toggler {
    display: none;
@@ -270,3 +278,22 @@
   cursor: pointer;
 }
 
+#recIcon {
+  position: relative;
+  top: 2.5vh;
+}
+
+@media screen and (min-width: 768px) {
+#recIcon {
+height: 42px;
+width: 42px;
+top: 1.5vh;
+}
+}
+
+/* @media screen and (min-width: 1024px) {
+#recIcon {
+height: 48px;
+width: 48px;
+}
+} */
