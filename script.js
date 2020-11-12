@@ -445,7 +445,8 @@ const q1 = /what'?s?( is)? (up|popping)/i,
   q73 = /(day (planner|scheduler))|((plan|schedule)( my)? day)/i,
   q74 = /(chase( |-)the( |-)box)|(box chaser)/i,
   q75 = /giphy/i,
-  q76 = /(pass(code|word|phrase) generator)|(generate( me)? a ?(random|difficult)? pass(code|word|phrase))/i;
+  q76 = /(pass(code|word|phrase) generator)|(generate( me)? a ?(random|difficult)? pass(code|word|phrase))/i,
+  q77 = /the (logic game|constructor)/i;
 
 function ask() {
   const q = document.querySelector("#searchInput").value;
@@ -830,6 +831,7 @@ function ask() {
       "../foto-flick/",
       "../Trivia-Db/",
       "./box-chaser/",
+      "./The Constructor/"
     ];
     let gamesWin = window.open(
       games[Math.floor(Math.random() * games.length)],
@@ -1453,6 +1455,17 @@ function ask() {
       if (pwGenAppWin) {
         window.focus();
         log("Launched Password Generator");
+      } else {
+        alert("Please enable popups for this site!");
+      }
+      stopText();
+      msg = "";
+      $output.html(msg);
+    } else if (q77.test(q)) {
+      let theConstructorWin = window.open("./The Constructor/", "_blank");
+      if (theConstructorWin) {
+        window.focus();
+        log("Launched The Constructor");
       } else {
         alert("Please enable popups for this site!");
       }
