@@ -399,7 +399,7 @@ const q1 = /what'?s?( is)? (up|popping)/i,
   q27 = /hangman/i,
   q28 = /pacman(ia)?/i,
   q29 = /(rock|stone) paper scissors?/i,
-  q30 = /(lyrics)|(encycl|lyric)opedia/i,
+  q30 = /(lyrics)|((encycl|lyric)opedia)/i,
   q31 = /(currency)|(exchange rates?)/i,
   q32 = /(what )?day of year( is it)?/i,
   q33 = /is (this|it|today) a weekday today/i,
@@ -436,17 +436,23 @@ const q1 = /what'?s?( is)? (up|popping)/i,
   q64 = /(dungeon crawler)|(rogue-?life)/i,
   q65 = /(fotoflick)|(puzzle game)|((photo|picture) puzzle)/i,
   q66 = /((motivate|inspire) me)|(I'?( ?a)?m demotivated)/i,
-  q67 = /(space(X|station)?|nasa) (data|live)/i,
-  q68 = /(Snapshots?)|(landscapes)|(wallpapers)/i,
+  q67 = /((space(X|station)|nasa) (data|live))|(live( outer)? space)/i,
+  q68 = /(snapshots?)|(landscapes)|(wallpapers)/i,
   q69 = /features/i,
   q70 = /(trivia)|(quiz)|(game of questionnares)/i,
   q71 = /(movies (&|and)|ratings? for)( tv)? (series|serials?)/i,
-  q72 = /(movie(s')? ratings?)|(ratings? for movies?)/i,
+  q72 = /(movie(s')? (cast|ratings?))|(ratings? (for|of) movies?)/i,
   q73 = /(day (planner|scheduler))|((plan|schedule)( my)? day)/i,
   q74 = /(chase( |-)the( |-)box)|(box chaser)/i,
   q75 = /giphy/i,
-  q76 = /(pass(code|word|phrase) generator)|(generate( me)? a ?(random|difficult)? pass(code|word|phrase))/i,
-  q77 = /the (logic game|constructor)/i;
+  q76 = /(pass(code|word|phrase) generator)|(generate( me)? (a )?(random|difficult)? pass(code|word|phrase))/i,
+  q77 = /the (logic game|constructor)/i,
+  q78 = /(fisave)|(net ?worth track(er|ing))|(track (my net ?worth|net ?worth of mine))/i,
+  q79 = /(habits? (break|track)(er|ing))|((break|track) ((a |my )(bad )?habits?|(a( bad)? habit|(bad )?habits) of mine))/i,
+  q80 = /(habits? build(er|ing))|(help( me)? (with building|build) a( good)? habit)/i,
+  q81 = /unit conver(sion|ter)/i,
+  q82 = /(game of (games|adventures?))|(adventurous game)/i,
+  q83 = /my( fave?(orite)?)? ?book(s')? ?list/i;
 
 function ask() {
   const q = document.querySelector("#searchInput").value;
@@ -1362,7 +1368,7 @@ function ask() {
     let spaceDataAppWin = window.open("../live-spacestation-data/", "_blank");
     if (spaceDataAppWin) {
       window.focus();
-      log("Launched Space info app");
+      log("Launched Space_data app");
     } else {
       alert("Please enable popups for this site!");
     }
@@ -1466,6 +1472,72 @@ function ask() {
       if (theConstructorWin) {
         window.focus();
         log("Launched The Constructor");
+      } else {
+        alert("Please enable popups for this site!");
+      }
+      stopText();
+      msg = "";
+      $output.html(msg);
+      } else if (q78.test(q)) {
+      let fisaveWin = window.open("../fisave-networth-tracking-app/", "_blank");
+      if (fisaveWin) {
+        window.focus();
+        log("Launched Fisave");
+      } else {
+        alert("Please enable popups for this site!");
+      }
+      stopText();
+      msg = "";
+      $output.html(msg);
+    } else if (q79.test(q)) {
+      let habitTrackingAppWin = window.open("../habit-tracker/", "_blank");
+      if (habitTrackingAppWin) {
+        window.focus();
+        log("Launched Habit_Tracker");
+      } else {
+        alert("Please enable popups for this site!");
+      }
+      stopText();
+      msg = "";
+      $output.html(msg);
+    } else if (q80.test(q)) {
+      let habitBuildingAppWin = window.open("../habit-builder/", "_blank");
+      if (habitBuildingAppWin) {
+        window.focus();
+        log("Launched Habit_Builder");
+      } else {
+        alert("Please enable popups for this site!");
+      }
+      stopText();
+      msg = "";
+      $output.html(msg);
+    } else if (q81.test(q)) {
+      let unitConvAppWin = window.open("./unit-conv/", "_blank");
+      if (unitConvAppWin) {
+        window.focus();
+        log("Launched Unit_Converter");
+      } else {
+        alert("Please enable popups for this site!");
+      }
+      stopText();
+      msg = "";
+      $output.html(msg);
+    } else if (q82.test(q)) {
+      let rpgGameWin = window.open("./RPG-game/", "_blank");
+      if (rpgGameWin) {
+        window.focus();
+        log("Launched Game_Of_Games");
+      } else {
+        alert("Please enable popups for this site!");
+      }
+      stopText();
+      msg = "";
+      $output.html(msg);
+    } else if (q83.test(q)) {
+      let bookListAppWin = window.open("./Mybooklist/", "_blank");
+      if (bookListAppWin) {
+        window.focus();
+        log("Launched MyBookList");
       } else {
         alert("Please enable popups for this site!");
       }
@@ -1737,17 +1809,28 @@ window.onclick = function (event) {
   }
 };
 
-function showFeatures() {
+const showFeatures = () => {
   modal.style.display = "block";
   stopText();
 }
 //end block of modal fn
 
-function showLicense() {
+const showLicense = () => {
   let showLicWin = window.open("./License/", "_blank");
   if (showLicWin) {
     window.focus();
     log("Revealed the license");
+  } else {
+    alert("Please enable popups for this site!");
+  }
+  stopText();
+}
+
+const showPortfolio = () => {
+  let showPortfolioWin = window.open("../", "_blank");
+  if (showPortfolioWin) {
+    window.focus();
+    log("Sent user to the portfolio");
   } else {
     alert("Please enable popups for this site!");
   }
