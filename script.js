@@ -403,7 +403,7 @@ const q1 = /what'?s?( is)? (up|popping)/i,
   q31 = /(currency)|(exchange rates?)/i,
   q32 = /(what )?day of year( is it)?/i,
   q33 = /is (this|it|today) a weekday today/i,
-  q34 = /is (it|this) a weekend( day)? today/i,
+  q34 = /is (it|this) a weekend( day)? (today|yet)/i,
   q35 = /numbers? to roman/i,
   q36 = /(mi|miles) (and|to) (km|kilometers)/i,
   q37 = /(km|kilometers) (and|to) (mi|miles)/i,
@@ -1868,7 +1868,7 @@ window.onclick = function (event) {
 const showFeatures = () => {
   modal.style.display = "block";
   stopText();
-  msg = "Don't underestimate me, because I can perform logical operations too. For example, if you asked me to inform you whether 2020 or 2021 is a leap year, I'd let you know. And if you asked me to inform you of the date it'll be tomorrow or of the date it was yesterday, I'd let you know. Further, if you asked me to inform you whether it is a weekday today or weekend yet, I'd let you know.";
+  msg = "Don't underestimate me, because I can perform logical operations too. For example, if you asked me to inform you whether 2020 or 2021 is a leap year, I'd let you know. And if you asked me to inform you of the date it'll be tomorrow or the date it was yesterday, I'd let you know. Further, if you asked me to inform you whether it is a weekday today or weekend yet, I'd let you know.";
   playText(msg);
 }
 //end block of modal fn
