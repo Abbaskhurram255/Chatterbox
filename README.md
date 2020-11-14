@@ -29,7 +29,7 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
     *   Habit Building Helper; build a new habit, today, a good one!
     *   Jukebox
     *   Notes
-    *   Text Reader (commonly used for book reading)
+    *   Text Reader (can read you any sort of text, loudly!)
     *   Live Weather
     *   Lyricopedia
     *   Meal Finder / Recipes app
@@ -50,6 +50,7 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
     *   Stopwatch/ Timer
     *   Todo/Reminder
     *   Unit Converter
+    *   Voice-controlled PDF Viewer/ Book Reader (again, Speech Recognition isn't supported by browsers other than Chrome & Samsung Internet)
     *   Voice Notes
     *   Weight Units Converter
 
@@ -62,12 +63,15 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
     *   FlappyBird
     *   Game Of Games, an adventurous RPG
     *   Hangman
+    *   Light Maze
+    *   Math game
     *   Maze game
     *   Miner of Lava
     *   Monopoly (experimental)
     *   Memory Game
     *   Pacman
     *   Rock Paper Scissors
+    *   Simon Says
     *   Space Invaders
     *   Tic Tac Toe
     *   The Construstor, a game of logic
