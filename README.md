@@ -19,7 +19,7 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
     *   Bad Habit Tracker; track your bad habits, today!
     *   BMI Calculator
     *   Calculator
-    *   Calendar/ event scheduler
+    *   Calendar
     *   CaloTracker
     *   Simple Canvas/Drawing App (beta)
     *   Currency Converter
