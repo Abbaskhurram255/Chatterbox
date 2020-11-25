@@ -457,7 +457,8 @@ const q1 = /what'?s?( is)? (up|popping)/i,
   q85 = /simon/i,
   q86 = /light maze/i,
   q87 = /^((book|pdf) ((pre)?viewer|reader))|((read|(pre)?view)( me)? (a (document|pdf)|pdf('?s)?))$/i,
-  q88 = /(^(open|launch|run)?( me)? ?travels? ?(app|plan(ning|s|ner))$)|(help me ?(to|with|in)? plan(ning)? travels)/i;
+  q88 = /(^(open|launch|run)?( me)? ?travels? ?(app|plan(ning|s|ner))$)|(help me ?(to|with|in)? plan(ning)? travels)/i,
+  q89 = /truth or dare/i;
 
 function ask() {
   const q = document.querySelector("#searchInput").value;
@@ -847,6 +848,7 @@ function ask() {
       "../math-flash-cards/",
       "https://alexs-simon-says.netlify.app/",
       "./light-maze/",
+      "https://truth-or-dare-by-alex.netlify.app",
     ];
     let gamesWin = window.open(
       games[Math.floor(Math.random() * games.length)],
@@ -1589,7 +1591,18 @@ function ask() {
       let travelPlansWin = window.open("../travel-planner/", "_blank");
       if (travelPlansWin) {
         window.focus();
-        log("Launched Travel app");
+        log("Launched Travels app");
+      } else {
+        alert("Please enable popups for this site!");
+      }
+      stopText();
+      msg = "";
+      $output.html(msg);
+    } else if (q89.test(q)) {
+      let truthOrDareWin = window.open("https://truth-or-dare-by-alex.netlify.app", "_blank");
+      if (truthOrDareWin) {
+        window.focus();
+        log("Launched Truth_or_Dare");
       } else {
         alert("Please enable popups for this site!");
       }

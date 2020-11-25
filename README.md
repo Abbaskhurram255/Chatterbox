@@ -76,6 +76,7 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
     *   Tic Tac Toe
     *   The Construstor, a game of logic
     *   Trivia game
+    *   Truth or Dare
 
 Note:
 
