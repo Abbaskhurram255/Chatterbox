@@ -32,6 +32,7 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
     *   Live Weather
     *   Lyricopedia
     *   Meal Finder / Recipes app
+    *   Metronome
     *   Mortgage Calculator
     *   Motivator
     *   MovieDB, Movies app
