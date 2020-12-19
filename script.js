@@ -1,10 +1,10 @@
 /* load default (light) theme every time the window (aka body object (DOM document.body) loads) nd show a tooltip whenever searchInput is active. Run startTime function too */
 window.onload = () => {
+  startTime();
   $lTheme.attr("media", "");
   $dTheme.attr("media", "none");
   islTh = true;
   isdTh = false;
-  startTime();
   if (jQuery) {
     log("JQuery loaded successfully!");
   } else {
@@ -147,7 +147,7 @@ const isBday = function (dat) {
   let todaysDate = new Date();
 
   return inputDate.setHours(0, 0, 0, 0) == todaysDate.setHours(0, 0, 0, 0);
-};
+}; 
 
 // function that lets user know whether its a leap year
 function isLeapYear(year) {
@@ -414,7 +414,7 @@ const q1 = /what'?s?( is)? (up|popping)/i,
   q42 = /(audio (visuali(z|s)er|player))|(play( local)? audio)/i,
   q43 = /breaking bad cast/i,
   q44 = /(b(ody )?m(ass )?i(ndex)?)|(do I overweigh)/i,
-  q45 = /^(execute|launch|play( me)?|run) maze/i,
+  q45 = /^(execute|launch|play( me)?|run) (the )?maze/i,
   q46 = /calendar/i,
   q47 = /my recipes/i,
   q48 = /(space invaders)|(invasion game)/i,
