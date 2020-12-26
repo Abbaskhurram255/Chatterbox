@@ -257,7 +257,7 @@ if (rslt==0 || rslt==365) {
           snack.className = snack.className.replace("show", "");
         }, 4000);
   }
-}
+};
 
 const daystilNYE = () => {
 var nextNewYear, msPerDay;
@@ -384,7 +384,7 @@ const q1 = /what'?s?( is)? (up|popping)/i,
   q12 = /am I nice/i,
   q13 = /(what (date|time|day) is it)|((current|local)( date and)? time)|(date today)|(time now)|(date and time)/i,
   q14 = /^(hi)|(hello)|(hey)|(hola)|(howdy)/i,
-  q15 = /tic tac toe/i,
+  q15 = /tic( |-)tac( |-)toe/i,
   q16 = /(weather)|(temperature today)|((hot|rainy|cloudy|sunny) day)/i,
   q17 = /^$/,
   q18 = /((open|run|launch|execute) calc(ulator)?)|(calculate(?:bmi))/i,
@@ -727,7 +727,7 @@ function ask() {
     let ticTacToeWin = window.open(
       "./tic-tac-toe/",
       "_blank",
-      "width=500,height=500,resizable=yes,toolbar=no,menubar=no"
+      "width=500,height=900,resizable=yes,toolbar=no,menubar=no"
     );
     if (ticTacToeWin) {
       window.focus();
