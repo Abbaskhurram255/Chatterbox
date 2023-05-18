@@ -46,9 +46,10 @@
   box-shadow: 0 2px 5px 0 rgba(2,2,2,0.5);
   text-align: left;
   height: 50%;
-  width: 73%;
+  width: 65%;
   color: rgba(255,255,255,0.9);
   margin-top: 25px;
+  margin-left: 11%;
   letter-spacing: 2px;
   /* add line-spacing: [n]px;
   word-spacing: [n]px;
