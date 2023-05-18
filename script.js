@@ -1853,10 +1853,10 @@ function playText(text) {
   window.speechSynthesis.onvoiceschanged = function () {
     voices = window.speechSynthesis.getVoices();
   };
-  utterance.voice = voices.filter(function (voice) {
+  /* utterance.voice = voices.filter(function (voice) {
     return voice.name == "Microsoft Zira Desktop - English (United States)";
-  })[0];
-  /*Or set this if you want Microsoft's default female voice: utterance.voice = voices[10]*/
+  })[0]; */
+  utterance.voice = voices[10]
   /* Or if you just wanna use default male voice (MS David_En-US), just don't set any voice.*/
   utterance.pitch = 1.5;
   utterance.voiceURI = "native";
