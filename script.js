@@ -1670,7 +1670,7 @@ function ask() {
     showLicense();
   } else if (q92.test(q)) {
     $("#message").slideFadeToggle(800);
-    msg = "Jan'na chahte ho kis ne banaya mujhay? Ek khubsurat si larki nay! Actually, mujhe bananay wali kaa naam Ayesha hi hay, ha'haa surprise!";
+    msg = "Janna chahtay ho kis nay banaaya mujhay? Ek khubsurat si larki nay! Actually, mujhe bananay wali kaa naam Ayesha hee hay, surprise!";
     $output.html(msg);
     console.log(msg);
     $("#message").delay(10000).slideFadeToggle(800);
