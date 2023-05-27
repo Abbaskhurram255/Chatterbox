@@ -367,8 +367,8 @@ if (
 }
 
 /* regular expressions/ questions to be answered: */
-const q1 = /what'?s?( is)? (up|popping)/i,
-  q2 = /who('?re| are) you/i,
+const q1 = /what'?s?( is)? (up|popping)|/i,
+  q2 = /(who('?re| are) you)|(ho kon tum)/i,
   q3 = /(who am I)|(my (info|bio))|(what( do)? you know about me)/i,
   q4 = /(how('?re| are) you)|(how('?ve?| have) you been)/i,
   q5 = /(what'?s?( is)?|show) my name/i,
@@ -379,7 +379,7 @@ const q1 = /what'?s?( is)? (up|popping)/i,
   q10 = /(call me by another|(change|(re)?save) my) name/i,
   q11 =
   /(((change|resubmit) my|incorrect) (dob|bday|(birth|b(-)?)day))|((dob|bday|(birth|b(-)?)day) is incorrect)/i,
-  q12 = /am I nice/i,
+  q12 = /(me (kesa Laga|kesi lagi))|(ham kese lage)/i,
   q13 =
   /(what (date|time|day) is it)|((current|local)( date and)? time)|(date today)|(time now)|(date and time)/i,
   q14 = /^(hi)|(hello)|(hey)|(hola)|(howdy)/i,
@@ -474,7 +474,8 @@ const q1 = /what'?s?( is)? (up|popping)/i,
   /(^(open|launch|run)?( me)? ?travels? ?(app|plan(ning|s|ner))$)|(help me ?(to|with|in)? plan(ning)? travels)/i,
   q89 = /truth or dare/i,
   q90 = /metronome/i,
-  q91 = /you licensed/i;
+  q91 = /you licensed/i,
+  q92 = /kis ne (banaya|create|develop kia) tumh(e|ay)/i;
 
 function ask() {
   const q = document.querySelector("#searchInput").value;
@@ -1667,6 +1668,12 @@ function ask() {
     $output.html(msg);
   } else if (q91.test(q)) {
     showLicense();
+  } else if (q92.test(q)) {
+    $("#message").slideFadeToggle(800);
+    msg = "Jan'na chahte ho kis ne banaya mujhay? Ek khubsurat si larki nay! Actually, mujhe bananay wali kaa naam Ayesha hi hay, ha'haa surprise!";
+    $output.html(msg);
+    console.log(msg);
+    $("#message").delay(10000).slideFadeToggle(800);
   } else {
     $("#message").slideFadeToggle(800);
     msg = "Sorry, the program is still under development.";
