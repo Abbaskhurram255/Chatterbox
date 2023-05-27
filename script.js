@@ -13,10 +13,9 @@ window.onload = () => {
   //adding a tooltop on the input
   const tippy1 = document.querySelector("#searchInput");
   tippy(tippy1, {
-    content:
-      "Try asking me to show <strong onclick=\"document.querySelector('#searchInput').value = 'What is the ' + this.innerText + ' like right now?';\" onmouseover=\"$(this).css('cursor', 'pointer');\">weather</strong> or to open <strong onclick=\"$('#searchInput').val($(this).text());\" onmouseover=\"$(this).css('cursor', 'pointer')\">calendar</strong>, or <strong onclick=\"$('#searchInput').val($(this).text())\" onmouseover=\"$(this).css('cursor', 'pointer')\">show exchange rates</strong>",
+    content: "Try asking me to show <strong onclick=\"document.querySelector('#searchInput').value = 'What is the ' + this.innerText + ' like right now?';\" onmouseover=\"$(this).css('cursor', 'pointer');\">weather</strong> or to open <strong onclick=\"$('#searchInput').val($(this).text());\" onmouseover=\"$(this).css('cursor', 'pointer')\">calendar</strong>, or <strong onclick=\"$('#searchInput').val($(this).text())\" onmouseover=\"$(this).css('cursor', 'pointer')\">show exchange rates</strong>",
     followCursor: "horizontal",
-    interactive: true /* To add interactions to and make your tippy's text highlight-able and clickable*/,
+    interactive: true /* To add interactions to and make your tippy's text highlight-able and clickable*/ ,
     appendTo: document.body,
     animation: "scale",
     duration: 1200,
@@ -25,7 +24,6 @@ window.onload = () => {
     arrow: true,
     maxWidth: 370,
   });
-  
 
   // Run ASK function whenever the user presses return (enter) key when they are done typing the query
   $("#searchInput").keydown(function (e) {
@@ -60,83 +58,82 @@ window.onload = () => {
 $(document).ready(function () {
   //JQuery functions go here
 });
-/* To remind you that the variable holds a jQuery selection, use $(varName) method to declare it. Plain JavaScript's method of variable declarations also work tho*/
+/* To remind you that the variable holds a jQuery selection, use $(varName) method to declare it. Plain JavaScript's method of variable declarations also work tho */
 
 // SOME USEFUL FUNCTIONS
 
 //Speech recognition func
 
 // let isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
-if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
+if ("SpeechRecognition" in window || "webkitSpeechRecognition" in window) {
   // speech recognition API supported
-    let SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-    let recognition = new SpeechRecognition();
-    log("Speech recognition is supported by your browser!");
-var noteTextarea = $('#searchInput');
-var instructions = $('#message');
+  let SpeechRecognition =
+    window.SpeechRecognition || window.webkitSpeechRecognition;
+  let recognition = new SpeechRecognition();
+  log("Speech recognition is supported by your browser!");
+  var noteTextarea = $("#searchInput");
+  var instructions = $("#message");
 
-var noteContent = '';
+  var noteContent = "";
 
-recognition.continuous = false;
+  recognition.continuous = false;
 
-// This block is called every time the Speech APi captures a line. 
-recognition.onresult = function(event) {
-
+  // This block is called every time the Speech APi captures a line.
+  recognition.onresult = function (event) {
     let current = event.resultIndex;
 
     // Get a transcript of what was said.
     var transcript = event.results[current][0].transcript;
 
-    var mobileRepeatBug = (current == 1 && transcript == event.results[0][0].transcript);
+    var mobileRepeatBug =
+      current == 1 && transcript == event.results[0][0].transcript;
 
     if (!mobileRepeatBug) {
-        noteContent = transcript;
-        noteTextarea.val(noteContent);
-        ask();
-        if (mesg.innerText != '') {
-  if (speechSynthesis.speaking) {
-  stopText();
-  }
-  playText(mesg.innerText);
-  }
+      noteContent = transcript;
+      noteTextarea.val(noteContent);
+      ask();
+      if (mesg.innerText != "") {
+        if (speechSynthesis.speaking) {
+          stopText();
+        }
+        playText(mesg.innerText);
+      }
     }
-};
+  };
 
-
-recognition.onerror = function(event) {
-    if (event.error == 'no-speech') {
+  recognition.onerror = function (event) {
+    if (event.error == "no-speech") {
       let snack = document.querySelector("#snackbar");
-      snack.innerText =
-          "No speech was detected. Try again.";
-        snack.className = "show";
-        setTimeout(function () {
-          snack.className = snack.className.replace("show", "");
-        }, 3500);
+      snack.innerText = "No speech was detected. Try again.";
+      snack.className = "show";
+      setTimeout(function () {
+        snack.className = snack.className.replace("show", "");
+      }, 3500);
     }
-};
+  };
 
-
-$('#recIcon').on('click', function() {
-	stopText();
+  $("#recIcon").on("click", function () {
+    stopText();
     recognition.start();
-});
+  });
 
-
-/* Sync the text inside the text area with the noteContent variable.*/
-noteTextarea.on('input', function() {
+  /* Sync the text inside the text area with the noteContent variable.*/
+  noteTextarea.on("input", function () {
     noteContent = $(this).val();
-});
+  });
 } else {
-  let err = "Unfortunately, Speech Recognition is not supported by your browser. The microphone function won't work :(";
+  let err =
+    "Unfortunately, Speech Recognition is not supported by your browser. The microphone function won't work :(";
   log(err);
   alert(err);
 }
 
-
 //JQuery function that makes it easy to toggle a slide w fade animation
 $.fn.slideFadeToggle = function (speed, easing, callback) {
-  return this.animate(
-    { opacity: "toggle", height: "toggle" },
+  return this.animate({
+      opacity: "toggle",
+      height: "toggle",
+    },
     speed,
     easing,
     callback
@@ -148,7 +145,7 @@ const isBday = function (dat) {
   let todaysDate = new Date();
 
   return inputDate.setHours(0, 0, 0, 0) == todaysDate.setHours(0, 0, 0, 0);
-}; 
+};
 
 // function that checks to see if it (or the query) a leap year
 function isLeapYear(year) {
@@ -220,112 +217,112 @@ const tomorrow = () => {
 };
 
 const detectDeviceType = () => {
-  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? "Mobile" : "Desktop";
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    ) ?
+    "Mobile" :
+    "Desktop";
 };
 
 const daystilXmas = () => {
-let tday=new Date();
-var cmas=new Date(tday.getFullYear(), 11, 25);
-if (tday.getMonth()==11 && tday.getDate()>=25) 
-{
-cmas.setFullYear(cmas.getFullYear()+1); 
-}  
-let oneDay=1000*60*60*24;
-let rslt = Math.ceil((cmas.getTime()-tday.getTime())/(oneDay));
-if (rslt==0 || rslt==365) {
-  /*show a snack here saying "Merry Christmas!"...*/
-  let snack = document.querySelector("#snackbar");
-      snack.innerText =
-          "Merry Christmas!";
-        snack.className = "show";
-        setTimeout(function () {
-          snack.className = snack.className.replace("show", "");
-        }, 4000);
-} else if (rslt==1) {
-  let snack = document.querySelector("#snackbar");
-      snack.innerText =
-          "Reminder: It's Christmas tomorrow!";
-        snack.className = "show";
-        setTimeout(function () {
-          snack.className = snack.className.replace("show", "");
-        }, 4000);
-} else if (rslt<7 && rslt!=0 && rslt!=1) {
-  let snack = document.querySelector("#snackbar");
-      snack.innerText =
-          `Reminder: Only ${rslt} days left until Christmas!`;
-        snack.className = "show";
-        setTimeout(function () {
-          snack.className = snack.className.replace("show", "");
-        }, 4000);
+  let tday = new Date();
+  var cmas = new Date(tday.getFullYear(), 11, 25);
+  if (tday.getMonth() == 11 && tday.getDate() >= 25) {
+    cmas.setFullYear(cmas.getFullYear() + 1);
+  }
+  let oneDay = 1000 * 60 * 60 * 24;
+  let rslt = Math.ceil((cmas.getTime() - tday.getTime()) / oneDay);
+  if (rslt == 0 || rslt == 365) {
+    /*show a snack here saying "Merry Christmas!"...*/
+    let snack = document.querySelector("#snackbar");
+    snack.innerText = "Merry Christmas!";
+    snack.className = "show";
+    setTimeout(function () {
+      snack.className = snack.className.replace("show", "");
+    }, 4000);
+  } else if (rslt == 1) {
+    let snack = document.querySelector("#snackbar");
+    snack.innerText = "Reminder: It's Christmas tomorrow!";
+    snack.className = "show";
+    setTimeout(function () {
+      snack.className = snack.className.replace("show", "");
+    }, 4000);
+  } else if (rslt < 7 && rslt != 0 && rslt != 1) {
+    let snack = document.querySelector("#snackbar");
+    snack.innerText = `Reminder: Only ${rslt} days left until Christmas!`;
+    snack.className = "show";
+    setTimeout(function () {
+      snack.className = snack.className.replace("show", "");
+    }, 4000);
   }
 };
 
 const daystilNYE = () => {
-var nextNewYear, msPerDay;
-let curYr = new Date().getFullYear();
-let today = new Date();
-nextNewYear = new Date("January 1, 2000 00:00:00")
-        nextNewYear.setYear(curYr + 1);
-        msPerDay = 24 * 60 * 60 * 1000;
-        const noofdayslefttilNYE = Math.floor((nextNewYear.getTime() - today.getTime()) / msPerDay);
-if (noofdayslefttilNYE==0 || noofdayslefttilNYE==365) {
-  /*show a snack here saying "Happy New Year's Eve!"...*/
-  let snack = document.querySelector("#snackbar");
-      snack.innerText =
-          "Happy New Year's Eve!";
-        snack.className = "show";
-        setTimeout(function () {
-          snack.className = snack.className.replace("show", "");
-        }, 4000);
-} else if (noofdayslefttilNYE==1) {
-  let snack = document.querySelector("#snackbar");
-      snack.innerText =
-          "Reminder: It's New Year's Eve tomorrow!";
-        snack.className = "show";
-        setTimeout(function () {
-          snack.className = snack.className.replace("show", "");
-        }, 4000);
-} else if (noofdayslefttilNYE<7 && noofdayslefttilNYE!=0 && noofdayslefttilNYE!=1) {
-  let snack = document.querySelector("#snackbar");
-      snack.innerText =
-          `Reminder: Only ${noofdayslefttilNYE} days left until New Year's Eve!`;
-        snack.className = "show";
-        setTimeout(function () {
-          snack.className = snack.className.replace("show", "");
-        }, 4000);
+  var nextNewYear, msPerDay;
+  let curYr = new Date().getFullYear();
+  let today = new Date();
+  nextNewYear = new Date("January 1, 2000 00:00:00");
+  nextNewYear.setYear(curYr + 1);
+  msPerDay = 24 * 60 * 60 * 1000;
+  const noofdayslefttilNYE = Math.floor(
+    (nextNewYear.getTime() - today.getTime()) / msPerDay
+  );
+  if (noofdayslefttilNYE == 0 || noofdayslefttilNYE == 365) {
+    /*show a snack here saying "Happy New Year's Eve!"...*/
+    let snack = document.querySelector("#snackbar");
+    snack.innerText = "Happy New Year's Eve!";
+    snack.className = "show";
+    setTimeout(function () {
+      snack.className = snack.className.replace("show", "");
+    }, 4000);
+  } else if (noofdayslefttilNYE == 1) {
+    let snack = document.querySelector("#snackbar");
+    snack.innerText = "Reminder: It's New Year's Eve tomorrow!";
+    snack.className = "show";
+    setTimeout(function () {
+      snack.className = snack.className.replace("show", "");
+    }, 4000);
+  } else if (
+    noofdayslefttilNYE < 7 &&
+    noofdayslefttilNYE != 0 &&
+    noofdayslefttilNYE != 1
+  ) {
+    let snack = document.querySelector("#snackbar");
+    snack.innerText = `Reminder: Only ${noofdayslefttilNYE} days left until New Year's Eve!`;
+    snack.className = "show";
+    setTimeout(function () {
+      snack.className = snack.className.replace("show", "");
+    }, 4000);
   }
-}
+};
 
 const daystilNYD = () => {
-let nextNewYearsDay, msPerDay;
-let currentYr = new Date().getFullYear();
-let today = new Date();
-nextNewYearsDay = new Date("January 1, 2000 00:00:00")
-        nextNewYearsDay.setYear(currentYr + 1);
-        msPerDay = 24 * 60 * 60 * 1000;
-        const noofdayslefttilNYD = Math.ceil((nextNewYearsDay.getTime() - today.getTime()) / msPerDay);
-if (noofdayslefttilNYD==0 || noofdayslefttilNYD==365) {
-  /*show a snack here saying "Happy New Year's Day!"...*/
-  let snack = document.querySelector("#snackbar");
-      snack.innerText =
-          "Happy New Year's Day!";
-        snack.className = "show";
-        setTimeout(function () {
-          snack.className = snack.className.replace("show", "");
-        }, 4000);
-} else if (noofdayslefttilNYD==1) {
-  let snack = document.querySelector("#snackbar");
-      snack.innerText =
-          "Reminder: It's New Year's Day tomorrow!";
-        snack.className = "show";
-        setTimeout(function () {
-          snack.className = snack.className.replace("show", "");
-        }, 4000);
-   }
-}
-
-
-
+  let nextNewYearsDay, msPerDay;
+  let currentYr = new Date().getFullYear();
+  let today = new Date();
+  nextNewYearsDay = new Date("January 1, 2000 00:00:00");
+  nextNewYearsDay.setYear(currentYr + 1);
+  msPerDay = 24 * 60 * 60 * 1000;
+  const noofdayslefttilNYD = Math.ceil(
+    (nextNewYearsDay.getTime() - today.getTime()) / msPerDay
+  );
+  if (noofdayslefttilNYD == 0 || noofdayslefttilNYD == 365) {
+    /*show a snack here saying "Happy New Year's Day!"...*/
+    let snack = document.querySelector("#snackbar");
+    snack.innerText = "Happy New Year's Day!";
+    snack.className = "show";
+    setTimeout(function () {
+      snack.className = snack.className.replace("show", "");
+    }, 4000);
+  } else if (noofdayslefttilNYD == 1) {
+    let snack = document.querySelector("#snackbar");
+    snack.innerText = "Reminder: It's New Year's Day tomorrow!";
+    snack.className = "show";
+    setTimeout(function () {
+      snack.className = snack.className.replace("show", "");
+    }, 4000);
+  }
+};
 
 var msg;
 var userName = prompt("Hey, user! What's your name?");
@@ -335,32 +332,32 @@ var bday = prompt(
   "What's your bday? Note: We ask for your birthday only for statistical purposes.\nAccepted format *: YYYY(separator)m(separator)d"
 );
 
-  //Show a snackbar if it's user's birthday today
+//Show a snackbar if it's user's birthday today
 bday = toTitleCase(bday);
 if (isBday(bday)) {
   let snack = document.querySelector("#snackbar");
   snack.innerHTML = "Happy birthday";
-  if ((
-  userName != null &&
-  userName.length != 0) &&
-  (/^[a-z\s]+$/i.test(userName) &&
-  userName != "")
-) {
-  snack.innerHTML += `, ${userName}! &#127881`;
-} else {
-  snack.innerHTML += "! &#127881";
+  if (
+    userName != null &&
+    userName.length != 0 &&
+    /^[a-z\s]+$/i.test(userName) &&
+    userName != ""
+  ) {
+    snack.innerHTML += `, ${userName}! `;
+  } else {
+    snack.innerHTML += "! ";
+  }
+  snack.className = "show";
+  /*optional expression*/
+  setTimeout(function () {
+    snack.className = snack.className.replace("show", "");
+  }, 5000);
 }
-snack.className = "show";
-/*optional expression*/
-setTimeout(function () {
-  snack.className = snack.className.replace("show", "");
-}, 5000);
-}
-if ((
+if (
   userName != null &&
-  userName.length != 0) &&
-  (/^[a-z\s]+$/i.test(userName) &&
-  userName != "")
+  userName.length != 0 &&
+  /^[a-z\s]+$/i.test(userName) &&
+  userName != ""
 ) {
   alert(`Welcome, ${userName}!`);
   console.log(`Welcome, ${userName}!`);
@@ -368,7 +365,6 @@ if ((
   alert("Welcome, luv!");
   console.log("Welcome, luv!");
 }
-
 
 /* regular expressions/ questions to be answered: */
 const q1 = /what'?s?( is)? (up|popping)/i,
@@ -381,15 +377,18 @@ const q1 = /what'?s?( is)? (up|popping)/i,
   q8 = /((what'?s?|when'?s?)( is)?|show) my (dob|bday|(birth|b(-)?)day)/i,
   q9 = /(how old am I)|((show|what'?s?( is)?) my age)/i,
   q10 = /(call me by another|(change|(re)?save) my) name/i,
-  q11 = /(((change|resubmit) my|incorrect) (dob|bday|(birth|b(-)?)day))|((dob|bday|(birth|b(-)?)day) is incorrect)/i,
+  q11 =
+  /(((change|resubmit) my|incorrect) (dob|bday|(birth|b(-)?)day))|((dob|bday|(birth|b(-)?)day) is incorrect)/i,
   q12 = /am I nice/i,
-  q13 = /(what (date|time|day) is it)|((current|local)( date and)? time)|(date today)|(time now)|(date and time)/i,
+  q13 =
+  /(what (date|time|day) is it)|((current|local)( date and)? time)|(date today)|(time now)|(date and time)/i,
   q14 = /^(hi)|(hello)|(hey)|(hola)|(howdy)/i,
   q15 = /tic( |-)tac( |-)toe/i,
   q16 = /(weather)|(temperature today)|((hot|rainy|cloudy|sunny) day)/i,
   q17 = /^$/,
   q18 = /((open|run|launch|execute) calc(ulator)?)|(calculate(?:bmi))/i,
-  q19 = /(tts)|(speech engine)|(text to speech)|(ebook to audiobook)|((document|text) reader)/i,
+  q19 =
+  /(tts)|(speech engine)|(text to speech)|(ebook to audiobook)|((document|text) reader)/i,
   q20 = /((my|take|open|launch) notes)|(journal)|(notebook)/i,
   q21 = /(todo)|(reminder)|(remind me to)|((bucket|shopping) list)/i,
   q22 = /(music)|(songs?)|(jukebox)/i,
@@ -403,7 +402,8 @@ const q1 = /what'?s?( is)? (up|popping)/i,
   q30 = /(lyrics)|((encycl|lyric)opedia)/i,
   q31 = /((crypto)?currency)|(exchange rates?)|(\w\w\w to \w\w\w)/i,
   q32 = /(what )?day of year( is it)?/i,
-  q33 = /(is (this|it)( a)? weekday (today|yet))|((is today|today is) a weekday)/i,
+  q33 =
+  /(is (this|it)( a)? weekday (today|yet))|((is today|today is) a weekday)/i,
   q34 = /is (it|this)( a)? weekend( day)? (today|yet)/i,
   q35 = /numbers? to roman/i,
   q36 = /(mi|miles) (and|to) (km|kilometers)/i,
@@ -423,42 +423,55 @@ const q1 = /what'?s?( is)? (up|popping)/i,
   q50 = /(google doodles)|(what event is it today)/i,
   q51 = /(percentage calculator)|(calculate percentage)/i,
   q52 = /temperature( units)? conver(sion|ter)/i,
-  q53 = /(meal finder)|(find( me)? meals?)|(recipes?)|(how to cook)|(help me (cook|with cooking))/i,
-  q54 = /(I'?( ?a)?m (anxious|tired))|(help me (calm down|relax|with my anxiety))|(relaxer)/i,
-  q55 = /(new year countdown)|(((days|time)( left)? (un)?till?|(what time|when) is) new year)/i,
+  q53 =
+  /(meal finder)|(find( me)? meals?)|(recipes?)|(how to cook)|(help me (cook|with cooking))/i,
+  q54 =
+  /(I'?( ?a)?m (anxious|tired))|(help me (calm down|relax|with my anxiety))|(relaxer)/i,
+  q55 =
+  /(new year countdown)|(((days|time)( left)? (un)?till?|(what time|when) is) new year)/i,
   q56 = /(typing game)|((open|run|launch|play( me)?) speed( |-)?typer)/i,
-  q57 = /((expenses?|budget) tracker)|(track my (budget|expenses?|pocket money))/i,
+  q57 =
+  /((expenses?|budget) tracker)|(track my (budget|expenses?|pocket money))/i,
   q58 = /(stopwatch)|(countdown timer)|(counter ?clock)|(count down)/i,
   q59 = /(miner of lava)|(lava game)/i,
-  q60 = /((loan|mortgage) (calculator|payment))|(calculate( my)? (loan|mortgage))|(how much do (I|people) owe)/i,
+  q60 =
+  /((loan|mortgage) (calculator|payment))|(calculate( my)? (loan|mortgage))|(how much do (I|people) owe)/i,
   q61 = /quotes?/i,
   q62 = /memory (game|test)/i,
   q63 = /(calo(ries? )?tracker)|(track calories)/i,
   q64 = /(dungeon crawler)|(rogue-?life)/i,
   q65 = /(fotoflick)|(puzzle game)|((photo|picture) puzzle)/i,
-  q66 = /((motivate|inspire) me)|(I'?( ?a)?m demotivated)|(motivat(ional|ing) app)/i,
+  q66 =
+  /((motivate|inspire) me)|(I'?( ?a)?m demotivated)|(motivat(ional|ing) app)/i,
   q67 = /((space(X|station)|nasa) (data|live))|(live( outer)? space)/i,
   q68 = /(snapshots?)|(landscapes)|(wallpapers)/i,
   q69 = /features/i,
   q70 = /(trivia)|(quiz)|(game of questionnares)/i,
   q71 = /(ratings? for( tv)? (series|serials?))|((tv )?series app)/i,
-  q72 = /((movies?'? (cast|ratings?))|(ratings? (for|of) movies?))|(movies? app)/i,
+  q72 =
+  /((movies?'? (cast|ratings?))|(ratings? (for|of) movies?))|(movies? app)/i,
   q73 = /(day (planner|scheduler))|((plan|schedule)( my)? day)/i,
   q74 = /(chase( |-)the( |-)box)|(box chaser)/i,
   q75 = /giphy/i,
-  q76 = /(pass(code|word|phrase) generator)|(generate( me)? (a )?(random|difficult)? pass(code|word|phrase))/i,
+  q76 =
+  /(pass(code|word|phrase) generator)|(generate( me)? (a )?(random|difficult)? pass(code|word|phrase))/i,
   q77 = /the (logic game|constructor)/i,
-  q78 = /(fisave)|(net ?worth track(er|ing))|(track (my net ?worth|net ?worth of mine))/i,
-  q79 = /(habits? (break|track)(er|ing))|((break|track) ((a |my )(bad )?habits?|(a( bad)? habit|(bad )?habits) of mine))/i,
-  q80 = /(habits? build(er|ing))|(help( me)? (with building|build) a( good)? habit)/i,
+  q78 =
+  /(fisave)|(net ?worth track(er|ing))|(track (my net ?worth|net ?worth of mine))/i,
+  q79 =
+  /(habits? (break|track)(er|ing))|((break|track) ((a |my )(bad )?habits?|(a( bad)? habit|(bad )?habits) of mine))/i,
+  q80 =
+  /(habits? build(er|ing))|(help( me)? (with building|build) a( good)? habit)/i,
   q81 = /unit conver(sion|ter)/i,
   q82 = /(game of (games|adventures?))|(adventurous game)/i,
   q83 = /my( fave?(orite)?)? ?books?'? ?list/i,
   q84 = /(math flash ?cards)|((arithmetic|math) game)/i,
   q85 = /simon/i,
   q86 = /light maze/i,
-  q87 = /^((book|pdf) ((pre)?viewer|reader))|((read|(pre)?view)( me)? (a (document|pdf)|pdf('?s)?))$/i,
-  q88 = /(^(open|launch|run)?( me)? ?travels? ?(app|plan(ning|s|ner))$)|(help me ?(to|with|in)? plan(ning)? travels)/i,
+  q87 =
+  /^((book|pdf) ((pre)?viewer|reader))|((read|(pre)?view)( me)? (a (document|pdf)|pdf('?s)?))$/i,
+  q88 =
+  /(^(open|launch|run)?( me)? ?travels? ?(app|plan(ning|s|ner))$)|(help me ?(to|with|in)? plan(ning)? travels)/i,
   q89 = /truth or dare/i,
   q90 = /metronome/i,
   q91 = /you licensed/i;
@@ -485,7 +498,7 @@ function ask() {
   } else if (q2.test(q)) {
     $("#message").slideFadeToggle(800);
     msg =
-      "Hey &#128075;,<br>I'm Chatterbox, an assistant of yours. What can I assist you with?";
+      "Mayray ilawah or kon ho saktaa hay? May Ayesha, aap jaysay achay insaan say mil kay bayhad khushi huif. Bas boli'ay toh, hukam kiji'ay! Batai'ye kaysee khidmat kar sakti hu may aapki?";
     $output.html(msg);
     console.log(msg);
     $("#message").delay(10000).slideFadeToggle(800);
@@ -516,7 +529,7 @@ function ask() {
     ) {
       msg += bday;
       if (isBday(bday)) {
-        msg += " (today&#127874;)";
+        msg += " (today)";
       }
     } else {
       msg += "Not saved yet :(";
@@ -530,8 +543,12 @@ function ask() {
     msg += "</li></ul></em>";
     $output.html(msg);
     console.log(msg);
-    if (/your (name|age|birthday):/im.test(msg) &&  mesg.innerText.toLowerCase().indexOf("data received via") === -1) {
-      const API_KEY = "63a8b1ef829b0a90909b1bb7e9c931fe1ffb70e27378da4c302e22c7";
+    if (
+      /your (name|age|birthday):/im.test(msg) &&
+      mesg.innerText.toLowerCase().indexOf("data received via") === -1
+    ) {
+      const API_KEY =
+        "63a8b1ef829b0a90909b1bb7e9c931fe1ffb70e27378da4c302e22c7";
       $.get(
         `https://api.ipdata.co/?api-key=${API_KEY}`,
         function (response) {
@@ -609,7 +626,7 @@ function ask() {
       log(msg);
       if (isBday(bday)) {
         msg +=
-          " (today)<br>Happy birthday, by the way! A gift for you &#127874;. Hurrah!";
+          " (today)<br>Happy birthday, by the way! Hurrah!";
       }
     } else {
       bday = prompt(
@@ -635,7 +652,7 @@ function ask() {
       age = calc_age(new Date(bday));
       msg = `You are ${age}`;
       if (age <= 18) {
-        msg += ". Too young, pal &#128526;";
+        msg += ". Too young, pal";
         console.log(msg);
       }
     } else {
@@ -645,7 +662,7 @@ function ask() {
       age = calc_age(new Date(bday));
       msg = "You are " + age;
       if (age <= 18) {
-        msg += ". Too young, pal &#128526;";
+        msg += ". Too young, pal";
         console.log(msg);
       }
     }
@@ -665,12 +682,12 @@ function ask() {
         /^[a-z\s]+$/i.test(userName) &&
         userName != ""
       ) {
-        msg = `&#128076; Alright, I'll call you ${userName} from now on &#128521;`;
+        msg = `Alright, I'll call you ${userName} from now on :)`;
         console.log(msg);
       } else {
         userName = prompt("Couldn't change your name. Try resubmitting it.");
         userName = toTitleCase(userName);
-        msg = `&#128076; Alright, I'll call you ${userName} from now on &#128521;`;
+        msg = `Alright, I'll call you ${userName} from now on ;)`;
         console.log(msg);
       }
       $output.html(msg);
@@ -692,13 +709,13 @@ function ask() {
           bday
         )
       ) {
-        msg = `&#128076; Done. Your newly set bday is ${bday}&#9786;`;
+        msg = `&#128076; Done. Your newly set bday is ${bday}`;
         console.log(msg);
       } else {
         bday = prompt(
           "Couldn't change your bday. Try resubmitting it.\nNote: We ask for your birthday only for statistical purposes."
         );
-        msg = `&#128076; Done. Your newly set bday is ${bday}&#9786;`;
+        msg = `&#128076; Done. Your newly set bday is ${bday}`;
         console.log(msg);
       }
       $output.html(msg);
@@ -707,8 +724,7 @@ function ask() {
     }
   } else if (q12.test(q)) {
     $("#message").slideFadeToggle(800);
-    msg =
-      "You are! Actually I think you are even nicer than I am &#128521;";
+    msg = "You are! In some ways, I think you are even nicer than I am. I'm not as funny as you are!";
     $output.html(msg);
     console.log(msg);
     $("#message").delay(10000).slideFadeToggle(800);
@@ -721,7 +737,7 @@ function ask() {
   } else if (q14.test(q)) {
     $("#message").slideFadeToggle(800);
     msg =
-      "Hey there &#128075;, want some assistance? Try asking me for <a onclick='$(\"#searchInput\").val($(this).html());stopText();ask();playText(mesg.innerText);' onmouseover='$(this).css(\"cursor\", \"pointer\")' style='font-weight:500;font-style:italic;color:rgba(0,0,255,0.9);text-decoration:underline;'>current date and time</a>";
+      "Hey there, want some assistance? Try asking me for <a onclick='$(\"#searchInput\").val($(this).html());stopText();ask();playText(mesg.innerText);' onmouseover='$(this).css(\"cursor\", \"pointer\")' style='font-weight:500;font-style:italic;color:rgba(0,0,255,0.9);text-decoration:underline;'>current date and time</a>";
     $output.html(msg);
     console.log(msg);
     $("#message").delay(10000).slideFadeToggle(800);
@@ -752,8 +768,12 @@ function ask() {
     $output.html(msg);
   } else if (q17.test(q)) {
     $("#message").slideFadeToggle(800);
-    msg = "Hey pal. Go ahead and ask me (for) something, would you?&#9786;";
+    msg = "Aray kuch pucho gay bhi ya bas yuhi dekhte raho gay?";
     $output.html(msg);
+    let audio = new Audio;
+    audio.src = "./attitude.mp3";
+    utterance.onend = function () { audio.play(); }
+    setTimeout(() => { utterance.onend = ""; }, 10000);
     console.log(msg);
     $("#message").delay(10000).slideFadeToggle(800);
   } else if (q18.test(q)) {
@@ -949,13 +969,17 @@ function ask() {
     msg = "";
     $output.html(msg);
   } else if (q31.test(q)) {
-    let curConvApps = ["./Currency-Converter-JS-master/", "./exchange-rate/", "https://cryptocurrency-converter.netlify.app/"];
+    let curConvApps = [
+      "./Currency-Converter-JS-master/",
+      "./exchange-rate/",
+      "https://cryptocurrency-converter.netlify.app/",
+    ];
     let curConvAppsWin = window.open(
       curConvApps[Math.floor(Math.random() * curConvApps.length)],
       "_blank",
       "width=600,height=800,resizable=no,toolbar=no,menubar=no"
     );
-      
+
     if (curConvAppsWin) {
       window.focus();
       log("Launched Currency Converter");
@@ -1115,16 +1139,16 @@ function ask() {
     msg = "";
     $output.html(msg);
   } else if (q46.test(q)) {
-      let calendarWin = window.open("./calendar-mobile/", "_blank");
-      if (calendarWin) {
-        window.focus();
-        log("Launched the mobile-friendly Calendar");
-      } else {
-        alert("Please enable popups for this site!");
-      }
-      stopText();
-      msg = "";
-      $output.html(msg);
+    let calendarWin = window.open("./calendar-mobile/", "_blank");
+    if (calendarWin) {
+      window.focus();
+      log("Launched the mobile-friendly Calendar");
+    } else {
+      alert("Please enable popups for this site!");
+    }
+    stopText();
+    msg = "";
+    $output.html(msg);
   } else if (q47.test(q)) {
     let recipeAppWin = window.open("../recipe-app/", "_blank");
     if (recipeAppWin) {
@@ -1159,7 +1183,10 @@ function ask() {
     msg = "";
     $output.html(msg);
   } else if (q50.test(q)) {
-    let gdoodlesWin = window.open("./today-in-google-doodles-history/", "_blank");
+    let gdoodlesWin = window.open(
+      "./today-in-google-doodles-history/",
+      "_blank"
+    );
     if (gdoodlesWin) {
       window.focus();
       log("Launched Today In Google Doodles History");
@@ -1203,23 +1230,23 @@ function ask() {
     msg = "";
     $output.html(msg);
   } else if (q54.test(q)) {
-  	msg = "";
+    msg = "";
     $output.text(msg);
     let relaxerAppWin = window.open("./relaxer-app/", "_blank");
     if (relaxerAppWin) {
       window.focus();
       if (detectDeviceType() == "Desktop" || detectDeviceType() != "Mobile") {
-      msg = "Take a deep breath, ";
-      playText(msg);
-      setTimeout(() => {
-        msg = "breathe in, hold, ";
+        msg = "Take a deep breath, ";
         playText(msg);
         setTimeout(() => {
-          msg = "breathe out";
+          msg = "breathe in, hold, ";
           playText(msg);
-        }, 2005);
-      }, 1650);
-    }
+          setTimeout(() => {
+            msg = "breathe out";
+            playText(msg);
+          }, 2005);
+        }, 1650);
+      }
       log("Launched Relaxer");
     } else {
       alert("Please enable popups for this site!");
@@ -1236,7 +1263,7 @@ function ask() {
     msg = "";
     $output.html(msg);
   } else if (q56.test(q)) {
-  	msg = "";
+    msg = "";
     $output.text(msg);
     let typingGameWin = window.open("./typing-game/", "_blank");
     if (typingGameWin) {
@@ -1248,12 +1275,13 @@ function ask() {
       alert("Please enable popups for this site!");
     }
   } else if (q57.test(q)) {
-  	msg = "";
+    msg = "";
     $output.text(msg);
     let expenseTrackerWin = window.open("./expense-tracker/", "_blank");
     if (expenseTrackerWin) {
       window.focus();
-      msg = "Worried about keeping track of your expenses? Don't be. I can help you track them";
+      msg =
+        "Worried about keeping track of your expenses? Don't be. I can help you track them";
       playText(msg);
       log("Launched Expense Tracker");
     } else {
@@ -1282,7 +1310,7 @@ function ask() {
     msg = "";
     $output.html(msg);
   } else if (q60.test(q)) {
-  	msg = "";
+    msg = "";
     $output.text(msg);
     let loanCalcWin = window.open("./loan-calc/", "_blank");
     if (loanCalcWin) {
@@ -1294,7 +1322,7 @@ function ask() {
       alert("Please enable popups for this site!");
     }
   } else if (q61.test(q)) {
-  	msg = "";
+    msg = "";
     $output.text(msg);
     let randomQuoteWin = window.open("./random-quote-gen/", "_blank");
     if (randomQuoteWin) {
@@ -1306,7 +1334,7 @@ function ask() {
       alert("Please enable popups for this site!");
     }
   } else if (q62.test(q)) {
-  	msg = "";
+    msg = "";
     $output.text(msg);
     let memoryGameWin = window.open("./mem-game/", "_blank");
     if (memoryGameWin) {
@@ -1318,7 +1346,7 @@ function ask() {
       alert("Please enable popups for this site!");
     }
   } else if (q63.test(q)) {
-  	msg = "";
+    msg = "";
     $output.text(msg);
     let caloTrackerWin = window.open("./calotracker/", "_blank");
     if (caloTrackerWin) {
@@ -1354,7 +1382,10 @@ function ask() {
   } else if (q66.test(q)) {
     msg = "";
     $output.html(msg);
-    let motivQuotesAppWin = window.open("../motivational-quote-generator/", "_blank");
+    let motivQuotesAppWin = window.open(
+      "../motivational-quote-generator/",
+      "_blank"
+    );
     if (motivQuotesAppWin) {
       window.focus();
       msg = "Demotivated? Don't be because I'm here to motivate you";
@@ -1369,7 +1400,8 @@ function ask() {
     let spaceDataAppWin = window.open("../live-spacestation-data/", "_blank");
     if (spaceDataAppWin) {
       window.focus();
-      msg = "Let discover what's above us, in the space. Search for stuff like blackholes, wormholes, Apollo 8, or 12 mission";
+      msg =
+        "Let discover what's above us, in the space. Search for stuff like blackholes, wormholes, Apollo 8, or 12 mission";
       playText(msg);
       log("Launched Space_data app");
     } else {
@@ -1386,243 +1418,253 @@ function ask() {
     stopText();
     msg = "";
     $output.html(msg);
-    } else if (q69.test(q)) {
-    	msg = "";
-	    $output.text(msg);
-      showFeatures();
-    } else if (q70.test(q)) {
-      let quizGameWin = window.open("../Trivia-Db/", "_blank");
-      if (quizGameWin) {
-        window.focus();
-        log("Launched Trivia_Db");
-      } else {
-        alert("Please enable popups for this site!");
-      }
-      stopText();
-      msg = "";
-      $output.html(msg);
-    } else if (q71.test(q)) {
-      msg = "";
-      $output.html(msg);
-      let tvSeriesAppWin = window.open("../tv-series-app/", "_blank");
-      if (tvSeriesAppWin) {
-        window.focus();
-        msg = "Here you can find all of your most loved series";
-        playText(msg);
-        log("Launched Launched an app for TV Series data");
-      } else {
-        alert("Please enable popups for this site!");
-      }
-    } else if (q72.test(q)) {
-      let moviesAppWin = window.open("../yoMovies/", "_blank");
-      if (moviesAppWin) {
-        window.focus();
-        log("Launched Movies app");
-      } else {
-        alert("Please enable popups for this site!");
-      }
-      stopText();
-      msg = "";
-      $output.html(msg);
-    } else if (q73.test(q)) {
-      msg = "";
-      $output.html(msg);
-      let daySchedulerAppWin = window.open("./day_scheduler/", "_blank");
-      if (daySchedulerAppWin) {
-        window.focus();
-        msg = "Time is a precious resource—you can’t stop using it and you can’t find more of it, but you need it to do absolutely everything. From scheduling meetings to fulfilling orders, time is behind every aspect of running a business and you can’t afford to manage it poorly. So, I think you might want to develop a better routine. If you do, use our built-in application as your scheduler and never miss any of your scheduled work";
-        playText(msg);
-        log("Launched Day Scheduler");
-      } else {
-        alert("Please enable popups for this site!");
-      }
-    } else if (q74.test(q)) {
-      let boxChaserGameWin = window.open("./box-chaser/", "_blank");
-      if (boxChaserGameWin) {
-        window.focus();
-        log("Launched Chase-The-Box");
-      } else {
-        alert("Please enable popups for this site!");
-      }
-      stopText();
-      msg = "";
-      $output.html(msg);
-    } else if (q75.test(q)) {
-      let giphyAppWin = window.open("./giphy/", "_blank");
-      if (giphyAppWin) {
-        window.focus();
-        log("Launched Giphy");
-      } else {
-        alert("Please enable popups for this site!");
-      }
-      stopText();
-      msg = "";
-      $output.html(msg);
-    } else if (q76.test(q)) {
-      let pwGenAppWin = window.open("./Passwordgen/", "_blank");
-      if (pwGenAppWin) {
-        window.focus();
-        log("Launched Password Generator");
-      } else {
-        alert("Please enable popups for this site!");
-      }
-      stopText();
-      msg = "";
-      $output.html(msg);
-    } else if (q77.test(q)) {
-      let theConstructorWin = window.open("./The Constructor/", "_blank");
-      if (theConstructorWin) {
-        window.focus();
-        log("Launched The Constructor");
-      } else {
-        alert("Please enable popups for this site!");
-      }
-      stopText();
-      msg = "";
-      $output.html(msg);
-      } else if (q78.test(q)) {
-      let fisaveWin = window.open("../fisave-networth-tracking-app/", "_blank");
-      if (fisaveWin) {
-        window.focus();
-        log("Launched Fisave");
-      } else {
-        alert("Please enable popups for this site!");
-      }
-      stopText();
-      msg = "";
-      $output.html(msg);
-    } else if (q79.test(q)) {
-      let habitTrackingAppWin = window.open("../habit-tracker/", "_blank");
-      if (habitTrackingAppWin) {
-        window.focus();
-        log("Launched Habit_Tracker");
-      } else {
-        alert("Please enable popups for this site!");
-      }
-      stopText();
-      msg = "";
-      $output.html(msg);
-    } else if (q80.test(q)) {
-      let habitBuildingAppWin = window.open("../habit-builder/", "_blank");
-      if (habitBuildingAppWin) {
-        window.focus();
-        log("Launched Habit_Builder");
-      } else {
-        alert("Please enable popups for this site!");
-      }
-      stopText();
-      msg = "";
-      $output.html(msg);
-    } else if (q81.test(q)) {
-      let unitConvAppWin = window.open("./unit-conv/", "_blank");
-      if (unitConvAppWin) {
-        window.focus();
-        log("Launched Unit_Converter");
-      } else {
-        alert("Please enable popups for this site!");
-      }
-      stopText();
-      msg = "";
-      $output.html(msg);
-    } else if (q82.test(q)) {
-      let rpgGameWin = window.open("./RPG-game/", "_blank");
-      if (rpgGameWin) {
-        window.focus();
-        log("Launched Game_Of_Games");
-      } else {
-        alert("Please enable popups for this site!");
-      }
-      stopText();
-      msg = "";
-      $output.html(msg);
-    } else if (q83.test(q)) {
-      let bookListAppWin = window.open("./Mybooklist/", "_blank");
-      if (bookListAppWin) {
-        window.focus();
-        log("Launched MyBookList");
-      } else {
-        alert("Please enable popups for this site!");
-      }
-      stopText();
-      msg = "";
-      $output.html(msg);
-    } else if (q84.test(q)) {
-      let mathGameWin = window.open("../math-flash-cards/", "_blank");
-      if (mathGameWin) {
-        window.focus();
-        log("Launched Math flashcards game");
-      } else {
-        alert("Please enable popups for this site!");
-      }
-      stopText();
-      msg = "";
-      $output.html(msg);
-    } else if (q85.test(q)) {
-      let simonGameWin = window.open("https://alexs-simon-says.netlify.app/", "_blank");
-      if (simonGameWin) {
-        window.focus();
-        log("Launched Simon");
-      } else {
-        alert("Please enable popups for this site!");
-      }
-      stopText();
-      msg = "";
-      $output.html(msg);
-    } else if (q86.test(q)) {
-      let lightMazeWin = window.open("./light-maze/", "_blank");
-      if (lightMazeWin) {
-        window.focus();
-        log("Launched Light Maze");
-      } else {
-        alert("Please enable popups for this site!");
-      }
-      stopText();
-      msg = "";
-      $output.html(msg);
-    } else if (q87.test(q)) {
-      let pdfReaderWin = window.open("./voice-pdf-viewer/", "_blank");
-      if (pdfReaderWin) {
-        window.focus();
-        log("Launched PDF Books Reader");
-      } else {
-        alert("Please enable popups for this site!");
-      }
-      stopText();
-      msg = "";
-      $output.html(msg);
-    } else if (q88.test(q)) {
-      let travelPlansWin = window.open("../travel-planner/", "_blank");
-      if (travelPlansWin) {
-        window.focus();
-        log("Launched Travels app");
-      } else {
-        alert("Please enable popups for this site!");
-      }
-      stopText();
-      msg = "";
-      $output.html(msg);
-    } else if (q89.test(q)) {
-      let truthOrDareWin = window.open("https://truth-or-dare-by-alex.netlify.app", "_blank");
-      if (truthOrDareWin) {
-        window.focus();
-        log("Launched Truth_or_Dare");
-      } else {
-        alert("Please enable popups for this site!");
-      }
-      stopText();
-      msg = "";
-      $output.html(msg);
-    } else if (q90.test(q)) {
-      let metronomeWin = window.open("https://abbaskhurram255.github.io/metronome/", "_blank");
-      if (metronomeWin) {
-        window.focus();
-        log("Launched Metronome");
-      } else {
-        alert("Please enable popups for this site!");
-      }
-      stopText();
-      msg = "";
-      $output.html(msg);
+  } else if (q69.test(q)) {
+    msg = "";
+    $output.text(msg);
+    showFeatures();
+  } else if (q70.test(q)) {
+    let quizGameWin = window.open("../Trivia-Db/", "_blank");
+    if (quizGameWin) {
+      window.focus();
+      log("Launched Trivia_Db");
+    } else {
+      alert("Please enable popups for this site!");
+    }
+    stopText();
+    msg = "";
+    $output.html(msg);
+  } else if (q71.test(q)) {
+    msg = "";
+    $output.html(msg);
+    let tvSeriesAppWin = window.open("../tv-series-app/", "_blank");
+    if (tvSeriesAppWin) {
+      window.focus();
+      msg = "Here you can find all of your most loved series";
+      playText(msg);
+      log("Launched Launched an app for TV Series data");
+    } else {
+      alert("Please enable popups for this site!");
+    }
+  } else if (q72.test(q)) {
+    let moviesAppWin = window.open("../yoMovies/", "_blank");
+    if (moviesAppWin) {
+      window.focus();
+      log("Launched Movies app");
+    } else {
+      alert("Please enable popups for this site!");
+    }
+    stopText();
+    msg = "";
+    $output.html(msg);
+  } else if (q73.test(q)) {
+    msg = "";
+    $output.html(msg);
+    let daySchedulerAppWin = window.open("./day_scheduler/", "_blank");
+    if (daySchedulerAppWin) {
+      window.focus();
+      msg =
+        "Time is a precious resource—you can’t stop using it and you can’t find more of it, but you need it to do absolutely everything. From scheduling meetings to fulfilling orders, time is behind every aspect of running a business and you can’t afford to manage it poorly. So, I think you might want to develop a better routine. If you do, use our built-in application as your scheduler and never miss any of your scheduled work";
+      playText(msg);
+      log("Launched Day Scheduler");
+    } else {
+      alert("Please enable popups for this site!");
+    }
+  } else if (q74.test(q)) {
+    let boxChaserGameWin = window.open("./box-chaser/", "_blank");
+    if (boxChaserGameWin) {
+      window.focus();
+      log("Launched Chase-The-Box");
+    } else {
+      alert("Please enable popups for this site!");
+    }
+    stopText();
+    msg = "";
+    $output.html(msg);
+  } else if (q75.test(q)) {
+    let giphyAppWin = window.open("./giphy/", "_blank");
+    if (giphyAppWin) {
+      window.focus();
+      log("Launched Giphy");
+    } else {
+      alert("Please enable popups for this site!");
+    }
+    stopText();
+    msg = "";
+    $output.html(msg);
+  } else if (q76.test(q)) {
+    let pwGenAppWin = window.open("./Passwordgen/", "_blank");
+    if (pwGenAppWin) {
+      window.focus();
+      log("Launched Password Generator");
+    } else {
+      alert("Please enable popups for this site!");
+    }
+    stopText();
+    msg = "";
+    $output.html(msg);
+  } else if (q77.test(q)) {
+    let theConstructorWin = window.open("./The Constructor/", "_blank");
+    if (theConstructorWin) {
+      window.focus();
+      log("Launched The Constructor");
+    } else {
+      alert("Please enable popups for this site!");
+    }
+    stopText();
+    msg = "";
+    $output.html(msg);
+  } else if (q78.test(q)) {
+    let fisaveWin = window.open("../fisave-networth-tracking-app/", "_blank");
+    if (fisaveWin) {
+      window.focus();
+      log("Launched Fisave");
+    } else {
+      alert("Please enable popups for this site!");
+    }
+    stopText();
+    msg = "";
+    $output.html(msg);
+  } else if (q79.test(q)) {
+    let habitTrackingAppWin = window.open("../habit-tracker/", "_blank");
+    if (habitTrackingAppWin) {
+      window.focus();
+      log("Launched Habit_Tracker");
+    } else {
+      alert("Please enable popups for this site!");
+    }
+    stopText();
+    msg = "";
+    $output.html(msg);
+  } else if (q80.test(q)) {
+    let habitBuildingAppWin = window.open("../habit-builder/", "_blank");
+    if (habitBuildingAppWin) {
+      window.focus();
+      log("Launched Habit_Builder");
+    } else {
+      alert("Please enable popups for this site!");
+    }
+    stopText();
+    msg = "";
+    $output.html(msg);
+  } else if (q81.test(q)) {
+    let unitConvAppWin = window.open("./unit-conv/", "_blank");
+    if (unitConvAppWin) {
+      window.focus();
+      log("Launched Unit_Converter");
+    } else {
+      alert("Please enable popups for this site!");
+    }
+    stopText();
+    msg = "";
+    $output.html(msg);
+  } else if (q82.test(q)) {
+    let rpgGameWin = window.open("./RPG-game/", "_blank");
+    if (rpgGameWin) {
+      window.focus();
+      log("Launched Game_Of_Games");
+    } else {
+      alert("Please enable popups for this site!");
+    }
+    stopText();
+    msg = "";
+    $output.html(msg);
+  } else if (q83.test(q)) {
+    let bookListAppWin = window.open("./Mybooklist/", "_blank");
+    if (bookListAppWin) {
+      window.focus();
+      log("Launched MyBookList");
+    } else {
+      alert("Please enable popups for this site!");
+    }
+    stopText();
+    msg = "";
+    $output.html(msg);
+  } else if (q84.test(q)) {
+    let mathGameWin = window.open("../math-flash-cards/", "_blank");
+    if (mathGameWin) {
+      window.focus();
+      log("Launched Math flashcards game");
+    } else {
+      alert("Please enable popups for this site!");
+    }
+    stopText();
+    msg = "";
+    $output.html(msg);
+  } else if (q85.test(q)) {
+    let simonGameWin = window.open(
+      "https://alexs-simon-says.netlify.app/",
+      "_blank"
+    );
+    if (simonGameWin) {
+      window.focus();
+      log("Launched Simon");
+    } else {
+      alert("Please enable popups for this site!");
+    }
+    stopText();
+    msg = "";
+    $output.html(msg);
+  } else if (q86.test(q)) {
+    let lightMazeWin = window.open("./light-maze/", "_blank");
+    if (lightMazeWin) {
+      window.focus();
+      log("Launched Light Maze");
+    } else {
+      alert("Please enable popups for this site!");
+    }
+    stopText();
+    msg = "";
+    $output.html(msg);
+  } else if (q87.test(q)) {
+    let pdfReaderWin = window.open("./voice-pdf-viewer/", "_blank");
+    if (pdfReaderWin) {
+      window.focus();
+      log("Launched PDF Books Reader");
+    } else {
+      alert("Please enable popups for this site!");
+    }
+    stopText();
+    msg = "";
+    $output.html(msg);
+  } else if (q88.test(q)) {
+    let travelPlansWin = window.open("../travel-planner/", "_blank");
+    if (travelPlansWin) {
+      window.focus();
+      log("Launched Travels app");
+    } else {
+      alert("Please enable popups for this site!");
+    }
+    stopText();
+    msg = "";
+    $output.html(msg);
+  } else if (q89.test(q)) {
+    let truthOrDareWin = window.open(
+      "https://truth-or-dare-by-alex.netlify.app",
+      "_blank"
+    );
+    if (truthOrDareWin) {
+      window.focus();
+      log("Launched Truth_or_Dare");
+    } else {
+      alert("Please enable popups for this site!");
+    }
+    stopText();
+    msg = "";
+    $output.html(msg);
+  } else if (q90.test(q)) {
+    let metronomeWin = window.open(
+      "https://abbaskhurram255.github.io/metronome/",
+      "_blank"
+    );
+    if (metronomeWin) {
+      window.focus();
+      log("Launched Metronome");
+    } else {
+      alert("Please enable popups for this site!");
+    }
+    stopText();
+    msg = "";
+    $output.html(msg);
   } else if (q91.test(q)) {
     showLicense();
   } else {
@@ -1662,16 +1704,17 @@ function calc_age(ag) {
 
 //Nicknaming function
 const nickName = () => {
-  if ((
+  if (
     userName != null &&
-    userName.length != 0) &&
-    (/^[a-z\s]+$/i.test(userName) &&
-    userName != "")) {
-  return ", " + userName.slice(0, 4);
-    } else {
-      return ;
-    }
-}
+    userName.length != 0 &&
+    /^[a-z\s]+$/i.test(userName) &&
+    userName != ""
+  ) {
+    return ", " + userName.slice(0, 4);
+  } else {
+    return;
+  }
+};
 
 //Time function:
 function startTime() {
@@ -1769,7 +1812,7 @@ function switchTheme() {
     $dTheme.attr("media", "");
     islTh = false;
     isdTh = !islTh;
-    $("#recIcon").attr("src", "whitemike.png")
+    $("#recIcon").attr("src", "whitemike.png");
     //Show a snackbar every time theme switches to dark Theme
     snack.innerText = "Switched to Dark theme";
     snack.className = "show";
@@ -1782,7 +1825,7 @@ function switchTheme() {
     $dTheme.attr("media", "none");
     isdTh = false;
     islTh = !isdTh;
-    $("#recIcon").attr("src", "blackmike.png")
+    $("#recIcon").attr("src", "blackmike.png");
     //Show a snackbar every time the theme switches to light theme
     snack.innerText = "Switched to Light Theme";
     snack.className = "show";
@@ -1871,7 +1914,6 @@ function playText(text) {
     voices = window.speechSynthesis.getVoices();
   };
   utterance.voice = voices[10];
-  /* Or if you just wanna use default male voice (MS David_En-US), just don't set any voice.*/
   utterance.pitch = 1;
   utterance.voiceURI = "native";
   utterance.lang = "hi";
@@ -1905,13 +1947,14 @@ window.onclick = function (event) {
 const showFeatures = () => {
   modal.style.display = "block";
   stopText();
-  msg = "Don't underestimate me, I can perform logical operations too. For example, if you asked me to inform you whether 2020 or 2021 were a leap year, I'd let you know. And if you asked me to inform you of the date it is going to be tomorrow or the date it was yesterday lol, I'd let you know. What's more, if you asked me to inform you whether it is a weekday today or the weekend yet, I'd let you know.";
+  msg =
+    "Don't underestimate me, I can perform logical operations too. For example, if you asked me to inform you whether 2020 or 2021 were a leap year, I'd let you know. And if you asked me to inform you of the date it is going to be tomorrow or the date it was yesterday lol, I'd let you know. What's more, if you asked me to inform you whether it is a weekday today or the weekend yet, I'd let you know.";
   playText(msg);
   let aBugFix = () => {
-    return textInput.disabled = !true;
-  }
-  setTimeout(aBugFix(), 2000)
-}
+    return (textInput.disabled = !true);
+  };
+  setTimeout(aBugFix(), 2000);
+};
 //end block of modal fn
 
 const showLicense = () => {
@@ -1924,11 +1967,11 @@ const showLicense = () => {
   }
   stopText();
   let aBugFix = () => {
-    return textInput.disabled = !true;
-  }
-  setTimeout(aBugFix(), 2000)
-  return ;
-}
+    return (textInput.disabled = !true);
+  };
+  setTimeout(aBugFix(), 2000);
+  return;
+};
 
 const showPortfolio = () => {
   let showPortfolioWin = window.open("../", "_blank");
@@ -1940,15 +1983,29 @@ const showPortfolio = () => {
   }
   stopText();
   let aBugFix = () => {
-    return textInput.disabled = !true;
-  }
-  setTimeout(aBugFix(), 2000)
-  return ;
-}
+    return (textInput.disabled = !true);
+  };
+  setTimeout(aBugFix(), 2000);
+  return;
+};
 
-$(document).bind("mouseleave", function(e) {
-  if (e.pageY - $(window).scrollTop() <= 1) {    
-      stopText();
+$(document).bind("mouseleave", function (e) {
+  if (e.pageY - $(window).scrollTop() <= 1) {
+    stopText();
   }
 });
 
+
+// function greet() {
+//   stopText();
+//   let m = `Hi ${userName.slice(0, 4)}, kese khidmat kar sakti hu me apki?`;
+//   msg =
+//     `Hi ${userName.slice(0, 4)}, kese khidmat kar sakti hu me apki?`;
+//   playText(msg);
+//   let aBugFix = () => {
+//     return (textInput.disabled = !true);
+//   };
+//   setTimeout(aBugFix(), 2000);
+//   return
+// }
+// setTimeout(greet(), 3000);
