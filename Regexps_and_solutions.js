@@ -1313,4 +1313,4 @@
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
    } 
- }
+ };
