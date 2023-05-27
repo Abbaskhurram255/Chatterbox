@@ -25,8 +25,9 @@ window.onload = () => {
     arrow: true,
     maxWidth: 370,
   });
+  
 
-  // Run ASK function whenever the user presses return (enter) key
+  // Run ASK function whenever the user presses return (enter) key when they are done typing the query
   $("#searchInput").keydown(function (e) {
     const code = e.keyCode ? e.keyCode : e.which;
     if (code == 13) {
@@ -126,7 +127,7 @@ noteTextarea.on('input', function() {
     noteContent = $(this).val();
 });
 } else {
-  let err = "Speech recognition is not supported by your browser. So, the microphone function won't work :(";
+  let err = "Unfortunately, Speech Recognition is not supported by your browser. The microphone function won't work :(";
   log(err);
   alert(err);
 }
@@ -149,7 +150,7 @@ const isBday = function (dat) {
   return inputDate.setHours(0, 0, 0, 0) == todaysDate.setHours(0, 0, 0, 0);
 }; 
 
-// function that lets user know whether its a leap year
+// function that checks to see if it (or the query) a leap year
 function isLeapYear(year) {
   return new Date(parseInt(year), 1, 29).getMonth() == 1;
 }
@@ -364,8 +365,8 @@ if ((
   alert(`Welcome, ${userName}!`);
   console.log(`Welcome, ${userName}!`);
 } else {
-  alert("Welcome, user!");
-  console.log("Welcome, user!");
+  alert("Welcome, luv!");
+  console.log("Welcome, luv!");
 }
 
 
@@ -459,7 +460,8 @@ const q1 = /what'?s?( is)? (up|popping)/i,
   q87 = /^((book|pdf) ((pre)?viewer|reader))|((read|(pre)?view)( me)? (a (document|pdf)|pdf('?s)?))$/i,
   q88 = /(^(open|launch|run)?( me)? ?travels? ?(app|plan(ning|s|ner))$)|(help me ?(to|with|in)? plan(ning)? travels)/i,
   q89 = /truth or dare/i,
-  q90 = /metronome/i;
+  q90 = /metronome/i,
+  q91 = /you licensed/i;
 
 function ask() {
   const q = document.querySelector("#searchInput").value;
@@ -499,7 +501,7 @@ function ask() {
       /^[a-z\s]+$/i.test(userName) &&
       userName != ""
     ) {
-      msg += userName;
+      msg += userName.split(" ")[0]; //only show the first name
     } else {
       msg += "Not saved yet :(";
     }
@@ -523,24 +525,23 @@ function ask() {
     if (!isNaN(parseInt(age))) {
       msg += age;
     } else {
-      msg += "Couldn't calculate on account of not knowing your birthday";
+      msg += "Couldn't calculate on account of not knowing your birthday yet";
     }
     msg += "</li></ul></em>";
     $output.html(msg);
     console.log(msg);
-    /*
     if (/your (name|age|birthday):/im.test(msg) &&  mesg.innerText.toLowerCase().indexOf("data received via") === -1) {
+      const API_KEY = "63a8b1ef829b0a90909b1bb7e9c931fe1ffb70e27378da4c302e22c7";
       $.get(
-        "https://api.ipdata.co/?api-key=63a8b1ef829b0a90909b1bb7e9c931fe1ffb70e27378da4c302e22c7",
+        `https://api.ipdata.co/?api-key=${API_KEY}`,
         function (response) {
           $("#message").append(
-            `<br><b>Data received via your IP Address</b><br>Your country: ${response.country_name} <img src="${response.flag}" height="15vh" width="22vw"> <sup><small>[${response.country_code}]</small></sup><br>Your native language: ${response.languages[1].name}<br>Your timezone: UTC ${response.time_zone.offset} (${response.time_zone.abbr})<br>Note: We value your privacy! None of your data will be shared.`
+            `<br><b>Further data... received via your IP Address (oops, that was nosy, wasn't? Whisphers, <em>"sorry!"</em>) </b><br>Your precise location: ${response.country_name} <img src="${response.flag}" height="15vh" width="22vw"> <sup><small>[${response.country_code}]</small></sup><br>Your native language: probably ${response.languages[1].name}<br>Your timezone: UTC ${response.time_zone.offset} (${response.time_zone.abbr})<br>Note: We value your privacy! None of your data will be shared with a third-party. This is just a demonstraion of how far the AI can go, hence the "<em>precise</em>" location.`
           );
         },
         "jsonp"
       );
     }
-	*/
     $("#message").delay(10000).slideFadeToggle(800);
   } else if (q4.test(q)) {
     $("#message").slideFadeToggle(800);
@@ -558,36 +559,37 @@ function ask() {
       userName != ""
     ) {
       msg += userName;
-      msg += `. Want it changed? <a onclick="$('#searchInput').val('Change my name');stopText();ask();playText(mesg.innerText);" onmouseover="$(this).css('cursor', 'pointer')" style="color:rgba(0,0,255,0.9);text-decoration:underline;">Click here</a>`;
+      msg += `. If you'd like to go by a different name (for example, a nickname), <a onclick="$('#searchInput').val('Change my name');stopText();ask();playText(mesg.innerText);" onmouseover="$(this).css('cursor', 'pointer')" style="color:rgba(0,0,255,0.9);text-decoration:underline;">Click here</a>${nickName()}!`;
     } else {
       msg += "not saved yet";
-      msg += `. <a onclick="$('#searchInput').val('Save my name');stopText();ask();playText(mesg.innerText);" onmouseover="$(this).css('cursor', 'pointer')" style="color:rgba(0,0,255,0.9);text-decoration:underline;">Click here to (re)submit it, your name</a>`;
+      msg += `. <a onclick="$('#searchInput').val('Save my name');stopText();ask();playText(mesg.innerText);" onmouseover="$(this).css('cursor', 'pointer')" style="color:rgba(0,0,255,0.9);text-decoration:underline;">Click here</a> to resubmit your name!`;
     }
     $output.html(msg);
     console.log(msg);
     $("#message").delay(10000).slideFadeToggle(800);
   } else if (q6.test(q)) {
     $("#message").slideFadeToggle(800);
-    msg = "Call me Chatterbox :D";
+    msg = "Just call me Chatterbox, luv :D";
     $output.html(msg);
     console.log(msg);
     $("#message").delay(10000).slideFadeToggle(800);
   } else if (q7.test(q)) {
     $("#message").slideFadeToggle(800);
     msg = document.querySelector("#searchInput").value;
-    msg = msg.replace(/this/i, "2020");
+    msg = msg.replace(/this/i, new Date().getFullYear());
     msg = msg.replace(/was/i, "is");
     msg = msg.substr(3, 4);
     msg = parseInt(msg);
-    if (isLeapYear(msg)) {
-      msg = `Of course, ${msg} is a leap year`;
+    log(msg);
+    if (isLeapYear(msg) == true) {
+      msg = `Of course, ${msg} is a leap year!`;
       let x = msg.slice(11, 15);
       let curY = new Date().getFullYear();
-      if (curY != x) {
+      if (curY != x && curY > x) {
         msg = msg.replace(/is/i, "was");
       }
     } else {
-      msg = "In accordance with my intelligence, no, it's not.";
+      msg = "In accordance with my intelligence, no it's not.";
     }
     $output.html(msg);
     console.log(msg);
@@ -607,7 +609,7 @@ function ask() {
       log(msg);
       if (isBday(bday)) {
         msg +=
-          " (today)<br>Happy birthday, by the way! A gift for you &#127874;";
+          " (today)<br>Happy birthday, by the way! A gift for you &#127874;. Hurrah!";
       }
     } else {
       bday = prompt(
@@ -1621,6 +1623,8 @@ function ask() {
       stopText();
       msg = "";
       $output.html(msg);
+  } else if (q91.test(q)) {
+    showLicense();
   } else {
     $("#message").slideFadeToggle(800);
     msg = "Sorry, the program is still under development.";
@@ -1654,6 +1658,19 @@ function calc_age(ag) {
   var age_dt = new Date(diff_ms);
 
   return Math.abs(age_dt.getUTCFullYear() - 1970);
+}
+
+//Nicknaming function
+const nickName = () => {
+  if ((
+    userName != null &&
+    userName.length != 0) &&
+    (/^[a-z\s]+$/i.test(userName) &&
+    userName != "")) {
+  return ", " + userName.slice(0, 4);
+    } else {
+      return ;
+    }
 }
 
 //Time function:
@@ -1785,7 +1802,7 @@ window.$ = function(selector) {
 };
 */
 
-// shortcut to debugger
+// shortcut to console/ debugger
 //start
 function log(x) {
   return console.log(x);
@@ -1817,7 +1834,7 @@ if ("speechSynthesis" in window) {
       playText(mesg.innerText);
       //Show a snackbar every time Speech Synthesis reads the text
       snack.innerText =
-        "Speech synthesis is ongoing. You can't enter text in the input field until it finishes reading.";
+        "Speech synthesis is ongoing. You cannot enter any text in the input field until it finishes.";
       snack.className = "show";
       /*optional expression*/
       setTimeout(function () {
@@ -1826,7 +1843,7 @@ if ("speechSynthesis" in window) {
     }
   });
 } else {
-  log("Speech Synthesis isn't supported by your browser");
+  log("Speech Synthesis isn't supported by your browser, sorry :'(");
 }
 
 const utterance = new SpeechSynthesisUtterance();
@@ -1834,7 +1851,7 @@ utterance.addEventListener("end", () => {
   textInput.disabled = false;
   if (
     snack.innerText ==
-    "Speech synthesis is ongoing. You can't enter text in the input field until it finishes reading."
+    "Speech synthesis is ongoing. You cannot input any text in the field until it finishes reading the previous one."
   ) {
     snack.className = snack.className.replace("show", "");
   }
@@ -1853,14 +1870,11 @@ function playText(text) {
   window.speechSynthesis.onvoiceschanged = function () {
     voices = window.speechSynthesis.getVoices();
   };
-  /* utterance.voice = voices.filter(function (voice) {
-    return voice.name == "Microsoft Zira Desktop - English (United States)";
-  })[0]; */
-  utterance.voice = voices[10]
+  utterance.voice = voices[10];
   /* Or if you just wanna use default male voice (MS David_En-US), just don't set any voice.*/
-  utterance.pitch = 1.5;
+  utterance.pitch = 1;
   utterance.voiceURI = "native";
-  utterance.lang = "en-US";
+  utterance.lang = "hi";
   utterance.volume = 1;
   utterance.rate = 1;
   textInput.disabled = true;
@@ -1891,8 +1905,12 @@ window.onclick = function (event) {
 const showFeatures = () => {
   modal.style.display = "block";
   stopText();
-  msg = "Don't underestimate me, because I can perform logical operations too. For example, if you asked me to inform you whether 2020 or 2021 is a leap year, I'd let you know. And if you asked me to inform you of the date it'll be tomorrow or the date it was yesterday, I'd let you know. What's more, if you asked me to inform you whether it is a weekday today or weekend yet, I'd let you know.";
+  msg = "Don't underestimate me, I can perform logical operations too. For example, if you asked me to inform you whether 2020 or 2021 were a leap year, I'd let you know. And if you asked me to inform you of the date it is going to be tomorrow or the date it was yesterday lol, I'd let you know. What's more, if you asked me to inform you whether it is a weekday today or the weekend yet, I'd let you know.";
   playText(msg);
+  let aBugFix = () => {
+    return textInput.disabled = !true;
+  }
+  setTimeout(aBugFix(), 2000)
 }
 //end block of modal fn
 
@@ -1900,22 +1918,32 @@ const showLicense = () => {
   let showLicWin = window.open("./License/", "_blank");
   if (showLicWin) {
     window.focus();
-    log("Revealed the license");
+    log("The license file was just revealed.");
   } else {
     alert("Please enable popups for this site!");
   }
   stopText();
+  let aBugFix = () => {
+    return textInput.disabled = !true;
+  }
+  setTimeout(aBugFix(), 2000)
+  return ;
 }
 
 const showPortfolio = () => {
   let showPortfolioWin = window.open("../", "_blank");
   if (showPortfolioWin) {
     window.focus();
-    log("Sent user to the portfolio");
+    log("Sent user to the portfolio page");
   } else {
     alert("Please enable popups for this site!");
   }
   stopText();
+  let aBugFix = () => {
+    return textInput.disabled = !true;
+  }
+  setTimeout(aBugFix(), 2000)
+  return ;
 }
 
 $(document).bind("mouseleave", function(e) {
@@ -1924,10 +1952,3 @@ $(document).bind("mouseleave", function(e) {
   }
 });
 
-/*
-window.onbeforeunload = confirmExit;
-function confirmExit()
-{
-  return "You have attempted to leave this page.  If you have made any changes to the fields without clicking the Save button, your changes will be lost.  Are you sure you want to exit this page?";
-}
-*/
