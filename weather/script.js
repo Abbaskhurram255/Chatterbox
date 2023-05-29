@@ -5,7 +5,7 @@ const msg = document.querySelector(".top-banner .msg");
 let mesg;
 const list = document.querySelector(".ajax-section .cities");
 const submitBtn = document.querySelector("#submit-btn");
-const apiKey = "218c8b437c70fc5bc33279042c7b2746";
+const apiKey2 = "218c8b437c70fc5bc33279042c7b2746";
 
 //auto-detect the location on startup
 window.onload = function() {
@@ -53,7 +53,7 @@ form.addEventListener("submit", e => {
   }
 
   //ajax here
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=${apiKey}&units=metric`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=${apiKey2}&units=metric`;
 
   fetch(url)
     .then(response => response.json())
@@ -80,12 +80,12 @@ form.addEventListener("submit", e => {
       `;
       li.innerHTML = markup;
       list.appendChild(li);
-      mesg = `Weather in ${name} right now: ${Math.round(main.temp)}°C, ${weather[0]["description"]}`;
+      mesg = `${name} ka mosam: ${Math.round(main.temp)}°C, ${weather[0]["description"]}`;
       playText(mesg);
     })
     .catch(() => {
       msg.innerHTML = "Please search for a valid city 😩. Ex: Kansas or Kansas,US";
-      mesg = "Please search for a valid city; Kansas City, for example. Otherwise be more specific by providing the country code as well, Kansas, US, for example";
+      mesg = "Please kisi aysay sheher kay baray may search karo jo wakai may ho. Karachi, for example. Ya Mumbai? Kansas?? Ya to khul kay bolo, or sath may country code bhi likho, takay may khulkay samajh paun. 'Mumbai, IN' likho, jaysay kay.";
       playText(mesg);
     });
 
@@ -124,12 +124,10 @@ function playText(text) {
   window.speechSynthesis.onvoiceschanged = function () {
     voices = window.speechSynthesis.getVoices();
   };
-  utterance.voice = voices.filter(function (voice) {
-    return voice.name == "Microsoft Zira Desktop - English (United States)";
-  })[0];
-  utterance.pitch = 1.5;
+  utterance.voice = voices[10];
+  utterance.pitch = 1;
   utterance.voiceURI = "native";
-  utterance.lang = "en-US";
+  utterance.lang = "hi";
   utterance.volume = 1;
   utterance.rate = 1;
   speechSynthesis.speak(utterance);
