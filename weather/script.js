@@ -85,7 +85,7 @@ form.addEventListener("submit", e => {
     })
     .catch(() => {
       msg.innerHTML = "Please search for a valid city 😩. Ex: Kansas or Kansas,US";
-      mesg = "Please kisi aysay sheher kay baray may search karo jo wakai may ho. Karachi, for example. Ya Mumbai? Kansas?? Ya to khul kay bolo, or sath may country code bhi likho, takay may khulkay samajh paun. 'Mumbai, IN' likho, jaysay kay.";
+      mesg = "Please kisi aysay shay'hayr kay baray may search karo jo wa'kaee may ho. Karachi, jesa ke. Ya Mumbai? Kansas?? Ya to khul kay bolo, or sath may country code bhi likho, takay may khulkay samajh paun. 'Mumbai, I.N.' likho, jaysay kay.";
       playText(mesg);
     });
 
