@@ -1307,7 +1307,7 @@
      $("#message").delay(10000).slideFadeToggle(800); 
    } else { 
      $("#message").slideFadeToggle(800); 
-     msg = "Sorry yaar, program ab bhi development may hay, mayray developers key mujhay improve karnay may zyada say zyadaa koshish rahaygi, meanwhile best of luck. -<b><em>AyeshaPT by Ayesha Mehnaaz, The Founder of AyeshaPT</em></b>"; 
+     msg = "Sorry yaar, program ab bhi development may hay, mayray developers key mujhay improve karnay may zyada say zyada koshish hay."; 
      $output.html(msg); 
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
