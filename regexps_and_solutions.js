@@ -1,7 +1,7 @@
 /* regular expressions/ questions to be answered: */ 
  const q1 = /(what'?s?( is)? (up|popping))|(kesi (he|ho))/i, 
    q2 = /(who('?re| are) you)|(ho kon tum)|((he|hay) kon tu)/i, 
-   q3 = /(who am I)|(my (info|bio))|(what( do)? you know about me)|(me kon hun)/i, 
+   q3 = /(who am I)|(my (info|bio))|(what( do)? you know about me)|(me kon hun?)|(Kyaa?( kyaa?)? janti ho mere bare me)/i, 
    q4 = /(how('?re| are) you)|(how('?ve?| have) you been)/i, 
    q5 = /(what'?s?( is)?|show) my name/i, 
    q6 = /(what'?s?( is)? your name)|(what (can I|do you want me to) call you)/i, 
