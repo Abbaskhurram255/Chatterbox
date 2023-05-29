@@ -45,7 +45,7 @@ form.addEventListener("submit", e => {
     if (filteredArray.length > 0) {
       msg.textContent = `Pehle hi bata chuki hu weather ${
         filteredArray[0].querySelector(".city-name span").textContent
-      } ka ...otherwise agar accurate search results chah'yayn to khul kay pucho, sath may country code bhi batao 😉`;      form.reset();
+      } ka ...otherwise agar accurate search results chahien to khul ke pucho, or sheher ke sath country code (eg. London, UK) ya simply, country name (London,United Kingdom) bhi likho 😉`;      form.reset();
       input.focus();
       return;
     }
@@ -83,8 +83,8 @@ form.addEventListener("submit", e => {
       playText(mesg);
     })
     .catch(() => {
-      msg.innerHTML = "Please kisi eysay shay'hayr kay baray may search karo jo wa'kaee may ho. Karachi, jesa ke. Ya Mumbai? Kansas?? Ya to khul kay bolo, or sath may country code bhi likho, takay may khulkay samajh paun. 'Mumbai, IN' likho, jaysay kay";
-      mesg = "Pleez kisi eysay shay'hayr kay baray may search karo jo wa'kaee may ho. Karachi, jesa ke. Ya Mumbai? Kansas?? Ya to khul kay bolo, or sath may country code bhi likho, takay may khulkay samajh paun. 'Mumbai, I.N.' likho, jaysay kay.";
+      msg.innerHTML = "Please kisi eysay shay'hayr kay baray may search karo jo wa'kaee may ho. Jesa ke, Karachi. Ya Mumbai, ya Kansas? Ya to khul kay bolo, or sath may country code bhi likho, takay may khulkay samajh paun. 'Mumbai, IN' likho, jaysa kay";
+      mesg = "Pleez kisi eysay shay'hayr kay baray may search karo jo wa'kaee may ho. Jesa Kay Karachi. Ya Mumbai, ya Kansaas?? Ya to khul kay bolo, or sath may country code bhi likho, takay may khulkay samajh paun. 'Mumbai, I.N.' likho, jaysa ky.";
       playText(mesg);
     });
 
