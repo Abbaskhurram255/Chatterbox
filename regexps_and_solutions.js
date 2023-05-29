@@ -11,19 +11,19 @@
    q10 = /(call me by another|(change|(re)?save) my) name/i, 
    q11 = 
    /(((change|resubmit) my|incorrect) (dob|bday|(birth|b(-)?)day))|((dob|bday|(birth|b(-)?)day) is incorrect)/i, 
-   q12 = /(me (kesa Laga|kesi lagi))|(ham kese lage)/i, 
+   q12 = /(me (k(ai|)s(aa?|i) (laga|lagi)))|(ham (kese lage|pasand a(e|ay)))/i, 
    q13 = 
-   /(what (date|time|day) is it)|((current|local)( date and)? time)|(date today)|(time now)|(date and time)/i, 
-   q14 = /^(hi)|(hello)|(hey)|(hola)|(howdy)/i, 
-   q15 = /tic( |-)tac( |-)toe/i, 
-   q16 = /(weather)|(temperature today)|((hot|rainy|cloudy|sunny) day)/i, 
+   /(time (batao|(batao )?kyaa? (horahaa? )?(he|hai|hy)))|((current|local)( date and)? time)|(date today)|(time now)|(date and time)/i, 
+   q14 = /^(hi)|(hello)|(hey)|(hola)|(howdy)|(namashkar)|((as)?salam( u| o)?( alekum)?)/i, 
+   q15 = /tic( |-)?tac( |-)?toe/i, 
+   q16 = /(weather today)|(temperature today)|(is it a (hot|rainy|cloudy|sunny) day today||(mosam)/i, 
    q17 = /^$/, 
-   q18 = /((open|run|launch|execute) calc(ulator)?)|(calculate(?:bmi))/i, 
+   q18 = /((open|run|launch|execute|kholo) calc(ulator)?)|(calculate(?:bmi))/i, 
    q19 = 
    /(tts)|(speech engine)|(text to speech)|(ebook to audiobook)|((document|text) reader)/i, 
    q20 = /((my|take|open|launch) notes)|(journal)|(notebook)/i, 
    q21 = /(todo)|(reminder)|(remind me to)|((bucket|shopping) list)/i, 
-   q22 = /(music)|(songs?)|(jukebox)/i, 
+   q22 = /(music)|(songs?)|(jukebox)|(gaa?n(e|ay))/i, 
    q23 = /weight( units)? conver(sion|ter)/i, 
    q24 = /(random (fun|games?))|(I'?( ?a)?m bored)|(games)|(play( me)? a game)/i, 
    q25 = /^(play( me)?|run|launch|execute) breakout/i, 
@@ -46,7 +46,7 @@
    q41 = /(canvas)|(drawing app)|(want to draw)/i, 
    q42 = /(audio (visuali(z|s)er|player))|(play( local)? audio)/i, 
    q43 = /breaking bad cast/i, 
-   q44 = /(b(ody )?m(ass )?i(ndex)?)|(do I overweigh)/i, 
+   q44 = /(b(ody )?m(ass )?i(ndex)?)|(Kyaa? (may|me) mot(ee|i)? hu)/i, 
    q45 = /^(execute|launch|play( me)?|run) (the )?maze/i, 
    q46 = /calendar/i, 
    q47 = /my recipes/i, 
@@ -1069,12 +1069,12 @@
    } else if (q71.test(q)) { 
      msg = ""; 
      $output.html(msg); 
-     let tvSeriesAppWin = window.open("../tv-series-app/", "_blank"); 
+     let tvSeriesAppWin = window.open("../yoMovies/", "_blank"); 
      if (tvSeriesAppWin) { 
        window.focus(); 
-       msg = "Here you can find all of your most loved series"; 
+       msg = "Yahaa aapko milaygi ayk say ayk achay draamay or film key information, chahay nai ho ya purani. To fir wait kesa, Koi movie ya show likho (jaysay Housefull, Nautanki Saala), or us key rating pata karo. Kab release hui movie, drame ki story kya hay, kon kon say actors hayn... sab jano, ayk ayk movie or show ka (chahay wo Indian ho, ya American)!"; 
        playText(msg); 
-       log("Launched Launched an app for TV Series data"); 
+       log("Launched an app for TV-related data"); 
      } else { 
        alert("Please enable popups for this site!"); 
      } 
@@ -1082,13 +1082,12 @@
      let moviesAppWin = window.open("../yoMovies/", "_blank"); 
      if (moviesAppWin) { 
        window.focus(); 
-       log("Launched Movies app"); 
+       msg = "Yahaa aapko milaygi ayk say ayk achay draamay or film key information, chahay nai ho ya purani. To fir wait kesa, Koi movie ya show likho (jaysay Housefull, Nautanki Saala), or us key rating pata karo. Kab release hui movie, drame ki story kya hay, kon kon say actors hayn... sab jano, ayk ayk movie or show ka (chahay wo Indian ho, ya American)!"; 
+       playText(msg); 
+       log("Launched Movies"); 
      } else { 
        alert("Please enable popups for this site!"); 
-     } 
-     stopText(); 
-     msg = ""; 
-     $output.html(msg); 
+     }
    } else if (q73.test(q)) { 
      msg = ""; 
      $output.html(msg); 
@@ -1302,13 +1301,13 @@
      showLicense(); 
    } else if (q92.test(q)) { 
      $("#message").slideFadeToggle(800); 
-     msg = "Janna chahtay ho kis nay banaaya mujhay? Ek khubsurat si larki nay! Actually, mujhe bananay wali kaa naam Ayesha hee hay, surprise!"; 
+     msg = "Janna chahtay ho kis nay banaaya mujhay? Ek khubsurat si larki nay! Actually, mujhe bananay wali kaa naam bhi Ayesha hee hay (Ayesha Mehnaz), surprise!"; 
      $output.html(msg); 
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
    } else { 
      $("#message").slideFadeToggle(800); 
-     msg = "Sorry, the program is still under development."; 
+     msg = "Sorry yaar, program ab bhi development may hay, mayray developers key mujhay improve karnay may zyada say zyadaa koshish rahaygi, meanwhile best of luck. -<b><em>AyeshaPT by Ayesha Mehnaaz, The Founder of AyeshaPT</em></b>"; 
      $output.html(msg); 
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
