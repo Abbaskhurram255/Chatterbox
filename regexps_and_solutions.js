@@ -16,7 +16,7 @@
    /(time (batao|(batao )?kyaa? (horahaa? )?(he|hai|hy)))|((current|local)( date and)? time)|(date today)|(time now)|(date and time)/i, 
    q14 = /^(hi)|(hello)|(hey)|(hola)|(howdy)|(namashkar)|((as)?salam( u| o)?( alekum)?)/i, 
    q15 = /tic( |-)?tac( |-)?toe/i, 
-   q16 = /(weather today)|(temperature today)|(is it a (hot|rainy|cloudy|sunny) day today||(mosam)/i, 
+   q16 = /(weather today)|(temperature today)|(is it a (hot|rainy|cloudy|sunny) day today)|(mosam)/i, 
    q17 = /^$/, 
    q18 = /((open|run|launch|execute|kholo) calc(ulator)?)|(calculate(?:bmi))/i, 
    q19 = 
@@ -1312,4 +1312,4 @@
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
    } 
- };
+ }
