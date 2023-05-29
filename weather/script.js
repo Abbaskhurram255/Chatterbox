@@ -43,10 +43,9 @@ form.addEventListener("submit", e => {
     });
 
     if (filteredArray.length > 0) {
-      msg.textContent = `You already know the weather for ${
+      msg.textContent = `Pehle hi bata chuki hu weather ${
         filteredArray[0].querySelector(".city-name span").textContent
-      } ...otherwise be more specific by providing the country code as well 😉`;
-      form.reset();
+      } ka ...otherwise agar accurate search results chah'yayn to khul kay pucho, sath may country code bhi batao 😉`;      form.reset();
       input.focus();
       return;
     }
@@ -84,8 +83,8 @@ form.addEventListener("submit", e => {
       playText(mesg);
     })
     .catch(() => {
-      msg.innerHTML = "Please search for a valid city 😩. Ex: Kansas or Kansas,US";
-      mesg = "Please kisi aysay shay'hayr kay baray may search karo jo wa'kaee may ho. Karachi, jesa ke. Ya Mumbai? Kansas?? Ya to khul kay bolo, or sath may country code bhi likho, takay may khulkay samajh paun. 'Mumbai, I.N.' likho, jaysay kay.";
+      msg.innerHTML = "Please kisi eysay shay'hayr kay baray may search karo jo wa'kaee may ho. Karachi, jesa ke. Ya Mumbai? Kansas?? Ya to khul kay bolo, or sath may country code bhi likho, takay may khulkay samajh paun. 'Mumbai, IN' likho, jaysay kay";
+      mesg = "Pleez kisi eysay shay'hayr kay baray may search karo jo wa'kaee may ho. Karachi, jesa ke. Ya Mumbai? Kansas?? Ya to khul kay bolo, or sath may country code bhi likho, takay may khulkay samajh paun. 'Mumbai, I.N.' likho, jaysay kay.";
       playText(mesg);
     });
 
