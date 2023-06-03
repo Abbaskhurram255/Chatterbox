@@ -43,7 +43,7 @@
    q38 = /what (date|day) was it yesterday/i, 
    q39 = /what (date|day) will it be tomorrow/i, 
    q40 = /monopoly/i, 
-   q41 = /(canvas)|(drawing app)|(draw karna chaha?to hun?)/i, 
+   q41 = /(canvas)|(drawing app)|(draw(ing)? karna chaha?t(a|i) hun?)/i, 
    q42 = /(audio (visuali(z|s)er|player))|(play( local)? audio)/i, 
    q43 = /breaking bad cast/i, 
    q44 = /(b(ody )?m(ass )?i(ndex)?)|(Kyaa? (may|me) mot(ee|i)? hu)/i, 
