@@ -4,14 +4,14 @@
    q3 = /(who am I)|(my (info|bio))|(what( do)? you know about me)|(me kon hun?)|(Kyaa?( kyaa?)? janti ho mere bare me)/i, 
    q4 = /(how('?re| are) you)|(how('?ve?| have) you been)/i, 
    q5 = /(what'?s?( is)?|show) my name/i, 
-   q6 = /(what'?s?( is)? your name)|(what (can I|do you want me to) call you)/i, 
+   q6 = /((k(y|i)aa?) bulau (me|may) tumh(e|ain))|((Kyaa? )?naa?m k(i|y)aa? (he|hay) tumhara)/i, 
    q7 = /(is|was) (this|\d{4})( a)? leap year/i, 
    q8 = /((what'?s?|when'?s?)( is)?|show) my (dob|bday|(birth|b(-)?)day)/i, 
-   q9 = /(how old am I)|((show|what'?s?( is)?) my age)/i, 
-   q10 = /(call me by another|(change|(re)?save) my) name/i, 
+   q9 = /(kya uma?r (he|hay) meri)|(uma?r batao( tum)? meri)/i, 
+   q10 = /kisi or naa?m (se|say) bulao mujh(e|ay)/i, 
    q11 = 
    /(((change|resubmit) my|incorrect) (dob|bday|(birth|b(-)?)day))|((dob|bday|(birth|b(-)?)day) is incorrect)/i, 
-   q12 = /(me (k(ai|)s(aa?|i) (laga|lagi)))|(ham (kese lage|pasand a(e|ay)))/i, 
+   q12 = /(me (k(ai|)s(aa?|i) (laga|lagi)))|(ham (kaise lage|pasand a(e|ay)))/i, 
    q13 = 
    /(time (batao|(batao )?kyaa? (horahaa? )?(he|hai|hy)))|((current|local)( date and)? time)|(date today)|(time now)|(date and time)/i, 
    q14 = /^(hi)|(hello)|(hey)|(hola)|(howdy)|(namashkar)|((as)?salam( u| o)?( alekum)?)/i, 
