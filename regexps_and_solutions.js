@@ -101,7 +101,7 @@
    q85 = /simon/i, 
    q86 = /light maze/i, 
    q87 = 
-   /^((book|pdf) ((pre)?viewer|reader))|((read|(pre)?view)( me)? (a (document|pdf)|pdf('?s)?))$/i, 
+   /(book|pdf|kitab) (read kar ?k(e|ay)|parh ?k(e|ay)) (do|bataa?o|de sakt(e|i) ho)/i, 
    q88 = 
    /(^(open|launch|run)?( me)? ?travels? ?(app|plan(ning|s|ner))$)|(help me ?(to|with|in)? plan(ning)? travels)/i, 
    q89 = /truth or dare/i, 
@@ -1307,7 +1307,7 @@
      $("#message").delay(10000).slideFadeToggle(800); 
    } else { 
      $("#message").slideFadeToggle(800); 
-     msg = "Sorry yaar, program ab bhi development may hay, mayray developers key mujhay improve karnay may zyada say zyada koshish hay."; 
+     msg = "Sorry yaar, program ab bhi development may hay, mayray developers key mujhay improve karnay may zyaada say zyaada koshish hay."; 
      $output.html(msg); 
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
