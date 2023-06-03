@@ -8,12 +8,12 @@
    q7 = /(is|was) (this|\d{4})( a)? leap year/i, 
    q8 = /((what'?s?|when'?s?)( is)?|show) my (dob|bday|(birth|b(-)?)day)/i, 
    q9 = /(kya uma?r (he|hay) meri)|(uma?r batao( tum)? meri)/i, 
-   q10 = /kisi or naa?m (se|say) bulao mujh(e|ay)/i, 
+   q10 = /kisi or naa?m (se|say) (bulao|pukaro)( ap)? mujh(e|ay)/i, 
    q11 = 
    /(((change|resubmit) my|incorrect) (dob|bday|(birth|b(-)?)day))|((dob|bday|(birth|b(-)?)day) is incorrect)/i, 
    q12 = /(me (k(ai|)s(aa?|i) (laga|lagi)))|(ham (kaise lage|pasand a(e|ay)))/i, 
    q13 = 
-   /(time (batao|(batao )?kyaa? (horahaa? )?(he|hai|hy)))|((current|local)( date and)? time)|(date today)|(time now)|(date and time)/i, 
+   /(time ((batao|bataie)|(batao )?kyaa? (horahaa? )?(he|hai|hy)))|((current|local)( date and)? time)|(date today)|(time now)|(date and time)/i, 
    q14 = /^(hi)|(hello)|(hey)|(hola)|(howdy)|(namashkar)|((as)?salam( u| o)?( alekum)?)/i, 
    q15 = /tic( |-)?tac( |-)?toe/i, 
    q16 = /(weather today)|(temperature today)|(is it a (hot|rainy|cloudy|sunny) day today)|(mausam)/i, 
@@ -43,7 +43,7 @@
    q38 = /what (date|day) was it yesterday/i, 
    q39 = /what (date|day) will it be tomorrow/i, 
    q40 = /monopoly/i, 
-   q41 = /(canvas)|(drawing app)|(want to draw)/i, 
+   q41 = /(canvas)|(drawing app)|(draw karna chaha?to hun?)/i, 
    q42 = /(audio (visuali(z|s)er|player))|(play( local)? audio)/i, 
    q43 = /breaking bad cast/i, 
    q44 = /(b(ody )?m(ass )?i(ndex)?)|(Kyaa? (may|me) mot(ee|i)? hu)/i, 
@@ -114,16 +114,16 @@
    const $output = $("#message"); 
    if (q1.test(q)) { 
      $("#message").slideFadeToggle(800); 
-     msg = "Nothing much"; 
+     msg = "Kuch khaas nahi"; 
      if ( 
        userName != null && 
        userName.length != 0 && 
        /^[a-z\s]+$/i.test(userName) && 
        userName != "" 
      ) { 
-       msg += ` ${userName}, sup with you?`; 
+       msg += ` ${userName} ji, aap sunao?`; 
      } else { 
-       msg += ", sup with you?"; 
+       msg += ", aap sunao?"; 
      } 
      $output.html(msg); 
      console.log(msg); 
