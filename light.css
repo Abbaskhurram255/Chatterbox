@@ -100,7 +100,8 @@
  }
  
  body {
-   background: linear-gradient(to right, rgba(0,255,255,0.4), rgba(40,180,1650,0.6));
+   /* background: linear-gradient(to right, rgba(0,255,255,0.4), rgba(40,180,1650,0.6)); */
+      background: url("https://images.pexels.com/photos/8956318/pexels-photo-8956318.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
    
  }
  
