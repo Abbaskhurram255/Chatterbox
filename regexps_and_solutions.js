@@ -601,19 +601,12 @@
      stopText(); 
      msg = ""; 
      $output.html(msg); 
-   } else if (q31.test(q)) { 
-     let curConvApps = [ 
-       "./Currency-Converter-JS-master/", 
-       "./exchange-rate/", 
-       "https://cryptocurrency-converter.netlify.app/", 
-     ]; 
-     let curConvAppsWin = window.open( 
-       curConvApps[Math.floor(Math.random() * curConvApps.length)], 
-       "_blank", 
+   } else if (q31.test(q)) {
+     let curConvAppWin = window.open("./exchange-rate/", "_blank", 
        "width=600,height=800,resizable=no,toolbar=no,menubar=no" 
      ); 
   
-     if (curConvAppsWin) { 
+     if (curConvAppWin) { 
        window.focus(); 
        log("Launched Currency Converter"); 
      } else { 
@@ -625,10 +618,10 @@
    } else if (q32.test(q)) { 
      $("#message").slideFadeToggle(800); 
      msg = 
-       "Today is day " + 
+       "Aaj hay din " + 
        dayOfYear(new Date()) + 
-       " of year " + 
-       new Date().getFullYear(); 
+       " saal " + 
+       new Date().getFullYear() + " ka! "; 
      console.log(msg); 
      $output.html(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
