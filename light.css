@@ -101,9 +101,8 @@
  
  body {
    /* background: linear-gradient(to right, rgba(0,255,255,0.4), rgba(40,180,1650,0.6)); */
-      background-image: url("https://images.pexels.com/photos/8956318/pexels-photo-8956318.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+      background-image: url("https://images.pexels.com/photos/2467389/pexels-photo-2467389.jpeg?cs=tinysrgb&w=1920&h=1080");
       background-position: center;
-      background-size: 100% 200%;
       background-repeat: no-repeat;
       background-attachment: fixed;    
  }
