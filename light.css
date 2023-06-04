@@ -103,9 +103,9 @@
    /* background: linear-gradient(to right, rgba(0,255,255,0.4), rgba(40,180,1650,0.6)); */
       background-image: url("https://images.pexels.com/photos/8956318/pexels-photo-8956318.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
       background-position: center;
-      background-size: 100% 100%;
+      background-size: 100% 200%;
       background-repeat: no-repeat;
-   
+      background-attachment: fixed;    
  }
  
  #searchInput:active {
