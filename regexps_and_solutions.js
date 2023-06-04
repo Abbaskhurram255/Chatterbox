@@ -639,9 +639,9 @@
      $("#message").slideFadeToggle(800); 
      if (isWeekend()) { 
        msg = 
-         "Yes. Of course, it is! Why don't you go for an adventure or something?"; 
+         "Han. bayshak hay! Kisi adventure pay kyun nahi ja'tay?"; 
      } else { 
-       msg = "According to my intelligence, no, it's not."; 
+       msg = "Mayri intelligence kay mutabik, aaj na itwaar hay... or na hafta."; 
      } 
      console.log(msg); 
      $output.html(msg); 
