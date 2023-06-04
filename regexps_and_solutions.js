@@ -617,7 +617,7 @@
        window.focus(); 
        log("Launched Currency Converter"); 
      } else { 
-       alert("Please enable popups for this site!"); 
+       alert("Adblocker ko whitelist kijie please!"); 
      } 
      stopText(); 
      msg = ""; 
