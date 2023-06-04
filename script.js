@@ -13,7 +13,7 @@ window.onload = () => {
   //adding a tooltop on the input
   const tippy1 = document.querySelector("#searchInput");
   tippy(tippy1, {
-    content: "Try asking me to show <strong onclick=\"document.querySelector('#searchInput').value = 'What is the ' + this.innerText + ' like right now?';\" onmouseover=\"$(this).css('cursor', 'pointer');\">weather</strong> or to open <strong onclick=\"$('#searchInput').val($(this).text());\" onmouseover=\"$(this).css('cursor', 'pointer')\">calendar</strong>, or <strong onclick=\"$('#searchInput').val($(this).text())\" onmouseover=\"$(this).css('cursor', 'pointer')\">show exchange rates</strong>",
+    content: "Mujh se pucho batane ke lie ke <strong onclick=\"document.querySelector('#searchInput').value = this.innerText + ' kesa he?';\" onmouseover=\"$(this).css('cursor', 'pointer');\">mosam</strong> Ya pucho <strong onclick=\"$('#searchInput').val($(this).text());\" onmouseover=\"$(this).css('cursor', 'pointer')\">calendar</strong> kholne ke lie, ya pucho latest <strong onclick=\"$('#searchInput').val($(this).text())\" onmouseover=\"$(this).css('cursor', 'pointer')\">currency rates</strong> batane ke lie, sab karugi me!",
     followCursor: "horizontal",
     interactive: true /* To add interactions to and make your tippy's text highlight-able and clickable*/ ,
     appendTo: document.body,
