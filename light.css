@@ -102,9 +102,10 @@
  body {
    /* background: linear-gradient(to right, rgba(0,255,255,0.4), rgba(40,180,1650,0.6)); */
       background-image: url("https://images.pexels.com/photos/2467389/pexels-photo-2467389.jpeg?cs=tinysrgb&w=1920&h=1080");
-      background-position: center;
+      /* background-position: center; */
       background-repeat: no-repeat;
-      background-attachment: fixed;    
+      background-attachment: fixed;
+      background-size: cover;  
  }
  
  #searchInput:active {
