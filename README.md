@@ -1,4 +1,4 @@
-﻿# Chatterbox, it assists you!
+﻿# Ayesha... she assists you!
 
 Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-started/)
 
