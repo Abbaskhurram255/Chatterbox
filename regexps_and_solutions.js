@@ -1,7 +1,7 @@
 /* regular expressions/ questions to be answered: */ 
  const q1 = /(what'?s?( is)? (up|popping))|(kesi (he|ho))/i, 
    q2 = /(who('?re| are) you)|(ho kon tum)|((he|hay) kon tu)/i, 
-   q3 = /(who am I)|(my (info|bio))|(what( do)? you know about me)|(me kon hun?)|(Kyaa?( kyaa?)? janti ho mere bare me)/i, 
+   q3 = /(who am I)|(my (info|bio))|(what( do)? you know about me)|(me kon hun?)|(Kyaa?( kyaa?)? janti ho( ap)? mere bare me)/i, 
    q4 = /(kaisi( rahi)? ho)|(how('?ve?| have) you been)/i, 
    q5 = /(kyaa? naa?m (he|hai)|naa?m bataa?o) mera/i, 
    q6 = /(kyaa? bulaun? (me|main?) tumh(e|ain))|((Kya? )?naa?m( kya?)? (he|hai) tumhara)/i, 
@@ -60,7 +60,7 @@
    q54 = 
    /(I'?( ?a)?m (anxious|tired))|(help me (calm down|relax|with my anxiety))|(relaxer)/i, 
    q55 = 
-   /(new year countdown)|(((days|time)( left)? (un)?till?|(what time|when) is) new year)/i, 
+   /(new year countdown)|(((days|time)( left)? (un)?till?|(what time|when) is) new year)|(new year (kab|kitna (door|dur)) he)/i, 
    q56 = /(typing game)|((open|run|launch|play( me)?) speed( |-)?typer)/i, 
    q57 = 
    /((expenses?|budget) tracker)|(track my (budget|expenses?|pocket money))/i, 
