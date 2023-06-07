@@ -7,9 +7,9 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
 * * *
 
 *   Has Dark theme
-*   Has speech synthesis
-*   Is interactive
-*   Supports speech input (not supported by browsers other than Chrome, and Samsung Internet though)
+*   Can speak, and listen Urdu (and sometimes Hindi as well!)
+*   Is interactive, and friendly
+*   Supports speech input as mentioned above, not supported by browsers other than Chrome, and Samsung Internet however
 *   Can perform calculations like conversion between kilometers and miles
 *   Reminds users on events like New Year's Eve, New Year's Day, Christmas, and their birthday
 
