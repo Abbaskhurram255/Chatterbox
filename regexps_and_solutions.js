@@ -1,10 +1,10 @@
 /* regular expressions/ questions to be answered: */ 
  const q1 = /(what'?s?( is)? (up|popping))|(kesi (he|ho))/i, 
    q2 = /(who('?re| are) you)|(ho kon tum)|((he|hay) kon tu)/i, 
-   q3 = /(who am I)|(my (info|bio))|(what( do)? you know about me)|(me kon hun?)|(Kyaa?( kyaa?)? janti ho( ap)? mere bare me)/i, 
-   q4 = /(kaisi( rahi)? ho)|(how('?ve?| have) you been)/i, 
+   q3 = /(who am I)|(my (info|bio))|(what( do)? you know about me)|(me kon hun?)|(Kyaa?( kyaa?)? janti ho( ap)? mere baa?re m(ai|e)n?)/i, 
+   q4 = /(k(ai|e)si( rahi)? ho)|(how('?ve?| have) you been)/i, 
    q5 = /(kyaa? naa?m (he|hai)|naa?m bataa?o) mera/i, 
-   q6 = /(kyaa? bulaun? (me|main?) tumh(e|ain))|((Kya? )?naa?m( kya?)? (he|hai) tumhara)/i, 
+   q6 = /(kyaa? bulaun? m(e|ai)n? tumh(e|ain))|((Kya? )?naa?m( kya?)? (he|hai) tumhara)/i, 
    q7 = /(is|was) (this|\d{4})( a)? leap year/i, 
    q8 = /((what'?s?|when'?s?)( is)?|show) my (dob|bday|(birth|b(-)?)day)/i, 
    q9 = /(kya uma?r (he|hay) meri)|(uma?r batao( tum)? meri)/i, 
