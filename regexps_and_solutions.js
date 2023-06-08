@@ -60,7 +60,7 @@
    q54 = 
    /(I'?( ?a)?m (anxious|tired))|(help me (calm down|relax|with my anxiety))|(relaxer)/i, 
    q55 = 
-   /(new year countdown)|(((days|time)( left)? (un)?till?|(what time|when) is) new year)|(new year (kab|kitna (door|dur)) he)/i, 
+   /(new year countdown)|(((days|time)( left)? (un)?till?|(what time|when) is) new year)|(new year (kab|kitnaa? (door|dur)) h(e|ai))/i, 
    q56 = /(typing game)|((open|run|launch|play( me)?) speed( |-)?typer)/i, 
    q57 = 
    /((expenses?|budget) tracker)|(track my (budget|expenses?|pocket money))/i, 
