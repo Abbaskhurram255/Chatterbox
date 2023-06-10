@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="js/timer.js" defer></script>
+    <script src="js/animcircle.js" defer></script>
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Timer</h1>
+      <p>Click play/pause button to start/pause a timer.</p>
+      <p>Click on timer value to change its value.</p>
+    </header>
+    <main>
+      <div class="timer">
+        <div class="controls">
+          <input type="number" id="timer-duration" value="30" />
+          <div class="buttons">
+            <button id="timer-start">
+              <i class="fa-solid fa-circle-play"></i>
+              <i class="fa-solid fa-circle-pause hidden"></i>
+            </button>
+          </div>
+        </div>
+
+        <svg id="timer-svg">
+          <circle
+            r="190"
+            cx="200"
+            cy="200"
+            fill="transparent"
+            stroke="#f58402"
+            stroke-width="15"
+            transform="rotate(-90 200 200)"
+          ></circle>
+        </svg>
+      </div>
+    </main>
+  </body>
+</html>
