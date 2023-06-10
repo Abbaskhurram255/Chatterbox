@@ -6,7 +6,6 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
 
 * * *
 
-*   Has Dark theme
 *   Can speak, and listen Urdu (and sometimes Hindi as well!)
 *   Is interactive, and friendly
 *   Supports speech input as mentioned above, not supported by browsers other than Chrome, and Samsung Internet however
