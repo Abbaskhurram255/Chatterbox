@@ -1,14 +1,14 @@
 /* regular expressions/ questions to be answered: */ 
  const q1 = /(what'?s?( is)? (up|popping))|(kesi (he|ho))/i, 
    q2 = /(who('?re| are) you)|(ho kon tum)|((he|hay) kon tu)/i, 
-   q3 = /(who am I)|(my (info|bio))|(what( do)? you know about me)|(me kon hun?)|(Kyaa?( kyaa?)? janti ho( ap)? mere baa?re m(ai|e)n?)/i, 
+   q3 = /(who am I)|(my (info|bio))|(what( do)? you know about me)|(m(e|ai) kon h(u|oo)n?)|(Kyaa?( kyaa?)? jaa?nti ho( aa?p)? mer(e|a?y) baa?re m(ai|e)n?)/i, 
    q4 = /(k(ai|e)si( rahi)? ho)|(how('?ve?| have) you been)/i, 
    q5 = /(kyaa? naa?m (he|hai)|naa?m bataa?o) mera/i, 
    q6 = /(kyaa? bulaun? m(e|ai)n? tumh(e|ain))|((Kya? )?naa?m( kya?)? (he|hai) tumhara)/i, 
    q7 = /(is|was) (this|\d{4})( a)? leap year/i, 
    q8 = /((what'?s?|when'?s?)( is)?|show) my (dob|bday|(birth|b(-)?)day)/i, 
    q9 = /(kya uma?r (he|hay) meri)|(uma?r batao( tum)? meri)/i, 
-   q10 = /kisi or naa?m (se|say) (bulao|pukaro)( ap)? mujh(e|ay)/i, 
+   q10 = /kisi or naa?m (se|sa(i|y)) (bulaa?o|pukaa?ro)( aa?p)? mujh(e|ai|ay)/i, 
    q11 = 
    /(((change|resubmit) my|incorrect) (dob|bday|(birth|b(-)?)day))|((dob|bday|(birth|b(-)?)day) is incorrect)/i, 
    q12 = /(me (k(ai|)s(aa?|i) (laga|lagi)))|(ham (kaise lage|pasand a(e|ay)))/i, 
@@ -43,12 +43,12 @@
    q38 = /what (date|day) was it yesterday/i, 
    q39 = /what (date|day) will it be tomorrow/i, 
    q40 = /monopoly/i, 
-   q41 = /(canvas)|(drawing app)|(draw(ing)? karna chaha?t(a|i) hun?)/i, 
+   q41 = /(canvas)|(drawing app)|((draw(ing)? karna|(sketch|canvas) (banana|karna)) chaha?t(a|i) h(u|oo)n?)/i, 
    q42 = /(audio (visuali(z|s)er|player))|(play( local)? audio)/i, 
    q43 = /breaking bad cast/i, 
-   q44 = /(b(ody )?m(ass )?i(ndex)?)|(Kyaa? (may|me) mot(ee|i)? hu)/i, 
+   q44 = /(b(ody )?m(ass )?i(ndex)?)|(Kyaa? (mai|me)n? mot(ee|i)? h(oo|u)n?)/i, 
    q45 = /^(execute|launch|play( me)?|run) (the )?maze/i, 
-   q46 = /calendar/i, 
+   q46 = /(calendar)|(k(y|a) (date|tarikh?) (he|hai) aj)/i, 
    q47 = /my recipes/i, 
    q48 = /(space invaders)|(invasion game)/i, 
    q49 = /voice ?(notes|recorder)/i, 
@@ -60,11 +60,11 @@
    q54 = 
    /(I'?( ?a)?m (anxious|tired))|(help me (calm down|relax|with my anxiety))|(relaxer)/i, 
    q55 = 
-   /(new year countdown)|(((days|time)( left)? (un)?till?|(what time|when) is) new year)|(new year (kab|kitnaa? (door|dur)) h(e|ai))/i, 
+   /(new year countdown)|(((days|time)( left)? (un)?till?|(what time|when) is) new year)|(new year (kab|kitna (door|dur)) h(e|hai))/i, 
    q56 = /(typing game)|((open|run|launch|play( me)?) speed( |-)?typer)/i, 
    q57 = 
    /((expenses?|budget) tracker)|(track my (budget|expenses?|pocket money))/i, 
-   q58 = /(stopwatch)|(countdown timer)|(counter ?clock)|(count down)/i, 
+   q58 = /(stopwatch)|(timer)|(counter ?clock)|(count ?down)|(ulti ginti)/i, 
    q59 = /(miner of lava)|(lava game)/i, 
    q60 = 
    /((loan|mortgage) (calculator|payment))|(calculate( my)? (loan|mortgage))|(how much do (I|people) owe)/i, 
@@ -101,13 +101,16 @@
    q85 = /simon/i, 
    q86 = /light maze/i, 
    q87 = 
-   /(book|pdf|kitab) (read kar ?k(e|ai)|parh ?k(e|ai)) (do|den?|bataa?o|de sakt(e|i) ho)/i, 
+   /(book|pdf|kitab) (read kar ?k(e|ai)|parh ?k(e|ai)) (do|d(ai|e)n?|bataa?(o|en?)|de sakt(e|i) h(o|(e|ai)n?))/i, 
    q88 = 
    /(^(open|launch|run)?( me)? ?travels? ?(app|plan(ning|s|ner))$)|(help me ?(to|with|in)? plan(ning)? travels)/i, 
    q89 = /truth or dare/i, 
    q90 = /metronome/i, 
    q91 = /you licensed/i, 
-   q92 = /kis ne (banaya|create|develop kia) tumh(e|ai)/i; 
+   q92 = /kis n(e|ai)n? (banaya|create|develop kiy?a) tumh(e|ai)n?/i,
+   q93 = /I love you/i,
+   q94 = /kyaa (m(ai|e)n?|h(a|u)m) aa?pko baby bulaa? sakt(a|i) h(u|oo|e)n?/i,
+   q95 = /I('| )?a?m sorry/i;
   
  function ask() { 
    const q = document.querySelector("#searchInput").value; 
@@ -131,7 +134,7 @@
    } else if (q2.test(q)) { 
      $("#message").slideFadeToggle(800); 
      msg = 
-       "Mayray ilawah or kon ho saktaa hay? May Ayesha, aap jaysay achay insaan say mil kay bayhad khushi huif. Bas boli'ay toh, hukam kiji'ay! Batai'ye kaysee khidmat kar sakti hu may aapki?"; 
+       "Mayray ilawah or kon ho saktaa hay? May Ayesha, aap jaysay achay insaan say mil kay bayhad khushi hui. Bas boli'ay toh, hukam kiji'ay! Batai'ye kaysee khidmat kar sakti hu may aapki?"; 
      $output.html(msg); 
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
@@ -913,8 +916,9 @@
      } else { 
        alert("Please enable popups for this site!"); 
      } 
-   } else if (q58.test(q)) { 
-     let timerAppWin = window.open("./timer/", "_blank"); 
+   } else if (q58.test(q)) {
+     let timerApps = ["./timer/", "./timer-v2/"];
+     let timerAppWin = window.open(timerApps[Math.floor(Math.random() * games.length)], "_blank"); 
      if (timerAppWin) { 
        window.focus(); 
        log("Launched Timer"); 

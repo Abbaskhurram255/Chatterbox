@@ -503,7 +503,7 @@ function switchTheme() {
     $dTheme.attr("media", "");
     islTh = false;
     isdTh = !islTh;
-    $("#recIcon").attr("src", "whitemike.png");
+    
     //Show a snackbar every time theme switches to dark Theme
     snack.innerText = "Switched to Dark theme";
     snack.className = "show";
@@ -516,7 +516,6 @@ function switchTheme() {
     $dTheme.attr("media", "none");
     isdTh = false;
     islTh = !isdTh;
-    $("#recIcon").attr("src", "blackmike.png");
     //Show a snackbar every time the theme switches to light theme
     snack.innerText = "Switched to Light Theme";
     snack.className = "show";

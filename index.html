@@ -2,19 +2,22 @@
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" href="images/icons/favicon.ico" />
     <meta name="author" content="Ayesha Mehnaaz" />
-    <meta name="description" content="A simple JS-based bot" />
+    <meta name="description" content="AyeshaPT, your personal girlfriend!" />
     <meta
       name="keywords"
       content="HTML,CSS,JavaScript,JS,bot,simple-bot,simple-assistant,chatterbox,ayesha, ayeshapt"
     />
+    <meta name="theme-color" content="#000000" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=no"
     />
+    <link rel="manifest" href="manifest.json" />
     <title>AyeshaPT</title>
-    <link rel="shortcut icon" href="professor.png" type="image/png" />
+    <link rel="apple-touch-icon" href="images/icons/icon-192x192.png" type="image/png" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/tippy.js@6.2.7/animations/scale.css"
@@ -44,7 +47,7 @@
     <!-- Stylesheet for Dark Theme -->
   </head>
   <body>
-    <button id="thSwitcher" onclick="switchTheme()">Switch theme</button>
+    <!-- <button id="thSwitcher" onclick="switchTheme()">Switch theme</button> -->
     <div class="navbar-container">
       <input type="checkbox" name="menu" id="menu" class="menu-toggler" />
       <label for="menu" class="menu-toggler-label">☰</label>
@@ -56,16 +59,15 @@
     </div>
     <span class="hover-shadow-box-animation" id="time"></span>
     <h2><em>AyeshaPT</em></h2>
-    <div class="container" style="margin: 5% 0 0 10%;">
+    <div class="container">
       <input
         id="searchInput"
         type="text"
-        style="padding: 0 0 0 10px;"
         placeholder="Say 'hi'"
         name="queryBar"
         autocomplete="off" autofocus
       />
-      <img src="blackmike.png" id="recIcon" height="35vh" width="35vh">
+      <img src="whitemike.png" id="recIcon" height="35vh" width="35vh">
       <button id="askBtn" onclick="ask()">Ask</button>
     </div>
     <div id="message"></div>
