@@ -886,7 +886,7 @@
        window.focus(); 
        log("Launched New Year Countdown app"); 
      } else { 
-       alert("Please enable popups for this site!"); 
+       alert("Please enable popups for this site!");
      } 
      stopText(); 
      msg = ""; 
@@ -901,7 +901,7 @@
        playText(msg); 
        log("Launched Speed Typer"); 
      } else { 
-       alert("Please enable popups for this site!"); 
+       alert("Please enable popups for this site!");
      } 
    } else if (q57.test(q)) { 
      msg = ""; 
@@ -918,7 +918,7 @@
      } 
    } else if (q58.test(q)) {
      let timerApps = ["./timer/", "./timer-v2/"];
-     let timerAppWin = window.open(timerApps[Math.floor(Math.random() * games.length)], "_blank"); 
+     let timerAppWin = window.open(timerApps[Math.floor(Math.random() * timerApps.length)], "_blank"); 
      if (timerAppWin) { 
        window.focus(); 
        log("Launched Timer"); 
