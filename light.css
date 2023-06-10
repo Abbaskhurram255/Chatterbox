@@ -13,7 +13,7 @@
    border-radius: 15px;
    background: rgba(225,10,205,0.7);
    filter: brightness(80%);
-   padding: 5vh;
+   /*padding: 4vh;*/
    position: relative;
    top: 2.5vh;
 }
@@ -84,7 +84,7 @@
   box-shadow: 0 2px 5px 0 rgba(2, 2, 2, 0.5);
   text-align: left;
   height: 50%;
-  width: 60%;
+  width: 55%;
   color: rgba(225,225,220,0.9);
   font-size: 20px;
   font-family: 'Josefin Sans', sans-serif;
@@ -239,7 +239,7 @@
    font-weight: bold;
    color: white;
    border: 2px solid gray;
-   background-color: rgba(128, 0, 128, 0.4);
+   background-color: rgba(149, 53, 83, 0.9);
    border-radius: 8px;
    padding: 0 10px 0;
  }
