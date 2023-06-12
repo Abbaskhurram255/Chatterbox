@@ -1,10 +1,10 @@
 /* regular expressions/ questions to be answered: */ 
- const q1 = /(what'?s?( is)? (up|popping))|(kesi (hai|he|ho))/i, 
+ const q1 = /(din k(ai|e)saa?( guzar rahaa?)? h(e|ai))|(k(e|ai|ay)s(aa?|i|ee) (feel|mehs(u|oo)s) kar rahi h(o|e)n?)/i, 
    q2 = /(who('?re|( \w+ \w+)? are) you)|(h(o|ai|e)n? kon (tum?|aa?p))/i, 
    q3 = /(who am I)|(my (info|bio))|(what( do)? you know about me)|(m(e|ai)n? kon h(u|oo)n?)|((k(y|i)aa?( k(y|i)aa?)? jaa?nti ho( aa?p)? )?mer(e|a?y) baa?r(e|ay) m(ai|e)n?( aa?p)? k(y|i)aa?( k(y|i)aa?)? jaa?nt(i|e) ho)/i, 
-   q4 = /(k(ai|e)si( rahi)? ho)|(how('?ve?| have) you been)/i, 
+   q4 = /(k(ai|e|ay)s(i|ee)( rahi)? h(o|e|ai)n?)|(how('?ve?| have)? you been)/i, 
    q5 = /(k(y|i)aa? naa?m h(e|ai)|naa?m (k(y|i)aa? h(e|ai)|bataa?o)) ?(aa?p|tum)? meraa?/i, 
-   q6 = /(k(y|i)aa? bulaa?(u|oo)n? m(e|ai)n? (tumh(e|ai)n?|aa?p ko))|((k(y|i)aa? )?naa?m( k(y|i)aa?)? (he|hai) (tumhaa?raa?|aa?p kaa?))|(full name?)|(p(u|oo)raa? naa?m)/i, 
+   q6 = /(k(y|i)aa? (bulaa?(u|oo)n?|bulaa? sakt(aa|i|e|ai)? h(u|oo)n?) m(e|ai)n? (tumh(e|ai)n?|aa?p ko))|((k(y|i)aa? )?naa?m( k(y|i)aa?)? (he|hai) (tumhaa?raa?|aa?p kaa?))|(full name?)|(p(u|oo)raa? naa?m)/i, 
    q7 = /((is|was) (this|\d{4})( a)? leap year)|(k(y|i)aa? y(e|a(i|y)) (e|a)y?k leap year h(e|ai))/i, 
    q8 = /((what'?s?|when'?s?)( is)?|show) my (dob|bday|(birth|b(-)?)day)/i, 
    q9 = /(k(y|i)aa? uma?r (he|hai) meri)|(uma?r bataa?o ?(tum|aa?p)? meri)/i, 
@@ -109,40 +109,42 @@
    q91 = /you licensed/i, 
    q92 = /kis ?n(e|ai) (banaa?ya|create|develop kiy?aa?)/i,
    q93 = /(I love (yo)?u)|(m(e|ai) aa?p ko chaha?t(a|i) h(u|oo)n?)|(you( a|')?re lovable)/i,
-   q94 = /(I like you)|(you( a|')?re ( my)?(cute|adorable|favou?rite))|(k(y|i)aa? to ch(i|ee)z ho)/i,
+   q94 = /(I like you)|(you( a|')?re( my)? (cute|adorable|favou?rite))|(k(y|i)aa? to ch(i|ee)z ho)/i,
    q95 = /k(y|i)aa? (m(ai|e)n?|h(a|u)m) (aa?p|tum) ?ko baby bulaa? sakt(aa?|i) h(u|oo|e)n?/i,
-   q96 = /(will you be my girlfriend)|((k(y|i)aa? )?aa?p meri g(irl)?f(riend)? ban(o|en?)gi)/i,
-   q97 = /aaj? se aa?p meri g(irl)?f(riend)?/i,
-   q98 = /(favou?rite|pasand(ee|i)da) colou?r/i,
-   q99 = /(favou?rite|pasand(ee|i)da) (ghumne ki jaghen|places to (go|visit))/i,
-   q100 = /(I('| )?a?m sorry)|(mujh(e|a?y) maa?f kardo)/i,
+   q96 = /(will you be my (g(irl)?f(riend)?|wife))|(meri (g(irl)?f(riend)?|wife) ban(o|en?)gi)|(mujh(e|ai|ay) apnaa? (lover|husband|b(oy)?f(riend)?) bana(o|en?)gi)/i,
+   q97 = /aa?j (se|say|sai) ?((aa?p|tum|a(ye|i)sha)?( meri)? (bab(y|es?)|g(irl)?f(riend)?)|(m(ai|e)n? ((aa?p|a(ye|i)sha) kaa?|tumhaa?raa?|tera) (lover|husband|b(oy)?f(riend)?)))/i,
+   q98 = /(favou?rite|pasand(ee|i)daa?) colou?r/i,
+   q99 = /(favou?rite|pasand(ee|i)daa?) (ghumne ki jagh?(aa?|en?)|places to (go|visit|be))/i,
+   q100 = /(I('| )?a?m sorry)|(mujh(e|a?y|ai) maa?f kardo)/i,
    q102 = /(fu?c?k you)|(ajib ho)|(ghatiy?aa? (au|o)rat)/i,
    q103 = /I hate you/i,
-   q104 = /k(y|i)aa? h(u|a)m( dono)? (ph|f)ir s(e|ai) (friends|dost) ban sakt(e|a?y) h(ai|e)n?/i,
+   q104 = /meri friend ban(o|en?)gi/i,
    q105 = /(m(e|ai)n? b(u|o)h(o|a)t pareshaa?n h(u|oo)n?)|(I'?( ?a)?m depressed)/i,
    q106 = /(I hate m(e|yself))|(I'?( ?a)?m bad)/i,
    q107 = /(I( just)? need a friend)|(I'?( ?a)?m lonely)/i,
    q108 = /k(y|i)a m(e|ai)n? khud ?garz h(u|oo)n?/i,
    q109 = /k(y|i)a m(e|ai)n? bur(aa?|i) h(u|oo)n?/i,
    q110 = /(zodiac|star) sign/i,
-    q111 = /(age|uma?r)( k(i|y)aa?)? h(e|ai) (aa?pk|tumhaa?r)i/i,
-    q112 = /crap|brat|fool|fuck(er)?s?|twats?|cunts?|cock(biter|sucker)?s?|boobs?|morons?|douche?(bag)?s?|pricks?|dicks?|(ass|arse) ?(hole)?s?|dick(head)?s?|fag(got)?|nigg?(a|er)|fucking|f\*cking|f\*ck|bitch|b\*tch|shit|sh\*t|fool|dumb|couch potato|\*ssh\*l\*|\*\*\*\*|c\*ck|\*\*\*\*sucker|c\*cks\*ck\*r|\*\*\*\*|c\*nt|dickhead|d\*c\*h\*a\*|\*\*\*\*|f\*c\*|\*\*\*\*wit|f\*ckw\*t|fuk|f\*k|fuking|f\*k\*ng|mother\*\*\*\*er|m\*th\*rf\*ck\*r|\*\*\*\*\*\*|n\*gg\*r|pussy|p\*ssy|\*\*\*\*|sh\*t|wanker|w\*nk\*r|wankers|w\*nk\*rs|whore|wh\*r\*|slag| sl\*g|\*\*\*\*\*|b\*tch|f u c k|f\*c\*|b.i.t.c.h|b\*tch|d-i-c-k|d\*\*\*/i;
+    q111 = /(age|uma?r)( k(i|y)aa?)? h(e|ai) (aa?pki|tumhaa?ri)/i,
+    q112 = /hamaa?ri pasand(en?)? kitni milti julti h(e|ai)n?/i,
+    q113 = /(can'?t? you feel the chemistry between us)|(k(i|y)aa? (tum?|aa?p) hamar(e|ay) darmyaa?n (ki|(hone )?wali|(kisi|ek)( kisam ki)?) chemistry ko mehsus( nahi)? kar (rahi|sakti)( ho)?)/i,
+    q114 = /crap|brat|fool|fuck(er)?s?|twats?|cunts?|cock(biter|sucker)?s?|boobs?|morons?|douche?(bag)?s?|pricks?|dicks?|(ass|arse) ?(hole)?s?|dick(head)?s?|fag(got)?|nigg?(a|er)|fucking|f\*cking|f\*ck|bitch|b\*tch|shit|sh\*t|fool|dumb|couch potato|\*ssh\*l\*|\*\*\*\*|c\*ck|\*\*\*\*sucker|c\*cks\*ck\*r|\*\*\*\*|c\*nt|dickhead|d\*c\*h\*a\*|\*\*\*\*|f\*c\*|\*\*\*\*wit|f\*ckw\*t|fuk|f\*k|fuking|f\*k\*ng|mother\*\*\*\*er|m\*th\*rf\*ck\*r|\*\*\*\*\*\*|n\*gg\*r|pussy|p\*ssy|\*\*\*\*|sh\*t|wanker|w\*nk\*r|wankers|w\*nk\*rs|whore|wh\*r\*|slag| sl\*g|\*\*\*\*\*|b\*tch|f u c k|f\*c\*|b.i.t.c.h|b\*tch|d-i-c-k|d\*\*\*/i;
   
  function ask() { 
    const q = document.querySelector("#searchInput").value; 
    const $output = $("#message"); 
    if (q1.test(q)) { 
      $("#message").slideFadeToggle(800); 
-     msg = "Kuch khaas nahi"; 
+     msg = "Aap kay bina"; 
      if ( 
        userName != null && 
        userName.length >= 3 && 
        /^[a-z\s]+$/i.test(userName) && 
        userName != "" 
      ) { 
-       msg += ` ${userName} ji, aap sunao?`; 
+       msg += `, ${userName} ji? Adhura!`; 
      } else { 
-       msg += " yaar, aap sunao?"; 
+       msg += "? Bilkul adhura sa!"; 
      } 
      $output.html(msg); 
      console.log(msg); 
@@ -158,7 +160,7 @@
      $("#message").slideFadeToggle(800); 
      let age = calc_age(new Date(bday)); 
      msg = "<em style='font-weight:600;'>"; 
-     msg += "Kuch cheezayn jo mayn aap kay baray mayn jaanti hun:<ul>"; 
+     msg += "Kuch cheezay jo me aap kay baray may jaanti hoon:<ul>"; 
      msg += "<li>Aapka naam: "; 
      if ( 
        userName != null && 
@@ -190,7 +192,7 @@
      if (!isNaN(parseInt(age))) { 
        msg += age; 
      } else { 
-       msg += "Aapki birthday na jan'nay ki wajaa say calculate nahi karpai"; 
+       msg += "Aapki birthday na janne ki wajaa say calculate nahi karpaee"; 
      } 
      msg += "</li></ul></em>"; 
      $output.html(msg); 
@@ -204,6 +206,7 @@
        $.get( 
          `https://api.ipdata.co/?api-key=${API_KEY}`, 
          function (response) { 
+         	console.log(response);
            $("#message").append( 
              `<br><b>Mazid data... jo ke app ke IP Address se lia gaya (oops, ye harkat thori jasusana nahi thi? Whisphers, <em>"sorry!"</em>) </b><br>Apki andazana location: ${response.country_name} <img src="${response.flag}" height="15vh" width="22vw"> <sup><small>[${response.country_code}]</small></sup><br>Apki national language: zyada tar ${response.languages[1].name}<br>Apka timezone: UTC ${response.time_zone.offset} (${response.time_zone.abbr})<br>Note: We value your privacy! Hence we assure you that none of your data will be shared with a third-party (not unless we have your written consent). We also assure you that this is just a demonstraion of how far the AI can go, hence the "<em>precise</em>" location.` 
            ); 
@@ -214,7 +217,7 @@
      $("#message").delay(10000).slideFadeToggle(800); 
    } else if (q4.test(q)) { 
      $("#message").slideFadeToggle(800); 
-     msg = "Barhia hun ji may, umid hay aap bhi barhia hongay?"; 
+     msg = "Barhia hoon ji may, puchne kay liye thanks... umid hay aap bhi ache or sehti'yaab hogay? As a friend, I truly care."; 
      $output.html(msg); 
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
