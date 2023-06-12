@@ -1,9 +1,9 @@
 /* regular expressions/ questions to be answered: */ 
- const q1 = /(what'?s?( is)? (up|popping))|(kesi (he|ho))/i, 
-   q2 = /(who('?re|( the fu?c?k?| tf| fu?c?king?)? are) you)|(h(o|ai|e)n? kon (tum?|aa?p))/i, 
-   q3 = /(who am I)|(my (info|bio))|(what( do)? you know about me)|(m(e|ai) kon h(u|oo)n?)|(k(y|i)aa?( k(y|i)aa?)? jaa?nti ho( aa?p)? mer(e|a?y) baa?re m(ai|e)n?)/i, 
+ const q1 = /(what'?s?( is)? (up|popping))|(kesi (hai|he|ho))/i, 
+   q2 = /(who('?re|( \w+ \w+)? are) you)|(h(o|ai|e)n? kon (tum?|aa?p))/i, 
+   q3 = /(who am I)|(my (info|bio))|(what( do)? you know about me)|(m(e|ai)n? kon h(u|oo)n?)|((k(y|i)aa?( k(y|i)aa?)? jaa?nti ho( aa?p)? )?mer(e|a?y) baa?r(e|ay) m(ai|e)n?( aa?p)? k(y|i)aa?( k(y|i)aa?)? jaa?nt(i|e) ho)/i, 
    q4 = /(k(ai|e)si( rahi)? ho)|(how('?ve?| have) you been)/i, 
-   q5 = /(k(y|i)aa? naa?m (he|hai)|naa?m (k(y|i)aa? h(e|ai)|bataa?o)) ?(aa?p|tum)? meraa?/i, 
+   q5 = /(k(y|i)aa? naa?m h(e|ai)|naa?m (k(y|i)aa? h(e|ai)|bataa?o)) ?(aa?p|tum)? meraa?/i, 
    q6 = /(k(y|i)aa? bulaa?(u|oo)n? m(e|ai)n? (tumh(e|ai)n?|aa?p ko))|((k(y|i)aa? )?naa?m( k(y|i)aa?)? (he|hai) (tumhaa?raa?|aa?p kaa?))|(full name?)|(p(u|oo)raa? naa?m)/i, 
    q7 = /((is|was) (this|\d{4})( a)? leap year)|(k(y|i)aa? y(e|a(i|y)) (e|a)y?k leap year h(e|ai))/i, 
    q8 = /((what'?s?|when'?s?)( is)?|show) my (dob|bday|(birth|b(-)?)day)/i, 
@@ -108,8 +108,8 @@
    q90 = /metronome/i, 
    q91 = /you licensed/i, 
    q92 = /kis ?n(e|ai) (banaa?ya|create|develop kiy?aa?)/i,
-   q93 = /(I love (yo)?u)|(m(e|ai) aa?p ko chaha?t(a|i) h(u|oo)n?)/i,
-   q94 = /(I like you)|(you( a|')re adorable)|(k(y|i)aa? to ch(i|ee)z ho)/i,
+   q93 = /(I love (yo)?u)|(m(e|ai) aa?p ko chaha?t(a|i) h(u|oo)n?)|(you( a|')?re lovable)/i,
+   q94 = /(I like you)|(you( a|')?re ( my)?(cute|adorable|favou?rite))|(k(y|i)aa? to ch(i|ee)z ho)/i,
    q95 = /k(y|i)aa? (m(ai|e)n?|h(a|u)m) (aa?p|tum) ?ko baby bulaa? sakt(aa?|i) h(u|oo|e)n?/i,
    q96 = /(will you be my girlfriend)|((k(y|i)aa? )?aa?p meri g(irl)?f(riend)? ban(o|en?)gi)/i,
    q97 = /aaj? se aa?p meri g(irl)?f(riend)?/i,
@@ -124,7 +124,9 @@
    q107 = /(I( just)? need a friend)|(I'?( ?a)?m lonely)/i,
    q108 = /k(y|i)a m(e|ai)n? khud ?garz h(u|oo)n?/i,
    q109 = /k(y|i)a m(e|ai)n? bur(aa?|i) h(u|oo)n?/i,
-   q110 = /(zodiac|star) sign/i;
+   q110 = /(zodiac|star) sign/i,
+    q111 = /(age|uma?r)( k(i|y)aa?)? h(e|ai) (aa?pk|tumhaa?r)i/i,
+    q112 = /crap|brat|fool|fuck(er)?s?|twats?|cunts?|cock(biter|sucker)?s?|boobs?|morons?|douche?(bag)?s?|pricks?|dicks?|(ass|arse) ?(hole)?s?|dick(head)?s?|fag(got)?|nigg?(a|er)|fucking|f\*cking|f\*ck|bitch|b\*tch|shit|sh\*t|fool|dumb|couch potato|\*ssh\*l\*|\*\*\*\*|c\*ck|\*\*\*\*sucker|c\*cks\*ck\*r|\*\*\*\*|c\*nt|dickhead|d\*c\*h\*a\*|\*\*\*\*|f\*c\*|\*\*\*\*wit|f\*ckw\*t|fuk|f\*k|fuking|f\*k\*ng|mother\*\*\*\*er|m\*th\*rf\*ck\*r|\*\*\*\*\*\*|n\*gg\*r|pussy|p\*ssy|\*\*\*\*|sh\*t|wanker|w\*nk\*r|wankers|w\*nk\*rs|whore|wh\*r\*|slag| sl\*g|\*\*\*\*\*|b\*tch|f u c k|f\*c\*|b.i.t.c.h|b\*tch|d-i-c-k|d\*\*\*/i;
   
  function ask() { 
    const q = document.querySelector("#searchInput").value; 
@@ -156,8 +158,8 @@
      $("#message").slideFadeToggle(800); 
      let age = calc_age(new Date(bday)); 
      msg = "<em style='font-weight:600;'>"; 
-     msg += "Here's what I know about you:<ul>"; 
-     msg += "<li>Your name: "; 
+     msg += "Kuch cheezayn jo mayn aap kay baray mayn jaanti hun:<ul>"; 
+     msg += "<li>Aapka naam: "; 
      if ( 
        userName != null && 
        userName.length >= 3 && 
@@ -166,9 +168,9 @@
      ) { 
        msg += userName.split(" ")[0]; //only show the first name 
      } else { 
-       msg += "Not saved yet :("; 
+       msg += "Anjaan"; 
      } 
-     msg += "</li><li>Your birthday: "; 
+     msg += "</li><li>Aapki saal gira ka din: "; 
      if ( 
        bday != null && 
        /^[0-9a-zA-Z(-\.\_\s\/)]+$/i.test(bday) && 
@@ -182,13 +184,13 @@
          msg += " (today)"; 
        } 
      } else { 
-       msg += "Not saved yet :("; 
+       msg += "Anjaan"; 
      } 
-     msg += "</li><li>Your age: "; 
+     msg += "</li><li>Aapki umr: "; 
      if (!isNaN(parseInt(age))) { 
        msg += age; 
      } else { 
-       msg += "Couldn't calculate on account of not knowing your birthday yet"; 
+       msg += "Aapki birthday na jan'nay ki wajaa say calculate nahi karpai"; 
      } 
      msg += "</li></ul></em>"; 
      $output.html(msg); 
@@ -203,7 +205,7 @@
          `https://api.ipdata.co/?api-key=${API_KEY}`, 
          function (response) { 
            $("#message").append( 
-             `<br><b>Further data... received via your IP Address (oops, that was nosy, wasn't? Whisphers, <em>"sorry!"</em>) </b><br>Your precise location: ${response.country_name} <img src="${response.flag}" height="15vh" width="22vw"> <sup><small>[${response.country_code}]</small></sup><br>Your native language: probably ${response.languages[1].name}<br>Your timezone: UTC ${response.time_zone.offset} (${response.time_zone.abbr})<br>Note: We value your privacy! None of your data will be shared with a third-party. This is just a demonstraion of how far the AI can go, hence the "<em>precise</em>" location.` 
+             `<br><b>Mazid data... jo ke app ke IP Address se lia gaya (oops, ye harkat thori jasusana nahi thi? Whisphers, <em>"sorry!"</em>) </b><br>Apki andazana location: ${response.country_name} <img src="${response.flag}" height="15vh" width="22vw"> <sup><small>[${response.country_code}]</small></sup><br>Apki national language: zyada tar ${response.languages[1].name}<br>Apka timezone: UTC ${response.time_zone.offset} (${response.time_zone.abbr})<br>Note: We value your privacy! Hence we assure you that none of your data will be shared with a third-party (not unless we have your written consent). We also assure you that this is just a demonstraion of how far the AI can go, hence the "<em>precise</em>" location.` 
            ); 
          }, 
          "jsonp" 
@@ -212,13 +214,13 @@
      $("#message").delay(10000).slideFadeToggle(800); 
    } else if (q4.test(q)) { 
      $("#message").slideFadeToggle(800); 
-     msg = "Not bad, and you?"; 
+     msg = "Barhia hun ji may, umid hay aap bhi barhia hongay?"; 
      $output.html(msg); 
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
    } else if (q5.test(q)) { 
      $("#message").slideFadeToggle(800); 
-     msg = "Your name is "; 
+     msg = "Aapka naam hay "; 
      if ( 
        userName != null && 
        userName.length >= 3 && 
@@ -226,10 +228,10 @@
        userName != "" 
      ) { 
        msg += userName; 
-       msg += `. If you'd like me to call you a different name (for example, a nickname), <a onclick="$('#searchInput').val('Change my name');stopText();ask();playText(mesg.innerText);" onmouseover="$(this).css('cursor', 'pointer')" style="color:rgba(0,0,255,0.9);text-decoration:underline;">Click here</a>${nickName()}!`; 
+       msg += `. Agar aap chahtay ho may aapko kisi or naam say, jese kay ek nickname, say bulaun, <a onclick="$('#searchInput').val('Change my name');stopText();ask();playText(mesg.innerText);" onmouseover="$(this).css('cursor', 'pointer')" style="color:rgba(0,0,255,0.9);text-decoration:underline;">Idhar dabaao</a>${nickName()}!`; 
      } else { 
-       msg += "not saved yet"; 
-       msg += `. <a onclick="$('#searchInput').val('Save my name');stopText();ask();playText(mesg.innerText);" onmouseover="$(this).css('cursor', 'pointer')" style="color:rgba(0,0,255,0.9);text-decoration:underline;">Click here</a> to resubmit your name!`; 
+       msg += "\"ayk anjaan insan\""; 
+       msg += `. <a onclick="$('#searchInput').val('Save my name');stopText();ask();playText(mesg.innerText);" onmouseover="$(this).css('cursor', 'pointer')" style="color:rgba(0,0,255,0.9);text-decoration:underline;">Idhar dabaao</a> naam dubaara darj karne kay li'yay!`; 
      } 
      $output.html(msg); 
      console.log(msg); 
@@ -1312,7 +1314,7 @@
      showLicense(); 
    } else if (q92.test(q)) { 
      $("#message").slideFadeToggle(800); 
-     msg = "Janna chahtay ho kis nay banaaya mujhay? Ek khubsurat si larki nay! Actually, mujhe bananay wali kaa naam bhi khud Ayesha hee hay <em><Ayesha Mehnaaz!></em>... Surprise!"; 
+     msg = "Janna chahtay ho kis nay banaaya mujhay? Ek khubsurat si larki nay! Actually, mujhe bananay wali kaa naam bhi khud Ayesha hee hay <em>(Ayesha Mehnaaz!)</em>... Surprise!"; 
      $output.html(msg); 
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
