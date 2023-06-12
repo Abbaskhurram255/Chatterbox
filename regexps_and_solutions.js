@@ -632,7 +632,7 @@
        window.focus(); 
        log("Launched Currency Converter"); 
      } else { 
-       alert("Adblocker ko whitelist kijie please!"); 
+       alert("Converter API failed to load, ablocker ko whitelist kijie pehle, please!"); 
      } 
      stopText(); 
      msg = ""; 
