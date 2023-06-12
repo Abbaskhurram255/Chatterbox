@@ -69,7 +69,7 @@ $(document).ready(function () {
 
 // let isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
 if ("SpeechRecognition" in window || "webkitSpeechRecognition" in window) {
-	console.log("Speech recognition API supported");
+	console.log("Speech recognition API supported!");
   // speech recognition API supported
   let SpeechRecognition =
     window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -93,7 +93,7 @@ if ("SpeechRecognition" in window || "webkitSpeechRecognition" in window) {
       current == 1 && transcript == event.results[0][0].transcript;
 
     if (mobileRepeatBug == false) {
-  	$("#recIcon").css("filter", "brightness(40%);");
+  	$("#recIcon").css("filter", "brightness(40%)");
       noteContent = transcript;
       noteTextarea.val(noteContent);
       ask();
@@ -117,7 +117,10 @@ if ("SpeechRecognition" in window || "webkitSpeechRecognition" in window) {
     }
   };
   
-  recognition.onend = () => { $("#recIcon").css("filter", "brightness(80%)"); }
+  recognition.onend = () => {
+  	log('Speech recognition service disconnected.');
+      $("#recIcon").css("filter", "brightness(80%)");
+  }
 
   $("#recIcon").on("click", function () {
     stopText();
@@ -212,7 +215,7 @@ const yesterday = () => {
   d.setDate(d.getDate() - 1);
   let res = d.toString().split(" G")[0];
   res = res.slice(0, 15);
-  return `It was ${res} yesterday`;
+  return `Kal tareekh rahi ${res}`;
 };
 
 const tomorrow = () => {
@@ -220,7 +223,7 @@ const tomorrow = () => {
   d.setDate(d.getDate() + 1);
   let res = d.toString().split(" G")[0];
   res = res.slice(0, 15);
-  return `It'll be ${res} tomorrow`;
+  return `Kal ki date rahay gi (or din) ${res}`;
 };
 
 const detectDeviceType = () => {
@@ -249,7 +252,7 @@ const daystilXmas = () => {
     }, 4000);
   } else if (rslt == 1) {
     let snack = document.querySelector("#snackbar");
-    snack.innerText = "Reminder: It's Christmas tomorrow!";
+    snack.innerText = "Reminder: Kal Christmas hay!";
     snack.className = "show";
     setTimeout(function () {
       snack.className = snack.className.replace("show", "");
@@ -284,7 +287,7 @@ const daystilNYE = () => {
     }, 4000);
   } else if (noofdayslefttilNYE == 1) {
     let snack = document.querySelector("#snackbar");
-    snack.innerText = "Reminder: It's New Year's Eve tomorrow!";
+    snack.innerText = "Reminder: Kal New Year ki sham he!";
     snack.className = "show";
     setTimeout(function () {
       snack.className = snack.className.replace("show", "");
@@ -295,7 +298,7 @@ const daystilNYE = () => {
     noofdayslefttilNYE != 1
   ) {
     let snack = document.querySelector("#snackbar");
-    snack.innerText = `Reminder: Only ${noofdayslefttilNYE} days left until New Year's Eve!`;
+    snack.innerText = `Reminder: Sirf ${noofdayslefttilNYE} din reh gae New Year's Eve ane me!`;
     snack.className = "show";
     setTimeout(function () {
       snack.className = snack.className.replace("show", "");

@@ -1,6 +1,6 @@
 /* regular expressions/ questions to be answered: */ 
  const q1 = /(what'?s?( is)? (up|popping))|(kesi (he|ho))/i, 
-   q2 = /(who('?re| are) you)|(ho kon (tum|aa?p))|((he|hay) kon tu)/i, 
+   q2 = /(who('?re|( the fu?c?k?| tf| fu?c?king?)? are) you)|(h(o|ai|e)n? kon (tum?|aa?p))/i, 
    q3 = /(who am I)|(my (info|bio))|(what( do)? you know about me)|(m(e|ai) kon h(u|oo)n?)|(k(y|i)aa?( k(y|i)aa?)? jaa?nti ho( aa?p)? mer(e|a?y) baa?re m(ai|e)n?)/i, 
    q4 = /(k(ai|e)si( rahi)? ho)|(how('?ve?| have) you been)/i, 
    q5 = /(k(y|i)aa? naa?m (he|hai)|naa?m (k(y|i)aa? h(e|ai)|bataa?o)) ?(aa?p|tum)? meraa?/i, 
@@ -35,13 +35,13 @@
    q31 = /((crypto)?currency)|(exchange rates?)|(\w\w\w to \w\w\w)/i, 
    q32 = /((what )?day of year( is it)?)|((aa?j )?saa?l ka konsaa? din h(e|ai|a?y) aa?j)/i, 
    q33 = 
-   /(is (this|it)( a)? weekday (today|yet))|((is today|today is) a weekday)/i, 
-   q34 = /is (it|this)( a)? weekend( day)? (today|yet)/i, 
+   /(is (this|it)( a)? week ?day (today|yet))|((is today|today is) a week ?day)/i, 
+   q34 = /(is (this|it)( a)? week ?end (today|yet))|((is today|today is) a week ?end)|(k(y|i)aa? aa?j (itwaa?r|haftaa?) (h(e|a?(i|y)))|(thaa?))/i, 
    q35 = /numbers? to roman/i, 
    q36 = /(mi|miles) (and|to) (km|kilometers)/i, 
    q37 = /\d* ?(k(ilo)?m(eters?)?|mi(les?)?) (to|and|((equals|=) how many)|(baraa?bar h(e|ai)n? kit ?n(e|a(y|i)))) (mi(les?)?|k(ilo)?m(eters?)?)/i, 
-   q38 = /(what (date|day) was it yesterday)|(kal (k(y|i)aa?|kon ?s(aa?|i|ee)?) (din|day|date|tar(i|ee)kh) th(aa?|i|ee))/i, 
-   q39 = /(what (date|day) will it be tomorrow)|(kal (k(y|i)aa?|kon ?s(aa?|i|ee)?) (din|day|date|tar(i|ee)kh) (ho|rahe) ?g(aa?|i|ee))/i, 
+   q38 = /(what (date|day) was it yesterday)|(kal (k(y|i)aa?|kon ?s(aa?|i|ee)) (din|day|date|tar(i|ee)kh) (rah|th)(aa?|i|ee))/i, 
+   q39 = /(what (date|day) will it be tomorrow)|(kal (k(y|i)aa?|kon ?s(aa?|i|ee)) (din|day|date|tar(i|ee)kh) (ho|rah(e|ay)) ?g(aa?|i|ee))/i, 
    q40 = /monopoly/i, 
    q41 = /(canvas)|(drawing app)|((draw(ing)? karn(i|aa?))|((sketch(es)?|canvas) (banaa?n(aa?|e|ai)|karnaa?)) ((chaa?ha?t(a(a|i|y)?|i|ee?) )?h(u|oo|e|ai)n?))/i, 
    q42 = /(audio (visuali(z|s)er|player))|(play( local)? audio)/i, 
@@ -644,7 +644,7 @@
      $("#message").delay(10000).slideFadeToggle(800); 
    } else if (q33.test(q)) { 
      $("#message").slideFadeToggle(800); 
-     if (isWeekday()) { 
+     if (isWeekday() == true) { 
        msg = "Yes. Of course, it is!"; 
      } else { 
        msg = "According to my intelligence, no, it's not."; 
@@ -658,7 +658,7 @@
        msg = 
          "Han. bayshak hay! Kisi adventure pay kyun nahi ja'tay?"; 
      } else { 
-       msg = "Mayri intelligence kay mutabik, aaj na itwaar hay... or na hafta."; 
+       msg = "Mayri intelligence kay mutabik, aaj na itwaar hay... or na hi haftaa."; 
      } 
      console.log(msg); 
      $output.html(msg); 
