@@ -1,6 +1,6 @@
 /* regular expressions/ questions to be answered: */ 
  const q1 = /(what'?s?( is)? (up|popping))|(kesi (he|ho))/i, 
-   q2 = /(who('?re| are) you)|(ho kon tum)|((he|hay) kon tu)/i, 
+   q2 = /(who('?re| are) you)|(ho kon (tum|aa?p))|((he|hay) kon tu)/i, 
    q3 = /(who am I)|(my (info|bio))|(what( do)? you know about me)|(m(e|ai) kon h(u|oo)n?)|(k(y|i)aa?( k(y|i)aa?)? jaa?nti ho( aa?p)? mer(e|a?y) baa?re m(ai|e)n?)/i, 
    q4 = /(k(ai|e)si( rahi)? ho)|(how('?ve?| have) you been)/i, 
    q5 = /(k(y|i)aa? naa?m (he|hai)|naa?m (k(y|i)aa? h(e|ai)|bataa?o)) ?(aa?p|tum)? meraa?/i, 
@@ -33,7 +33,7 @@
    q29 = /^(play( me)?|run|launch|execute) (rock|stone) paper scissors?/i, 
    q30 = /(lyrics)|((encycl|lyric)opedia)/i, 
    q31 = /((crypto)?currency)|(exchange rates?)|(\w\w\w to \w\w\w)/i, 
-   q32 = /((what )?day of year( is it)?)|(saa?l ka konsaa? din h(e|ai|a?y) aa?j)/i, 
+   q32 = /((what )?day of year( is it)?)|((aa?j )?saa?l ka konsaa? din h(e|ai|a?y) aa?j)/i, 
    q33 = 
    /(is (this|it)( a)? weekday (today|yet))|((is today|today is) a weekday)/i, 
    q34 = /is (it|this)( a)? weekend( day)? (today|yet)/i, 
@@ -134,7 +134,7 @@
      msg = "Kuch khaas nahi"; 
      if ( 
        userName != null && 
-       username.length >= 3 && 
+       userName.length >= 3 && 
        /^[a-z\s]+$/i.test(userName) && 
        userName != "" 
      ) { 
@@ -160,7 +160,7 @@
      msg += "<li>Your name: "; 
      if ( 
        userName != null && 
-       username.length >= 3 && 
+       userName.length >= 3 && 
        /^[a-z\s]+$/i.test(userName) && 
        userName != "" 
      ) { 
@@ -221,7 +221,7 @@
      msg = "Your name is "; 
      if ( 
        userName != null && 
-       username.length >= 3 && 
+       userName.length >= 3 && 
        /^[a-z\s]+$/i.test(userName) && 
        userName != "" 
      ) { 
@@ -328,7 +328,7 @@
        console.log(`New username: ${userName}`); 
        if ( 
          userName != null && 
-         username.length >= 3 && 
+         userName.length >= 3 && 
          /^[a-z\s]+$/i.test(userName) && 
          userName != "" 
        ) { 

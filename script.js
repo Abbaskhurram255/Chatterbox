@@ -117,7 +117,7 @@ if ("SpeechRecognition" in window || "webkitSpeechRecognition" in window) {
     }
   };
   
-  recognition.onend = () => $("#recIcon").css("filter", "brightness(80%);");
+  recognition.onend = () => { $("#recIcon").css("filter", "brightness(80%)"); }
 
   $("#recIcon").on("click", function () {
     stopText();
