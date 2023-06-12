@@ -4,7 +4,7 @@
    q3 = /(who am I)|(my (info|bio))|(what( do)? you know about me)|(m(e|ai) kon h(u|oo)n?)|(k(y|i)aa?( k(y|i)aa?)? jaa?nti ho( aa?p)? mer(e|a?y) baa?re m(ai|e)n?)/i, 
    q4 = /(k(ai|e)si( rahi)? ho)|(how('?ve?| have) you been)/i, 
    q5 = /(k(y|i)aa? naa?m (he|hai)|naa?m (k(y|i)aa? h(e|ai)|bataa?o)) ?(aa?p|tum)? meraa?/i, 
-   q6 = /(k(y|i)aa? bulaa?(u|oo)n? m(e|ai)n? (tumh(e|ai)n?|aa?p ko))|((k(y|i)aa? )?naa?m( k(y|i)aa?)? (he|hai) (tumhaa?raa?|aa?p kaa?))|(full name?)|(aa?p kaa? p(u|oo)raa? naa?m)/i, 
+   q6 = /(k(y|i)aa? bulaa?(u|oo)n? m(e|ai)n? (tumh(e|ai)n?|aa?p ko))|((k(y|i)aa? )?naa?m( k(y|i)aa?)? (he|hai) (tumhaa?raa?|aa?p kaa?))|(full name?)|(p(u|oo)raa? naa?m)/i, 
    q7 = /((is|was) (this|\d{4})( a)? leap year)|(k(y|i)aa? y(e|a(i|y)) (e|a)y?k leap year h(e|ai))/i, 
    q8 = /((what'?s?|when'?s?)( is)?|show) my (dob|bday|(birth|b(-)?)day)/i, 
    q9 = /(k(y|i)aa? uma?r (he|hai) meri)|(uma?r bataa?o ?(tum|aa?p)? meri)/i, 
@@ -43,12 +43,12 @@
    q38 = /(what (date|day) was it yesterday)|(kal (k(y|i)aa?|kon ?s(aa?|i|ee)?) (din|day|date|tar(i|ee)kh) th(aa?|i|ee))/i, 
    q39 = /(what (date|day) will it be tomorrow)|(kal (k(y|i)aa?|kon ?s(aa?|i|ee)?) (din|day|date|tar(i|ee)kh) (ho|rahe) ?g(aa?|i|ee))/i, 
    q40 = /monopoly/i, 
-   q41 = /(canvas)|(drawing app)|((draw(ing)? karn(i|aa?)|(sketch|canvas) (banaa?naa?|karnaa?)) (chaha?t(aa?|i) h(u|oo)n?)|(h(e|ai)n?))/i, 
+   q41 = /(canvas)|(drawing app)|((draw(ing)? karn(i|aa?))|((sketch(es)?|canvas) (banaa?n(aa?|e|ai)|karnaa?)) ((chaa?ha?t(a(a|i|y)?|i|ee?) )?h(u|oo|e|ai)n?))/i, 
    q42 = /(audio (visuali(z|s)er|player))|(play( local)? audio)/i, 
    q43 = /breaking bad cast/i, 
    q44 = /(b(ody )?m(ass )?i(ndex)?)|(k(y|i)aa? (mai|me)n? mot(ee|i) h(oo|u)n?)/i, 
    q45 = /^(execute|launch|play( me)?|run) (the )?maze/i, 
-   q46 = /(calendar)|(k(y|a) (date|tar(i|ee)kh?) (he|hai) aa?j)/i, 
+   q46 = /(calendar)|(k(y|i)aa? (date|tar(i|ee)kh?) h(e|ai) aa?j)/i, 
    q47 = /my recipes/i, 
    q48 = /(space invaders)|(invasion game)/i, 
    q49 = /voice ?(notes|recorder)/i, 
@@ -140,7 +140,7 @@
      ) { 
        msg += ` ${userName} ji, aap sunao?`; 
      } else { 
-       msg += ", aap sunao?"; 
+       msg += " yaar, aap sunao?"; 
      } 
      $output.html(msg); 
      console.log(msg); 
@@ -236,7 +236,7 @@
      $("#message").delay(10000).slideFadeToggle(800); 
    } else if (q6.test(q)) { 
      $("#message").slideFadeToggle(800); 
-     msg = "May'ra pura naam Ayesha Mehnaaz hay... Par agar ap chaho to mujhay sirf Ayesha bhi bula saktay ho, I'd love that :D"; 
+     msg = "May'ra pura naam Ayesha Mehnaaz hay... Par agar ap chaho to mujhay sirf Ayesha bhi bulaa saktay ho, mujhay acha lagay gaa!"; 
      $output.html(msg); 
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
@@ -635,7 +635,7 @@
    } else if (q32.test(q)) { 
      $("#message").slideFadeToggle(800); 
      msg = 
-       "Aaj hay din " + 
+       "Aaj din hay " + 
        dayOfYear(new Date()) + 
        " saal " + 
        new Date().getFullYear() + " ka! "; 
@@ -667,7 +667,7 @@
      $("#message").slideFadeToggle(800); 
      let p = prompt("Enter number you want me to convert to Roman numeral"); 
      let conv = toRomanNumeral(p); 
-     if (/^[0-9]*$/g.test(p) && p != null && p != "" && p != 0) { 
+     if (/^[0-9]*$/g.test(p) && p != null && p != "" && p >= 1) { 
        msg = `Roman numeral for ${p} is ${conv}`; 
      } else { 
        msg = "Values other than integers cannot be converted!"; 
@@ -679,7 +679,7 @@
      $("#message").slideFadeToggle(800); 
      let p = prompt("Enter miles you want me to convert to Km"); 
      let conv = milesToKm(p); 
-     if (/^[0-9(.)]*$/g.test(p) && p != null && p != "" && p != 0) { 
+     if (/^[0-9(.)]*$/g.test(p) && p != null && p != "" && p.length >= 1) { 
        msg = `${p} miles are equal to ${conv} kilometers`; 
      } else { 
        msg = "Values other than numbers cannot be converted!"; 
@@ -691,7 +691,7 @@
      $("#message").slideFadeToggle(800); 
      let p = prompt("Enter Kilometers you want me to convert to miles"); 
      let conv = kmToMiles(p); 
-     if (/^[0-9(.)]*$/g.test(p) && p != null && p != "" && p != 0) { 
+     if (/^[0-9(.)]*$/g.test(p) && p != null && p != "" && p.length >= 1) { 
        msg = `${p} Kilometers are equal to ${conv} miles`; 
      } else { 
        msg = "Values other than numbers cannot be converted!"; 
@@ -1312,7 +1312,7 @@
      showLicense(); 
    } else if (q92.test(q)) { 
      $("#message").slideFadeToggle(800); 
-     msg = "Janna chahtay ho kis nay banaaya mujhay? Ek khubsurat si larki nay! Actually, mujhe bananay wali kaa naam bhi Ayesha hee hay (Ayesha Mehnaz), surprise!"; 
+     msg = "Janna chahtay ho kis nay banaaya mujhay? Ek khubsurat si larki nay! Actually, mujhe bananay wali kaa naam bhi khud Ayesha hee hay <em><Ayesha Mehnaaz!></em>... Surprise!"; 
      $output.html(msg); 
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 

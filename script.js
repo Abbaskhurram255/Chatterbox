@@ -93,9 +93,9 @@ if ("SpeechRecognition" in window || "webkitSpeechRecognition" in window) {
       current == 1 && transcript == event.results[0][0].transcript;
 
     if (mobileRepeatBug == false) {
+  	$("#recIcon").css("filter", "brightness(40%);");
       noteContent = transcript;
       noteTextarea.val(noteContent);
-      $("#recIcon").css("filter", "brightness(80%);");
       ask();
       if (mesg.innerText != "") {
         if (speechSynthesis.speaking) {
@@ -116,6 +116,8 @@ if ("SpeechRecognition" in window || "webkitSpeechRecognition" in window) {
       }, 3500);
     }
   };
+  
+  recognition.onend = () => $("#recIcon").css("filter", "brightness(80%);");
 
   $("#recIcon").on("click", function () {
     stopText();
