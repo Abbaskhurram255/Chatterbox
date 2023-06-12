@@ -48,7 +48,7 @@ window.onload = () => {
       }
     }
   });
-  setTimeout(daystilXmas, 1000);
+  setTimeout(daystilXmas, 3000);
   setTimeout(daystilNYE, 12000);
   setTimeout(daystilNYD, 25000);
   $("#message").slideFadeToggle(5);
@@ -60,6 +60,9 @@ window.onload = () => {
 
 $(document).ready(function () {
   //JQuery onload functions go here
+  $("#recIcon").click(() => {
+  	$("#recIcon").css("filter", "brightness(40%)");
+  })
 });
 /* To remind you that the variable holds a jQuery selection, use $(varName) method to declare it. Plain JavaScript's method of variable declarations also work tho */
 
@@ -108,6 +111,7 @@ if ("SpeechRecognition" in window || "webkitSpeechRecognition" in window) {
 
   recognition.onerror = function (event) {
     if (event.error == "no-speech") {
+    	$("#recIcon").css("filter", "brightness(80%)");
       let snack = document.querySelector("#snackbar");
       snack.innerText = "No speech was detected. Try again.";
       snack.className = "show";
