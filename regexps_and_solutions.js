@@ -1,22 +1,22 @@
 /* regular expressions/ questions to be answered: */ 
  const q1 = /(what'?s?( is)? (up|popping))|(kesi (he|ho))/i, 
    q2 = /(who('?re| are) you)|(ho kon tum)|((he|hay) kon tu)/i, 
-   q3 = /(who am I)|(my (info|bio))|(what( do)? you know about me)|(m(e|ai) kon h(u|oo)n?)|(Kyaa?( kyaa?)? jaa?nti ho( aa?p)? mer(e|a?y) baa?re m(ai|e)n?)/i, 
+   q3 = /(who am I)|(my (info|bio))|(what( do)? you know about me)|(m(e|ai) kon h(u|oo)n?)|(k(y|i)aa?( k(y|i)aa?)? jaa?nti ho( aa?p)? mer(e|a?y) baa?re m(ai|e)n?)/i, 
    q4 = /(k(ai|e)si( rahi)? ho)|(how('?ve?| have) you been)/i, 
-   q5 = /(kyaa? naa?m (he|hai)|naa?m bataa?o) mera/i, 
-   q6 = /(kyaa? bulaun? m(e|ai)n? tumh(e|ain))|((Kya? )?naa?m( kya?)? (he|hai) tumhara)/i, 
-   q7 = /(is|was) (this|\d{4})( a)? leap year/i, 
+   q5 = /(k(y|i)aa? naa?m (he|hai)|naa?m (k(y|i)aa? h(e|ai)|bataa?o)) ?(aa?p|tum)? meraa?/i, 
+   q6 = /(k(y|i)aa? bulaa?(u|oo)n? m(e|ai)n? (tumh(e|ai)n?|aa?p ko))|((k(y|i)aa? )?naa?m( k(y|i)aa?)? (he|hai) (tumhaa?raa?|aa?p kaa?))|(full name?)|(aa?p kaa? p(u|oo)raa? naa?m)/i, 
+   q7 = /((is|was) (this|\d{4})( a)? leap year)|(k(y|i)aa? y(e|a(i|y)) (e|a)y?k leap year h(e|ai))/i, 
    q8 = /((what'?s?|when'?s?)( is)?|show) my (dob|bday|(birth|b(-)?)day)/i, 
-   q9 = /(kya uma?r (he|hay) meri)|(uma?r batao( tum)? meri)/i, 
+   q9 = /(k(y|i)aa? uma?r (he|hai) meri)|(uma?r bataa?o ?(tum|aa?p)? meri)/i, 
    q10 = /kisi or naa?m (se|sa(i|y)) (bulaa?o|pukaa?ro)( aa?p)? mujh(e|ai|ay)/i, 
    q11 = 
    /(((change|resubmit) my|incorrect) (dob|bday|(birth|b(-)?)day))|((dob|bday|(birth|b(-)?)day) is incorrect)/i, 
-   q12 = /(me (k(ai|)s(aa?|i) (laga|lagi)))|(ham (kaise lage|pasand a(e|ay)))/i, 
+   q12 = /(m(e|ai) (k(ai|e)s(aa?|i|ee) (laga|lagi)))|(ham (kaise lage|pasand a(e|ai)))/i, 
    q13 = 
-   /(time ((batao|bataie)|(batao )?kyaa? (horahaa? )?(he|hai|hy)))|((current|local)( date and)? time)|(date today)|(time now)|(date and time)/i, 
+   /(time ((batao|bataie)|(bataa?o )?k(y|i)aa? (hora?haa? )?(he|hai|hy)))|((current|local)( date and)? time)|(date today)|(time now)|(date and time)|(aa?j (k(y|i)aa?|kon ?s(aa?|i|ee)?) (din|day|date|tar(i|ee)kh) (h(e|a?(y|i))|th(aa?|i|ee)))/i, 
    q14 = /^(hi)|(hello)|(hey)|(hola)|(howdy)|(namashkar)|((as)?salam ?(u|o)?( ala?(e|i)kum)?)/i, 
    q15 = /tic( |-)?tac( |-)?toe/i, 
-   q16 = /(weather today)|(temperature today)|(is it a (hot|rainy|cloudy|sunny) day today)|(mausam)|(mosam)/i, 
+   q16 = /(weather (today|forecast|(right )?now))|(temperature today)|(is it a (hot|rainy|cloudy|sunny) day today)|(mausam)|(mosam)/i, 
    q17 = /^$/, 
    q18 = /((open|run|launch|execute|kholo) calc(ulator)?)|(calculate(?:bmi))/i, 
    q19 = 
@@ -33,22 +33,22 @@
    q29 = /^(play( me)?|run|launch|execute) (rock|stone) paper scissors?/i, 
    q30 = /(lyrics)|((encycl|lyric)opedia)/i, 
    q31 = /((crypto)?currency)|(exchange rates?)|(\w\w\w to \w\w\w)/i, 
-   q32 = /(what )?day of year( is it)?/i, 
+   q32 = /((what )?day of year( is it)?)|(saa?l ka konsaa? din h(e|ai|a?y) aa?j)/i, 
    q33 = 
    /(is (this|it)( a)? weekday (today|yet))|((is today|today is) a weekday)/i, 
    q34 = /is (it|this)( a)? weekend( day)? (today|yet)/i, 
    q35 = /numbers? to roman/i, 
    q36 = /(mi|miles) (and|to) (km|kilometers)/i, 
-   q37 = /(km|kilometers) (and|to) (mi|miles)/i, 
-   q38 = /what (date|day) was it yesterday/i, 
-   q39 = /what (date|day) will it be tomorrow/i, 
+   q37 = /\d* ?(k(ilo)?m(eters?)?|mi(les?)?) (to|and|((equals|=) how many)|(baraa?bar h(e|ai)n? kit ?n(e|a(y|i)))) (mi(les?)?|k(ilo)?m(eters?)?)/i, 
+   q38 = /(what (date|day) was it yesterday)|(kal (k(y|i)aa?|kon ?s(aa?|i|ee)?) (din|day|date|tar(i|ee)kh) th(aa?|i|ee))/i, 
+   q39 = /(what (date|day) will it be tomorrow)|(kal (k(y|i)aa?|kon ?s(aa?|i|ee)?) (din|day|date|tar(i|ee)kh) (ho|rahe) ?g(aa?|i|ee))/i, 
    q40 = /monopoly/i, 
-   q41 = /(canvas)|(drawing app)|((draw(ing)? karna|(sketch|canvas) (banana|karna)) chaha?t(a|i) h(u|oo)n?)/i, 
+   q41 = /(canvas)|(drawing app)|((draw(ing)? karn(i|aa?)|(sketch|canvas) (banaa?naa?|karnaa?)) (chaha?t(aa?|i) h(u|oo)n?)|(h(e|ai)n?))/i, 
    q42 = /(audio (visuali(z|s)er|player))|(play( local)? audio)/i, 
    q43 = /breaking bad cast/i, 
-   q44 = /(b(ody )?m(ass )?i(ndex)?)|(Kyaa? (mai|me)n? mot(ee|i)? h(oo|u)n?)/i, 
+   q44 = /(b(ody )?m(ass )?i(ndex)?)|(k(y|i)aa? (mai|me)n? mot(ee|i) h(oo|u)n?)/i, 
    q45 = /^(execute|launch|play( me)?|run) (the )?maze/i, 
-   q46 = /(calendar)|(k(y|a) (date|tarikh?) (he|hai) aj)/i, 
+   q46 = /(calendar)|(k(y|a) (date|tar(i|ee)kh?) (he|hai) aa?j)/i, 
    q47 = /my recipes/i, 
    q48 = /(space invaders)|(invasion game)/i, 
    q49 = /voice ?(notes|recorder)/i, 
@@ -107,10 +107,24 @@
    q89 = /truth or dare/i, 
    q90 = /metronome/i, 
    q91 = /you licensed/i, 
-   q92 = /kis n(e|ai)n? (banaya|create|develop kiy?a) tumh(e|ai)n?/i,
-   q93 = /I love you/i,
-   q94 = /kyaa (m(ai|e)n?|h(a|u)m) aa?pko baby bulaa? sakt(a|i) h(u|oo|e)n?/i,
-   q95 = /I('| )?a?m sorry/i;
+   q92 = /kis ?n(e|ai) (banaa?ya|create|develop kiy?aa?)/i,
+   q93 = /(I love (yo)?u)|(m(e|ai) aa?p ko chaha?t(a|i) h(u|oo)n?)/i,
+   q94 = /(I like you)|(you( a|')re adorable)|(k(y|i)aa? to ch(i|ee)z ho)/i,
+   q95 = /k(y|i)aa? (m(ai|e)n?|h(a|u)m) (aa?p|tum) ?ko baby bulaa? sakt(aa?|i) h(u|oo|e)n?/i,
+   q96 = /(will you be my girlfriend)|((k(y|i)aa? )?aa?p meri g(irl)?f(riend)? ban(o|en?)gi)/i,
+   q97 = /aaj? se aa?p meri g(irl)?f(riend)?/i,
+   q98 = /(favou?rite|pasand(ee|i)da) colou?r/i,
+   q99 = /(favou?rite|pasand(ee|i)da) (ghumne ki jaghen|places to (go|visit))/i,
+   q100 = /(I('| )?a?m sorry)|(mujh(e|a?y) maa?f kardo)/i,
+   q102 = /(fu?c?k you)|(ajib ho)|(ghatiy?aa? (au|o)rat)/i,
+   q103 = /I hate you/i,
+   q104 = /k(y|i)aa? h(u|a)m( dono)? (ph|f)ir s(e|ai) (friends|dost) ban sakt(e|a?y) h(ai|e)n?/i,
+   q105 = /(m(e|ai)n? b(u|o)h(o|a)t pareshaa?n h(u|oo)n?)|(I'?( ?a)?m depressed)/i,
+   q106 = /(I hate m(e|yself))|(I'?( ?a)?m bad)/i,
+   q107 = /(I( just)? need a friend)|(I'?( ?a)?m lonely)/i,
+   q108 = /k(y|i)a m(e|ai)n? khud ?garz h(u|oo)n?/i,
+   q109 = /k(y|i)a m(e|ai)n? bur(aa?|i) h(u|oo)n?/i,
+   q110 = /(zodiac|star) sign/i;
   
  function ask() { 
    const q = document.querySelector("#searchInput").value; 
@@ -120,7 +134,7 @@
      msg = "Kuch khaas nahi"; 
      if ( 
        userName != null && 
-       userName.length != 0 && 
+       username.length >= 3 && 
        /^[a-z\s]+$/i.test(userName) && 
        userName != "" 
      ) { 
@@ -146,7 +160,7 @@
      msg += "<li>Your name: "; 
      if ( 
        userName != null && 
-       userName.length != 0 && 
+       username.length >= 3 && 
        /^[a-z\s]+$/i.test(userName) && 
        userName != "" 
      ) { 
@@ -207,7 +221,7 @@
      msg = "Your name is "; 
      if ( 
        userName != null && 
-       userName.length != 0 && 
+       username.length >= 3 && 
        /^[a-z\s]+$/i.test(userName) && 
        userName != "" 
      ) { 
@@ -222,7 +236,7 @@
      $("#message").delay(10000).slideFadeToggle(800); 
    } else if (q6.test(q)) { 
      $("#message").slideFadeToggle(800); 
-     msg = "Just call me Chatterbox, luv :D"; 
+     msg = "May'ra pura naam Ayesha Mehnaaz hay... Par agar ap chaho to mujhay sirf Ayesha bhi bula saktay ho, I'd love that :D"; 
      $output.html(msg); 
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
@@ -314,7 +328,7 @@
        console.log(`New username: ${userName}`); 
        if ( 
          userName != null && 
-         userName.length != 0 && 
+         username.length >= 3 && 
          /^[a-z\s]+$/i.test(userName) && 
          userName != "" 
        ) { 

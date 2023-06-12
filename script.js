@@ -1,16 +1,19 @@
 ﻿/* load default (light) theme every time the window (aka body object (DOM document.body) loads) nd show a tooltip whenever searchInput is active. Run startTime function too */
 window.onload = () => {
   startTime();
+  /*
   $lTheme.attr("media", "");
   $dTheme.attr("media", "none");
   islTh = true;
   isdTh = false;
+  */
+  //check if jQuery has finished loading every time the window loads
   if (jQuery) {
     log("JQuery loaded successfully!");
   } else {
     log("Failed to load JQuery :(");
   }
-  //adding a tooltop on the input
+  //adding a tooltop on the input as soon as the window finishes loading
   const tippy1 = document.querySelector("#searchInput");
   tippy(tippy1, {
     content: "Mujh se pucho batane ke lie ke <strong onclick=\"document.querySelector('#searchInput').value = this.innerText;\" onmouseover=\"$(this).css('cursor', 'pointer');\">mosam kesa he?</strong> Ya pucho <strong onclick=\"$('#searchInput').val($(this).text());\" onmouseover=\"$(this).css('cursor', 'pointer')\">calendar</strong> kholne ke lie, ya pucho latest <strong onclick=\"$('#searchInput').val($(this).text())\" onmouseover=\"$(this).css('cursor', 'pointer')\">currency rates</strong> batane ke lie, sab karugi me!",
@@ -56,7 +59,7 @@ window.onload = () => {
 }; //end block of window.onload method
 
 $(document).ready(function () {
-  //JQuery functions go here
+  //JQuery onload functions go here
 });
 /* To remind you that the variable holds a jQuery selection, use $(varName) method to declare it. Plain JavaScript's method of variable declarations also work tho */
 
@@ -66,6 +69,7 @@ $(document).ready(function () {
 
 // let isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
 if ("SpeechRecognition" in window || "webkitSpeechRecognition" in window) {
+	console.log("Speech recognition API supported");
   // speech recognition API supported
   let SpeechRecognition =
     window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -88,9 +92,10 @@ if ("SpeechRecognition" in window || "webkitSpeechRecognition" in window) {
     var mobileRepeatBug =
       current == 1 && transcript == event.results[0][0].transcript;
 
-    if (!mobileRepeatBug) {
+    if (mobileRepeatBug == false) {
       noteContent = transcript;
       noteTextarea.val(noteContent);
+      $("#recIcon").css("filter", "brightness(80%);");
       ask();
       if (mesg.innerText != "") {
         if (speechSynthesis.speaking) {
@@ -470,7 +475,7 @@ function dateTime() {
   let month = months[d.getMonth()];
   let year = d.getFullYear();
   let result =
-    "Local date & time right now: <br>" +
+    "Local date and time right now: <br>" +
     day +
     " " +
     hr +
@@ -488,52 +493,7 @@ function dateTime() {
   return result;
 }
 
-// Theme switcher:
-var lTheme, dTheme, islTh, isdTh, snack;
-$lTheme = $(".lightTh");
-$dTheme = $(".darkTh");
-snack = document.querySelector("#snackbar");
-/*       initial state of the switcher: 
-      islTh = true;
-      isdTh = !islTh;
-      */
-function switchTheme() {
-  if (islTh && !isdTh) {
-    $lTheme.attr("media", "none");
-    $dTheme.attr("media", "");
-    islTh = false;
-    isdTh = !islTh;
-    
-    //Show a snackbar every time theme switches to dark Theme
-    snack.innerText = "Switched to Dark theme";
-    snack.className = "show";
-    setTimeout(function () {
-      snack.className = snack.className.replace("show", "");
-    }, 3000);
-    console.log("Switched to Dark Theme");
-  } else if (isdTh && !islTh) {
-    $lTheme.attr("media", "");
-    $dTheme.attr("media", "none");
-    isdTh = false;
-    islTh = !isdTh;
-    //Show a snackbar every time the theme switches to light theme
-    snack.innerText = "Switched to Light Theme";
-    snack.className = "show";
-    setTimeout(function () {
-      snack.className = snack.className.replace("show", "");
-    }, 3000);
-    console.log("Switched to Light Theme");
-  }
-}
 
-/* Query function, enable it in case JQuery fails to run
-     function $(x) {return document.querySelector(x);} 
-Another method for it:
-  create a global '$' variable:
-window.$ = function(selector) {
-  return document.querySelector(selector);
-};
-*/
 
 // shortcut to console/ debugger
 //start
@@ -684,6 +644,60 @@ $(document).bind("mouseleave", function (e) {
     stopText();
   }
 });
+
+
+/* Function for switching Themes
+
+
+
+var lTheme, dTheme, islTh, isdTh, snack;
+$lTheme = $(".lightTh");
+$dTheme = $(".darkTh");
+snack = document.querySelector("#snackbar");
+function switchTheme() {
+  if (islTh && !isdTh) {
+    $lTheme.attr("media", "none");
+    $dTheme.attr("media", "");
+    islTh = false;
+    isdTh = !islTh;
+    
+    
+    
+    snack.innerText = "Switched to Dark theme";
+    snack.className = "show";
+    setTimeout(function () {
+      snack.className = snack.className.replace("show", "");
+    }, 3000);
+    console.log("Switched to Dark Theme");
+  } else if (isdTh && !islTh) {
+    $lTheme.attr("media", "");
+    $dTheme.attr("media", "none");
+    isdTh = false;
+    islTh = !isdTh;
+    
+    
+    
+    snack.innerText = "Switched to Light Theme";
+    snack.className = "show";
+    setTimeout(function () {
+      snack.className = snack.className.replace("show", "");
+    }, 3000);
+    console.log("Switched to Light Theme");
+  }
+}
+
+theme switcher end block */
+
+
+/* Query function, enable it in case JQuery fails to run
+     function $(x) {return document.querySelector(x);} 
+Another method for it:
+  create a global '$' variable:
+window.$ = function(selector) {
+  return document.querySelector(selector);
+};
+*/
+
 
 
 // function greet() {

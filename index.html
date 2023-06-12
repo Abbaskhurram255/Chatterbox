@@ -2,7 +2,7 @@
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="images/icons/favicon.ico" />
+    <link rel="icon" href="images/icons/favicon.ico" />
     <meta name="author" content="Ayesha Mehnaaz" />
     <meta name="description" content="AyeshaPT, your personal girlfriend!" />
     <meta
@@ -41,10 +41,13 @@
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
       rel="stylesheet"
     />
-    <link class="lightTh" rel="stylesheet" href="light.css" />
+    
     <!-- Stylesheet for Light Theme -->
-    <link class="darkTh" rel="stylesheet" href="style.css" />
+    <link class="lightTh" rel="stylesheet" href="light.css" />
+    
     <!-- Stylesheet for Dark Theme -->
+    <!-- disabled <link class="darkTh" rel="stylesheet" href="style.css" /> -->
+    
   </head>
   <body>
     <!-- <button id="thSwitcher" onclick="switchTheme()">Switch theme</button> -->
@@ -70,7 +73,7 @@
       <img src="whitemike.png" id="recIcon" height="35vh" width="35vh">
       <button id="askBtn" onclick="ask()">Ask</button>
     </div>
-    <div id="message"></div>
+    <div id="message" class="thought"></div>
     <div id="snackbar"></div>
     <!-- Snackbar -->
     <div id="myModal" class="modal">
