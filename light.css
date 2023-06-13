@@ -199,10 +199,13 @@
    visibility: hidden;
    min-width: 250px;
    margin-left: -125px;
-   background-color: #333;
+   background: linear-gradient(to right, #67032f, chocolate, transparent);
+   /*background: linear-gradient(to right, #67032f, pink);*/
+   /*background: linear-gradient(to right, #67032f, plum);*/
+   border: 4px dotted aliceblue;
    color: #fff;
    text-align: center;
-   border-radius: 2px;
+   border-radius: 82px 0px;
    padding: 16px;
    position: fixed;
    z-index: 1;
