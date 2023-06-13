@@ -113,7 +113,9 @@ if ("SpeechRecognition" in window || "webkitSpeechRecognition" in window) {
     if (event.error == "no-speech") {
     	$("#recIcon").css("filter", "brightness(80%)");
       let snack = document.querySelector("#snackbar");
-      snack.innerText = "No speech was detected. Try again.";
+      snack.innerText = "No speech was detected. Please try again!";
+      stopText();
+      playText(snack.innerText);
       snack.className = "show";
       setTimeout(function () {
         snack.className = snack.className.replace("show", "");

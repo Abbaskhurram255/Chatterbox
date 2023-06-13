@@ -192,7 +192,7 @@
      if (!isNaN(parseInt(age))) { 
        msg += age; 
      } else { 
-       msg += "Aapki birthday na janne ki wajaa say calculate nahi karpaee"; 
+       msg += "Aapki birthday na janne ki wajaa say calculate nahi karpa'ee"; 
      } 
      msg += "</li></ul></em>"; 
      $output.html(msg); 
@@ -208,7 +208,7 @@
          function (response) { 
          	console.log(response);
            $("#message").append( 
-             `<br><b>Mazid data... jo ke app ke IP Address se lia gaya (oops, ye harkat thori jasusana nahi thi? Whisphers, <em>"sorry!"</em>) </b><br>Apki andazana location: ${response.country_name} <img src="${response.flag}" height="15vh" width="22vw"> <sup><small>[${response.country_code}]</small></sup><br>Apki national language: zyada tar ${response.languages[1].name}<br>Apka timezone: UTC ${response.time_zone.offset} (${response.time_zone.abbr})<br>Note: We value your privacy! Hence we assure you that none of your data will be shared with a third-party (not unless we have your written consent). We also assure you that this is just a demonstraion of how far the AI can go, hence the "<em>precise</em>" location.` 
+             `<br><b>Mazid data... jo ke app ke IP Address se lia gaya (oops, ye harkat thori jasusana nahi thi? Whisphers, <em>"sorry!"</em>) </b><br>Apki andazana location: ${response.country_name} <img src="${response.flag}" height="15vh" width="22vw"> <sup><small>[${response.country_code}]</small></sup><br>Apki national language: zyada tar ${response.languages[1].native}<br>Apka timezone: UTC ${response.time_zone.offset.slice(0,2)} ${response.time_zone.name} [${response.time_zone.abbr}]<br>Note: We value your privacy! Hence we assure you that none of your data will be shared with a third-party (not unless we have your written consent). We also assure you that this is just a demonstraion of how far the AI can go, hence the "<em>precise</em>" location.` 
            ); 
          }, 
          "jsonp" 
@@ -217,7 +217,7 @@
      $("#message").delay(10000).slideFadeToggle(800); 
    } else if (q4.test(q)) { 
      $("#message").slideFadeToggle(800); 
-     msg = "Barhia hoon ji may, puchne kay liye thanks... umid hay aap bhi ache or sehti'yaab hogay? As a friend, I truly care."; 
+     msg = "Barhia hoon ji may, puchne kay liye thanks... umid hay aap bhi ache or sehti'yaab hogay? As a friend, I deeply care <img style='position: relative; top: 1vh;' src='images/emo/hearts.png' />"; 
      $output.html(msg); 
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
@@ -423,7 +423,11 @@
      $output.html(msg); 
    } else if (q17.test(q)) { 
      $("#message").slideFadeToggle(800); 
-     msg = "Aray kuch pucho gay bhi ya bas yuhi dekhte raho gay?"; 
+     msg = "Aray kuch pucho gay bhi ya bas yuhi dekhte raho gay? <img style='position: relative; top: 1vh;' src='images/emo/duh.png' />";
+     /*let emo = document.createElement("img");
+     emo.src = "emojis/angry.png";
+     document.body.appendChild(emo);
+     $("#message").append(emo);*/
      $output.html(msg); 
      let audio = new Audio; 
      audio.src = "./attitude.mp3"; 
