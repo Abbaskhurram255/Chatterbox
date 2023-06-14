@@ -1,9 +1,12 @@
-﻿/* load default (light) theme every time the window (aka body object (DOM document.body) loads) nd show a tooltip whenever searchInput is active. Run startTime function too */
+﻿
+const snack = document.querySelector("#snackbar");
 
+/* load default (light) theme every time the window (aka body object (DOM document.body) loads) nd show a tooltip whenever searchInput is active. Run startTime function too */
 
 
 window.onload = () => {
   playRandomFile();
+  
   startTime();
   /*
   $lTheme.attr("media", "");
@@ -43,7 +46,6 @@ window.onload = () => {
         }
         playText(mesg.innerText);
         //Show a snackbar every time Speech Synthesis reads the text
-        let snack = document.querySelector("#snackbar");
         snack.innerText =
           "Speech synthesis is ongoing. You can't enter text in the input field until it finishes reading.";
         snack.className = "show";
@@ -77,8 +79,7 @@ $(document).ready(function () {
 
 // let isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
 if ("SpeechRecognition" in window || "webkitSpeechRecognition" in window) {
-	console.log("Speech recognition API supported!");
-  // speech recognition API supported
+  // See if speech recognition API is supported
   let SpeechRecognition =
     window.SpeechRecognition || window.webkitSpeechRecognition;
   let recognition = new SpeechRecognition();
@@ -117,7 +118,6 @@ if ("SpeechRecognition" in window || "webkitSpeechRecognition" in window) {
   recognition.onerror = function (event) {
     if (event.error == "no-speech") {
     	$("#recIcon").css("filter", "brightness(80%)");
-      let snack = document.querySelector("#snackbar");
       snack.innerText = "No speech was detected. Please try again!";
       snack.className = "show";
       setTimeout(function () {
@@ -256,21 +256,18 @@ const daystilXmas = () => {
   let rslt = Math.ceil((cmas.getTime() - tday.getTime()) / oneDay);
   if (rslt == 0 || rslt == 365) {
     /*show a snack here saying "Merry Christmas!"...*/
-    let snack = document.querySelector("#snackbar");
     snack.innerText = "Merry Christmas!";
     snack.className = "show";
     setTimeout(function () {
       snack.className = snack.className.replace("show", "");
     }, 4000);
   } else if (rslt == 1) {
-    let snack = document.querySelector("#snackbar");
     snack.innerText = "Reminder: Kal Christmas hay!";
     snack.className = "show";
     setTimeout(function () {
       snack.className = snack.className.replace("show", "");
     }, 4000);
   } else if (rslt < 7 && rslt != 0 && rslt != 1) {
-    let snack = document.querySelector("#snackbar");
     snack.innerText = `Reminder: Only ${rslt} days left until Christmas!`;
     snack.className = "show";
     setTimeout(function () {
@@ -291,14 +288,12 @@ const daystilNYE = () => {
   );
   if (noofdayslefttilNYE == 0 || noofdayslefttilNYE == 365) {
     /*show a snack here saying "Happy New Year's Eve!"...*/
-    let snack = document.querySelector("#snackbar");
     snack.innerText = "Happy New Year's Eve!";
     snack.className = "show";
     setTimeout(function () {
       snack.className = snack.className.replace("show", "");
     }, 4000);
   } else if (noofdayslefttilNYE == 1) {
-    let snack = document.querySelector("#snackbar");
     snack.innerText = "Reminder: Kal New Year ki sham he!";
     snack.className = "show";
     setTimeout(function () {
@@ -309,7 +304,6 @@ const daystilNYE = () => {
     noofdayslefttilNYE != 0 &&
     noofdayslefttilNYE != 1
   ) {
-    let snack = document.querySelector("#snackbar");
     snack.innerText = `Reminder: Sirf ${noofdayslefttilNYE} din reh gae New Year's Eve ane me!`;
     snack.className = "show";
     setTimeout(function () {
@@ -330,14 +324,12 @@ const daystilNYD = () => {
   );
   if (noofdayslefttilNYD == 0 || noofdayslefttilNYD == 365) {
     /*show a snack here saying "Happy New Year's Day!"...*/
-    let snack = document.querySelector("#snackbar");
     snack.innerText = "Happy New Year's Day!";
     snack.className = "show";
     setTimeout(function () {
       snack.className = snack.className.replace("show", "");
     }, 4000);
   } else if (noofdayslefttilNYD == 1) {
-    let snack = document.querySelector("#snackbar");
     snack.innerText = "Reminder: It's New Year's Day tomorrow!";
     snack.className = "show";
     setTimeout(function () {
@@ -357,7 +349,6 @@ var bday = prompt(
 //Show a snackbar if it's user's birthday today
 bday = toTitleCase(bday);
 if (isBday(bday)) {
-  let snack = document.querySelector("#snackbar");
   snack.innerHTML = "Happy birthday";
   if (
     userName != null &&
@@ -543,7 +534,6 @@ if ("speechSynthesis" in window) {
       }
       playText(mesg.innerText);
       //Show a snackbar every time Speech Synthesis reads the text
-      let snack = document.querySelector("#snackbar");
       snack.innerText =
         "Speech synthesis is ongoing. You cannot enter any text in the input field until it finishes.";
       snack.className = "show";
@@ -668,10 +658,10 @@ $(document).bind("mouseleave", function (e) {
 
 
 
-var lTheme, dTheme, islTh, isdTh, snack;
+var lTheme, dTheme, islTh, isdTh, snack, $Theme, $dTheme;
 $lTheme = $(".lightTh");
 $dTheme = $(".darkTh");
-snack = document.querySelector("#snackbar");
+let snack = document.querySelector("#snackbar");
 function switchTheme() {
   if (islTh && !isdTh) {
     $lTheme.attr("media", "none");
@@ -682,7 +672,7 @@ function switchTheme() {
     
    
     
-    let snack = document.querySelector("#snackbar");
+    
     snack.innerText = "Switched to Dark theme";
     snack.className = "show";
     setTimeout(function () {
@@ -697,7 +687,7 @@ function switchTheme() {
     
     
     
-    let snack = document.querySelector("#snackbar");
+    snack = document.querySelector("#snackbar");
     snack.innerText = "Switched to Light Theme";
     snack.className = "show";
     setTimeout(function () {
