@@ -119,15 +119,11 @@ if ("SpeechRecognition" in window || "webkitSpeechRecognition" in window) {
 
   recognition.onerror = function (event) {
     if (event.error == "no-speech") {
-      let oneTimeSnackbar = function() {
-        	$snack.text("No speech was detected, please try again!");
-        $snack.toggleClass("show");
+      	$snack.text("No speech was detected, please try again!");
+          $snack.toggleClass("show");
         setTimeout(function () {
           $snack.toggleClass("show");
         }, 2300);
-        return ;
-        }
-        once(oneTimeSnackbar);
       stopText();
       playText("Samjhi nahi, zaraa dubaara boli'ay");
     	$("#recIcon").css("filter", "brightness(80%)");
