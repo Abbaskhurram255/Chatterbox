@@ -1,3 +1,15 @@
+/* importing Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grandstander&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+/*
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Butcherman&display=swap');
+*/
+
 * {
   -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -26,7 +38,8 @@
   position: absolute;
   text-align: center;
   right: 20px;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Caesar Dressing', cursive;
+  /*font-family: 'Nosifer', cursive;*/
   top: 13px;
   border: 1px solid rgba(0,0,0,0.8);
   padding: 4px;
@@ -51,7 +64,7 @@
   width: 75%;
   background: rgba(45,100,100,0.3);
   color: rgba(225,225,225,0.7);
-  font-family: 'Grandstander', helvetica;
+  font-family: 'Creepster', helvetica;
  }
  
  input::placeholder{
@@ -60,7 +73,8 @@
  
  h2 {
   font-size: 42px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Gloria Hallelujah', sans-serif;
+  font-weight: 800;
   color: rgba(225,225,225,0.7);
   text-align: center;
   text-shadow: 3px 2px 2px seagreen;
@@ -87,7 +101,7 @@
   width: 60%;
   color: rgba(225,225,220,0.9);
   font-size: 20px;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Gloria Hallelujah', sans-serif;
   margin-top: 25px;
   margin-left: 11%;
   letter-spacing: 2px;
@@ -105,6 +119,7 @@
  
   button {
  /* box-shadow: 1px 4px 5px 1px rgba(30,30,30,0.3);*/
+  font-family: 'Caesar Dressing', cursive;
   width: 20%;
   height: 40px;
   border-radius: 5px;
