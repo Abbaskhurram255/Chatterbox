@@ -7,7 +7,7 @@
    q6 = /(k(y|i)aa? (bulaa?(u|oo)n?|bulaa? sakt(aa|i|e|ai)? h(u|oo)n?) m(e|ai)n? (tumh(e|ai)n?|aa?p ko))|((k(y|i)aa? )?naa?m( k(y|i)aa?)? (he|hai) (tumhaa?raa?|aa?p kaa?))|(full name?)|(p(u|oo)raa? naa?m)/i, 
    q7 = /((is|was) (this|\d{4})( a)? leap year)|(k(y|i)aa? y(e|a(i|y)) (e|a)y?k leap year h(e|ai))/i, 
    q8 = /((what'?s?|when'?s?)( is)?|show) my (dob|bday|(birth|b(-)?)day)/i, 
-   q9 = /(k(y|i)aa? uma?r (he|hai) meri)|(uma?r bataa?o ?(tum|aa?p)? meri)/i, 
+   q9 = /(k(y|i)aa? uma?r h(e|ai|ay) meri)|(uma?r bataa?o ?(tum|aa?p)? meri)|(meri (age|uma?r|saa?l ?giraa?))/i, 
    q10 = /kisi or naa?m (se|sa(i|y)) (bulaa?o|pukaa?ro)( aa?p)? mujh(e|ai|ay)/i, 
    q11 = 
    /(((change|resubmit) my|incorrect) (dob|bday|(birth|b(-)?)day))|((dob|bday|(birth|b(-)?)day) is incorrect)/i, 
@@ -192,7 +192,7 @@
      if (!isNaN(parseInt(age))) { 
        msg += age; 
      } else { 
-       msg += "Aapki birthday na janne ki wajaa say calculate nahi karpa'ee."; 
+       msg += "Aapki birthday na jannay ki wajaa say calculate na karpa'i."; 
      } 
      msg += "</li></ul></em>"; 
      $output.html(msg); 
@@ -217,7 +217,7 @@
      $("#message").delay(10000).slideFadeToggle(800); 
    } else if (q4.test(q)) { 
      $("#message").slideFadeToggle(800); 
-     msg = "Barhia hoon ji may, puchne kay liye thanks... umid hay aap bhi ache or sehti'yaab hogay? As a friend, I deeply care" + hearts; 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi achay or sehti'yaab hogay? As a friend, I deeply care" + hearts; 
      $output.html(msg); 
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
@@ -241,7 +241,7 @@
      $("#message").delay(10000).slideFadeToggle(800); 
    } else if (q6.test(q)) { 
      $("#message").slideFadeToggle(800); 
-     msg = "May'ra pura naam Ayesha Mehnaaz hay... Par agar ap chaho to mujhay sirf Ayesha bhi bulaa saktay ho, mujhay acha lagay gaa!"; 
+     msg = "May'ra pura naam Ayesha Mehnaaz hay... Par agar ap chaho to mujhay sirf Ayesha bhi bulaa saktay ho, mujhay acha lagay gaa!" + blush; 
      $output.html(msg); 
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
@@ -305,19 +305,19 @@
        ) 
      ) { 
        age = calc_age(new Date(bday)); 
-       msg = `You are ${age}`; 
+       msg = `Aap ho... ${age} kay!`; 
        if (age <= 18) { 
-         msg += ". Too young, pal"; 
+         msg += "<br>Kaafi chotay ho yar aap to" + satisfied2 + "... still cute though" + what2; 
          console.log(msg); 
        } 
      } else { 
        bday = prompt( 
-         "Can't calculate your age without knowing your bday. Please (re)submit your bday first.\nSupported format: YYYY(separator)m(separator)d" 
+         "Apki saal gira ka din jane bager kese bata sakti hu? Apni sal gira ka din dubara darj kijie niche.\nSupported format: YYYY(separator)m(separator)d" 
        ); 
        age = calc_age(new Date(bday)); 
-       msg = "You are " + age; 
+       msg = "Aap ho... " + age + " kay!"; 
        if (age <= 18) { 
-         msg += ". Too young, pal"; 
+         msg += "<br>Kaafi chotay ho yar aap to" + satisfied2 + "... still cute though" + what2;
          console.log(msg); 
        } 
      } 
