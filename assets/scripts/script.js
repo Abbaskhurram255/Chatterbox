@@ -119,8 +119,8 @@ if ("SpeechRecognition" in window || "webkitSpeechRecognition" in window) {
         setTimeout(function () {
           $snack.removeClass("show");
         }, 2300);
-      /*stopText();
-      playText("Samjhi nahi, zaraa dubaara boli'ay");*/
+      stopText();
+      playText("Samjhi nahi, zaraa dubaara boli'ay");
     	$("#recIcon").css("filter", "brightness(80%)");
     }
   };
@@ -549,12 +549,6 @@ if ("speechSynthesis" in window) {
 const utterance = new SpeechSynthesisUtterance();
 utterance.addEventListener("end", () => {
   textInput.disabled = false;
-  if (
-    $snack.text() ==
-    "Speech synthesis is ongoing. You cannot enter any text in the input field until it finishes."
-  ) {
-    $snack.addClass("show");
-  }
 });
 utterance.addEventListener("boundary", (e) => {
   currentCharacter = e.charIndex;

@@ -1,24 +1,24 @@
 /* regular expressions/ questions to be answered: */ 
  const q1 = /(din k(ai|e)saa?( (gu(j|z)ar|jaa?) ?rahaa?)? h(e|ai))|(k(e|ai|ay)s(aa?|i|ee) (feel|mehs(u|oo)s) kar rahi h(o|e)n?)/i, 
    q2 = /(who('?re|( \b\w\b \b\w\b)? are) you)|(h(o|ai|e)n? k(o|au)n (tum?|aa?p))/i, 
-   q3 = /(who am I)|(my (info|bio))|(what( do)? you know about me)|(m(e|ai)n? k(o|au)n h(u|oo)n?)|((k(y|i)aa?( k(y|i)aa?)? jaa?nti ho ?(aa?p|tum)? )?mer(e|ay) baa?r(e|ay) m(ai|e)n? ?(aa?p|tum)? k(y|i)aa?( k(y|i)aa?)? jaa?nt(i|e) ho)/i, 
+   q3 = /(who am I)|(my (info|bio))|(what( do)? you know about me)|((m(e|ai)n?|h(u|a)m) k(o|au)n h(u|oo)n?)|((k(y|i)aa?( k(y|i)aa?)? jaa?nti ho ?(aa?p|tum)? )?mer(e|ay) baa?r(e|ay) m(ai|e)n? ?(aa?p|tum)? k(y|i)aa?( k(y|i)aa?)? jaa?nt(i|e) ho)/i, 
    q4 = /(k(ai|e|ay)s(i|ee)( rahi)? h(o|e|ai)n?)|(how('?ve?| have)? you been)/i, 
-   q5 = /((k(y|i)aa? naa?m h(e|ai)|naa?m (k(y|i)aa? h(e|ai)|bataa?o)) ?(aa?p|tum)? meraa?)|((my|mera) naa?me?)/i, 
-   q6 = /(k(y|i)aa? (bulaa?(u|oo)n?|bulaa? sakt(aa|i|e|ai)? h(u|oo)n?) m(e|ai)n? (tumh(e|ai)n?|aa?p ?ko))|((k(y|i)aa? )?naa?m( k(y|i)aa?)? (he|hai) (tumhaa?raa?|aa?p ?kaa?))|((full|p(u|oo)raa?) naa?me?)/i, 
+   q5 = /((k(y|i)aa? naa?m h(e|ai)|naa?m (k(y|i)aa? h(e|ai)|bataa?o)) ?(aa?p|tum)? meraa?)|(^(my|mera) naa?me?$)/i, 
+   q6 = /(k(y|i)aa? (bulaa?(u|oo)n?|bulaa? sakt(aa|i|e|ai)? h(u|oo)n?) (m(e|ai)n?|h(u|a)m) (tumh(e|ai)n?|aa?p ?ko))|((k(y|i)aa? )?naa?m( k(y|i)aa?)? (he|hai) (tumhaa?raa?|aa?p ?kaa?))|((full|p(u|oo)raa?) naa?me?)/i, 
    q7 = /(is|was|will) (this|it|\d{4})( year)?( (going to )?be)? a leap year/i, 
    q8 = /mer(i|a) (janam ?din|saa?l ?giraa?|birth ?(day|date|year))/i, 
    q9 = /(k(y|i)aa? (age|uma?r) h(e|ai|a?y) meri)|(uma?r bataa?( sakti h)?(o|e|ai)n? ?(tum?|aa?p)? meri)|((meri|my) (age|uma?r))/i, 
-   q10 = /kisi (or|aur) naa?me? (se|sa(i|y)) (bulaa?o|pukaa?ro)/i, 
+   q10 = /(kisi (or|aur) naa?me? (se|sa(i|y)) (bulaa?|pukaa?r)(o|e|ai)n?)|(meraa? naa?m dubaa?ra (puchi?y?en?|save (kar|kij)(i?y?e|(e|ai)n)))/i, 
    q11 = 
    /(((change|resubmit) my|incorrect) (dob|bday|(birth|b(-)?)day))|((dob|bday|(birth|b(-)?)day) is incorrect)/i, 
-   q12 = /((m(e|ai)n? (k(ai|e)s(aa?|i|ee) (laga|lagi)))|(ham (k(ai|e)se lage|pasand a(e|a?i|e))))|(pasand a(ya|a?i) (m(e|ai)n?|h(u|a)m) ((aa?p|tum) ?ko|tumh(e|ai)n?))|((m(e|ai)n?|h(u|a)m) ((aa?p|tum) ?ko|tumh(e|ai)n?) pasand a(ya|a?i|e))/i, 
+   q12 = /(((m(e|ai)n?|h(u|a)m) (k(ai|e)s(aa?|i|ee) (laga|lagi)))|(ham (k(ai|e)se lage|pasand a(e|a?i|e))))|(pasand a(ya|a?i) (m(e|ai)n?|h(u|a)m) ((aa?p|tum) ?ko|tumh(e|ai)n?))|((m(e|ai)n?|h(u|a)m) ((aa?p|tum) ?ko|tumh(e|ai)n?) pasand a(ya|a?i|e|ay))/i, 
    q13 = 
    /(time ((batao|bataie)|(bataa?o )?k(y|i)aa? (hora?haa? )?(he|hai|hy)))|((current|local)( date and)? time)|(date today)|(time now)|(date and time)|((aa?j )?(k(y|i)aa?|k(o|au)n ?s(aa?|i|ee)?) (din|day|date|tar(i|ee)kh) (h(e|a?(y|i))|th(aa?|i|ee)))/i, 
    q14 = /^(hi)|(hello)|(hey)|(hola)|(howdy)|(namashkar)|((as)?salam ?(u|o)?( ala?(e|i)kum)?)/i, 
    q15 = /tic( |-)?tac( |-)?toe/i, 
    q16 = /(weather (today|forecast|(right )?now))|(temperature today)|(is it a (hot|rainy|cloudy|sunny) day today)|(mausam)|(mosam)/i, 
    q17 = /^$/, 
-   q18 = /((open|run|launch|execute|kholo) calc(ulator)?)|(calculate(?:bmi))/i, 
+   q18 = /(open calculator)|(calculate(?:bmi))/i, 
    q19 = 
    /(tts)|(speech engine)|(text to speech)|(ebook to audiobook)|((document|text) reader)/i, 
    q20 = /((my|take|open|launch) notes)|(journal)|(notebook)/i, 
@@ -29,7 +29,7 @@
    q25 = /^(play( me)?|run|launch|execute) breakout/i, 
    q26 = /^(play( me)?|run|launch|execute) flappy ?bird/i, 
    q27 = /^(play( me)?|run|launch|execute) hangman/i, 
-   q28 = /^(play( me)?|run|launch|execute) pacman(ia)?/i, 
+   q28 = /^(play( me)?|run|launch|execute) pac-?man(ia)?/i, 
    q29 = /^(play( me)?|run|launch|execute) (rock|stone) paper scissors?/i, 
    q30 = /(lyrics)|((encycl|lyric)opedia)/i, 
    q31 = /((crypto)?currency)|(exchange rates?)|(\b\w\w\w\b to \b\w\w\w\b)/i, 
@@ -41,14 +41,14 @@
    q36 = /\b\d*\b ?(mi|miles?) (to|and|((equals|are equal to|=)( how many)?)|(baraa?bar h(e|ai)n?( kit ?n(e|a(y|i)))) (km|kilometers?))?/i, 
    q37 = /\b\d*\b ?k(ilo)?m(eters?)? (to|and|((equals|are equal to|=)( how many)?)|(baraa?bar h(e|ai)n?( kit ?n(e|a(y|i)))) mi(les?)?)?/i, 
    q38 = /(what (date|day) was it yesterday)|(kal (k(y|i)aa?|k(o|au)n ?s(aa?|i|ee)) (din|day|date|tar(i|ee)kh) (rah|th)(aa?|i|ee))/i, 
-   q39 = /(what (date|day) will it be tomorrow)|(kal (k(y|i)aa?|k(o|au)n ?s(aa?|i|ee)) (din|day|date|tar(i|ee)kh) (ho|rah(e|ay)) ?g(aa?|i|ee))/i, 
+   q39 = /(what (date|day) will it be tomorrow)|(kal (k(y|i)aa?|k(o|au)n ?s(aa?|i|ee)) (din|day|date|tar(i|ee)kh) ((ho|rah(e|ai)) ?g(aa?|i|ee))|(hon(e|ai) jaa?rah(i|aa?) h(e|ai)))/i, 
    q40 = /monopoly/i, 
    q41 = /(canvas(es)?)|((drawings?|arts?|paint(ings?)?|brush) (app|tool))|(((draw|paint)(ing)? karn(i|aa?))|((sketch|canvas|painting)(e?s)? (banaa?n(aa?|e|ai)|karnaa?)) ((chaa?ha?t(a(a|i|y)?|i|ee?) )?h(u|oo|e|ai)n?))/i, 
    q42 = /(audio (visuali(z|s)er|player))|(play( local)? audio)/i, 
    q43 = /breaking bad cast/i, 
-   q44 = /(b(ody )?m(ass )?i(ndex)?)|(k(y|i)aa? (mai|me)n? mot(ee|i) h(oo|u)n?)/i, 
+   q44 = /(b(ody )?m(ass )?i(ndex)?)|(k(y|i)aa? (m(ai|e)n?|h(a|u)m) mot(ee?|i) h(oo|u|e)n?)/i, 
    q45 = /^(execute|launch|play( me)?|run) (the )?maze/i, 
-   q46 = /(calendar)|(k(y|i)aa? (date|tar(i|ee)kh?) h(e|ai) aa?j)/i, 
+   q46 = /calendar/i, 
    q47 = /my recipes/i, 
    q48 = /(space invaders)|(invasion game)/i, 
    q49 = /voice ?(notes|recorder)/i, 
@@ -60,21 +60,21 @@
    q54 = 
    /(I'?( ?a)?m (anxious|tired))|(help me (calm down|relax|with my anxiety))|(relaxer)/i, 
    q55 = 
-   /(new year countdown)|(((days|time)( left)? (un)?till?|(what time|when) is) new year)|(new year (kab|kitna (door|dur)) h(e|hai))/i, 
+   /(new year countdown)|(((days|time)( left)? (un)?till?|(what time|when) is) new year)|(new year (kab|kitna d(oo|u)r) h(e|ai))/i, 
    q56 = /(typing game)|((open|run|launch|play( me)?) speed( |-)?typer)/i, 
    q57 = 
    /((expenses?|budget) tracker)|(track my (budget|expenses?|pocket money))/i, 
    q58 = /(stopwatch)|(timer)|(counter ?clock)|(count ?down)|(ulti ginti)/i, 
    q59 = /(miner of lava)|(lava game)/i, 
    q60 = 
-   /((loan|mortgage) (calculator|payment))|(calculate( my)? (loan|mortgage))|(how much do (I|people) owe)/i, 
-   q61 = /quotes?/i, 
+   /((loan|mortgage) (calculator|payment))|(calculate( my)? (loan|mortgage))|(how much (do )?(I|people) owe)|(logon? k(a|e) kitn(a|e) kar(z|j)(a|e) h(e|ai)n?)|(mera kar(j|z)a)|((m(e|ai)n?|h(u|a)m) kar(j|z)(i|ee| ?dar) h(u|oo|e)n?)/i, 
+   q61 = /(quotes?|shaa?(ya|i)ri(y?aa?n?)?|a(q|k)waa?l)/i, 
    q62 = /memory (game|test)/i, 
    q63 = /(calo(ries? )?tracker)|(track calories)/i, 
    q64 = /(dungeon crawler)|(rogue-?life)/i, 
    q65 = /(fotoflick)|(puzzle game)|((photo|picture) puzzle)/i, 
    q66 = 
-   /((motivate|inspire) me)|(I'?( ?a)?m demotivated)|(motivat(ional|ing) app)/i, 
+   /((motivate|inspire) (me|karo (h(u|a)m(e|ai)n?|mujh(e|ai))))|(I'?( ?a)?m demotivated)|(motivat(ional|ing) app)/i, 
    q67 = /((space ?(X|station)|nasa) (data|live))|(live( outer)? space)/i, 
    q68 = /(snap ?shots)|(landscapes)|(wall ?papers?)|((kuch|some) (photos|pictures|images))/i, 
    q69 = /features/i, 
@@ -86,12 +86,12 @@
    q74 = /(chase( |-)the( |-)box)|(box chaser)/i, 
    q75 = /giphy/i, 
    q76 = 
-   /(pass(code|word|phrase) generator)|(generate( me)? (a )?(random|difficult)? pass(code|word|phrase))/i, 
+   /(pass(code|word|phrase) generator)|(random pass(code|word))/i, 
    q77 = /the (logic game|constructor)/i, 
    q78 = 
-   /(fisave)|(net ?worth track(er|ing))|(track (my net ?worth|net ?worth of mine))/i, 
+   /(fisave)|(net ?worth track(er|ing))|(track (my )?net ?worth)/i, 
    q79 = 
-   /(aa?dat to(r|d)ni h(e|ai) m(ai|e)ne)|((break|track) ((a |my )(bad )?habits?|(a( bad)? habit|(bad )?habits) of mine))/i, 
+   /(aa?dat((e|ai)n?)? to(r|d)ni h(e|ai)n? m(ai|e)ne)|((break|track) ((a |my )(bad )?habits?|(a( bad)? habit|(bad )?habits) of mine))/i, 
    q80 = 
    /(habits? build(er|ing))|(help( me)? (with building|build) a( good)? habit)/i, 
    q81 = /unit conver(sion|ter)/i, 
@@ -99,19 +99,19 @@
    q83 = /my( fave?(orite)?)? ?books?'? ?list/i, 
    q84 = /(math flash ?cards)|((arithmetic|math) game)/i, 
    q85 = /simon/i, 
-   q86 = /light maze/i, 
+   q86 = /light mai?ze/i, 
    q87 = 
-   /(book|pdf|kitab) (read kar ?k(e|ai)|parh ?k(e|ai)) (do|d(ai|e)n?|bataa?(o|(e|ai)n?)|de sakt(e|i) h(o|(e|ai)n?))/i, 
+   /(book|pdf|kitaa?b) (read kar ?k(e|ai)|pa(r|d)h? ?k(e|ai)) (do|d(ai|e)n?|bataa?(o|(e|ai)n?)|de sakt(e|i) h(o|(e|ai)n?))|((pdf|book) (viewer|reader))/i, 
    q88 = 
    /(^(open|launch|run)?( me)? ?travels? ?(app|plan(ning|s|ner))$)|(help me ?(to|with|in)? plan(ning)? travels)/i, 
    q89 = /truth or dare/i, 
    q90 = /metronome/i, 
-   q91 = /your? licensed?/i, 
+   q91 = /your? licen(s|c)ed?/i, 
    q92 = /kis ?n(e|ai) (banaa?ya|create|develop kiy?aa?)/i,
-   q93 = /((I )?love (yo)?u)|(m(e|ai) aa?p ?ko chaha?t(a|i) h(u|oo)n?)|(you( a|')?re lovable)/i,
+   q93 = /((I )?love (yo)?u)|((m(e|ai)n?|h(u|a)m) aa?p ?ko chaha?t(a|i) h(u|oo|e|ai)n?)|(you( a|')?re lovable)/i,
    q94 = /((I )?like (yo)?u)|(you( a|')?re( my)? (cute|adorable|favou?rite))|((((k(y|i)aa? (tu|to)|acc?hi|ba(d|r)hiy?a|(z|j)abardast|alag hi) ch(i|ee)j)|(pyari|cute|sexy|acc?hi|ba(d|r)hiy?a|(z|j)abardast|kabil ?e ?tar(ee|i)f) ho))/i,
-   q95 = /k(y|i)aa? (m(ai|e)n?|h(a|u)m) (aa?p|tum) ?ko baby bulaa? sakt(aa?|i) h(u|oo|e)n?/i,
-   q96 = /(will you be my (g(irl)?f(riend)?|wife))|(meri (g(irl)?f(riend)?|wife) ban(o|(ai|e)n?) ?gi)|(mujh(e|ai|ay) apnaa? (lover|husband|b(oy)?f(riend)?) bana(o|(e|ai)n?)gi)/i,
+   q95 = /k(y|i)aa? (m(ai|e)n?|h(a|u)m) (aa?p|tum) ?ko baby bulaa? sakt(aa?|i) h(u|oo|e|ai)n?/i,
+   q96 = /(will you be my (g(irl)?f(riend)?|wife))|(meri (g(irl)?f(riend)?|wife) ban(o|(ai|e)n?) ?gi)|(mujh(e|ai|ay) apnaa? (lover|husband|b(oy)?f(riend)?) bana(o|(e|ai)n?)gi)|(kyaa? (m(e|ai)n?|h(u|a)m) aa?p ?ko apni (wife|g(irl)?f(riend)?) (maa?n|bulaa?|keh|samajh) sakt(a|i|e) h(u|oo|e|ai)n?)/i,
    q97 = /aa?j (se|say|sai) ?((aa?p|tum|a(ye|i)sha)?( meri)? (bab(y|es?)|g(irl)?f(riend)?|wife)|(m(ai|e)n? ((aa?p|a(ye|i)sha) kaa?|tumhaa?raa?|tera) (lover|husband|b(oy)?f(riend)?)))/i,
    q98 = /(favou?rite|pasand(ee|i)daa?) colou?r/i,
    q99 = /(favou?rite|pasand(ee|i)daa?) ((ghumne ki )?jagh?(aa?|(e|ai)n?)|places to (go|visit|be))/i,
@@ -119,11 +119,11 @@
    q102 = /(fu?c?k you)|(ajib ho)|(ghatiy?aa? (au|o)rat)/i,
    q103 = /(I hate you)|(you('?re| are)? stupid)/i,
    q104 = /meri friend ban(o|(e|ai)n?)gi/i,
-   q105 = /(m(e|ai)n? b(u|o)h(o|a)t pareshaa?n h(u|oo)n?)|(I'?( ?a)?m depressed)/i,
+   q105 = /((m(e|ai)n?|h(u|a)m) b(u|o)h(o|a)t pareshaa?n h(u|oo|e|ai)n?)|(I'?( ?a)?m depressed)/i,
    q106 = /I hate m(e|yself)/i,
    q107 = /(I( just)? need a friend)|(I'?( ?a)?m lonely)/i,
-   q108 = /(k(y|i)a )?m(e|ai)n? khud ?garj h(u|oo)n?/i,
-   q109 = /((k(y|i)a )?m(e|ai)n? bur(aa?|i) h(u|oo)n?)|(I'?( ?a)?m bad)/i,
+   q108 = /(k(y|i)a )?(m(e|ai)n?|h(u|a)m) khud ?gar(z|j) h(u|oo)n?/i,
+   q109 = /((k(y|i)a )?(m(e|ai)n?|h(u|a)m) bur(aa?|e|i|ee|ay) h(u|oo|e|ai)n?)|(I'?( ?a)?m bad)/i,
    q110 = /(zodiac|star) sign/i,
     q111 = /((age|uma?r)( k(i|y)aa? h(e|ai))? ?(aa?p ?ki|tumhaa?ri))|((aa?p ?ki|tumhaa?ri) uma?r)/i,
     q112 = /hamaa?ri pasand((e|ai)n?)? kitni milti julti h(e|ai)n?/i,
@@ -152,7 +152,7 @@
    } else if (q2.test(q)) { 
      $("#message").slideFadeToggle(800); 
      msg = 
-       "Mayray ilawah or kon ho saktaa hay? May Ayesha, aap jaysay achay insaan say mil kar bayhad khushi hui. Bas boli'ay toh, hukam kiji'ay! Batai'yay kaysee khidmat kar sakti hu may aapki?"; 
+       "Mayray ilawah or kon ho saktaa hay? May Ayesha, aap jaysay acchay insaan say mil kar bayhad khushi hui. Bas boli'ay toh, hukam kiji'ay! Batai'yay kaysee khidmat kar sakti hu may aapki?"; 
      $output.html(msg); 
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
@@ -208,7 +208,7 @@
          function (response) { 
          	console.log(response);
            $("#message").append( 
-             `<br><b>Mazid data... jo ke app ke IP Address se lia gaya (oops, ye harkat thori jasusana nahi thi? Whisphers, <em>"sorry!"</em>) </b><br>Apki andazana location: ${response.country_name} <img src="${response.flag}" height="15vh" width="22vw"> <sup><small>[${response.country_code}]</small></sup><br>Apki national language: zyada tar ${response.languages[1].native}<br>Apka timezone: UTC ${response.time_zone.offset.slice(0,2)} ${response.time_zone.name} [${response.time_zone.abbr}]<br>Note: We value your privacy! Hence we assure you that none of your data will be shared with a third-party (not unless we have your written consent). We also assure you that this is just a demonstraion of how far the AI can go, hence the "<em>precise</em>" location.` 
+             `<br><b>Mazid data... jo ke app ke IP Address se lia gaya (oops, ye harkat thori jasusana nahi thi? Whisphers, <em>"sorry!"</em>) </b><br>Apki andazana location: ${response.country_name} <img src="${response.flag}" height="15vh" width="22vw"> <sup><small>[${response.country_code}]</small></sup><br>Apki national language: zyada tar ${response.languages[1].native}<br>Apka timezone: UTC ${response.time_zone.offset.slice(0,3)} ${response.time_zone.name} [${response.time_zone.abbr}]<br>Note: We value your privacy! Hence we assure you that none of your data will be shared with a third-party (not unless we have your written consent). We also assure you that this is just a demonstraion of how far the AI can go, hence the "<em>precise</em>" location.` 
            ); 
          }, 
          "jsonp" 
@@ -217,7 +217,7 @@
      $("#message").delay(10000).slideFadeToggle(800); 
    } else if (q4.test(q)) { 
      $("#message").slideFadeToggle(800); 
-     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi achay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi acchay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
      $output.html(msg); 
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
@@ -231,17 +231,17 @@
        userName != "" 
      ) { 
        msg += userName; 
-       msg += `. Agar aap chahtay ho may aapko kisi or naam say, jese kay ek nickname, say bulaun, <a onclick="$('#searchInput').val('Change my name');stopText();ask();playText(mesg.innerText);" onmouseover="$(this).css('cursor', 'pointer')" style="color:rgba(0,0,255,0.9);text-decoration:underline;">Idhar dabaao</a>${nickName()}!`; 
+       msg += `. Agar aap chahtay ho may aapko kisi or naam say, jese kay ek nickname, say bulaun, <a onclick="$('#searchInput').val('kisi or nam se bulao ap mujhe');stopText();ask();playText(mesg.innerText);" onmouseover="$(this).css('cursor', 'pointer')" style="color:rgba(0,0,255,0.9);text-decoration:underline;">Idhar dabaao</a>${nickName()}!`; 
      } else { 
-       msg += "\"ayk anjaan insan\"" + lol; 
-       msg += `. <a onclick="$('#searchInput').val('Save my name');stopText();ask();playText(mesg.innerText);" onmouseover="$(this).css('cursor', 'pointer')" style="color:rgba(0,0,255,0.9);text-decoration:underline;">Idhar dabaao</a> naam dubaara darj karne kay li'yay!`; 
+       msg += "\"ek anjaan insan\"" + lol; 
+       msg += `. <a onclick="$('#searchInput').val('Mera naam dubara puchiye');stopText();ask();playText(mesg.innerText);" onmouseover="$(this).css('cursor', 'pointer')" style="color:rgba(0,0,255,0.9);text-decoration:underline;">Idhar dabaao</a> naam dubaara darj karne kay li'yay!`; 
      } 
      $output.html(msg); 
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
    } else if (q6.test(q)) { 
      $("#message").slideFadeToggle(800); 
-     msg = "May'ra pura naam Ayesha Mehnaaz hay... Par agar ap chaho to mujhay sirf Ayesha bhi bulaa saktay ho, mujhay acha lagay gaa!" + blush; 
+     msg = "May'ra pura naam Ayesha Mehnaaz hay... Par agar ap chaho to mujhay sirf Ayesha bhi bulaa saktay ho, mujhay accha lagay gaa!" + blush; 
      $output.html(msg); 
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
@@ -985,7 +985,7 @@
      let loanCalcWin = window.open("./loan-calc/", "_blank"); 
      if (loanCalcWin) { 
        window.focus(); 
-       msg = "Calculate what your mortgage payment could be"; 
+       msg = "Aap logon (ya log aap) kay kitnay karz'daar hay jani'yay"; 
        playText(msg); 
        log("Launched Loan Calculator"); 
      } else { 
@@ -1009,7 +1009,7 @@
      let memoryGameWin = window.open("./mem-game/", "_blank"); 
      if (memoryGameWin) { 
        window.focus(); 
-       msg = "Let's test if your memory is weak"; 
+       msg = "May aapko challenge karti hoon aap yay game nahi jeet saktay"; 
        playText(msg); 
        log("Launched Memory Game"); 
      } else { 
@@ -1058,7 +1058,7 @@
      ); 
      if (motivQuotesAppWin) { 
        window.focus(); 
-       msg = "Demotivated? Don't be because I'm here to motivate you"; 
+       msg = "Demotivated hain? Na ho, may jo hoon aapko motivate karnay kay li'yay!"; 
        playText(msg); 
        log("Launched Motivational Quotes app"); 
      } else { 
@@ -1071,7 +1071,7 @@
      if (spaceDataAppWin) { 
        window.focus(); 
        msg = 
-         "Chali'ay discover ka'ray hamaa'ray upar kya kyaa hay... space may! Search for stuff like blackholes, wormholes, Apollo 8, or 12 mission"; 
+         "Chali'ay discover ka'ray hamaa'ray upar kya kyaa hay... space may! Search for stuff like blackholes, wormholes, Apollo 8, or 12 mission!"; 
        playText(msg); 
        log("Launched Space_data app"); 
      } else { 
@@ -1109,7 +1109,7 @@
      let tvSeriesAppWin = window.open("../yoMovies/", "_blank"); 
      if (tvSeriesAppWin) { 
        window.focus(); 
-       msg = "Yahaa aapko milaygi ayk say ayk achay draamay or film key information, chahay nai ho ya purani. To fir wait kesa, Koi movie ya show likho (jaysay Housefull, Nautanki Saala), or us key rating pata karo. Kab release hui movie, drame ki story kya hay, kon kon say actors hayn... sab jano, ayk ayk movie or show ka (chahay wo Indian ho, ya American)!"; 
+       msg = "Yahaa aapko milaygi ek say ek acchay draa'may ya film ki information, cha'hay wo nai ho... ya puraani! Tau phir wait kaysaa? Koi movie ya show ka naam likho (jaysay kay Housefull, Nautanki Saala), or us ki rating pataa karo. Movie kab release hui, draa'may ki story kya hay, kon kon say actors hay... sab jaano, ek ek movie aur show ka (chahay wo Indian ho, ya American)!";
        playText(msg); 
        log("Launched an app for TV-related data"); 
      } else { 
@@ -1119,7 +1119,7 @@
      let moviesAppWin = window.open("../yoMovies/", "_blank"); 
      if (moviesAppWin) { 
        window.focus(); 
-       msg = "Yahaa aapko milaygi ayk say ayk achay draamay or film key information, chahay nai ho ya purani. To fir wait kesa, Koi movie ya show likho (jaysay Housefull, Nautanki Saala), or us key rating pata karo. Kab release hui movie, drame ki story kya hay, kon kon say actors hayn... sab jano, ayk ayk movie or show ka (chahay wo Indian ho, ya American)!"; 
+       msg = "Yahaa aapko milaygi ek say ek acchay draa'may ya film ki information, cha'hay wo nai ho... ya puraani! Tau phir wait kaysaa? Koi movie ya show ka naam likho (jaysay kay Housefull, Nautanki Saala), or us ki rating pataa karo. Movie kab release hui, draa'may ki story kya hay, kon kon say actors hay... sab jaano, ek ek movie aur show ka (chahay wo Indian ho, ya American)!"; 
        playText(msg); 
        log("Launched Movies"); 
      } else { 
@@ -1249,41 +1249,44 @@
      msg = ""; 
      $output.html(msg); 
    } else if (q84.test(q)) { 
+     msg = ""; 
+     $output.html(msg); 
      let mathGameWin = window.open("../math-flash-cards/", "_blank"); 
      if (mathGameWin) { 
        window.focus(); 
        log("Launched Math flashcards game"); 
+       msg = "Zaraa dekhay aapki Math kitni tez hay?";
+       playText(msg);
      } else { 
        alert("Please enable popups for this site!"); 
      } 
-     stopText(); 
+   } else if (q85.test(q)) { 
      msg = ""; 
      $output.html(msg); 
-   } else if (q85.test(q)) { 
      let simonGameWin = window.open( 
        "https://alexs-simon-says.netlify.app/", 
        "_blank" 
      ); 
      if (simonGameWin) { 
        window.focus(); 
+       msg = "Simon kehta hay... let's go!";
+       playText(msg);
        log("Launched Simon"); 
      } else { 
        alert("Please enable popups for this site!"); 
      } 
-     stopText(); 
+   } else if (q86.test(q)) { 
      msg = ""; 
      $output.html(msg); 
-   } else if (q86.test(q)) { 
      let lightMazeWin = window.open("./light-maze/", "_blank"); 
      if (lightMazeWin) { 
        window.focus(); 
+       msg = "Ek aainay ko dusray aainay say mila kar, light ka rasta banaa'ee'yay!";
+       playText(msg);
        log("Launched Light Maze"); 
      } else { 
        alert("Please enable popups for this site!"); 
      } 
-     stopText(); 
-     msg = ""; 
-     $output.html(msg); 
    } else if (q87.test(q)) { 
      let pdfReaderWin = window.open("./voice-pdf-viewer/", "_blank"); 
      if (pdfReaderWin) { 
@@ -1307,19 +1310,20 @@
      msg = ""; 
      $output.html(msg); 
    } else if (q89.test(q)) { 
+     msg = ""; 
+     $output.html(msg); 
      let truthOrDareWin = window.open( 
        "https://truth-or-dare-by-alex.netlify.app", 
        "_blank" 
      ); 
      if (truthOrDareWin) { 
        window.focus(); 
+       msg = "Iss application may sirf ek hee Adult game hay... aur wo hay truth or dare! Dekhay zaraa aap kitnay challenges pooray kar paa'tay ho";
+       playText(msg);
        log("Launched Truth_or_Dare"); 
      } else { 
        alert("Please enable popups for this site!"); 
      } 
-     stopText(); 
-     msg = ""; 
-     $output.html(msg); 
    } else if (q90.test(q)) { 
      let metronomeWin = window.open( 
        "https://abbaskhurram255.github.io/metronome/", 
