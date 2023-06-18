@@ -5,8 +5,6 @@ const $snack = $("#snackbar");
 
 
 window.onload = () => {
-	
-  //playRandomFile();
   startTime();
   /*
   $lTheme.attr("media", "");
@@ -46,14 +44,11 @@ window.onload = () => {
         }
         playText(mesg.innerText);
         //Show a snackbar the first time the Speech Synthesis reads this text
-        let oneTimeSnackbar = function() {
         	$snack.text("Speech synthesis is ongoing. You cannot enter any text in the input field until it finishes.");
-            $snack.toggleClass("show");
+            $snack.addClass("show");
         setTimeout(function () {
-        	  $snack.toggleClass("show");
+        	  $snack.removeClass("show");
         }, 2300);
-        }
-        once(oneTimeSnackbar);
       }
     }
   });
@@ -119,13 +114,13 @@ if ("SpeechRecognition" in window || "webkitSpeechRecognition" in window) {
 
   recognition.onerror = function (event) {
     if (event.error == "no-speech") {
-      	$snack.text("No speech was detected, please try again!");
-          $snack.toggleClass("show");
+      	$snack.text("No speech was detected, please try again");
+          $snack.addClass("show");
         setTimeout(function () {
-          $snack.toggleClass("show");
+          $snack.removeClass("show");
         }, 2300);
-      stopText();
-      playText("Samjhi nahi, zaraa dubaara boli'ay");
+      /*stopText();
+      playText("Samjhi nahi, zaraa dubaara boli'ay");*/
     	$("#recIcon").css("filter", "brightness(80%)");
     }
   };
@@ -167,8 +162,11 @@ $.fn.slideFadeToggle = function (speed, easing, callback) {
 const isBday = function (dat) {
   let inputDate = new Date(dat);
   let todaysDate = new Date();
-
-  return inputDate.setHours(0, 0, 0, 0) == todaysDate.setHours(0, 0, 0, 0);
+  todaysDate.setHours(0, 0, 0, 0);
+  todaysDate.setYear(0);
+  
+  inputDate.setYear(0);
+  return inputDate.setHours(0, 0, 0, 0) == todaysDate.setHours(0, 0, 0, 0) && inputDate.valueOf() == todaysDate.valueOf();
 };
 
 // function that checks to see if it (or the query) a leap year
@@ -258,22 +256,22 @@ const daystilXmas = () => {
   let rslt = Math.ceil((cmas.getTime() - tday.getTime()) / oneDay);
   if (rslt == 0 || rslt == 365) {
     /*show a snack here saying "Merry Christmas!"...*/
-    snack.innerText = "Merry Christmas!";
-    snack.className = "show";
+    $snack.text("Merry Christmas!");
+    $snack.addClass("show");
     setTimeout(function () {
-      snack.className = snack.className.replace("show", "");
+      $snack.removeClass("show");
     }, 4000);
   } else if (rslt == 1) {
-    snack.innerText = "Reminder: Kal Christmas hay!";
-    snack.className = "show";
+    $snack.text("Reminder: Kal Christmas hay!");
+    $snack.addClass("show");
     setTimeout(function () {
-      snack.className = snack.className.replace("show", "");
+      $snack.removeClass("show");
     }, 4000);
   } else if (rslt < 7 && rslt != 0 && rslt != 1) {
-    snack.innerText = `Reminder: Only ${rslt} days left until Christmas!`;
-    snack.className = "show";
+    $snack.text(`Reminder: Only ${rslt} days left until Christmas!`);
+    $snack.addClass("show");
     setTimeout(function () {
-      snack.className = snack.className.replace("show", "");
+      $snack.removeClass("show");
     }, 4000);
   }
 };
@@ -290,26 +288,26 @@ const daystilNYE = () => {
   );
   if (noofdayslefttilNYE == 0 || noofdayslefttilNYE == 365) {
     /*show a snack here saying "Happy New Year's Eve!"...*/
-    snack.innerText = "Happy New Year's Eve!";
-    snack.className = "show";
+    $snack.text("Happy New Year's Eve!");
+    $snack.addClass("show");
     setTimeout(function () {
-      snack.className = snack.className.replace("show", "");
+      $snack.removeClass("show");
     }, 4000);
   } else if (noofdayslefttilNYE == 1) {
-    snack.innerText = "Reminder: Kal New Year ki sham he!";
-    snack.className = "show";
+    $snack.text("Reminder: Kal New Year ki sham he!");
+    $snack.addClass("show");
     setTimeout(function () {
-      snack.className = snack.className.replace("show", "");
+      $snack.removeClass("show");
     }, 4000);
   } else if (
     noofdayslefttilNYE < 7 &&
     noofdayslefttilNYE != 0 &&
     noofdayslefttilNYE != 1
   ) {
-    snack.innerText = `Reminder: Sirf ${noofdayslefttilNYE} din reh gae New Year's Eve ane me!`;
-    snack.className = "show";
+    $snack.text(`Reminder: Sirf ${noofdayslefttilNYE} din reh gae New Year ki sham me!`);
+    $snack.addClass("show");
     setTimeout(function () {
-      snack.className = snack.className.replace("show", "");
+      $snack.removeClass("show");
     }, 4000);
   }
 };
@@ -326,51 +324,52 @@ const daystilNYD = () => {
   );
   if (noofdayslefttilNYD == 0 || noofdayslefttilNYD == 365) {
     /*show a snack here saying "Happy New Year's Day!"...*/
-    snack.innerText = "Happy New Year's Day!";
-    snack.className = "show";
+    $snack.text("Happy New Year's Day!");
+    $snack.addClass("show");
     setTimeout(function () {
-      snack.className = snack.className.replace("show", "");
+      $snack.removeClass("show");
     }, 4000);
   } else if (noofdayslefttilNYD == 1) {
-    snack.innerText = "Reminder: It's New Year's Day tomorrow!";
-    snack.className = "show";
+    $snack.text("Reminder: It's New Year's Day tomorrow!");
+    $snack.addClass("show");
     setTimeout(function () {
-      snack.className = snack.className.replace("show", "");
+      $snack.removeClass("show");
     }, 4000);
   }
 };
 
 var msg;
-var userName = prompt("Hey, user! What's your name?");
+var userName = prompt("Hello ji! Naam jan sakti hu me apka?");
 userName = toTitleCase(userName);
 var age;
 var bday = prompt(
-  "What's your bday? Note: We ask for your birthday only for statistical purposes.\nAccepted format *: YYYY(separator)m(separator)d"
+  "Or birthday? Note: Me birthday sirf apki umr ka hisab lagane ke lie puchti hu, or is lie bhi take me apko apki salgira wale din 'Happy birthday' bol saku.\nAccepted format *: YYYY(separator)m(separator)d"
 );
 
 //Show a snackbar if it's user's birthday today
 bday = toTitleCase(bday);
 if (isBday(bday)) {
-  snack.innerHTML = "Happy birthday";
+  $snack.text("Happy birthday");
   if (
     userName != null &&
-    userName.length != 0 &&
+    userName.length >= 3 &&
     /^[a-z\s]+$/i.test(userName) &&
     userName != ""
   ) {
-    snack.innerHTML += `, ${userName}! `;
+    $snack.append(`, ${userName}! `);
   } else {
-    snack.innerHTML += "! ";
+    $snack.append("! ");
   }
-  snack.className = "show";
+  log("Snack text: " + $snack.text());
+  $snack.addClass("show");
   /*optional expression*/
   setTimeout(function () {
-    snack.className = snack.className.replace("show", "");
+    $snack.removeClass("show");
   }, 5000);
 }
 if (
   userName != null &&
-  userName.length != 0 &&
+  userName.length >= 3 &&
   /^[a-z\s]+$/i.test(userName) &&
   userName != ""
 ) {
@@ -405,14 +404,14 @@ function calc_age(ag) {
   var diff_ms = Date.now() - ag.getTime();
   var age_dt = new Date(diff_ms);
 
-  return Math.abs(age_dt.getUTCFullYear() - 1970);
+  return Math.abs(parseInt(age_dt.getUTCFullYear()) - 1970);
 }
 
 //Nicknaming function
 const nickName = () => {
   if (
     userName != null &&
-    userName.length != 0 &&
+    userName.length >= 3 &&
     /^[a-z\s]+$/i.test(userName) &&
     userName != ""
   ) {
@@ -536,15 +535,11 @@ if ("speechSynthesis" in window) {
       }
       playText(mesg.innerText);
       //Show a snackbar the first time the Speech Synthesis reads this text
-        let oneTimeSnackbar = function() {
         	$snack.text("Speech synthesis is ongoing. You cannot enter any text in the input field until it finishes.");
-        $snack.toggleClass("show");
+        $snack.addClass("show");
         setTimeout(function () {
-          $snack.toggleClass("show");
+          $snack.removeClass("show");
         }, 2300);
-        return ;
-        }
-        once(oneTimeSnackbar);
     }
   });
 } else {
@@ -555,10 +550,10 @@ const utterance = new SpeechSynthesisUtterance();
 utterance.addEventListener("end", () => {
   textInput.disabled = false;
   if (
-    snack.innerText ==
+    $snack.text() ==
     "Speech synthesis is ongoing. You cannot enter any text in the input field until it finishes."
   ) {
-    snack.className = snack.className.replace("show", "");
+    $snack.addClass("show");
   }
 });
 utterance.addEventListener("boundary", (e) => {
@@ -657,15 +652,6 @@ $(document).bind("mouseleave", function (e) {
   }
 });
 
-//run a function once
-const once = fn => {
-  let called = false;
-  return function(...args) {
-    if (called) return;
-    called = true;
-    return fn.apply(this, args);
-  };
-};
 
 
 

@@ -1,19 +1,19 @@
 /* regular expressions/ questions to be answered: */ 
- const q1 = /(din k(ai|e)saa?( guzar rahaa?)? h(e|ai))|(k(e|ai|ay)s(aa?|i|ee) (feel|mehs(u|oo)s) kar rahi h(o|e)n?)/i, 
-   q2 = /(who('?re|( \w+ \w+)? are) you)|(h(o|ai|e)n? kon (tum?|aa?p))/i, 
-   q3 = /(who am I)|(my (info|bio))|(what( do)? you know about me)|(m(e|ai)n? kon h(u|oo)n?)|((k(y|i)aa?( k(y|i)aa?)? jaa?nti ho( aa?p)? )?mer(e|a?y) baa?r(e|ay) m(ai|e)n?( aa?p)? k(y|i)aa?( k(y|i)aa?)? jaa?nt(i|e) ho)/i, 
+ const q1 = /(din k(ai|e)saa?( (gu(j|z)ar|jaa?) ?rahaa?)? h(e|ai))|(k(e|ai|ay)s(aa?|i|ee) (feel|mehs(u|oo)s) kar rahi h(o|e)n?)/i, 
+   q2 = /(who('?re|( \b\w\b \b\w\b)? are) you)|(h(o|ai|e)n? k(o|au)n (tum?|aa?p))/i, 
+   q3 = /(who am I)|(my (info|bio))|(what( do)? you know about me)|(m(e|ai)n? k(o|au)n h(u|oo)n?)|((k(y|i)aa?( k(y|i)aa?)? jaa?nti ho ?(aa?p|tum)? )?mer(e|ay) baa?r(e|ay) m(ai|e)n? ?(aa?p|tum)? k(y|i)aa?( k(y|i)aa?)? jaa?nt(i|e) ho)/i, 
    q4 = /(k(ai|e|ay)s(i|ee)( rahi)? h(o|e|ai)n?)|(how('?ve?| have)? you been)/i, 
-   q5 = /(k(y|i)aa? naa?m h(e|ai)|naa?m (k(y|i)aa? h(e|ai)|bataa?o)) ?(aa?p|tum)? meraa?/i, 
-   q6 = /(k(y|i)aa? (bulaa?(u|oo)n?|bulaa? sakt(aa|i|e|ai)? h(u|oo)n?) m(e|ai)n? (tumh(e|ai)n?|aa?p ko))|((k(y|i)aa? )?naa?m( k(y|i)aa?)? (he|hai) (tumhaa?raa?|aa?p kaa?))|(full name?)|(p(u|oo)raa? naa?m)/i, 
-   q7 = /((is|was) (this|\d{4})( a)? leap year)|(k(y|i)aa? y(e|a(i|y)) (e|a)y?k leap year h(e|ai))/i, 
-   q8 = /((what'?s?|when'?s?)( is)?|show) my (dob|bday|(birth|b(-)?)day)/i, 
-   q9 = /(k(y|i)aa? uma?r h(e|ai|ay) meri)|(uma?r bataa?o ?(tum|aa?p)? meri)|(meri (age|uma?r|saa?l ?giraa?))/i, 
-   q10 = /kisi or naa?m (se|sa(i|y)) (bulaa?o|pukaa?ro)( aa?p)? mujh(e|ai|ay)/i, 
+   q5 = /((k(y|i)aa? naa?m h(e|ai)|naa?m (k(y|i)aa? h(e|ai)|bataa?o)) ?(aa?p|tum)? meraa?)|((my|mera) naa?me?)/i, 
+   q6 = /(k(y|i)aa? (bulaa?(u|oo)n?|bulaa? sakt(aa|i|e|ai)? h(u|oo)n?) m(e|ai)n? (tumh(e|ai)n?|aa?p ?ko))|((k(y|i)aa? )?naa?m( k(y|i)aa?)? (he|hai) (tumhaa?raa?|aa?p ?kaa?))|((full|p(u|oo)raa?) naa?me?)/i, 
+   q7 = /(is|was|will) (this|it|\d{4})( year)?( (going to )?be)? a leap year/i, 
+   q8 = /mer(i|a) (janam ?din|saa?l ?giraa?|birth ?(day|date|year))/i, 
+   q9 = /(k(y|i)aa? (age|uma?r) h(e|ai|a?y) meri)|(uma?r bataa?( sakti h)?(o|e|ai)n? ?(tum?|aa?p)? meri)|((meri|my) (age|uma?r))/i, 
+   q10 = /kisi (or|aur) naa?me? (se|sa(i|y)) (bulaa?o|pukaa?ro)/i, 
    q11 = 
    /(((change|resubmit) my|incorrect) (dob|bday|(birth|b(-)?)day))|((dob|bday|(birth|b(-)?)day) is incorrect)/i, 
-   q12 = /(m(e|ai) (k(ai|e)s(aa?|i|ee) (laga|lagi)))|(ham (kaise lage|pasand a(e|ai)))/i, 
+   q12 = /((m(e|ai)n? (k(ai|e)s(aa?|i|ee) (laga|lagi)))|(ham (k(ai|e)se lage|pasand a(e|a?i|e))))|(pasand a(ya|a?i) (m(e|ai)n?|h(u|a)m) ((aa?p|tum) ?ko|tumh(e|ai)n?))|((m(e|ai)n?|h(u|a)m) ((aa?p|tum) ?ko|tumh(e|ai)n?) pasand a(ya|a?i|e))/i, 
    q13 = 
-   /(time ((batao|bataie)|(bataa?o )?k(y|i)aa? (hora?haa? )?(he|hai|hy)))|((current|local)( date and)? time)|(date today)|(time now)|(date and time)|(aa?j (k(y|i)aa?|kon ?s(aa?|i|ee)?) (din|day|date|tar(i|ee)kh) (h(e|a?(y|i))|th(aa?|i|ee)))/i, 
+   /(time ((batao|bataie)|(bataa?o )?k(y|i)aa? (hora?haa? )?(he|hai|hy)))|((current|local)( date and)? time)|(date today)|(time now)|(date and time)|((aa?j )?(k(y|i)aa?|k(o|au)n ?s(aa?|i|ee)?) (din|day|date|tar(i|ee)kh) (h(e|a?(y|i))|th(aa?|i|ee)))/i, 
    q14 = /^(hi)|(hello)|(hey)|(hola)|(howdy)|(namashkar)|((as)?salam ?(u|o)?( ala?(e|i)kum)?)/i, 
    q15 = /tic( |-)?tac( |-)?toe/i, 
    q16 = /(weather (today|forecast|(right )?now))|(temperature today)|(is it a (hot|rainy|cloudy|sunny) day today)|(mausam)|(mosam)/i, 
@@ -32,18 +32,18 @@
    q28 = /^(play( me)?|run|launch|execute) pacman(ia)?/i, 
    q29 = /^(play( me)?|run|launch|execute) (rock|stone) paper scissors?/i, 
    q30 = /(lyrics)|((encycl|lyric)opedia)/i, 
-   q31 = /((crypto)?currency)|(exchange rates?)|(\w\w\w to \w\w\w)/i, 
-   q32 = /((what )?day of year( is it)?)|((aa?j )?saa?l ka konsaa? din h(e|ai|a?y) aa?j)/i, 
+   q31 = /((crypto)?currency)|(exchange rates?)|(\b\w\w\w\b to \b\w\w\w\b)/i, 
+   q32 = /((what )?day of year( is it)?)|((aa?j )?saa?l ka k(o|au)nsaa? din h(e|ai|a?y) aa?j)/i, 
    q33 = 
    /(is (this|it)( a)? week ?day (today|yet))|((is today|today is) a week ?day)/i, 
    q34 = /(is (this|it)( a)? week ?end (today|yet))|((is today|today is) a week ?end)|(k(y|i)aa? aa?j (itwaa?r|haftaa?) (h(e|a?(i|y)))|(thaa?))/i, 
    q35 = /numbers? to roman/i, 
-   q36 = /(mi|miles) (and|to) (km|kilometers)/i, 
-   q37 = /\d* ?(k(ilo)?m(eters?)?|mi(les?)?) (to|and|((equals|=) how many)|(baraa?bar h(e|ai)n? kit ?n(e|a(y|i)))) (mi(les?)?|k(ilo)?m(eters?)?)/i, 
-   q38 = /(what (date|day) was it yesterday)|(kal (k(y|i)aa?|kon ?s(aa?|i|ee)) (din|day|date|tar(i|ee)kh) (rah|th)(aa?|i|ee))/i, 
-   q39 = /(what (date|day) will it be tomorrow)|(kal (k(y|i)aa?|kon ?s(aa?|i|ee)) (din|day|date|tar(i|ee)kh) (ho|rah(e|ay)) ?g(aa?|i|ee))/i, 
+   q36 = /\b\d*\b ?(mi|miles?) (to|and|((equals|are equal to|=)( how many)?)|(baraa?bar h(e|ai)n?( kit ?n(e|a(y|i)))) (km|kilometers?))?/i, 
+   q37 = /\b\d*\b ?k(ilo)?m(eters?)? (to|and|((equals|are equal to|=)( how many)?)|(baraa?bar h(e|ai)n?( kit ?n(e|a(y|i)))) mi(les?)?)?/i, 
+   q38 = /(what (date|day) was it yesterday)|(kal (k(y|i)aa?|k(o|au)n ?s(aa?|i|ee)) (din|day|date|tar(i|ee)kh) (rah|th)(aa?|i|ee))/i, 
+   q39 = /(what (date|day) will it be tomorrow)|(kal (k(y|i)aa?|k(o|au)n ?s(aa?|i|ee)) (din|day|date|tar(i|ee)kh) (ho|rah(e|ay)) ?g(aa?|i|ee))/i, 
    q40 = /monopoly/i, 
-   q41 = /(canvas)|(drawing app)|((draw(ing)? karn(i|aa?))|((sketch(es)?|canvas) (banaa?n(aa?|e|ai)|karnaa?)) ((chaa?ha?t(a(a|i|y)?|i|ee?) )?h(u|oo|e|ai)n?))/i, 
+   q41 = /(canvas(es)?)|((drawings?|arts?|paint(ings?)?|brush) (app|tool))|(((draw|paint)(ing)? karn(i|aa?))|((sketch|canvas|painting)(e?s)? (banaa?n(aa?|e|ai)|karnaa?)) ((chaa?ha?t(a(a|i|y)?|i|ee?) )?h(u|oo|e|ai)n?))/i, 
    q42 = /(audio (visuali(z|s)er|player))|(play( local)? audio)/i, 
    q43 = /breaking bad cast/i, 
    q44 = /(b(ody )?m(ass )?i(ndex)?)|(k(y|i)aa? (mai|me)n? mot(ee|i) h(oo|u)n?)/i, 
@@ -75,8 +75,8 @@
    q65 = /(fotoflick)|(puzzle game)|((photo|picture) puzzle)/i, 
    q66 = 
    /((motivate|inspire) me)|(I'?( ?a)?m demotivated)|(motivat(ional|ing) app)/i, 
-   q67 = /((space(X|station)|nasa) (data|live))|(live( outer)? space)/i, 
-   q68 = /(snapshots?)|(landscapes)|(wallpapers)/i, 
+   q67 = /((space ?(X|station)|nasa) (data|live))|(live( outer)? space)/i, 
+   q68 = /(snap ?shots)|(landscapes)|(wall ?papers?)|((kuch|some) (photos|pictures|images))/i, 
    q69 = /features/i, 
    q70 = /(trivia)|(quiz)|(game of questionnares)/i, 
    q71 = /(ratings? for( tv)? (series|serials?))|((tv )?series app)/i, 
@@ -91,7 +91,7 @@
    q78 = 
    /(fisave)|(net ?worth track(er|ing))|(track (my net ?worth|net ?worth of mine))/i, 
    q79 = 
-   /(aa?dat to(r|d)ni h(e|ai) maine)|((break|track) ((a |my )(bad )?habits?|(a( bad)? habit|(bad )?habits) of mine))/i, 
+   /(aa?dat to(r|d)ni h(e|ai) m(ai|e)ne)|((break|track) ((a |my )(bad )?habits?|(a( bad)? habit|(bad )?habits) of mine))/i, 
    q80 = 
    /(habits? build(er|ing))|(help( me)? (with building|build) a( good)? habit)/i, 
    q81 = /unit conver(sion|ter)/i, 
@@ -101,50 +101,50 @@
    q85 = /simon/i, 
    q86 = /light maze/i, 
    q87 = 
-   /(book|pdf|kitab) (read kar ?k(e|ai)|parh ?k(e|ai)) (do|d(ai|e)n?|bataa?(o|en?)|de sakt(e|i) h(o|(e|ai)n?))/i, 
+   /(book|pdf|kitab) (read kar ?k(e|ai)|parh ?k(e|ai)) (do|d(ai|e)n?|bataa?(o|(e|ai)n?)|de sakt(e|i) h(o|(e|ai)n?))/i, 
    q88 = 
    /(^(open|launch|run)?( me)? ?travels? ?(app|plan(ning|s|ner))$)|(help me ?(to|with|in)? plan(ning)? travels)/i, 
    q89 = /truth or dare/i, 
    q90 = /metronome/i, 
-   q91 = /you licensed/i, 
+   q91 = /your? licensed?/i, 
    q92 = /kis ?n(e|ai) (banaa?ya|create|develop kiy?aa?)/i,
-   q93 = /(I love (yo)?u)|(m(e|ai) aa?p ko chaha?t(a|i) h(u|oo)n?)|(you( a|')?re lovable)/i,
-   q94 = /(I like you)|(you( a|')?re( my)? (cute|adorable|favou?rite))|(k(y|i)aa? to ch(i|ee)z ho)/i,
+   q93 = /((I )?love (yo)?u)|(m(e|ai) aa?p ?ko chaha?t(a|i) h(u|oo)n?)|(you( a|')?re lovable)/i,
+   q94 = /((I )?like (yo)?u)|(you( a|')?re( my)? (cute|adorable|favou?rite))|((((k(y|i)aa? (tu|to)|acc?hi|ba(d|r)hiy?a|(z|j)abardast|alag hi) ch(i|ee)j)|(pyari|cute|sexy|acc?hi|ba(d|r)hiy?a|(z|j)abardast|kabil ?e ?tar(ee|i)f) ho))/i,
    q95 = /k(y|i)aa? (m(ai|e)n?|h(a|u)m) (aa?p|tum) ?ko baby bulaa? sakt(aa?|i) h(u|oo|e)n?/i,
-   q96 = /(will you be my (g(irl)?f(riend)?|wife))|(meri (g(irl)?f(riend)?|wife) ban(o|en?)gi)|(mujh(e|ai|ay) apnaa? (lover|husband|b(oy)?f(riend)?) bana(o|en?)gi)/i,
-   q97 = /aa?j (se|say|sai) ?((aa?p|tum|a(ye|i)sha)?( meri)? (bab(y|es?)|g(irl)?f(riend)?)|(m(ai|e)n? ((aa?p|a(ye|i)sha) kaa?|tumhaa?raa?|tera) (lover|husband|b(oy)?f(riend)?)))/i,
+   q96 = /(will you be my (g(irl)?f(riend)?|wife))|(meri (g(irl)?f(riend)?|wife) ban(o|(ai|e)n?) ?gi)|(mujh(e|ai|ay) apnaa? (lover|husband|b(oy)?f(riend)?) bana(o|(e|ai)n?)gi)/i,
+   q97 = /aa?j (se|say|sai) ?((aa?p|tum|a(ye|i)sha)?( meri)? (bab(y|es?)|g(irl)?f(riend)?|wife)|(m(ai|e)n? ((aa?p|a(ye|i)sha) kaa?|tumhaa?raa?|tera) (lover|husband|b(oy)?f(riend)?)))/i,
    q98 = /(favou?rite|pasand(ee|i)daa?) colou?r/i,
-   q99 = /(favou?rite|pasand(ee|i)daa?) (ghumne ki jagh?(aa?|en?)|places to (go|visit|be))/i,
-   q100 = /(I('| )?a?m sorry)|(mujh(e|a?y|ai) maa?f kardo)/i,
+   q99 = /(favou?rite|pasand(ee|i)daa?) ((ghumne ki )?jagh?(aa?|(e|ai)n?)|places to (go|visit|be))/i,
+   q100 = /(I('| )?a?m sorry)|(mujh(e|a?y|ai) maa?f kardo)|(mujhe esa nahi kehna chahi?y?e tha)/i,
    q102 = /(fu?c?k you)|(ajib ho)|(ghatiy?aa? (au|o)rat)/i,
-   q103 = /I hate you/i,
-   q104 = /meri friend ban(o|en?)gi/i,
+   q103 = /(I hate you)|(you('?re| are)? stupid)/i,
+   q104 = /meri friend ban(o|(e|ai)n?)gi/i,
    q105 = /(m(e|ai)n? b(u|o)h(o|a)t pareshaa?n h(u|oo)n?)|(I'?( ?a)?m depressed)/i,
-   q106 = /(I hate m(e|yself))|(I'?( ?a)?m bad)/i,
+   q106 = /I hate m(e|yself)/i,
    q107 = /(I( just)? need a friend)|(I'?( ?a)?m lonely)/i,
-   q108 = /k(y|i)a m(e|ai)n? khud ?garz h(u|oo)n?/i,
-   q109 = /k(y|i)a m(e|ai)n? bur(aa?|i) h(u|oo)n?/i,
+   q108 = /(k(y|i)a )?m(e|ai)n? khud ?garj h(u|oo)n?/i,
+   q109 = /((k(y|i)a )?m(e|ai)n? bur(aa?|i) h(u|oo)n?)|(I'?( ?a)?m bad)/i,
    q110 = /(zodiac|star) sign/i,
-    q111 = /(age|uma?r)( k(i|y)aa?)? h(e|ai) (aa?pki|tumhaa?ri)/i,
-    q112 = /hamaa?ri pasand(en?)? kitni milti julti h(e|ai)n?/i,
-    q113 = /(can'?t? you feel the chemistry between us)|(k(i|y)aa? (tum?|aa?p) hamar(e|ay) darmyaa?n (ki|(hone )?wali|(kisi|ek)( kisam ki)?) chemistry ko mehsus( nahi)? kar (rahi|sakti)( ho)?)/i,
-    q114 = /crap|brat|fool|fuck(er)?s?|twats?|cunts?|cock(biter|sucker)?s?|boobs?|morons?|douche?(bag)?s?|pricks?|dicks?|(ass|arse) ?(hole)?s?|dick(head)?s?|fag(got)?|nigg?(a|er)|fucking|f\*cking|f\*ck|bitch|b\*tch|shit|sh\*t|fool|dumb|couch potato|\*ssh\*l\*|\*\*\*\*|c\*ck|\*\*\*\*sucker|c\*cks\*ck\*r|\*\*\*\*|c\*nt|dickhead|d\*c\*h\*a\*|\*\*\*\*|f\*c\*|\*\*\*\*wit|f\*ckw\*t|fuk|f\*k|fuking|f\*k\*ng|mother\*\*\*\*er|m\*th\*rf\*ck\*r|\*\*\*\*\*\*|n\*gg\*r|pussy|p\*ssy|\*\*\*\*|sh\*t|wanker|w\*nk\*r|wankers|w\*nk\*rs|whore|wh\*r\*|slag| sl\*g|\*\*\*\*\*|b\*tch|f u c k|f\*c\*|b.i.t.c.h|b\*tch|d-i-c-k|d\*\*\*/i;
+    q111 = /((age|uma?r)( k(i|y)aa? h(e|ai))? ?(aa?p ?ki|tumhaa?ri))|((aa?p ?ki|tumhaa?ri) uma?r)/i,
+    q112 = /hamaa?ri pasand((e|ai)n?)? kitni milti julti h(e|ai)n?/i,
+    q113 = /(can'?t? you feel the chemistry between us)|(k(i|y)aa? (tum?|aa?p)( hamaa?r(e|ay) darmyaa?n ?(ki|(hone )?wali|(kisi|ek)( kisam ki)?))? chemistry( ko)? mehsus( nahi)? kar (rahi|sakti)( h(o|ai|e)n?)?)/i,
+    q114 = /crap|brat|fool|(mother)?fuck(er)?s?|mf|mofo|twats?|cunts?|cock(biter|sucker)?s?|boobs?|morons?|douche?(bag)?s?|pricks?|dicks?|(ass|arse) ?(hole)?s?|dick(head)?s?|fag(got)?|nigg?(a|er)|fucking|f\*cking|f\*ck|bitch|b\*tch|shit|sh\*t|fool|dumb|couch potato|\*ssh\*l\*|\*\*\*\*|c\*ck|\*\*\*\*sucker|c\*cks\*ck\*r|\*\*\*\*|c\*nt|dickhead|d\*c\*h\*a\*|\*\*\*\*|f\*c\*|\*\*\*\*wit|f\*ckw\*t|fuk|f\*k|fuking|f\*k\*ng|mother\*\*\*\*er|m\*th\*rf\*ck\*r|\*\*\*\*\*\*|n\*gg\*r|pussy|p\*ssy|\*\*\*\*|sh\*t|wanker|w\*nk\*r|wankers|w\*nk\*rs|whore|wh\*r\*|slag| sl\*g|\*\*\*\*\*|b\*tch|f u c k|f\*c\*|b.i.t.c.h|b\*tch|d-i-c-k|d\*\*\*/i;
   
  function ask() { 
    const q = document.querySelector("#searchInput").value; 
    const $output = $("#message"); 
    if (q1.test(q)) { 
      $("#message").slideFadeToggle(800); 
-     msg = "Aap kay bina"; 
+     msg = "Aap kay binaa"; 
      if ( 
        userName != null && 
        userName.length >= 3 && 
        /^[a-z\s]+$/i.test(userName) && 
        userName != "" 
      ) { 
-       msg += `, ${userName} ji? Adhura!`; 
+       msg += ` ${userName} ji? Bara adhura sa ${sad2}`; 
      } else { 
-       msg += "? Bilkul adhura sa!"; 
+       msg += "? Bilkul adhura sa!" + sad2; 
      } 
      $output.html(msg); 
      console.log(msg); 
@@ -170,9 +170,9 @@
      ) { 
        msg += userName.split(" ")[0]; //only show the first name 
      } else { 
-       msg += "Anjaan."; 
+       msg += "Anjaan." + duh; 
      } 
-     msg += "</li><li>Aapki personality: cute, kind, funny</li><li>Aapki saal gira ka din: "; 
+     msg += "</li><li>Aapki personality: cute, kind, funny" + in_love + "</li><li>Aapki saal gira ka din: "; 
      if ( 
        bday != null && 
        /^[0-9a-zA-Z(-\.\_\s\/)]+$/i.test(bday) && 
@@ -186,10 +186,10 @@
          msg += " (today)"; 
        } 
      } else { 
-       msg += "Anjaan."; 
+       msg += "Anjaan." + duh; 
      } 
      msg += "</li><li>Aapki umr: "; 
-     if (!isNaN(parseInt(age))) { 
+     if ((!isNaN(parseInt(age)) && age != 0) && (age != "" && age.length != 0)) { 
        msg += age; 
      } else { 
        msg += "Aapki birthday na jannay ki wajaa say calculate na karpa'i."; 
@@ -198,7 +198,7 @@
      $output.html(msg); 
      console.log(msg); 
      if ( 
-       /your (name|age|birthday):/im.test(msg) && 
+       /Kuch cheezay jo may/im.test(msg) && 
        mesg.innerText.toLowerCase().indexOf("data received via") === -1 
      ) { 
        const API_KEY = 
@@ -217,7 +217,7 @@
      $("#message").delay(10000).slideFadeToggle(800); 
    } else if (q4.test(q)) { 
      $("#message").slideFadeToggle(800); 
-     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi achay or sehti'yaab hogay? As a friend, I deeply care" + hearts; 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi achay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
      $output.html(msg); 
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
@@ -233,7 +233,7 @@
        msg += userName; 
        msg += `. Agar aap chahtay ho may aapko kisi or naam say, jese kay ek nickname, say bulaun, <a onclick="$('#searchInput').val('Change my name');stopText();ask();playText(mesg.innerText);" onmouseover="$(this).css('cursor', 'pointer')" style="color:rgba(0,0,255,0.9);text-decoration:underline;">Idhar dabaao</a>${nickName()}!`; 
      } else { 
-       msg += "\"ayk anjaan insan\""; 
+       msg += "\"ayk anjaan insan\"" + lol; 
        msg += `. <a onclick="$('#searchInput').val('Save my name');stopText();ask();playText(mesg.innerText);" onmouseover="$(this).css('cursor', 'pointer')" style="color:rgba(0,0,255,0.9);text-decoration:underline;">Idhar dabaao</a> naam dubaara darj karne kay li'yay!`; 
      } 
      $output.html(msg); 
@@ -248,8 +248,8 @@
    } else if (q7.test(q)) { 
      $("#message").slideFadeToggle(800); 
      msg = document.querySelector("#searchInput").value; 
-     msg = msg.replace(/this/i, new Date().getFullYear()); 
-     msg = msg.replace(/was/i, "is"); 
+     msg = msg.replace(/(this|it)/i, new Date().getFullYear()); 
+     msg = msg.replace(/(was|will)/i, "is"); 
      msg = msg.substr(3, 4); 
      msg = parseInt(msg); 
      log(msg); 
@@ -259,9 +259,11 @@
        let curY = new Date().getFullYear(); 
        if (curY != x && curY > x) { 
          msg = msg.replace(/is/i, "was"); 
-       } 
+       } else if (curY != x && curY < x) {
+       	msg = msg.replace(/(is|was)/i, "is going to be"); 
+       }
      } else { 
-       msg = "In accordance with my intelligence, no it's not."; 
+       msg = "Mayree intelligence kay mutabik? Nahi!"; 
      } 
      $output.html(msg); 
      console.log(msg); 
@@ -281,11 +283,11 @@
        log(msg); 
        if (isBday(bday)) { 
          msg += 
-           " (today)<br>Happy birthday, by the way! Hurrah!"; 
+           " (today)<br>Happy birthday, by the way! Hurrah!" + kiss; 
        } 
      } else { 
        bday = prompt( 
-         "Your bday isn't saved yet. Would you mind (re-)listing it?\nAccepted format: YYYY(separator)m(separator)d\nNote: We ask for your birthday only for statistical purposes." 
+         "Apki birthday saved nahi he, sorry! Zara dubara submit kijie ga please?\nAccepted format: YYYY(separator)m(separator)d\nNote: Me birthday sirf apki umr ka hisab lagane ke lie puchti hu, or is lie bhi take me apko apki salgira wale din 'Happy birthday' bol saku." 
        ); 
        bday = toTitleCase(bday); 
        msg = `Date set. Your newly set bday is ${bday}`; 
@@ -304,22 +306,41 @@
          bday 
        ) 
      ) { 
-       age = calc_age(new Date(bday)); 
+       age = calc_age(new Date(bday));
+        if ((!isNaN(parseInt(age)) && age != 0) && (age != "" && age.length != 0)) {
        msg = `Aap ho... ${age} kay!`; 
        if (age <= 18) { 
-         msg += "<br>Kaafi chotay ho yar aap to" + satisfied2 + "... still cute though" + what2; 
+         msg += "<br>Kaafi young ho yar aap to" + what2 + "... still cute though" + in_love + blush; 
          console.log(msg); 
+       }  else if (age >= 40) {
+       	msg += "<br>Don't worry, age doesn't matter... Not to me at least!<br>Aap mayray leeyay ab bhi athaara saal kay no jawaan hi ho!" + hearts;
+       console.log(msg);
+       }
        } 
      } else { 
        bday = prompt( 
          "Apki saal gira ka din jane bager kese bata sakti hu? Apni sal gira ka din dubara darj kijie niche.\nSupported format: YYYY(separator)m(separator)d" 
        ); 
+       if ( 
+       bday != null && 
+       /^[0-9a-zA-Z(-\.\_\s\/)]+$/i.test(bday) && 
+       bday != "" && 
+       /^\d{4}[\/.,-\s](\d{1,2}|\b(\w*(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\w*)\b)[\/.,-\s]\d{1,2}$/i.test( 
+         bday 
+       ) 
+     ) { 
        age = calc_age(new Date(bday)); 
+       if ((!isNaN(parseInt(age)) && age != 0) && (age != "" && age.length != 0)) {
        msg = "Aap ho... " + age + " kay!"; 
        if (age <= 18) { 
-         msg += "<br>Kaafi chotay ho yar aap to" + satisfied2 + "... still cute though" + what2;
+         msg += "<br>Kaafi young ho yar aap to" + what2 + "... still cute though" + in_love + blush;
          console.log(msg); 
-       } 
+       } else if (age >= 40) {
+       	msg += "<br>Don't worry, age doesn't matter... Not to me at least!<br>Aap mayray leeyay ab bhi athaara saal kay no jawaan hi ho!" + hearts;
+       console.log(msg);
+       }
+       }
+       }
      } 
      $output.html(msg); 
      console.log(msg); 
@@ -328,7 +349,7 @@
      $("#message").slideFadeToggle(800); 
      let cfm = confirm("Are you sure?"); 
      if (cfm) { 
-       userName = prompt("What do you want me to call you?", userName); 
+       userName = prompt("Kya bulau me apko? Koi nickname?", userName); 
        userName = toTitleCase(userName); 
        console.log(`New username: ${userName}`); 
        if ( 
@@ -337,12 +358,12 @@
          /^[a-z\s]+$/i.test(userName) && 
          userName != "" 
        ) { 
-         msg = `Alright, I'll call you ${userName} from now on :)`; 
+         msg = `Theek hay jee, aaj say may aapko ${userName} bulaoongi ${smirk}`; 
          console.log(msg); 
        } else { 
-         userName = prompt("Couldn't change your name. Try resubmitting it."); 
+         userName = prompt("Failed to change your name for some reason! Maybe try resubmitting it?"); 
          userName = toTitleCase(userName); 
-         msg = `Alright, I'll call you ${userName} from now on ;)`; 
+         msg = `Theek hay jee, aaj say may aapko ${userName} bulaoongi ${smirk}`; 
          console.log(msg); 
        } 
        $output.html(msg); 
@@ -354,7 +375,7 @@
      let cfm = confirm("Are you sure?"); 
      if (cfm) { 
        bday = prompt( 
-         "Resubmit your bday. The format should be: YYYY(separator)m(separator)d\nNote: We ask for your birthday only for statistical proposes." 
+         "Apni salgira dubara submit kijie please. Kuch is tara: YYYY(separator)m(separator)d\nNote: Me birthday sirf apki umr ka hisab lagane ke lie puchti hu, or is lie bhi take me apko apki salgira wale din 'Happy birthday' bol saku." 
        ); 
        if ( 
          bday != null && 
@@ -364,13 +385,13 @@
            bday 
          ) 
        ) { 
-         msg = `&#128076; Done. Your newly set bday is ${bday}`; 
+         msg = `Done. Your newly set bday is ${bday}`; 
          console.log(msg); 
        } else { 
          bday = prompt( 
-           "Couldn't change your bday. Try resubmitting it.\nNote: We ask for your birthday only for statistical purposes." 
+           "Kisi waja se change nahi karpai, zara dubara submit kijie?\nNote: Me birthday sirf apki umr ka hisab lagane ke lie puchti hu, or is lie bhi take me apko apki salgira wale din 'Happy birthday' bol saku." 
          ); 
-         msg = `&#128076; Done. Your newly set bday is ${bday}`; 
+         msg = `Done. Your newly set bday is ${bday}`; 
          console.log(msg); 
        } 
        $output.html(msg); 
@@ -682,24 +703,24 @@
      $("#message").delay(10000).slideFadeToggle(800); 
    } else if (q36.test(q)) { 
      $("#message").slideFadeToggle(800); 
-     let p = prompt("Enter miles you want me to convert to Km"); 
+     let p = prompt("Kitne mikes convert karna chahe ge ap kilometers me? Niche darj kijie please."); 
      let conv = milesToKm(p); 
      if (/^[0-9(.)]*$/g.test(p) && p != null && p != "" && p.length >= 1) { 
        msg = `${p} miles are equal to ${conv} kilometers`; 
      } else { 
-       msg = "Values other than numbers cannot be converted!"; 
+       msg = "Values other than numbers cannot be converted!" + duh; 
      } 
      console.log(msg); 
      $output.html(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
    } else if (q37.test(q)) { 
      $("#message").slideFadeToggle(800); 
-     let p = prompt("Enter Kilometers you want me to convert to miles"); 
+     let p = prompt("Kitne kilometers convert karna chahte he ap miles me?"); 
      let conv = kmToMiles(p); 
      if (/^[0-9(.)]*$/g.test(p) && p != null && p != "" && p.length >= 1) { 
        msg = `${p} Kilometers are equal to ${conv} miles`; 
      } else { 
-       msg = "Values other than numbers cannot be converted!"; 
+       msg = "Obviously, sirf numbers hee convert ho saktay hay!" + duh; 
      } 
      console.log(msg); 
      $output.html(msg); 
@@ -1050,7 +1071,7 @@
      if (spaceDataAppWin) { 
        window.focus(); 
        msg = 
-         "Let discover what's above us, in the space. Search for stuff like blackholes, wormholes, Apollo 8, or 12 mission"; 
+         "Chali'ay discover ka'ray hamaa'ray upar kya kyaa hay... space may! Search for stuff like blackholes, wormholes, Apollo 8, or 12 mission"; 
        playText(msg); 
        log("Launched Space_data app"); 
      } else { 
@@ -1318,6 +1339,12 @@
    } else if (q92.test(q)) { 
      $("#message").slideFadeToggle(800); 
      msg = "Janna chahtay ho kis nay banaaya mujhay? Ek khubsurat si larki nay! Actually, mujhe bananay wali kaa naam bhi khud Ayesha hee hay <em>(Ayesha Mehnaaz!)</em>... Surprise!"; 
+     $output.html(msg); 
+     console.log(msg); 
+     $("#message").delay(10000).slideFadeToggle(800); 
+     } else if (q94.test(q)) { 
+     $("#message").slideFadeToggle(800); 
+     msg = "Jan'na chahtay ho kis nay banaaya mujhay? Ek khubsurat si larki nay! Actually, mujhe bananay wali kaa naam bhi khud Ayesha hee hay <em>(Ayesha Mehnaaz!)</em>... Surprise!"; 
      $output.html(msg); 
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 

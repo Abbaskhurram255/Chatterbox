@@ -10,9 +10,9 @@ const happy = smile = " <img style='position: relative; top: 1vh;' src='assets/i
 const relieved = phew = " <img style='position: relative; top: 1vh;' src='assets/images/emo/relieved.png' />";
 const calm = " <img style='position: relative; top: 1vh;' src='assets/images/emo/calm.png' />";
 
-let ego, smirk;
+let ego, smirk, smirkface;
 const attitude = ego = " <img style='position: relative; top: 1vh;' src='assets/images/emo/attitude.png' />";
-const as_if = smirk = " <img style='position: relative; top: 1vh;' src='assets/images/emo/as_if.png' />";
+const as_if = smirk = smirkface = " <img style='position: relative; top: 1vh;' src='assets/images/emo/as_if.png' />";
 
 const awesome = " <img style='position: relative; top: 1vh;' src='assets/images/emo/awesome.png' />";
 const awesome2 = " <img style='position: relative; top: 1vh;' src='assets/images/emo/awesome2.png' />";
@@ -73,9 +73,9 @@ const silence = " <img style='position: relative; top: 1vh;' src='assets/images/
 const secrecy = " <img style='position: relative; top: 1vh;' src='assets/images/emo/secrecy.png' />";
 const speechless = " <img style='position: relative; top: 1vh;' src='assets/images/emo/speechless.png' />";
 
-
-
-
-
+const wink = " <img style='position: relative; top: 1vh;' src='assets/images/emo/wink.png' />";
+const wink2 = " <img style='position: relative; top: 1vh;' src='assets/images/emo/wink2.png' />";
+const wink3 = " <img style='position: relative; top: 1vh;' src='assets/images/emo/wink3.png' />";
+const wink4 = " <img style='position: relative; top: 1vh;' src='assets/images/emo/wink4.png' />";
 
 
