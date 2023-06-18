@@ -1,4 +1,8 @@
 
+document.body.onload = () => {
+	document.querySelector("#audio1").play();
+};
+
 $(() => {
         'use strict';
         var supportsAudio = !!document.createElement('audio').canPlayType;
