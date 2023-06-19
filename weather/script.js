@@ -15,10 +15,12 @@ window.onload = function() {
   $(".top-banner input").val(`${response.city}, ${response.country_code}`);
 }, "jsonp");
  setTimeout(function() {
-$('button').click();
+      $('button').click();
+      if (city != null) {
       playText(`${city} ka mosam`);
-return ;
-}, 1000)
+      }
+      return ;
+  }, 1000);
 }
 
 
