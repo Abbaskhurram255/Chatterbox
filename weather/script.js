@@ -7,12 +7,21 @@ const list = document.querySelector(".ajax-section .cities");
 const submitBtn = document.querySelector("#submit-btn");
 const apiKey2 = "218c8b437c70fc5bc33279042c7b2746";
 
+let city;
 //auto-detect the location on startup
 window.onload = function() {
   $.get("https://api.ipdata.co/?api-key=63a8b1ef829b0a90909b1bb7e9c931fe1ffb70e27378da4c302e22c7", function (response) {
+  	city = `${response.city}`;
   $(".top-banner input").val(`${response.city}, ${response.country_code}`);
 }, "jsonp");
+ setTimeout(function() {
+$('button').click();
+      playText(`${city} ka mosam`);
+return ;
+}, 1000)
 }
+
+
 form.addEventListener("submit", e => {
   e.preventDefault();
   let inputVal = input.value;
@@ -83,8 +92,8 @@ form.addEventListener("submit", e => {
       playText(mesg);
     })
     .catch(() => {
-      msg.innerHTML = "Please kisi eysay shay'hayr kay baray may search karo jo wa'kaee may ho. Jesa ke, Karachi. Ya Mumbai, ya Kansas? Ya to khul kay bolo, or sath may country code bhi likho, takay may khulkay samajh paun. 'Mumbai, IN' likho, jaysa kay";
-      mesg = "Pleez kisi eysay shay'hayr kay baray may search karo jo wa'kaee may ho. Jesa Kay Karachi. Ya Mumbai, ya Kansaas?? Ya to khul kay bolo, or sath may country code bhi likho, takay may khulkay samajh paun. 'Mumbai, I.N.' likho, jaysa ky.";
+      msg.innerHTML = "Please kisi aysay shay'here kay baaray may search karain jo waa'kai may ho. Jesa kay, Karachi. Ya Mumbai, ya Kansas? Ya to khul kay bolo, or sath may country code bhi likho takay may khulkay samajh paoon. 'Mumbai, IN' likho, jaysay kay";
+      mesg = "Please kisi aysay shay'here kay baaray may pucho jo waa'ka'i may ho. Jesa kay Karachi... ya Mumbai, ya Kansaas. Ya tau khul kay bolo, or sath may country code bhi likho taakay may khul'kay samajh pa'oon. 'Mumbai I.N.' likho... jaysa kay.";
       playText(mesg);
     });
 
