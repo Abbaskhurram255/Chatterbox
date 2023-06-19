@@ -19,7 +19,7 @@ let creditsState = {
         mechanics.createText('Main menu', 14, 1, -330, 25);
 
         //Adding texts
-        mechanics.createText('Game created by Alex ', 30, 5, 0, 100);
+        mechanics.createText('Designed as an AyeshaPT sub-app ', 30, 5, 0, 100);
 
     },
 
