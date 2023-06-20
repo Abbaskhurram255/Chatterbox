@@ -17,9 +17,9 @@ h2{
     margin-left: 30%;
     margin-top: 4%;
     border: 2px dotted orchid;
-    background: linear-gradient(to right, #333, hotpink);
+    background: linear-gradient(to right, #333, brown, hotpink);
     padding: 6px;
-    border-radius: 25% 5px 25% 2px;
+    border-radius: 75% 20% 55% 15%;
     text-align: center;
 }
 #currentText{
