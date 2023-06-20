@@ -136,6 +136,9 @@ notesList.on('click', function(e) {
 function readOutLoud(message) {
     var speech = new SpeechSynthesisUtterance();
     var voices = window.speechSynthesis.getVoices();
+  window.speechSynthesis.onvoiceschanged = function () {
+    voices = window.speechSynthesis.getVoices();
+  };
 
     // Set the text and voice attributes.
     speech.text = message;
