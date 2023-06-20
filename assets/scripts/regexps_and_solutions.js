@@ -13,10 +13,10 @@
    /(((change|resubmit) my|incorrect) (dob|bday|(birth|b(-)?)day))|((dob|bday|(birth|b(-)?)day) is incorrect)/i, 
    q12 = /(((m(e|ai)n?|h(u|a)m) (k(ai|e)s(aa?|i|ee) (laga|lagi)))|(ham (k(ai|e)se lage|pasand a(e|a?i|e))))|(pasand a(ya|a?i) (m(e|ai)n?|h(u|a)m) ((aa?p|tum) ?ko|tumh(e|ai)n?))|((m(e|ai)n?|h(u|a)m) ((aa?p|tum) ?ko|tumh(e|ai)n?) pasand a(ya|a?i|e|ay))/i, 
    q13 = 
-   /(time ((batao|bataie)|(bataa?o )?k(y|i)aa? (hora?haa? )?(he|hai|hy)))|((current|local)( date and)? time)|(date today)|(time now)|(date and time)|((aa?j )?(k(y|i)aa?|k(o|au)n ?s(aa?|i|ee)?) (din|day|date|tar(i|ee)kh) (h(e|a?(y|i))|th(aa?|i|ee)))/i, 
-   q14 = /^(hi)|(hello)|(hey)|(hola)|(howdy)|(namashkar)|((as)?salam ?(u|o)?( ala?(e|i)kum)?)/i, 
+   /(time ((batao|bataie)|(bataa?o )?k(y|i)aa? (hora?haa? )?(he|hai|hy)))|((current|local) (date and )?time)|(date today)|(time now)|(date and time)|(^(aa?j )?(k(y|i)aa?|k(o|au)n ?s(aa?|i|ee)?) (din|day|date|tar(i|ee)kh) (h(e|a?(y|i))$|th(aa?|i|ee)))/i, 
+   q14 = /^(hi)|(hello)|(hey)|(h?ola)|(howdy)|(namashkar)|((as?)?salam ?(u|o)?( ala?(e|i)kum)?)/i, 
    q15 = /tic( |-)?tac( |-)?toe/i, 
-   q16 = /(weather (today|forecast|(right )?now))|(temperature today)|(is it a (hot|rainy|cloudy|sunny) day today)|(mausam)|(mosam)/i, 
+   q16 = /(temperature today)|(is it a (hot|rainy|cloudy|sunny) day today)|(weather)|(m(o|au)sam)/i, 
    q17 = /^$/, 
    q18 = /(open calculator)|(calculate(?:bmi))/i, 
    q19 = 
@@ -33,10 +33,10 @@
    q29 = /^(play( me)?|run|launch|execute) (rock|stone) paper scissors?/i, 
    q30 = /(lyrics)|((encycl|lyric)opedia)/i, 
    q31 = /((crypto)?currency)|(exchange rates?)|(\b\w\w\w\b to \b\w\w\w\b)/i, 
-   q32 = /((what )?day of year( is it)?)|((aa?j )?saa?l ka k(o|au)nsaa? din h(e|ai|a?y) aa?j)/i, 
+   q32 = /((what )?day of year( is it)?)|((aa?j )?saa?l ka k(o|au)n ?saa? din h(e|ai|a?y))|(saa?l ka din number)|(din number is saa?l ka)/i, 
    q33 = 
    /(is (this|it)( a)? week ?day (today|yet))|((is today|today is) a week ?day)/i, 
-   q34 = /(is (this|it)( a)? week ?end (today|yet))|((is today|today is) a week ?end)|(k(y|i)aa? aa?j (itwaa?r|haftaa?) (h(e|a?(i|y)))|(thaa?))/i, 
+   q34 = /(is (this|it)( a)? week ?end (today|yet))|((is today|today is) a week ?end)|(k(y|i)aa?( aa?j)? (itwaa?r|haftaa?) (h(e|ai)|thaa?)( aa?j)?)/i, 
    q35 = /numbers? to roman/i, 
    q36 = /\b\d*\b ?(mi|miles?) (to|and|((equals|are equal to|=)( how many)?)|(baraa?bar h(e|ai)n?( kit ?n(e|a(y|i)))) (km|kilometers?))?/i, 
    q37 = /\b\d*\b ?k(ilo)?m(eters?)? (to|and|((equals|are equal to|=)( how many)?)|(baraa?bar h(e|ai)n?( kit ?n(e|a(y|i)))) mi(les?)?)?/i, 
@@ -109,7 +109,7 @@
    q91 = /your? licen(s|c)ed?/i, 
    q92 = /kis ?n(e|ai) (banaa?ya|create|develop kiy?aa?)/i,
    q93 = /((I )?love (yo)?u)|((m(e|ai)n?|h(u|a)m) aa?p ?ko chaha?t(a|i) h(u|oo|e|ai)n?)|(you( a|')?re lovable)/i,
-   q94 = /((I )?like (yo)?u)|(you( a|')?re( my)? (cute|adorable|favou?rite))|((((k(y|i)aa? (tu|to)|acc?hi|ba(d|r)hiy?a|(z|j)abardast|alag hi) ch(i|ee)j)|(pyari|cute|sexy|acc?hi|ba(d|r)hiy?a|(z|j)abardast|kabil ?e ?tar(ee|i)f) ho))/i,
+   q94 = /((I )?like (yo)?u)|(you( a|')?re( my)? (cute|sweet(ie)?|lovely|pyaa?ri|adorable|favou?rite))|((((k(y|i)aa? (tu|to)|acc?hi|ba(d|r)hiy?aa?|(z|j)abardast|alag hi|pyaari?) ch(i|ee)j)|(pyaa?ri|cute|sweet|sexy|acc?hi|ba(d|r)hiy?a|(z|j)abardast|kaa?bi?l ?(e ?)?tar(ee|i)f) ho))|((tum|aa?p) ?h(o|e|ai)n? (pyari|cute|sweet|sexy|acc?hi|ba(d|r)hiy?a|(z|j)abardast|kaa?bi?l ?(e ?)?tar(ee|i)f|tar(i|ee)f k(e|i|a(i|y)) kaa?bil))|(ku(r|d)i (b|w)add?i soni?(ye| h(e|ai)))/i,
    q95 = /k(y|i)aa? (m(ai|e)n?|h(a|u)m) (aa?p|tum) ?ko baby bulaa? sakt(aa?|i) h(u|oo|e|ai)n?/i,
    q96 = /(will you be my (g(irl)?f(riend)?|wife))|(meri (g(irl)?f(riend)?|wife) ban(o|(ai|e)n?) ?gi)|(mujh(e|ai|ay) apnaa? (lover|husband|b(oy)?f(riend)?) bana(o|(e|ai)n?)gi)|(kyaa? (m(e|ai)n?|h(u|a)m) aa?p ?ko apni (wife|g(irl)?f(riend)?) (maa?n|bulaa?|keh|samajh) sakt(a|i|e) h(u|oo|e|ai)n?)/i,
    q97 = /aa?j (se|say|sai) ?((aa?p|tum|a(ye|i)sha)?( meri)? (bab(y|es?)|g(irl)?f(riend)?|wife)|(m(ai|e)n? ((aa?p|a(ye|i)sha) kaa?|tumhaa?raa?|tera) (lover|husband|b(oy)?f(riend)?)))/i,
@@ -263,7 +263,7 @@
        	msg = msg.replace(/(is|was)/i, "is going to be"); 
        }
      } else { 
-       msg = "Mayree intelligence kay mutabik? Nahi!"; 
+       msg = "Mayree intelligence kay mutaabik? Nahi!"; 
      } 
      $output.html(msg); 
      console.log(msg); 
@@ -432,16 +432,17 @@
      msg = ""; 
      $output.html(msg); 
    } else if (q16.test(q)) { 
+     msg = "";
+     $output.html(msg); 
      let weatherWin = window.open("./weather/", "_blank"); 
      if (weatherWin) { 
        window.focus(); 
+       msg = "Mosam ka haal jaannay kay li'yay abhi apnay shay'here ka naam likh kar submit dabaa'ee'yay";
+       playText(msg);
        log("Launched Weather"); 
      } else { 
        alert("Please enable popups for this site!"); 
      } 
-     stopText(); 
-     msg = ""; 
-     $output.html(msg); 
    } else if (q17.test(q)) { 
      $("#message").slideFadeToggle(800); 
      msg = "Aray kuch pucho gay bhi ya bas yuhi dekhte raho gay?" + duh + what;
@@ -519,12 +520,26 @@
      msg = ""; 
      $output.html(msg); 
    } else if (q24.test(q)) { 
+     let games;
      if (detectDeviceType() != "Desktop" || detectDeviceType() == "Mobile") { 
-       alert( 
-         "You should on be a desktop for better stability because some games are not optimized for mobile devices!" 
-       ); 
-     } 
-     let games = [ 
+     	games = [ 
+       "./tic-tac-toe/", 
+       "./hangman-master/", 
+       "./Monopoly-master", 
+       "https://alexs-maze-game.netlify.app/", 
+       "./canvas-drawing-app-master", 
+       "./typing-game/", 
+       "./mem-game/", 
+       "../foto-flick/", 
+       "../Trivia-Db/", 
+       "./The Constructor/", 
+       "../math-flash-cards/", 
+       "https://alexs-simon-says.netlify.app/", 
+       "./light-maze/", 
+       "https://truth-or-dare-by-alex.netlify.app", 
+     ]; 
+     } else {
+     	games = [ 
        "./tic-tac-toe/", 
        "./2D-Breakout-Game-JavaScript-master/", 
        "./FlappyBird-JavaScript-master/", 
@@ -541,14 +556,15 @@
        "../dungeon-crawler/", 
        "../foto-flick/", 
        "../Trivia-Db/", 
-       "./box-chaser/", 
        "./The Constructor/", 
        "./RPG-game/", 
        "../math-flash-cards/", 
        "https://alexs-simon-says.netlify.app/", 
        "./light-maze/", 
        "https://truth-or-dare-by-alex.netlify.app", 
+       "https://vue-jsnake.netlify.app/"
      ]; 
+     }
      let gamesWin = window.open( 
        games[Math.floor(Math.random() * games.length)], 
        "_blank" 
@@ -671,7 +687,7 @@
    } else if (q33.test(q)) { 
      $("#message").slideFadeToggle(800); 
      if (isWeekday() == true) { 
-       msg = "Yes. Of course, it is!"; 
+       msg = "Yes. Of course it is!"; 
      } else { 
        msg = "According to my intelligence, no, it's not."; 
      } 
@@ -684,7 +700,7 @@
        msg = 
          "Han. bayshak hay! Kisi adventure pay kyun nahi ja'tay?"; 
      } else { 
-       msg = "Mayri intelligence kay mutabik, aaj na itwaar hay... or na hi haftaa."; 
+       msg = "Mayri intelligence kay mutaabik, aaj na itwaar hay... or na hi haftaa."; 
      } 
      console.log(msg); 
      $output.html(msg); 
@@ -985,7 +1001,7 @@
      let loanCalcWin = window.open("./loan-calc/", "_blank"); 
      if (loanCalcWin) { 
        window.focus(); 
-       msg = "Aap logon (ya log aap) kay kitnay karz'daar hay jani'yay"; 
+       msg = "Aap logo (ya log aap) kay kitnay karz'daar hay jaani'yay"; 
        playText(msg); 
        log("Launched Loan Calculator"); 
      } else { 

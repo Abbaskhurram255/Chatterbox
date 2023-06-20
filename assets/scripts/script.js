@@ -235,7 +235,7 @@ const tomorrow = () => {
   d.setDate(d.getDate() + 1);
   let res = d.toString().split(" G")[0];
   res = res.slice(0, 15);
-  return `Kal ki date rahay gi (or din) ${res}`;
+  return `Kal ki date or din rahay gay ${res}`;
 };
 
 const detectDeviceType = () => {
