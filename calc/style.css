@@ -44,8 +44,8 @@ border-radius: 10px;
 box-shadow: 7px 10px 12px 1px rgba(192, 192, 192, 0.682);
 }
 .screen{
-    background-color: rgba(255, 248, 248, 0.881);
-    color: white;
+    background-color: rgba(255, 248, 248, 0.781);
+    /*color: white;*/
     width: 90%;
     /* width: 360px; */
     height: 90px;
@@ -54,6 +54,7 @@ box-shadow: 7px 10px 12px 1px rgba(192, 192, 192, 0.682);
     left: 20px;
     border: 5px solid rgba(0, 0, 0, 0.65);
     overflow: hidden;
+    border-radius: 15%;
 }
 .history-text{
     position: absolute;
