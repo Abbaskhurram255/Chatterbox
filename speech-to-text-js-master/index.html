@@ -3,28 +3,28 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Voice Notes App</title>
+    <title>Voice Notes</title>
     <meta name="description" content="A Voice Note App that allows you to take voice and/or text notes and play them back.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="assets/ico/favicon.ico">
     <!-- Custom Style Sheet -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Bootstrap CDN CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.1/cerulean/bootstrap.min.css" rel="stylesheet" integrity="sha384-0Mou2qXGeXK7k/Ue/a1hspEVcEP2zCpoQZw8/MPeUgISww+VmDJcy2ri9tX0a6iy" crossorigin="anonymous">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" >
 
 </head>
 
-<body>
+<body style="background:linear-gradient(to right, beige, chocolate);">
     <div class="container-fluid align-center">
-        <img src="assets/img/code-mic-150.png" alt="Voice Note App Logo">
-        <h1>Voice Notes App</h1>
+        <img src="assets/img/code-mic-150.png" alt="Voice Notes App Logo"><br><br><small>Prefer text notes instead? <a id="link-to-voice-notes" href="../speech-to-text-js-master/">Click here</a></small>
+        <br><br><h1 style=color:green;">Voice Notes</h1>
         <p class="page-description">This app allows you to take voice and/or text notes and play them back.</p>
         <hr>
-        <h3 class="no-browser-support">Sorry, Your Browser Doesn't Support the Web Speech API. Try Opening This Demo In Google Chrome.</h3>
+        <h3 class="no-browser-support">Sorry, Your Browser Doesn't Support the Web Speech API. Try Opening This Application In Google Chrome.</h3>
         <div class="app">
             <div class="row">
                 <div class="col-md-6 align-center">
-                    <h3>Add New Voice Note</h3>
+                    <h3 style=color:#c33;">Add A New Voice Note</h3>
                     <div class="input-single">
                         <textarea id="note-textarea" placeholder="Create a new note by typing or using voice recognition." rows="6"></textarea>
                     </div>
@@ -35,7 +35,7 @@
                         <strong>Start Recognition</strong> button and allow access.</p>
                 </div>
                 <div class="col-md-6 align-center">
-                    <h3>My Voice Notes</h3>
+                    <h3 style=color:brown;">My Voice Notes</h3>
                     <ul id="notes">
                         <li>
                             <p class="no-notes">You don't have any notes.</p>
@@ -54,7 +54,7 @@
                 <div class="row">
 
                     <div class="center">
-                        <p>&copy; Chatterbox</p>
+                        <p>&copy; 2023, an AyeshaPT module</p>
                     </div>
 
                 </div>
@@ -65,7 +65,7 @@
     </div>
     <!-- /footer -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../assets/scripts/jquery-3.7.0.min.js"></script>
     <script src="assets/js/script.js"></script>
 
 </body>
