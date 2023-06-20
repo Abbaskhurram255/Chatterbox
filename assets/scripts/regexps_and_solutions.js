@@ -18,7 +18,7 @@
    q15 = /tic( |-)?tac( |-)?toe/i, 
    q16 = /(temperature today)|(is it a (hot|rainy|cloudy|sunny) day today)|(weather)|(m(o|au)sam)/i, 
    q17 = /^$/, 
-   q18 = /(open calculator)|(calculate(?:bmi))/i, 
+   q18 = /(^calculator)|(calculate(?:bmi))/i, 
    q19 = 
    /(tts)|(speech engine)|(text to speech)|(ebook to audiobook)|((document|text) reader)/i, 
    q20 = /((my|take|open|launch) notes)|(journal)|(notebook)/i, 
@@ -109,7 +109,7 @@
    q91 = /your? licen(s|c)ed?/i, 
    q92 = /kis ?n(e|ai) (banaa?ya|create|develop kiy?aa?)/i,
    q93 = /((I )?love (yo)?u)|((m(e|ai)n?|h(u|a)m) aa?p ?ko chaha?t(a|i) h(u|oo|e|ai)n?)|(you( a|')?re lovable)/i,
-   q94 = /((I )?like (yo)?u)|(you( a|')?re( my)? (cute|sweet(ie)?|lovely|pyaa?ri|adorable|favou?rite))|((((k(y|i)aa? (tu|to)|acc?hi|ba(d|r)hiy?aa?|(z|j)abardast|alag hi|pyaari?) ch(i|ee)j)|(pyaa?ri|cute|sweet|sexy|acc?hi|ba(d|r)hiy?a|(z|j)abardast|kaa?bi?l ?(e ?)?tar(ee|i)f) ho))|((tum|aa?p) ?h(o|e|ai)n? (pyari|cute|sweet|sexy|acc?hi|ba(d|r)hiy?a|(z|j)abardast|kaa?bi?l ?(e ?)?tar(ee|i)f|tar(i|ee)f k(e|i|a(i|y)) kaa?bil))|(ku(r|d)i (b|w)add?i soni?(ye| h(e|ai)))/i,
+   q94 = /((I )?like (yo)?u)|(you( a|')?re( my)? (cute|sweet(ie)?|lovely|pyaa?ri|adorable|favou?rite))|((((k(y|i)aa? (tu|to)|acc?hi|ba(d|r)hiy?aa?|(z|j)abardast|alag hi|pyaari?) ch(i|ee)j)|(pyaa?ri|cute|sweet|lovely|sexy|acc?hi|ba(d|r)hiy?a|(z|j)abardast|kaa?bi?l ?(e ?)?tar(ee|i)f) ho))|((tum|aa?p) ?h(o|e|ai)n? (pyari|cute|sweet|sexy|acc?hi|ba(d|r)hiy?a|(z|j)abardast|kaa?bi?l ?(e ?)?tar(ee|i)f|tar(i|ee)f k(e|i|a(i|y)) kaa?bil))|(ku(r|d)i (b|w)add?i soni?(ye| h(e|ai)))/i,
    q95 = /k(y|i)aa? (m(ai|e)n?|h(a|u)m) (aa?p|tum) ?ko baby bulaa? sakt(aa?|i) h(u|oo|e|ai)n?/i,
    q96 = /(will you be my (g(irl)?f(riend)?|wife))|(meri (g(irl)?f(riend)?|wife) ban(o|(ai|e)n?) ?gi)|(mujh(e|ai|ay) apnaa? (lover|husband|b(oy)?f(riend)?) bana(o|(e|ai)n?)gi)|(kyaa? (m(e|ai)n?|h(u|a)m) aa?p ?ko apni (wife|g(irl)?f(riend)?) (maa?n|bulaa?|keh|samajh) sakt(a|i|e) h(u|oo|e|ai)n?)/i,
    q97 = /aa?j (se|say|sai) ?((aa?p|tum|a(ye|i)sha)?( meri)? (bab(y|es?)|g(irl)?f(riend)?|wife)|(m(ai|e)n? ((aa?p|a(ye|i)sha) kaa?|tumhaa?raa?|tera) (lover|husband|b(oy)?f(riend)?)))/i,
@@ -128,7 +128,8 @@
     q111 = /((age|uma?r)( k(i|y)aa? h(e|ai))? ?(aa?p ?ki|tumhaa?ri))|((aa?p ?ki|tumhaa?ri) uma?r)/i,
     q112 = /hamaa?ri pasand((e|ai)n?)? kitni milti julti h(e|ai)n?/i,
     q113 = /(can'?t? you feel the chemistry between us)|(k(i|y)aa? (tum?|aa?p)( hamaa?r(e|ay) darmyaa?n ?(ki|(hone )?wali|(kisi|ek)( kisam ki)?))? chemistry( ko)? mehsus( nahi)? kar (rahi|sakti)( h(o|ai|e)n?)?)/i,
-    q114 = /crap|brat|fool|(mother)?fuck(er)?s?|mf|mofo|twats?|cunts?|cock(biter|sucker)?s?|boobs?|morons?|douche?(bag)?s?|pricks?|dicks?|(ass|arse) ?(hole)?s?|dick(head)?s?|fag(got)?|nigg?(a|er)|fucking|f\*cking|f\*ck|bitch|b\*tch|shit|sh\*t|fool|dumb|couch potato|\*ssh\*l\*|\*\*\*\*|c\*ck|\*\*\*\*sucker|c\*cks\*ck\*r|\*\*\*\*|c\*nt|dickhead|d\*c\*h\*a\*|\*\*\*\*|f\*c\*|\*\*\*\*wit|f\*ckw\*t|fuk|f\*k|fuking|f\*k\*ng|mother\*\*\*\*er|m\*th\*rf\*ck\*r|\*\*\*\*\*\*|n\*gg\*r|pussy|p\*ssy|\*\*\*\*|sh\*t|wanker|w\*nk\*r|wankers|w\*nk\*rs|whore|wh\*r\*|slag| sl\*g|\*\*\*\*\*|b\*tch|f u c k|f\*c\*|b.i.t.c.h|b\*tch|d-i-c-k|d\*\*\*/i;
+    q114 = /crap|brat|fool|(mother)?fuck(er)?s?|mf|mofo|twats?|cunts?|cock(biter|sucker)?s?|boobs?|morons?|douche?(bag)?s?|pricks?|dicks?|(ass|arse) ?(hole)?s?|dick(head)?s?|fag(got)?|nigg?(a|er)|fucking|f\*cking|f\*ck|bitch|b\*tch|shit|sh\*t|fool|dumb|couch potato|\*ssh\*l\*|\*\*\*\*|c\*ck|\*\*\*\*sucker|c\*cks\*ck\*r|\*\*\*\*|c\*nt|dickhead|d\*c\*h\*a\*|\*\*\*\*|f\*c\*|\*\*\*\*wit|f\*ckw\*t|fuk|f\*k|fuking|f\*k\*ng|mother\*\*\*\*er|m\*th\*rf\*ck\*r|\*\*\*\*\*\*|n\*gg\*r|pussy|p\*ssy|\*\*\*\*|sh\*t|wanker|w\*nk\*r|wankers|w\*nk\*rs|whore|wh\*r\*|slag| sl\*g|\*\*\*\*\*|b\*tch|f u c k|f\*c\*|b.i.t.c.h|b\*tch|d-i-c-k|d\*\*\*/i,
+   q115 = /^bewafaa?$/i;
   
  function ask() { 
    const q = document.querySelector("#searchInput").value; 
@@ -454,7 +455,7 @@
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
    } else if (q18.test(q)) { 
-     let calcWin = window.open("../calc/", "_blank"); 
+     let calcWin = window.open("./calc/", "_blank"); 
      if (calcWin) { 
        window.focus(); 
        log("Launched Calculator"); 
