@@ -1,10 +1,10 @@
 /* regular expressions/ questions to be answered: */ 
- const q1 = /(din k(ai|e)saa?( (gu(j|z)ar|jaa?) ?rahaa?)? h(e|ai))|(k(e|ai|ay)s(aa?|i|ee) (feel|mehs(u|oo)s) kar rahi h(o|e)n?)/i, 
+ const q1 = /(din k(ai|e)saa?( (gu(j|z)ar|jaa?) ?rahaa?)? h(e|ai))|(k(e|ai|ay)s(aa?|i|ee) (feel|mehs(u|oo)s) kar rahi h(o|e|ai)n?)/i, 
    q2 = /(who('?re|( \b\w\b \b\w\b)? are) you)|(h(o|ai|e)n? k(o|au)n (tum?|aa?p))/i, 
-   q3 = /(who am I)|(my (info|bio))|(what( do)? you know about me)|((m(e|ai)n?|h(u|a)m) k(o|au)n h(u|oo)n?)|((k(y|i)aa?( k(y|i)aa?)? jaa?nti ho ?(aa?p|tum)? )?mer(e|ay) baa?r(e|ay) m(ai|e)n? ?(aa?p|tum)? k(y|i)aa?( k(y|i)aa?)? jaa?nt(i|e) ho)/i, 
+   q3 = /(who am I)|(my (info|bio))|(what( do)? you know about me)|((m(e|ai)n?|h(u|a)m) k(o|au)n h(u|oo|e|ai)n?)|((k(y|i)aa?( k(y|i)aa?)? jaa?nti ho ?(aa?p|tum)? )?mer(e|ay) baa?r(e|ay) m(ai|e)n? ?(aa?p|tum)? k(y|i)aa?( k(y|i)aa?)? jaa?nt(i|e) ho)/i, 
    q4 = /(k(ai|e|ay)s(i|ee)( rahi)? h(o|e|ai)n?)|(how('?ve?| have)? you been)/i, 
    q5 = /((k(y|i)aa? naa?m h(e|ai)|naa?m (k(y|i)aa? h(e|ai)|bataa?o)) ?(aa?p|tum)? meraa?)|(^(my|mera) naa?me?$)/i, 
-   q6 = /(k(y|i)aa? (bulaa?(u|oo)n?|bulaa? sakt(aa|i|e|ai)? h(u|oo)n?) (m(e|ai)n?|h(u|a)m) (tumh(e|ai)n?|aa?p ?ko))|((k(y|i)aa? )?naa?m( k(y|i)aa?)? (he|hai) (tumhaa?raa?|aa?p ?kaa?))|((full|p(u|oo)raa?) naa?me?)/i, 
+   q6 = /(k(y|i)aa? (bulaa?(u|oo|e|ai)n?|bulaa? sakt(aa?|i|e|ai)? h(u|oo|e|ai)n?) (m(e|ai)n?|h(u|a)m) (tumh(e|ai)n?|aa?p ?ko))|((k(y|i)aa? )?naa?m( k(y|i)aa?)? (he|hai) (tumhaa?raa?|aa?p ?kaa?))|((full|p(u|oo)raa?) naa?me?)/i, 
    q7 = /(is|was|will) (this|it|\d{4})( year)?( (going to )?be)? a leap year/i, 
    q8 = /mer(i|a) (janam ?din|saa?l ?giraa?|birth ?(day|date|year))/i, 
    q9 = /(k(y|i)aa? (age|uma?r) h(e|ai|a?y) meri)|(uma?r bataa?( sakti h)?(o|e|ai)n? ?(tum?|aa?p)? meri)|((meri|my) (age|uma?r))/i, 
@@ -13,45 +13,45 @@
    /(((change|resubmit) my|incorrect) (dob|bday|(birth|b(-)?)day))|((dob|bday|(birth|b(-)?)day) is incorrect)/i, 
    q12 = /(((m(e|ai)n?|h(u|a)m) (k(ai|e)s(aa?|i|ee) (laga|lagi)))|(ham (k(ai|e)se lage|pasand a(e|a?i|e))))|(pasand a(ya|a?i) (m(e|ai)n?|h(u|a)m) ((aa?p|tum) ?ko|tumh(e|ai)n?))|((m(e|ai)n?|h(u|a)m) ((aa?p|tum) ?ko|tumh(e|ai)n?) pasand a(ya|a?i|e|ay))/i, 
    q13 = 
-   /(time ((batao|bataie)|(bataa?o )?k(y|i)aa? (hora?haa? )?(he|hai|hy)))|((current|local) (date and )?time)|(date today)|(time now)|(date and time)|(^(aa?j )?(k(y|i)aa?|k(o|au)n ?s(aa?|i|ee)?) (din|day|date|tar(i|ee)kh) (h(e|a?(y|i))$|th(aa?|i|ee)))/i, 
-   q14 = /^(hi)|(hello)|(hey)|(h?ola)|(howdy)|(namashkar)|((as?)?salam ?(u|o)?( ala?(e|i)kum)?)/i, 
+   /(time ((batao|bataie)|(bataa?o )?k(y|i)aa? (hora?haa? )?(he|hai|hy)))|((current|local) (date and )?time)|(date today)|(time now)|(date and time)|(^(aa?j )?(k(y|i)aa?|k(o|au)n ?s(aa?|i|ee)?) (din|day|date|tar(i|ee)kh) (h(e|ai)$|th(aa?|i|ee)))/i, 
+   q14 = /^(hi)|(hello)|(hey)|(h?ola)|(howdy)|(namas(hkar|st(e|ai)))|((as?)?salam ?(u|o)?( ala?(e|i)kum)?)/i, 
    q15 = /tic( |-)?tac( |-)?toe/i, 
    q16 = /(temperature today)|(is it a (hot|rainy|cloudy|sunny) day today)|(weather)|(m(o|au)sam)/i, 
    q17 = /^$/, 
-   q18 = /(^calculator)|(calculate(?:bmi))/i, 
+   q18 = /(^calculator)|(open calculator)|(calculate(?:bmi))/i, 
    q19 = 
-   /(tts)|(speech engine)|(text to speech)|(ebook to audiobook)|((document|text) reader)/i, 
-   q20 = /((my|take|open|launch) notes)|(journal)|(notebook)/i, 
-   q21 = /(todo)|(reminder)|(remind me to)|((bucket|shopping) list)/i, 
+   /(tts)|(speech engine)|(text to speech)|(ebook to audio(book)?)|((document|text) reader)/i, 
+   q20 = /xxx/i, 
+   q21 = /(todos?)|(reminders?)|(remind me to)|((bucket|shopping) list)|(mujh(e|ai) yaa?d dilaa?naa?)|(notes?)/i, 
    q22 = /(music)|(songs?)|(jukebox)|(gaa?n(e|ay))/i, 
-   q23 = /weight( units)? conver(sion|ter)/i, 
-   q24 = /(random (fun|games?))|(I'?( ?a)?m bored)|(games)|(play( me)? a game)/i, 
-   q25 = /^(play( me)?|run|launch|execute) breakout/i, 
-   q26 = /^(play( me)?|run|launch|execute) flappy ?bird/i, 
-   q27 = /^(play( me)?|run|launch|execute) hangman/i, 
-   q28 = /^(play( me)?|run|launch|execute) pac-?man(ia)?/i, 
-   q29 = /^(play( me)?|run|launch|execute) (rock|stone) paper scissors?/i, 
-   q30 = /(lyrics)|((encycl|lyric)opedia)/i, 
+   q23 = /((weight|mass) conver(sion|ter))|((\b\d*\b )?((k?(ilo)?s?)?g(ram)?s?|pounds?|ounces?|oz) (to|and|in|ko|((equals|(is|are) equal to|=)( how many)?)|(baraa?bar h(e|ai)n?)))/i, 
+   q24 = /(random games?)|(games)|(play( me)? a game)/i, 
+   q25 = /^(play( me)?|run|launch|execute|open) breakout/i, 
+   q26 = /^(play( me)?|run|launch|execute|open) flappy ?bird/i, 
+   q27 = /^(play( me)?|run|launch|execute|open) hangman/i, 
+   q28 = /^(play( me)?|run|launch|execute|open) pac-?man(ia)?/i, 
+   q29 = /^(play( me)?|run|launch|execute|open) (rock|stone) paper scissors?/i, 
+   q30 = /(lyrics)|((encycl|lyric|wiki)o?pedia)/i, 
    q31 = /((crypto)?currency)|(exchange rates?)|(\b\w\w\w\b to \b\w\w\w\b)/i, 
    q32 = /((what )?day of year( is it)?)|((aa?j )?saa?l ka k(o|au)n ?saa? din h(e|ai|a?y))|(saa?l ka din number)|(din number is saa?l ka)/i, 
    q33 = 
    /(is (this|it)( a)? week ?day (today|yet))|((is today|today is) a week ?day)/i, 
    q34 = /(is (this|it)( a)? week ?end (today|yet))|((is today|today is) a week ?end)|(k(y|i)aa?( aa?j)? (itwaa?r|haftaa?) (h(e|ai)|thaa?)( aa?j)?)/i, 
    q35 = /numbers? to roman/i, 
-   q36 = /\b\d*\b ?(mi|miles?) (to|and|((equals|are equal to|=)( how many)?)|(baraa?bar h(e|ai)n?( kit ?n(e|a(y|i)))) (km|kilometers?))?/i, 
-   q37 = /\b\d*\b ?k(ilo)?m(eters?)? (to|and|((equals|are equal to|=)( how many)?)|(baraa?bar h(e|ai)n?( kit ?n(e|a(y|i)))) mi(les?)?)?/i, 
+   q36 = /(\b\d*\b )?(mi|miles?) (to|and|in|ko|((equals|(is|are) equal to|=)( how many)?)|(baraa?bar h(e|ai)n?( kit ?n(e|a(y|i)))) (km|kilometer)s?)?/i, 
+   q37 = /(\b\d*\b )?k(ilo)?m(eter)?s? (to|and|in|ko|((equals|(is|are) equal to|=)( how many)?)|(baraa?bar h(e|ai)n?( kit ?n(e|a(y|i)))) mi(les?)?)?/i, 
    q38 = /(what (date|day) was it yesterday)|(kal (k(y|i)aa?|k(o|au)n ?s(aa?|i|ee)) (din|day|date|tar(i|ee)kh) (rah|th)(aa?|i|ee))/i, 
    q39 = /(what (date|day) will it be tomorrow)|(kal (k(y|i)aa?|k(o|au)n ?s(aa?|i|ee)) (din|day|date|tar(i|ee)kh) ((ho|rah(e|ai)) ?g(aa?|i|ee))|(hon(e|ai) jaa?rah(i|aa?) h(e|ai)))/i, 
    q40 = /monopoly/i, 
    q41 = /(canvas(es)?)|((drawings?|arts?|paint(ings?)?|brush) (app|tool))|(((draw|paint)(ing)? karn(i|aa?))|((sketch|canvas|painting)(e?s)? (banaa?n(aa?|e|ai)|karnaa?)) ((chaa?ha?t(a(a|i|y)?|i|ee?) )?h(u|oo|e|ai)n?))/i, 
    q42 = /(audio (visuali(z|s)er|player))|(play( local)? audio)/i, 
    q43 = /breaking bad cast/i, 
-   q44 = /(b(ody )?m(ass )?i(ndex)?)|(k(y|i)aa? (m(ai|e)n?|h(a|u)m) mot(ee?|i) h(oo|u|e)n?)/i, 
+   q44 = /b(ody )?m(ass )?i(ndex)?/i, 
    q45 = /^(execute|launch|play( me)?|run) (the )?maze/i, 
    q46 = /calendar/i, 
    q47 = /my recipes/i, 
    q48 = /(space invaders)|(invasion game)/i, 
-   q49 = /voice ?(notes|recorder)/i, 
+   q49 = /^voice ?(notes?|recorder)$/i, 
    q50 = /(google doodles)|(what event is it today)/i, 
    q51 = /(percentage calculator)|(calculate percentage)/i, 
    q52 = /temperature( units)? conver(sion|ter)/i, 
@@ -63,14 +63,14 @@
    /(new year countdown)|(((days|time)( left)? (un)?till?|(what time|when) is) new year)|(new year (kab|kitna d(oo|u)r) h(e|ai))/i, 
    q56 = /(typing game)|((open|run|launch|play( me)?) speed( |-)?typer)/i, 
    q57 = 
-   /((expenses?|budget) tracker)|(track my (budget|expenses?|pocket money))/i, 
-   q58 = /(stopwatch)|(timer)|(counter ?clock)|(count ?down)|(ulti ginti)/i, 
+   /((expenses?|budgets?|wages?|incomes?|bills?|money) (tracker|calculator))|(track my (budgets?|wages?|bills?|incomes?|expenses?|(pocket )?money))/i, 
+   q58 = /(stop ?watch)|(timer)|(counter ?clock)|(count ?down)|(ulti ginti)/i, 
    q59 = /(miner of lava)|(lava game)/i, 
    q60 = 
-   /((loan|mortgage) (calculator|payment))|(calculate( my)? (loan|mortgage))|(how much (do )?(I|people) owe)|(logon? k(a|e) kitn(a|e) kar(z|j)(a|e) h(e|ai)n?)|(mera kar(j|z)a)|((m(e|ai)n?|h(u|a)m) kar(j|z)(i|ee| ?dar) h(u|oo|e)n?)/i, 
+   /((loan|mortgage) (calculator|payment))|(calculate( my)? (loan|mortgage))|(how much (do )?(I|people) owe)|(l(o|au)gon? k(a(a|i)?|e) kitn(a(a|i)?|e) kar(z|j)(a(a|i)?|e) h(e|ai)n?)|(mera kar(j|z)a)|((m(e|ai)n?|h(u|a)m) kar(j|z)(i|ee| ?dar) h(u|oo|e|ai)n?)/i, 
    q61 = /(quotes?|shaa?(ya|i)ri(y?aa?n?)?|a(q|k)waa?l)/i, 
    q62 = /memory (game|test)/i, 
-   q63 = /(calo(ries? )?tracker)|(track calories)/i, 
+   q63 = /(calo(ries? )?track(er| karo))|(track(( of)? (my|karo meri))? calories)/i, 
    q64 = /(dungeon crawler)|(rogue-?life)/i, 
    q65 = /(fotoflick)|(puzzle game)|((photo|picture) puzzle)/i, 
    q66 = 
@@ -94,8 +94,8 @@
    /(aa?dat((e|ai)n?)? to(r|d)ni h(e|ai)n? m(ai|e)ne)|((break|track) ((a |my )(bad )?habits?|(a( bad)? habit|(bad )?habits) of mine))/i, 
    q80 = 
    /(habits? build(er|ing))|(help( me)? (with building|build) a( good)? habit)/i, 
-   q81 = /unit conver(sion|ter)/i, 
-   q82 = /(game of (games|adventures?))|(adventurous game)/i, 
+   q81 = /((units?|\bmeters?\b|f(oo|ee)t|area|minutes?|seconds?|hours?|time|measure|°?(c(elsius|entigrade)?|f(ahrenheit)?|k(elvin)?)) (to|conver(sion|ter)))|(to (\bmeters?\b|f(oo|ee)t|minutes?|seconds?|hours?|time|measure|°?(c(elsius|entigrade)?|f(ahrenheit)?|k(elvin)?)))/i, 
+   q82 = /(^game of (games|adventures?$))|(adventurous game)/i, 
    q83 = /my( fave?(orite)?)? ?books?'? ?list/i, 
    q84 = /(math flash ?cards)|((arithmetic|math) game)/i, 
    q85 = /simon/i, 
@@ -107,12 +107,12 @@
    q89 = /truth or dare/i, 
    q90 = /metronome/i, 
    q91 = /your? licen(s|c)ed?/i, 
-   q92 = /kis ?n(e|ai) (banaa?ya|create|develop kiy?aa?)/i,
-   q93 = /((I )?love (yo)?u)|((m(e|ai)n?|h(u|a)m) aa?p ?ko chaha?t(a|i) h(u|oo|e|ai)n?)|(you( a|')?re lovable)/i,
-   q94 = /((I )?like (yo)?u)|(you( a|')?re( my)? (cute|sweet(ie)?|lovely|pyaa?ri|adorable|favou?rite))|((((k(y|i)aa? (tu|to)|acc?hi|ba(d|r)hiy?aa?|(z|j)abardast|alag hi|pyaari?) ch(i|ee)j)|(pyaa?ri|cute|sweet|lovely|sexy|acc?hi|ba(d|r)hiy?a|(z|j)abardast|kaa?bi?l ?(e ?)?tar(ee|i)f) ho))|((tum|aa?p) ?h(o|e|ai)n? (pyari|cute|sweet|sexy|acc?hi|ba(d|r)hiy?a|(z|j)abardast|kaa?bi?l ?(e ?)?tar(ee|i)f|tar(i|ee)f k(e|i|a(i|y)) kaa?bil))|(ku(r|d)i (b|w)add?i soni?(ye| h(e|ai)))/i,
-   q95 = /k(y|i)aa? (m(ai|e)n?|h(a|u)m) (aa?p|tum) ?ko baby bulaa? sakt(aa?|i) h(u|oo|e|ai)n?/i,
-   q96 = /(will you be my (g(irl)?f(riend)?|wife))|(meri (g(irl)?f(riend)?|wife) ban(o|(ai|e)n?) ?gi)|(mujh(e|ai|ay) apnaa? (lover|husband|b(oy)?f(riend)?) bana(o|(e|ai)n?)gi)|(kyaa? (m(e|ai)n?|h(u|a)m) aa?p ?ko apni (wife|g(irl)?f(riend)?) (maa?n|bulaa?|keh|samajh) sakt(a|i|e) h(u|oo|e|ai)n?)/i,
-   q97 = /aa?j (se|say|sai) ?((aa?p|tum|a(ye|i)sha)?( meri)? (bab(y|es?)|g(irl)?f(riend)?|wife)|(m(ai|e)n? ((aa?p|a(ye|i)sha) kaa?|tumhaa?raa?|tera) (lover|husband|b(oy)?f(riend)?)))/i,
+   q92 = /(kis ?n(e|ai) (banaa?ya|create|develop kiy?aa?))|((I )?like (yo)?u)|(you( a|')?re( my)? (cute|sweet(ie)?|lovely|sexy|funny|pyaa?ri|adorable|favou?rite))|((((k(y|i)aa? (tu|to)|acc?hi|ba(d|r)hiy?aa?|(z|j)abardast|alag hi|pyaari?) ch(i|ee)j)|(pyaa?ri|cute|sweet|funny|lovely|sexy|acc?hi|ba(d|r)hiy?a|(z|j)abardast|kaa?bi?l ?(e ?)?tar(ee|i)f) ho))|((tum?|aa?p) ?h(o|e|ai)n? (pyari|cute|sweet|sexy|acc?hi|ba(d|r)hiy?a|(z|j)abardast|kaa?bi?l ?(e ?)?tar(ee|i)f|tar(i|ee)f k(e|i|a(i|y)) kaa?bil))|(ku(r|d)i (b|w)add?i soni?(ye| h(e|ai)))/i,
+   q93 = /((I )?love (yo)?u)|((m(e|ai)n?|h(u|a)m) (aa?p|tum|tere) ?(ko|se|sa(y|i)) (chaha?t(aa?|a?i|e)|pyaa?r kart(aa?|i|e)) h(u|oo|e|ai)n?)|(you( a|')?re lovable)|(give me a rose)|(do you love me)|(ph(u|oo)l d((o|e|ai)n?|iji?y?e) ?(aa?p|tum|a(ye|a?i)sha)? (mujh(e|a(i|y))|h(u|a)m(e|ai)n?))/i,
+   q94 = /(random fun)|(I'?( ?a)?m bored)|(bore? ho ?rah(aa?|i|e|ai))|(entertain ?(me(nt)?|(kar( sakti h)?|kij)(o|e|ai|iy?e)n?))/i,
+   q95 = /k(y|i)aa? (m(ai|e)n?|h(a|u)m) (aa?p|tum) ?ko baby bulaa? sakt(aa?|i|e|ai) h(u|oo|e|ai)n?/i,
+   q96 = /(will you be my (g(irl)?f(riend)?|wife))|(meri (g(irl)?f(riend)?|wife) ban(o|(ai|e)n?) ?gi)|(mujh(e|ai|ay) apnaa? (lover|husband|b(oy)?f(riend)?) bana(o|(e|ai)n?)gi)|(kyaa? (m(e|ai)n?|h(u|a)m) ((aa?p|tum) ?ko|tum(e|ai)n?) apni (wife|g(irl)?f(riend)?) (maa?n|bulaa?|keh|banaa?|samajh) sakt(aa?|a?i|e) h(u|oo|e|ai)n?)/i,
+   q97 = /aa?j (se|say|sai) ?((aa?p|tum|aa?(ye|i)sha)?( meri)? (bab(y|es?)|g(irl)?f(riend)?|wife)|((m(ai|e)n?|h(u|a)m) ((aa?p|aa?(ye|i)sha) kaa?|tumhaa?raa?|tera) (lover|husband|b(oy)?f(riend)?)))/i,
    q98 = /(favou?rite|pasand(ee|i)daa?) colou?r/i,
    q99 = /(favou?rite|pasand(ee|i)daa?) ((ghumne ki )?jagh?(aa?|(e|ai)n?)|places to (go|visit|be))/i,
    q100 = /(I('| )?a?m sorry)|(mujh(e|a?y|ai) maa?f kardo)|(mujhe esa nahi kehna chahi?y?e tha)/i,
@@ -122,7 +122,7 @@
    q105 = /((m(e|ai)n?|h(u|a)m) b(u|o)h(o|a)t pareshaa?n h(u|oo|e|ai)n?)|(I'?( ?a)?m depressed)/i,
    q106 = /I hate m(e|yself)/i,
    q107 = /(I( just)? need a friend)|(I'?( ?a)?m lonely)/i,
-   q108 = /(k(y|i)a )?(m(e|ai)n?|h(u|a)m) khud ?gar(z|j) h(u|oo)n?/i,
+   q108 = /(k(y|i)a )?(m(e|ai)n?|h(u|a)m) khud ?gar(z|j) h(u|oo|e|ai)n?/i,
    q109 = /((k(y|i)a )?(m(e|ai)n?|h(u|a)m) bur(aa?|e|i|ee|ay) h(u|oo|e|ai)n?)|(I'?( ?a)?m bad)/i,
    q110 = /(zodiac|star) sign/i,
     q111 = /((age|uma?r)( k(i|y)aa? h(e|ai))? ?(aa?p ?ki|tumhaa?ri))|((aa?p ?ki|tumhaa?ri) uma?r)/i,
@@ -538,6 +538,7 @@
        "https://alexs-simon-says.netlify.app/", 
        "./light-maze/", 
        "https://truth-or-dare-by-alex.netlify.app", 
+       "./RPG-game/", 
      ]; 
      } else {
      	games = [ 
@@ -651,16 +652,18 @@
      msg = ""; 
      $output.html(msg); 
    } else if (q30.test(q)) { 
+     stopText(); 
+     msg = ""; 
+     $output.html(msg); 
      let lyricsAppWin = window.open("./lyrics-search-master/", "_blank"); 
      if (lyricsAppWin) { 
        window.focus(); 
+       msg = "Lyricopedia... lyrics application or encyclopedia... ab dono ek may! Nikaa'lo information har cheez kay baa'ray may. Ek chair say laykar celebrity tak. Celebrity or artist, jaysay kay Aatif Aslam... or us kay kisi song ke lyrics... say laykar ek kitaab kay lay'khak tak, jaysay kay Abraham Lincoln... Ek sciencedaan or uski popular theories say laykar kisi actor kay background tak. Sab jaano sirf ek hee app me";
+       playText(msg);
        log("Launched Lyricopedia"); 
      } else { 
        alert("Please enable popups for this site!"); 
      } 
-     stopText(); 
-     msg = ""; 
-     $output.html(msg); 
    } else if (q31.test(q)) {
      let curConvAppWin = window.open("./exchange-rate/", "_blank", 
        "width=600,height=800,resizable=no,toolbar=no,menubar=no" 
@@ -670,7 +673,7 @@
        window.focus(); 
        log("Launched Currency Converter"); 
      } else { 
-       alert("Converter API failed to load, ablocker ko whitelist kijie pehle, please!"); 
+       alert("Conversion API failed to load, Adblocker me jake ye webpage pehle whitelist kijie please!"); 
      } 
      stopText(); 
      msg = ""; 
@@ -720,7 +723,11 @@
      $("#message").delay(10000).slideFadeToggle(800); 
    } else if (q36.test(q)) { 
      $("#message").slideFadeToggle(800); 
-     let p = prompt("Kitne mikes convert karna chahe ge ap kilometers me? Niche darj kijie please."); 
+     let amount = q.match(/[0-9(.)]+/)[0];
+     let p;
+     if ((amount != null && amount != "") && (amount.length >= 1 && !isNaN(amount))) {
+     p = prompt("Kitne miles convert karna chahe ge ap kilometers me? Niche darj kijie please.", amount); 
+     }
      let conv = milesToKm(p); 
      if (/^[0-9(.)]*$/g.test(p) && p != null && p != "" && p.length >= 1) { 
        msg = `${p} miles are equal to ${conv} kilometers`; 
@@ -732,7 +739,11 @@
      $("#message").delay(10000).slideFadeToggle(800); 
    } else if (q37.test(q)) { 
      $("#message").slideFadeToggle(800); 
-     let p = prompt("Kitne kilometers convert karna chahte he ap miles me?"); 
+     let amount = q.match(/[0-9(.)]+/)[0];
+     let p;
+     if ((amount != null && amount != "") && (amount.length >= 1 && !isNaN(amount))) {
+     p = prompt("Kitne kilometers convert karna chahte he ap miles me?", amount); 
+     } 
      let conv = kmToMiles(p); 
      if (/^[0-9(.)]*$/g.test(p) && p != null && p != "" && p.length >= 1) { 
        msg = `${p} Kilometers are equal to ${conv} miles`; 
@@ -775,13 +786,13 @@
      msg = ""; 
      $output.html(msg); 
    } else if (q42.test(q)) { 
-     let audioPlayerWin = window.open( 
+     let audioVisualizerWin = window.open( 
        "./audio-player-visualizer-master/", 
        "_blank" 
      ); 
-     if (audioPlayerWin) { 
+     if (audioVisualizerWin) { 
        window.focus(); 
-       log("Launched AudioPlayer"); 
+       log("Launched Audio Player/Visualizer"); 
      } else { 
        alert("Please enable popups for this site!"); 
      } 
@@ -1038,7 +1049,7 @@
      let caloTrackerWin = window.open("./calotracker/", "_blank"); 
      if (caloTrackerWin) { 
        window.focus(); 
-       msg = "Worried about your diet? Don't be. I can help you track calories"; 
+       msg = "Apnay diet say pareshaan ho? Mat ho. I can help you track calories... taa'kay aap motaapay say bacch sakay...I mean, esa nahi hay kay mujhay mo'tay logo say nafrat hay, but... obesity (that is... motaapan)... hurts"; 
        playText(msg); 
        log("Launched CaloTracker"); 
      } else { 
@@ -1082,8 +1093,6 @@
        alert("Please enable popups for this site!"); 
      } 
    } else if (q67.test(q)) { 
-     msg = ""; 
-     $output.html(msg); 
      let spaceDataAppWin = window.open("../live-spacestation-data/", "_blank"); 
      if (spaceDataAppWin) { 
        window.focus(); 
@@ -1094,6 +1103,8 @@
      } else { 
        alert("Please enable popups for this site!"); 
      } 
+     msg = ""; 
+     $output.html(msg); 
    } else if (q68.test(q)) { 
      let randImgsGeneratingAppWin = window.open("../SnapShots/", "_blank"); 
      if (randImgsGeneratingAppWin) { 
@@ -1365,8 +1376,26 @@
      $("#message").delay(10000).slideFadeToggle(800); 
      } else if (q94.test(q)) { 
      $("#message").slideFadeToggle(800); 
-     msg = "Jan'na chahtay ho kis nay banaaya mujhay? Ek khubsurat si larki nay! Actually, mujhe bananay wali kaa naam bhi khud Ayesha hee hay <em>(Ayesha Mehnaaz!)</em>... Surprise!"; 
+     msg = ""; 
      $output.html(msg); 
+     let entertainmentApps = [
+       "./tic-tac-toe/", 
+       "./hangman-master/", 
+       "./Monopoly-master", 
+       "https://alexs-maze-game.netlify.app/", 
+       "./canvas-drawing-app-master", 
+       "./typing-game/", 
+       "./mem-game/", 
+       "../foto-flick/", 
+       "../Trivia-Db/", 
+       "./The Constructor/", 
+       "../math-flash-cards/", 
+       "https://alexs-simon-says.netlify.app/", 
+       "./light-maze/", 
+       "https://truth-or-dare-by-alex.netlify.app", 
+       "./roseday",
+       "../yoMovies",
+       ];
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
    } else { 
