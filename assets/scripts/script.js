@@ -122,6 +122,7 @@ if ("SpeechRecognition" in window || "webkitSpeechRecognition" in window) {
       stopText();
       playText("Samjhi nahi, zaraa dubaara boli'ay");
     	$("#recIcon").css("filter", "brightness(80%)");
+    return ;
     }
   };
   
@@ -362,7 +363,6 @@ if (isBday(bday)) {
   }
   log("Snack text: " + $snack.text());
   $snack.addClass("show");
-  /*optional expression*/
   setTimeout(function () {
     $snack.removeClass("show");
   }, 5000);
@@ -646,6 +646,15 @@ $(document).bind("mouseleave", function (e) {
   }
 });
 
+const sound = (src, delay = 10000) => {
+	let audio = new Audio();
+	audio.src = `assets/audio/${src}.mp3`;
+     utterance.onend = function () { 
+     audio.play();
+     } 
+     setTimeout(() => { utterance.onend = ""; }, delay); 
+}
+
 
 
 
@@ -693,17 +702,6 @@ function switchTheme() {
 }
 
 theme switcher end block */
-
-
-/* Query function, enable it in case JQuery fails to run
-     function $(x) {return document.querySelector(x);} 
-Another method for it:
-  create a global '$' variable:
-window.$ = function(selector) {
-  return document.querySelector(selector);
-};
-*/
-
 
 
 // function greet() {

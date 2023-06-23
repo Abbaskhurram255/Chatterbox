@@ -14,7 +14,7 @@
    q12 = /(((m(e|ai)n?|h(u|a)m) (k(ai|e)s(aa?|i|ee) (laga|lagi)))|(ham (k(ai|e)se lage|pasand a(e|a?i|e))))|(pasand a(ya|a?i) (m(e|ai)n?|h(u|a)m) ((aa?p|tum) ?ko|tumh(e|ai)n?))|((m(e|ai)n?|h(u|a)m) ((aa?p|tum) ?ko|tumh(e|ai)n?) pasand a(ya|a?i|e|ay))/i, 
    q13 = 
    /(time ((batao|bataie)|(bataa?o )?k(y|i)aa? (hora?haa? )?(he|hai|hy)))|((current|local) (date and )?time)|(date today)|(time now)|(date and time)|(^(aa?j )?(k(y|i)aa?|k(o|au)n ?s(aa?|i|ee)?) (din|day|date|tar(i|ee)kh) (h(e|ai)$|th(aa?|i|ee)))/i, 
-   q14 = /^(hi)|(hello)|(hey)|(h?ola)|(howdy)|(namas(hkar|st(e|ai)))|((as?)?salam ?(u|o)?( ala?(e|i)kum)?)/i, 
+   q14 = /^(hi)|(hello)|(hey)|(h?ola)|(howdy)|(namas(hkar|t(e|ai)))|((as?)?salam ?(u|o)?( ala?(e|i)kum)?)$/i, 
    q15 = /tic( |-)?tac( |-)?toe/i, 
    q16 = /(temperature today)|(is it a (hot|rainy|cloudy|sunny) day today)|(weather)|(m(o|au)sam)/i, 
    q17 = /^$/, 
@@ -143,9 +143,9 @@
        /^[a-z\s]+$/i.test(userName) && 
        userName != "" 
      ) { 
-       msg += ` ${userName} ji? Bara adhura sa ${sad2}`; 
+       msg += ` ${userName} ji? Bara adhura sa ${cry} ${cry2}`; 
      } else { 
-       msg += "? Bilkul adhura sa!" + sad2; 
+       msg += "? Bilkul adhura sa!" + cry + cry2; 
      } 
      $output.html(msg); 
      console.log(msg); 
@@ -153,7 +153,7 @@
    } else if (q2.test(q)) { 
      $("#message").slideFadeToggle(800); 
      msg = 
-       "Mayray ilawah or kon ho saktaa hay? May Ayesha, aap jaysay acchay insaan say mil kar bayhad khushi hui. Bas boli'ay toh, hukam kiji'ay! Batai'yay kaysee khidmat kar sakti hu may aapki?"; 
+       "Mayray ilawah or kon ho saktaa hay? May Ayesha, aap jaysay acchay insaan say mil kar bayhad khushi hui. Bas boli'ay toh, hukam kiji'ay! Batai'yay kaysee khidmat kar sakti hu may aapki?" + happy; 
      $output.html(msg); 
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
@@ -1370,7 +1370,30 @@
      showLicense(); 
    } else if (q92.test(q)) { 
      $("#message").slideFadeToggle(800); 
-     msg = "Janna chahtay ho kis nay banaaya mujhay? Ek khubsurat si larki nay! Actually, mujhe bananay wali kaa naam bhi khud Ayesha hee hay <em>(Ayesha Mehnaaz!)</em>... Surprise!"; 
+     msg = "Jaan'na chahtay ho kis nay banaaya mujhay? Ek khubsurat si larki nay! Actually, mujhe bananay wali kaa naam bhi khud Ayesha hee hay --- <em>(Ayesha Mehnaaz!)</em>... Surprise!"; 
+     $output.html(msg); 
+     console.log(msg); 
+     $("#message").delay(10000).slideFadeToggle(800); 
+     } else if (q93.test(q)) { 
+     $("#message").slideFadeToggle(800); 
+     msg = "Satch?..." + blush + in_love + "<br>Oh I love you too" ;
+     if ( 
+       userName != null && 
+       userName.length >= 3 && 
+       /^[a-z\s]+$/i.test(userName) && 
+       userName != "" 
+     ) { 
+     	msg += `, ${toTitleCase(userName.split(" ")[0])}`; //only show the first name; capitalized
+     } else {
+     	msg += "";
+     }
+     msg += hearts; 
+     let audio = new Audio();
+     audio.src = "assets/audio/kiss.mp3"; 
+     utterance.onend = function () { audio.play(); } 
+     audio.onended = () => { audio.src = "assets/audio/ily.mp3"; audio.play(); }
+     setTimeout(() => { audio.onended = ""; }, 4000);
+     setTimeout(() => { utterance.onend = ""; }, 10000); 
      $output.html(msg); 
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
@@ -1395,6 +1418,7 @@
        "https://truth-or-dare-by-alex.netlify.app", 
        "./roseday",
        "../yoMovies",
+       "./giphy/", 
        ];
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 

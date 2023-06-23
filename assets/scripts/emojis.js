@@ -1,9 +1,14 @@
+//let cry 2 stay "cry", and cry "cry2", if you what I mean --- DO NOT EDIT!
+
 const sad = " <img style='position: relative; top: 1vh;' src='assets/images/emo/sad.png' />";
 const sad2 = " <img style='position: relative; top: 1vh;' src='assets/images/emo/sad2.png' />";
 const sad3 = " <img style='position: relative; top: 1vh;' src='assets/images/emo/sad3.png' />";
 const sad4 = " <img style='position: relative; top: 1vh;' src='assets/images/emo/sad4.png' />";
 const sad5 = " <img style='position: relative; top: 1vh;' src='assets/images/emo/sad5.png' />";
 const sad6 = " <img style='position: relative; top: 1vh;' src='assets/images/emo/sad6.png' />";
+
+const cry = " <img style='position: relative; top: 1vh;' src='assets/images/emo/cry2.png' />";
+const cry2 = " <img style='position: relative; top: 1vh;' src='assets/images/emo/cry.png' />";
 
 let smile, phew;
 const happy = smile = " <img style='position: relative; top: 1vh;' src='assets/images/emo/happy.png' />";
