@@ -83,7 +83,7 @@
    q72 = 
    /((movies?'? (cast|ratings?))|(ratings? (for|of) movies?))|(movies? app)/i, 
    q73 = /(day (planner|scheduler))|((plan|schedule)( my)? day)/i, 
-   q74 = /(some advi(c|s)e)|(advice generator)/i, 
+   q74 = /(some advi(c|s)e)|(advi(c|s)e generator)|(proverbs)|(quotes?)/i, 
    q75 = /giphy/i, 
    q76 = 
    /(pass(code|word|phrase) generator)|(random pass(code|word))/i, 
