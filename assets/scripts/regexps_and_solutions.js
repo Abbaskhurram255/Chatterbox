@@ -6,7 +6,7 @@
    q5 = /((k(y|i)aa? naa?m h(e|ai)|naa?m (k(y|i)aa? h(e|ai)|bataa?o)) ?(aa?p|tum)? meraa?)|(^(my|mera) naa?me?$)/i, 
    q6 = /(k(y|i)aa? (bulaa?(u|oo|e|ai)n?|bulaa? sakt(aa?|i|e|ai)? h(u|oo|e|ai)n?) (m(e|ai)n?|h(u|a)m) (tumh(e|ai)n?|aa?p ?ko))|((k(y|i)aa? )?naa?m( k(y|i)aa?)? (he|hai) (tumhaa?raa?|aa?p ?kaa?))|((full|p(u|oo)raa?) naa?me?)/i, 
    q7 = /(is|was|will) (this|it|\d{4})( year)?( (going to )?be)? a leap year/i, 
-   q8 = /mer(i|a) (janam ?din|saa?l ?giraa?|birth ?(day|date|year))/i, 
+   q8 = /mer(i|a) (jana?m ?din|saa?l ?giraa?|birth ?(day|date|year))/i, 
    q9 = /(k(y|i)aa? (age|uma?r) h(e|ai|a?y) meri)|(uma?r bataa?( sakti h)?(o|e|ai)n? ?(tum?|aa?p)? meri)|((meri|my) (age|uma?r))/i, 
    q10 = /(kisi (or|aur) naa?me? (se|sa(i|y)) (bulaa?|pukaa?r)(o|e|ai)n?)|(meraa? naa?m dubaa?ra (puchi?y?en?|save (kar|kij)(i?y?e|(e|ai)n)))/i, 
    q11 = 
@@ -58,7 +58,7 @@
    q53 = 
    /(meal finder)|(find( me)? meals?)|(recipes?)|(how to cook)|(help me (cook|with cooking))/i, 
    q54 = 
-   /(I'?( ?a)?m (anxious|tired))|(help me (calm down|relax|with my anxiety))|(relaxer)/i, 
+   /(I'?( ?a)?m (anxious|tired|scared))|(help me (calm down|relax|with my anxiety))|(relaxer)|(thakk? (chuk|gay?)(aa?|i|e) h(u|oo|ai|e)n? (m(e|ai)n?|h(u|a)m))|((mer|h(u|a)maar)(a?i|e) (lag|(f|ph)at)(a?i|e) pa(r|d)(a?i|e) h(e|ai)n?)/i, 
    q55 = 
    /(new year countdown)|(((days|time)( left)? (un)?till?|(what time|when) is) new year)|(new year (kab|kitna d(oo|u)r) h(e|ai))/i, 
    q56 = /(typing game)|((open|run|launch|play( me)?) speed( |-)?typer)/i, 
@@ -83,7 +83,7 @@
    q72 = 
    /((movies?'? (cast|ratings?))|(ratings? (for|of) movies?))|(movies? app)/i, 
    q73 = /(day (planner|scheduler))|((plan|schedule)( my)? day)/i, 
-   q74 = /(chase( |-)the( |-)box)|(box chaser)/i, 
+   q74 = /(some advi(c|s)e)|(advice generator)/i, 
    q75 = /giphy/i, 
    q76 = 
    /(pass(code|word|phrase) generator)|(random pass(code|word))/i, 
@@ -105,7 +105,7 @@
    q88 = 
    /(^(open|launch|run)?( me)? ?travels? ?(app|plan(ning|s|ner))$)|(help me ?(to|with|in)? plan(ning)? travels)/i, 
    q89 = /truth or dare/i, 
-   q90 = /metronome/i, 
+   q90 = /(metronome)|(drums?)/i, 
    q91 = /your? licen(s|c)ed?/i, 
    q92 = /(kis ?n(e|ai) (banaa?ya|create|develop kiy?aa?))|((I )?like (yo)?u)|(you( a|')?re( my)? (cute|sweet(ie)?|lovely|sexy|funny|pyaa?ri|adorable|favou?rite))|((((k(y|i)aa? (tu|to)|acc?hi|ba(d|r)hiy?aa?|(z|j)abardast|alag hi|pyaari?) ch(i|ee)j)|(pyaa?ri|cute|sweet|funny|lovely|sexy|acc?hi|ba(d|r)hiy?a|(z|j)abardast|kaa?bi?l ?(e ?)?tar(ee|i)f) ho))|((tum?|aa?p) ?h(o|e|ai)n? (pyari|cute|sweet|sexy|acc?hi|ba(d|r)hiy?a|(z|j)abardast|kaa?bi?l ?(e ?)?tar(ee|i)f|tar(i|ee)f k(e|i|a(i|y)) kaa?bil))|(ku(r|d)i (b|w)add?i soni?(ye| h(e|ai)))/i,
    q93 = /((I )?love (yo)?u)|((m(e|ai)n?|h(u|a)m) (aa?p|tum|tere) ?(ko|se|sa(y|i)) (chaha?t(aa?|a?i|e)|pyaa?r kart(aa?|i|e)) h(u|oo|e|ai)n?)|(you( a|')?re lovable)|(give me a rose)|(do you love me)|(ph(u|oo)l d((o|e|ai)n?|iji?y?e) ?(aa?p|tum|a(ye|a?i)sha)? (mujh(e|a(i|y))|h(u|a)m(e|ai)n?))/i,
@@ -116,20 +116,20 @@
    q98 = /(favou?rite|pasand(ee|i)daa?) colou?r/i,
    q99 = /(favou?rite|pasand(ee|i)daa?) ((ghumne ki )?jagh?(aa?|(e|ai)n?)|places to (go|visit|be))/i,
    q100 = /(I('| )?a?m sorry)|(mujh(e|a?y|ai) maa?f kardo)|(mujhe esa nahi kehna chahi?y?e tha)/i,
-   q102 = /(fu?c?k you)|(ajib ho)|(ghatiy?aa? (au|o)rat)/i,
-   q103 = /(I hate you)|(you('?re| are)? stupid)/i,
-   q104 = /meri friend ban(o|(e|ai)n?)gi/i,
-   q105 = /((m(e|ai)n?|h(u|a)m) b(u|o)h(o|a)t pareshaa?n h(u|oo|e|ai)n?)|(I'?( ?a)?m depressed)/i,
-   q106 = /I hate m(e|yself)/i,
-   q107 = /(I( just)? need a friend)|(I'?( ?a)?m lonely)/i,
-   q108 = /(k(y|i)a )?(m(e|ai)n?|h(u|a)m) khud ?gar(z|j) h(u|oo|e|ai)n?/i,
-   q109 = /((k(y|i)a )?(m(e|ai)n?|h(u|a)m) bur(aa?|e|i|ee|ay) h(u|oo|e|ai)n?)|(I'?( ?a)?m bad)/i,
-   q110 = /(zodiac|star) sign/i,
-    q111 = /((age|uma?r)( k(i|y)aa? h(e|ai))? ?(aa?p ?ki|tumhaa?ri))|((aa?p ?ki|tumhaa?ri) uma?r)/i,
-    q112 = /hamaa?ri pasand((e|ai)n?)? kitni milti julti h(e|ai)n?/i,
-    q113 = /(can'?t? you feel the chemistry between us)|(k(i|y)aa? (tum?|aa?p)( hamaa?r(e|ay) darmyaa?n ?(ki|(hone )?wali|(kisi|ek)( kisam ki)?))? chemistry( ko)? mehsus( nahi)? kar (rahi|sakti)( h(o|ai|e)n?)?)/i,
-    q114 = /crap|brat|fool|(mother)?fuck(er)?s?|mf|mofo|twats?|cunts?|cock(biter|sucker)?s?|boobs?|morons?|douche?(bag)?s?|pricks?|dicks?|(ass|arse) ?(hole)?s?|dick(head)?s?|fag(got)?|nigg?(a|er)|fucking|f\*cking|f\*ck|bitch|b\*tch|shit|sh\*t|fool|dumb|couch potato|\*ssh\*l\*|\*\*\*\*|c\*ck|\*\*\*\*sucker|c\*cks\*ck\*r|\*\*\*\*|c\*nt|dickhead|d\*c\*h\*a\*|\*\*\*\*|f\*c\*|\*\*\*\*wit|f\*ckw\*t|fuk|f\*k|fuking|f\*k\*ng|mother\*\*\*\*er|m\*th\*rf\*ck\*r|\*\*\*\*\*\*|n\*gg\*r|pussy|p\*ssy|\*\*\*\*|sh\*t|wanker|w\*nk\*r|wankers|w\*nk\*rs|whore|wh\*r\*|slag| sl\*g|\*\*\*\*\*|b\*tch|f u c k|f\*c\*|b.i.t.c.h|b\*tch|d-i-c-k|d\*\*\*/i,
-   q115 = /^bewafaa?$/i;
+   q101 = /(fu?c?k you)|(ajib ho)|(ghatiy?aa? (au|o)rat)/i,
+   q102 = /(I hate you)|(you('?re| are)? stupid)/i,
+   q103 = /meri friend ban(o|(e|ai)n?)gi/i,
+   q104 = /((m(e|ai)n?|h(u|a)m) b(u|o)h(o|a)t pareshaa?n h(u|oo|e|ai)n?)|(I'?( ?a)?m depressed)/i,
+   q105 = /I hate m(e|yself)/i,
+   q106 = /(I( just)? need a friend)|(I'?( ?a)?m lonely)/i,
+   q107 = /(k(y|i)a )?(m(e|ai)n?|h(u|a)m) khud ?gar(z|j) h(u|oo|e|ai)n?/i,
+   q108 = /((k(y|i)a )?(m(e|ai)n?|h(u|a)m) bur(aa?|e|i|ee|ay) h(u|oo|e|ai)n?)|(I'?( ?a)?m bad)/i,
+   q109 = /(zodiac|star) sign/i,
+    q110 = /((age|uma?r)( k(i|y)aa? h(e|ai))? ?(aa?p ?ki|tumhaa?ri))|((aa?p ?ki|tumhaa?ri) uma?r)/i,
+    q111 = /hamaa?ri pasand((e|ai)n?)? kitni milti julti h(e|ai)n?/i,
+    q112 = /(can'?t? you feel the chemistry between us)|(k(i|y)aa? (tum?|aa?p)( hamaa?r(e|ay) darmyaa?n ?(ki|(hone )?wali|(kisi|ek)( kisam ki)?))? chemistry( ko)? mehsus( nahi)? kar (rahi|sakti)( h(o|ai|e)n?)?)/i,
+    q113 = /crap|brat|fool|(mother)?fuck(er)?s?|mf|mofo|twats?|cunts?|cock(biter|sucker)?s?|boobs?|morons?|douche?(bag)?s?|pricks?|dicks?|(ass|arse) ?(hole)?s?|dick(head)?s?|fag(got)?|nigg?(a|er)|fucking|f\*cking|f\*ck|bitch|b\*tch|shit|sh\*t|fool|dumb|couch potato|\*ssh\*l\*|\*\*\*\*|c\*ck|\*\*\*\*sucker|c\*cks\*ck\*r|\*\*\*\*|c\*nt|dickhead|d\*c\*h\*a\*|\*\*\*\*|f\*c\*|\*\*\*\*wit|f\*ckw\*t|fuk|f\*k|fuking|f\*k\*ng|mother\*\*\*\*er|m\*th\*rf\*ck\*r|\*\*\*\*\*\*|n\*gg\*r|pussy|p\*ssy|\*\*\*\*|sh\*t|wanker|w\*nk\*r|wankers|w\*nk\*rs|whore|wh\*r\*|slag| sl\*g|\*\*\*\*\*|b\*tch|f u c k|f\*c\*|b.i.t.c.h|b\*tch|d-i-c-k|d\*\*\*/i,
+   q114 = /^bewafaa?$/i;
   
  function ask() { 
    const q = document.querySelector("#searchInput").value; 
@@ -147,6 +147,7 @@
      } else { 
        msg += "? Bilkul adhura sa!" + cry + cry2; 
      } 
+     sound("fake_cry");
      $output.html(msg); 
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
@@ -254,8 +255,8 @@
      msg = msg.substr(3, 4); 
      msg = parseInt(msg); 
      log(msg); 
-     if (isLeapYear(msg) == true) { 
-       msg = `Of course, ${msg} is a leap year!`; 
+     if (isLeapYear(msg)) { 
+       msg = `Of course, ${msg} is a leap year!`;
        let x = msg.slice(11, 15); 
        let curY = new Date().getFullYear(); 
        if (curY != x && curY > x) { 
@@ -263,6 +264,7 @@
        } else if (curY != x && curY < x) {
        	msg = msg.replace(/(is|was)/i, "is going to be"); 
        }
+       sound("genius");
      } else { 
        msg = "Mayree intelligence kay mutaabik? Nahi!"; 
      } 
@@ -280,20 +282,36 @@
        ) 
      ) { 
        bday = toTitleCase(bday); 
-       msg = `Your birthday is ${bday}`; 
+       msg = `Aapki saal gira hay ${bday} ko aapkay mutaabik`; 
        log(msg); 
        if (isBday(bday)) { 
          msg += 
-           " (today)<br>Happy birthday, by the way! Hurrah!" + kiss; 
+           " (jo kay aaj hay)<br>Happy birthday by the way" + kiss; 
+           sound("hbd.mp3");
        } 
      } else { 
        bday = prompt( 
          "Apki birthday saved nahi he, sorry! Zara dubara submit kijie ga please?\nAccepted format: YYYY(separator)m(separator)d\nNote: Me birthday sirf apki umr ka hisab lagane ke lie puchti hu, or is lie bhi take me apko apki salgira wale din 'Happy birthday' bol saku." 
        ); 
        bday = toTitleCase(bday); 
-       msg = `Date set. Your newly set bday is ${bday}`; 
-       log(msg); 
-     } 
+       msg = `Date submitted. Your newly set birthday--- and hopefully the "actual" one--- is ${bday} (unlike the last time, which was a weird joke from you`; 
+       if ( 
+       userName != null && 
+       userName.length >= 3 && 
+       /^[a-z\s]+$/i.test(userName) && 
+       userName != "" 
+     ) { 
+     	msg += `, ${toTitleCase(userName.split(" ")[0])}`; //only show the first name; capitalized
+     } else {
+     	msg += "";
+     }
+     msg += "!)" + smirk; 
+     bday = toTitleCase(bday);
+     if (isBday(bday)) { 
+         msg += 
+           "<br>Happy birthday by the way" + kiss;
+           } 
+     }
      $output.html(msg); 
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
@@ -932,18 +950,17 @@
      let relaxerAppWin = window.open("./relaxer-app/", "_blank"); 
      if (relaxerAppWin) { 
        window.focus(); 
-       if (detectDeviceType() == "Desktop" || detectDeviceType() != "Mobile") { 
-         msg = "Take a deep breath, "; 
+         msg = "Gehri saas lo, "; 
          playText(msg); 
          setTimeout(() => { 
-           msg = "breathe in, hold, "; 
+           msg = "andar lo, hold karo"; 
            playText(msg); 
            setTimeout(() => { 
-             msg = "breathe out"; 
+             msg = "or baahir nikaalo"; 
              playText(msg); 
+             /*sound("sigh");*/
            }, 2005); 
          }, 1650); 
-       } 
        log("Launched Relaxer"); 
      } else { 
        alert("Please enable popups for this site!"); 
@@ -978,7 +995,7 @@
      if (expenseTrackerWin) { 
        window.focus(); 
        msg = 
-         "Worried about keeping track of your expenses? Don't be. I can help you track them"; 
+         "Worried about keeping track of your expenses? Don't be. I can definitely help you track them 24/7!"; 
        playText(msg); 
        log("Launched Expense Tracker"); 
      } else { 
@@ -1167,10 +1184,10 @@
        alert("Please enable popups for this site!"); 
      } 
    } else if (q74.test(q)) { 
-     let boxChaserGameWin = window.open("./box-chaser/", "_blank"); 
-     if (boxChaserGameWin) { 
+     let adviceGenWin = window.open("./advice-gen/", "_blank"); 
+     if (adviceGenWin) { 
        window.focus(); 
-       log("Launched Chase-The-Box"); 
+       log("Launched Advice Generator"); 
      } else { 
        alert("Please enable popups for this site!"); 
      } 
@@ -1387,7 +1404,7 @@
      } else {
      	msg += "";
      }
-     msg += hearts; 
+     msg += hearts + kiss2; 
      let audio = new Audio();
      audio.src = "assets/audio/kiss.mp3"; 
      utterance.onend = function () { audio.play(); } 
@@ -1398,7 +1415,6 @@
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
      } else if (q94.test(q)) { 
-     $("#message").slideFadeToggle(800); 
      msg = ""; 
      $output.html(msg); 
      let entertainmentApps = [
@@ -1419,9 +1435,19 @@
        "./roseday",
        "../yoMovies",
        "./giphy/", 
+       "../youtube",
+       "../news",
        ];
-     console.log(msg); 
-     $("#message").delay(10000).slideFadeToggle(800); 
+       let entertainmentAppsWin = window.open( 
+       entertainmentApps[Math.floor(Math.random() * entertainmentApps.length)], 
+       "_blank" 
+     ); 
+     if (entertainmentAppsWin) { 
+       window.focus(); 
+       log("Launched a random entertainment app!"); 
+     } else { 
+       alert("Please enable popups for this site!"); 
+     } 
    } else { 
      $("#message").slideFadeToggle(800); 
      msg = "Sorry yaar, program ab bhi development may hay, mayray developers key mujhay improve karnay may zyaada say zyaada koshish rahegi."; 

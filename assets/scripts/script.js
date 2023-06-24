@@ -646,9 +646,38 @@ $(document).bind("mouseleave", function (e) {
   }
 });
 
-const sound = (src, delay = 10000) => {
+const sound = (src, delay = 10000, format = "mp3") => {
 	let audio = new Audio();
-	audio.src = `assets/audio/${src}.mp3`;
+	let dir = "assets/audio";
+	let regex = /.(mp3|wav|ogg)$/i;
+	let formatFound;
+	if (regex.test(src)) {
+		//format found, saving for later!
+		formatFound = src.match(regex)[0];
+		log("Saved for later! Now let's just wipe it for now... so that we have a better structure.");
+		src = src.replace(regex, "");
+		log(src);
+		/* optionally, the above statement--- ie the second last statement--- could be <em>replaced</em> with these three lines:
+		src = src.replace(".mp3", "");
+        src = src.replace(".wav", "");
+		src = src.replace(".ogg", "");
+        */
+	}
+	if (formatFound != "" && regex.test(formatFound)) {
+		//Since the format was already provided in the parameters, it will be used on behalf of the default format --- that is, *.mp3!
+		audio.src = `${dir}/${src}${formatFound}`;
+		log("\nPlaying Audio");
+		log(`Filename: ${src}${formatFound}`);
+		log("Full Address: " + audio.src);
+		log("Format found, didn't need to replace it with the default format, i.e. *.mp3!");
+	} else {
+		//format not found, *.mp3 will be added automatically 
+		audio.src = `${dir}/${src}.${format}`;
+		log("\nPlaying Audio");
+		log(`Filename: ${src}.${format}`);
+		log("Full Address: " + audio.src);
+		log("Format not found, so one was added automatically (*.mp3)");
+	}
      utterance.onend = function () { 
      audio.play();
      } 
