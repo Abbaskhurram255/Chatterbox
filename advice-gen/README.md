@@ -60,10 +60,3 @@ Through this project, I honed my skills in utilizing asynchronous JavaScript and
 ### Continued development
 
 To further elevate the functionality and design of this project, I plan to implement a social media sharing feature that allows users to easily share the generated advice. Additionally, I aim to continue to explore advanced design techniques to create a more captivating and immersive user experience.
-
-## Author
-
-- Github - [BK Pecho](https://www.github.com/bkpecho)
-- Twitter - [@bkpecho](https://www.twitter.com/bkpecho)
-- LinkedIn - [in/bkpecho](https://www.linkedin.com/in/bkpecho/)
-- Frontend Mentor - [@bkpecho](https://www.frontendmentor.io/profile/bkpecho)
