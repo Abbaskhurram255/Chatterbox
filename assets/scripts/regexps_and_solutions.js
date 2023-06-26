@@ -52,11 +52,11 @@
    q47 = /my recipes/i, 
    q48 = /(space invaders)|(invasion game)/i, 
    q49 = /^voice ?(notes?|recorder)$/i, 
-   q50 = /(google doodles)|(what event is it today)/i, 
+   q50 = /smash cube/i, 
    q51 = /(percentage calculator)|(calculate percentage)/i, 
    q52 = /temperature( units)? conver(sion|ter)/i, 
    q53 = 
-   /(meal finder)|(find( me)? meals?)|(recipes?)|(how to cook)|(help me (cook|with cooking))/i, 
+   /(how to (cook|bake))|(help me( with)? (cook|bake?)(ing)?)|(ingredients)/i, 
    q54 = 
    /(I'?( ?a)?m (anxious|tired|scared))|(help me (calm down|relax|with my anxiety))|(relaxer)|(thakk? (chuk|gay?)(aa?|i|e) h(u|oo|ai|e)n? (m(e|ai)n?|h(u|a)m))|((mer|h(u|a)maar)(a?i|e) (lag|(f|ph)at)(a?i|e) pa(r|d)(a?i|e) h(e|ai)n?)/i, 
    q55 = 
@@ -95,7 +95,7 @@
    q80 = 
    /(habits? build(er|ing))|(help( me)? (with building|build) a( good)? habit)/i, 
    q81 = /((units?|\bmeters?\b|f(oo|ee)t|area|minutes?|seconds?|hours?|time|measure|°?(c(elsius|entigrade)?|f(ahrenheit)?|k(elvin)?)) (to|conver(sion|ter)))|(to (\bmeters?\b|f(oo|ee)t|minutes?|seconds?|hours?|time|measure|°?(c(elsius|entigrade)?|f(ahrenheit)?|k(elvin)?)))/i, 
-   q82 = /(^game of (games|adventures?$))|(adventurous game)/i, 
+   q82 = /(^game of (games|adventures?$))|(adventur(ous|e) game)/i, 
    q83 = /my( fave?(orite)?)? ?books?'? ?list/i, 
    q84 = /(math flash ?cards)|((arithmetic|math) game)/i, 
    q85 = /simon/i, 
@@ -554,9 +554,9 @@
        "./The Constructor/", 
        "../math-flash-cards/", 
        "https://alexs-simon-says.netlify.app/", 
-       "./light-maze/", 
        "https://truth-or-dare-by-alex.netlify.app", 
        "./RPG-game/", 
+       "./smash-cube/",
      ]; 
      } else {
      	games = [ 
@@ -898,13 +898,13 @@
      msg = ""; 
      $output.html(msg); 
    } else if (q50.test(q)) { 
-     let gdoodlesWin = window.open( 
-       "./today-in-google-doodles-history/", 
+     let smashCubeWin = window.open( 
+       "./smash-cube/", 
        "_blank" 
      ); 
-     if (gdoodlesWin) { 
+     if (smashCubeWin) { 
        window.focus(); 
-       log("Launched Today In Google Doodles History"); 
+       log("Launched Smash Cube!"); 
      } else { 
        alert("Please enable popups for this site!"); 
      } 
@@ -934,10 +934,10 @@
      msg = ""; 
      $output.html(msg); 
    } else if (q53.test(q)) { 
-     let findMealsWin = window.open("./meal-finder/", "_blank"); 
-     if (findMealsWin) { 
+     let recipesAppWin = window.open("./meal-finder/", "_blank"); 
+     if (recipesAppWin) { 
        window.focus(); 
-       log("Launched Meal Finder"); 
+       log("Launched Recipes app"); 
      } else { 
        alert("Please enable popups for this site!"); 
      } 
@@ -1430,11 +1430,11 @@
        "./The Constructor/", 
        "../math-flash-cards/", 
        "https://alexs-simon-says.netlify.app/", 
-       "./light-maze/", 
        "https://truth-or-dare-by-alex.netlify.app", 
-       "./roseday",
        "../yoMovies",
        "./giphy/", 
+       "./smash-cube/",
+       "./roseday",
        "../youtube",
        "../news",
        ];
