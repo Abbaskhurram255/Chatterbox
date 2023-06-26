@@ -21,7 +21,7 @@
    q18 = /(^calculator)|(open calculator)|(calculate(?:bmi))/i, 
    q19 = 
    /(tts)|(speech engine)|(text to speech)|(ebook to audio(book)?)|((document|text) reader)/i, 
-   q20 = /xxx/i, 
+   q20 = /piano/i, 
    q21 = /(todos?)|(reminders?)|(remind me to)|((bucket|shopping) list)|(mujh(e|ai) yaa?d dilaa?naa?)|(notes?)/i, 
    q22 = /(music)|(songs?)|(jukebox)|(gaa?n(e|ay))/i, 
    q23 = /((weight|mass) conver(sion|ter))|((\b\d*\b )?((k?(ilo)?s?)?g(ram)?s?|pounds?|ounces?|oz) (to|and|in|ko|((equals|(is|are) equal to|=)( how many)?)|(baraa?bar h(e|ai)n?)))/i, 
@@ -38,8 +38,8 @@
    /(is (this|it)( a)? week ?day (today|yet))|((is today|today is) a week ?day)/i, 
    q34 = /(is (this|it)( a)? week ?end (today|yet))|((is today|today is) a week ?end)|(k(y|i)aa?( aa?j)? (itwaa?r|haftaa?) (h(e|ai)|thaa?)( aa?j)?)/i, 
    q35 = /numbers? to roman/i, 
-   q36 = /(\b\d*\b )?(mi|miles?) (to|and|in|ko|((equals|(is|are) equal to|=)( how many)?)|(baraa?bar h(e|ai)n?( kit ?n(e|a(y|i)))) (km|kilometer)s?)?/i, 
-   q37 = /(\b\d*\b )?k(ilo)?m(eter)?s? (to|and|in|ko|((equals|(is|are) equal to|=)( how many)?)|(baraa?bar h(e|ai)n?( kit ?n(e|a(y|i)))) mi(les?)?)?/i, 
+   q36 = /(\b\d*\b )?(mi|miles?) (to|and|in|me|mai|ko|((equals|(is|are) equal to|=)( how many)?)|(baraa?bar h(e|ai)n?( kit ?n(e|a(y|i)))) (km|kilometer)s?)?/i, 
+   q37 = /(\b\d*\b )?k(ilo)?m(eter)?s? (to|and|in|m(e|ai)|ko|((equals|(is|are) equal to|=)( how many)?)|(baraa?bar h(e|ai)n?( kit ?n(e|a(y|i)))) mi(les?)?)?/i, 
    q38 = /(what (date|day) was it yesterday)|(kal (k(y|i)aa?|k(o|au)n ?s(aa?|i|ee)) (din|day|date|tar(i|ee)kh) (rah|th)(aa?|i|ee))/i, 
    q39 = /(what (date|day) will it be tomorrow)|(kal (k(y|i)aa?|k(o|au)n ?s(aa?|i|ee)) (din|day|date|tar(i|ee)kh) ((ho|rah(e|ai)) ?g(aa?|i|ee))|(hon(e|ai) jaa?rah(i|aa?) h(e|ai)))/i, 
    q40 = /monopoly/i, 
@@ -495,10 +495,10 @@
      msg = ""; 
      $output.html(msg); 
    } else if (q20.test(q)) { 
-     let notesWin = window.open("./notes-app-project-master/", "_blank"); 
-     if (notesWin) { 
+     let pianoWin = window.open("./piano/", "_blank"); 
+     if (pianoWin) { 
        window.focus(); 
-       log("Launched Notes"); 
+       log("Launched Simple Piano!"); 
      } else { 
        alert("Please enable popups for this site!"); 
      } 
@@ -1073,7 +1073,7 @@
      } else { 
        alert("Please enable popups for this site!"); 
      } 
-   } else if (0.test(q)) { 
+   } else if (q64.test(q)) { 
      let dungeonCrawlerGameWin = window.open("../dungeon-crawler/", "_blank"); 
      if (dungeonCrawlerGameWin) { 
        window.focus(); 
@@ -1438,6 +1438,7 @@
        "/breakout-mobile",
        "./roseday",
        "../youtube",
+       "./piano",
        ];
        let entertainmentAppsWin = window.open( 
        entertainmentApps[Math.floor(Math.random() * entertainmentApps.length)], 
