@@ -101,13 +101,13 @@ const game = (() => {
     let p2
     switch (gameMode) {
       case "easy": 
-        p2 = Computer("EASY AI", "o", 1)
+        p2 = Computer("EASY AYESHAPT", "o", 1)
         break;
       case "medium": 
-        p2 = Computer("MEDIUM AI", "o", 5)
+        p2 = Computer("MEDIUM AYESHAPT", "o", 5)
         break;
       case "master": 
-        p2 = Computer("MASTER AI", "o", 8)
+        p2 = Computer("MASTER AYESHAPT", "o", 8)
         break;
       default: 
         p2 = Player("P2", "o")
@@ -127,7 +127,7 @@ const game = (() => {
     _activeTurn = Math.floor(Math.random() * 2)
     updateScores()
     _isOver = false
-    _status = `It's ${currentPlayer().name}'s turn`
+    _status = `Pehli bari ${currentPlayer().name} ki he`
     status()
     notifyComputer()   
   }
@@ -195,12 +195,12 @@ const game = (() => {
     }
     else if (draw(_board)) {
       _isOver = true
-      _status = "It's a draw!"
+      _status = "Draw hogai!"
       status()
     }
     else {      
       switchTurn()
-      _status = `It's ${currentPlayer().name}'s turn`
+      _status = `Ab ${currentPlayer().name} ki bari he`
       status()
       notifyComputer()
     }

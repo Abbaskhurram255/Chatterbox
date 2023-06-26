@@ -73,11 +73,11 @@ a:hover {
   border-radius: 5px;
   border: 2px solid #fff;
   overflow: hidden;  
-  background-color: #000;
 }
 
 .modal-header, .modal-body, .modal-footer {
   padding: .5rem 1rem;
+  background: linear-gradient(to right, hotpink, purple, transparent);
 }
 
 .modal-body {
