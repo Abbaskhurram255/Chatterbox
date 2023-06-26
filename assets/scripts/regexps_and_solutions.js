@@ -557,6 +557,7 @@
        "https://truth-or-dare-by-alex.netlify.app", 
        "./RPG-game/", 
        "./smash-cube/",
+       "/breakout-mobile",
      ]; 
      } else {
      	games = [ 
@@ -600,7 +601,7 @@
      $output.html(msg); 
    } else if (q25.test(q)) { 
      let breakOutWin = window.open( 
-       "./2D-Breakout-Game-JavaScript-master/", 
+       "./breakout-mobile/", 
        "_blank", 
        "width=460,height=550,resizable=no,toolbar=no,menubar=no" 
      ); 
@@ -1072,7 +1073,7 @@
      } else { 
        alert("Please enable popups for this site!"); 
      } 
-   } else if (q64.test(q)) { 
+   } else if (0.test(q)) { 
      let dungeonCrawlerGameWin = window.open("../dungeon-crawler/", "_blank"); 
      if (dungeonCrawlerGameWin) { 
        window.focus(); 
@@ -1434,9 +1435,9 @@
        "../yoMovies",
        "./giphy/", 
        "./smash-cube/",
+       "/breakout-mobile",
        "./roseday",
        "../youtube",
-       "../news",
        ];
        let entertainmentAppsWin = window.open( 
        entertainmentApps[Math.floor(Math.random() * entertainmentApps.length)], 
