@@ -21,13 +21,13 @@
    q18 = /(^calculator)|(open calculator)|(calculate(?:bmi))/i, 
    q19 = 
    /(tts)|(speech engine)|(text to speech)|(ebook to audio(book)?)|((document|text) reader)/i, 
-   q20 = /piano/i, 
+   q20 = /(piano)|(synth(esizer)?)/i, 
    q21 = /(todos?)|(reminders?)|(remind me to)|((bucket|shopping) list)|(mujh(e|ai) yaa?d dilaa?naa?)|(notes?)/i, 
    q22 = /(music)|(songs?)|(jukebox)|(gaa?n(e|ay))/i, 
    q23 = /((weight|mass) conver(sion|ter))|((\b\d*\b )?((k?(ilo)?s?)?g(ram)?s?|pounds?|ounces?|oz) (to|and|in|ko|((equals|(is|are) equal to|=)( how many)?)|(baraa?bar h(e|ai)n?)))/i, 
    q24 = /(random games?)|(games)|(play( me)? a game)/i, 
    q25 = /^(play( me)?|run|launch|execute|open) breakout/i, 
-   q26 = /^(play( me)?|run|launch|execute|open) flappy ?bird/i, 
+   q26 = /sodoku/i, 
    q27 = /^(play( me)?|run|launch|execute|open) hangman/i, 
    q28 = /^(play( me)?|run|launch|execute|open) pac-?man(ia)?/i, 
    q29 = /^(play( me)?|run|launch|execute|open) (rock|stone) paper scissors?/i, 
@@ -96,14 +96,14 @@
    /(habits? build(er|ing))|(help( me)? (with building|build) a( good)? habit)/i, 
    q81 = /((units?|\bmeters?\b|f(oo|ee)t|area|minutes?|seconds?|hours?|time|measure|°?(c(elsius|entigrade)?|f(ahrenheit)?|k(elvin)?)) (to|conver(sion|ter)))|(to (\bmeters?\b|f(oo|ee)t|minutes?|seconds?|hours?|time|measure|°?(c(elsius|entigrade)?|f(ahrenheit)?|k(elvin)?)))/i, 
    q82 = /(^game of (games|adventures?$))|(adventur(ous|e) game)/i, 
-   q83 = /my( fave?(orite)?)? ?books?'? ?list/i, 
+   q83 = /(my( fave?(orite)?)? ?books?'? ?list)|(books? (in|to) my wishlist)/i, 
    q84 = /(math flash ?cards)|((arithmetic|math) game)/i, 
    q85 = /simon/i, 
    q86 = /light mai?ze/i, 
    q87 = 
    /(book|pdf|kitaa?b) (read kar ?k(e|ai)|pa(r|d)h? ?k(e|ai)) (do|d(ai|e)n?|bataa?(o|(e|ai)n?)|de sakt(e|i) h(o|(e|ai)n?))|((pdf|book) (viewer|reader))/i, 
    q88 = 
-   /(^(open|launch|run)?( me)? ?travels? ?(app|plan(ning|s|ner))$)|(help me ?(to|with|in)? plan(ning)? travels)/i, 
+   /(you|ayesha?) ?tube/i, 
    q89 = /truth or dare/i, 
    q90 = /(metronome)|(drums?)/i, 
    q91 = /your? licen(s|c)ed?/i, 
@@ -473,7 +473,7 @@
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
    } else if (q18.test(q)) { 
-     let calcWin = window.open("./calc/", "_blank"); 
+     let calcWin = window.open("./girly-calc/", "_blank"); 
      if (calcWin) { 
        window.focus(); 
        log("Launched Calculator"); 
@@ -615,14 +615,14 @@
      msg = ""; 
      $output.html(msg); 
    } else if (q26.test(q)) { 
-     let flappyBirdWin = window.open( 
-       "./FlappyBird-JavaScript-master/", 
+     let sodokuWin = window.open( 
+       "./sodoku/", 
        "_blank", 
        "width=380,height=630,resizable=no,toolbar=no,menubar=no" 
      ); 
-     if (flappyBirdWin) { 
+     if (sodokuWin) { 
        window.focus(); 
-       log("Launched FlappyBird"); 
+       log("Launched Sodoku"); 
      } else { 
        alert("Please enable popups for this site!"); 
      } 
@@ -1345,16 +1345,19 @@
      msg = ""; 
      $output.html(msg); 
    } else if (q88.test(q)) { 
-     let travelPlansWin = window.open("../travel-planner/", "_blank"); 
-     if (travelPlansWin) { 
-       window.focus(); 
-       log("Launched Travels app"); 
-     } else { 
-       alert("Please enable popups for this site!"); 
-     } 
      stopText(); 
      msg = ""; 
      $output.html(msg); 
+     let ayeshTubeWin = window.open("../youtube/", "_blank"); 
+     if (ayeshTubeWin) { 
+       window.focus(); 
+       msg = "Ayesha Tube,... ab youtube ba'gay'r ads ke!";
+       playText(msg);
+       sound("woo-hoo");
+       log("Launched AyeshTube/ YouTube!"); 
+     } else { 
+       alert("Please enable popups for this site!"); 
+     } 
    } else if (q89.test(q)) { 
      msg = ""; 
      $output.html(msg); 
