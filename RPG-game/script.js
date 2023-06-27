@@ -1024,5 +1024,6 @@ document.body.onload = () => {
 	const audio = new Audio("music.mp3");
 	audio.loop = true;
 	audio.autoplay = true;
+	audio.volume = 0.7;
 	audio.play();
 }
