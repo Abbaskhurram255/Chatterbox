@@ -1019,3 +1019,10 @@ function giveStartingItems() {
 	hero.minDmg = weapon.minDmg;
 	hero.maxDmg = weapon.maxDmg;
 }
+
+document.body.onload = () => {
+	const audio = new Audio("music.mp3");
+	audio.loop = true;
+	audio.autoplay = true;
+	audio.play();
+}
