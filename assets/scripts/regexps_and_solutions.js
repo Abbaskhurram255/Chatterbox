@@ -1422,15 +1422,6 @@
      setTimeout(() => { utterance.onend = ""; }, 10000); 
      $output.html(msg); 
      console.log(msg); 
-     let showRose = window.open( 
-       "./roseday/", "_blank" 
-     ); 
-     if (showRose) { 
-       window.focus(); 
-       log("Showing the rose!"); 
-     } else { 
-       alert("Please enable popups for this site!"); 
-     } 
      $("#message").delay(10000).slideFadeToggle(800); 
      } else if (q94.test(q)) { 
      msg = ""; 
