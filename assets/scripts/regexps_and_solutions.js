@@ -71,7 +71,7 @@
    q61 = /(quotes?|shaa?(ya|i)ri(y?aa?n?)?|a(q|k)waa?l)/i, 
    q62 = /memory (game|test)/i, 
    q63 = /(calo(ries? )?track(er| karo))|(track(( of)? (my|karo meri))? calories)/i, 
-   q64 = /(jokes?|humor)/i, 
+   q64 = /jokes?|humor/i, 
    q65 = /(fotoflick)|(puzzle game)|((photo|picture) puzzle)/i, 
    q66 = 
    /((motivate|inspire) (me|karo (h(u|a)m(e|ai)n?|mujh(e|ai))))|(I'?( ?a)?m demotivated)|(motivat(ional|ing) app)/i, 
