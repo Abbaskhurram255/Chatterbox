@@ -26,7 +26,7 @@
    q22 = /(music)|(songs?)|(jukebox)|(gaa?n(e|ay))/i, 
    q23 = /((weight|mass) conver(sion|ter))|((\b\d*\b )?((k?(ilo)?s?)?g(ram)?s?|pounds?|ounces?|oz) (to|and|in|ko|((equals|(is|are) equal to|=)( how many)?)|(baraa?bar h(e|ai)n?)))/i, 
    q24 = /(random games?)|(games)|(play( me)? a game)/i, 
-   q25 = /^(play( me)?|run|launch|execute|open) breakout/i, 
+   q25 = /breakout/i, 
    q26 = /sodoku/i, 
    q27 = /^(play( me)?|run|launch|execute|open) hangman/i, 
    q28 = /^(play( me)?|run|launch|execute|open) pac-?man(ia)?/i, 
@@ -42,17 +42,17 @@
    q37 = /(\b\d*\b )?k(ilo)?m(eter)?s? (to|and|in|m(e|ai)|ko|((equals|(is|are) equal to|=)( how many)?)|(baraa?bar h(e|ai)n?( kit ?n(e|a(y|i)))) mi(les?)?)?/i, 
    q38 = /(what (date|day) was it yesterday)|(kal (k(y|i)aa?|k(o|au)n ?s(aa?|i|ee)) (din|day|date|tar(i|ee)kh) (rah|th)(aa?|i|ee))/i, 
    q39 = /(what (date|day) will it be tomorrow)|(kal (k(y|i)aa?|k(o|au)n ?s(aa?|i|ee)) (din|day|date|tar(i|ee)kh) ((ho|rah(e|ai)) ?g(aa?|i|ee))|(hon(e|ai) jaa?rah(i|aa?) h(e|ai)))/i, 
-   q40 = /monopoly/i, 
+   q40 = /monopoly|k((o|au)n)? ?b(an(e|ai)ga)? ?c(rorepati)?|crorepati game/i, 
    q41 = /(canvas(es)?)|((drawings?|arts?|paint(ings?)?|brush) (app|tool))|(((draw|paint)(ing)? karn(i|aa?))|((sketch|canvas|painting)(e?s)? (banaa?n(aa?|e|ai)|karnaa?)) ((chaa?ha?t(a(a|i|y)?|i|ee?) )?h(u|oo|e|ai)n?))/i, 
    q42 = /(audio (visuali(z|s)er|player))|(play( local)? audio)/i, 
    q43 = /breaking bad cast/i, 
    q44 = /b(ody )?m(ass )?i(ndex)?/i, 
    q45 = /^(execute|launch|play( me)?|run) (the )?maze/i, 
    q46 = /calendar/i, 
-   q47 = /my recipes/i, 
+   q47 = /lll/i, 
    q48 = /(space invaders)|(invasion game)/i, 
    q49 = /^voice ?(notes?|recorder)$/i, 
-   q50 = /smash cube/i, 
+   q50 = /(smash cube|(box|slice) game)/i, 
    q51 = /(percentage calculator)|(calculate percentage)/i, 
    q52 = /temperature( units)? conver(sion|ter)/i, 
    q53 = 
@@ -71,14 +71,14 @@
    q61 = /(quotes?|shaa?(ya|i)ri(y?aa?n?)?|a(q|k)waa?l)/i, 
    q62 = /memory (game|test)/i, 
    q63 = /(calo(ries? )?track(er| karo))|(track(( of)? (my|karo meri))? calories)/i, 
-   q64 = /(dungeon crawler)|(rogue-?life)/i, 
+   q64 = /(jokes?|humor)/i, 
    q65 = /(fotoflick)|(puzzle game)|((photo|picture) puzzle)/i, 
    q66 = 
    /((motivate|inspire) (me|karo (h(u|a)m(e|ai)n?|mujh(e|ai))))|(I'?( ?a)?m demotivated)|(motivat(ional|ing) app)/i, 
    q67 = /((space ?(X|station)|nasa) (data|live))|(live( outer)? space)/i, 
    q68 = /(snap ?shots)|(landscapes)|(wall ?papers?)|((kuch|some) (photos|pictures|images))/i, 
    q69 = /features/i, 
-   q70 = /(trivia)|(quiz)|(game of questionnares)/i, 
+   q70 = /(trivia)|(quiz)|(questionnares)/i, 
    q71 = /(ratings? for( tv)? (series|serials?))|((tv )?series app)/i, 
    q72 = 
    /((movies?'? (cast|ratings?))|(ratings? (for|of) movies?))|(movies? app)/i, 
@@ -95,11 +95,11 @@
    q80 = 
    /(habits? build(er|ing))|(help( me)? (with building|build) a( good)? habit)/i, 
    q81 = /((units?|\bmeters?\b|f(oo|ee)t|area|minutes?|seconds?|hours?|time|measure|°?(c(elsius|entigrade)?|f(ahrenheit)?|k(elvin)?)) (to|conver(sion|ter)))|(to (\bmeters?\b|f(oo|ee)t|minutes?|seconds?|hours?|time|measure|°?(c(elsius|entigrade)?|f(ahrenheit)?|k(elvin)?)))/i, 
-   q82 = /(^game of (games|adventures?$))|(adventur(ous|e) game)/i, 
+   q82 = /(^game of (adventure|dragon)s?$)|((adventur(ous|e)|dragon|city|castle) game)/i, 
    q83 = /(my( fave?(orite)?)? ?books?'? ?list)|(books? (in|to) my wishlist)/i, 
    q84 = /(math flash ?cards)|((arithmetic|math) game)/i, 
    q85 = /simon/i, 
-   q86 = /light mai?ze/i, 
+   q86 = /ludo/i, 
    q87 = 
    /(book|pdf|kitaa?b) (read kar ?k(e|ai)|pa(r|d)h? ?k(e|ai)) (do|d(ai|e)n?|bataa?(o|(e|ai)n?)|de sakt(e|i) h(o|(e|ai)n?))|((pdf|book) (viewer|reader))/i, 
    q88 = 
@@ -191,7 +191,7 @@
        msg += "Anjaan." + duh; 
      } 
      msg += "</li><li>Aapki umr: "; 
-     if ((!isNaN(parseInt(age)) && age != 0) && (age != "" && age.length != 0)) { 
+     if ((!isNaN(parseInt(age)) && age >= 8) && (age != "" && age.length != 0)) { 
        msg += age; 
      } else { 
        msg += "Aapki birthday na jannay ki wajaa say calculate na karpa'i."; 
@@ -326,7 +326,7 @@
        ) 
      ) { 
        age = calc_age(new Date(bday));
-        if ((!isNaN(parseInt(age)) && age != 0) && (age != "" && age.length != 0)) {
+        if ((!isNaN(parseInt(age)) && age >= 8) && (age != "" && age.length != 0)) {
        msg = `Aap ho... ${age} kay!`; 
        if (age <= 18) { 
          msg += "<br>Kaafi young ho yar aap to" + what2 + "... still cute though" + in_love + blush; 
@@ -349,7 +349,7 @@
        ) 
      ) { 
        age = calc_age(new Date(bday)); 
-       if ((!isNaN(parseInt(age)) && age != 0) && (age != "" && age.length != 0)) {
+       if ((!isNaN(parseInt(age)) && age >= 8) && (age != "" && age.length != 0)) {
        msg = "Aap ho... " + age + " kay!"; 
        if (age <= 18) { 
          msg += "<br>Kaafi young ho yar aap to" + what2 + "... still cute though" + in_love + blush;
@@ -558,6 +558,7 @@
        "./RPG-game/", 
        "./smash-cube/",
        "/breakout-mobile",
+       "./sodoku",
      ]; 
      } else {
      	games = [ 
@@ -866,10 +867,10 @@
      msg = ""; 
      $output.html(msg); 
    } else if (q47.test(q)) { 
-     let recipeAppWin = window.open("../recipe-app/", "_blank"); 
-     if (recipeAppWin) { 
+     let replaceMeWin = window.open("./replace-me-too/", "_blank"); 
+     if (replaceMeWin) { 
        window.focus(); 
-       log("Launched Recipe App"); 
+       log("Launched replaceMe Later!"); 
      } else { 
        alert("Please enable popups for this site!"); 
      } 
@@ -1055,7 +1056,7 @@
      let memoryGameWin = window.open("./mem-game/", "_blank"); 
      if (memoryGameWin) { 
        window.focus(); 
-       msg = "May aapko challenge karti hoon aap yay game nahi jeet saktay"; 
+       msg = "May aapko challenge karti hoo aap yay game nahi jeet saktay"; 
        playText(msg); 
        log("Launched Memory Game"); 
      } else { 
@@ -1074,16 +1075,13 @@
        alert("Please enable popups for this site!"); 
      } 
    } else if (q64.test(q)) { 
-     let dungeonCrawlerGameWin = window.open("../dungeon-crawler/", "_blank"); 
-     if (dungeonCrawlerGameWin) { 
+     let jokesAppWin = window.open("./jokes/", "_blank"); 
+     if (jokesAppWin) { 
        window.focus(); 
-       log("Launched Roguelife"); 
+       log("Launched Joke Machine"); 
      } else { 
        alert("Please enable popups for this site!"); 
      } 
-     stopText(); 
-     msg = ""; 
-     $output.html(msg); 
    } else if (q65.test(q)) { 
      let fotoflickWin = window.open("../foto-flick/", "_blank"); 
      if (fotoflickWin) { 
@@ -1273,16 +1271,18 @@
      msg = ""; 
      $output.html(msg); 
    } else if (q82.test(q)) { 
-     let rpgGameWin = window.open("./RPG-game/", "_blank"); 
-     if (rpgGameWin) { 
-       window.focus(); 
-       log("Launched Game_Of_Games"); 
-     } else { 
-       alert("Please enable popups for this site!"); 
-     } 
      stopText(); 
      msg = ""; 
      $output.html(msg); 
+     let rpgGameWin = window.open("./RPG-game/", "_blank"); 
+     if (rpgGameWin) { 
+       window.focus(); 
+       msg = "Shay'her chaaro taraf say ghay'r li'yaa gayaa hay... Kya tum bachaa pao gay?! Let's find out!";
+       playText(msg);
+       log("Launched Game of Adventures: City Under Havoc!"); 
+     } else { 
+       alert("Please enable popups for this site!"); 
+     } 
    } else if (q83.test(q)) { 
      let bookListAppWin = window.open("./Mybooklist/", "_blank"); 
      if (bookListAppWin) { 
@@ -1315,7 +1315,7 @@
      ); 
      if (simonGameWin) { 
        window.focus(); 
-       msg = "Simon kehta hay... let's go!";
+       msg = "Simon kehta hay... let's go! Follow simon, or you're dead" + smirk;
        playText(msg);
        log("Launched Simon"); 
      } else { 
@@ -1324,12 +1324,12 @@
    } else if (q86.test(q)) { 
      msg = ""; 
      $output.html(msg); 
-     let lightMazeWin = window.open("./light-maze/", "_blank"); 
-     if (lightMazeWin) { 
+     let ludoWin = window.open("./ludo/", "_blank"); 
+     if (ludoWin) { 
        window.focus(); 
-       msg = "Ek aainay ko dusray aainay say mila kar, light ka rasta banaa'ee'yay!";
+       msg = "Classical Ludo... simple, yet powerful!";
        playText(msg);
-       log("Launched Light Maze"); 
+       log("Launched Classical Ludo"); 
      } else { 
        alert("Please enable popups for this site!"); 
      } 
@@ -1438,10 +1438,12 @@
        "../yoMovies",
        "./giphy/", 
        "./smash-cube/",
+       "./sodoku",
        "/breakout-mobile",
        "./roseday",
        "../youtube",
        "./piano",
+       "./jokes",
        ];
        let entertainmentAppsWin = window.open( 
        entertainmentApps[Math.floor(Math.random() * entertainmentApps.length)], 
