@@ -559,6 +559,7 @@
        "./smash-cube/",
        "/breakout-mobile",
        "./sodoku",
+       "./ludo",
      ]; 
      } else {
      	games = [ 
@@ -1444,6 +1445,7 @@
        "../youtube",
        "./piano",
        "./jokes",
+       "./ludo",
        ];
        let entertainmentAppsWin = window.open( 
        entertainmentApps[Math.floor(Math.random() * entertainmentApps.length)], 
