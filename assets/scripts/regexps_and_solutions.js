@@ -44,7 +44,7 @@
    q39 = /(what (date|day) will it be tomorrow)|(kal (k(y|i)aa?|k(o|au)n ?s(aa?|i|ee)) (din|day|date|tar(i|ee)kh) ((ho|rah(e|ai)) ?g(aa?|i|ee))|(hon(e|ai) jaa?rah(i|aa?) h(e|ai)))/i, 
    q40 = /monopoly|k((o|au)n)? ?b(an(e|ai)ga)? ?c(rorepati)?|crorepati game/i, 
    q41 = /(canvas(es)?)|((drawings?|arts?|paint(ings?)?|brush) (app|tool))|(((draw|paint)(ing)? karn(i|aa?))|((sketch|canvas|painting)(e?s)? (banaa?n(aa?|e|ai)|karnaa?)) ((chaa?ha?t(a(a|i|y)?|i|ee?) )?h(u|oo|e|ai)n?))/i, 
-   q42 = /(audio (visuali(z|s)er|player))|(play( local)? audio)/i, 
+   q42 = /(audio (visuali(z|s)er|player))|(play local audio)/i, 
    q43 = /breaking bad cast/i, 
    q44 = /b(ody )?m(ass )?i(ndex)?/i, 
    q45 = /^(execute|launch|play( me)?|run) (the )?maze/i, 
@@ -58,7 +58,7 @@
    q53 = 
    /(how to (cook|bake))|(help me( with)? (cook|bake?)(ing)?)|(ingredients)/i, 
    q54 = 
-   /(I'?( ?a)?m (anxious|tired|scared))|(help me (calm down|relax|with my anxiety))|(relaxer)|(thakk? (chuk|gay?)(aa?|i|e) h(u|oo|ai|e)n? (m(e|ai)n?|h(u|a)m))|((mer|h(u|a)maar)(a?i|e) (lag|(f|ph)at)(a?i|e) pa(r|d)(a?i|e) h(e|ai)n?)/i, 
+   /(I'?( ?a)?m (anxious|tired|scared))|(help me (calm down|relax|with my anxiety))|(relaxer)|(thakk? (chuk|gay?)(aa?|i|e) h(u|oo|ai|e)n? (m(e|ai)n?|h(u|a)m))|((mer|h(u|a)maa?r)(a?i|e) (lag|(f|ph)at)(a?i|e) pa(r|d)(a?i|e) h(e|ai)n?)/i, 
    q55 = 
    /(new year countdown)|(((days|time)( left)? (un)?till?|(what time|when) is) new year)|(new year (kab|kitna d(oo|u)r) h(e|ai))/i, 
    q56 = /(typing game)|((open|run|launch|play( me)?) speed( |-)?typer)/i, 
@@ -120,7 +120,7 @@
    q102 = /(I hate you)|(you('?re| are)? stupid)/i,
    q103 = /meri friend ban(o|(e|ai)n?)gi/i,
    q104 = /((m(e|ai)n?|h(u|a)m) b(u|o)h(o|a)t pareshaa?n h(u|oo|e|ai)n?)|(I'?( ?a)?m depressed)/i,
-   q105 = /I hate m(e|yself)/i,
+   q105 = /(I hate m(e|yself))|((mujh(e|ai)|h(u|a)m((e|ai)n?)?|m(e|ai)n?) khud se nafrat (kart(aa?|a?i|e))? ?h(u|oo|e|ai)n?)/i,
    q106 = /(I( just)? need a friend)|(I'?( ?a)?m lonely)/i,
    q107 = /(k(y|i)a )?(m(e|ai)n?|h(u|a)m) khud ?gar(z|j) h(u|oo|e|ai)n?/i,
    q108 = /((k(y|i)a )?(m(e|ai)n?|h(u|a)m) bur(aa?|e|i|ee|ay) h(u|oo|e|ai)n?)|(I'?( ?a)?m bad)/i,
@@ -799,7 +799,7 @@
      let canvasWin = window.open("./canvas-drawing-app-master/", "_blank"); 
      if (canvasWin) { 
        window.focus(); 
-       log("Launched Canvas"); 
+       log("Launched Paint"); 
      } else { 
        alert("Please enable popups for this site!"); 
      } 
@@ -808,7 +808,7 @@
      $output.html(msg); 
    } else if (q42.test(q)) { 
      let audioVisualizerWin = window.open( 
-       "./audio-player-visualizer-master/", 
+       "../soundjam/", 
        "_blank" 
      ); 
      if (audioVisualizerWin) { 
@@ -1076,9 +1076,13 @@
        alert("Please enable popups for this site!"); 
      } 
    } else if (q64.test(q)) { 
+     stopText(); 
+     msg = ""; 
+     $output.html(msg); 
      let jokesAppWin = window.open("./jokes/", "_blank"); 
      if (jokesAppWin) { 
        window.focus(); 
+       playText("Click the button... to generate some random jokes, and make your day!");
        log("Launched Joke Machine"); 
      } else { 
        alert("Please enable popups for this site!"); 
@@ -1418,6 +1422,15 @@
      setTimeout(() => { utterance.onend = ""; }, 10000); 
      $output.html(msg); 
      console.log(msg); 
+     let showRose = window.open( 
+       "./roseday/", "_blank" 
+     ); 
+     if (showRose) { 
+       window.focus(); 
+       log("Showing the rose!"); 
+     } else { 
+       alert("Please enable popups for this site!"); 
+     } 
      $("#message").delay(10000).slideFadeToggle(800); 
      } else if (q94.test(q)) { 
      msg = ""; 
@@ -1436,12 +1449,13 @@
        "../math-flash-cards/", 
        "https://alexs-simon-says.netlify.app/", 
        "https://truth-or-dare-by-alex.netlify.app", 
-       "../yoMovies",
+       "../yoMovies", 
+       "./music",
+       "../soundjam",
        "./giphy/", 
        "./smash-cube/",
        "./sodoku",
        "/breakout-mobile",
-       "./roseday",
        "../youtube",
        "./piano",
        "./jokes",
