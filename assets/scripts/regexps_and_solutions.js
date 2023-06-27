@@ -1278,7 +1278,7 @@
      let rpgGameWin = window.open("./RPG-game/", "_blank"); 
      if (rpgGameWin) { 
        window.focus(); 
-       msg = "Shay'her chaaro taraf say ghay'r li'yaa gayaa hay... Kya tum bachaa pao gay?! Let's find out!";
+       msg = "Shay'here chaaro taraf say gher li'yaa gayaa hay... Kya tum bachaa pao gay?! Let's find out!";
        playText(msg);
        log("Launched Game of Adventures: City Under Havoc!"); 
      } else { 

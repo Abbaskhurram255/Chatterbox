@@ -436,6 +436,9 @@ function startTime() {
   }
   if (hr < 10) {
     hr = "0" + hr;
+    if (hr == "00" && ampm == "am") {
+    	hr = "12";
+    }
   }
   const $time = $("#time");
   msg = hr + ":" + min + ampm;
