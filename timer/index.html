@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" />
+
+    <link rel="stylesheet" href="Style/css/style.css" />
+    <style>
+    	body, html {
+        overflow-x: hidden;
+        width: 100%;
+        }
+    </style>
+  </head>
+
+  <body>
+    <!-- --------------------------- Page background --------------------------- -->
+    <canvas class="page-background"></canvas>
+
+    <div class="views-container">
+      <div class="views">
+        <!-- --------------------------- Swopwatch view --------------------------- -->
+        <div class="stopwatch-view">
+          <canvas class="background"></canvas>
+          <div class="title">Stopwatch</div>
+
+          <div class="timer">00:00:00:00</div>
+
+          <div class="row">
+            <button class="start view-control-button">Start</button>
+            <button class="stop view-control-button">Stop</button>
+            <button class="reset view-control-button">Reset</button>
+          </div>
+        </div>
+
+        <!-- --------------------------- Timer view --------------------------- -->
+        <div class="timer-view hidden">
+          <canvas class="background"></canvas>
+          <div class="title">Timer</div>
+
+          <div class="timer-setting row">
+            <input type="number" class="hours" min="0" max="59" value="00" />: <input type="number" class="minutes" min="0" max="59" value="00" />:
+            <input type="number" class="seconds" min="0" max="59" value="00" />
+          </div>
+
+          <div class="timer" style="display: none">00:00:00</div>
+
+          <div class="row">
+            <button class="start view-control-button">Start</button>
+            <button class="stop view-control-button">Stop</button>
+            <button class="reset view-control-button">Reset</button>
+          </div>
+        </div>
+
+        <!-- --------------------------- Calculator view --------------------------- -->
+        <div class="calculator-view hidden">
+          <div class="title">Calculator</div>
+
+          <div class="dates-diff calculator">
+            <h2>Dates difference</h2>
+            <div class="row">
+              <input type="date" class="date1" />
+              <input type="date" class="date2" />
+              <button class="view-control-button calculate">Calculate</button>
+            </div>
+
+            <div class="result"></div>
+          </div>
+
+          <div class="time-diff calculator row hidden">
+            <h2>Time difference</h2>
+            <div class="row">
+              <input type="time" class="time1" />
+              <input type="time" class="time2" />
+              <button class="view-control-button calculate">Calculate</button>
+            </div>
+
+            <div class="result"></div>
+          </div>
+
+          <div class="birthday calculator row hidden">
+            <h2>Birthday</h2>
+            <div class="row">
+              <input type="date" class="date1" />
+              <button class="view-control-button calculate">Calculate</button>
+            </div>
+
+            <div class="result"></div>
+          </div>
+
+          <div class="row">
+            <button class="dates-diff view-control-button">Date</button>
+            <button class="time-diff view-control-button">Time</button>
+            <button class="birthday view-control-button">Birthday</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- --------------------------- Modes buttons --------------------------- -->
+    <div class="modes-container">
+      <div class="modes">
+        <button class="mode-button stopwatch">
+          <i class="fa-solid fa-stopwatch"></i>
+          Stopwatch
+        </button>
+
+        <button class="mode-button timer">
+          <i class="fa-regular fa-hourglass-half"></i>
+          Timer
+        </button>
+
+        <button class="mode-button calculator">
+          <i class="fa-solid fa-calculator"></i>
+          Date Difference 
+        </button>
+      </div>
+
+    </div>
+
+    <!-- --------------------------- Scripts --------------------------- -->
+    <script src="Js/Build/script.js"></script>
+    <script src="Js/Build/Background.js"></script>
+    <script src="Js/Build/Stopwatch.js"></script>
+    <script src="Js/Build/Timer.js"></script>
+    <script src="Js/Build/Calculator.js"></script>
+  </body>
+</html>
