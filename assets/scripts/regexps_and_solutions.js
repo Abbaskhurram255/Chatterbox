@@ -52,7 +52,7 @@
    q47 = /(world (time|clock|zones))|((time|world) ?zones)/i, 
    q48 = /((image|photo) edit(or)?)|(ayesh'?d?edit)/i, 
    q49 = /^voice ?(notes?|recorder)$/i, 
-   q50 = /(smash cube|(box|slice) game)/i, 
+   q50 = /(smash cube|(box|slice|cube) game)/i, 
    q51 = /(percentage calculator)|(calculate percentage)/i, 
    q52 = /temperature( units)? conver(sion|ter)/i, 
    q53 = 
