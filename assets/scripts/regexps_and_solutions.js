@@ -105,7 +105,7 @@
    q88 = 
    /(you|ayesha?) ?tube/i, 
    q89 = /truth or dare/i, 
-   q90 = /(metronome)|(drums?)/i, 
+   q90 = /metronome/i, 
    q91 = /your? licen(s|c)ed?/i, 
    q92 = /(kis ?n(e|ai) (banaa?ya|create|develop kiy?aa?))|((I )?like (yo)?u)|(you( a|')?re( my)? (cute|sweet(ie)?|lovely|sexy|funny|pyaa?ri|adorable|favou?rite))|((((k(y|i)aa? (tu|to)|acc?hi|ba(d|r)hiy?aa?|(z|j)abardast|alag hi|pyaari?) ch(i|ee)j)|(pyaa?ri|cute|sweet|funny|lovely|sexy|acc?hi|ba(d|r)hiy?a|(z|j)abardast|kaa?bi?l ?(e ?)?tar(ee|i)f) ho))|((tum?|aa?p) ?h(o|e|ai)n? (pyari|cute|sweet|sexy|acc?hi|ba(d|r)hiy?a|(z|j)abardast|kaa?bi?l ?(e ?)?tar(ee|i)f|tar(i|ee)f k(e|i|a(i|y)) kaa?bil))|(ku(r|d)i (b|w)add?i soni?(ye| h(e|ai)))/i,
    q93 = /((I )?love (yo)?u)|((m(e|ai)n?|h(u|a)m) (aa?p|tum|tere) ?(ko|se|sa(y|i)) (chaha?t(aa?|a?i|e)|pyaa?r kart(aa?|i|e)) h(u|oo|e|ai)n?)|(you( a|')?re lovable)|(give me a rose)|(do you love me)|(ph(u|oo)l d((o|e|ai)n?|iji?y?e) ?(aa?p|tum|a(ye|a?i)sha)? (mujh(e|a(i|y))|h(u|a)m(e|ai)n?))/i,
@@ -825,7 +825,7 @@
      stopText(); 
      msg = ""; 
      $output.html(msg); 
-     let ayeshRanslateWin = window.open("../ayeshranslate/", "_blank"); 
+     let ayeshRanslateWin = window.open("./ayeshranslate/", "_blank"); 
      if (ayeshRanslateWin) { 
        window.focus(); 
        msg = "Oho,... zaraa ham bhi to day'khay tumhay kyaa translate karna hay. Jald az jald, language select karkay translate dabaao, or magic day'khoh";
@@ -841,7 +841,7 @@
      let dictionaryWin = window.open("./dictionary/", "_blank"); 
      if (dictionaryWin) { 
        window.focus(); 
-       msg = "English seekh'nee hay?... Bilkul sahi jagaa a'ay ho. Abhi lafz likhkar search dabaao, or lafz kee meaning jaano chut'keeyo may";
+       msg = "English seekhnee hay?... Bilkul sahi jagaa a'ay ho. Abhi ek laf'z likhkar search dabaao, or laf'z kee meaning jaano chut'keeyo may";
        playText(msg);
        log("Launched Dictionary"); 
      } else { 
