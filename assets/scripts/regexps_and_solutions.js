@@ -558,7 +558,7 @@
        "https://truth-or-dare-by-alex.netlify.app", 
        "./RPG-game/", 
        "./smash-cube/",
-       "/breakout-mobile",
+       "./breakout-mobile",
        "./sodoku",
        "./ludo",
      ]; 
@@ -828,7 +828,7 @@
      let ayeshRanslateWin = window.open("./ayeshranslate/", "_blank"); 
      if (ayeshRanslateWin) { 
        window.focus(); 
-       msg = "Oho,... zaraa ham bhi to day'khay tumhay kyaa translate karna hay. Jald az jald, language select karkay translate dabaao, or magic day'khoh";
+       msg = "Oho,... zaraa ham bhi to day'khe tumhay kyaa translate karna hay. Jald az jald language select karkay translate button dabaao, or magic day'khoh";
        playText(msg);
        log("Launched ayeshRansla!or"); 
      } else { 
@@ -841,7 +841,7 @@
      let dictionaryWin = window.open("./dictionary/", "_blank"); 
      if (dictionaryWin) { 
        window.focus(); 
-       msg = "English seekhnee hay?... Bilkul sahi jagaa a'ay ho. Abhi ek laf'z likhkar search dabaao, or laf'z kee meaning jaano chut'keeyo may";
+       msg = "English seekhnee hay?... Bilkul sahi jagaa a'ay ho. Abhi ek lafz likhkar search dabaao, or us lafz kee meaning jaano chut'keeyo may";
        playText(msg);
        log("Launched Dictionary"); 
      } else { 
@@ -1454,13 +1454,14 @@
        "./giphy/", 
        "./smash-cube/",
        "./sodoku",
-       "/breakout-mobile",
+       "./breakout-mobile",
        "../youtube",
        "./piano",
        "./jokes",
        "./ludo",
        "./one-tap-instrument",
        "./ayeshEdit",
+       "./ayeshPapers/",
        ];
        let entertainmentAppsWin = window.open( 
        entertainmentApps[Math.floor(Math.random() * entertainmentApps.length)], 
