@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Creepstper&display=swap" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Bonbon&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tap Music</title>
+    <style>
+  .diamond:before {
+  position: absolute;
+  content: '';
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  transform: rotateX(45deg) rotateZ(45deg);
+  box-shadow: 0px 0px 12px gray;
+}
+
+html, body {margin: 0; height: 100%; width:100%;overflow: hidden}
+    </style>
+</head>
+<body style="background: linear-gradient(135deg, yellow, orange, plum, orchid); bapckground-image: url('music.jpg'); truansform:rotateX(45deg);rotateZ(45deg);translateY(-50%); background-repeat:no-repeat; background-position: fixed; background-size: cover;">
+    <div class="app">
+     <header class="diamondp">
+            <h1 style="background-color: lavender; border-radius:70% 0 90% 0%; box-shadow: brown 9px 3px 66px 9px;border:#9b0 groove 15px; background:#1f9;"><span style="font-stye:italic;font-family:Lobster;margin:0 ! important;color: indigo">Tap</span> <span style="font-family:Bonbon"><span style="color: red">M</span><sub style="color:green">u</sub><span style="color:teal">s</span><sup style="color:orchid">i</sup><span style="color:#802">c</span></span></h1>
+            <p style="text-align:center;margin: 0 5% 0 5%;font-family:Creepster;">Make music, with a tap of your fingers</p>
+        </header>
+    
+    <div class="visual">
+    </div>
+    <div class="pads">
+        <div class="pad1">
+            <audio class="sounds" src="sounds/bubbles.mp3"></audio>
+        </div>
+        <div class="pad2">
+            <audio class="sounds" src="sounds/clay.mp3"></audio>
+        </div>
+        <div class="pad3">
+            <audio class="sounds" src="sounds/confetti.mp3"></audio>
+        </div>
+        <div class="pad4">
+            <audio class="sounds" src="sounds/glimmer.mp3"></audio>
+        </div>
+        <div class="pad5">
+            <audio class="sounds" src="sounds/moon.mp3"></audio>
+        </div>
+        <div class="pad6">
+            <audio class="sounds" src="sounds/ufo.mp3"></audio>
+        </div>
+    </div>
+</div>
+<script src="./index.js"></script>
+</body>
+</html>
