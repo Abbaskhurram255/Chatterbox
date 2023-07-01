@@ -561,6 +561,7 @@
        "./breakout-mobile",
        "./sodoku",
        "./ludo",
+       "./dress%20up",
      ]; 
      } else {
      	games = [ 
