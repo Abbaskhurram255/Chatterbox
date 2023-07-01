@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🕒 World-zones</title>
+    <link rel="icon" href="/src/x.png" type="image/x-icon" />
+    <script src="src/moment.min.js"></script>
+    <script src="src/moment-timezone-with-data-1970-2030.min.js"></script>
+    <link
+      href="src/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+    	<header>AyeshaPT</header>
+      <h1>🕜  World Clock</h1>
+      <select id="city">
+        <option value="">Select a city...</option>
+        <option value="current">Current location 📍</option>
+        <option value="America/New_York">New York 🇺🇲 </option>
+        <option value="Europe/London">London 🇬🇧 </option>
+        <option value="America/Buenos_Aires">Buenos Aires 🇦🇷 </option>
+        <option value="Africa/Nairobi">Nairobi 🇰🇪  </option>
+        <option value="Asia/Dubai">Dubai 🇦🇪  </option>
+        <option value="Asia/Kathmandu">Kathmandu 🇳🇵   </option>
+        <option value="Asia/Singapore">Singapore 🇸🇬    </option>
+        <option value="Asia/Tokyo">Tokyo 🇯🇵 </option>
+        <option value="Pacific/Auckland">Auckland 🇳🇿 </option>
+      </select>
+      <div id="cities">
+        <div class="row" id="karachi">
+          <div class="col-6 city">
+            <h2>Karachi 🇵🇰</h2>
+            <div class="karachi-date"></div>
+          </div>
+          <div class="col-6">
+            <span class="karachi-time"></span>
+            <small class="karachi-time-reference"></small>
+          </div>
+        </div>
+        <div class="row" id="rome">
+          <div class="col-6 city">
+            <h2>Rome 🇮🇹</h2>
+            <div class="rome-date"></div>
+          </div>
+          <div class="col-6">
+            <span class="rome-time"></span>
+            <small class="rome-time-reference"></small>
+          </div>
+        </div>
+        <div class="row" id="bangkok">
+          <div class="col-6 city">
+            <h2>Bangkok 🇹🇭 </h2>
+            <div class="bangkok-date"></div>
+          </div>
+          <div class="col-6">
+            <span class="bangkok-time"></span>
+            <small class="bangkok-time-reference"></small>
+          </div>
+        </div>
+        <div class="row" id="fiji">
+          <div class="col-6 city">
+            <h2>Fiji 🇫🇯 </h2>
+            <div class="fiji-date"></div>
+          </div>
+          <div class="col-6">
+            <span class="fiji-time"></span>
+            <small class="fiji-time-reference"></small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      &copy;2023 <em><strong>AyeshaPT</strong></em>
+      🧕
+    </footer>
+    <script src="src/index.js"></script>
+  </body>
+</html>
