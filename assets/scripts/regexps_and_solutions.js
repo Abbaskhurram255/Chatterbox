@@ -22,7 +22,7 @@
    q19 = 
    /(tts)|(speech engine)|(text to speech)|(ebook to audio(book)?)|((document|text) reader)/i, 
    q20 = /(piano)|(synth(esizer)?)/i, 
-   q21 = /(todos?)|(reminders?)|(remind me to)|((bucket|shopping) list)|(mujh(e|ai) yaa?d dilaa?naa?)|(notes?)/i, 
+   q21 = /(todos?)|(reminders?)|(remind me to)|((bucket|shopping) list)|(mujh(e|ai) yaa?d dilaa?naa?)|(notes?)|(\btodo\b)/i, 
    q22 = /(music)|(songs?)|(jukebox)|(gaa?n(e|ay))/i, 
    q23 = /((weight|mass) conver(sion|ter))|((\b\d*\b )?((k?(ilo)?s?)?g(ram)?s?|pounds?|ounces?|oz) (to|and|in|ko|((equals|(is|are) equal to|=)( how many)?)|(baraa?bar h(e|ai)n?)))/i, 
    q24 = /(random games?)|(games)|(play( me)? a game)/i, 
@@ -45,12 +45,12 @@
    q40 = /monopoly|k((o|au)n)? ?b(an(e|ai)ga)? ?c(rorepati)?|crorepati game/i, 
    q41 = /(canvas(es)?)|((drawings?|arts?|paint(ings?)?|brush) (app|tool))|(((draw|paint)(ing)? karn(i|aa?))|((sketch|canvas|painting)(e?s)? (banaa?n(aa?|e|ai)|karnaa?)) ((chaa?ha?t(a(a|i|y)?|i|ee?) )?h(u|oo|e|ai)n?))/i, 
    q42 = /(audio (visuali(z|s)er|player))|(play local audio)/i, 
-   q43 = /breaking bad cast/i, 
-   q44 = /b(ody )?m(ass )?i(ndex)?/i, 
-   q45 = /^(execute|launch|play( me)?|run) (the )?maze/i, 
+   q43 = /(translat(e|or))|(english to (hindi|urdu|chinese|german|spanish|arabic|french|italian|russian))|((hindi|urdu|arabic|spanish|russian|chinese|german) to english)/i, 
+   q44 = /dictionary/i, 
+   q45 = /^(execute|launch|play( me)?|run) (the )?mai?ze/i, 
    q46 = /calendar/i, 
-   q47 = /lll/i, 
-   q48 = /(space invaders)|(invasion game)/i, 
+   q47 = /(world (time|clock|zones))|((time|world) ?zones)/i, 
+   q48 = /((image|photo) edit(or)?)|(ayesh'?d?edit)/i, 
    q49 = /^voice ?(notes?|recorder)$/i, 
    q50 = /(smash cube|(box|slice) game)/i, 
    q51 = /(percentage calculator)|(calculate percentage)/i, 
@@ -64,7 +64,7 @@
    q56 = /(typing game)|((open|run|launch|play( me)?) speed( |-)?typer)/i, 
    q57 = 
    /((expenses?|budgets?|wages?|incomes?|bills?|money) (tracker|calculator))|(track my (budgets?|wages?|bills?|incomes?|expenses?|(pocket )?money))/i, 
-   q58 = /(stop ?watch)|(timer)|(counter ?clock)|(count ?down)|(ulti ginti)/i, 
+   q58 = /(stop ?watch)|(timer)|(counter ?clock)|(count ?down)|(^ulti ginti$)/i, 
    q59 = /(miner of lava)|(lava game)/i, 
    q60 = 
    /((loan|mortgage) (calculator|payment))|(calculate( my)? (loan|mortgage))|(how much (do )?(I|people) owe)|(l(o|au)gon? k(a(a|i)?|e) kitn(a(a|i)?|e) kar(z|j)(a(a|i)?|e) h(e|ai)n?)|(mera kar(j|z)a)|((m(e|ai)n?|h(u|a)m) kar(j|z)(i|ee| ?dar) h(u|oo|e|ai)n?)/i, 
@@ -76,7 +76,7 @@
    q66 = 
    /((motivate|inspire) (me|karo (h(u|a)m(e|ai)n?|mujh(e|ai))))|(I'?( ?a)?m demotivated)|(motivat(ional|ing) app)/i, 
    q67 = /((space ?(X|station)|nasa) (data|live))|(live( outer)? space)/i, 
-   q68 = /(snap ?shots)|(landscapes)|(wall ?papers?)|((kuch|some) (photos|pictures|images))/i, 
+   q68 = /(snap ?shots)|(landscapes)|((wall|ayesha?) ?papers?)|((kuch|some) (photos|pictures|images))/i, 
    q69 = /features/i, 
    q70 = /(trivia)|(quiz)|(questionnares)/i, 
    q71 = /(ratings? for( tv)? (series|serials?))|((tv )?series app)/i, 
@@ -89,7 +89,7 @@
    /(pass(code|word|phrase) generator)|(random pass(code|word))/i, 
    q77 = /the (logic game|constructor)/i, 
    q78 = 
-   /(fisave)|(net ?worth track(er|ing))|(track (my )?net ?worth)/i, 
+   /(fisave)|(net ?worth track(er|ing))|(track (my )?net ?worth)|((my|meri) savings)|(mer(e|ay) p(e|ai)s(e|a?y) calculate karo)|(^mer(e|ay) p(e|ai)s(e|a?y)$)/i, 
    q79 = 
    /(aa?dat((e|ai)n?)? to(r|d)ni h(e|ai)n? m(ai|e)ne)|((break|track) ((a |my )(bad )?habits?|(a( bad)? habit|(bad )?habits) of mine))/i, 
    q80 = 
@@ -473,8 +473,9 @@
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
    } else if (q18.test(q)) { 
-     let calcWin = window.open("./girly-calc/", "_blank"); 
-     if (calcWin) { 
+     let calcApps = ["./girly-calc/", "./ayeshculator/"]
+     let calcAppsWin = window.open(calcApps[Math.floor(Math.random() * calcApps.length)], "_blank"); 
+     if (calcAppsWin) { 
        window.focus(); 
        log("Launched Calculator"); 
      } else { 
@@ -821,27 +822,31 @@
      msg = ""; 
      $output.html(msg); 
    } else if (q43.test(q)) { 
-     let bBadCastWin = window.open("../Breaking-Bad-Cast/", "_blank"); 
-     if (bBadCastWin) { 
-       window.focus(); 
-       log("Launched BBad Cast app"); 
-     } else { 
-       alert("Please enable popups for this site!"); 
-     } 
      stopText(); 
      msg = ""; 
      $output.html(msg); 
+     let ayeshRanslateWin = window.open("../ayeshranslate/", "_blank"); 
+     if (ayeshRanslateWin) { 
+       window.focus(); 
+       msg = "Oho,... zaraa ham bhi to day'khay tumhay kyaa translate karna hay. Jald az jald, language select karkay translate dabaao, or magic day'khoh";
+       playText(msg);
+       log("Launched ayeshRansla!or"); 
+     } else { 
+       alert("Please enable popups for this site!"); 
+     } 
    } else if (q44.test(q)) { 
-     let bmiCalcWin = window.open("../bmi-calculator/", "_blank"); 
-     if (bmiCalcWin) { 
-       window.focus(); 
-       log("Launched BMI Calculator"); 
-     } else { 
-       alert("Please enable popups for this site!"); 
-     } 
      stopText(); 
      msg = ""; 
      $output.html(msg); 
+     let dictionaryWin = window.open("./dictionary/", "_blank"); 
+     if (dictionaryWin) { 
+       window.focus(); 
+       msg = "English seekh'nee hay?... Bilkul sahi jagaa a'ay ho. Abhi lafz likhkar search dabaao, or lafz kee meaning jaano chut'keeyo may";
+       playText(msg);
+       log("Launched Dictionary"); 
+     } else { 
+       alert("Please enable popups for this site!"); 
+     } 
    } else if (q45.test(q)) { 
      let theMazeWin = window.open( 
        "https://alexs-maze-game.netlify.app/", 
@@ -868,21 +873,23 @@
      msg = ""; 
      $output.html(msg); 
    } else if (q47.test(q)) { 
-     let replaceMeWin = window.open("./replace-me-too/", "_blank"); 
-     if (replaceMeWin) { 
-       window.focus(); 
-       log("Launched replaceMe Later!"); 
-     } else { 
-       alert("Please enable popups for this site!"); 
-     } 
      stopText(); 
      msg = ""; 
      $output.html(msg); 
-   } else if (q48.test(q)) { 
-     let spInvadersWin = window.open("./space-invaders/", "_blank"); 
-     if (spInvadersWin) { 
+     let timeZoneAppWin = window.open("./world-zones/", "_blank"); 
+     if (timeZoneAppWin) { 
        window.focus(); 
-       log("Launched Space Invaders"); 
+       msg = "Dunya bhar kaa time jaano,... sirf ek hee app may";
+       playText(msg);
+       log("Launched worldZones!"); 
+     } else { 
+       alert("Please enable popups for this site!"); 
+     } 
+   } else if (q48.test(q)) { 
+     let photoEditorWin = window.open("./ayeshEdit/", "_blank"); 
+     if (photoEditorWin) { 
+       window.focus(); 
+       log("Launched Ayesh'dEdit!"); 
      } else { 
        alert("Please enable popups for this site!"); 
      } 
@@ -1005,8 +1012,7 @@
        alert("Please enable popups for this site!"); 
      } 
    } else if (q58.test(q)) {
-     let timerApps = ["./timer/", "./timer-v2/"];
-     let timerAppWin = window.open(timerApps[Math.floor(Math.random() * timerApps.length)], "_blank"); 
+     let timerAppWin = window.open("./timer","_blank"); 
      if (timerAppWin) { 
        window.focus(); 
        log("Launched Timer"); 
@@ -1127,16 +1133,18 @@
      msg = ""; 
      $output.html(msg); 
    } else if (q68.test(q)) { 
-     let randImgsGeneratingAppWin = window.open("../SnapShots/", "_blank"); 
-     if (randImgsGeneratingAppWin) { 
-       window.focus(); 
-       log("Launched SnapShots"); 
-     } else { 
-       alert("Please enable popups for this site!"); 
-     } 
      stopText(); 
      msg = ""; 
      $output.html(msg); 
+     let ayeshPapersWin = window.open("./ayeshPapers/", "_blank"); 
+     if (ayeshPapersWin) { 
+       window.focus(); 
+       log("Launched ayeshPapers"); 
+       msg = "Wallpaper chahi'yay... Abhi download karo search kar'kay. Bas wallpaper dhoondtay hee use pe right click karo, or download link ka button dabaao. All the images are royalty free, so you don't have to worry about the copyright claims. Image download karo... or karo enjoy!";
+       playText(msg);
+     } else { 
+       alert("Please enable popups for this site!"); 
+     } 
    } else if (q69.test(q)) { 
      msg = ""; 
      $output.text(msg); 
@@ -1320,7 +1328,7 @@
      ); 
      if (simonGameWin) { 
        window.focus(); 
-       msg = "Simon kehta hay... let's go! Follow simon, or you're dead" + smirk;
+       msg = "Simon kehta hay... let's go! Follow simon, or you're dead";
        playText(msg);
        log("Launched Simon"); 
      } else { 
@@ -1451,6 +1459,8 @@
        "./piano",
        "./jokes",
        "./ludo",
+       "./one-tap-instrument",
+       "./ayeshEdit",
        ];
        let entertainmentAppsWin = window.open( 
        entertainmentApps[Math.floor(Math.random() * entertainmentApps.length)], 
