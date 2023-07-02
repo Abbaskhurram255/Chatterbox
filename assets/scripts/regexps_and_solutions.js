@@ -562,6 +562,8 @@
        "./sodoku",
        "./ludo",
        "./dress%20up",
+       "./muskyBird/",
+       "./Rock-Paper-Scissor-master", 
      ]; 
      } else {
      	games = [ 
@@ -587,7 +589,7 @@
        "https://alexs-simon-says.netlify.app/", 
        "./light-maze/", 
        "https://truth-or-dare-by-alex.netlify.app", 
-       "https://vue-jsnake.netlify.app/"
+       "https://vue-jsnake.netlify.app/",
      ]; 
      }
      let gamesWin = window.open( 
@@ -662,9 +664,8 @@
    } else if (q29.test(q)) { 
      let rockPSWin = window.open( 
        "./Rock-Paper-Scissor-master/", 
-       "_blank", 
-       "width=830,height=710,resizable=no,toolbar=no,menubar=no" 
-     ); 
+       "_blank"
+       );
      if (rockPSWin) { 
        window.focus(); 
        log("Launched Rock Paper Scissor"); 
@@ -1456,6 +1457,8 @@
        "./smash-cube/",
        "./sodoku",
        "./breakout-mobile",
+       "./muskyBird/",
+       "./Rock-Paper-Scissor-master", 
        "../youtube",
        "./piano",
        "./jokes",
