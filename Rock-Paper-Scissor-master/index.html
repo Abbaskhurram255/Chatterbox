@@ -3,42 +3,105 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./style.css" />
-    <title>Rock paper and scissors</title>
+    <title>Rock, Paper, Scissors</title>
+
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./style/page_header.css" />
+    <link rel="stylesheet" href="./style/pick_menu.css" />
+    <link rel="stylesheet" href="./style/result.css" />
+    <link rel="stylesheet" href="./style/rules.css" />
+    <link rel="stylesheet" href="./style/style.css" />
   </head>
-  <body>
-    <section class="game">
+
+  <body class="normal">
+    <header class="page-header">
+      <div class="logo">
+        <img src="./images/logo.png" alt="logo-image" class="normal" />
+        <img src="./images/logo-bonus.png" alt="logo-image" class="bonus" />
+      </div>
+
       <div class="score">
-        <div class="player-score">
-          <h2>Player</h2>
-          <p>0</p>
+        <span>SCORE</span>
+        <div class="number">0</div>
+      </div>
+    </header>
+
+    <main>
+      <div class="pick-menu">
+        <button class="change-game">change game</button>
+
+        <div class="normal row">
+          <div class="pick-option paper">
+            <img src="./images/icon-paper.png" alt="icon-paper" />
+          </div>
+
+          <div class="pick-option scissors">
+            <img src="./images/icon-scissors.png" alt="icon-scissors" />
+          </div>
+
+          <div class="pick-option rock">
+            <img src="./images/icon-rock.png" alt="icon-rock" />
+          </div>
         </div>
-        <div class="computer-score">
-          <h2>Computer</h2>
-          <p>0</p>
+
+        <div class="bonus row">
+          <div class="pick-option paper">
+            <img src="./images/icon-paper.png" alt="icon-paper" />
+          </div>
+
+          <div class="pick-option scissors">
+            <img src="./images/icon-scissors.png" alt="icon-scissors" />
+          </div>
+
+          <div class="pick-option rock">
+            <img src="./images/icon-rock.png" alt="icon-rock" />
+          </div>
+
+          <div class="pick-option lizard">
+            <img src="./images/icon-lizard.png" alt="icon-lizard" />
+          </div>
+
+          <div class="pick-option spock">
+            <img src="./images/icon-spock.png" alt="icon-spock" />
+          </div>
         </div>
       </div>
 
-      <div class="intro">
-        <h1>Rock Paper and Scissors</h1>
-        <button>Let's Play</button>
-      </div>
-
-      <div class="match fadeOut">
-        <h2 class="winner">Choose an option</h2>
-        <div class="hands">
-          <img class="player-hand" src="./assets/rock.png" alt="" />
-          <img class="computer-hand" src="./assets/rock.png" alt="" />
+      <div class="result hidden">
+        <div class="player-pick">
+          <div class="text">YOU PICKED</div>
+          <div class="pick"></div>
         </div>
-        <div class="options">
-          <button class="rock">rock</button>
-          <button class="paper">paper</button>
-          <button class="scissors">scissors</button>
+
+        <div class="verdict hidden">
+          <div class="text">YOU LOSE</div>
+          <button class="play-again">PLAY AGAIN</button>
+        </div>
+
+        <div class="enemy-pick">
+          <div class="text">THE HOUSE PICKED</div>
+          <div class="pick"></div>
         </div>
       </div>
-    </section>
+    </main>
 
-    <script src="app.js"></script>
+    <button class="rules-button">RULES</button>
+    <div class="rules-wrapper hidden">
+      <div class="rules">
+        <header>
+          <div class="title">RULES</div>
+          <div class="close"></div>
+        </header>
+        <img src="./images/image-rules.png" alt="rules-image" class="normal" />
+        <img src="./images/image-rules-bonus.png" alt="rules-image" class="bonus" />
+      </div>
+    </div>
+
+
+    <script src="script.js"></script>
   </body>
 </html>
