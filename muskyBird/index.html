@@ -230,17 +230,20 @@
                 if (ctx.isPointInPath(bird.options.x + bird.options.width / 2, bird.options.y + bird.options.height / 2)) {//判断鸟的中心点是不是在管道路径上
                     clearInterval(timer);//鸟的中心点在管道路径上就清除定时器
                     console.log(score);//输出分数
-                    alert("Final score："+score);
+                    alert(`Final score：${score}\nThe game will reload automatically`);
+                    window.location.reload();
 
                 } else if (bird.options.y + bird.options.height / 2 < 0 || bird.options.y + bird.options.height / 2 > 488) {
                     clearInterval(timer);
                     console.log(score);//输出分数
-                    alert("Final score："+score);
+                    alert(`Final score：${score}\nThe game will reload automatically`);
+                    window.location.reload();
 
                 }
                 sc.innerHTML= "Final score："+score;
                 ctx.beginPath();//开始新路径，防止管道路径出现重影
             }, 1000 / 30);
+            
 
             cvs.addEventListener("click", function () {
                 bird.options.speedY = -5;
