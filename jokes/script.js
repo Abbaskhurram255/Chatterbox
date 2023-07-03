@@ -58,3 +58,7 @@ function tellMeAJoke(joke) {
 // Event Listeners
 button.addEventListener('click', getJokes);
 audioElement.addEventListener('ended', toggleButton);
+
+document.body.onload = () => {
+	window.setTimeout(() => { button.click()}, 3000);
+}
