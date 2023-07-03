@@ -135,10 +135,10 @@ class TimerView {
     this.background.resetAnimation();
 
     this.stopped = true;
-    this.timer_container.innerText = "00:00:00";
+    this.timer_container.innerText = "00:03:00";
     this.time = [0, 0, 0];
     this.hours_input.value = "00";
-    this.minutes_input.value = "00";
+    this.minutes_input.value = "03";
     this.seconds_input.value = "00";
 
     this.timer_container.style.display = "none";
