@@ -30,7 +30,7 @@
    q26 = /sodoku/i, 
    q27 = /^(play( me)?|run|launch|execute|open) hangman/i, 
    q28 = /^(play( me)?|run|launch|execute|open) pac-?man(ia)?/i, 
-   q29 = /^(play( me)?|run|launch|execute|open) (rock|stone) paper scissors?/i, 
+   q29 = /(rock|stone) paper scissors?/i, 
    q30 = /(lyrics)|((encycl|lyric|wiki)o?pedia)/i, 
    q31 = /((crypto)?currency)|(exchange rates?)|(\b\w\w\w\b to \b\w\w\w\b)/i, 
    q32 = /((what )?day of year( is it)?)|((aa?j )?saa?l ka k(o|au)n ?saa? din h(e|ai|a?y))|(saa?l ka din number)|(din number is saa?l ka)/i, 
@@ -60,11 +60,11 @@
    q54 = 
    /(I'?( ?a)?m (anxious|tired|scared))|(help me (calm down|relax|with my anxiety))|(relaxer)|(thakk? (chuk|gay?)(aa?|i|e) h(u|oo|ai|e)n? (m(e|ai)n?|h(u|a)m))|((mer|h(u|a)maa?r)(a?i|e) (lag|(f|ph)at)(a?i|e) pa(r|d)(a?i|e) h(e|ai)n?)/i, 
    q55 = 
-   /(new year countdown)|(((days|time)( left)? (un)?till?|(what time|when) is) new year)|(new year (kab|kitna d(oo|u)r) h(e|ai))/i, 
+   /(new year countdown)|(((days|time)( left)? (un)?till?|(what time|when) is) (new year|20\d\d))|((new year|(year )?20\d\d) (kab|kis time|kitna d(oo|u)r|m(e|ai)n? kit ?n(aa?|i) (time|der)) h(e|ai))/i, 
    q56 = /(typing game)|((open|run|launch|play( me)?) speed( |-)?typer)/i, 
    q57 = 
    /((expenses?|budgets?|wages?|incomes?|bills?|money) (tracker|calculator))|(track my (budgets?|wages?|bills?|incomes?|expenses?|(pocket )?money))/i, 
-   q58 = /(stop ?watch)|(timer)|(counter ?clock)|(count ?down)|(^ulti ginti$)/i, 
+   q58 = /(stop ?watch)|(timer)|(counter ?clock)|(^count ?down$)|(^ulti ginti$)|((calculate )?date differences?)/i, 
    q59 = /(miner of lava)|(lava game)/i, 
    q60 = 
    /((loan|mortgage) (calculator|payment))|(calculate( my)? (loan|mortgage))|(how much (do )?(I|people) owe)|(l(o|au)gon? k(a(a|i)?|e) kitn(a(a|i)?|e) kar(z|j)(a(a|i)?|e) h(e|ai)n?)|(mera kar(j|z)a)|((m(e|ai)n?|h(u|a)m) kar(j|z)(i|ee| ?dar) h(u|oo|e|ai)n?)/i, 
@@ -95,7 +95,7 @@
    q80 = 
    /(habits? build(er|ing))|(help( me)? (with building|build) a( good)? habit)/i, 
    q81 = /((units?|\bmeters?\b|f(oo|ee)t|area|minutes?|seconds?|hours?|time|measure|°?(c(elsius|entigrade)?|f(ahrenheit)?|k(elvin)?)) (to|conver(sion|ter)))|(to (\bmeters?\b|f(oo|ee)t|minutes?|seconds?|hours?|time|measure|°?(c(elsius|entigrade)?|f(ahrenheit)?|k(elvin)?)))/i, 
-   q82 = /(^game of (adventure|dragon)s?$)|((adventur(ous|e)|dragon|city|castle) game)/i, 
+   q82 = /(^game of (adventure|dragon)s?$)|((adventur(ous|e)|dragon|dinosaur|city|castle) game)/i, 
    q83 = /(my( fave?(orite)?)? ?books?'? ?list)|(books? (in|to) my wishlist)/i, 
    q84 = /(math flash ?cards)|((arithmetic|math) game)/i, 
    q85 = /simon/i, 
@@ -125,10 +125,10 @@
    q107 = /(k(y|i)a )?(m(e|ai)n?|h(u|a)m) khud ?gar(z|j) h(u|oo|e|ai)n?/i,
    q108 = /((k(y|i)a )?(m(e|ai)n?|h(u|a)m) bur(aa?|e|i|ee|ay) h(u|oo|e|ai)n?)|(I'?( ?a)?m bad)/i,
    q109 = /(zodiac|star) sign/i,
-    q110 = /((age|uma?r)( k(i|y)aa? h(e|ai))? ?(aa?p ?ki|tumhaa?ri))|((aa?p ?ki|tumhaa?ri) uma?r)/i,
-    q111 = /hamaa?ri pasand((e|ai)n?)? kitni milti julti h(e|ai)n?/i,
-    q112 = /(can'?t? you feel the chemistry between us)|(k(i|y)aa? (tum?|aa?p)( hamaa?r(e|ay) darmyaa?n ?(ki|(hone )?wali|(kisi|ek)( kisam ki)?))? chemistry( ko)? mehsus( nahi)? kar (rahi|sakti)( h(o|ai|e)n?)?)/i,
-    q113 = /crap|brat|fool|(mother)?fuck(er)?s?|mf|mofo|twats?|cunts?|cock(biter|sucker)?s?|boobs?|morons?|douche?(bag)?s?|pricks?|dicks?|(ass|arse) ?(hole)?s?|dick(head)?s?|fag(got)?|nigg?(a|er)|fucking|f\*cking|f\*ck|bitch|b\*tch|shit|sh\*t|fool|dumb|couch potato|\*ssh\*l\*|\*\*\*\*|c\*ck|\*\*\*\*sucker|c\*cks\*ck\*r|\*\*\*\*|c\*nt|dickhead|d\*c\*h\*a\*|\*\*\*\*|f\*c\*|\*\*\*\*wit|f\*ckw\*t|fuk|f\*k|fuking|f\*k\*ng|mother\*\*\*\*er|m\*th\*rf\*ck\*r|\*\*\*\*\*\*|n\*gg\*r|pussy|p\*ssy|\*\*\*\*|sh\*t|wanker|w\*nk\*r|wankers|w\*nk\*rs|whore|wh\*r\*|slag| sl\*g|\*\*\*\*\*|b\*tch|f u c k|f\*c\*|b.i.t.c.h|b\*tch|d-i-c-k|d\*\*\*/i,
+   q110 = /((age|uma?r)( k(i|y)aa? h(e|ai))? ?(aa?p ?ki|tumhaa?ri))|((aa?p ?ki|tumhaa?ri) uma?r)/i,
+   q111 = /hamaa?ri pasand((e|ai)n?)? kitni milti julti h(e|ai)n?/i,
+   q112 = /(can'?t? you feel the chemistry between us)|(k(i|y)aa? (tum?|aa?p)( hamaa?r(e|ay) darmyaa?n ?(ki|(hone )?wali|(kisi|ek)( kisam ki)?))? chemistry( ko)? mehsus( nahi)? kar (rahi|sakti)( h(o|ai|e)n?)?)/i,
+   q113 = /crap|brat|fool|(mother)?fuck(er)?s?|mf|mofo|twats?|cunts?|cock(biter|sucker)?s?|boobs?|morons?|douche?(bag)?s?|pricks?|dicks?|(ass|arse) ?(hole)?s?|dick(head)?s?|fag(got)?|nigg?(a|er)|fucking|f\*cking|f\*ck|bitch|b\*tch|shit|sh\*t|fool|dumb|couch potato|\*ssh\*l\*|\*\*\*\*|c\*ck|\*\*\*\*sucker|c\*cks\*ck\*r|\*\*\*\*|c\*nt|dickhead|d\*c\*h\*a\*|\*\*\*\*|f\*c\*|\*\*\*\*wit|f\*ckw\*t|fuk|f\*k|fuking|f\*k\*ng|mother\*\*\*\*er|m\*th\*rf\*ck\*r|\*\*\*\*\*\*|n\*gg\*r|pussy|p\*ssy|\*\*\*\*|sh\*t|wanker|w\*nk\*r|wankers|w\*nk\*rs|whore|wh\*r\*|slag| sl\*g|\*\*\*\*\*|b\*tch|f u c k|f\*c\*|b.i.t.c.h|b\*tch|d-i-c-k|d\*\*\*/i,
    q114 = /^bewafaa?$/i;
   
  function ask() { 
@@ -143,7 +143,7 @@
        /^[a-z\s]+$/i.test(userName) && 
        userName != "" 
      ) { 
-       msg += ` ${userName} ji? Bara adhura sa ${cry} ${cry2}`; 
+       msg += ` ${userName} ji? Badaa adhura sa ${cry} ${cry2}`; 
      } else { 
        msg += "? Bilkul adhura sa!" + cry + cry2; 
      } 
@@ -334,6 +334,7 @@
        }  else if (age >= 40) {
        	msg += "<br>Don't worry, age doesn't matter... Not to me at least!<br>Aap mayray leeyay ab bhi athaara saal kay no jawaan hi ho!" + hearts;
        console.log(msg);
+       sound("ily");
        }
        } 
      } else { 
@@ -356,6 +357,7 @@
          console.log(msg); 
        } else if (age >= 40) {
        	msg += "<br>Don't worry, age doesn't matter... Not to me at least!<br>Aap mayray leeyay ab bhi athaara saal kay no jawaan hi ho!" + hearts;
+       sound("ily");
        console.log(msg);
        }
        }
@@ -547,7 +549,6 @@
        "./hangman-master/", 
        "./Monopoly-master", 
        "https://alexs-maze-game.netlify.app/", 
-       "./canvas-drawing-app-master", 
        "./typing-game/", 
        "./mem-game/", 
        "../foto-flick/", 
@@ -1090,7 +1091,7 @@
      let jokesAppWin = window.open("./jokes/", "_blank"); 
      if (jokesAppWin) { 
        window.focus(); 
-       playText("Click the button... to generate some random jokes, and make your day!");
+       playText("Click the button to generate some random jokes, and make your day!");
        log("Launched Joke Machine"); 
      } else { 
        alert("Please enable popups for this site!"); 
@@ -1406,7 +1407,7 @@
      showLicense(); 
    } else if (q92.test(q)) { 
      $("#message").slideFadeToggle(800); 
-     msg = "Jaan'na chahtay ho kis nay banaaya mujhay? Ek khubsurat si larki nay! Actually, mujhe bananay wali kaa naam bhi khud Ayesha hee hay --- <em>(Ayesha Mehnaaz!)</em>... Surprise!"; 
+     msg = "Jaan'na chahtay ho kis nay banaaya mujhay? Ek khubsurat si larki nay! Actually, mujhe bananay wali kaa naam bhi khud Ayesha hee hay... <em>(Ayesha Mehnaaz!)</em>... Surprise!"; 
      $output.html(msg); 
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
