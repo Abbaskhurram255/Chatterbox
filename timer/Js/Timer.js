@@ -94,7 +94,7 @@ class TimerView {
 
     this.timer_setting_container = this.container.querySelector(".timer-setting");
     this.timer_container = this.container.querySelector(".timer");
-    this.time = [0, 0, 0]; // h, m, s
+    this.time = [0, 3, 0]; // h, m, s
     this.timer_interval = null;
     this.stopped = true;
 
@@ -136,7 +136,7 @@ class TimerView {
 
     this.stopped = true;
     this.timer_container.innerText = "00:03:00";
-    this.time = [0, 0, 0];
+    this.time = [0, 3, 0];
     this.hours_input.value = "00";
     this.minutes_input.value = "03";
     this.seconds_input.value = "00";
