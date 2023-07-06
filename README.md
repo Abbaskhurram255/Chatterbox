@@ -14,49 +14,57 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
 
 *   #### _Built-in apps_
 
-    *   Audio Player + visualizer
+    *   
     *   Bad Habit Tracker: track your bad habits, today!
-    *   Dictionary
-    *   ayeshRanslate: Let I... Shranslate for you!
-    *   ayeshCulator
     *   Calendar
     *   CaloTracker (Work-in-progress/beta)
     *   Simple Canvas/Drawing App (beta)
-    *   Currency Converter
-    *   Expense Tracker
-    *   Fisave: Net-worth Tracking!
     *   Habit Helper: build a new habit, and a good one!
-    *   Jukebox: gaane!
-    *   
     *   Text Reader (can read you any sort of text, loudly!)
-    *   Live Weather: Learn the weather of any town in Hindi!
+    *   Live Weather: Learn the weather of any town... in Hindi!
     *   Lyricopedia: A Two-in-one Lyrics app/ Encyclopedia
     *   Recipe app: Learn How to Cook!
-    *   Piano (beta)
-    *   Metronome: Learn to play music... on time!
-    *   Mortgage/Loan Calculator
-    *   Motivator: No More Emptiness Inside!
     *   MovieDB: A Detailed Movie Database
-    *   MyBookList: Your Very-Own Personal Wishlist for Books
-    *   
-    *   New Year Countdown
-    *   Password Generator
-    *   Percentage Calculator
-    *   Quotes app
-    *   Joke Machine (English only, sorry!)
-    *   Relaxer: For Moments When You're Feeling Anxiety, or Stress
-    *   Temperature Units Converter
+    *   MyBookList: Your Very-Own Personal Wishlist for Books  
+    *   Relaxer: For Moments When You're Having Anxiety, or Stress
     *   ayeshGIFs: Say Goodbye to Boredom with these animated pictures!
     *   ayeshPapers: Download wallpapers for your home screen!
     *   Space data app
-    *   Stopwatch/ Timer
-    *   Todo/Reminder
-    *   Unit Converter
+    *   Motivator: No More Emptiness Inside!
     *   Voice-controlled PDF Viewer/ Book Reader (again, Speech Recognition isn't supported by browsers other than Chrome & Samsung Internet)
-    *   Voice Notes
-    *   Weight Units Converter
+ 
+    * #### Meeting, and Todo
+    *   Todo/ Reminder
     *   Work-Day Scheduler
+    *   Voice Notes
+ 
+    * ##### Word-processing
+    *   Dictionary
+    *   ayeshRanslate: Let I... Shranslate for you!
+ 
+    * ##### Conversion, and Math
+    *   ayeshCulator
+    *   Currency Converter
+    *   Stopwatch/ Timer
+    *   Expense Tracker
+    *   Mortgage/Loan Calculator
+    *   Fisave: Net-Worth Tracking!
+    *   Percentage Calculator
+    *   New-Year Countdown
+    *   Weight Units Converter
+    *   Temperature Units Converter
 
+    * ##### Generators
+    *   Password Generator
+    *   Quotes app
+    *   Joke Machine (English only, sorry!)
+   
+    * ##### Music
+    *   Simple Piano (beta)
+    *   Tap Music!: A One-Tap Instrument
+    *   Metronome: Learn to play music... on time!
+    *   Jukebox: gaane!
+ 
 *   #### _Built-in games_
 
     *   Smash Cube
@@ -78,7 +86,7 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
     *   
     *   Tic Tac Toe
     *   The Construstor, a game of logic (beta)
-    *   Trivia game: a game of questionnaires to f up your mind!
+    *   Trivia game: a game of questionnaires to test your intelligence, and f up your mind!
     *   Truth or Dare
 
 
@@ -86,6 +94,6 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
 
 * * *
 
-1.0  
+v1.0.1
 
 <center>Changelogs will be listed here</center>
