@@ -30,9 +30,9 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
     *   Habit Helper: build a new habit, and a good one! <beta>
  
     * ##### Images
-    * ayeshEdit: A Simple Photo Editor!
+    * ayesh'dEd_it²!: I should Edit It 2oo!... A Simple Photo Editor! (Otherwise referred to as ayeshEdit, simply)
     * ayeshGIFs: Say Goodbye to Boredom with these animated pictures!
-    *   ayeshPapers: Download wallpapers for your home screen!
+    * ayeshPapers: Download wallpapers for your home screen!
  
     * ##### Meeting, Work and Shopping
     *   Todo/ Reminder
@@ -40,9 +40,9 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
     *   Voice Notes
  
     * ##### Word-processing
-    *   Dictionary
-    *   ayeshRanslate: Let I... Shranslate for you!
-    *   Lyricopedia: A Two-in-one Lyrics app/ Encyclopedia
+    *   Ayeshnary: An English Dictionary!
+    *   ayeshRanslate: Let I... Shranslate it, for you!
+    *   ayeshPedia: A Two-in-one Lyrics app/ Encyclopedia (otherwise referred to as Lyricopedia)
     *   book2Audio (can read you any sort of text from a book or an article, loudly!) <beta, WIP>
     *   Voice-controlled PDF Viewer/ Book Reader (again, Speech Recognition isn't supported by browsers other than Chrome, Safari & Samsung Internet)
  
