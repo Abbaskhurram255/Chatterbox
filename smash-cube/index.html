@@ -312,7 +312,9 @@ document.body.onload = () => {
 	backgrMusic.volume = 0.7;
 	backgrMusic.autoplay = true;
 	backgrMusic.loop = true;
-	backgrMusic.play();
+	window.setTimeout(() => {
+		backgrMusic.play();
+	}, 2500);
 	getSoundAndFadeAudio(document.querySelector("#audio"));
 };
 
