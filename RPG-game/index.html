@@ -9,8 +9,26 @@
 	<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"> 
 	<link rel="shortcut icon" href="favicon.ico" />
 </head>
+<style>
+	body { background: url("assets/background.jpg") center fixed; background-size: cover; background-repeat: no-repeat; background-position: fixed;}
+	#warning {
+		color: red;
+		font-weight: bold;
+		/*font-family: cursive;*/
+		animation: blink 1s infinite;
+		-webkit-animation: blink 1s infinite;
+	}
+	@keyframes blink {
+		from { color:red;}
+		to { color:black;}
+	}
+	@-webkit-keyframes blink {
+		from { color:red;}
+		to { color:black;}
+	}
+</style>
 <body>
-	<h1 id="title">City Under Havoc... 'Cause Evil's Here</h1>
+	<h1 id="title" stplyle="borpder: 6px solid green; border-radius: 40px; box-shadow: 8px 12px; color: brownred;">City Under Havoc... 'Cause Evil's Here</h1>
 	<div class="wrapper grid-container-mainNormal grid-container-shared">
 		<div class="battleLogArea innerArea"></div>
 		<div class="placesArea innerArea">
@@ -20,7 +38,7 @@
 				<div class="battlePlace tc"><img class="placePhoto" src="assets/forest.jpg"><br><div class="center"><button class="actionButton" id="Place1">Forest</button></div>Monster levels:<br>Just do it!</div>
 				<div class="battlePlace tc"><img class="placePhoto" src="assets/cave.jpg"><br><div class="center"><button class="actionButton" id="Place2">Caves</button></div>Monster levels:<br>4-6</div>
 				<div class="battlePlace tc"><img class="placePhoto" src="assets/dungeon.jpg"><br><div class="center"><button class="actionButton" id="Place3">Dungeon</button></div>Monster levels:<br>7-9</div>
-				<div class="battlePlace tc"><img class="placePhoto" src="assets/castle.jpg"><br><div class="center"><button class="actionButton" id="Place4">Castle</button></div>Monster levels:<br>DRAGON(!)</div>
+				<div class="battlePlace tc"><img class="placePhoto" src="assets/castle.jpg"><br><div class="center"><button class="actionButton" id="Place4">Castle</button></div>Monster levels:<br><span id="warning">DRAGON</span>(<span idp="warning" style="color:#f00;font-weight:600;">!</span>)</div>
 			</div>
 		</div>
 		<div class="heroSheet innerArea">
@@ -62,7 +80,7 @@
 				<button class="actionButton" id="backToCity">Back to city</button>
 			</div>
 		</div>
-		<div class="daysLeftArea innerArea"><div class="center2"><span id="daysLeft">DRAGON(!) will burn our city in:</span><br><span id="dayNumber"></span></div></div>
+		<div class="daysLeftArea innerArea"><div class="center2"><span id="daysLeft">DRAGON(<span id="warning">!</span>) will burn our city in:</span><br><span id="dayNumber"></span></div></div>
 		<div class="bigInventoryArea innerArea">
 			<button class="actionButton" id="quitInventory">Back</button><br>
 			[Mouse over an item to see its stats]
