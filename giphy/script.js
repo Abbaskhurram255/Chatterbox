@@ -36,15 +36,16 @@ async function getGifs(event) {
     const gifData = await data.data;
 
     createImages(gifData);
+    var savedValue = searchInput.value;
     searchInput.value = "Ayesha loves you! 💗";
     setTimeout(() => {
-    	searchInput.value = "";
-    }, 10000);
+    	searchInput.value = savedValue;
+    }, 1000);
 }
 
 form.addEventListener("submit", getGifs);
 
 document.body.onload = () => {
 	searchInput.value = "Love";
-	form.submit();
+	document.querySelector("button").click();
 }
