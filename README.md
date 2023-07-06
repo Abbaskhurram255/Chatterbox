@@ -15,36 +15,39 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
 *   #### _Built-in apps_
 
     *   Audio Player + visualizer
-    *   Bad Habit Tracker; track your bad habits, today!
-    *   BMI Calculator
-    *   Calculator
+    *   Bad Habit Tracker: track your bad habits, today!
+    *   Dictionary
+    *   ayeshRanslate: Let I... Shranslate for you!
+    *   ayeshCulator
     *   Calendar
-    *   CaloTracker
+    *   CaloTracker (Work-in-progress/beta)
     *   Simple Canvas/Drawing App (beta)
     *   Currency Converter
     *   Expense Tracker
-    *   Fisave, net worth tracking app
-    *   Habit Building Helper; build a new habit, today, a good one!
-    *   Jukebox
-    *   Notes
+    *   Fisave: Net-worth Tracking!
+    *   Habit Helper: build a new habit, and a good one!
+    *   Jukebox: gaane!
+    *   
     *   Text Reader (can read you any sort of text, loudly!)
-    *   Live Weather
-    *   Lyricopedia
-    *   Meal Finder / Recipes app
-    *   Metronome
-    *   Mortgage Calculator
-    *   Motivator
-    *   MovieDB, Movies app
-    *   MyBookList
-    *   My Recipes
+    *   Live Weather: Learn the weather of any town in Hindi!
+    *   Lyricopedia: A Two-in-one Lyrics app/ Encyclopedia
+    *   Recipe app: Learn How to Cook!
+    *   Piano (beta)
+    *   Metronome: Learn to play music... on time!
+    *   Mortgage/Loan Calculator
+    *   Motivator: No More Emptiness Inside!
+    *   MovieDB: A Detailed Movie Database
+    *   MyBookList: Your Very-Own Personal Wishlist for Books
+    *   
     *   New Year Countdown
     *   Password Generator
     *   Percentage Calculator
     *   Quotes app
-    *   Relaxer
+    *   Joke Machine (English only, sorry!)
+    *   Relaxer: For Moments When You're Feeling Anxiety, or Stress
     *   Temperature Units Converter
-    *   Today In Google Doodles History/ Event of the day
-    *   SnapShot
+    *   ayeshGIFs: Say Goodbye to Boredom with these animated pictures!
+    *   ayeshPapers: Download wallpapers for your home screen!
     *   Space data app
     *   Stopwatch/ Timer
     *   Todo/Reminder
@@ -52,36 +55,32 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
     *   Voice-controlled PDF Viewer/ Book Reader (again, Speech Recognition isn't supported by browsers other than Chrome & Samsung Internet)
     *   Voice Notes
     *   Weight Units Converter
-    *   Work Day Scheduler
+    *   Work-Day Scheduler
 
 *   #### _Built-in games_
 
-    *   2D Breakout
-    *   Chase-The-Box
-    *   Dungeon Crawler
+    *   Smash Cube
+    *   
+    *   
     *   Fotoflick
-    *   FlappyBird
-    *   Game Of Games, an adventurous RPG
+    *   muskyBird: an Elon Musk roast! For he deserves it🤫
+    *   Game Of Dragons: City Under Havoc, an adventurous RPG!
     *   Hangman
-    *   Light Maze
-    *   Math game
-    *   Maze game
-    *   Miner of Lava
+    *   
+    *   Math Flash Cards: Let's test your math skills (beta)
+    *   The Maze: What Would You Do If You Were Stuck, And Had Nowhere To Go? Almost... Nowhere To Go!
+    *   
     *   Monopoly (experimental)
     *   Memory Game
-    *   Pacman
-    *   Rock Paper Scissors
-    *   Simon Says
-    *   Space Invaders
+    *   
+    *   Rock, Paper, Scissors, Lizard, Spock
+    *   Simon Says... Let's G, g, gooooo! Or join the dead people --- the choice is yours!😏😁
+    *   
     *   Tic Tac Toe
-    *   The Construstor, a game of logic
-    *   Trivia game
+    *   The Construstor, a game of logic (beta)
+    *   Trivia game: a game of questionnaires to f up your mind!
     *   Truth or Dare
 
-Note:
-
-*   Some games might not work on mobile devices because they are not yet optimized for them.
-*   Since the main purpose of this app is to assist you, all aforelisted games are kept simple.
 
 ## Version
 
@@ -89,4 +88,4 @@ Note:
 
 1.0  
 
-<center>Changelogs will soon be listed here</center>
+<center>Changelogs will be listed here</center>
