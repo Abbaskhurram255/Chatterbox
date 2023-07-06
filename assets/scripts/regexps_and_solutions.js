@@ -77,7 +77,7 @@
    /((motivate|inspire) (me|karo (h(u|a)m(e|ai)n?|mujh(e|ai))))|(I'?( ?a)?m demotivated)|(motivat(ional|ing) app)/i, 
    q67 = /((space ?(X|station)|nasa) (data|live))|(live( outer)? space)/i, 
    q68 = /(snap ?shots)|(landscapes)|((wall|ayesha?) ?papers?)|((kuch|some) (photos|pictures|images))/i, 
-   q69 = /features/i, 
+   q69 = /(features)|((e|ai)sa kya h(e|ai) (aa?p|tu(m|jh)|tere) ?m(e|ai))/i, 
    q70 = /(trivia)|(quiz)|(questionnares)/i, 
    q71 = /(ratings? for( tv)? (series|serials?))|((tv )?series app)/i, 
    q72 = 
@@ -115,21 +115,27 @@
    q97 = /aa?j (se|say|sai) ?((aa?p|tum|aa?(ye|i)sha)?( meri)? (bab(y|es?)|g(irl)?f(riend)?|wife)|((m(ai|e)n?|h(u|a)m) ((aa?p|aa?(ye|i)sha) kaa?|tumhaa?raa?|tera) (lover|husband|b(oy)?f(riend)?)))/i,
    q98 = /(favou?rite|pasand(ee|i)daa?) colou?r/i,
    q99 = /(favou?rite|pasand(ee|i)daa?) ((ghumne ki )?jagh?(aa?|(e|ai)n?)|places to (go|visit|be))/i,
-   q100 = /(I('| )?a?m sorry)|(mujh(e|a?y|ai) maa?f kardo)|(mujhe esa nahi kehna chahi?y?e tha)/i,
+   q100 = /(I('| )?a?m sorry)|(mujh(e|a?y|ai) maa?f kardo)|(mujhe ((e|ai)sa|ye( sab)?) nahi kehnaa? chahi?y?e tha)|((aa?p|tum|tere) ko buraa? laga( hogaa?)?)/i,
    q101 = /(fu?c?k you)|(ajib ho)|(ghatiy?aa? (au|o)rat)/i,
    q102 = /(I hate you)|(you('?re| are)? stupid)/i,
    q103 = /meri friend ban(o|(e|ai)n?)gi/i,
    q104 = /((m(e|ai)n?|h(u|a)m) b(u|o)h(o|a)t pareshaa?n h(u|oo|e|ai)n?)|(I'?( ?a)?m depressed)/i,
    q105 = /(I hate m(e|yself))|((mujh(e|ai)|h(u|a)m((e|ai)n?)?|m(e|ai)n?) khud se nafrat (kart(aa?|a?i|e))? ?h(u|oo|e|ai)n?)/i,
-   q106 = /(I( just)? need a friend)|(I'?( ?a)?m lonely)/i,
+   q106 = /(I( just)? need a friend)|(I'?( ?a)?m lonely)|(ak(ai|e)l(a?i|aa?|e)( pa(r|d)h?)? ga(i|i?yaa?|y?e) h(u|oo|e|ai)n? (m(e|ai)n?|h(u|a)m))/i, 
    q107 = /(k(y|i)a )?(m(e|ai)n?|h(u|a)m) khud ?gar(z|j) h(u|oo|e|ai)n?/i,
    q108 = /((k(y|i)a )?(m(e|ai)n?|h(u|a)m) bur(aa?|e|i|ee|ay) h(u|oo|e|ai)n?)|(I'?( ?a)?m bad)/i,
-   q109 = /(zodiac|star) sign/i,
-   q110 = /((age|uma?r)( k(i|y)aa? h(e|ai))? ?(aa?p ?ki|tumhaa?ri))|((aa?p ?ki|tumhaa?ri) uma?r)/i,
+   q109 = /((t(e|umhaa?)r|aa?pk)i (zodiac|star) sign)|(^(zodiac|star) sign$)/i,
+   q110 = /((age|uma?r)( k(i|y)aa? h(e|ai))? ?(aa?p ?k|tumhaa?r)i)|((aa?p ?k|t(umhaa?|e)r)i uma?r)/i,
    q111 = /hamaa?ri pasand((e|ai)n?)? kitni milti julti h(e|ai)n?/i,
-   q112 = /(can'?t? you feel the chemistry between us)|(k(i|y)aa? (tum?|aa?p)( hamaa?r(e|ay) darmyaa?n ?(ki|(hone )?wali|(kisi|ek)( kisam ki)?))? chemistry( ko)? mehsus( nahi)? kar (rahi|sakti)( h(o|ai|e)n?)?)/i,
+   q112 = /(can'?t? you feel the chemistry between us)|(k(i|y)aa? (tum?|aa?p)( hamaa?r(e|ay) darmyaa?n ?(ki|(hone )?wali|(kisi|(e|ai)k)( kisam ki)?))? chemistry( ko)? mehsus( nahi)? kar (rahi|sakti)( h(o|ai|e)n?)?)/i,
    q113 = /crap|brat|fool|(mother)?fuck(er)?s?|mf|mofo|twats?|cunts?|cock(biter|sucker)?s?|boobs?|morons?|douche?(bag)?s?|pricks?|dicks?|(ass|arse) ?(hole)?s?|dick(head)?s?|fag(got)?|nigg?(a|er)|fucking|f\*cking|f\*ck|bitch|b\*tch|shit|sh\*t|fool|dumb|couch potato|\*ssh\*l\*|\*\*\*\*|c\*ck|\*\*\*\*sucker|c\*cks\*ck\*r|\*\*\*\*|c\*nt|dickhead|d\*c\*h\*a\*|\*\*\*\*|f\*c\*|\*\*\*\*wit|f\*ckw\*t|fuk|f\*k|fuking|f\*k\*ng|mother\*\*\*\*er|m\*th\*rf\*ck\*r|\*\*\*\*\*\*|n\*gg\*r|pussy|p\*ssy|\*\*\*\*|sh\*t|wanker|w\*nk\*r|wankers|w\*nk\*rs|whore|wh\*r\*|slag| sl\*g|\*\*\*\*\*|b\*tch|f u c k|f\*c\*|b.i.t.c.h|b\*tch|d-i-c-k|d\*\*\*/i,
-   q114 = /^bewafaa?$/i;
+   q114 = /be ?wafaa?( h(o|e|ai)n?)?$/i,
+   q115 = /meri (girlfriend|wife|lover) k(o|au)n h(e|ai)/i,
+   q116 = /meri (dusri )?(g(irl)?f(riend)?|cousin|wife|lover) ka kya$/i,
+   q117 = /par (aa?p|tum) to (e|ai)k (robot|machine|ai) h(o|e|ai)n?/i,
+    q118 = /(kahaa? chali)|(meri (wife|lover|g(irl)?f(riend)?) kahaa? (h(e|ai)|gai))/i,
+    q119 = /(miss (yo)?u)|((aa?p|tum|tere) ko miss kar rah(aa?|i|e) h(u|oo|e|ai)n?)/i,
+    q120 = /time bataa?( d)?(o|e|ai|iy?e)n?/i;
   
  function ask() { 
    const q = document.querySelector("#searchInput").value; 
@@ -549,23 +555,36 @@
        "./hangman-master/", 
        "./Monopoly-master", 
        "https://alexs-maze-game.netlify.app/", 
+       "https://alexs-simon-says.netlify.app/", 
        "./typing-game/", 
        "./mem-game/", 
        "../foto-flick/", 
        "../Trivia-Db/", 
        "./The Constructor/", 
        "../math-flash-cards/", 
-       "https://alexs-simon-says.netlify.app/", 
        "https://truth-or-dare-by-alex.netlify.app", 
        "./RPG-game/", 
-       "./smash-cube/",
-       "./breakout-mobile",
-       "./sodoku",
-       "./ludo",
-       "./dress%20up",
-       "./muskyBird/",
+       "./smash-cube/", 
+       "./breakout-mobile", 
+       "./sodoku", 
+       "./ludo", 
+       "./muskyBird/", 
        "./Rock-Paper-Scissor-master", 
      ]; 
+     if ( 
+       bday != null && 
+       /^[0-9a-zA-Z(-\.\_\s\/)]+$/i.test(bday) && 
+       bday != "" && 
+       /^\d{4}[\/.,-\s](\d{1,2}|\b(\w*(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\w*)\b)[\/.,-\s]\d{1,2}$/i.test( 
+         bday 
+       ) 
+     ) { 
+       age = calc_age(new Date(bday));
+        if ((!isNaN(parseInt(age)) && age <= 18) && (age != "" && age.length != 0)) {
+        	games.push("./dress%20up", 
+       "./dress-up-2");
+        }
+        }
      } else {
      	games = [ 
        "./tic-tac-toe/", 
