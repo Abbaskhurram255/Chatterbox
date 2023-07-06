@@ -14,26 +14,24 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
 
 *   #### _Built-in apps_
 
-    *   
-    *   Bad Habit Tracker: track your bad habits, today!
     *   Calendar
     *   CaloTracker (Work-in-progress/beta)
     *   Simple Canvas/Drawing App (beta)
     *   Habit Helper: build a new habit, and a good one!
-    *   Text Reader (can read you any sort of text, loudly!)
     *   Live Weather: Learn the weather of any town... in Hindi!
-    *   Lyricopedia: A Two-in-one Lyrics app/ Encyclopedia
     *   Recipe app: Learn How to Cook!
     *   MovieDB: A Detailed Movie Database
     *   MyBookList: Your Very-Own Personal Wishlist for Books  
     *   Relaxer: For Moments When You're Having Anxiety, or Stress
-    *   ayeshGIFs: Say Goodbye to Boredom with these animated pictures!
-    *   ayeshPapers: Download wallpapers for your home screen!
     *   Space data app
     *   Motivator: No More Emptiness Inside!
-    *   Voice-controlled PDF Viewer/ Book Reader (again, Speech Recognition isn't supported by browsers other than Chrome & Samsung Internet)
  
-    * ##### Meeting, and Todo
+    * ##### Images
+    * ayeshEdit: A Simple Photo Editor!
+    * ayeshGIFs: Say Goodbye to Boredom with these animated pictures!
+    *   ayeshPapers: Download wallpapers for your home screen!
+ 
+    * ##### Meeting, Work and Shopping
     *   Todo/ Reminder
     *   Work-Day Scheduler
     *   Voice Notes
@@ -41,6 +39,9 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
     * ##### Word-processing
     *   Dictionary
     *   ayeshRanslate: Let I... Shranslate for you!
+    *   Lyricopedia: A Two-in-one Lyrics app/ Encyclopedia
+    *   book2Audio (can read you any sort of text from a book or an article, loudly!) <beta, WIP>
+    *   Voice-controlled PDF Viewer/ Book Reader (again, Speech Recognition isn't supported by browsers other than Chrome, Safari & Samsung Internet)
  
     * ##### Conversion, and Math
     *   ayeshCulator
@@ -56,6 +57,7 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
 
     * ##### Generators
     *   Password Generator
+    *   Anonymous Proverbs Generator
     *   Quotes app
     *   Joke Machine (English only, sorry!)
    
