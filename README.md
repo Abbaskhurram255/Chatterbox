@@ -65,34 +65,31 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
     *   Joke Machine (English only, sorry!)
    
     * ##### Music
-    *   Simple Piano (beta)
-    *   Tap Music!: A One-Tap Instrument
+    *   Simple Piano <beta>
+    *   Tap Music!: A One-Tap Magical Instrument
     *   Metronome: Learn to play music... on time!
     *   Jukebox: gaane!
  
 *   #### _Built-in games_
 
     *   Smash Cube
-    *   BabyGirls' Dressup <unavailable if your specified age is over 18) <beta>
-    *   
+    *   BabyGirls' Dressup <unavailable if your specified age is over 18!) <beta>
+    *   ayeshLudo
     *   Fotoflick
     *   muskyBird: an Elon Musk roast! For he deserves it🤫
     *   Game Of Dragons: City Under Havoc, an adventurous RPG!
     *   Hangman
-    *   
-    *   Math Flash Cards: Let's test your math skills (beta)
+    *   Speed Typer: Let's see how fast you can type!
+    *   Math Flash Cards: Let's test your math skills <beta>
     *   The Maze: What Would You Do If You Were Stuck, And Had Nowhere To Go? Almost... Nowhere To Go!
-    *   
     *   Monopoly (experimental)
     *   Memory Game
-    *   
     *   Rock, Paper, Scissors, Lizard, Spock
-    *   Simon Says... Let's G, g, gooooo! Or join the dead people --- the choice is yours!😏😁
-    *   
+    *   Simon Says... Let's G, g, gooooo! Or join the dead people --- the choice is yours!😏😁 <beta>
     *   Tic Tac Toe
-    *   The Construstor, a game of logic (beta)
+    *   The Construstor, a game of logic <beta>
     *   Trivia game: a game of questionnaires to test your intelligence, and f up your mind!
-    *   Truth or Dare
+    *   Truth or Dare <not recommended for kids under 18!>
 
 
 ## Version
