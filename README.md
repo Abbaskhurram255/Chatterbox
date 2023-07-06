@@ -15,16 +15,19 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
 *   #### _Built-in apps_
 
     *   Calendar
-    *   CaloTracker (Work-in-progress/beta)
-    *   Simple Canvas/Drawing App (beta)
-    *   Habit Helper: build a new habit, and a good one!
     *   Live Weather: Learn the weather of any town... in Hindi!
     *   Recipe app: Learn How to Cook!
     *   MovieDB: A Detailed Movie Database
-    *   MyBookList: Your Very-Own Personal Wishlist for Books  
+    *   ayeshTube: An ad-free YouTube!
+    *   MyBookList: Your Very-Own Personal Wishlist for Books (which I bet you are gonna buy lots of... in the future!)
+    *   Space data app: Learn What's in Space!
+  
+    * ##### Health, Mental Health, and Fitness
     *   Relaxer: For Moments When You're Having Anxiety, or Stress
-    *   Space data app
     *   Motivator: No More Emptiness Inside!
+    *   CaloTracker <Work-in-progress/beta>
+    *   Ha-biTrakey: Helps kill a bad habit, ie drinking, smoking, and binge eating, among others... Key to habit tracking, bit by bit! <beta>
+    *   Habit Helper: build a new habit, and a good one! <beta>
  
     * ##### Images
     * ayeshEdit: A Simple Photo Editor!
@@ -50,7 +53,7 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
     *   Expense Tracker
     *   Mortgage/Loan Calculator
     *   Fisave: Net-Worth Tracking!
-    *   Percentage Calculator
+    *   Percentage Calculator <beta/trashy-UI>
     *   New-Year Countdown
     *   Weight Units Converter
     *   Temperature Units Converter
@@ -70,7 +73,7 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
 *   #### _Built-in games_
 
     *   Smash Cube
-    *   
+    *   BabyGirls' Dressup <unavailable if your specified age is over 18) <beta>
     *   
     *   Fotoflick
     *   muskyBird: an Elon Musk roast! For he deserves it🤫
