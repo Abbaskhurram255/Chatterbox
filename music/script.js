@@ -1,6 +1,6 @@
 
 document.body.onload = () => {
-	document.querySelector("#audio1").play();
+	window.setTimeout(() => { document.querySelector("#audio1").play(); }, 2500);
 };
 
 $(() => {
