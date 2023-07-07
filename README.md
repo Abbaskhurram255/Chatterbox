@@ -27,7 +27,7 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
     *   Motivator: No More Emptiness Inside!
     *   CaloTracker <Work-in-progress/beta>
     *   Ha-biTrakey: Helps kill a bad habit, ie drinking, smoking, and binge eating, among others... Key to habit tracking, bit by bit! <beta/unstable>
-    *   Habit Helper: build a new habit, and a good one! <beta>
+    *   Habit Helper: build a new habit, and a good one! <beta/unstable>
  
     * ##### Images
     * ayesh'dEd_it²!: I should Edit It 2oo!... A Simple Photo Editor! (Otherwise referred to as ayeshEdit, simply)
@@ -37,7 +37,7 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
     * ##### Meeting, Work and Shopping
     *   Todo/ Reminder
     *   Work-Day Scheduler
-    *   Voice Notes
+    *   Voice Notes <beta>
  
     * ##### Word-processing
     *   Ayeshnary: An English Dictionary!
@@ -65,7 +65,7 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
     *   Joke Machine (English only, sorry!)
    
     * ##### Music
-    *   Simple Piano <beta>
+    *   Simple Piano <untested>
     *   Tap Music!: A One-Tap Magical Instrument
     *   Metronome: Learn to play music... on time!
     *   Jukebox: gaane!
@@ -89,7 +89,7 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
     *   Tic Tac Toe
     *   The Construstor, a game of logic <beta>
     *   Trivia game: a game of questionnaires to test your intelligence, and f up your mind!
-    *   Truth or Dare <not recommended for kids under 18!>
+    *   Truth or Dare <beta; not recommended for kids under 18!>
 
 
 ## Version
