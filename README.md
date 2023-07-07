@@ -26,7 +26,7 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
     *   Relaxer: For Moments When You're Having Anxiety, or Stress
     *   Motivator: No More Emptiness Inside!
     *   CaloTracker <Work-in-progress/beta>
-    *   Ha-biTrakey: Helps kill a bad habit, ie drinking, smoking, and binge eating, among others... Key to habit tracking, bit by bit! <beta>
+    *   Ha-biTrakey: Helps kill a bad habit, ie drinking, smoking, and binge eating, among others... Key to habit tracking, bit by bit! <beta/unstable>
     *   Habit Helper: build a new habit, and a good one! <beta>
  
     * ##### Images
