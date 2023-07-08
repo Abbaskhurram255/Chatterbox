@@ -524,16 +524,18 @@
      msg = ""; 
      $output.html(msg); 
    } else if (q22.test(q)) { 
+     stopText(); 
+     msg = ""; 
+     $output.html(msg); 
      let musicWin = window.open("./music/", "_blank"); 
      if (musicWin) { 
        window.focus(); 
        log("Launched Music"); 
+       msg = "Filhaal sirf English available hay, sorry!";
+       playText(msg);
      } else { 
        alert("Please enable popups for this site!"); 
      } 
-     stopText(); 
-     msg = ""; 
-     $output.html(msg); 
    } else if (q23.test(q)) { 
      let weightConvAppWin = window.open("./weight-conv/", "_blank"); 
      if (weightConvAppWin) { 
