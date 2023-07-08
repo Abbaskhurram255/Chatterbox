@@ -65,7 +65,7 @@ window.onload = () => {
 $(document).ready(function () {
   //JQuery onload functions go here
   $("#recIcon").click(() => {
-  	$("#recIcon").css("filter", "brightness(40%)");
+  	$("#recIcon").addClass("mikeAnim");
   })
 });
 /* To remind you that the variable holds a jQuery selection, use $(varName) method to declare it. Plain JavaScript's method of variable declarations also work tho */
@@ -99,7 +99,7 @@ if ("SpeechRecognition" in window || "webkitSpeechRecognition" in window) {
       current == 1 && transcript == event.results[0][0].transcript;
 
     if (mobileRepeatBug == false) {
-  	$("#recIcon").css("filter", "brightness(40%)");
+  	$("#recIcon").removeClass("mikeAnim");
       noteContent = transcript;
       noteTextarea.val(noteContent);
       ask();
@@ -113,7 +113,7 @@ if ("SpeechRecognition" in window || "webkitSpeechRecognition" in window) {
   };
 
   recognition.onerror = function (event) {
-    if (event.error == "no-speech") {
+    if (/no speech/mi.test(event.error)) {
       	$snack.text("No speech was detected, please try again");
           $snack.addClass("show");
         setTimeout(function () {
@@ -121,14 +121,15 @@ if ("SpeechRecognition" in window || "webkitSpeechRecognition" in window) {
         }, 2300);
       stopText();
       playText("Samjhi nahi, zaraa dubaara boli'ay");
-    	$("#recIcon").css("filter", "brightness(80%)");
+    	$("#recIcon").removeClass("mikeAnim");
     return ;
     }
   };
   
   recognition.onend = () => {
   	log('Speech recognition service disconnected.');
-      $("#recIcon").css("filter", "brightness(80%)");
+      $("#recIcon").removeClass("mikeAnim");
+      $("#askBtn").click();
   }
 
   $("#recIcon").on("click", function () {
@@ -426,6 +427,7 @@ function startTime() {
   let d = new Date();
   let hr = d.getHours();
   let min = d.getMinutes();
+  let sec = d.getSeconds();
   if (min < 10) {
     min = "0" + min;
   }
@@ -441,9 +443,23 @@ function startTime() {
     }
   }
   const $time = $("#time");
-  msg = hr + ":" + min + ampm;
+  msg = `${hr}:<span id="mins">${min}</span><span id="ampm">${ampm}</span>`;
   $time.html(msg);
   setTimeout(startTime, 1000);
+  var tickSound = new Audio("assets/audio/tick.mp3");
+  tickSound.playbackRate = 2.0;
+  if (sec > 54 && sec != 00 && min == 59 && min != 00) {
+  	$("#mins").addClass("blink");
+      tickSound.play();
+  } else {
+  	$("#mins").removeClass("blink");
+      tickSound.pause();
+  }
+  if (min == 59 && sec == 59 && sec != 00 && min != 00) {
+  	$("#ampm").addClass("blink-2");
+  } else {
+  	$("#ampm").removeClass("blink-2");
+  }
 }
 
 // Date function
@@ -537,12 +553,6 @@ if ("speechSynthesis" in window) {
         stopText();
       }
       playText(mesg.innerText);
-      //Show a snackbar the first time the Speech Synthesis reads this text
-        	$snack.text("Speech synthesis is ongoing. You cannot enter any text in the input field until it finishes.");
-        $snack.addClass("show");
-        setTimeout(function () {
-          $snack.removeClass("show");
-        }, 2300);
     }
   });
 } else {
@@ -585,6 +595,8 @@ function stopText() {
 }
 //end of Speech_Synth block
 
+
+/* Modal */
 const modal = document.getElementById("myModal");
 let closeBtn = document.getElementsByClassName("close")[0];
 closeBtn.onclick = function () {
@@ -602,7 +614,7 @@ const showFeatures = () => {
   modal.style.display = "block";
   stopText();
   msg =
-    "Don't underestimate me, I can perform logical operations too. For example, if you asked me to inform you whether 2020 or 2021 were a leap year, I'd let you know. And if you asked me to inform you of the date it is going to be tomorrow or the date it was yesterday lol, I'd let you know. What's more, if you asked me to inform you whether it is a weekday today or the weekend yet, I'd let you know.";
+    "Mujhay kam naa samjho, Math tak kar sakti hoo may. Maslan, if you asked me to inform you whether 2020 or 2021 were a leap year, I'd let you know. And if you asked me to inform you of the date it is going to be tomorrow or the date it was yesterday lol, I'd let you know. What's more, if you asked me to inform you whether it is a weekday today or the weekend yet, I'd let you know. Aaj saal ka kaunsa din hay yay tak bata sakti hu may";
   playText(msg);
   let aBugFix = () => {
     return (textInput.disabled = !true);
@@ -649,6 +661,7 @@ $(document).bind("mouseleave", function (e) {
   }
 });
 
+/* SFX Handler */
 const sound = (src, delay = 10000, format = "mp3") => {
 	let audio = new Audio();
 	let dir = "assets/audio";

@@ -18,9 +18,9 @@
    q15 = /tic( |-)?tac( |-)?toe/i, 
    q16 = /(temperature today)|(is it a (hot|rainy|cloudy|sunny) day today)|(weather)|(m(o|au)sam)/i, 
    q17 = /^$/, 
-   q18 = /(^calculator)|(open calculator)|(calculate(?:bmi))/i, 
+   q18 = /(^calculator)|((open|ayesha?) ?(cal)?culator)|(calculate(?:bmi))/i, 
    q19 = 
-   /(tts)|(speech engine)|(text to speech)|(ebook to audio(book)?)|((document|text) reader)/i, 
+   /(tts)|(speech engine)|(text to speech)|((e|text)?(-| )?book( to |2)audio(book)?)|((document|text) reader)/i, 
    q20 = /(piano)|(synth(esizer)?)/i, 
    q21 = /(todos?)|(reminders?)|(remind me to)|((bucket|shopping) list)|(mujh(e|ai) yaa?d dilaa?naa?)|(notes?)|(\btodo\b)/i, 
    q22 = /(music)|(songs?)|(jukebox)|(gaa?n(e|ay))/i, 
@@ -38,19 +38,19 @@
    /(is (this|it)( a)? week ?day (today|yet))|((is today|today is) a week ?day)/i, 
    q34 = /(is (this|it)( a)? week ?end (today|yet))|((is today|today is) a week ?end)|(k(y|i)aa?( aa?j)? (itwaa?r|haftaa?) (h(e|ai)|thaa?)( aa?j)?)/i, 
    q35 = /numbers? to roman/i, 
-   q36 = /(\b\d*\b )?(mi|miles?) (to|and|in|me|mai|ko|((equals|(is|are) equal to|=)( how many)?)|(baraa?bar h(e|ai)n?( kit ?n(e|a(y|i)))) (km|kilometer)s?)?/i, 
-   q37 = /(\b\d*\b )?k(ilo)?m(eter)?s? (to|and|in|m(e|ai)|ko|((equals|(is|are) equal to|=)( how many)?)|(baraa?bar h(e|ai)n?( kit ?n(e|a(y|i)))) mi(les?)?)?/i, 
+   q36 = /(\b\d*\b )?(mi|miles?) (to|and|in|me|mai|ko|((equals|(is|are) equal to|=)( how many)?)|(baraa?bar h(e|ai)n?( kit ?n(e|a(y|i)))) (km|kilomet(er|re))s?)?/i, 
+   q37 = /(\b\d*\b )?k(ilo)?m(et(er|re))?s? (to|and|in|m(e|ai)|ko|((equals|(is|are) equal to|=)( how many)?)|(baraa?bar h(e|ai)n?( kit ?n(e|a(y|i)))) mi(les?)?)?/i, 
    q38 = /(what (date|day) was it yesterday)|(kal (k(y|i)aa?|k(o|au)n ?s(aa?|i|ee)) (din|day|date|tar(i|ee)kh) (rah|th)(aa?|i|ee))/i, 
    q39 = /(what (date|day) will it be tomorrow)|(kal (k(y|i)aa?|k(o|au)n ?s(aa?|i|ee)) (din|day|date|tar(i|ee)kh) ((ho|rah(e|ai)) ?g(aa?|i|ee))|(hon(e|ai) jaa?rah(i|aa?) h(e|ai)))/i, 
    q40 = /monopoly|k((o|au)n)? ?b(an(e|ai)ga)? ?c(rorepati)?|crorepati game/i, 
    q41 = /(canvas(es)?)|((drawings?|arts?|paint(ings?)?|brush) (app|tool))|(((draw|paint)(ing)? karn(i|aa?))|((sketch|canvas|painting)(e?s)? (banaa?n(aa?|e|ai)|karnaa?)) ((chaa?ha?t(a(a|i|y)?|i|ee?) )?h(u|oo|e|ai)n?))/i, 
    q42 = /(audio (visuali(z|s)er|player))|(play local audio)/i, 
-   q43 = /(translat(e|or))|(english to (hindi|urdu|chinese|german|spanish|arabic|french|italian|russian))|((hindi|urdu|arabic|spanish|russian|chinese|german) to english)/i, 
-   q44 = /dictionary/i, 
+   q43 = /((ayesh|t)ranslat(e|or))|(english to (hindi|urdu|chinese|german|spanish|arabic|french|italian|russian))|((hindi|urdu|arabic|spanish|russian|chinese|german) to english)/i, 
+   q44 = /(ayesh ?)?dict(ionary)?/i, 
    q45 = /^(execute|launch|play( me)?|run) (the )?mai?ze/i, 
    q46 = /calendar/i, 
    q47 = /(world (time|clock|zones))|((time|world) ?zones)/i, 
-   q48 = /((image|photo) edit(or)?)|(ayesh'?d?edit)/i, 
+   q48 = /((image|pic(ture)?|photo) edit(or)?)|(ayesh('?d?| )?edit)/i, 
    q49 = /^voice ?(notes?|recorder)$/i, 
    q50 = /(smash cube|(box|slice|cube) game)/i, 
    q51 = /(percentage calculator)|(calculate percentage)/i, 
@@ -84,7 +84,7 @@
    /((movies?'? (cast|ratings?))|(ratings? (for|of) movies?))|(movies? app)/i, 
    q73 = /(day (planner|scheduler))|((plan|schedule)( my)? day)/i, 
    q74 = /(some advi(c|s)e)|(advi(c|s)e generator)|(proverbs)|(quotes?)/i, 
-   q75 = /giphy/i, 
+   q75 = /(giphy)|(ayesha? ?gifs)|(^gifs$)|((random|love|some) gifs)/i, 
    q76 = 
    /(pass(code|word|phrase) generator)|(random pass(code|word))/i, 
    q77 = /the (logic game|constructor)/i, 
@@ -94,12 +94,12 @@
    /(aa?dat((e|ai)n?)? to(r|d)ni h(e|ai)n? m(ai|e)ne)|((break|track) ((a |my )(bad )?habits?|(a( bad)? habit|(bad )?habits) of mine))/i, 
    q80 = 
    /(habits? build(er|ing))|(help( me)? (with building|build) a( good)? habit)/i, 
-   q81 = /((units?|\bmeters?\b|f(oo|ee)t|area|minutes?|seconds?|hours?|time|measure|°?(c(elsius|entigrade)?|f(ahrenheit)?|k(elvin)?)) (to|conver(sion|ter)))|(to (\bmeters?\b|f(oo|ee)t|minutes?|seconds?|hours?|time|measure|°?(c(elsius|entigrade)?|f(ahrenheit)?|k(elvin)?)))/i, 
-   q82 = /(^game of (adventure|dragon)s?$)|((adventur(ous|e)|dragon|dinosaur|city|castle) game)/i, 
+   q81 = /((units?|\bmet(er|re)s?\b|f(oo|ee)t|area|minutes?|seconds?|hours?|time|measure|°?(c(elsius|entigrade)?|f(ahrenheit)?|k(elvin)?)) (to|conver(sion|ter)))|(to (\bmet(er|re)s?\b|f(oo|ee)t|minutes?|seconds?|hours?|time|measure|°?(c(elsius|entigrade)?|f(ahrenheit)?|k(elvin)?)))/i, 
+   q82 = /(^game of (adventure|dragon)s?$)|((adventur(ous|e)|dragon|dinosaur|city|castle|battle) game)/i, 
    q83 = /(my( fave?(orite)?)? ?books?'? ?list)|(books? (in|to) my wishlist)/i, 
    q84 = /(math flash ?cards)|((arithmetic|math) game)/i, 
    q85 = /simon/i, 
-   q86 = /ludo/i, 
+   q86 = /(ayesha? ?)?ludo/i, 
    q87 = 
    /(book|pdf|kitaa?b) (read kar ?k(e|ai)|pa(r|d)h? ?k(e|ai)) (do|d(ai|e)n?|bataa?(o|(e|ai)n?)|de sakt(e|i) h(o|(e|ai)n?))|((pdf|book) (viewer|reader))/i, 
    q88 = 
@@ -863,7 +863,7 @@
      let dictionaryWin = window.open("./dictionary/", "_blank"); 
      if (dictionaryWin) { 
        window.focus(); 
-       msg = "English seekhnee hay?... Bilkul sahi jagaa a'ay ho. Abhi ek lafz likhkar search dabaao, or us lafz kee meaning jaano chut'keeyo may";
+       msg = "English seekhnee hay?... Bilkul sahi jagaa aay ho. Abhi ek lafz likh kar search dabaao, or oos lafz kee meaning jaano chut'keeyo may";
        playText(msg);
        log("Launched Dictionary"); 
      } else { 
