@@ -65,5 +65,21 @@ btn.addEventListener('click', () => {
     })
 
     function playSound() {
-        sound.play()
+        sound.play();
     }
+    
+document.body.onload = () => {
+	const example = () => {
+		let newInitialValue = "Babe";
+		document.querySelector("input").value = newInitialValue;
+		btn.click();
+		document.querySelector("input").value = "Babe - Example";
+		window.setTimeout(hideNow, 5000); 
+	}
+	
+	const hideNow = () => {
+		document.querySelector("input").value = "";
+	}
+	
+    window.setTimeout(example, 2000); 
+}
