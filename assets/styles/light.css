@@ -187,6 +187,11 @@
    cursor: default;
  }
  
+ #message .emoji {
+ 	position: relative;
+     top: 1vh;
+ }
+ 
  .container {
      display: block;
      align-content: left;
