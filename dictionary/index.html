@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ayeshnary: An English Dictionary</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+    	#blink {
+    	color: green;
+    	animation: blink 1.75s 3;
+        animation-iteration-count: 3;
+        -webkit-animation: blink 1.75s;
+        -webkit-animation-iteration-count: 3;
+        -moz-animation-iteration-count: 3;
+    }
+    
+    @keyframes blink {
+    	0%, 100%, 60%, { color: red;}
+        20% { color: #fff;}
+        70% {color: red;}
+      }
+      @-webkit-keyframes blink {
+    	0%, 100%, 60%, { color: red;}
+        20% { color: #fff;}
+        70% {color: red;}
+      }
+    </style>
 </head>
 <body>
     <audio id="sound"></audio>
