@@ -31,7 +31,7 @@
    height: 38px;
    width: 38px;
    border-radius: 15px;
-   display: inline-block;
+   display: inline;
    margin: 0;
    /*
    border-radius: 50%; //aka "circle-crop" radius (as you like to call it), ie a border 50% of the size of the image --- 48px / 2, in this case
