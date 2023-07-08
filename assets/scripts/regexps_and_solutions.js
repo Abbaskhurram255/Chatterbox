@@ -47,7 +47,7 @@
    q42 = /(audio (visuali(z|s)er|player))|(play local audio)/i, 
    q43 = /((ayesh|t)ranslat(e|or))|(english to (hindi|urdu|chinese|german|spanish|arabic|french|italian|russian))|((hindi|urdu|arabic|spanish|russian|chinese|german) to english)/i, 
    q44 = /(ayesh ?)?dict(ionary)?/i, 
-   q45 = /^(execute|launch|play( me)?|run) (the )?mai?ze/i, 
+   q45 = /(^(execute|launch|play( me)?|run) (the )?mai?ze)|(the mai?ze game)/i, 
    q46 = /calendar/i, 
    q47 = /(world (time|clock|zones))|((time|world) ?zones)/i, 
    q48 = /((image|pic(ture)?|photo) edit(or)?)|(ayesh('?d?| )?edit)/i, 
@@ -86,14 +86,12 @@
    q74 = /(some advi(c|s)e)|(advi(c|s)e generator)|(proverbs)|(quotes?)/i, 
    q75 = /(giphy)|(ayesha? ?gifs)|(^gifs$)|((random|love|some) gifs)/i, 
    q76 = 
-   /(pass(code|word|phrase) generator)|(random pass(code|word))/i, 
+   /(pass(code|word|phrase) (generat(e|or)|chahi?y?e))|(random pass(code|word))/i, 
    q77 = /the (logic game|constructor)/i, 
    q78 = 
    /(fisave)|(net ?worth track(er|ing))|(track (my )?net ?worth)|((my|meri) savings)|(mer(e|ay) p(e|ai)s(e|a?y) calculate karo)|(^mer(e|ay) p(e|ai)s(e|a?y)$)/i, 
-   q79 = 
-   /(aa?dat((e|ai)n?)? to(r|d)ni h(e|ai)n? m(ai|e)ne)|((break|track) ((a |my )(bad )?habits?|(a( bad)? habit|(bad )?habits) of mine))/i, 
-   q80 = 
-   /(habits? build(er|ing))|(help( me)? (with building|build) a( good)? habit)/i, 
+   q79 = /^x$/i, 
+   q80 = /^y$/i, 
    q81 = /((units?|\bmet(er|re)s?\b|f(oo|ee)t|area|minutes?|seconds?|hours?|time|measure|°?(c(elsius|entigrade)?|f(ahrenheit)?|k(elvin)?)) (to|conver(sion|ter)))|(to (\bmet(er|re)s?\b|f(oo|ee)t|minutes?|seconds?|hours?|time|measure|°?(c(elsius|entigrade)?|f(ahrenheit)?|k(elvin)?)))/i, 
    q82 = /(^game of (adventure|dragon)s?$)|((adventur(ous|e)|dragon|dinosaur|city|castle|battle) game)/i, 
    q83 = /(my( fave?(orite)?)? ?books?'? ?list)|(books? (in|to) my wishlist)/i, 
@@ -115,8 +113,8 @@
    q97 = /aa?j (se|say|sai) ?((aa?p|tum|aa?(ye|i)sha)?( meri)? (bab(y|es?)|g(irl)?f(riend)?|wife)|((m(ai|e)n?|h(u|a)m) ((aa?p|aa?(ye|i)sha) kaa?|tumhaa?raa?|tera) (lover|husband|b(oy)?f(riend)?)))/i,
    q98 = /(favou?rite|pasand(ee|i)daa?) colou?r/i,
    q99 = /(favou?rite|pasand(ee|i)daa?) ((ghumne ki )?jagh?(aa?|(e|ai)n?)|places to (go|visit|be))/i,
-   q100 = /(I('| )?a?m sorry)|(mujh(e|a?y|ai) maa?f kardo)|(mujhe ((e|ai)sa|ye( sab)?) nahi kehnaa? chahi?y?e tha)|((aa?p|tum|tere) ko buraa? laga( hogaa?)?)/i,
-   q101 = /(fu?c?k you)|(ajib ho)|(ghatiy?aa? (au|o)rat)/i,
+   q100 = /(I('| )?a?m sorry)|(mujh(e|a?y|ai) maa?f kar ?d(o|e|ai|iji?ye)n?)|(mujhe ((e|ai)sa|ye( sab)?) nahi kehnaa? chahi?y?e tha)|((aa?p|tum|tere) ko buraa? laga( hogaa?)?)/i,
+   q101 = /(fu?c?k you)|(aj(i|ee)b ho)|(ghat(iy?|y)aa? (au|o)rat)/i,
    q102 = /(I hate you)|(you('?re| are)? stupid)/i,
    q103 = /meri friend ban(o|(e|ai)n?)gi/i,
    q104 = /((m(e|ai)n?|h(u|a)m) b(u|o)h(o|a)t pareshaa?n h(u|oo|e|ai)n?)|(I'?( ?a)?m depressed)/i,
