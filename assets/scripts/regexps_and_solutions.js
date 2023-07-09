@@ -42,14 +42,14 @@
    q37 = /(\b\d*\b )?k(ilo)?m(et(er|re))?s? (to|and|in|m(e|ai)|ko|((equals|(is|are) equal to|=)( how many)?)|(baraa?bar h(e|ai)n?( kit ?n(e|a(y|i)))) mi(les?)?)?/i, 
    q38 = /(what (date|day) was it yesterday)|(kal (k(y|i)aa?|k(o|au)n ?s(aa?|i|ee)) (din|day|date|tar(i|ee)kh) (rah|th)(aa?|i|ee))/i, 
    q39 = /(what (date|day) will it be tomorrow)|(kal (k(y|i)aa?|k(o|au)n ?s(aa?|i|ee)) (din|day|date|tar(i|ee)kh) ((ho|rah(e|ai)) ?g(aa?|i|ee))|(hon(e|ai) jaa?rah(i|aa?) h(e|ai)))/i, 
-   q40 = /monopoly|k((o|au)n)? ?b(an(e|ai)ga)? ?c(rorepati)?|crorepati game/i, 
-   q41 = /(canvas(es)?)|((drawings?|arts?|paint(ings?)?|brush) (app|tool))|(((draw|paint)(ing)? karn(i|aa?))|((sketch|canvas|painting)(e?s)? (banaa?n(aa?|e|ai)|karnaa?)) ((chaa?ha?t(a(a|i|y)?|i|ee?) )?h(u|oo|e|ai)n?))/i, 
+   q40 = /monopoly|k((o|au)n)? ?b(an(e|ai)ga)? ?c(rorepati)?|crorepati game|^$/i, 
+   q41 = /(canvas(es)?)|((drawings?|arts?|paint(ings?)?|brush) (app|tool))|(((draw|paint)(ing)? karn(i|aa?|e))|((sketch|canvas|painting)(e?s)? (banaa?n(aa?|e|ai)|karnaa?)) ((chaa?ha?t(a(a|i|y)?|i|ee?) )?h(u|oo|e|ai)n?))/i, 
    q42 = /(audio (visuali(z|s)er|player))|(play local audio)/i, 
    q43 = /((ayesh|t)ranslat(e|or))|(english to (hindi|urdu|chinese|german|spanish|arabic|french|italian|russian))|((hindi|urdu|arabic|spanish|russian|chinese|german) to english)/i, 
    q44 = /(ayesh ?)?dict(ionary)?/i, 
    q45 = /(^(execute|launch|play( me)?|run) (the )?mai?ze)|(the mai?ze game)/i, 
    q46 = /calendar/i, 
-   q47 = /(world (time|clock|zones))|((time|world) ?zones)/i, 
+   q47 = /(world (time|clock|zones))|((time|world) ?zones)|(time around the world)|(time in \b\w+\b)|(\w+ (ka|m(e|ai)n?) time)/i, 
    q48 = /((image|pic(ture)?|photo) edit(or)?)|(ayesh('?d?| )?edit)/i, 
    q49 = /^voice ?(notes?|recorder)$/i, 
    q50 = /(smash cube|(box|slice|cube) game)/i, 
@@ -90,8 +90,8 @@
    q77 = /the (logic game|constructor)/i, 
    q78 = 
    /(fisave)|(net ?worth track(er|ing))|(track (my )?net ?worth)|((my|meri) savings)|(mer(e|ay) p(e|ai)s(e|a?y) calculate karo)|(^mer(e|ay) p(e|ai)s(e|a?y)$)/i, 
-   q79 = /^x$/i, 
-   q80 = /^y$/i, 
+   q79 = /(analog|physical|live|real(( |-)life)?) clock/i, 
+   q80 = /(ba(r|ll) game)|(rising bars)/i, 
    q81 = /((units?|\bmet(er|re)s?\b|f(oo|ee)t|area|minutes?|seconds?|hours?|time|measure|°?(c(elsius|entigrade)?|f(ahrenheit)?|k(elvin)?)) (to|conver(sion|ter)))|(to (\bmet(er|re)s?\b|f(oo|ee)t|minutes?|seconds?|hours?|time|measure|°?(c(elsius|entigrade)?|f(ahrenheit)?|k(elvin)?)))/i, 
    q82 = /(^game of (adventure|dragon)s?$)|((adventur(ous|e)|dragon|dinosaur|city|castle|battle) game)/i, 
    q83 = /(my( fave?(orite)?)? ?books?'? ?list)|(books? (in|to) my wishlist)/i, 
@@ -470,7 +470,7 @@
      } 
    } else if (q17.test(q)) { 
      $("#message").slideFadeToggle(800); 
-     msg = "Aray kuch pucho gay bhi ya bas yuhi dekhte raho gay?" + duh + what;
+     msg = "Aray kuch pucho gay bhi ya bas yuhi dekhte raho gay?" + duh + cmon;
      $output.html(msg); 
      let audio = new Audio();
      audio.src = "assets/audio/attitude.mp3"; 
@@ -568,6 +568,7 @@
        "./breakout-mobile", 
        "./sodoku", 
        "./ludo", 
+       "./rising-bars/",
        "./muskyBird/", 
        "./Rock-Paper-Scissor-master", 
      ]; 
@@ -1273,10 +1274,10 @@
      msg = ""; 
      $output.html(msg); 
    } else if (q79.test(q)) { 
-     let habitTrackingAppWin = window.open("../habit-tracker/", "_blank"); 
-     if (habitTrackingAppWin) { 
+     let analogClockWin = window.open("./analog-clock/", "_blank"); 
+     if (analogClockWin) { 
        window.focus(); 
-       log("Launched Habit_Tracker"); 
+       log("Launched Analog Clock"); 
      } else { 
        alert("Please enable popups for this site!"); 
      } 
@@ -1284,10 +1285,10 @@
      msg = ""; 
      $output.html(msg); 
    } else if (q80.test(q)) { 
-     let habitBuildingAppWin = window.open("../habit-builder/", "_blank"); 
-     if (habitBuildingAppWin) { 
+     let risingBarsWin = window.open("./rising-bars/", "_blank"); 
+     if (risingBarsWin) { 
        window.focus(); 
-       log("Launched Habit_Builder"); 
+       log("Launched Rising-Bar Game!"); 
      } else { 
        alert("Please enable popups for this site!"); 
      } 
@@ -1471,21 +1472,22 @@
        "https://alexs-simon-says.netlify.app/", 
        "https://truth-or-dare-by-alex.netlify.app", 
        "../yoMovies", 
-       "./music",
-       "../soundjam",
+       "./music", 
+       "../soundjam", 
        "./giphy/", 
-       "./smash-cube/",
-       "./sodoku",
-       "./breakout-mobile",
-       "./muskyBird/",
+       "./smash-cube/", 
+       "./sodoku", 
+       "./breakout-mobile", 
+       "./muskyBird/", 
        "./Rock-Paper-Scissor-master", 
-       "../youtube",
-       "./piano",
-       "./jokes",
-       "./ludo",
-       "./one-tap-instrument",
-       "./ayeshEdit",
-       "./ayeshPapers/",
+       "../youtube", 
+       "./piano", 
+       "./jokes", 
+       "./ludo", 
+       "./rising-bars/", 
+       "./one-tap-instrument", 
+       "./ayeshEdit", 
+       "./ayeshPapers/", 
        ];
        let entertainmentAppsWin = window.open( 
        entertainmentApps[Math.floor(Math.random() * entertainmentApps.length)], 
