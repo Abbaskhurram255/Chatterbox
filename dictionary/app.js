@@ -81,5 +81,5 @@ document.body.onload = () => {
 		document.querySelector("input").value = "";
 	}
 	
-    window.setTimeout(example, 2000); 
+    window.setTimeout(example, 10000); 
 }

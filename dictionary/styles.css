@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: #ae9cff;
+    background-color: #ff9cae;
 }
 
 .container {
@@ -20,7 +20,7 @@ body {
     top: 50%;
     left: 50%;
     padding: 80px 50px;
-    border-radius: 10px;
+    border-radius: 10px 90px 45px;
     box-shadow: 0 20px 40px #26213d33;
 }
 
@@ -37,6 +37,11 @@ body {
     outline: none;
     border-bottom: 3px solid #ae9cff;
     font-size: 16px;
+    border-radius: 20px;
+}
+
+.search-box input:focus, .search-box input:active, .search-box input:hover {
+    border-bottom: 3px solid #ff9cae;
 }
 
 .search-box button {
@@ -47,6 +52,11 @@ body {
     outline: none;
     color: #ffffff;
     border-radius: 5px;
+}
+
+.search-box button:focus, .search-box button:hover, .search-box button:active {
+    background-color: #cf9cae;
+    outline: 1px solid #ae9cff;
 }
 
 .result {
