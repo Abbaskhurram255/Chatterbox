@@ -20,6 +20,7 @@
             
   }
   
+  /* the mike icon*/
 #recIcon {
    border: 4px dotted beige;
    background: rgba(225,10,205,0.7);
@@ -28,8 +29,8 @@
    position: relative;
    /*top: 2.5vh;*/
    top: 18px;
-   height: 32px;
-   width: 32px;
+   height: 34px;
+   width: 34px;
    border-radius: 15px;
    display: inline;
    margin: 0;
@@ -62,7 +63,6 @@
         /*top: 9px;*/
 	}
 }
-
 @-webkit-keyframes borderDance {
 	0, 60%, 100% {
 		border-radius: 50%;
@@ -80,9 +80,13 @@
 
 .hvr-sink {
   -webkit-transform: translateZ(0);
-  transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  transform: translateZ(0); 
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
   backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
   -webkit-transition-duration: 0.3s;
@@ -92,6 +96,7 @@
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
+
 
 #time {
   position: absolute;
@@ -114,7 +119,75 @@
   /*default prop for its color:   color: black;    */
  }
  
-  /*
+ /* blink animations for time element */
+ .blink {
+    	color: white;
+    	animation: blink 1s 6;
+        animation-iteration-count: 6;
+        -webkit-animation: blink 1s;
+        -webkit-animation-iteration-count: 6;
+        -moz-animation-iteration-count: 6;
+    }
+    
+    @keyframes blink {
+    	from { color: white;}
+        to { color: #f00;}
+      }
+      @-webkit-keyframes blink {
+    	from { color: white;}
+        to { color: #f00;}
+      }
+      
+.blink-2 {
+	    color: white;
+    	animation: blink-2 .25s 4;
+        animation-iteration-count: 4;
+        -webkit-animation: blink-2 .25s;
+        -webkit-animation-iteration-count: 4;
+        -moz-animation-iteration-count: 4;
+}
+
+@keyframes blink-2 {
+    	from { color: white;}
+        to { color: darkred;}
+      }
+      @-webkit-keyframes blink-2 {
+    	from { color: white;}
+        to { color: darkred;}
+      }
+      
+      
+ /* Time hover animation */
+  .hover-shadow-box-animation {
+   display: inline-block;
+   vertical-align: middle;
+   transform: perspective(1px) translateZ(0);
+   -webkit-transform: perspective(1px) translateZ(0);
+   -moz-transform: perspective(1px) translateZ(0);
+   box-shadow: 0 0 1px transparent;
+   -webkit-box-shadow: 0 0 1px transparent;
+   -moz-box-shadow: 0 0 1px transparent;
+   margin: 10px;
+   transition-duration: 0.3s;
+   -webkit-transition-duration: 0.3s;
+   -moz-transition-duration: 0.3s;
+   transition-property: box-shadow, transform;
+   -webkit-transition-property: box-shadow, transform;
+   -moz-transition-property: box-shadow, transform;
+ }
+ 
+ .hover-shadow-box-animation:hover,
+ .hover-shadow-box-animation:focus,
+ .hover-shadow-box-animation:active {
+   box-shadow: 1px 10px 10px -10px rgba(0, 0, 24, 0.5);
+   -webkit-box-shadow: 1px 10px 10px -10px rgba(0, 0, 24, 0.5);
+   -moz-box-shadow: 1px 10px 10px -10px rgba(0, 0, 24, 0.5);
+   transform: scale(1.2) rotate(-5deg);
+   -webkit-transform: scale(1.2) rotate(-5deg);
+   -moz-transform: scale(1.2) rotate(-5deg);
+ }
+
+ /*
  #time:active {
    color: lightgray;
  }
@@ -149,6 +222,7 @@
   font-weight: 800; /* bold */
   color: rgba(225,225,225,0.7);
   text-align: center;
+  -webkit-text-shadow: 3px 2px 2px seagreen;
   text-shadow: 3px 2px 2px seagreen;
   padding: 25px;
   margin: 45px 25px 25px 25px;
@@ -177,7 +251,9 @@
   margin-top: 25px;
   margin-left: 11%;
   letter-spacing: 2px;
+  -webkit-letter-spacing: 2px;
   line-height: 1.5em;
+  -webkit-line-height: 1.5em;
   /*line-spacing;
   word-spacing;
   overflow;*/
@@ -195,8 +271,67 @@
  .container {
      display: block;
      align-content: left;
+     -webkit-align-content: left;
      margin: 5% 0 0 10%;
  }
+ 
+ /* the "non" animated bubbles behind #message container */
+.thought {
+  background-color:#fff;
+  padding:20px;
+  border-radius:30px;
+  min-width:40px;
+  max-width:220px;
+  min-height:40px;
+  margin:20px;
+  position:relative;
+  align-items:center;
+  justify-content:center;
+  -webkit-justify-content:center;
+  -moz-justify-content:center;
+  text-align:center;
+}
+
+.thought:before,
+.thought:after {
+  content:"";
+  background-color:#fff;
+  border-radius:50%;
+  display:block;
+  position:absolute;
+  z-index:-1;
+}
+
+.thought:before {
+  width:44px;
+  height:44px;
+  top:-12px;
+  left:28px;
+  box-shadow:-50px 30px 0 -12px #fff;
+  -webkit-box-shadow:-50px 30px 0 -12px #fff;
+  -moz-box-shadow:-50px 30px 0 -12px #fff;
+}
+
+.thought:after {
+  bottom:-10px;
+  right:26px;
+  width:30px;
+  height:30px;
+  box-shadow:40px -34px 0 0 #fff,
+             -28px -6px 0 -2px #fff,
+             -24px 17px 0 -6px #fff,
+             -5px 25px 0 -10px #fff;
+ -webkit-box-shadow:40px -34px 0 0 #fff,
+             -28px -6px 0 -2px #fff,
+             -24px 17px 0 -6px #fff,
+             -5px 25px 0 -10px #fff;
+ -moz-box-shadow:40px -34px 0 0 #fff,
+             -28px -6px 0 -2px #fff,
+             -24px 17px 0 -6px #fff,
+             -5px 25px 0 -10px #fff;
+}
+/* end block */
+
  
   button {
  /* box-shadow: 1px 4px 5px 1px rgba(30,30,30,0.3);*/
@@ -233,22 +368,33 @@
    color: aqua;
  }
   
- a {
+/* a {
      cursor: pointer;
      color: hotpink;
- }
+ }*/
  
  body {
    /* background: linear-gradient(to right, rgba(0,255,255,0.4), rgba(40,180,1650,0.6)); */
       background-image: url("../images/backgrounds/bg.jpg");
       /* background-position: center; */
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;  
+      background-repeat: no-repeat; 
+      background-attachment: fixed; 
+      background-size: cover; 
       animation: changeBg 150s infinite;
       -webkit-animation: changeBg 150s infinite;
       animation-delay: 5s;
       -webkit-animation-delay: 5s;
+      -moz-animation-delay: 5s;
+      -webkit-background-image: url("../images/backgrounds/bg.jpg");
+      -webkit-background-position: center;
+      -webkit-background-repeat: no-repeat;
+      -webkit-background-attachment: fixed;
+      -webkit-background-size: cover; 
+      -moz-background-image: url("../images/backgrounds/bg.jpg");
+      -moz-background-position: center;
+      -moz-background-repeat: no-repeat;
+      -moz-background-attachment: fixed;
+      -moz-background-size: cover;  
  }
  
  @keyframes changeBg {
@@ -278,6 +424,7 @@
     	background-image: url("../images/backgrounds/4.jpg");
     }
 }
+/* bubbles animation for body on the bottom of the stylesheet! */
  
  /* if the device's maximum width is 500px, set padding for the body to 8px */
  @media screen and (max-width: 500px) {
@@ -285,6 +432,8 @@
      padding: 8px;
    }
  }
+ 
+ 
  /* Snackbar section */
  /* start */
  #snackbar {
@@ -424,35 +573,6 @@
    -moz-ransition-delay: calc(0.055s * var(--i));
  }
  
- .hover-shadow-box-animation {
-   display: inline-block;
-   vertical-align: middle;
-   transform: perspective(1px) translateZ(0);
-   -webkit-transform: perspective(1px) translateZ(0);
-   -moz-transform: perspective(1px) translateZ(0);
-   box-shadow: 0 0 1px transparent;
-   -webkit-box-shadow: 0 0 1px transparent;
-   -moz-box-shadow: 0 0 1px transparent;
-   margin: 10px;
-   transition-duration: 0.3s;
-   -webkit-transition-duration: 0.3s;
-   -moz-transition-duration: 0.3s;
-   transition-property: box-shadow, transform;
-   -webkit-transition-property: box-shadow, transform;
-   -moz-transition-property: box-shadow, transform;
- }
- 
- .hover-shadow-box-animation:hover,
- .hover-shadow-box-animation:focus,
- .hover-shadow-box-animation:active {
-   box-shadow: 1px 10px 10px -10px rgba(0, 0, 24, 0.5);
-   -webkit-box-shadow: 1px 10px 10px -10px rgba(0, 0, 24, 0.5);
-   -moz-box-shadow: 1px 10px 10px -10px rgba(0, 0, 24, 0.5);
-   transform: scale(1.2) rotate(-5deg);
-   -webkit-transform: scale(1.2) rotate(-5deg);
-   -moz-transform: scale(1.2) rotate(-5deg);
- }
- 
  .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -490,77 +610,22 @@
 }
 
 @media screen and (min-width: 768px) {
-#recIcon {
-height: 42px;
-width: 42px;
-top: 1.5vh;
-}
-}
-
-.thought {
-  background-color:#fff;
-  padding:20px;
-  border-radius:30px;
-  min-width:40px;
-  max-width:220px;
-  min-height:40px;
-  margin:20px;
-  position:relative;
-  align-items:center;
-  justify-content:center;
-  -webkit-justify-content:center;
-  -moz-justify-content:center;
-  text-align:center;
+    #recIcon {
+    height: 42px;
+    width: 42px;
+    top: 1.5vh;
+    }
 }
 
-.thought:before,
-.thought:after {
-  content:"";
-  background-color:#fff;
-  border-radius:50%;
-  display:block;
-  position:absolute;
-  z-index:-1;
-}
-
-.thought:before {
-  width:44px;
-  height:44px;
-  top:-12px;
-  left:28px;
-  box-shadow:-50px 30px 0 -12px #fff;
-  -webkit-box-shadow:-50px 30px 0 -12px #fff;
-  -moz-box-shadow:-50px 30px 0 -12px #fff;
-}
-
-.thought:after {
-  bottom:-10px;
-  right:26px;
-  width:30px;
-  height:30px;
-  box-shadow:40px -34px 0 0 #fff,
-             -28px -6px 0 -2px #fff,
-             -24px 17px 0 -6px #fff,
-             -5px 25px 0 -10px #fff;
- -webkit-box-shadow:40px -34px 0 0 #fff,
-             -28px -6px 0 -2px #fff,
-             -24px 17px 0 -6px #fff,
-             -5px 25px 0 -10px #fff;
- -moz-box-shadow:40px -34px 0 0 #fff,
-             -28px -6px 0 -2px #fff,
-             -24px 17px 0 -6px #fff,
-             -5px 25px 0 -10px #fff;
-}
-
-/* @media screen and (min-width: 1024px) {
-#recIcon {
-height: 48px;
-width: 48px;
-}
+/*@media screen and (min-width: 1024px) {
+    #recIcon {
+    height: 48px;
+    width: 48px;
+    }
 } */
 
 
-/* bubbles */
+/* the bubbles animation for the app */
 .bubbles-container {
   position: absolute;
   top: 0;
@@ -579,13 +644,17 @@ width: 48px;
 }
 .bubbles circle {
   stroke: white;
+  -webkit-stroke: white;
   fill: none;
+  -webkit-fill: none;
 }
 .bubbles > g > g:nth-of-type(3n) circle {
   stroke: #87f5fb;
+  -webkit-stroke: #87f5fb;
 }
 .bubbles > g > g:nth-of-type(4n) circle {
   stroke: #8be8cb;
+  -webkit-stroke: #8be8cb;
 }
 
 .bubbles-large {
@@ -605,7 +674,7 @@ width: 48px;
 }
 .bubbles-large g:nth-of-type(1) circle {
   -webkit-animation: wobble 3s infinite ease-in-out;
-          animation: wobble 3s infinite ease-in-out;
+               animation: wobble 3s infinite ease-in-out;
 }
 .bubbles-large g:nth-of-type(2) {
   -webkit-animation: up 5.25s 250ms infinite;
@@ -620,7 +689,7 @@ width: 48px;
 }
 .bubbles-large g:nth-of-type(3) {
   -webkit-animation: up 6s 750ms infinite;
-          animation: up 6s 750ms infinite;
+               animation: up 6s 750ms infinite;
 }
 .bubbles-large g:nth-of-type(3) g {
   transform: translateX(700px);
@@ -638,7 +707,7 @@ width: 48px;
 }
 .bubbles-large g:nth-of-type(4) circle {
   -webkit-animation: wobble 3s infinite ease-in-out;
-              animation: wobble 3s infinite ease-in-out;
+               animation: wobble 3s infinite ease-in-out;
 }
 .bubbles-large g:nth-of-type(5) {
   -webkit-animation: up 6.5s 4s infinite;
@@ -649,7 +718,7 @@ width: 48px;
 }
 .bubbles-large g:nth-of-type(5) circle {
   -webkit-animation: wobble 3s infinite ease-in-out;
-          animation: wobble 3s infinite ease-in-out;
+               animation: wobble 3s infinite ease-in-out;
 }
 
 .bubbles-small {
@@ -816,38 +885,3 @@ width: 48px;
   }
 }
 
-.blink {
-    	color: white;
-    	animation: blink 1s 6;
-        animation-iteration-count: 6;
-        -webkit-animation: blink 1s;
-        -webkit-animation-iteration-count: 6;
-        -moz-animation-iteration-count: 6;
-    }
-    
-    @keyframes blink {
-    	from { color: white;}
-        to { color: #f00;}
-      }
-      @-webkit-keyframes blink {
-    	from { color: white;}
-        to { color: #f00;}
-      }
-      
-.blink-2 {
-	    color: white;
-    	animation: blink-2 .25s 4;
-        animation-iteration-count: 4;
-        -webkit-animation: blink-2 .25s;
-        -webkit-animation-iteration-count: 4;
-        -moz-animation-iteration-count: 4;
-}
-
-@keyframes blink-2 {
-    	from { color: white;}
-        to { color: darkred;}
-      }
-      @-webkit-keyframes blink-2 {
-    	from { color: white;}
-        to { color: darkred;}
-      }
