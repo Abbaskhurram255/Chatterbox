@@ -73,6 +73,8 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
     *   Smash Cube
     *   BabyGirls' Dressup <unavailable if your specified age is over 18!) <beta>
     *   ayeshLudo
+    *   breakOut!
+    *   Rising Bars <beta>
     *   Fotoflick
     *   muskyBird: an Elon Musk roast! For he deserves it🤫
     *   Game Of Dragons: City Under Havoc, an adventurous RPG!
