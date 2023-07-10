@@ -1,3 +1,5 @@
+const h2 = document.querySelector("h2").classList;
+
 start_from_menu = () => {
     document.getElementById("menu").style.display = "none";
     document.getElementById("game_display").style.display = "block";
@@ -13,11 +15,14 @@ go_to_menu = () => {
         if (toggle_game_button.innerHTML == "Pause") {
             game_session = false;
             toggle_game_button.innerHTML = "Resume";
+            
         }
     }
     document.getElementById("game_display").style.display = "none";
     document.getElementById("settings").style.display = "none";
     document.getElementById("help").style.display = "none";
+    
+    h2.add("lights");
 
     document.getElementById("menu").style.display = "block";
 }
@@ -26,6 +31,8 @@ open_settings = () => {
     document.getElementById("game_display").style.display = "none";
     document.getElementById("menu").style.display = "none";
     document.getElementById("help").style.display = "none";
+    
+    
 
     document.getElementById("settings").style.display = "block";
     try {
@@ -44,6 +51,8 @@ open_help = () => {
     document.getElementById("game_display").style.display = "none";
     document.getElementById("menu").style.display = "none";
     document.getElementById("settings").style.display = "none";
+    
+    h2.remove("lights");
 
     document.getElementById("help").style.display = "block";
 }
