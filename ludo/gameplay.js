@@ -357,7 +357,7 @@ var setPlayer = function(p){
     switch(p){
         case 'r': temp.innerHTML="red"; temp.style.color="red"; break;
         case 'g': temp.innerHTML="green"; temp.style.color="green"; break;
-        case 'y': temp.innerHTML="yellow"; temp.style.color="yellow"; break;
+        case 'y': temp.innerHTML="yellow"; temp.style.color="goldenrod"; break;
         case 'b': temp.innerHTML="blue"; temp.style.color="blue"; break;
     }
     return;
@@ -375,7 +375,7 @@ var initialiseGame = function(){
             var id=element1+"Holder"+element2;
             addToken(id, element1+'Token');
             if(mapLocker.has(element1)) mapLocker.set(element1, mapLocker.get(element1)+1);
-            else    alert("Error during initialisation! Token mismatch.");
+            else    alert("Error during initialization! Token mismatch.");
         });
         document.getElementById(element1+"Score").classList.add("selected");
     });
