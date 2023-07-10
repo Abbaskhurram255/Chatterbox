@@ -17,7 +17,7 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
     *   Calendar
     *   Live Weather: Learn the weather of any town... in Hindi!
     *   Recipe app: Learn How to Cook!
-    *   MovieDB: A Detailed Movie Database
+    *   yoMovies: A Detailed Movie Database
     *   ayeshTube: An ad-free YouTube!
     *   MyBookList: Your Very-Own Personal Wishlist for Books (which I bet you are gonna buy lots of... in the future!)
     *   Space data app: Learn What's in Space!
