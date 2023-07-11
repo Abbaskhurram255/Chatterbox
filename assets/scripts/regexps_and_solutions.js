@@ -16,7 +16,7 @@
    /(time ((batao|bataie)|(bataa?o )?k(y|i)aa? (hora?haa? )?(he|hai|hy)))|((current|local) (date and )?time)|(date today)|(time now)|(date and time)|(^(aa?j )?(k(y|i)aa?|k(o|au)n ?s(aa?|i|ee)?) (din|day|date|tar(i|ee)kh) (h(e|ai)$|th(aa?|i|ee)))/i, 
    q14 = /^(hi)|(hello)|(hey)|(h?ola)|(howdy)|(namas(hkar|t(e|ai)))|((as?)?salam ?(u|o)?( ala?(e|i)kum)?)$/i, 
    q15 = /tic( |-)?tac( |-)?toe/i, 
-   q16 = /(temperature today)|(is it a (hot|rainy|cloudy|sunny) day today)|(weather)|(m(o|au)sam)/i, 
+   q16 = /(temperature today)|(is it a (hot|rainy|cloudy|sunny) day today)|(weather)|(m(o|au)sam)|(a?aj k(e|ai)sa din (ra)?h(e|ai)(ga)?$)/i, 
    q17 = /^$/, 
    q18 = /(^calculator)|((open|ayesha?) ?(cal)?culator)|(calculate(?:bmi))/i, 
    q19 = 
@@ -26,10 +26,10 @@
    q22 = /(music)|(songs?)|(jukebox)|(gaa?n(e|ay))/i, 
    q23 = /((weight|mass) conver(sion|ter))|((\b\d*\b )?((k?(ilo)?s?)?g(ram)?s?|pounds?|ounces?|oz) (to|and|in|ko|((equals|(is|are) equal to|=)( how many)?)|(baraa?bar h(e|ai)n?)))/i, 
    q24 = /(random games?)|(games)|(play( me)? a game)/i, 
-   q25 = /breakout/i, 
+   q25 = /(breakout)|(brick (game|breaker))/i, 
    q26 = /sodoku/i, 
    q27 = /^(play( me)?|run|launch|execute|open) hangman/i, 
-   q28 = /^(play( me)?|run|launch|execute|open) pac-?man(ia)?/i, 
+   q28 = /(ayesh)? ?beat maker/i, 
    q29 = /(rock|stone) paper scissors?/i, 
    q30 = /(lyrics)|((encycl|lyric|wiki|ayesh)o?pedia)/i, 
    q31 = /((crypto)?currency)|(exchange rates?)|(\b\w\w\w\b to \b\w\w\w\b)/i, 
@@ -40,9 +40,9 @@
    q35 = /numbers? to roman/i, 
    q36 = /(\b\d*\b )?(mi|miles?) (to|and|in|me|mai|ko|((equals|(is|are) equal to|=)( how many)?)|(baraa?bar h(e|ai)n?( kit ?n(e|a(y|i)))) (km|kilomet(er|re))s?)?/i, 
    q37 = /(\b\d*\b )?k(ilo)?m(et(er|re))?s? (to|and|in|m(e|ai)|ko|((equals|(is|are) equal to|=)( how many)?)|(baraa?bar h(e|ai)n?( kit ?n(e|a(y|i)))) mi(les?)?)?/i, 
-   q38 = /(what (date|day) was it yesterday)|(kal (k(y|i)aa?|k(o|au)n ?s(aa?|i|ee)) (din|day|date|tar(i|ee)kh) (rah|th)(aa?|i|ee))/i, 
-   q39 = /(what (date|day) will it be tomorrow)|(kal (k(y|i)aa?|k(o|au)n ?s(aa?|i|ee)) (din|day|date|tar(i|ee)kh) ((ho|rah(e|ai)) ?g(aa?|i|ee))|(hon(e|ai) jaa?rah(i|aa?) h(e|ai)))/i, 
-   q40 = /(monopoly|k((o|au)n)? ?b(an(e|ai)ga)? ?c(rorepati)?)|(crorepati game)|(^crorepati$)/i, 
+   q38 = /(what (date|day) was it yesterday)|((k|c)al (k(y|i)aa?|k(o|au)n ?s(aa?|i|ee)) (din|day|date|tar(i|ee)kh) (rah|th)(aa?|i|ee))/i, 
+   q39 = /(what (date|day) (will it|is it (going to|gon(na)?)) be tomorrow)|((k|c)al (k(y|i)aa?|k(o|au)n ?s(aa?|i|ee)) (din|day|date|tar(i|ee)kh) ((ho|rah(e|ai)) ?g(aa?|i|ee))|(hon(e|ai) (jaa?rah|waa?l)(i|aa?) h(e|ai)))/i, 
+   q40 = /(monopoly|k((o|au)n)? ?b(an(e|ai)ga)? ?c(rorepati)?)|(crorepati game)|(^crorepati$)|(board games)/i, 
    q41 = /(canvas(es)?)|((drawings?|arts?|paint(ings?)?|brush) (app|tool))|(((draw|paint)(ing)? karn(i|aa?|e))|((sketch|canvas|painting)(e?s)? (banaa?n(aa?|e|ai)|karnaa?)) ((chaa?ha?t(a(a|i|y)?|i|ee?) )?h(u|oo|e|ai)n?))/i, 
    q42 = /(audio (visuali(z|s)er|player))|(play local audio)/i, 
    q43 = /((ayesh|t)ranslat(e|or))|(english to (hindi|urdu|chinese|german|spanish|arabic|french|italian|russian))|((hindi|urdu|arabic|spanish|russian|chinese|german) to english)/i, 
@@ -97,7 +97,7 @@
    q83 = /(my( fave?(orite)?)? ?books?'? ?list)|(books? (in|to) my wishlist)/i, 
    q84 = /(math flash ?cards)|((arithmetic|math) game)/i, 
    q85 = /simon/i, 
-   q86 = /(ayesha? ?)?ludo/i, 
+   q86 = /((ayesha? ?)?ludo)|(board game)/i, 
    q87 = 
    /(book|pdf|kitaa?b) (read kar ?k(e|ai)|pa(r|d)h? ?k(e|ai)) (do|d(ai|e)n?|bataa?(o|(e|ai)n?)|de sakt(e|i) h(o|(e|ai)n?))|((pdf|book) (viewer|reader))/i, 
    q88 = 
@@ -127,13 +127,16 @@
    q111 = /hamaa?ri pasand((e|ai)n?)? kitni milti julti h(e|ai)n?/i,
    q112 = /(can'?t? you feel the chemistry between us)|(k(i|y)aa? (tum?|aa?p)( hamaa?r(e|ay) darmyaa?n ?(ki|(hone )?wali|(kisi|(e|ai)k)( kisam ki)?))? chemistry( ko)? mehsus( nahi)? kar (rahi|sakti)( h(o|ai|e)n?)?)/i,
    q113 = /crap|brat|fool|(mother)?fuck(er)?s?|mf|mofo|twats?|cunts?|cock(biter|sucker)?s?|boobs?|morons?|douche?(bag)?s?|pricks?|dicks?|(ass|arse) ?(hole)?s?|dick(head)?s?|fag(got)?|nigg?(a|er)|fucking|f\*cking|f\*ck|bitch|b\*tch|shit|sh\*t|fool|dumb|couch potato|\*ssh\*l\*|\*\*\*\*|c\*ck|\*\*\*\*sucker|c\*cks\*ck\*r|\*\*\*\*|c\*nt|dickhead|d\*c\*h\*a\*|\*\*\*\*|f\*c\*|\*\*\*\*wit|f\*ckw\*t|fuk|f\*k|fuking|f\*k\*ng|mother\*\*\*\*er|m\*th\*rf\*ck\*r|\*\*\*\*\*\*|n\*gg\*r|pussy|p\*ssy|\*\*\*\*|sh\*t|wanker|w\*nk\*r|wankers|w\*nk\*rs|whore|wh\*r\*|slag| sl\*g|\*\*\*\*\*|b\*tch|f u c k|f\*c\*|b.i.t.c.h|b\*tch|d-i-c-k|d\*\*\*/i,
-   q114 = /be ?wafaa?( h(o|e|ai)n?)?$/i,
+   q114 = /(be ?wafaa?( h(o|e|ai)n?)?$)|(^be ?wafaa?$)/i,
    q115 = /meri (girlfriend|wife|lover) k(o|au)n h(e|ai)/i,
    q116 = /meri (dusri )?(g(irl)?f(riend)?|cousin|wife|lover) ka kya$/i,
    q117 = /par (aa?p|tum) to (e|ai)k (robot|machine|ai) h(o|e|ai)n?/i,
     q118 = /(kahaa? chali)|(meri (wife|lover|g(irl)?f(riend)?) kahaa? (h(e|ai)|gai))/i,
     q119 = /(miss (yo)?u)|((aa?p|tum|tere) ko miss kar rah(aa?|i|e) h(u|oo|e|ai)n?)/i,
-    q120 = /time bataa?( d)?(o|e|ai|iy?e)n?/i;
+    q120 = /time bataa?( d)?(o|e|ai|iy?e)n?/i,
+    q121 = /(who is your lover)|(t(umhaa?|e)raa? aa?shik k(o|au)n?)/i,
+    q122 = /^time( (bataa?o|ayesha))? kyaa? (((ho|baj) ?ra?haa?) ?)?h(e|ai)$/i,
+    q123 = /(M(ujh|ere)|h(u|a)m(aa?r(e|ai))?) se shaa?di kar(((l)?(o|(e|ai)n?))| ?ne ke baa?r(e|a(y|i)) m(e|ai)n?)? ?(k(y|(ai|e)s)aa?|gi)?/i;
   
  function ask() { 
    const q = document.querySelector("#searchInput").value; 
@@ -668,14 +671,13 @@
      msg = ""; 
      $output.html(msg); 
    } else if (q28.test(q)) { 
-     let pacManWin = window.open( 
-       "./Javascript-Pacman-master/", 
-       "_blank", 
-       "width=527,height=527,resizable=no,toolbar=no,menubar=no" 
+     let beatMakerWin = window.open( 
+       "./beat-maker/", 
+       "_blank"
      ); 
-     if (pacManWin) { 
+     if (beatMakerWin) { 
        window.focus(); 
-       log("Launched Pacman"); 
+       log("Launched ayeshBeat Maker!"); 
      } else { 
        alert("Please enable popups for this site!"); 
      } 
@@ -1488,6 +1490,7 @@
        "./one-tap-instrument", 
        "./ayeshEdit", 
        "./ayeshPapers/", 
+       "./beat-maker/",
        ];
        let entertainmentAppsWin = window.open( 
        entertainmentApps[Math.floor(Math.random() * entertainmentApps.length)], 
