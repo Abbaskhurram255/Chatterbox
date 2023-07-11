@@ -5,13 +5,17 @@ class DrumKit {
     this.muteButtons = document.querySelectorAll(".mute");
     this.resetButton = document.querySelector(".reset");
 
-    this.currentKick = `./assets/sounds/kick-classic.wav`;
-    this.currentSnare = `./assets/sounds/snare-lofi01.wav`;
-    this.currentHihat = `./assets/sounds/hihat-808.wav`;
+    this.currentKick = `./assets/sounds/kick-gritty.wav`;
+    this.currentSnare = `./assets/sounds/snare-big.wav`;
+    this.currentHihat = `./assets/sounds/hihat-reso.wav`;
+    this.currentopenhat = `./assets/sounds/openhat-808.wav`;
+    this.currentClap = `./assets/sounds/clap-crushed.wav`;
 
     this.kickAudio = document.querySelector(".kick-sound");
     this.snareAudio = document.querySelector(".snare-sound");
     this.hihatAudio = document.querySelector(".hihat-sound");
+    this.openhatAudio = document.querySelector(".openhat-sound");
+    this.clapAudio = document.querySelector(".clap-sound");
     this.selects = document.querySelectorAll("select");
 
     this.tempoSlider = document.querySelector(".tempo-slider");
@@ -52,6 +56,14 @@ class DrumKit {
           this.hihatAudio.currentTime = 0;
           this.hihatAudio.play();
         }
+        if (pad.classList.contains("clap-pad")) {
+          this.clapAudio.currentTime = 0;
+          this.clapAudio.play();
+        }
+        if (pad.classList.contains("openhat-pad")) {
+          this.openhatAudio.currentTime = 0;
+          this.openhatAudio.play();
+        }
       }
     });
     this.index++;
@@ -73,6 +85,10 @@ class DrumKit {
           break;
         case "hihat":
           this.hihatAudio.volume = 0;
+         case "openhat":
+          this.openhatAudio.volume = 0;
+        case "clap":
+          this.clapAudio.volume = 0;
           break;
 
         default:
@@ -91,6 +107,10 @@ class DrumKit {
           break;
         case "hihat":
           this.hihatAudio.volume = 1;
+        case "openhat":
+          this.openhatAudio.volume = 1;
+        case "clap":
+          this.clapAudio.volume = 1;
           break;
 
         default:
@@ -136,6 +156,14 @@ class DrumKit {
 
       case "hihat-select":
         this.hihatAudio.src = selectionValue;
+        break;
+        
+        case "openhat-select":
+        this.openhatAudio.src = selectionValue;
+        break;
+        
+        case "clap-select":
+        this.clapAudio.src = selectionValue;
         break;
 
       default:

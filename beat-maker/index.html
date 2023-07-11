@@ -28,12 +28,12 @@
       rel="stylesheet"
     />
     <style>
-    	body { background: url("edm.jpg") no-repeat center fixed; background-size: cover; background-position: fixed;}
+    	body { background: url("dj.jpg") no-repeat center fixed; background-size: cover; background-position: fixed;}
     </style>
   </head>
   <body>
-    <nav class="top-bar" style="background:linear-gradient(225deg, transparent, green);">
-      <h1 style="color: white;box-shadow: darkgreen 8px 8px 12px 2px;boprder:6px dotted rgba(255, 55, 55, 0.5);">AyeshBeat Maker<i class="fas fa-music" style="color:#3d5"></i></h1>
+    <nav class="top-bar" style="background:linear-gradient(225deg, transparent, purple);">
+      <h1 style="color: white;box-shadow: darkpurple 8px 8px 12px 2px;boprder:6px dotted rgba(255, 55, 55, 0.5);">AyeshBeat Maker<i class="fas fa-music" style="color:#d19"></i></h1>
     </nav>
 
     <div class="sequencer">
@@ -44,21 +44,33 @@
           <button data-track="kick" class="mute kick-volume">
             <i class="fas fa-volume-up"></i>
           </button>
-
           <select name="kick-select" id="kick-select">
+          <option value="./assets/sounds/kick-gritty.wav">Kick Dirty</option>
+            
+            <option value="./assets/sounds/kick-heavy.wav">Kick Heavy</option>
+            
+            <option value="./assets/sounds/kick-slapback.wav">SlapHouse Kick</option>
+            
+            <option value="./assets/sounds/kick-crack.wav">Kick Tape Crack</option>
+            
+            <option value="./assets/sounds/kick-thump.wav">Crack Kick 2</option>
+            
+            <option value="./assets/sounds/kick-deep.wav">Kick Deep</option>
+
+            <option value="./assets/sounds/kick-softy.wav">Kick Softy</option>
+            
+            <option value="./assets/sounds/kick-tight.wav">
+              Kick Tight
+            </option>
+
             <option value="./assets/sounds/kick-acoustic01.wav">
-              Kick acoustic 01
+              Kick Acoustic 01
             </option>
 
             <option value="./assets/sounds/kick-acoustic02.wav">
-              Kick acoustic 02
+              Kick Acoustic 02
             </option>
-
-            <option value="./assets/sounds/kick-deep.wav">Kick deep</option>
-
-            <option value="./assets/sounds/kick-softy.wav">Kick softy</option>
-
-            <option value="./assets/sounds/kick-heavy.wav">Kick heavy</option>
+            
           </select>
         </div>
 
@@ -83,22 +95,26 @@
           </button>
 
           <select name="snare-select" id="snare-select">
+            <option value="./assets/sounds/snare-big.wav">Big Snare</option>
+            <option value="./assets/sounds/snare-brute.wav">Big Snare 2</option>
+            <option value="./assets/sounds/snare-808.wav">Snare 808</option>
             <option value="./assets/sounds/snare-acoustic01.wav">
-              snare acoustic 01
+              Snare Acoustic 01
             </option>
-
             <option value="./assets/sounds/snare-acoustic02.wav">
-              snare acoustic 02
+              Snare Acoustic 02
             </option>
-
-            <option value="./assets/sounds/snare-808.wav">snare 808</option>
-
-            <option value="./assets/sounds/snare-big.wav">snare big</option>
             <option value="./assets/sounds/snare-lofi01.wav">
-              snare lofi 01
+              Snare Lofi 01
             </option>
             <option value="./assets/sounds/snare-lofi02.wav">
-              snare lofi 02
+              Snare Lofi 02
+            </option>
+            <option value="./assets/sounds/snare-vinyl01.wav">
+              Snare Vinyl 01
+            </option>
+            <option value="./assets/sounds/snare-vinyl02.wav">
+              Snare Vinyl 02
             </option>
           </select>
         </div>
@@ -124,18 +140,18 @@
           </button>
 
           <select name="hihat-select" id="hihat-select">
+          	<option value="./assets/sounds/hihat-reso.wav">Hihat Crispy 01</option>
+            <option value="./assets/sounds/hihat-ring.wav">Hihat Crispy 02</option>
+            <option value="./assets/sounds/hihat-electro.wav">Hihat Electro</option>
+            <option value="./assets/sounds/hihat-digital.wav">Hihat Digital</option>
             <option value="./assets/sounds/hihat-acoustic01.wav">
-              hihat acoustic 01
+              Hihat Acoustic 01
             </option>
-
             <option value="./assets/sounds/hihat-acoustic02.wav">
-              hihat acoustic 02
+              Hihat Acoustic 02
             </option>
-
-            <option value="./assets/sounds/hihat-808.wav">hihat 808</option>
-            <option value="./assets/sounds/hihat-plain.wav">hihat plain</option>
-            <option value="./assets/sounds/hihat-electro.wav">hihat electro</option>
-            <option value="./assets/sounds/hihat-digital.wav">hihat digital</option>
+            <option value="./assets/sounds/hihat-808.wav">Hihat 808</option>
+            <option value="./assets/sounds/hihat-plain.wav">Hihat Plain</option>
           </select>
         </div>
 
@@ -151,24 +167,106 @@
         </div>
       </div>
     </div>
+    
+    <!-- open hats -->
+    <div class="openhat-track" style="color:white">
+        <div class="track-control">
+          <h1><i class="fas fa-drum"></i> 4</h1>
+
+          <button data-track="openhat" class="mute openhat-volume">
+            <i class="fas fa-volume-up"></i>
+          </button>
+
+          <select name="openhat-select" id="openhat-select">
+          	
+            <option value="./assets/sounds/openhat-808.wav">Open-Hihat 808</option>
+            <option value="./assets/sounds/openhat-acoustic01.wav">Open-Hihat Acoustic</option>
+            <option value="./assets/sounds/openhat-slick.wav">Open-Hihat Slick</option>
+            <option value="./assets/sounds/openhat-tight.wav">Open-Hihat Tight</option>
+            <option value="./assets/sounds/crash-808.wav">Crash 808</option>
+            <option value="./assets/sounds/crash-acoustic.wav">Crash Acoustic</option>
+            <option value="./assets/sounds/crash-noise.wav">Crash Noisy</option>
+            <option value="./assets/sounds/crash-tape.wav">Crash Tape</option>
+          </select>
+        </div>
+
+        <div class="openhat">
+          <div class="pad openhat-pad b0"></div>
+          <div class="pad openhat-pad b1"></div>
+          <div class="pad openhat-pad b2"></div>
+          <div class="pad openhat-pad b3"></div>
+          <div class="pad openhat-pad b4"></div>
+          <div class="pad openhat-pad b5"></div>
+          <div class="pad openhat-pad b6"></div>
+          <div class="pad openhat-pad b7"></div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- claps -->
+    <div class="clap-track" style="color:white">
+        <div class="track-control">
+          <h1><i class="fas fa-drum"></i> 5</h1>
+
+          <button data-track="clap" class="mute clap-volume">
+            <i class="fas fa-volume-up"></i>
+          </button>
+
+          <select name="clap-select" id="clap-select">
+            <option value="./assets/sounds/clap-crushed.wav">
+              Crushed Clap
+            </option>
+
+            <option value="./assets/sounds/clap-fat.wav">
+              Fat Clap
+            </option>
+
+            <option value="./assets/sounds/clap-808.wav">Clap 808</option>
+            <option value="./assets/sounds/clap-slapper.wav">Slap Clap</option>
+            <option value="./assets/sounds/clap-analog.wav">Analog Clap</option>
+            <option value="./assets/sounds/clap-tape.wav">Tape Clap</option>
+          </select>
+        </div>
+
+        <div class="clap">
+          <div class="pad clap-pad b0"></div>
+          <div class="pad clap-pad b1"></div>
+          <div class="pad clap-pad b2"></div>
+          <div class="pad clap-pad b3"></div>
+          <div class="pad clap-pad b4"></div>
+          <div class="pad clap-pad b5"></div>
+          <div class="pad clap-pad b6"></div>
+          <div class="pad clap-pad b7"></div>
+        </div>
+      </div>
+    </div>
 
       <audio
         class="kick-sound"
-        src="./assets/sounds/kick-acoustic01.wav"
+        src="./assets/sounds/kick-gritty.wav"
       ></audio>
       <audio
         class="snare-sound"
-        src="./assets/sounds/snare-acoustic01.wav"
+        src="./assets/sounds/snare-big.wav"
       ></audio>
       <audio
         class="hihat-sound"
-        src="./assets/sounds/hihat-acoustic01.wav"
+        src="./assets/sounds/hihat-reso.wav"
+      ></audio>
+      <audio
+        class="openhat-sound"
+        src="./assets/sounds/openhat-808.wav"
+      ></audio>
+    </div>
+    <audio
+        class="clap-sound"
+        src="./assets/sounds/clap-crushed.wav"
       ></audio>
     </div>
 
-    <nav class="controls-bar" style="background:linear-gradient(transparent, #1f1f1f, green)">
+    <nav class="controls-bar" style="background:linear-gradient(transparent, #1f1f1f, purple)">
       <div class="sequencer-controls">
-          <button class="play" style="border:3px solid gray; color: green;"><i class="fas fa-play"></i></button>
+          <button class="play" style="border:3px solid gray; color: lavender;"><i class="fas fa-play"></i></button>
         <div class="tempo">
           <h2 style="color:#fff"><span class="tempo-number">140</span> BPM</h2>
           <input
@@ -180,7 +278,7 @@
             style="background-color:gray;"
           />
         </div>
-        <button class="reset" style="color:#fff; border:3px solid gray;"><i class="fas fa-trash"></i></button>
+        <button class="reset" style="color:#fff; border:3px solid gray;/*margin-top:-.25vh;*/"><i class="fas fa-trash"></i></button>
     </nav>
 
     <!-- javascript file -->
