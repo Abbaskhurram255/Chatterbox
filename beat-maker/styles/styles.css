@@ -15,6 +15,10 @@ nav {
   bottom: 0;
   height: 5rem;
   display: flex;
+  -webkit-display: flex;
+  -webkit-touch-display: flex;
+  -ms-display: flex;
+  -moz-display: flex;
   align-items: center;
   -webkit-align-items: center;
   -webkit-touch-align-items: center;
