@@ -39,7 +39,7 @@ class DrumKit {
   }
 
   repeat() {
-    let step = this.index % 8;
+    let step = this.index % 16;
     const activePad = document.querySelectorAll(`.b${step}`);
     activePad.forEach((pad) => {
       pad.style.animation = "play-track 0.3s alternate ease-in-out 2";
