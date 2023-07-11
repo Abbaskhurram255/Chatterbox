@@ -29,7 +29,7 @@
    q25 = /(breakout)|(brick (game|breaker))/i, 
    q26 = /sodoku/i, 
    q27 = /^(play( me)?|run|launch|execute|open) hangman/i, 
-   q28 = /(ayesh)? ?beat maker/i, 
+   q28 = /(ayesh)? ?((drum )?beat|drums) maker/i, 
    q29 = /(rock|stone) paper scissors?/i, 
    q30 = /(lyrics)|((encycl|lyric|wiki|ayesh)o?pedia)/i, 
    q31 = /((crypto)?currency)|(exchange rates?)|(\b\w\w\w\b to \b\w\w\w\b)/i, 
