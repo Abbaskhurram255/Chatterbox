@@ -109,7 +109,7 @@
    q93 = /((I )?love (yo)?u)|((m(e|ai)n?|h(u|a)m) (aa?p|tum|tere) ?(ko|se|sa(y|i)) (chaha?t(aa?|a?i|e)|pyaa?r kart(aa?|i|e)) h(u|oo|e|ai)n?)|(you( a|')?re lovable)|(give me a rose)|(do you love me)|(ph(u|oo)l d((o|e|ai)n?|iji?y?e) ?(aa?p|tum|a(ye|a?i)sha)? (mujh(e|a(i|y))|h(u|a)m(e|ai)n?))/i,
    q94 = /(random fun)|(I'?( ?a)?m bored)|(bore? ho ?rah(aa?|i|e|ai))|(entertain ?(me(nt)?|(kar( sakti h)?|kij)(o|e|ai|iy?e)n?))/i,
    q95 = /k(y|i)aa? (m(ai|e)n?|h(a|u)m) (aa?p|tum) ?ko baby bulaa? sakt(aa?|i|e|ai) h(u|oo|e|ai)n?/i,
-   q96 = /(will you be my (g(irl)?f(riend)?|wife))|(meri (g(irl)?f(riend)?|wife) ban(o|(ai|e)n?) ?gi)|(mujh(e|ai|ay) apnaa? (lover|husband|b(oy)?f(riend)?) bana(o|(e|ai)n?)gi)|(kyaa? (m(e|ai)n?|h(u|a)m) ((aa?p|tum) ?ko|tum(e|ai)n?) apni (wife|g(irl)?f(riend)?) (maa?n|bulaa?|keh|banaa?|samajh) sakt(aa?|a?i|e) h(u|oo|e|ai)n?)/i,
+   q96 = /(will you be my (g(irl)?f(riend)?|wife))|(meri (g(irl)?f(riend)?|wife) ban( ?na (chah|pasand kar)(o|e|ai)n?|(o|(ai|e)n?)) ?gi)|(mujh(e|ai|ay) apnaa? (lover|husband|b(oy)?f(riend)?) bana(o|(e|ai)n?)gi)|(kyaa? (m(e|ai)n?|h(u|a)m) ((aa?p|tum) ?ko|tum(e|ai)n?) apni (wife|g(irl)?f(riend)?) (maa?n|bulaa?|keh|banaa?|samajh) sakt(aa?|a?i|e) h(u|oo|e|ai)n?)/i,
    q97 = /aa?j (se|say|sai) ?((aa?p|tum|aa?(ye|i)sha)?( meri)? (bab(y|es?)|g(irl)?f(riend)?|wife)|((m(ai|e)n?|h(u|a)m) ((aa?p|aa?(ye|i)sha) kaa?|tumhaa?raa?|tera) (lover|husband|b(oy)?f(riend)?)))/i,
    q98 = /(favou?rite|pasand(ee|i)daa?) colou?r/i,
    q99 = /(favou?rite|pasand(ee|i)daa?) ((ghumne ki )?jagh?(aa?|(e|ai)n?)|places to (go|visit|be))/i,
@@ -551,9 +551,7 @@
      msg = ""; 
      $output.html(msg); 
    } else if (q24.test(q)) { 
-     let games;
-     if (detectDeviceType() != "Desktop" || detectDeviceType() == "Mobile") { 
-     	games = [ 
+     let games = [ 
        "./tic-tac-toe/", 
        "./hangman-master/", 
        "./Monopoly-master", 
@@ -571,7 +569,8 @@
        "./breakout-mobile", 
        "./sodoku", 
        "./ludo", 
-       "./rising-bars/",
+       "./rising-bars/", 
+       "./save-ayesha/", 
        "./muskyBird/", 
        "./Rock-Paper-Scissor-master", 
      ]; 
@@ -589,33 +588,6 @@
        "./dress-up-2");
         }
         }
-     } else {
-     	games = [ 
-       "./tic-tac-toe/", 
-       "./2D-Breakout-Game-JavaScript-master/", 
-       "./FlappyBird-JavaScript-master/", 
-       "./Javascript-Pacman-master/", 
-       "./hangman-master/", 
-       "./Rock-Paper-Scissor-master", 
-       "./Monopoly-master", 
-       "https://alexs-maze-game.netlify.app/", 
-       "./canvas-drawing-app-master", 
-       "./space-invaders/", 
-       "./typing-game/", 
-       "./miner-of-lava/", 
-       "./mem-game/", 
-       "../dungeon-crawler/", 
-       "../foto-flick/", 
-       "../Trivia-Db/", 
-       "./The Constructor/", 
-       "./RPG-game/", 
-       "../math-flash-cards/", 
-       "https://alexs-simon-says.netlify.app/", 
-       "./light-maze/", 
-       "https://truth-or-dare-by-alex.netlify.app", 
-       "https://vue-jsnake.netlify.app/",
-     ]; 
-     }
      let gamesWin = window.open( 
        games[Math.floor(Math.random() * games.length)], 
        "_blank" 
@@ -630,11 +602,7 @@
      msg = ""; 
      $output.html(msg); 
    } else if (q25.test(q)) { 
-     let breakOutWin = window.open( 
-       "./breakout-mobile/", 
-       "_blank", 
-       "width=460,height=550,resizable=no,toolbar=no,menubar=no" 
-     ); 
+     let breakOutWin = window.open("./breakout-mobile/", "_blank"); 
      if (breakOutWin) { 
        window.focus(); 
        log("Launched Breakout"); 
@@ -647,8 +615,7 @@
    } else if (q26.test(q)) { 
      let sodokuWin = window.open( 
        "./sodoku/", 
-       "_blank", 
-       "width=380,height=630,resizable=no,toolbar=no,menubar=no" 
+       "_blank"
      ); 
      if (sodokuWin) { 
        window.focus(); 
@@ -1487,10 +1454,11 @@
        "./jokes", 
        "./ludo", 
        "./rising-bars/", 
+       "./save-ayesha/", 
        "./one-tap-instrument", 
        "./ayeshEdit", 
        "./ayeshPapers/", 
-       "./beat-maker/",
+       "./beat-maker/", 
        ];
        let entertainmentAppsWin = window.open( 
        entertainmentApps[Math.floor(Math.random() * entertainmentApps.length)], 
