@@ -1,13 +1,13 @@
-# ayeshBeat Maker
+# BeatMaker-App
 A pure javascript web app for making beats.
 
-## Features
+# Features
 
 - various audios and sounds to try
 - muting and unmuting tracks
 - reset button
 
-## upcoming features
+# upcoming features
 
 - dark/light mode toggler
 - responsive website
