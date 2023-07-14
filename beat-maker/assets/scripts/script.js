@@ -11,7 +11,7 @@ class DrumKit {
     this.currentopenhat = `./assets/sounds/openhat-808.wav`;
     this.currentClap = `./assets/sounds/clap-crushed.wav`;
     this.currentPerc = `./assets/sounds/Perc 5.wav`;
-    this.currentTom = `./assets/sounds/tom-rototom.wav`;
+    this.currentTom = `./assets/sounds/tom-chiptune.wav`;
     
     this.kickAudio = document.querySelector(".kick-sound");
     this.snareAudio = document.querySelector(".snare-sound");
