@@ -118,7 +118,7 @@ const TOOL = [
 	},
 	{
 		id: '',
-		label: 'Size',
+		label: 'Thickness',
 		change: false,
 		content: `<input id="size" type="number" value="5" min="1" max="1000" placeholder="Change the size" />`,
 	},
