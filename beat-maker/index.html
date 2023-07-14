@@ -10,8 +10,9 @@
 
     <!-- css files
  -->
-    <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="assets/styles/styles.css" />
+    <link rel="stylesheet" href="assets/styles/piano.css" />
+    <link rel="stylesheet" href="assets/styles/reset.css" />
  
     <!-- font awesome -->
     <link
@@ -107,7 +108,7 @@
 
           <select name="snare-select" id="snare-select">
             <option value="./assets/sounds/snare-big.wav">Big Snare</option>
-            <option value="./assets/sounds/snare-brute.wav">Big Snare 2</option>
+            <option value="./assets/sounds/snare-block.wav">Hard Sare</option>
             <option value="./assets/sounds/snare-808.wav">Snare 808</option>
             <option value="./assets/sounds/snare-acoustic01.wav">
               Snare Acoustic 01
@@ -127,6 +128,7 @@
             <option value="./assets/sounds/snare-vinyl02.wav">
               Snare Vinyl 02
             </option>
+            <option value="./assets/sounds/snare-brute.wav">Snare Unclean</option>
           </select>
         </div>
         
@@ -217,6 +219,8 @@
             <option value="./assets/sounds/crash-acoustic.wav">Crash Acoustic</option>
             <option value="./assets/sounds/crash-noise.wav">Crash Noisy</option>
             <option value="./assets/sounds/crash-tape.wav">Crash Tape</option>
+            <option value="./assets/sounds/ride-acoustic02.wav">Acoustic Ride 01</option>
+            <option value="./assets/sounds/ride-acoustic01.wav">Acoustic Ride 02</option>
           </select>
         </div>
 
@@ -264,6 +268,13 @@
             <option value="./assets/sounds/clap-slapper.wav">Slap Clap</option>
             <option value="./assets/sounds/clap-analog.wav">Analog Clap</option>
             <option value="./assets/sounds/clap-tape.wav">Tape Clap</option>
+            
+            <option value="./assets/sounds/snap3.wav">Snap Reverb</option>
+            <option value="./assets/sounds/snap2.wav">Snap Analog</option>
+            <option value="./assets/sounds/snap1.wav">Snap Short</option>
+            <option value="./assets/sounds/snap6.wav">Snap Short 2</option>
+            <option value="./assets/sounds/snap4.wav">Snap Lightweight</option>
+            <option value="./assets/sounds/snap5.wav">Snap Lightweight 2</option>
           </select>
         </div>
 
@@ -287,8 +298,123 @@
           <div class="pad clap-pad b15"></div>
         </div>
       </div>
+      
+    <!-- percussion -->
+    <div class="perc-track" style="color:white">
+        <div class="track-control">
+          <h1><i class="fas fa-drum"></i> 6</h1>
+
+          <button data-track="perc" class="mute perc-volume">
+            <i class="fas fa-volume-up"></i>
+          </button>
+
+          <select name="perc-select" id="perc-select">
+            <option value="./assets/sounds/Perc 5.wav">
+              Water Drop
+            </option>
+            <option value="./assets/sounds/Cymatics - Trap City Percussion 5.wav">
+              Water Drop 2
+             </option>
+
+            <option value="./assets/sounds/perc-tambo.wav">
+              Tambourine
+            </option>
+            <option value="./assets/sounds/shaker.wav">
+              Shaker
+            </option>
+            <option value="./assets/sounds/shaker2.wav">
+              Shaker Short
+            </option>
+            
+            <option value="./assets/sounds/perc-nasty.wav">Nasty</option>
+            <option value="./assets/sounds/perc-weirdo.wav">Weirdo</option>
+            
+            <option value="./assets/sounds/perc-metal.wav">Metal</option>
+            <option value="./assets/sounds/perc-tribal.wav">Tribal</option>
+            <option value="./assets/sounds/perc-hollow.wav">Hollow</option>
+            
+            <option value="./assets/sounds/cowbell-perc-808.wav">
+              Cowbell
+            </option>
+            <option value="./assets/sounds/perc-laser.wav">Laser</option>
+          </select>
+        </div>
+
+        <!-- perc bars -->
+        <div class="perc">
+          <div class="pad perc-pad b0"></div>
+          <div class="pad perc-pad b1"></div>
+          <div class="pad perc-pad b2"></div>
+          <div class="pad perc-pad b3"></div>
+          <div class="pad perc-pad b4"></div>
+          <div class="pad perc-pad b5"></div>
+          <div class="pad perc-pad b6"></div>
+          <div class="pad perc-pad b7"></div>
+          <div class="pad perc-pad b8"></div>
+          <div class="pad perc-pad b9"></div>
+          <div class="pad perc-pad b10"></div>
+          <div class="pad perc-pad b11"></div>
+          <div class="pad perc-pad b12"></div>
+          <div class="pad perc-pad b13"></div>
+          <div class="pad perc-pad b14"></div>
+          <div class="pad perc-pad b15"></div>
+        </div>
+      </div>
+      
+      <!-- tom -->
+    <div class="tom-track" style="color:white">
+        <div class="track-control">
+          <h1><i class="fas fa-drum"></i> 7</h1>
+
+          <button data-track="tom" class="mute tom-volume">
+            <i class="fas fa-volume-up"></i>
+          </button>
+
+          <select name="tom-select" id="tom-select">
+            <option value="./assets/sounds/tom-rototom.wav">
+              Tom
+            </option>
+            <option value="./assets/sounds/tom-chiptune.wav">
+              Tom Fat
+             </option>
+             <option value="./assets/sounds/tom-fm.wav">
+              Tom Fat 2
+              </option>
+
+            <option value="./assets/sounds/tom-lofi.wav">
+              Tom Lofi
+            </option>
+            
+            <option value="./assets/sounds/tom-808.wav">Tom 808</option>
+            
+            <option value="./assets/sounds/tom-acoustic01.wav">Tom Acoustic 01</option>
+            <option value="./assets/sounds/tom-acoustic02.wav">Tom Acoustic 02</option>
+          </select>
+        </div>
+
+        <!-- tom bars -->
+        <div class="tom">
+          <div class="pad tom-pad b0"></div>
+          <div class="pad tom-pad b1"></div>
+          <div class="pad tom-pad b2"></div>
+          <div class="pad tom-pad b3"></div>
+          <div class="pad tom-pad b4"></div>
+          <div class="pad tom-pad b5"></div>
+          <div class="pad tom-pad b6"></div>
+          <div class="pad tom-pad b7"></div>
+          <div class="pad tom-pad b8"></div>
+          <div class="pad tom-pad b9"></div>
+          <div class="pad tom-pad b10"></div>
+          <div class="pad tom-pad b11"></div>
+          <div class="pad tom-pad b12"></div>
+          <div class="pad tom-pad b13"></div>
+          <div class="pad tom-pad b14"></div>
+          <div class="pad tom-pad b15"></div>
+        </div>
+      </div>
     </div>
 
+      <!-- importing the default audio for each -->
       <audio
         class="kick-sound"
         src="./assets/sounds/kick-gritty.wav"
@@ -310,6 +436,14 @@
         class="clap-sound"
         src="./assets/sounds/clap-crushed.wav"
       ></audio>
+    <audio
+        class="perc-sound"
+        src="./assets/sounds/Perc 5.wav"
+      ></audio>
+    <audio
+        class="tom-sound"
+        src="./assets/sounds/tom-rototom.wav"
+      ></audio>
     </div>
 
     <nav class="controls-bar" style="background:linear-gradient(transparent, #1f1f1f, purple)">
@@ -322,14 +456,37 @@
             class="tempo-slider"
             min="30"
             max="240"
-            value="140"
+            value="150"
             style="background-color:gray;"
           />
         </div>
         <button class="reset" style="color:#fff; border:3px solid gray;/*margin-top:-.25vh;*/"><i class="fas fa-trash"></i></button>
     </nav>
+    <div class="wrapper">
+      
+      <ul class="piano-keys">
+        <li class="key white" data-key="a"><span>C</span></li>
+        <li class="key black" data-key="w"><span>D♭</span></li>
+        <li class="key white" data-key="s"><span>D</span></li>
+        <li class="key black" data-key="e"><span>E♭</span></li>
+        <li class="key white" data-key="d"><span>E</span></li>
+        <li class="key white" data-key="f"><span>F</span></li>
+        <li class="key black" data-key="t"><span>G♭</span></li>
+        <li class="key white" data-key="g"><span>G</span></li>
+        <li class="key black" data-key="y"><span>A♭</span></li>
+        <li class="key white" data-key="h"><span>A</span></li>
+        <li class="key black" data-key="u"><span>B♭</span></li>
+        <li class="key white" data-key="j"><span>B</span></li>
+        <li class="key white" data-key="k"><span>C</span></li>
+        <li class="key black" data-key="o"><span>C♭</span></li>
+        <li class="key white" data-key="l"><span>D</span></li>
+        <li class="key black" data-key="p"><span>E♭</span></li>
+        <li class="key white" data-key=";"><span>E</span></li>
+      </ul>
+    </div>
 
     <!-- javascript file -->
-    <script src="./script.js"></script>
+    <script src="./assets/scripts/script.js"></script>
+    <script src="./assets/scripts/piano.js"></script>
   </body>
 </html>
