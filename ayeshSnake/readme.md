@@ -1,6 +1,6 @@
 # <center>ayeshSnake</center>
 
-## A simple, yet responsive snack game
+## A simple, yet responsive snake game
 ### Touch-Controlled
 
 <em>&copy;2023 ayeshaPT, Game licensed under GPL-3.
