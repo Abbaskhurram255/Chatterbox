@@ -341,12 +341,45 @@ const daystilNYD = () => {
 };
 
 var msg;
-var userName = prompt("Hello ji! Naam jan sakti hu me apka?");
-userName = toTitleCase(userName);
+const ls = localStorage || window.localStorage;
+var userName = ls.getItem("lsuserName") || prompt("Hello ji! Naam jan sakti hu me apka? Apparently, ap ek first time user hen!");
+userName = toTitleCase(userName); 
+if (
+    userName != null &&
+    userName.length >= 3 &&
+    /^[a-z\s]+$/i.test(userName) &&
+    userName != ""
+  ) {
+      ls.setItem("lsuserName", userName);
+      }
 var age;
-var bday = prompt(
-  "Or birthday? Note: Me birthday sirf apki umr ka hisab lagane ke lie puchti hu, or is lie bhi take me apko apki salgira wale din 'Happy birthday' bol saku.\nAccepted format *: YYYY(separator)m(separator)d"
+var bday;
+if (ls.getItem("lsbday") == null) {
+	bday = prompt(
+  "Birthday jan sakti hu me apki? Note: Me birthday sirf apki umr ka hisab lagane ke lie puchti hu, or is lie bhi take me apko apki salgira wale din 'Happy birthday' bol saku.\nAccepted format *: YYYY(separator)m(separator)d"
 );
+    if ( 
+       bday != null && 
+       /^[0-9a-zA-Z(-\.\_\s\/)]+$/i.test(bday) && 
+       bday != "" && 
+       /^\d{4}[\/.,-\s](\d{1,2}|\b(\w*(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\w*)\b)[\/.,-\s]\d{1,2}$/i.test( 
+         bday 
+       ) 
+     ) { 
+     	ls.setItem("lsbday", bday);
+    }
+} else {
+	if ( 
+       ls.getItem("lsbday") != null && 
+       /^[0-9a-zA-Z(-\.\_\s\/)]+$/i.test(ls.getItem("lsbday")) && 
+       ls.getItem("lsbday") != "" && 
+       /^\d{4}[\/.,-\s](\d{1,2}|\b(\w*(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\w*)\b)[\/.,-\s]\d{1,2}$/i.test( 
+         ls.getItem("lsbday") 
+       ) 
+     ) { 
+     	bday = ls.getItem("lsbday");
+	}
+}
 
 //Show a snackbar if it's user's birthday today
 bday = toTitleCase(bday);
@@ -373,9 +406,14 @@ if (
   userName.length >= 3 &&
   /^[a-z\s]+$/i.test(userName) &&
   userName != ""
-) {
-  alert(`Welcome, ${userName}!`);
-  console.log(`Welcome, ${userName}!`);
+) { 
+  if (ls.getItem("lsuserName") == null || ls.getItem("lsbday") == null) {
+  	alert(`Welcome, ${userName}!`);
+      console.log(`Welcome, ${userName}. This is probably your first time!`);
+  } else {
+  	alert(`Welcome back, ${userName}!`);
+      console.log(`Welcome back. You're definitely not new to this application!`);
+  }
 } else {
   alert("Welcome, luv!");
   console.log("Welcome, luv!");
@@ -662,8 +700,9 @@ $(document).bind("mouseleave", function (e) {
 });
 
 /* SFX Handler */
-const sound = (src, delay = 10000, format = "mp3") => {
+const sound = (src, delay = 10000, format = "mp3", speed = 1.0) => {
 	let audio = new Audio();
+	audio.playbackRate = speed;
 	let dir = "assets/audio";
 	let regex = /.(mp3|wav|ogg)$/i;
 	let formatFound;
@@ -688,6 +727,9 @@ const sound = (src, delay = 10000, format = "mp3") => {
 		log("Format found, didn't need to replace it with the default format, i.e. *.mp3!");
 	} else {
 		//format not found, *.mp3 will be added automatically 
+		if (format == null || format == undefined || format == "" || format == 0) {
+			format = this.format || "mp3"; 
+		}
 		audio.src = `${dir}/${src}.${format}`;
 		log("\nPlaying Audio");
 		log(`Filename: ${src}.${format}`);
@@ -696,7 +738,10 @@ const sound = (src, delay = 10000, format = "mp3") => {
 	}
      utterance.onend = function () { 
      audio.play();
-     } 
+     }
+     if (delay == null || delay == undefined || delay == "" || delay == 0) {
+			delay = this.delay || 10000;
+		}
      setTimeout(() => { utterance.onend = ""; }, delay); 
 }
 
@@ -761,4 +806,4 @@ theme switcher end block */
 //   setTimeout(aBugFix(), 2000);
 //   return
 // }
-// setTimeout(greet(), 3000);
+// setTimeout(greet, 3000);

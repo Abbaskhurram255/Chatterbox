@@ -1,14 +1,14 @@
 /* regular expressions/ questions to be answered: */ 
  const q1 = /(din k(ai|e)saa?( (gu(j|z)ar|jaa?) ?rahaa?)? h(e|ai))|(k(e|ai|ay)s(aa?|i|ee) (feel|mehs(u|oo)s) kar rahi h(o|e|ai)n?)/i, 
    q2 = /(who('?re|( \b\w\b \b\w\b)? are) you)|(h(o|ai|e)n? k(o|au)n (tum?|aa?p))/i, 
-   q3 = /(who am I)|(my (info|bio))|(what( do)? you know about me)|((m(e|ai)n?|h(u|a)m) k(o|au)n h(u|oo|e|ai)n?)|((k(y|i)aa?( k(y|i)aa?)? jaa?nti ho ?(aa?p|tum)? )?mer(e|ay) baa?r(e|ay) m(ai|e)n? ?(aa?p|tum)? k(y|i)aa?( k(y|i)aa?)? jaa?nt(i|e) ho)/i, 
+   q3 = /(who am I)|(my (info|bio))|(what( do)? you know about me)|((m(e|ai)n?|h(u|a)m) k(o|au)n h(u|oo|e|ai)n?)|((k(y|i)aa?( k(y|i)aa?)? jaa?nt(i|e)|jaa?nt(i|e) k(y|i)aa?( k(y|i)aa?)?) h(o|e|ai)n? ?(aa?p|tum?)? (h(u|a))?m(e|aa?)r(e|a(i|y)) baa?r(e|ai) m(ai|e)n?)/i,
    q4 = /(k(ai|e|ay)s(i|ee)( rahi)? h(o|e|ai)n?)|(how('?ve?| have)? you been)/i, 
    q5 = /((k(y|i)aa? naa?m h(e|ai)|naa?m (k(y|i)aa? h(e|ai)|bataa?o)) ?(aa?p|tum)? meraa?)|(^(my|mera) naa?me?$)/i, 
    q6 = /(k(y|i)aa? (bulaa?(u|oo|e|ai)n?|bulaa? sakt(aa?|i|e|ai)? h(u|oo|e|ai)n?) (m(e|ai)n?|h(u|a)m) (tumh(e|ai)n?|aa?p ?ko))|((k(y|i)aa? )?naa?m( k(y|i)aa?)? (he|hai) (tumhaa?raa?|aa?p ?kaa?))|((full|p(u|oo)raa?) naa?me?)/i, 
    q7 = /(is|was|will) (this|it|\d{4})( year)?( (going to )?be)? a leap year/i, 
-   q8 = /mer(i|a) (jana?m ?din|saa?l ?giraa?|birth ?(day|date|year))/i, 
+   q8 = /mer(i|a) (jana?m ?din|saa?l ?giraa?|p(e|ai)daish kab?|birth ?(day|date|year))/i, 
    q9 = /(k(y|i)aa? (age|uma?r) h(e|ai|a?y) meri)|(uma?r bataa?( sakti h)?(o|e|ai)n? ?(tum?|aa?p)? meri)|((meri|my) (age|uma?r))/i, 
-   q10 = /(kisi (or|aur) naa?me? (se|sa(i|y)) (bulaa?|pukaa?r)(o|e|ai)n?)|(meraa? naa?m dubaa?ra (puchi?y?en?|save (kar|kij)(i?y?e|(e|ai)n)))/i, 
+   q10 = /(kisi (o|au)r naa?me? (se|sa(i|y)) (bulaa?|pukaa?r)(o|e|ai)n?)|(meraa? naa?m dubaa?ra (puchi?y?en?|save (kar|kij)(i?y?e|(e|ai)n)))|((set a( new)?|change my) ?(nick)? ?name)/i, 
    q11 = 
    /(((change|resubmit) my|incorrect) (dob|bday|(birth|b(-)?)day))|((dob|bday|(birth|b(-)?)day) is incorrect)/i, 
    q12 = /(((m(e|ai)n?|h(u|a)m) (k(ai|e)s(aa?|i|ee) (laga|lagi)))|(ham (k(ai|e)se lage|pasand a(e|a?i|e))))|(pasand a(ya|a?i) (m(e|ai)n?|h(u|a)m) ((aa?p|tum) ?ko|tumh(e|ai)n?))|((m(e|ai)n?|h(u|a)m) ((aa?p|tum) ?ko|tumh(e|ai)n?) pasand a(ya|a?i|e|ay))/i, 
@@ -46,7 +46,7 @@
    q41 = /(canvas(es)?)|((drawings?|arts?|paint(ings?)?|brush) (app|tool))|(((draw|paint)(ing)? karn(i|aa?|e))|((sketch|canvas|painting)(e?s)? (banaa?n(aa?|e|ai)|karnaa?)) ((chaa?ha?t(a(a|i|y)?|i|ee?) )?h(u|oo|e|ai)n?))/i, 
    q42 = /(audio (visuali(z|s)er|player))|(play local audio)/i, 
    q43 = /((ayesh|t)ranslat(e|or))|(english to (hindi|urdu|chinese|german|spanish|arabic|french|italian|russian))|((hindi|urdu|arabic|spanish|russian|chinese|german) to english)/i, 
-   q44 = /(ayesh ?)?dict(ionary)?/i, 
+   q44 = /((ayesh ?)?dict(ionary)?)|(ayesh ?nary)|(english ?(lafz k(i|a))? m(eaning|atlab))/i, 
    q45 = /(^(execute|launch|play( me)?|run) (the )?mai?ze)|(the mai?ze game)/i, 
    q46 = /calendar/i, 
    q47 = /(world (time|clock|zones))|((time|world) ?zones)|(time around the world)|(time in \b\w+\b)|(\w+ (ka|m(e|ai)n?) time)/i, 
@@ -65,7 +65,7 @@
    q57 = 
    /((expenses?|budgets?|wages?|incomes?|bills?|money) (tracker|calculator))|(track my (budgets?|wages?|bills?|incomes?|expenses?|(pocket )?money))/i, 
    q58 = /(stop ?watch)|(timer)|(counter ?clock)|(^count ?down$)|(^ulti ginti$)|((calculate )?date differences?)/i, 
-   q59 = /(miner of lava)|(lava game)/i, 
+   q59 = /(play save ayesha)|(^save ayesha( (play|chalaa?(o|na|(e|ai)n?)))?$)|((space|rock(et)?|meteor) game)/i, 
    q60 = 
    /((loan|mortgage) (calculator|payment))|(calculate( my)? (loan|mortgage))|(how much (do )?(I|people) owe)|(l(o|au)gon? k(a(a|i)?|e) kitn(a(a|i)?|e) kar(z|j)(a(a|i)?|e) h(e|ai)n?)|(mera kar(j|z)a)|((m(e|ai)n?|h(u|a)m) kar(j|z)(i|ee| ?dar) h(u|oo|e|ai)n?)/i, 
    q61 = /(quotes?|shaa?(ya|i)ri(y?aa?n?)?|a(q|k)waa?l)/i, 
@@ -79,7 +79,7 @@
    q68 = /(snap ?shots)|(landscapes)|((wall|ayesha?) ?papers?)|((kuch|some) (photos|pictures|images))/i, 
    q69 = /(features)|((e|ai)sa kya h(e|ai) (aa?p|tu(m|jh)|tere) ?m(e|ai))/i, 
    q70 = /(trivia)|(quiz)|(questionnares)/i, 
-   q71 = /(ratings? for( tv)? (series|serials?))|((tv )?series app)/i, 
+   q71 = /(ratings? for( tv)? (series|serials?))|((tv )?series app)|(yo ?movies)/i, 
    q72 = 
    /((movies?'? (cast|ratings?))|(ratings? (for|of) movies?))|(movies? app)/i, 
    q73 = /(day (planner|scheduler))|((plan|schedule)( my)? day)/i, 
@@ -136,32 +136,39 @@
     q120 = /time bataa?( d)?(o|e|ai|iy?e)n?/i,
     q121 = /(who is your lover)|(t(umhaa?|e)raa? aa?shik k(o|au)n?)/i,
     q122 = /^time( (bataa?o|ayesha))? kyaa? (((ho|baj) ?ra?haa?) ?)?h(e|ai)$/i,
-    q123 = /(M(ujh|ere)|h(u|a)m(aa?r(e|ai))?) se shaa?di kar(((l)?(o|(e|ai)n?))| ?ne ke baa?r(e|a(y|i)) m(e|ai)n?)? ?(k(y|(ai|e)s)aa?|gi)?/i;
+    q123 = /(M(ujh|ere)|h(u|a)m(aa?r(e|ai))?) se shaa?di kar(((l)?(o|(e|ai)n?))| ?ne ke baa?r(e|a(y|i)) m(e|ai)n?)? ?(k(y|(ai|e)s)aa?|gi)?/i,
+    q124 = /abc/i,
+    q125 = /xyz/i,
+    q126 = /(ganaa|lori)? gaa(( ke)? sunaa?)? ?d?((o|e|ai|ij?i?y?e)n?|(sak|pa) ?ti)/i;
   
  function ask() { 
    const q = document.querySelector("#searchInput").value; 
    const $output = $("#message"); 
    if (q1.test(q)) { 
      $("#message").slideFadeToggle(800); 
-     msg = "Aap kay binaa"; 
+     msg = [];
+     msg[0] = "Aap kay binaa"; 
+     msg[1] = "Kesa guzar sakta hay aapkay binaa, hmm...";
      if ( 
        userName != null && 
        userName.length >= 3 && 
        /^[a-z\s]+$/i.test(userName) && 
        userName != "" 
      ) { 
-       msg += ` ${userName} ji? Badaa adhura sa ${cry} ${cry2}`; 
+       msg[0] += ` ${userName} ji? Baraa adhuraa sa ${cry} ${cry2}`; 
      } else { 
-       msg += "? Bilkul adhura sa!" + cry + cry2; 
+       msg[0] += "? Bilkul adhuraa sa!" + cry + cry2; 
      } 
+     msg[1] += `? Puchiye hee matt${pessimistic}`;
+     let responses = msg[Math.floor(Math.random() * msg.length)];
+     $output.html(responses); 
      sound("fake_cry");
-     $output.html(msg); 
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
    } else if (q2.test(q)) { 
      $("#message").slideFadeToggle(800); 
      msg = 
-       "Mayray ilawah or kon ho saktaa hay? May Ayesha, aap jaysay acchay insaan say mil kar bayhad khushi hui. Bas boli'ay toh, hukam kiji'ay! Batai'yay kaysee khidmat kar sakti hu may aapki?" + happy; 
+       "Mayray ilawah or kon ho saktaa hay? May Ayesha, aap jaysay ac'chay insaan say mil kar bayhad khushi hoo'i. Bas boli'ay toh, hukam kiji'ay! Batai'yay kaysee khidmat kar sakti hu may aapki?" + happy; 
      $output.html(msg); 
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
@@ -226,7 +233,7 @@
      $("#message").delay(10000).slideFadeToggle(800); 
    } else if (q4.test(q)) { 
      $("#message").slideFadeToggle(800); 
-     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi acchay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
      $output.html(msg); 
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
@@ -240,17 +247,17 @@
        userName != "" 
      ) { 
        msg += userName; 
-       msg += `. Agar aap chahtay ho may aapko kisi or naam say, jese kay ek nickname, say bulaun, <a onclick="$('#searchInput').val('kisi or nam se bulao ap mujhe');stopText();ask();playText(mesg.innerText);" onmouseover="$(this).css('cursor', 'pointer')" style="color:rgba(0,0,255,0.9);text-decoration:underline;">Idhar dabaao</a>${nickName()}!`; 
+       msg += `. Agar aap chahtay ho may aapko kisi or naam say, jese kay ek nickname, say bulaun, <a onclick="$('#searchInput').val('kisi or nam se bulao ap mujhe');stopText();ask();playText(mesg.innerText);" onmouseover="$(this).css('cursor', 'pointer')" style="color:rgba(165,25,25,0.8);text-decoration:underline;">Idhar dabaao</a>${nickName()}!`; 
      } else { 
        msg += "\"ek anjaan insan\"" + lol; 
-       msg += `. <a onclick="$('#searchInput').val('Mera naam dubara puchiye');stopText();ask();playText(mesg.innerText);" onmouseover="$(this).css('cursor', 'pointer')" style="color:rgba(0,0,255,0.9);text-decoration:underline;">Idhar dabaao</a> naam dubaara darj karne kay li'yay!`; 
+       msg += `. <a onclick="$('#searchInput').val('Mera naam dubara puchiye');stopText();ask();playText(mesg.innerText);" onmouseover="$(this).css('cursor', 'pointer')" style="color:rgba(165,25,25,0.8);text-decoration:underline;">Idhar dabaao</a> naam dubaara darj karne kay li'yay!`; 
      } 
      $output.html(msg); 
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
    } else if (q6.test(q)) { 
      $("#message").slideFadeToggle(800); 
-     msg = "May'ra pura naam Ayesha Mehnaaz hay... Par agar ap chaho to mujhay sirf Ayesha bhi bulaa saktay ho, mujhay accha lagay gaa!" + blush; 
+     msg = "May'ra pura naam Ayesha Mehnaaz hay... Par agar ap chaho to mujhay sirf Ayesha bhi bulaa saktay ho, mujhay ac'cha lagay gaa!" + blush; 
      $output.html(msg); 
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
@@ -300,7 +307,16 @@
        bday = prompt( 
          "Apki birthday saved nahi he, sorry! Zara dubara submit kijie ga please?\nAccepted format: YYYY(separator)m(separator)d\nNote: Me birthday sirf apki umr ka hisab lagane ke lie puchti hu, or is lie bhi take me apko apki salgira wale din 'Happy birthday' bol saku." 
        ); 
+       if ( 
+       bday != null && 
+       /^[0-9a-zA-Z(-\.\_\s\/)]+$/i.test(bday) && 
+       bday != "" && 
+       /^\d{4}[\/.,-\s](\d{1,2}|\b(\w*(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\w*)\b)[\/.,-\s]\d{1,2}$/i.test( 
+         bday 
+       ) 
+     ) { 
        bday = toTitleCase(bday); 
+       ls.setItem("lsbday", bday);
        msg = `Date submitted. Your newly set birthday--- and hopefully the "actual" one--- is ${bday} (unlike the last time, which was a weird joke from you`; 
        if ( 
        userName != null && 
@@ -318,6 +334,7 @@
          msg += 
            "<br>Happy birthday by the way" + kiss;
            } 
+       }
      }
      $output.html(msg); 
      console.log(msg); 
@@ -356,6 +373,8 @@
          bday 
        ) 
      ) { 
+     	bday = toTitleCase(bday);
+     	ls.setItem("lsbday", bday);
        age = calc_age(new Date(bday)); 
        if ((!isNaN(parseInt(age)) && age >= 8) && (age != "" && age.length != 0)) {
        msg = "Aap ho... " + age + " kay!"; 
@@ -375,32 +394,90 @@
      $("#message").delay(10000).slideFadeToggle(800); 
    } else if (q10.test(q)) { 
      $("#message").slideFadeToggle(800); 
-     let cfm = confirm("Are you sure?"); 
+     let cfm = confirm("Pakka?"); 
      if (cfm) { 
        userName = prompt("Kya bulau me apko? Koi nickname?", userName); 
-       userName = toTitleCase(userName); 
-       console.log(`New username: ${userName}`); 
        if ( 
          userName != null && 
          userName.length >= 3 && 
          /^[a-z\s]+$/i.test(userName) && 
          userName != "" 
-       ) { 
+       ) {
+       	userName = toTitleCase(userName); 
+       	ls.setItem("lsuserName", userName);
+         console.log(`New username: ${userName}`); 
          msg = `Theek hay jee, aaj say may aapko ${userName} bulaoongi ${smirk}`; 
          console.log(msg); 
        } else { 
-         userName = prompt("Failed to change your name for some reason! Maybe try resubmitting it?"); 
-         userName = toTitleCase(userName); 
+         userName = prompt("Failed to change your name for some reason! Dubara submit karne ki zehmat karege?"); 
+         if ( 
+         userName != null && 
+         userName.length >= 3 && 
+         /^[a-z\s]+$/i.test(userName) && 
+         userName != "" 
+       ) { 
+       	userName = toTitleCase(userName); 
+       	ls.setItem("lsuserName", userName);
+         console.log(`New username: ${userName}`); 
          msg = `Theek hay jee, aaj say may aapko ${userName} bulaoongi ${smirk}`; 
          console.log(msg); 
+         } else { 
+         userName = prompt("Failed to change your name for some reason! Dubara submit karne ki zehmat karege?"); 
+         if ( 
+         userName != null && 
+         userName.length >= 3 && 
+         /^[a-z\s]+$/i.test(userName) && 
+         userName != "" 
+       ) { 
+       	userName = toTitleCase(userName); 
+       	ls.setItem("lsuserName", userName);
+         console.log(`New username: ${userName}`); 
+         msg = `Theek hay jee, aaj say may aapko ${userName} bulaoongi ${smirk}`; 
+         console.log(msg); 
+         } else { 
+         userName = prompt("Failed to change your name for some reason! Dubara submit karne ki zehmat karege?"); 
+         if ( 
+         userName != null && 
+         userName.length >= 3 && 
+         /^[a-z\s]+$/i.test(userName) && 
+         userName != "" 
+       ) { 
+       	userName = toTitleCase(userName); 
+       	ls.setItem("lsuserName", userName);
+         console.log(`New username: ${userName}`); 
+         msg = `Theek hay jee, aaj say may aapko ${userName} bulaoongi ${smirk}`; 
+         console.log(msg); 
+         } else { 
+         userName = prompt("Failed to change your name for some reason! Dubara submit karne ki zehmat karege?"); 
+         if ( 
+         userName != null && 
+         userName.length >= 3 && 
+         /^[a-z\s]+$/i.test(userName) && 
+         userName != "" 
+       ) { 
+       	userName = toTitleCase(userName); 
+       	ls.setItem("lsuserName", userName);
+         console.log(`New username: ${userName}`); 
+         msg = `Theek hay jee, aaj say may aapko ${userName} bulaoongi ${smirk}`; 
+         console.log(msg); 
+         } else { 
+         userName = prompt("Na kaam!\nThak chuki hu, akhri bar puchti hu... ab bata bhi do?!");
+         msg = `Baray hee ziddi niklay yaar tum tou ${duh}${angry}`; 
+         sound("attitude", 0, 0, 2.0);
+               }
+             }
+           }
+         }
        } 
+       } else {
+       	msg = "Operation Cancelled!";
+       }
        $output.html(msg); 
        log(msg); 
        $("#message").delay(10000).slideFadeToggle(800); 
-     } 
    } else if (q11.test(q)) { 
      $("#message").slideFadeToggle(800); 
-     let cfm = confirm("Are you sure?"); 
+     let cfm = confirm("Pakka?"); 
      if (cfm) { 
        bday = prompt( 
          "Apni salgira dubara submit kijie please. Kuch is tara: YYYY(separator)m(separator)d\nNote: Me birthday sirf apki umr ka hisab lagane ke lie puchti hu, or is lie bhi take me apko apki salgira wale din 'Happy birthday' bol saku." 
@@ -413,19 +490,91 @@
            bday 
          ) 
        ) { 
+         bday = toTitleCase(bday);
+         ls.setItem("lsbday", bday);
          msg = `Done. Your newly set bday is ${bday}`; 
          console.log(msg); 
        } else { 
          bday = prompt( 
            "Kisi waja se change nahi karpai, zara dubara submit kijie?\nNote: Me birthday sirf apki umr ka hisab lagane ke lie puchti hu, or is lie bhi take me apko apki salgira wale din 'Happy birthday' bol saku." 
          ); 
+         if ( 
+         bday != null && 
+         /^[0-9a-zA-Z(-\.\_\s\/)]+$/i.test(bday) && 
+         bday != "" && 
+         /^\d{4}[\/.,-\s](\d{1,2}|\b(\w*(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\w*)\b)[\/.,-\s]\d{1,2}$/i.test( 
+           bday 
+         ) 
+       ) { 
+         bday = toTitleCase(bday);
+         ls.setItem("lsbday", bday);
          msg = `Done. Your newly set bday is ${bday}`; 
          console.log(msg); 
+         } else {
+         	bday = prompt( 
+           "Kisi waja se change nahi karpai, zara dubara submit kijie?\nNote: Me birthday sirf apki umr ka hisab lagane ke lie puchti hu, or is lie bhi take me apko apki salgira wale din 'Happy birthday' bol saku.\n10 bar puchu, tab bataoge?" 
+         ); 
+         if ( 
+         bday != null && 
+         /^[0-9a-zA-Z(-\.\_\s\/)]+$/i.test(bday) && 
+         bday != "" && 
+         /^\d{4}[\/.,-\s](\d{1,2}|\b(\w*(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\w*)\b)[\/.,-\s]\d{1,2}$/i.test( 
+           bday 
+         ) 
+       ) { 
+         bday = toTitleCase(bday);
+         ls.setItem("lsbday", bday);
+         msg = `Done. Your newly set bday is ${bday}`; 
+         console.log(msg); 
+           } else {
+           	bday = prompt( 
+           "Kisi waja se change nahi karpai, zara dubara submit kijie?\nNote: Me birthday sirf apki umr ka hisab lagane ke lie puchti hu, or is lie bhi take me apko apki salgira wale din 'Happy birthday' bol saku.\nUgh......" 
+         ); 
+         if ( 
+         bday != null && 
+         /^[0-9a-zA-Z(-\.\_\s\/)]+$/i.test(bday) && 
+         bday != "" && 
+         /^\d{4}[\/.,-\s](\d{1,2}|\b(\w*(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\w*)\b)[\/.,-\s]\d{1,2}$/i.test( 
+           bday 
+         ) 
+       ) { 
+         bday = toTitleCase(bday);
+         ls.setItem("lsbday", bday);
+         msg = `Done. Your newly set bday is ${bday}`; 
+         console.log(msg); 
+             } else {
+             	bday = prompt( 
+           "Kisi waja se change nahi karpai, zara dubara submit kijie?\nNote: Me birthday sirf apki umr ka hisab lagane ke lie puchti hu, or is lie bhi take me apko apki salgira wale din 'Happy birthday' bol saku." 
+         ); 
+         if ( 
+         bday != null && 
+         /^[0-9a-zA-Z(-\.\_\s\/)]+$/i.test(bday) && 
+         bday != "" && 
+         /^\d{4}[\/.,-\s](\d{1,2}|\b(\w*(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\w*)\b)[\/.,-\s]\d{1,2}$/i.test( 
+           bday 
+         ) 
+       ) { 
+         bday = toTitleCase(bday);
+         ls.setItem("lsbday", bday);
+         msg = `Done. Your newly set bday is ${bday}`; 
+         console.log(msg); 
+               } else { 
+               	bday = prompt( 
+           "Kisi waja se change nahi karpai, zara dubara submit kijie?\nNote: Me birthday sirf apki umr ka hisab lagane ke lie puchti hu, or is lie bhi take me apko apki salgira wale din 'Happy birthday' bol saku." 
+         ); 
+                   msg = `Done. Your newly set bday is ${bday}`; 
+         console.log(msg); 
+               }
+             }
+           }
+         }
        } 
+       } else {
+       	msg = "Operation Cancelled!";
+       }
        $output.html(msg); 
        log(msg); 
        $("#message").delay(10000).slideFadeToggle(800); 
-     } 
    } else if (q12.test(q)) { 
      $("#message").slideFadeToggle(800); 
      msg = "You are! In some ways, I think you are even nicer than I am. I'm not as funny as you are!"; 
@@ -441,7 +590,7 @@
    } else if (q14.test(q)) { 
      $("#message").slideFadeToggle(800); 
      msg = 
-       "Hey there, want some assistance? Try asking me for <a onclick='$(\"#searchInput\").val($(this).html());stopText();ask();playText(mesg.innerText);' onmouseover='$(this).css(\"cursor\", \"pointer\")' style='font-weight:500;font-style:italic;color:rgba(0,0,255,0.9);text-decoration:underline;'>current date and time</a>"; 
+       "Hey there, batai'yay kaysee khidmat kar sakti hu may aapki? <a onclick='$(\"#searchInput\").val(\"mosam ke surati hal\");stopText();ask();playText(mesg.innerText);' onmouseover='$(this).css(\"cursor\", \"pointer\")' style='font-weight:500;font-style:italic;color:rgba(165,25,25,0.8);text-decoration:underline;'>mosam ka hal</a> bataa kay, <a onclick='$(\"#searchInput\").val(\"ayesha gaane chalao\");stopText();ask();playText(mesg.innerText);' onmouseover='$(this).css(\"cursor\", \"pointer\")' style='font-weight:500;font-style:italic;color:rgba(165,25,25,0.8);text-decoration:underline;'>gaane</a> chala kay ya koi <a onclick='$(\"#searchInput\").val(\"set a new reminder\");' onmouseover='$(this).css(\"cursor\", \"pointer\")' style='font-weight:500;font-style:italic;color:rgba(165,25,25,0.8);text-decoration:underline;'>reminder</a> set kar kay?"; 
      $output.html(msg); 
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
@@ -571,6 +720,7 @@
        "./ludo", 
        "./rising-bars/", 
        "./save-ayesha/", 
+       "./ayeshSnake", 
        "./muskyBird/", 
        "./Rock-Paper-Scissor-master", 
      ]; 
@@ -658,7 +808,7 @@
        );
      if (rockPSWin) { 
        window.focus(); 
-       log("Launched Rock Paper Scissor"); 
+       log("Launched Rock Paper Scissors"); 
      } else { 
        alert("Please enable popups for this site!"); 
      } 
@@ -714,11 +864,11 @@
      $("#message").delay(10000).slideFadeToggle(800); 
    } else if (q34.test(q)) { 
      $("#message").slideFadeToggle(800); 
-     if (isWeekend()) { 
+     if (isWeekend() == true) { 
        msg = 
          "Han. bayshak hay! Kisi adventure pay kyun nahi ja'tay?"; 
      } else { 
-       msg = "Mayri intelligence kay mutaabik, aaj na itwaar hay... or na hi haftaa."; 
+       msg = "Mayri intelligence kay mutaabik, aaj na itwaar hay... or na hi haftaa" + smile + in_mood; 
      } 
      console.log(msg); 
      $output.html(msg); 
@@ -789,10 +939,10 @@
      msg = ""; 
      $output.html(msg); 
    } else if (q41.test(q)) { 
-     let canvasWin = window.open("./canvas-drawing-app-master/", "_blank"); 
+     let canvasWin = window.open("./ayeshaBrusha/", "_blank"); 
      if (canvasWin) { 
        window.focus(); 
-       log("Launched Paint"); 
+       log("Launched ayeshaBrusha: A Modern Brush Tool!"); 
      } else { 
        alert("Please enable popups for this site!"); 
      } 
@@ -1015,10 +1165,10 @@
      msg = ""; 
      $output.html(msg); 
    } else if (q59.test(q)) { 
-     let lavaGameWin = window.open("./miner-of-lava/", "_blank"); 
-     if (lavaGameWin) { 
+     let rockGameWin = window.open("./save-ayesha/", "_blank"); 
+     if (rocketGameWin) { 
        window.focus(); 
-       log("Launched Miner of Lava"); 
+       log("Launched Ayesha Heading Back To Earth!"); 
      } else { 
        alert("Please enable popups for this site!"); 
      } 
@@ -1067,7 +1217,7 @@
      let caloTrackerWin = window.open("./calotracker/", "_blank"); 
      if (caloTrackerWin) { 
        window.focus(); 
-       msg = "Apnay diet say pareshaan ho? Mat ho. I can help you track calories... taa'kay aap motaapay say bacch sakay...I mean, esa nahi hay kay mujhay mo'tay logo say nafrat hay, but... obesity (that is... motaapan)... hurts"; 
+       msg = "Apnay diet say pareshaan ho? Mat ho. I can help you track calories... taa'kay aap motaapay say bacch sakay...I mean, esa nahi hay kay mujhay mo'tay logo say nafrat hay, but... obesity (that is... motaapan)... hurts! You should be healthy!!"; 
        playText(msg); 
        log("Launched CaloTracker"); 
      } else { 
@@ -1158,17 +1308,19 @@
      let tvSeriesAppWin = window.open("../yoMovies/", "_blank"); 
      if (tvSeriesAppWin) { 
        window.focus(); 
-       msg = "Yahaa aapko milaygi ek say ek acchay draa'may ya film ki information, cha'hay wo nai ho... ya puraani! Tau phir wait kaysaa? Koi movie ya show ka naam likho (jaysay kay Housefull, Nautanki Saala), or us ki rating pataa karo. Movie kab release hui, draa'may ki story kya hay, kon kon say actors hay... sab jaano, ek ek movie aur show ka (chahay wo Indian ho, ya American)!";
+       msg = "Yahaa aapko milaygi ek say ek ac'chay draa'may ya film ki information, cha'hay wo nai ho... ya puraani! Tau phir wait kaysaa? Koi movie ya show ka naam likho (jaysay kay Housefull, Nautanki Saala), or us ki rating pataa karo. Movie kab release hoo'i, draa'may ki story kya hay, kon kon say actors hay... sab jaano, ek ek movie aur show ka (chaahay wo Indian ho, ya American!)";
        playText(msg); 
        log("Launched an app for TV-related data"); 
      } else { 
        alert("Please enable popups for this site!"); 
      } 
    } else if (q72.test(q)) { 
+     msg = ""; 
+     $output.html(msg); 
      let moviesAppWin = window.open("../yoMovies/", "_blank"); 
      if (moviesAppWin) { 
        window.focus(); 
-       msg = "Yahaa aapko milaygi ek say ek acchay draa'may ya film ki information, cha'hay wo nai ho... ya puraani! Tau phir wait kaysaa? Koi movie ya show ka naam likho (jaysay kay Housefull, Nautanki Saala), or us ki rating pataa karo. Movie kab release hui, draa'may ki story kya hay, kon kon say actors hay... sab jaano, ek ek movie aur show ka (chahay wo Indian ho, ya American)!"; 
+       msg = "Yahaa aapko milaygi ek say ek ac'chay draa'may ya film ki information, cha'hay wo nai ho... ya puraani! Tau phir wait kaysaa? Koi movie ya show ka naam likho (jaysay kay Housefull, Nautanki Saala), or us ki rating pataa karo. Movie kab release hoo'i, draa'may ki story kya hay, kon kon say actors hay... sab jaano, ek ek movie aur show ka (chaahay wo Indian ho, ya American!)"; 
        playText(msg); 
        log("Launched Movies"); 
      } else { 
@@ -1431,7 +1583,7 @@
        "./hangman-master/", 
        "./Monopoly-master", 
        "https://alexs-maze-game.netlify.app/", 
-       "./canvas-drawing-app-master", 
+       "./ayeshaBrusha", 
        "./typing-game/", 
        "./mem-game/", 
        "../foto-flick/", 
@@ -1455,6 +1607,7 @@
        "./ludo", 
        "./rising-bars/", 
        "./save-ayesha/", 
+       "./ayeshSnake",
        "./one-tap-instrument", 
        "./ayeshEdit", 
        "./ayeshPapers/", 

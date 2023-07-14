@@ -20,8 +20,8 @@ const sob = " <img class='emoji' src='assets/images/emo/sob1.png' />";
 const sob2 = " <img class='emoji' src='assets/images/emo/sob2.png' />";
 
 
-let smile, phew, phew2, wonderful, lol3, in_mood;
-const happy = smile = " <img class='emoji' src='assets/images/emo/happy.png' />";
+let smile, smiles, phew, phew2, wonderful, lol3, in_mood;
+const happy = smile = smiles = " <img class='emoji' src='assets/images/emo/happy.png' />";
 const relieved = phew = " <img class='emoji' src='assets/images/emo/relieved.png' />";
 const calm = " <img class='emoji' src='assets/images/emo/calm.png' />";
 const tears_of_joy = phew2 = wonderful = " <img class='emoji' src='assets/images/emo/tears_of_joy.png' />";
@@ -87,7 +87,7 @@ const lol = " <img class='emoji' src='assets/images/emo/lol.png' />";
 const lol2 = " <img class='emoji' src='assets/images/emo/lol2.png' />";
 
 
-let shit, bullshit, trash, dead, clown, sick, swear;
+let shit, bullshit, trash, dead, clown, sick, swear, ew, ew2, eww, eww2;
 const ghost = " <img class='emoji' src='assets/images/emo/ghost.png' />";
 const joker = clown = " <img class='emoji' src='assets/images/emo/joker.png' />";
 const bruh = " <img class='emoji' src='assets/images/emo/swag.png' />";
@@ -95,8 +95,8 @@ const crap = shit = trash = bullshit = " <img class='emoji' src='assets/images/e
 const censored = swear = " <img class='emoji' src='assets/images/emo/censored.png' />";
 const skull = dead = " <img class='emoji' src='assets/images/emo/dead.png' />";
 const dead2 = " <img class='emoji' src='assets/images/emo/dead2.png' />";
-const vomit = " <img class='emoji' src='assets/images/emo/nausea.png' />";
-const puke = " <img class='emoji' src='assets/images/emo/puke.png' />";
+const vomit = ew = eww = " <img class='emoji' src='assets/images/emo/nausea.png' />";
+const puke = ew2 = eww2 = " <img class='emoji' src='assets/images/emo/puke.png' />";
 const mask = sick = " <img class='emoji' src='assets/images/emo/mask.png' />";
 const sick2 = " <img class='emoji' src='assets/images/emo/sick.png' />";
 
@@ -180,6 +180,9 @@ const meh = not_funny = boring = booring = " <img class='emoji' src='assets/imag
 
 let bandage, that_hurt, that_hurts, hurt, pain, in_pain;
 const ouch = bandage = that_hurt = that_hurts = pain = in_pain = " <img class='emoji' src='assets/images/emo/bandage.png' />";
+
+let apology, apologize, uhoh, oops, oopsie, oopsy;
+const sorry = apology = apologize = uhoh = oops = oopsie = oopsy = " <img class='emoji' src='assets/images/emo/sorry.png' />";
 
 
 
