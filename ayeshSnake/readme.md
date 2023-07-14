@@ -20,5 +20,5 @@ Check out my other tracks:
 
 
 ---
-## Rebekah Becky aka Rubab aka Ayesha aka abbaskhurram255 | Damsel in Distress
-[Damsel In Distress on Spotify](https://open.spotify.com/track/6tJc4CjbyOvZv08g1uEUGB)
+## Ayesha Mehnaaz (formerly Rebekah Becky) | Regret
+[Regret on Spotify](https://open.spotify.com/track/6tJc4CjbyOvZv08g1uEUGB)
