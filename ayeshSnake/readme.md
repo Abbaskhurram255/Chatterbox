@@ -4,7 +4,7 @@
 ### Touch-Controlled
 
 <em>&copy;2023 ayeshaPT, Game licensed under GPL-3.
-<br/>&copy2023; Music/ Backing Track licensed under <a href="https://routenote.com">RouteNote</a> & <a href="https://support.google.com/youtube/answer/2797370?hl=en">(YouTube+Facebook+Tiktok) Content ID</a></em>.
+<br/>&copy;2023 Music/ Backing Track licensed under <a href="https://routenote.com">RouteNote</a> & <a href="https://support.google.com/youtube/answer/2797370?hl=en">(YouTube+Facebook+Tiktok) Content ID</a></em>.
 <br/>
 Backing track & game made with love by a beautiful girl 💕
 
@@ -20,4 +20,4 @@ Check out my other tracks:
 
 ---
 ## Ayesha Mehnaaz (formerly Rebekah Becky) | Regret
-[Regret on Spotify](https://open.spotify.com/track/6tJc4CjbyOvZv08g1uEUGB)
+[Regret on Spotify](https://open.spotify.com/track/34RXCb98xFbFc8NJoYFh7p)
