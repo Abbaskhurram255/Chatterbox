@@ -1,0 +1,331 @@
+html,body{
+    margin: 0;
+    overflow: hidden;
+    font-family: sans-serif;
+    background-color: #c9df8a;
+}
+
+#container{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    overflow: hidden;
+    background-color: #c9df8a;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+
+#howToPlayPc{
+    display: none;
+    right: 72%;
+    width: 230px;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.keyboard{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-size: 10pt;
+}
+
+#keyboardUp{
+    border-radius: 5px 5px 0 0;
+    position: relative;
+    top: 3px;
+}
+#keyboardLeft{
+    border-radius: 5px 0 0 5px;
+    position: relative;
+    left: 3px;
+}
+#keyboardRight{
+    border-radius: 0 5px 5px 0;
+    position: relative;
+    right: 3px;
+}
+
+.modal{
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 25%;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+#gameOver{
+    display: none;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#gameOver i{
+    display: none;
+    margin-top: 20px;
+    cursor:pointer;
+}
+
+#gameOver h2{
+    font-size: 8.5vw;
+    margin-bottom: 5px;
+}
+
+h2, h4{
+    margin: 0;
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+main{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    border-radius: 3px;
+    /* box-shadow: 0px 0px 5px 0px black; */
+}
+
+main > div{
+    /* border-bottom: 2px solid black; */
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    /* font-weight: bold; */
+    margin-bottom: 3px;
+    font-size: 11pt;
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+main div div{
+    justify-content: center;
+    display: flex;
+    margin: 0 0 1px 0;
+}
+
+#score{
+    font-size: 5vw;
+}
+
+#hiScore{
+    font-size: 5vw;
+    margin-left: 3px;
+    color: purple;
+}
+.blink {
+	animation: blink 1s infinite;
+	-webkit-animation: blink 1s infinite;
+}
+
+@keyframes blink {
+	0, 100% {
+		color: black;
+		} 50 % {
+		color: goldenrod;
+		}
+	}
+@-webkit-keyframes blink {
+	0, 100% {
+		color: black;
+		} 50 % {
+		color: goldenrod;
+		}
+	}
+
+main div div i{
+    font-size: 5vw;
+}
+
+section{
+    height: auto;
+    width: 100vw;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#dPad{
+    background-color: lightgray;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+#dPad th{
+    width: 10vh;
+    height: 10vh;
+    /* width: 55px;
+    height: 55px; */
+}
+
+.dpad {
+    background-color: gray;
+    cursor: pointer;
+}
+
+#upButton{
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    top: 3px;
+}
+#leftButton{
+    border-radius: 10px 0 0 10px;
+    position: relative;
+    left: 3px;
+}
+#rightButton{
+    border-radius: 0 10px 10px 0;
+    position: relative;
+    right: 3px;
+}
+#downButton{
+    border-radius: 0 0 10px 10px;
+    position: relative;
+    bottom: 3px;
+}
+#centerRetry{
+    display: none;
+}
+
+/* iOS modal */
+.iosAlertBoxWebApp{
+    position: absolute;
+    bottom: -15%;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    z-index: 5;
+    opacity: 0;
+    display: none;
+}
+
+.actualContent{
+    height: 8vh;
+    width: 95vw;
+    padding: 5px;
+    font-size: 10pt;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: lightgray;
+    border-radius: 10px;
+}
+
+.iosAlertBoxWebApp i{
+    font-size: 6vh;
+    color: gray;
+    margin: 5px;
+}
+
+.triangleDown {
+    align-self: center;
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid lightgray;
+}
+
+@keyframes show{
+    10%, 90%{
+        transform: translateY(-115%);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+}
+@-webkit-keyframes show{
+    10%, 90%{
+        -webkit-transform: translateY(-115%);
+        opacity: 1;
+    }
+    100%{
+        -webkit-transform: translateY(0);
+        opacity: 0;
+    }
+}
+
+/* Media queries */
+@media only screen and (min-width: 374px) {
+    canvas{
+        height: 350px;
+        width: 350px;
+    }
+}
+  
+@media only screen and (min-width: 410px) {
+    canvas{
+        height: 380px;
+        width: 380px;
+    }
+    #score{
+        font-size: 16pt;
+    }
+    #hiScore{
+        font-size: 16pt;
+    }
+    main div div i{
+        font-size: 15pt;
+    }
+} 
+
+@media only screen and (min-width: 600px) {
+    canvas{
+        height: 550px;
+        width: 550px;
+    }
+    #score{
+        font-size: 20pt;
+    }
+    #hiScore{
+        font-size: 20pt;
+    }
+    main div div i{
+        font-size: 19pt;
+    }
+    #dPad{
+        font-size: 19pt;
+        padding: 15px;
+    }
+    h4{
+        font-size: 20pt;
+    }
+} 
+  
+@media only screen and (min-width: 750px) {
+    canvas{
+        height: 600px;
+        width: 600px;
+    }
+    #gameOver h2{
+        font-size: 44pt;
+    }
+    h4{
+        font-size: 22pt;
+    }
+    .actualContent{
+        width: 65vw;
+        font-size: 14pt;
+        font-weight: bold;
+    }
+}
+
+@media only screen and (orientation: landscape) {
+    canvas{
+        height: 450px;
+        width: 450px;
+    }
+    #gameOver h2{
+        font-size: 30pt;
+    }
+    h4{
+        font-size: 15pt;
+    }
+    .modal{
+        top: 45%;
+    }
+}

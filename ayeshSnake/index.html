@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>ayeshSnake</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="Description" content="ayeshSnake!" />
+
+    <!-- webapp infos -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- iOS compability tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="ayeSnake">
+
+    <!-- iOS SplashScreens -->
+    <link href="img/splashscreens/iphone5_splash.png"
+        media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"
+        rel="apple-touch-startup-image" />
+    <link href="img/splashscreens/iphone6_splash.png"
+        media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"
+        rel="apple-touch-startup-image" />
+    <link href="img/splashscreens/iphoneplus_splash.png"
+        media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)"
+        rel="apple-touch-startup-image" />
+    <link href="img/splashscreens/iphonex_splash.png"
+        media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)"
+        rel="apple-touch-startup-image" />
+    <link href="img/splashscreens/iphonexr_splash.png"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)"
+        rel="apple-touch-startup-image" />
+    <link href="img/splashscreens/iphonexsmax_splash.png"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)"
+        rel="apple-touch-startup-image" />
+
+    <!-- ICONS -->
+    <link rel="apple-touch-icon" sizes="57x57" href="img/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#c9df8a">
+    <meta name="msapplication-TileImage" content="img/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#c9df8a">
+
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/fontawesome.css"
+        integrity="sha384-4aon80D8rXCGx9ayDt85LbyUHeMWd3UiBaWliBlJ53yzm9hqN21A+o1pqoyK04h+" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/solid.css"
+        integrity="sha384-r/k8YTFqmlOaqRkZuSiE9trsrDXkh07mRaoGBMoDcmA58OHILZPsk29i2BsFng1B" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js" defer></script>
+
+</head>
+
+<body>
+    <div id="container">
+        <div id="howToPlayPc" class="modal">
+            <h2>MOVE:</h2>
+            <table>
+                <tr>
+                    <th></th>
+                    <th id="keyboardUp" class="keyboard"><i class="fas fa-arrow-up fa-2x"></i></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th id="keyboardLeft" class="keyboard"><i class="fas fa-arrow-left fa-2x"></i></th>
+                    <th id="keyboardDown" class="keyboard"><i class="fas fa-arrow-down fa-2x"></i></th>
+                    <th id="keyboardRight" class="keyboard"><i class="fas fa-arrow-right fa-2x"></i></th>
+                </tr>
+            </table>
+        </div>
+        <div id="gameOver" class="modal">
+            <h2>GAME OVER</h2>
+            <h4><a alt="try again" href="?restart=yes&reason=low-intelligence" style="color:red">TRY AGAIN?</a></h4>
+            <i id="centerRetry2" class="fas fa-redo-alt fa-3x"></i>
+        </div>
+        <main>
+            <div>
+                <span id="score"></span>
+                <div>
+                    <i class="fas fa-crown"></i>
+                    <span id="hiScore"></span>
+                </div>
+            </div>
+            <canvas id="game" width="300" height="300" style="border: 2px solid black"></canvas>
+        </main>
+        <section>
+            <table id="dPad">
+                <tr>
+                    <th></th>
+                    <th id="upButton" class="dpad"><i class="fas fa-angle-up fa-3x"></i></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th id="leftButton" class="dpad"><i class="fas fa-angle-left fa-3x"></i></th>
+                    <th id="centerDefault" class="dpad"><i class="fas fa-genderless fa-3x"></i></th>
+                    <th id="centerRetry" class="dpad"><i class="fas fa-redo-alt fa-2x"></i></th>
+                    <th id="rightButton" class="dpad"><i class="fas fa-angle-right fa-3x"></i></th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th id="downButton" class="dpad"><i class="fas fa-angle-down fa-3x"></i></th>
+                    <th></th>
+                </tr>
+            </table>
+        </section>
+        <div class="iosAlertBoxWebApp">
+            <div class="actualContent">
+                <i class="fa fa-plus-square" aria-hidden="true"></i>
+                <p>Install ayeSnake on your device: tap on the the Button down here to add it to your HomeScreen.</p>
+            </div>
+            <div class="triangleDown"></div>
+        </div>
+    </div>
+</body>
+
+</html>
