@@ -3,7 +3,7 @@ A pure javascript web application for making music.
 
 ## Features
 
-- built-in lightweight piano
+- lightweight built-in piano
 - a hundred kick, snares, toms, claps 'n snaps, percussions, and sfx to try... literally! Most of them being as hard 'n heavy as possible... Hello EDM, my old friend!
 - muting, and unmuting tracks
 - reset button
