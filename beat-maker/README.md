@@ -1,15 +1,17 @@
 # ayeshBeat Maker
-A pure javascript web application for making drum beats.
+A pure javascript web application for making music.
 
 ## Features
 
-- various audios and sounds to try
-- muting and unmuting tracks
+- built-in lightweight piano
+- a hundred kick, snares, toms, claps 'n snaps, percussions, and sfx to try... literally! Most of them being as hard 'n heavy as possible... Hello EDM, my old friend!
+- muting, and unmuting tracks
 - reset button
 
 ## upcoming features
 
 - dark/light mode toggler
-- responsive website
+- cross-platform responsiveness
+- download button
 
-Note that this website is not mobile friendly yet. Use chrome for the best experience.
+Note that this website is not mobile friendly yet. Use Chrome for the best experience.
