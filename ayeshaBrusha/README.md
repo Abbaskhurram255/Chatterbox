@@ -17,4 +17,4 @@
 -   [x] Undo & Redo draw
 
 <br />
-<img alt="sample-canvas-by-ayesha" src="a-sample-canvas-created-by-me-on-the-desktop.png" />
+<img alt="sample-canvas-by-ayesha" src="public/img/a-sample-canvas-created-by-me-on-the-desktop.png" />
