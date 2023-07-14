@@ -29,7 +29,7 @@
    q25 = /(breakout)|(brick (game|breaker))/i, 
    q26 = /sodoku/i, 
    q27 = /^(play( me)?|run|launch|execute|open) hangman/i, 
-   q28 = /(ayesh)? ?((drum )?beat|drums) maker/i, 
+   q28 = /(ayesh)? ?((drums? ?)?beat|music) maker/i, 
    q29 = /(rock|stone) paper scissors?/i, 
    q30 = /(lyrics)|((encycl|lyric|wiki|ayesh)o?pedia)/i, 
    q31 = /((crypto)?currency)|(exchange rates?)|(\b\w\w\w\b to \b\w\w\w\b)/i, 
@@ -654,10 +654,10 @@
      msg = ""; 
      $output.html(msg); 
    } else if (q20.test(q)) { 
-     let pianoWin = window.open("./piano/", "_blank"); 
+     let pianoWin = window.open("./beat-maker/", "_blank"); 
      if (pianoWin) { 
        window.focus(); 
-       log("Launched Simple Piano!"); 
+       log("Launched Beat Maker/ Synthesizer!"); 
      } else { 
        alert("Please enable popups for this site!"); 
      } 
@@ -1602,7 +1602,7 @@
        "./muskyBird/", 
        "./Rock-Paper-Scissor-master", 
        "../youtube", 
-       "./piano", 
+       "./beat-maker/", 
        "./jokes", 
        "./ludo", 
        "./rising-bars/", 
@@ -1610,8 +1610,7 @@
        "./ayeshSnake",
        "./one-tap-instrument", 
        "./ayeshEdit", 
-       "./ayeshPapers/", 
-       "./beat-maker/", 
+       "./ayeshPapers", 
        ];
        let entertainmentAppsWin = window.open( 
        entertainmentApps[Math.floor(Math.random() * entertainmentApps.length)], 
