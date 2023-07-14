@@ -2,10 +2,9 @@
 Well, what are you for? Save her!
 
 <br/>
-<em>&copy;2023 ayeshaPT, Game licensed under GPL-3
+<em>&copy;2023 ayeshaPT, Game licensed under GPL-3.<br/>
 &copy2023 Music/ Backing Track licensed under <a href="https://routenote.com">RouteNote</a> & <a href="https://support.google.com/youtube/answer/2797370?hl=en">YouTube Content ID</a></em>.
 
-<br/><br/>
 Backing track & game made with love by a beautiful girl 💕
 
 ### Skills used: Html + css + JavaScript + Music Production
