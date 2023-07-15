@@ -1,8 +1,12 @@
 
 .piano-keys {
-  display: flex;
-  list-style: none;
-  margin:: 400px auto auto 600px;
+         margin-top: 300px;
+             display: flex;
+          list-style: none;
+  -webkit-list-style: none;
+     -moz-list-style: none;
+      -ms-list-style: none;
+       -o-list-style: none;
 }
 
 .piano-keys .key {
