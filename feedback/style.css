@@ -1,0 +1,203 @@
+
+#chatbox {
+    /* border: black solid 2px; */
+    padding: 2%;
+}
+
+/*body, * {
+	font-family: 'cursive', sans-serif;
+}*/
+
+ol li::before {
+	content: "⭐";
+	margin-left: -.75rem;
+}
+ol li::marker { color:red; font-weight: bold; font-style: italic;}
+
+.boxes{
+    /* position: absolute; */
+    border: rgba(70, 69, 69, 0.582) ridge 1px;
+    font-family:   'Trebuchet MS', sans-serif;
+    font-size: medium;
+    border-style: ridge;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+/* style for heading */
+#heading{
+    /* position: fixed; */
+    color: rgb(218, 212, 212);
+    font-family: 'Arial Narrow Bold', sans-serif;
+    font-weight: bolder;
+    font-size: large;
+    background-color: #3b4866;
+    border: rgba(70, 69, 69, 0.582) ridge 1px;
+    padding: 1%;
+    border-radius: 10px;
+}
+
+#msgBox {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+#typeBox {
+    padding: 1%;
+    width: 98%;
+    /* display: inline; */
+}
+#sendBtn{
+    padding: 1%;
+    /* width: 6%; */
+}
+#msgList{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* style for bot messages */
+.botMsg{
+    border: rgba(70, 69, 69, 0.582) ridge 1px;
+    padding: 2%;
+    border-radius: 10px;
+    margin-right: 35%;
+    margin-bottom: 3%;
+    /* background-color: rgb(118, 157, 231); */
+    background-color: rgb(144, 238, 144);
+}
+
+/* style for user messages */
+.userMsg{
+    border: rgba(70, 69, 69, 0.582) ridge 1px;
+    padding: 2%;
+    border-radius: 10px;
+    margin-left: 35%;
+    margin-bottom: 3%;
+    /* background-color: rgb(144, 238, 144); */
+    background-color: rgb(138, 174, 241);
+}
+
+#anim {
+	-webkit-animation: blink 1s infinite;
+	   -moz-animation: blink 1s infinite;
+	     -ms-animation: blink 1s infinite;
+	        -o-animation: blink 1s infinite;
+	             animation: blink 1s infinite;
+}
+#anim2 {
+	-webkit-animation: blink2 1s infinite;
+	   -moz-animation: blink2 1s infinite;
+	     -ms-animation: blink2 1s infinite;
+	        -o-animation: blink2 1s infinite;
+	             animation: blink2 1s infinite;
+}
+
+@-webkit-keyframes blink {
+	0%, 100% {
+		color: red;
+	}
+	50% {
+		color: green;
+		-webkit-box-shadow: 4px 6px 20px 3.5px red;
+		-moz-box-shadow: 4px 6px 20px 3.5px red;
+		-ms-box-shadow: 4px 6px 20px 3.5px red;
+		-o-box-shadow: 4px 6px 20px 3.5px red;
+		box-shadow: 4px 6px 20px 3.5px red;
+	}
+}
+@-moz-keyframes blink {
+	0%, 100% {
+		color: red;
+	}
+	50% {
+		color: green;
+		-webkit-box-shadow: 4px 6px 20px 3.5px red;
+		-moz-box-shadow: 4px 6px 20px 3.5px red;
+		-ms-box-shadow: 4px 6px 20px 3.5px red;
+		-o-box-shadow: 4px 6px 20px 3.5px red;
+		box-shadow: 4px 6px 20px 3.5px red;
+	}
+}
+@-o-keyframes blink {
+	0%, 100% {
+		color: red;
+	}
+	50% {
+		color: green;
+		-webkit-box-shadow: 4px 6px 20px 3.5px red;
+		-moz-box-shadow: 4px 6px 20px 3.5px red;
+		-ms-box-shadow: 4px 6px 20px 3.5px red;
+		-o-box-shadow: 4px 6px 20px 3.5px red;
+		box-shadow: 4px 6px 20px 3.5px red;
+	}
+}
+@-ms-keyframes blink {
+	0%, 100% {
+		color: red;
+	}
+	50% {
+		color: green;
+		-webkit-box-shadow: 4px 6px 20px 3.5px red;
+		-moz-box-shadow: 4px 6px 20px 3.5px red;
+		-ms-box-shadow: 4px 6px 20px 3.5px red;
+		-o-box-shadow: 4px 6px 20px 3.5px red;
+		box-shadow: 4px 6px 20px 3.5px red;
+	}
+}
+@keyframes blink {
+	0%, 100% {
+		color: red;
+	}
+	50% {
+		color: green;
+		-webkit-box-shadow: 4px 6px 20px 3.5px red;
+		-moz-box-shadow: 4px 6px 20px 3.5px red;
+		-ms-box-shadow: 4px 6px 20px 3.5px red;
+		-o-box-shadow: 4px 6px 20px 3.5px red;
+		box-shadow: 4px 6px 20px 3.5px red;
+	}
+}
+
+@-webkit-keyframes blink2 {
+	0%, 100%{
+		color: orchid;
+	}
+	50%{
+		color: #111;
+	}
+}
+@-moz-keyframes blink2 {
+	0%, 100%{
+		color: orchid;
+	}
+	50%{
+		color: #111;
+	}
+}
+@-o-keyframes blink2 {
+	0%, 100%{
+		color: orchid;
+	}
+	50%{
+		color: #111;
+	}
+}
+@-ms-keyframes blink2 {
+	0%, 100%{
+		color: orchid;
+	}
+	50%{
+		color: #111;
+	}
+}
+@keyframes blink2 {
+	0%, 100%{
+		color: orchid;
+	}
+	50%{
+		color: #111;
+	}
+}
