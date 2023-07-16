@@ -8,17 +8,17 @@
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
     <script src='script.js'></script>
 </head>
-<body style="background:linear-gradient(cyan, aquamarine, turquoise, darkred)">
+<body style="background:linear-gradient(cyan, aquamarine, turquoise, darkred); -webkit-background:linear-gradient(cyan, aquamarine, turquoise, darkred); -moz-background:linear-gradient(cyan, aquamarine, turquoise, darkred); -ms-background:linear-gradient(cyan, aquamarine, turquoise, darkred); -o-background:linear-gradient(cyan, aquamarine, turquoise, darkred);">
     
     <div id="chatBox">
 
         <!-- heading -->
-        <div id="heading" style="background: darkred; box-sizing: border-box; box-shadow: .2rem -.1rem 4px 5px lightseagreen; ">
+        <div id="heading" style="background: darkred; box-sizing: border-box; box-shadow: .2rem -.1rem 4px 5px lightseagreen; -webkit-box-shadow: .2rem -.1rem 4px 5px lightseagreen; -moz-box-shadow: .2rem -.1rem 4px 5px lightseagreen; -ms-box-shadow: .2rem -.1rem 4px 5px lightseagreen; -o-box-shadow: .2rem -.1rem 4px 5px lightseagreen;">
             <span styple="border:2px ridge yellow; background:purple;border-radius:30px">AyeshaPT</span> User Feedback
         </div>
 
         <!-- box where messages are displayed -->
-        <div id="msgBox" class="boxes" style="background: linear-gradient(pink, darkred)">
+        <div id="msgBox" class="boxes" style="background: linear-gradient(pink, darkred); background: -webkit-linear-gradient(pink, darkred); background: -moz-linear-gradient(pink, darkred); background: -ms-linear-gradient(pink, darkred); background: -o-linear-gradient(pink, darkred);">
             
             <!-- list that stores chat history -->
             <ul id="msgList">
@@ -38,7 +38,7 @@
         <!-- text input box -->
         <!-- <textarea name="typebox" id="typebox" class="boxes" placeholder="Enter your message"  rows="2"></textarea> -->
         <input type="text" id="typeBox" class="boxes" placeholder="Enter your feedback please!" style="background: lavender;border:5px dotted rgba(128, 0, 0, 0.8);border-radius:42px .5rem">
-        <input type="button" id="sendBtn" class="boxes" value="Send" style="background:radial-gradient(lavender, brown);border-radius:22px 5px 28px">
+        <input type="button" id="sendBtn" class="boxes" value="Send" style="background: -webkit-radial-gradient(lavender, brown);background: -moz-radial-gradient(lavender, brown);background: -ms-radial-gradient(lavender, brown);background: -o-radial-gradient(lavender, brown);border-radius:22px 5px 28px;">
     </div>
 
 </body>
