@@ -1,4 +1,7 @@
 
+
+
+
 var data;
 /// onload function
 onload = function () {
@@ -73,7 +76,7 @@ onload = function () {
                 }
                 else {
                     botMsgSound.play();
-                    showMsg("<span style='color:red'>Sorry, numbers under 5 only!</span>", "botMsg");
+                    showMsg("<span style='color:red'>Feedback already submitted, you may close the window now!!</span>", "botMsg");
                 }
                 return;
             }
@@ -83,7 +86,7 @@ onload = function () {
                 }
                 else {
                     botMsgSound.play();
-                    showMsg("Chat has ended ! Enter 'reset' to start the chat again !", "botMsg");
+                    showMsg("Mene kaha feedbac submit ho chuki he, ab ap ye window close karke AyeshaPT continue kar sakte he ", "botMsg");
                 }
                 return;
             }
