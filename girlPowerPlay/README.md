@@ -1,7 +1,7 @@
-# MusicPlayer
+# girlPowerPlay
 
-Simple MusicPlayer With Javascript
+A responsive, girly audio player with Poweramp-like user interface!
 
 # Demo
 
-[Try it!](https://neo-official.github.io/MusicPlayer/)
+[Try it!](https://abbaskhurram255.github.io/Chatterbox/girlPowerPlay)
