@@ -43,7 +43,7 @@
    q38 = /(what (date|day) was it yesterday)|((k|c)al (k(y|i)aa?|k(o|au)n ?s(aa?|i|ee)) (din|day|date|tar(i|ee)kh) (rah|th)(aa?|i|ee))/i, 
    q39 = /(what (date|day) (will it|is it (going to|gon(na)?)) be tomorrow)|((k|c)al (k(y|i)aa?|k(o|au)n ?s(aa?|i|ee)) (din|day|date|tar(i|ee)kh) ((ho|rah(e|ai)) ?g(aa?|i|ee))|(hon(e|ai) (jaa?rah|waa?l)(i|aa?) h(e|ai)))/i, 
    q40 = /(monopoly|k((o|au)n)? ?b(an(e|ai)ga)? ?c(rorepati)?)|(crorepati game)|(^crorepati$)|(board games)/i, 
-   q41 = /(canvas(es)?)|((drawings?|arts?|paint(ings?)?|brush) (app|tool))|(((draw|paint)(ing)? karn(i|aa?|e))|((sketch|canvas|painting)(e?s)? (banaa?n(aa?|e|ai)|karnaa?)) ((chaa?ha?t(a(a|i|y)?|i|ee?) )?h(u|oo|e|ai)n?))/i, 
+   q41 = /(canvas(es)?)|((drawings?|arts?|paint(ings?)?|brush) (app|tool))|(((draw|paint)(ings?)? (kar|banaa?)n(i|aa?|e))|((sketch|canvas|painting)(e?s)? (banaa?n(aa?|e|ai)|karnaa?)) ((chaa?ha?t(a(a|i|y)?|i|ee?) )?h(u|oo|e|ai)n?))/i, 
    q42 = /(audio (visuali(z|s)er|player))|(play local audio)|(soundjam)/i, 
    q43 = /((ayesh|t)ranslat(e|or))|(english to (hindi|urdu|chinese|german|spanish|arabic|french|italian|russian))|((hindi|urdu|arabic|spanish|russian|chinese|german) to english)/i, 
    q44 = /((ayesh ?)?dict(ionary)?)|(ayesh ?nary)|(english ?(lafz k(i|a))? m(eaning|atlab))/i, 
@@ -948,30 +948,35 @@
      msg = ""; 
      $output.html(msg); 
    } else if (q41.test(q)) { 
-     let canvasWin = window.open("./ayeshaBrusha/", "_blank"); 
-     if (canvasWin) { 
-       window.focus(); 
-       log("Launched ayeshaBrusha: A Modern Brush Tool!"); 
-     } else { 
-       alert("Please enable popups for this site!"); 
-     } 
      stopText(); 
      msg = ""; 
      $output.html(msg); 
+     let canvasAppWin = window.open("./ayeshaBrusha/", "_blank"); 
+     if (canvasAppWin) { 
+       window.focus(); 
+       log("Launched ayeshaBrusha: A Modern Brush Tool!"); 
+       msg = "Chalo saath may paintings banaa'y";
+       playText(msg);
+     } else { 
+       alert("Please enable popups for this site!"); 
+     }
    } else if (q42.test(q)) { 
+     stopText(); 
+     msg = ""; 
+     $output.html(msg); 
+     let localAudioPlayers = ["../soundjam", "./girlPowerPlay"];
      let audioVisualizerWin = window.open( 
-       "../soundjam/", 
+       localAudioPlayers[Math.floor(Math.random() * localAudioPlayers.length)], 
        "_blank" 
      ); 
      if (audioVisualizerWin) { 
        window.focus(); 
        log("Launched Audio Player/Visualizer"); 
+       msg = "abhi apni device may say kuch gaane select karo or chalaao... Yaa tou seedha seedha mujhe gaane chalaanay ke li'yay bolo or mayray apnay pasandeeda gaane suno";
+       playText(msg);
      } else { 
        alert("Please enable popups for this site!"); 
-     } 
-     stopText(); 
-     msg = ""; 
-     $output.html(msg); 
+     }
    } else if (q43.test(q)) { 
      stopText(); 
      msg = ""; 
@@ -979,7 +984,7 @@
      let ayeshRanslateWin = window.open("./ayeshranslate/", "_blank"); 
      if (ayeshRanslateWin) { 
        window.focus(); 
-       msg = "Oho,... zaraa ham bhi to day'khe tumhay kyaa translate karna hay. Jald az jald language select karkay translate button dabaao, or magic day'khoh";
+       msg = "Oho,... zaraa ham bhi tou day'khe tumhay kyaa translate karna hay. Jald az jald language select karkay translate button dabaao, or magic day'khoh";
        playText(msg);
        log("Launched ayeshRansla!or"); 
      } else { 
