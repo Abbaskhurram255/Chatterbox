@@ -83,7 +83,7 @@
         autocomplete="off" autofocus
       />
       <!-- mike icon -->
-      <img alt="mike" src="assets/images/whitemike.png" id="recIcon" name="mike-icon" class-to-be-later-added-for-animation="mikeAnim" height="34" width="34" class="hvr-sink">
+      <img alt="mike" src="assets/images/whitemike.png" id="recIcon" name="mike-icon" class-to-be-later-added-for-animation="mikeAnim" height="34px" width="34px" class="hvr-sink">
       <!-- the button -->
       <button id="askBtn" onclick="ask()">Ask</button>
     </div>
@@ -190,6 +190,44 @@
         </g>
     </svg>
 	</div> 
+	
+	<!-- cube animation -->
+	<div class="cube-container">
+      <div class="cube">
+      </div>
+    </div>
+    <script>
+      var cube =
+      document.querySelector('.cube');
+      var parts = [
+        'front',
+        'back',
+        'right',
+        'left',
+        'top',
+        'bottom'
+      ];
+
+      parts.forEach(part => {
+        var wrapper =
+        document.createElement('div');
+        wrapper.classList.add(part);
+
+        for(let i = 1; i <= 3; i++){
+          var side =
+          document.createElement('div');
+          wrapper.appendChild(side);
+
+          for(let y = 1; y <= 3; y++){
+            var box =
+            document.createElement('p');
+            box.id = "bug-fix";
+            side.appendChild(box);
+          }
+        }
+        cube.appendChild(wrapper);
+      });
+    </script>
     
     
     <!-- Importing jQuery -->
@@ -212,7 +250,7 @@ integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
 
 <!-- Registering sw.js/ service worker -->
     <script>
-if("serviceWorker" in navigator){ navigator.serviceWorker.register("sw.js").then(function(registration){
+       if("serviceWorker" in navigator){ navigator.serviceWorker.register("sw.js").then(function(registration){
       console.log("Service worker registered successfully!");
 }).catch(function(error){
       console.log("Service worker failed to be registered with error: ",error);
