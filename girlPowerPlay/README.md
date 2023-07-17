@@ -1,6 +1,6 @@
 # girlPowerPlay
 
-A responsive, girly audio player with Poweramp-like user interface!
+A responsive, girly audio player with a Poweramp-like user interface!
 
 # Demo
 
