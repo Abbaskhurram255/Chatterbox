@@ -1,0 +1,106 @@
+<html>
+  <head>
+  	<meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>ayeshZipper: File Compression Made Easy!</title>
+      <style>
+      	* {
+      	    -webkit-touch-callout: none;
+              -webkit-select: none;
+              -moz-select: none;
+              -ms-select: none;
+              -o-select: none;
+              user-select: none;
+          }
+      	.animateMe {
+ -webkit-animation: animateBorders 2s infinite;
+      	    animation: animateBorders 2s infinite;
+          }
+      	@keyframes animateBorders {
+      	        0%, 100% {
+      	           border: 16px dotted green;
+      	        } 50% {
+      	           border: 4px dotted green;
+                     padding-right: 0;
+                     padding-left: 6rem;
+                  }
+          }
+      </style>
+ </head>
+  <body style="border: 2px ridge violet; background:linear-gradient(plum, violet, blue)">
+  	<h1 style="text-shadow:; -webkit-box-shadow:9px 18px 90px 30px orange; -moz-box-shadow:9px 18px 90px 30px orange; -ms-box-shadow:9px 18px 90px 30px orange; -o-box-shadow:9px 18px 90px 30px orange; box-shadow:9px 18px 90px 30px orange;outline:;color:;border-left:;border:16px dotted green;border-radiups:8rem 2rem;padding:2rem 2.5rem 2rem;margin-left:4rem;margin-right:2rem;color:seagreen;font-weight:800" class="animateMe"><span style="color:blue">ayesh</span><span style="color:darkred">Zipper</span></h1>
+    <input style="background:red;box-sphadow: 1px 1px 6px 2px green; -webkit-box-sphadow: 1px 1px 6px 2px green; -moz-box-sphadow: 1px 1px 6px 2px green; -ms-box-sphadow: 1px 1px 6px 2px green; -o-box-sphadow: 1px 1px 6px 2px green;" type="file" id="fileInput" multiple>
+    <button style="outline: 3px groove #b29; background: linear-gradient(yellow, orange);" onclick="zipFiles();" id="btn">⬇️Get Zip</button>
+
+    <script>
+      const foo = document.querySelector("input");
+      const bar = document.querySelector("button").style;
+      var bartext = document.querySelector("#btn").innerHTML; 
+      foo.addEventListener("input", () => {
+      	foo.style="background: yellow; colpor: lavender; border:8px solid plum; -webkit-box-shadow: 2px 2.5px .7rem 8px deeppink; -moz-box-shadow: 2px 2.5px .7rem 8px deeppink; -ms-box-shadow: 2px 2.5px .7rem 8px deeppink; -o-box-shadow: 2px 2.5px .7rem 8px deeppink; box-shadow: 2px 2.5px .7rem 8px deeppink;";
+         bar.position = "absolute";
+         bar.height = "5rem";
+         bar.width = "12rem";
+         bar.top = "22rem";
+         bar.right = "5rem";
+         bar.borderRadius = "2rem 3rem .25rem 3rem";
+         document.querySelector("h1").classList.remove("animateMe");
+         bartext = "⬇️ Download Generated Zip";
+      });
+      const d = new Date();
+      function log(x) {
+      	return console.log(x);
+      }
+      const day = dow => {
+      	this.dow = parseInt(dow);
+      	switch(dow) {
+          case 0:
+          return "SUN";
+          break;
+          case 1:
+          return "MON";
+          break;
+          case 2:
+          return "TUE";
+          break;
+          case 3:
+          return "WED";
+          break
+          case 4:
+          return "THU";
+          break;
+          case 5:
+          return "FRI";
+          break;
+          default:
+          return "SAT";
+          }
+      }
+      let mins = d.getMinutes();
+  	mins = mins < 10 ? "0" + mins : mins;
+      let ampm = d.getHours() >= 12 ? "pm" : "am";
+      const timestamp = day(d.getDay())+ "-" + d.getHours() + "-" + mins + "-" + ampm.toUpperCase() + "-" + d.getDate() + "-" + d.getMonth() + "-" + d.getFullYear();
+      log(timestamp);
+      function zipFiles() {
+        var filesInput = document.getElementById("fileInput");
+        var files = filesInput.files;
+
+        var zip = new JSZip();
+
+        for (var i = 0; i < files.length; i++) {
+          var file = files[i];
+          zip.file(file.name, file);
+        }
+
+        zip.generateAsync({ type: "blob" })
+          .then(function(content) {
+          saveAs(content, `ayeshapt_archiver - extracted zip files ${timestamp}.zip`);
+        });
+      }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
+  </body>
+</html>
