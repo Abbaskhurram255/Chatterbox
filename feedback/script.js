@@ -67,16 +67,18 @@ onload = function () {
                 if (chatEnd === false) {
                     botMsgSound.play();
                     showMsg(`Thank you for your valuable feedback, luv! Your feedback💌 means the world to me as it helps me improve &hearts;<br/><br/><span style="color:red" id="anim">Here's some local news of the day, by the way:</span><br/> ${await functionsArr[1 - 1]()}<br/><br/><span id="anim2" style="color:purple">And a random fact of the day:</span><br/>${await functionsArr[3 - 1]()}<br/><br/>Apki feedback ka behad shukria 💋`, "botMsg");
+                    playText("aapki feedback ka bay had shukria. ab aap yay window close kar sakte hay. bonus... neechay likhi hay aap kay area say related aaj kee taaza khabar");
                     chatEnd = true;
                     setTimeout(
                         function () {
                             window.close();
-                        }, 7000
+                        }, 70000
                     );
                 }
                 else {
                     botMsgSound.play();
                     showMsg("<span style='color:red'>Feedback already submitted, you may close the window now!!</span>", "botMsg");
+                    playText("aap feedback day chukay jee. side may likhay cross yani X button ko dabaa kar may'ri taraf waapis aao jald hee");
                 }
                 return;
             }
@@ -86,7 +88,8 @@ onload = function () {
                 }
                 else {
                     botMsgSound.play();
-                    showMsg("Mene kaha feedbac submit ho chuki he, ab ap ye window close karke AyeshaPT continue kar sakte he ", "botMsg");
+                    showMsg("Mene kaha feedback submit ho chuki he, ab ap ye window close karke AyeshaPT continue kar sakte he, shukria!", "botMsg");
+                    playText("aap feedback day chukay jee. side may likhay cross yani X button ko dabaa kar may'ri taraf waapis aao jald hee");
                 }
                 return;
             }
@@ -103,6 +106,7 @@ onload = function () {
             }
             else {
                 data = "<span style='color:red'>Sorry, numbers under 5 only!</span>";
+                playText("please sirf numbers may hee rating deej'yay... jaysay kay. Ek. Do. 3. 4. 5!");
             }
             botMsgSound.play();
             showMsg(data, "botMsg");
@@ -271,3 +275,35 @@ class Sound {
         };
     }
 }
+
+const utterance = new SpeechSynthesisUtterance();
+utterance.addEventListener("boundary", (e) => {
+  currentCharacter = e.charIndex;
+});
+
+function playText(text) {
+  if (speechSynthesis.paused && speechSynthesis.speaking) {
+    return speechSynthesis.resume();
+  }
+  if (speechSynthesis.speaking) return;
+  utterance.text = text;
+  var voices = window.speechSynthesis.getVoices();
+  window.speechSynthesis.onvoiceschanged = function () {
+    voices = window.speechSynthesis.getVoices();
+  };
+  utterance.voice = voices[10];
+  utterance.pitch = 1;
+  utterance.voiceURI = "native";
+  utterance.lang = "hi";
+  utterance.volume = 1;
+  utterance.rate = 1;
+  speechSynthesis.speak(utterance);
+  /* or you could simply import say.js. The link to it: https://rawit.com/JudahRR/Say.js/master/libs/say.js */
+}
+
+//Call this function to (immediately) stop the Speech synthesis:
+function stopText() {
+  speechSynthesis.resume();
+  speechSynthesis.cancel();
+}
+//end of Speech_Synth block
