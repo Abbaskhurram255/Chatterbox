@@ -1496,7 +1496,7 @@
        window.focus(); 
        msg = "Classical Ludo... simple, yet powerful!";
        playText(msg);
-       log("Launched Classical Ludo"); 
+       log("Launched Classical ayeshLudo"); 
      } else { 
        alert("Please enable popups for this site!"); 
      } 
@@ -1542,7 +1542,7 @@
      } 
    } else if (q90.test(q)) { 
      let metronomeWin = window.open( 
-       "https://abbaskhurram255.github.io/metronome/", 
+       "../metronome/", 
        "_blank" 
      ); 
      if (metronomeWin) { 
