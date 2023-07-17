@@ -1,7 +1,7 @@
 // import * as mmd from 'music-metadata-browser'
 // noinspection JSUnresolvedFunction,JSUnresolvedVariable
 
-let DEFAULT_IMAGE = './img/0.jpg';
+let DEFAULT_IMAGE = './img/1.jpg';
 let DEFAULT_BLOB;
 let $             = id => document.querySelector(id);
 
