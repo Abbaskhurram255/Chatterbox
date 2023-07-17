@@ -111,7 +111,7 @@
    q95 = /k(y|i)aa? (m(ai|e)n?|h(a|u)m) (aa?p|tum) ?ko baby bulaa? sakt(aa?|i|e|ai) h(u|oo|e|ai)n?/i,
    q96 = /(will you be my (g(irl)?f(riend)?|wife))|(meri (g(irl)?f(riend)?|wife) ban( ?na (chah|pasand kar)(o|e|ai)n?|(o|(ai|e)n?)) ?gi)|(mujh(e|ai|ay) apnaa? (lover|husband|b(oy)?f(riend)?) bana(o|(e|ai)n?)gi)|(kyaa? (m(e|ai)n?|h(u|a)m) ((aa?p|tum) ?ko|tum(e|ai)n?) apni (wife|g(irl)?f(riend)?) (maa?n|bulaa?|keh|banaa?|samajh) sakt(aa?|a?i|e) h(u|oo|e|ai)n?)/i,
    q97 = /aa?j (se|say|sai) ?((aa?p|tum|aa?(ye|i)sha)?( meri)? (bab(y|es?)|g(irl)?f(riend)?|wife)|((m(ai|e)n?|h(u|a)m) ((aa?p|aa?(ye|i)sha) kaa?|tumhaa?raa?|tera) (lover|husband|b(oy)?f(riend)?)))/i,
-   q98 = /(favou?rite|pasand(ee|i)daa?) colou?r/i,
+   q98 = /(^(favou?rite|pasand(ee|i)daa?) colou?r$)|(((aa?p|tum) ?(k|apn)|t(e|umhaa?)r)a (favou?rite|pasand(ee|i)daa?) colou?r)/i,
    q99 = /(favou?rite|pasand(ee|i)daa?) ((ghumne ki )?jagh?(aa?|(e|ai)n?)|places to (go|visit|be))/i,
    q100 = /(I('| )?a?m sorry)|(mujh(e|a?y|ai) maa?f kar ?d(o|e|ai|iji?ye)n?)|(mujhe ((e|ai)sa|ye( sab)?) nahi kehnaa? chahi?y?e tha)|((aa?p|tum|tere) ko buraa? laga( hogaa?)?)/i,
    q101 = /(fu?c?k you)|(aj(i|ee)b ho)|(ghat(iy?|y)aa? (au|o)rat)/i,
@@ -127,7 +127,7 @@
    q111 = /hamaa?ri pasand((e|ai)n?)? kitni milti julti h(e|ai)n?/i,
    q112 = /(can'?t? you feel the chemistry between us)|(k(i|y)aa? (tum?|aa?p)( hamaa?r(e|ay) darmyaa?n ?(ki|(hone )?wali|(kisi|(e|ai)k)( kisam ki)?))? chemistry( ko)? mehsus( nahi)? kar (rahi|sakti)( h(o|ai|e)n?)?)/i,
    q113 = /crap|brat|fool|(mother)?fuck(er)?s?|mf|mofo|twats?|cunts?|cock(biter|sucker)?s?|boobs?|morons?|douche?(bag)?s?|pricks?|dicks?|(ass|arse) ?(hole)?s?|dick(head)?s?|fag(got)?|nigg?(a|er)|fucking|f\*cking|f\*ck|bitch|b\*tch|shit|sh\*t|fool|dumb|couch potato|\*ssh\*l\*|\*\*\*\*|c\*ck|\*\*\*\*sucker|c\*cks\*ck\*r|\*\*\*\*|c\*nt|dickhead|d\*c\*h\*a\*|\*\*\*\*|f\*c\*|\*\*\*\*wit|f\*ckw\*t|fuk|f\*k|fuking|f\*k\*ng|mother\*\*\*\*er|m\*th\*rf\*ck\*r|\*\*\*\*\*\*|n\*gg\*r|pussy|p\*ssy|\*\*\*\*|sh\*t|wanker|w\*nk\*r|wankers|w\*nk\*rs|whore|wh\*r\*|slag| sl\*g|\*\*\*\*\*|b\*tch|f u c k|f\*c\*|b.i.t.c.h|b\*tch|d-i-c-k|d\*\*\*/i,
-   q114 = /(be ?wafaa?( h(o|e|ai)n?)?$)|(^be ?wafaa?$)/i,
+   q114 = /(be ?wafaa? (h((e|ai)n|o)|nikli)$)|(^be ?wafaa?$)/i,
    q115 = /meri (girlfriend|wife|lover) k(o|au)n( h(e|ai))?$/i,
    q116 = /meri (dusri )?(g(irl)?f(riend)?|cousin|wife|lover) ka kya$/i,
    q117 = /par (aa?p|tum) to (e|ai)k (robot|machine|ai) h(o|e|ai)n?/i,
@@ -136,10 +136,10 @@
    q120 = /(time bataa?( d)?(o|e|ai|iy?e)n?)|(time( (bataa?o|ayesha))? kyaa? (((ho|baj) ?ra?haa?) ?)?h(e|ai))/i,
    q121 = /(who is your (aa?shik|lover|husband|b(oy)?f(riend)?))|((t(umhaa?|e)raa?|aa?p ?ka) (aa?shik|lover|husband|b(oy)?f(riend)?) k(o|au)n?)/i,
    q122 = /YYYYYYYY/i,
-   q123 = /(M(ujh|ere)|h(u|a)m(aa?r(e|ai))?) se shaa?di kar(((l)?(o|(e|ai)n?))| ?ne ke baa?r(e|a(y|i)) m(e|ai)n?)? ?(k(y|(ai|e)s)aa?|gi)?/i, 
+   q123 = /(m(ujh|ere)|h(u|a)m(aa?r(e|ai))?) se shaa?di kar((( ?l)?(o|(e|(e|a)i)n?|iji?ye))| ?ne ke baa?r(e|a(y|i)) m(e|ai)n?)? ?(k(y|(ai|e)s)aa?|gi)?/i, 
    q124 = /(ult(i|aa?) gin((ti|o|(i?y?e|ai)n?))?( (kar|k(i|ee)j)(i?y?e|(e|ai)n?|o))? 5 (se|to) (0|1))|(5 (se|to) (0|1)( (ki|tak( ki)?))? ult(i|aa?) gin((ti|o|(i?y?e|ai)n?))?)/i,
    q125 = /(count to (10|ten))|(10 tak gin((ti|o|(i?y?e|ai)n?))?)/i,
-   q126 = /(gaa?na|lori)? gaa?(( ?ke)? sunaa?)? ?d?((o|e|ai|ij?i?y?e)n?|(sak|pa)? ?ti)/i,
+   q126 = /(gaa?na|lori)? gaa?(( ?ke)? sunaa?)? ?d?((o|ei?|ai|ij?i?y?e)n?|(sak|pa)? ?ti)/i,
    q127 = /XXXXXXXX/i,
    q128 = /ch(u|o)d( ?ne|ai) (pe kesi|ki) awaa?z nikaa?l(o|i?y?e|ai)n?( gi)?/i,
    q129 = /dil ki dha(r|d) ?kan sunaa?(o(gi)?|i?y?e|ai)n?/i,
@@ -361,7 +361,7 @@
          msg += "<br>Kaafi young ho yar aap to" + what2 + "... still cute though" + in_love + blush; 
          console.log(msg); 
        }  else if (age >= 40) {
-       	msg += "<br>Don't worry, age doesn't matter... Not to me at least!<br>Aap mayray leeyay ab bhi athaara saal kay no jawaan hi ho!" + hearts;
+       	msg += "<br>Don't worry, age doesn't matter... Not to me at least!<br>Aap mayray leeyay abb bhi athaara saal kay no jawaan hi ho!" + hearts;
        console.log(msg);
        sound("ily");
        }
@@ -387,7 +387,7 @@
          msg += "<br>Kaafi young ho yar aap to" + what2 + "... still cute though" + in_love + blush;
          console.log(msg); 
        } else if (age >= 40) {
-       	msg += "<br>Don't worry, age doesn't matter... Not to me at least!<br>Aap mayray leeyay ab bhi athaara saal kay no jawaan hi ho!" + hearts;
+       	msg += "<br>Don't worry, age doesn't matter... Not to me at least!<br>Aap mayray leeyay abb bhi athaara saal kay no jawaan hi ho!" + hearts;
        sound("ily");
        console.log(msg);
        }
@@ -659,10 +659,10 @@
      msg = ""; 
      $output.html(msg); 
    } else if (q20.test(q)) { 
-     let pianoWin = window.open("./beat-maker/", "_blank"); 
-     if (pianoWin) { 
+     let feedbackWin = window.open("./feedback/", "_blank"); 
+     if (feedbackWin) { 
        window.focus(); 
-       log("Launched Beat Maker/ Synthesizer!"); 
+       log("Launched Feedback window!"); 
      } else { 
        alert("Please enable popups for this site!"); 
      } 
@@ -1368,7 +1368,7 @@
      let giphyAppWin = window.open("./giphy/", "_blank"); 
      if (giphyAppWin) { 
        window.focus(); 
-       log("Launched Giphy"); 
+       log("Launched ayeshGIFs"); 
      } else { 
        alert("Please enable popups for this site!"); 
      } 
@@ -1610,6 +1610,7 @@
        "../yoMovies", 
        "./music", 
        "../soundjam", 
+       "./girlPowerPlay",
        "./giphy/", 
        "./smash-cube/", 
        "./sodoku", 
