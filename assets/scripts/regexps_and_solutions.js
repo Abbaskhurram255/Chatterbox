@@ -21,16 +21,16 @@
    q18 = /(^calculator)|((open|ayesha?) ?(cal)?culator)|(calculate(?:bmi))/i, 
    q19 = 
    /(tts)|(speech engine)|(text to speech)|((e|text)?(-| )?book( to |2)audio(book)?)|((document|text) reader)/i, 
-   q20 = /(piano)|(synth(esizer)?)/i, 
+   q20 = /feedback/i, 
    q21 = /(todos?)|(reminders?)|(remind me to)|((bucket|shopping) list)|(mujh(e|ai) yaa?d dilaa?naa?)|(notes?)|(\btodo\b)/i, 
    q22 = /(music)|(songs?)|(jukebox)|(gaa?n(e|ay))/i, 
    q23 = /((weight|mass) conver(sion|ter))|((\b\d*\b )?((k?(ilo)?s?)?g(ram)?s?|pounds?|ounces?|oz) (to|and|in|ko|((equals|(is|are) equal to|=)( how many)?)|(baraa?bar h(e|ai)n?)))/i, 
    q24 = /(random games?)|(games)|(play( me)? a game)/i, 
    q25 = /(breakout)|(brick (game|breaker))/i, 
    q26 = /sodoku/i, 
-   q27 = /^(play( me)?|run|launch|execute|open) hangman/i, 
-   q28 = /(ayesh)? ?((drums? ?)?beat|music) maker/i, 
-   q29 = /(rock|stone) paper scissors?/i, 
+   q27 = /(^(play( me)?|run|launch|execute|open) hangman)|((hollywood|word) game)/i, 
+   q28 = /((ayesh)? ?((drums? ?)?beat) maker)|(piano)|(synth(esizer)?)/i, 
+   q29 = /(rock|stone) papers? scissors?/i, 
    q30 = /(lyrics)|((encycl|lyric|wiki|ayesh)o?pedia)/i, 
    q31 = /((crypto)?currency)|(exchange rates?)|(\b\w\w\w\b to \b\w\w\w\b)/i, 
    q32 = /((what )?day of year( is it)?)|((aa?j )?saa?l ka k(o|au)n ?saa? din h(e|ai|a?y))|(saa?l ka din number)|(din number is saa?l ka)/i, 
@@ -44,7 +44,7 @@
    q39 = /(what (date|day) (will it|is it (going to|gon(na)?)) be tomorrow)|((k|c)al (k(y|i)aa?|k(o|au)n ?s(aa?|i|ee)) (din|day|date|tar(i|ee)kh) ((ho|rah(e|ai)) ?g(aa?|i|ee))|(hon(e|ai) (jaa?rah|waa?l)(i|aa?) h(e|ai)))/i, 
    q40 = /(monopoly|k((o|au)n)? ?b(an(e|ai)ga)? ?c(rorepati)?)|(crorepati game)|(^crorepati$)|(board games)/i, 
    q41 = /(canvas(es)?)|((drawings?|arts?|paint(ings?)?|brush) (app|tool))|(((draw|paint)(ing)? karn(i|aa?|e))|((sketch|canvas|painting)(e?s)? (banaa?n(aa?|e|ai)|karnaa?)) ((chaa?ha?t(a(a|i|y)?|i|ee?) )?h(u|oo|e|ai)n?))/i, 
-   q42 = /(audio (visuali(z|s)er|player))|(play local audio)/i, 
+   q42 = /(audio (visuali(z|s)er|player))|(play local audio)|(soundjam)/i, 
    q43 = /((ayesh|t)ranslat(e|or))|(english to (hindi|urdu|chinese|german|spanish|arabic|french|italian|russian))|((hindi|urdu|arabic|spanish|russian|chinese|german) to english)/i, 
    q44 = /((ayesh ?)?dict(ionary)?)|(ayesh ?nary)|(english ?(lafz k(i|a))? m(eaning|atlab))/i, 
    q45 = /(^(execute|launch|play( me)?|run) (the )?mai?ze)|(the mai?ze game)/i, 
@@ -53,10 +53,10 @@
    q48 = /((image|pic(ture)?|photo) edit(or)?)|(ayesh('?d?| )?edit)/i, 
    q49 = /^voice ?(notes?|recorder)$/i, 
    q50 = /(smash cube|(box|slice|cube) game)/i, 
-   q51 = /(percentage calculator)|(calculate percentage)/i, 
+   q51 = /(percent(age)? calculat(or|e))|(calculate ?\b\d*\b percent(age)?)/i, 
    q52 = /temperature( units)? conver(sion|ter)/i, 
    q53 = 
-   /(how to (cook|bake))|(help me( with)? (cook|bake?)(ing)?)|(ingredients)/i, 
+   /(how to (cook|bake))|((k(e|ai)se pakaa?te|pakaa?te k(e|ai)se) h(e|ai)n?)|(k(e|ai)se paka((u|oo|e|ai)n?|ya))|(help me( with)? (cook|bake?)(ing)?)|(ingredients)/i, 
    q54 = 
    /(I'?( ?a)?m (anxious|tired|scared))|(help me (calm down|relax|with my anxiety))|(relaxer)|(thakk? (chuk|gay?)(aa?|i|e) h(u|oo|ai|e)n? (m(e|ai)n?|h(u|a)m))|((mer|h(u|a)maa?r)(a?i|e) (lag|(f|ph)at)(a?i|e) pa(r|d)(a?i|e) h(e|ai)n?)/i, 
    q55 = 
@@ -96,7 +96,7 @@
    q82 = /(^game of (adventure|dragon)s?$)|((adventur(ous|e)|dragon|dinosaur|city|castle|battle) game)/i, 
    q83 = /(my( fave?(orite)?)? ?books?'? ?list)|(books? (in|to) my wishlist)/i, 
    q84 = /(math flash ?cards)|((arithmetic|math) game)/i, 
-   q85 = /simon/i, 
+   q85 = /((files?|images?|content) (compress|zip)((o|e)r|ion)?)|((win|7) ?(zip|rar))|((Ayesha?)? ?(zipp|archiv)er)/i, 
    q86 = /((ayesha? ?)?ludo)|(board game)/i, 
    q87 = 
    /(book|pdf|kitaa?b) (read kar ?k(e|ai)|pa(r|d)h? ?k(e|ai)) (do|d(ai|e)n?|bataa?(o|(e|ai)n?)|de sakt(e|i) h(o|(e|ai)n?))|((pdf|book) (viewer|reader))/i, 
@@ -128,18 +128,23 @@
    q112 = /(can'?t? you feel the chemistry between us)|(k(i|y)aa? (tum?|aa?p)( hamaa?r(e|ay) darmyaa?n ?(ki|(hone )?wali|(kisi|(e|ai)k)( kisam ki)?))? chemistry( ko)? mehsus( nahi)? kar (rahi|sakti)( h(o|ai|e)n?)?)/i,
    q113 = /crap|brat|fool|(mother)?fuck(er)?s?|mf|mofo|twats?|cunts?|cock(biter|sucker)?s?|boobs?|morons?|douche?(bag)?s?|pricks?|dicks?|(ass|arse) ?(hole)?s?|dick(head)?s?|fag(got)?|nigg?(a|er)|fucking|f\*cking|f\*ck|bitch|b\*tch|shit|sh\*t|fool|dumb|couch potato|\*ssh\*l\*|\*\*\*\*|c\*ck|\*\*\*\*sucker|c\*cks\*ck\*r|\*\*\*\*|c\*nt|dickhead|d\*c\*h\*a\*|\*\*\*\*|f\*c\*|\*\*\*\*wit|f\*ckw\*t|fuk|f\*k|fuking|f\*k\*ng|mother\*\*\*\*er|m\*th\*rf\*ck\*r|\*\*\*\*\*\*|n\*gg\*r|pussy|p\*ssy|\*\*\*\*|sh\*t|wanker|w\*nk\*r|wankers|w\*nk\*rs|whore|wh\*r\*|slag| sl\*g|\*\*\*\*\*|b\*tch|f u c k|f\*c\*|b.i.t.c.h|b\*tch|d-i-c-k|d\*\*\*/i,
    q114 = /(be ?wafaa?( h(o|e|ai)n?)?$)|(^be ?wafaa?$)/i,
-   q115 = /meri (girlfriend|wife|lover) k(o|au)n h(e|ai)/i,
+   q115 = /meri (girlfriend|wife|lover) k(o|au)n( h(e|ai))?$/i,
    q116 = /meri (dusri )?(g(irl)?f(riend)?|cousin|wife|lover) ka kya$/i,
    q117 = /par (aa?p|tum) to (e|ai)k (robot|machine|ai) h(o|e|ai)n?/i,
-    q118 = /(kahaa? chali)|(meri (wife|lover|g(irl)?f(riend)?) kahaa? (h(e|ai)|gai))/i,
-    q119 = /(miss (yo)?u)|((aa?p|tum|tere) ko miss kar rah(aa?|i|e) h(u|oo|e|ai)n?)/i,
-    q120 = /time bataa?( d)?(o|e|ai|iy?e)n?/i,
-    q121 = /(who is your lover)|(t(umhaa?|e)raa? aa?shik k(o|au)n?)/i,
-    q122 = /^time( (bataa?o|ayesha))? kyaa? (((ho|baj) ?ra?haa?) ?)?h(e|ai)$/i,
-    q123 = /(M(ujh|ere)|h(u|a)m(aa?r(e|ai))?) se shaa?di kar(((l)?(o|(e|ai)n?))| ?ne ke baa?r(e|a(y|i)) m(e|ai)n?)? ?(k(y|(ai|e)s)aa?|gi)?/i,
-    q124 = /abc/i,
-    q125 = /xyz/i,
-    q126 = /(ganaa|lori)? gaa(( ke)? sunaa?)? ?d?((o|e|ai|ij?i?y?e)n?|(sak|pa) ?ti)/i;
+   q118 = /(kahaa? chali)|(meri (wife|lover|g(irl)?f(riend)?) kahaa? (h(e|ai)|gai))/i,
+   q119 = /(miss (yo)?u)|((aa?p|tum|tere) ko miss kar rah(aa?|i|e) h(u|oo|e|ai)n?)/i,
+   q120 = /(time bataa?( d)?(o|e|ai|iy?e)n?)|(time( (bataa?o|ayesha))? kyaa? (((ho|baj) ?ra?haa?) ?)?h(e|ai))/i,
+   q121 = /(who is your (aa?shik|lover|husband|b(oy)?f(riend)?))|((t(umhaa?|e)raa?|aa?p ?ka) (aa?shik|lover|husband|b(oy)?f(riend)?) k(o|au)n?)/i,
+   q122 = /YYYYYYYY/i,
+   q123 = /(M(ujh|ere)|h(u|a)m(aa?r(e|ai))?) se shaa?di kar(((l)?(o|(e|ai)n?))| ?ne ke baa?r(e|a(y|i)) m(e|ai)n?)? ?(k(y|(ai|e)s)aa?|gi)?/i, 
+   q124 = /(ult(i|aa?) gin((ti|o|(i?y?e|ai)n?))?( (kar|k(i|ee)j)(i?y?e|(e|ai)n?|o))? 5 (se|to) (0|1))|(5 (se|to) (0|1)( (ki|tak( ki)?))? ult(i|aa?) gin((ti|o|(i?y?e|ai)n?))?)/i,
+   q125 = /(count to (10|ten))|(10 tak gin((ti|o|(i?y?e|ai)n?))?)/i,
+   q126 = /(gaa?na|lori)? gaa?(( ?ke)? sunaa?)? ?d?((o|e|ai|ij?i?y?e)n?|(sak|pa)? ?ti)/i,
+   q127 = /XXXXXXXX/i,
+   q128 = /ch(u|o)d( ?ne|ai) (pe kesi|ki) awaa?z nikaa?l(o|i?y?e|ai)n?( gi)?/i,
+   q129 = /dil ki dha(r|d) ?kan sunaa?(o(gi)?|i?y?e|ai)n?/i,
+   q130 = /(me|h(u|a)m) t(um ?(haa?r)?|er)e se tang( ho ?gay?(aa?|e|i)?)? h(u|oo|e|ai)n?/i;
+   
   
  function ask() { 
    const q = document.querySelector("#searchInput").value; 
@@ -788,6 +793,9 @@
      msg = ""; 
      $output.html(msg); 
    } else if (q28.test(q)) { 
+     stopText(); 
+     msg = ""; 
+     $output.html(msg); 
      let beatMakerWin = window.open( 
        "./beat-maker/", 
        "_blank"
@@ -795,12 +803,13 @@
      if (beatMakerWin) { 
        window.focus(); 
        log("Launched ayeshBeat Maker!"); 
+       msg = "Music say pyaar hay? Aray mujhay bhi. Ao music bana'ay saath may";
+       playText(msg);
+       sound("hoo-hoo-hoo");
      } else { 
        alert("Please enable popups for this site!"); 
      } 
-     stopText(); 
-     msg = ""; 
-     $output.html(msg); 
+     
    } else if (q29.test(q)) { 
      let rockPSWin = window.open( 
        "./Rock-Paper-Scissor-master/", 
@@ -1362,7 +1371,8 @@
      msg = ""; 
      $output.html(msg); 
    } else if (q76.test(q)) { 
-     let pwGenAppWin = window.open("./Passwordgen/", "_blank"); 
+     let passGenApps = ["./Passwordgen/", "./Passwordgen2"];
+     let pwGenAppWin = window.open(passGenApps[Math.floor(Math.random() * passGenApps.length)], "_blank"); 
      if (pwGenAppWin) { 
        window.focus(); 
        log("Launched Password Generator"); 
@@ -1466,15 +1476,15 @@
    } else if (q85.test(q)) { 
      msg = ""; 
      $output.html(msg); 
-     let simonGameWin = window.open( 
-       "https://alexs-simon-says.netlify.app/", 
+     let ayeshZipperWin = window.open( 
+       "./zipper", 
        "_blank" 
      ); 
-     if (simonGameWin) { 
+     if (ayeshZipperWin) { 
        window.focus(); 
-       msg = "Simon kehta hay... let's go! Follow simon, or you're dead";
+       msg = "Kisi file kee size kam karni hay?... Don't worry, may kab kaam aa'oongi? Abhi kuch files upload karkay download button dabaao or compressed files zip ki soorat may haasil karo... backups kay li'yay kaafi kaam aatay hay yay!";
        playText(msg);
-       log("Launched Simon"); 
+       log("Launched ayeshZipper: An online file compression tool!"); 
      } else { 
        alert("Please enable popups for this site!"); 
      } 
