@@ -121,7 +121,7 @@ var move= function(a, b, t, p, diceValue){
     var temp = document.getElementById(b);
     if(temp.childElementCount){
         if((!temp.classList.contains("dark"))&&(temp.firstChild.id[0] == p)){
-            alert("The destination block contains your token! Select a different token");
+            showSnack("Aap ka token yaha pe pehle se hi mojud he, age wali slot select karo!");
             playerTurn(p, diceValue);
             return;
         } else {
@@ -208,7 +208,7 @@ var calculateMove = function (a, n, p) {
             move(a, p+'9', tempToken, p, n);
             mapLocker.set(p, mapLocker.get(p)-1);
         } else {
-            alert("Choose a token in play! New token only opens with a six.");
+            showSnack("Ek token sirf 6 ane par hi khulta he, I hope ap ye game pehle khel chuke ho, nahi?");
             playerTurn(p, n);
         }
     }
@@ -234,10 +234,10 @@ var calculateMove = function (a, n, p) {
             move(a, p.toUpperCase()+destNo, tempToken, p, n);
         } else if(destNo>6){
             if(checkMove(n, p)) {
-                alert("Not enough blocks left to traverse! Pls select a different token.");
+                showSnack("Not enough blocks! Please koi dusra token select karo.");
                 playerTurn(p, n);
             } else {
-                alert("Not enough blocks left to traverse! Next player's turn.");
+                showSnack("Not enough blocks left to traverse! Agle player ki bari.");
                 play(playerCycle(p, n));
             }
         }
@@ -253,12 +253,12 @@ var calculateMove = function (a, n, p) {
 }
 
 var changeDicePicture = function(diceValue) {
-    var dice1='<svg id="dice1" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="dice-one" class="svg-inline--fa fa-dice-one fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="red" d="M384 32H64C28.65 32 0 60.65 0 96v320c0 35.35 28.65 64 64 64h320c35.35 0 64-28.65 64-64V96c0-35.35-28.65-64-64-64zM224 288c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32z"></path></svg>';
-    var dice2='<svg id="dice2" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="dice-two" class="svg-inline--fa fa-dice-two fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="red" d="M384 32H64C28.65 32 0 60.65 0 96v320c0 35.35 28.65 64 64 64h320c35.35 0 64-28.65 64-64V96c0-35.35-28.65-64-64-64zM128 192c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm192 192c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32z"></path></svg>';
-    var dice3='<svg id="dice3" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="dice-three" class="svg-inline--fa fa-dice-three fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="red" d="M384 32H64C28.65 32 0 60.65 0 96v320c0 35.35 28.65 64 64 64h320c35.35 0 64-28.65 64-64V96c0-35.35-28.65-64-64-64zM128 192c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm96 96c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm96 96c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32z"></path></svg>';
-    var dice4='<svg id="dice4" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="dice-four" class="svg-inline--fa fa-dice-four fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="red" d="M384 32H64C28.65 32 0 60.65 0 96v320c0 35.35 28.65 64 64 64h320c35.35 0 64-28.65 64-64V96c0-35.35-28.65-64-64-64zM128 384c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm0-192c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm192 192c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm0-192c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32z"></path></svg>';
-    var dice5='<svg id="dice5" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="dice-five" class="svg-inline--fa fa-dice-five fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="red" d="M384 32H64C28.65 32 0 60.65 0 96v320c0 35.35 28.65 64 64 64h320c35.35 0 64-28.65 64-64V96c0-35.35-28.65-64-64-64zM128 384c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm0-192c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm96 96c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm96 96c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm0-192c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32z"></path></svg>';
-    var dice6='<svg id="dice6" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="dice-six" class="svg-inline--fa fa-dice-six fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="red" d="M384 32H64C28.65 32 0 60.65 0 96v320c0 35.35 28.65 64 64 64h320c35.35 0 64-28.65 64-64V96c0-35.35-28.65-64-64-64zM128 384c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm0-96c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm0-96c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm192 192c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm0-96c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm0-96c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32z"></path></svg>';
+    var dice1='<svg id="dicesvg" style="webkit-transform: scale(1.5); -moz-transform: scale(1.5); -ms-transform: scale(1.5); -o-transform: scale(1.5); transform: scale(1.5);" id="dice1" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="dice-one" class="svg-inline--fa fa-dice-one fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="red" d="M384 32H64C28.65 32 0 60.65 0 96v320c0 35.35 28.65 64 64 64h320c35.35 0 64-28.65 64-64V96c0-35.35-28.65-64-64-64zM224 288c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32z"></path></svg>';
+    var dice2='<svg id="dicesvg" style="webkit-transform: scale(1.5); -moz-transform: scale(1.5); -ms-transform: scale(1.5); -o-transform: scale(1.5); transform: scale(1.5);" id="dice2" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="dice-two" class="svg-inline--fa fa-dice-two fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="red" d="M384 32H64C28.65 32 0 60.65 0 96v320c0 35.35 28.65 64 64 64h320c35.35 0 64-28.65 64-64V96c0-35.35-28.65-64-64-64zM128 192c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm192 192c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32z"></path></svg>';
+    var dice3='<svg id="dicesvg" style="webkit-transform: scale(1.5); -moz-transform: scale(1.5); -ms-transform: scale(1.5); -o-transform: scale(1.5); transform: scale(1.5);" id="dice3" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="dice-three" class="svg-inline--fa fa-dice-three fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="red" d="M384 32H64C28.65 32 0 60.65 0 96v320c0 35.35 28.65 64 64 64h320c35.35 0 64-28.65 64-64V96c0-35.35-28.65-64-64-64zM128 192c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm96 96c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm96 96c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32z"></path></svg>';
+    var dice4='<svg id="dicesvg" style="webkit-transform: scale(1.5); -moz-transform: scale(1.5); -ms-transform: scale(1.5); -o-transform: scale(1.5); transform: scale(1.5);" id="dice4" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="dice-four" class="svg-inline--fa fa-dice-four fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="red" d="M384 32H64C28.65 32 0 60.65 0 96v320c0 35.35 28.65 64 64 64h320c35.35 0 64-28.65 64-64V96c0-35.35-28.65-64-64-64zM128 384c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm0-192c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm192 192c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm0-192c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32z"></path></svg>';
+    var dice5='<svg id="dicesvg" style="webkit-transform: scale(1.5); -moz-transform: scale(1.5); -ms-transform: scale(1.5); -o-transform: scale(1.5); transform: scale(1.5);" id="dice5" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="dice-five" class="svg-inline--fa fa-dice-five fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="red" d="M384 32H64C28.65 32 0 60.65 0 96v320c0 35.35 28.65 64 64 64h320c35.35 0 64-28.65 64-64V96c0-35.35-28.65-64-64-64zM128 384c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm0-192c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm96 96c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm96 96c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm0-192c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32z"></path></svg>';
+    var dice6='<svg id="dicesvg" style="webkit-transform: scale(1.5); -moz-transform: scale(1.5); -ms-transform: scale(1.5); -o-transform: scale(1.5); transform: scale(1.5);" id="dice6" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="dice-six" class="svg-inline--fa fa-dice-six fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="red" d="M384 32H64C28.65 32 0 60.65 0 96v320c0 35.35 28.65 64 64 64h320c35.35 0 64-28.65 64-64V96c0-35.35-28.65-64-64-64zM128 384c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm0-96c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm0-96c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm192 192c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm0-96c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm0-96c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32z"></path></svg>';
     
     var dicePicture = document.getElementById("dice");
     switch(diceValue) {
@@ -274,7 +274,7 @@ var changeDicePicture = function(diceValue) {
 
 var playerTurn = function(p, diceValue) {
     if(((mapLocker.get(p)+mapTally.get(p)) == 4) && diceValue!=6 ){
-        alert("New token only opens with a six. Sorry, next player's turn.");
+        showSnack("6 ane ka wait kijiye please, kyu ke ek token sirf 6 ane par hi khulta he! I hope ap ye game pehli bar nahi khel rahe?");
         play(playerCycle(p, diceValue));
     } else {
         var isMoved = false;
@@ -315,7 +315,7 @@ var rollDice = function(p) {
                 changeDicePicture(diceValue);
                 playerTurn(p, diceValue);
             } else{
-                alert("Entered dice value is not allowed");
+                showSnack("Entered dice value is not allowed");
             }
             return;
         }
@@ -382,3 +382,10 @@ var initialiseGame = function(){
     var p=playerColors[0];
     play(p);
 }
+
+function showSnack(text) {
+  let snackElement = document.getElementById("snackbar");
+  snackElement.innerText = text; /* text to show */
+  snackElement.className = "show";
+  setTimeout(function(){ snackElement.className = snackElement.className.replace("show", ""); }, 3000);
+};
