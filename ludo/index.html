@@ -226,8 +226,8 @@
             </div>
 
             <div class="dice">
-                <label for="val"><h2>dice value</h2></label>
-                <div class="value">
+                <label for="val" style="display: none;"><h2>dice value</h2></label>
+                <div class="value" style="display: none;">
                     <input type="number" placeholder="1-6" id="val" max="6" min="1">
                     <button type="submit" value="submit"><p>submit</p></button>
                 </div>
@@ -236,7 +236,7 @@
                     <div id="dice" onclick="document.querySelector('#rollBtn').click()">
                         
                     </div>
-                    <button id="rollBtn">ROLL</button>
+                    <button id="rollBtn" style="display: none;">ROLL</button>
                 </div>
             </div>
 
