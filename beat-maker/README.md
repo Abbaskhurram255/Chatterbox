@@ -1,5 +1,6 @@
-# ayeshBeat Maker
-A pure javascript web application for making music.
+# AyeshBeat Maker: Make music anywhere, anytime!
+A pure javascript web application for making music
+
 
 ## Features
 
