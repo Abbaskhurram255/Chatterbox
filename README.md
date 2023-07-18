@@ -59,11 +59,11 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
     * ##### Generators
     *   Password Generator
     *   Anonymous Proverbs Generator
-    *   Quotes app
+    *   Quote of the Day
     *   Joke Machine (English only, sorry!)
    
     * ##### Music
-    *   Simple Piano <untested>
+    *   ayeshBeat Maker: Make music anywhere, anytime!
     *   Tap Music!: A One-Tap Magical Instrument
     *   Metronome: Learn to play music... on time!
     *   Jukebox: gaane!
@@ -75,6 +75,7 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
     *   ayeshLudo
     *   breakOut!
     *   Rising Bars <beta>
+    *   ayeshSnake: a simple, yet brilliant snake game!
     *   Fotoflick
     *   muskyBird: an Elon Musk roast! For he deserves it🤫
     *   Game Of Dragons: City Under Havoc, an adventurous RPG!
@@ -97,5 +98,7 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
 * * *
 
 v1.0.1
-
-<center>Changelogs will be listed here</center>
+### Changelogs
+* bug fixes
+* add some easter eggs
+  <!-- <br/><br/><center>Changelogs will be listed here</center> -->
