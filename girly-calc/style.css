@@ -1,5 +1,6 @@
 body {
-    background-color: #f9d3e5;
+    /*background-color: #f9d3e5;*/
+    background: url(img.jpg) center fixed;
     font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
