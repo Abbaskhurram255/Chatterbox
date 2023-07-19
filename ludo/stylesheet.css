@@ -441,3 +441,37 @@ section.stats > * {
   from {bottom: 30px; opacity: 1;}
   to {bottom: 0; opacity: 0;}
 }
+
+.is6 {
+    -webkit-animation: is6 1s infinite;
+       -moz-animation: is6 1s infinite;
+            animation: is6 1s infinite;
+}
+
+@-webkit-keyframes is6 {
+    from {
+        
+    } to {
+        -webkit-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+}
+@-moz-keyframes is6 {
+    from {
+        
+    } to {
+        -webkit-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+}
+@keyframes is6 {
+    from {
+        
+    } to {
+        -webkit-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+}
