@@ -207,6 +207,7 @@ var calculateMove = function (a, n, p) {
         if(n==6) {
             move(a, p+'9', tempToken, p, n);
             mapLocker.set(p, mapLocker.get(p)-1);
+            showSnack("Wow, 6!");
         } else {
             showSnack("Ek token sirf 6 ane par hi khulta he, I hope ap ye game pehle khel chuke ho, nahi?");
             playerTurn(p, n);
