@@ -22,7 +22,7 @@ window.addEventListener('load', () => {
 
     const createBubbles = (index) => {
         const bubble = document.createElement("div");
-        visual.appendChild( bubble );
+        visual.appendChild(bubble);
         bubble.style.backgroundColor = colors[index];
         bubble.style.animation = 'jump 1s ease';
         bubble.addEventListener("animationend" , function() {
