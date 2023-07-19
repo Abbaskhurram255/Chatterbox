@@ -209,7 +209,7 @@ var calculateMove = function (a, n, p) {
             mapLocker.set(p, mapLocker.get(p)-1);
             showSnack("Wow, 6!");
         } else {
-            showSnack("Ek token sirf 6 ane par hi khulta he, I hope ap ye game pehle khel chuke ho, nahi?");
+            showSnack("Ek token sirf 6 ane par hi khulta he!");
             playerTurn(p, n);
         }
     }
@@ -275,7 +275,7 @@ var changeDicePicture = function(diceValue) {
 
 var playerTurn = function(p, diceValue) {
     if(((mapLocker.get(p)+mapTally.get(p)) == 4) && diceValue!=6 ){
-        showSnack("6 ane ka wait kijiye please, kyu ke ek token sirf 6 ane par hi khulta he! I hope ap ye game pehli bar nahi khel rahe?");
+        showSnack("6 ane ka wait kijiye please!");
         play(playerCycle(p, diceValue));
     } else {
         var isMoved = false;
