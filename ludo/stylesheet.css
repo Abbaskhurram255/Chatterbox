@@ -442,36 +442,36 @@ section.stats > * {
   to {bottom: 0; opacity: 0;}
 }
 
-.is6 {
+.fa-dice-six {
     -webkit-animation: issix 1s infinite;
        -moz-animation: issix 1s infinite;
-            animation: issix 1s infinite;
+                 animation: issix 1s infinite;
 }
 
 @-webkit-keyframes issix {
     from {
-        
+        transform: ;
     } to {
-        -webkit-transform: scale(1.5);
-        -moz-transform: scale(1.5);
-        transform: scale(1.5);
+        -webkit-transform: scale(1.9);
+        -moz-transform: scale(1.9);
+        transform: scale(1.9);
     }
 }
 @-moz-keyframes issix {
     from {
         
     } to {
-        -webkit-transform: scale(1.5);
-        -moz-transform: scale(1.5);
-        transform: scale(1.5);
+        -webkit-transform: scale(1.9);
+        -moz-transform: scale(1.9);
+        transform: scale(1.9);
     }
 }
 @keyframes issix {
     from {
-        
+        transform: ;
     } to {
-        -webkit-transform: scale(1.5);
-        -moz-transform: scale(1.5);
-        transform: scale(1.5);
+        -webkit-transform: scale(1.9);
+        -moz-transform: scale(1.9);
+        transform: scale(1.9);
     }
 }
