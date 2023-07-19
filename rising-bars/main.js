@@ -94,7 +94,7 @@ startgame = () => {
         if (toggle_game_button.innerHTML == "Pause" && refreshes % 600 == 0) {
             rising_rate += rising_rate_increase;
             level_display.innerHTML = parseInt(level_display.innerHTML) + 1;
-            if (parseInt(level_display.innerHTML) >= 5) {
+            if (parseInt(level_display.innerHTML) >= 5 && parseInt(level_display.innerHTML) != 0) {
                level_display.classList.add("yellowMe");
             } else {
                level_display.classList.remove("yellowMe");
@@ -123,6 +123,9 @@ controller = () => {
         game_session = true;
         toggle_game_button.innerHTML = "Pause";
         startgame();
+        if (parseInt(level_display.innerHTML) < 5 || parseInt(level_display.innerHTML) == 0) {
+               level_display.classList.remove("yellowMe");
+            }
     }
 }
 
