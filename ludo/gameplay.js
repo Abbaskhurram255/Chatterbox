@@ -341,11 +341,11 @@ const dicesvg = document.querySelector("#dicesvg");
 var playerCycle = function(p, dice) {
     if(dice==6){
         return p;
-        dicesvg.classList.add(".is6");
+        dicesvg.classList.add("issix");
     } else if(mapExtraRoll.get(p)>0 && checkMove(dice, p)){
         mapExtraRoll.set(p, mapExtraRoll.get(p)-1);
         return p;
-        dicesvg.classList.remove(".is6");
+        dicesvg.classList.remove("issix");
     } else {
         mapExtraRoll.set(p, 0);
         do{
@@ -353,7 +353,7 @@ var playerCycle = function(p, dice) {
         }while(!playerColors.includes(p))
         return p;
     }
-    dicesvg.classList.remove(".is6");
+    dicesvg.classList.remove("issix");
 }
 
 var setPlayer = function(p){
