@@ -275,7 +275,7 @@ var changeDicePicture = function(diceValue) {
 
 var playerTurn = function(p, diceValue) {
     if(((mapLocker.get(p)+mapTally.get(p)) == 4) && diceValue!=6 ){
-        showSnack("6 ane ka wait kijiye please!");
+        showSnack("6 ane ka wait kijiye please, <span style='color:" + document.querySelector('#curPlayer').style.color + "'>" + document.querySelector('#curPlayer').innerHTML + "</span>!");
         play(playerCycle(p, diceValue));
     } else {
         var isMoved = false;
@@ -389,7 +389,7 @@ var initializeGame = function(){
 
 function showSnack(text) {
   let snackElement = document.getElementById("snackbar");
-  snackElement.innerText = text; /* text to show */
+  snackElement.innerHTML = text; /* text to show */
   snackElement.className = "show";
   setTimeout(function(){ snackElement.className = snackElement.className.replace("show", ""); }, 3000);
 };

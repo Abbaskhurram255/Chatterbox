@@ -407,7 +407,8 @@ section.stats > * {
   background-color: #333;
   color: #fff;
   text-align: center;
-  border-radius: 2px;
+  border-radius: 4rem 4px 4rem;
+  background: linear-gradient(seagreen, #111);
   padding: 16px;
   position: fixed;
   z-index: 1;
@@ -416,20 +417,36 @@ section.stats > * {
   font-size: 17px;
 }
 
+body {
+	background: rgba(183, 13, 77, 0.8);
+}
+
+section {
+	background: linear-gradient(darkgreen, deeppink, darkred);
+}
+.stats {
+	background: beige !important;
+	border-radius: 3rem;
+	box-shadopw: .5rem 4px 2px 8px #333;
+}
+
 #snackbar.show {
   visibility: visible;
   -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+     -moz-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+               animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
 @-webkit-keyframes fadein {
   from {bottom: 0; opacity: 0;} 
-  to {bottom: 30px; opacity: 1;}
+  80%{}
+  to {bottom: 30px; opacity: 0.4; transform: rotateY(-40deg);}
 }
 
 @keyframes fadein {
   from {bottom: 0; opacity: 0;}
-  to {bottom: 30px; opacity: 1;}
+  80%{}
+  to {bottom: 30px; opacity: 0.4; transform: rotateY(-40deg);}
 }
 
 @-webkit-keyframes fadeout {
@@ -438,14 +455,14 @@ section.stats > * {
 }
 
 @keyframes fadeout {
-  from {bottom: 30px; opacity: 1;}
+  from {bottom: 30px; opacity: 0.4;}
   to {bottom: 0; opacity: 0;}
 }
 
 .fa-dice-six {
-    -webkit-animation: issix 1s infinite;
-       -moz-animation: issix 1s infinite;
-                 animation: issix 1s infinite;
+    -webkit-animation: issix 3s infinite;
+       -moz-animation: issix 3s infinite;
+                 animation: issix 3s infinite;
 }
 
 @-webkit-keyframes issix {
@@ -472,6 +489,9 @@ section.stats > * {
     } to {
         -webkit-transform: scale(1.9);
         -moz-transform: scale(1.9);
-        transform: scale(1.9);
+        transform: scale(1.9) rotateX(225deg) rotateY(45deg);
+    }
+    80% {
+    	transform: rotate(90deg) ;
     }
 }
