@@ -465,13 +465,20 @@ section {
                  animation: issix 3s infinite;
 }
 
+#dice:focus, #dice:active {
+	transform: scale(1.2);
+}
+
 @-webkit-keyframes issix {
     from {
         transform: ;
     } to {
         -webkit-transform: scale(1.9);
         -moz-transform: scale(1.9);
-        transform: scale(1.9);
+        transform: scale(1.9) rotateX(225deg) ;
+    }
+    80% {
+    	transform: rotate(90deg) ;
     }
 }
 @-moz-keyframes issix {
@@ -480,7 +487,10 @@ section {
     } to {
         -webkit-transform: scale(1.9);
         -moz-transform: scale(1.9);
-        transform: scale(1.9);
+        transform: scale(1.9) rotateX(225deg) ;
+    }
+    80% {
+    	transform: rotate(90deg) ;
     }
 }
 @keyframes issix {
@@ -489,7 +499,7 @@ section {
     } to {
         -webkit-transform: scale(1.9);
         -moz-transform: scale(1.9);
-        transform: scale(1.9) rotateX(225deg) rotateY(45deg);
+        transform: scale(1.9) rotateX(225deg) ;
     }
     80% {
     	transform: rotate(90deg) ;

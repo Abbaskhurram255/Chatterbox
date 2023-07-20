@@ -276,7 +276,12 @@ var changeDicePicture = function(diceValue) {
 var playerTurn = function(p, diceValue) {
     if(((mapLocker.get(p)+mapTally.get(p)) == 4) && diceValue!=6 ){
         showSnack("6 ane ka wait kijiye please, <span style='color:" + document.querySelector('#curPlayer').style.color + "'>" + document.querySelector('#curPlayer').innerHTML + "</span>!");
+        
         play(playerCycle(p, diceValue));
+        let q1 = `${document.querySelector('#curPlayer').innerText} kee baari hay abb`;
+        let q2 = `ab ${document.querySelector('#curPlayer').innerText} kee baari hay`;
+        let arr = [q1, q2];
+        playText(arr[Math.floor(Math.random() * arr.length)]); 
     } else {
         var isMoved = false;
         var returnId = function (e) {
@@ -393,3 +398,36 @@ function showSnack(text) {
   snackElement.className = "show";
   setTimeout(function(){ snackElement.className = snackElement.className.replace("show", ""); }, 3000);
 };
+
+/* speech */
+const utterance = new SpeechSynthesisUtterance();
+utterance.addEventListener("boundary", (e) => {
+  currentCharacter = e.charIndex;
+});
+
+function playText(text) {
+  if (speechSynthesis.paused && speechSynthesis.speaking) {
+    return speechSynthesis.resume();
+  }
+  if (speechSynthesis.speaking) return;
+  utterance.text = text;
+  var voices = window.speechSynthesis.getVoices();
+  window.speechSynthesis.onvoiceschanged = function () {
+    voices = window.speechSynthesis.getVoices();
+  };
+  utterance.voice = voices[10];
+  utterance.pitch = 1;
+  utterance.voiceURI = "native";
+  utterance.lang = "hi";
+  utterance.volume = 1;
+  utterance.rate = 1;
+  speechSynthesis.speak(utterance);
+  /* or you could simply import say.js. The link to it: https://rawit.com/JudahRR/Say.js/master/libs/say.js */
+}
+
+//Call this function to (immediately) stop the Speech synthesis:
+function stopText() {
+  speechSynthesis.resume();
+  speechSynthesis.cancel();
+}
+//end of Speech_Synth block
