@@ -204,12 +204,21 @@ var calculateMove = function (a, n, p) {
 
     //starting move
     if(a.includes("Holder",1)){
+    	var times = 0;
         if(n==6) {
             move(a, p+'9', tempToken, p, n);
             mapLocker.set(p, mapLocker.get(p)-1);
-            showSnack("Wow, 6!");
+            times <= 3 ? times+=1 : times=0;
+            
+            if (times <= 3 && times > 1) {
+            	showSnack(`Wow, ${times} sixes!`);
+            } else {
+            	showSnack("Wow, 6!");
+            }
+            
         } else {
             showSnack("Ek token sirf 6 ane par hi khulta he!");
+            // document.querySelector("#rollBtn").click();
             playerTurn(p, n);
         }
     }

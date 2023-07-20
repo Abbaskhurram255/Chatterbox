@@ -466,6 +466,10 @@ section {
 }
 
 #dice:focus, #dice:active {
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	-o-transform: scale(1.2);
 	transform: scale(1.2);
 }
 
@@ -473,11 +477,17 @@ section {
     from {
         transform: ;
     } to {
-        -webkit-transform: scale(1.9);
-        -moz-transform: scale(1.9);
-        transform: scale(1.9) rotateX(225deg) ;
+        -webkit-transform: scale(1.9) rotateX(225deg) ;
+           -moz-transform: scale(1.9) rotateX(225deg) ;
+             -ms-transform: scale(1.9) rotateX(225deg) ;
+                -o-transform: scale(1.9) rotateX(225deg) ;
+                    transform: scale(1.9) rotateX(225deg) ;
     }
     80% {
+    	-webkit-transform: rotate(90deg) ;
+        -moz-transform: rotate(90deg) ;
+        -ms-transform: rotate(90deg) ;
+        -o-transform: rotate(90deg) ;
     	transform: rotate(90deg) ;
     }
 }
@@ -485,11 +495,17 @@ section {
     from {
         
     } to {
-        -webkit-transform: scale(1.9);
-        -moz-transform: scale(1.9);
-        transform: scale(1.9) rotateX(225deg) ;
+        -webkit-transform: scale(1.9) rotateX(225deg) ;
+           -moz-transform: scale(1.9) rotateX(225deg) ;
+             -ms-transform: scale(1.9) rotateX(225deg) ;
+                -o-transform: scale(1.9) rotateX(225deg) ;
+                    transform: scale(1.9) rotateX(225deg) ;
     }
     80% {
+    	-webkit-transform: rotate(90deg) ;
+        -moz-transform: rotate(90deg) ;
+        -ms-transform: rotate(90deg) ;
+        -o-transform: rotate(90deg) ;
     	transform: rotate(90deg) ;
     }
 }
@@ -497,11 +513,17 @@ section {
     from {
         transform: ;
     } to {
-        -webkit-transform: scale(1.9);
-        -moz-transform: scale(1.9);
-        transform: scale(1.9) rotateX(225deg) ;
+        -webkit-transform: scale(1.9) rotateX(225deg) ;
+           -moz-transform: scale(1.9) rotateX(225deg) ;
+             -ms-transform: scale(1.9) rotateX(225deg) ;
+                -o-transform: scale(1.9) rotateX(225deg) ;
+                    transform: scale(1.9) rotateX(225deg) ;
     }
     80% {
+    	-webkit-transform: rotate(90deg) ;
+        -moz-transform: rotate(90deg) ;
+        -ms-transform: rotate(90deg) ;
+        -o-transform: rotate(90deg) ;
     	transform: rotate(90deg) ;
     }
 }
