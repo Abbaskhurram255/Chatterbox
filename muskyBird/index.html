@@ -252,6 +252,15 @@
         }
 
     }())
+    
+    document.body.onload = () => {
+    	let music = new Audio("sympathy.mp3");
+        music.autoplay = true;
+        music.loop = true;
+        setTimeout(() => {
+        	music.play();
+        }, 2500);
+    }
 
 
 </script>
