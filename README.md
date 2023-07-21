@@ -64,6 +64,7 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
    
     * ##### Music
     *   ayeshBeat Maker: Make music anywhere, anytime!
+    *   Audio Visualizer: girlPowerPlay/ Soundjam
     *   Tap Music!: A One-Tap Magical Instrument
     *   Metronome: Learn to play music... on time!
     *   Jukebox: gaane!
@@ -71,7 +72,7 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
 *   #### _Built-in games_
 
     *   Smash Cube
-    *   BabyGirls' Dressup <unavailable if your specified age is over 18!) <beta>
+    *   BabyGirls' Dressup <unavailable if your specified age is over 18! - Lesbian Teenager Exclusive) <beta>
     *   ayeshLudo
     *   breakOut!
     *   Rising Bars <beta>
