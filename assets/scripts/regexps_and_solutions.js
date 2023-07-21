@@ -135,7 +135,7 @@
    q119 = /(miss (yo)?u)|((aa?p|tum|tere) ko miss kar rah(aa?|i|e) h(u|oo|e|ai)n?)/i,
    q120 = /(time bataa?( d)?(o|e|ai|iy?e)n?)|(time( (bataa?o|ayesha))? kyaa? (((ho|baj) ?ra?haa?) ?)?h(e|ai))/i,
    q121 = /(who is your (aa?shik|lover|husband|b(oy)?f(riend)?))|((t(umhaa?|e)raa?|aa?p ?ka) (aa?shik|lover|husband|b(oy)?f(riend)?) k(o|au)n?)/i,
-   q122 = /YYYYYYYY/i,
+   q122 = /news/i,
    q123 = /(m(ujh|ere)|h(u|a)m(aa?r(e|ai))?) se shaa?di kar((( ?l)?(o|(e|(e|a)i)n?|iji?ye))| ?ne ke baa?r(e|a(y|i)) m(e|ai)n?)? ?(k(y|(ai|e)s)aa?|gi)?/i, 
    q124 = /(ult(i|aa?) gin((ti|o|(i?y?e|ai)n?))?( (kar|k(i|ee)j)(i?y?e|(e|ai)n?|o))? 5 (se|to) (0|1))|(5 (se|to) (0|1)( (ki|tak( ki)?))? ult(i|aa?) gin((ti|o|(i?y?e|ai)n?))?)/i,
    q125 = /(count to (10|ten))|(10 tak gin((ti|o|(i?y?e|ai)n?))?)/i,
@@ -595,7 +595,7 @@
    } else if (q14.test(q)) { 
      $("#message").slideFadeToggle(800); 
      msg = 
-       "Hey there, batai'yay kaysee khidmat kar sakti hu may aapki? <a onclick='$(\"#searchInput\").val(\"mosam ke surati hal\");stopText();ask();playText(mesg.innerText);' onmouseover='$(this).css(\"cursor\", \"pointer\")' style='font-weight:500;font-style:italic;color:rgba(165,25,25,0.8);text-decoration:underline;'>mosam ka hal</a> bataa kay, <a onclick='$(\"#searchInput\").val(\"ayesha gaane chalao\");stopText();ask();playText(mesg.innerText);' onmouseover='$(this).css(\"cursor\", \"pointer\")' style='font-weight:500;font-style:italic;color:rgba(165,25,25,0.8);text-decoration:underline;'>gaane</a> chala kay ya koi <a onclick='$(\"#searchInput\").val(\"set a new reminder\");' onmouseover='$(this).css(\"cursor\", \"pointer\")' style='font-weight:500;font-style:italic;color:rgba(165,25,25,0.8);text-decoration:underline;'>reminder</a> set kar kay?"; 
+       "Hello jee, batai'yay kaysee khidmat kar sakti hu may aapki? <a onclick='$(\"#searchInput\").val(\"mosam ke surati hal\");stopText();ask();playText(mesg.innerText);' onmouseover='$(this).css(\"cursor\", \"pointer\")' style='font-weight:500;font-style:italic;color:rgba(165,25,25,0.8);text-decoration:underline;'>mosam ka hal</a> bataa kay, <a onclick='$(\"#searchInput\").val(\"ayesha gaane chalao\");stopText();ask();playText(mesg.innerText);' onmouseover='$(this).css(\"cursor\", \"pointer\")' style='font-weight:500;font-style:italic;color:rgba(165,25,25,0.8);text-decoration:underline;'>gaane</a> chala kay ya koi <a onclick='$(\"#searchInput\").val(\"set a new reminder\");' onmouseover='$(this).css(\"cursor\", \"pointer\")' style='font-weight:500;font-style:italic;color:rgba(165,25,25,0.8);text-decoration:underline;'>reminder</a> set kar kay?"; 
      $output.html(msg); 
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
@@ -672,16 +672,18 @@
        alert("Please enable popups for this site!"); 
      } 
    } else if (q21.test(q)) { 
+     stopText(); 
+     msg = ""; 
+     $output.html(msg); 
      let todoWin = window.open("./todo-app-project-master/", "_blank"); 
      if (todoWin) { 
        window.focus(); 
        log("Launched Todo app"); 
+       msg = "kya kyaa yaad rakhna hay? mujhe bataao. May ek robot hu, or aap ek insaan. Aap bhul saktay ho. May nahi.";
+       playText(msg);
      } else { 
        alert("Please enable popups for this site!"); 
      } 
-     stopText(); 
-     msg = ""; 
-     $output.html(msg); 
    } else if (q22.test(q)) { 
      stopText(); 
      msg = ""; 
@@ -805,13 +807,12 @@
      if (beatMakerWin) { 
        window.focus(); 
        log("Launched ayeshBeat Maker!"); 
-       msg = "Music say pyaar hay? Aray mujhay bhi. Ao music bana'ay saath may";
+       msg = "Music say pyaar hay? Aray mujhay bhi. Aao music bana'ay saath may. Music. khaas karkay dance music. mera bohot hee puraana dost hay.";
        playText(msg);
        sound("hoo-hoo-hoo");
      } else { 
        alert("Please enable popups for this site!"); 
      } 
-     
    } else if (q29.test(q)) { 
      let rockPSWin = window.open( 
        "./Rock-Paper-Scissor-master/", 
@@ -986,9 +987,10 @@
      let ayeshRanslateWin = window.open("./ayeshranslate/", "_blank"); 
      if (ayeshRanslateWin) { 
        window.focus(); 
+       log("Launched ayeshRansla!or"); 
        msg = "Oho,... zaraa ham bhi tou day'khe tumhay kyaa translate karna hay. Jald az jald language select karkay translate button dabaao, or magic day'khoh";
        playText(msg);
-       log("Launched ayeshRansla!or"); 
+       sound("hoo-hoo-hoo");
      } else { 
        alert("Please enable popups for this site!"); 
      } 
@@ -1000,8 +1002,9 @@
      if (dictionaryWin) { 
        window.focus(); 
        msg = "English seekhnee hay?... Bilkul sahi jagaa aay ho. Abhi ek lafz likh kar search dabaao, or oos lafz kee meaning jaano chut'keeyo may";
-       playText(msg);
-       log("Launched Dictionary"); 
+       playText(msg); 
+       sound("hoo-hoo-hoo") 
+       log("Launched ayeshnary: a brilliant dictionary"); 
      } else { 
        alert("Please enable popups for this site!"); 
      } 
@@ -1181,16 +1184,18 @@
      msg = ""; 
      $output.html(msg); 
    } else if (q59.test(q)) { 
-     let rockGameWin = window.open("./save-ayesha/", "_blank"); 
-     if (rocketGameWin) { 
-       window.focus(); 
-       log("Launched Ayesha Heading Back To Earth!"); 
-     } else { 
-       alert("Please enable popups for this site!"); 
-     } 
      stopText(); 
      msg = ""; 
      $output.html(msg); 
+     let rocketGameWin = window.open("./save-ayesha/", "_blank"); 
+     if (rocketGameWin) { 
+       window.focus(); 
+       log("Launched Ayesha Heading Back To Earth!"); 
+       msg = "Ayesha. ek astronaut. Planet Mars ka safar karkay ghar laut rahi hay. Usay bachaao patharo say";
+       playText(msg); 
+     } else { 
+       alert("Please enable popups for this site!"); 
+     } 
    } else if (q60.test(q)) { 
      msg = ""; 
      $output.text(msg); 
@@ -1640,7 +1645,223 @@
      } else { 
        alert("Please enable popups for this site!"); 
      } 
-   } else { 
+   } else if (q95.test(q)) { 
+     $("#message").slideFadeToggle(800); 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     $output.html(msg); 
+     console.log(msg); 
+     $("#message").delay(10000).slideFadeToggle(800); 
+    } else if (q96.test(q)) { 
+     $("#message").slideFadeToggle(800); 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     $output.html(msg); 
+     console.log(msg); 
+     $("#message").delay(10000).slideFadeToggle(800); 
+    } else if (q97.test(q)) { 
+     $("#message").slideFadeToggle(800); 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     $output.html(msg); 
+     console.log(msg); 
+     $("#message").delay(10000).slideFadeToggle(800); 
+    } else if (q98.test(q)) { 
+     $("#message").slideFadeToggle(800); 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     $output.html(msg); 
+     console.log(msg); 
+     $("#message").delay(10000).slideFadeToggle(800); 
+    } else if (q99.test(q)) { 
+     $("#message").slideFadeToggle(800); 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     $output.html(msg); 
+     console.log(msg); 
+     $("#message").delay(10000).slideFadeToggle(800); 
+    } else if (q100.test(q)) { 
+     $("#message").slideFadeToggle(800); 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     $output.html(msg); 
+     console.log(msg); 
+     $("#message").delay(10000).slideFadeToggle(800); 
+    } else if (q101.test(q)) { 
+     $("#message").slideFadeToggle(800); 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     $output.html(msg); 
+     console.log(msg); 
+     $("#message").delay(10000).slideFadeToggle(800); 
+    } else if (q102.test(q)) { 
+     $("#message").slideFadeToggle(800); 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     $output.html(msg); 
+     console.log(msg); 
+     $("#message").delay(10000).slideFadeToggle(800); 
+    } else if (q103.test(q)) { 
+     $("#message").slideFadeToggle(800); 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     $output.html(msg); 
+     console.log(msg); 
+     $("#message").delay(10000).slideFadeToggle(800); 
+    } else if (q104.test(q)) { 
+     $("#message").slideFadeToggle(800); 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     $output.html(msg); 
+     console.log(msg); 
+     $("#message").delay(10000).slideFadeToggle(800); 
+    } else if (q105.test(q)) { 
+     $("#message").slideFadeToggle(800); 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     $output.html(msg); 
+     console.log(msg); 
+     $("#message").delay(10000).slideFadeToggle(800); 
+    } else if (q106.test(q)) { 
+     $("#message").slideFadeToggle(800); 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     $output.html(msg); 
+     console.log(msg); 
+     $("#message").delay(10000).slideFadeToggle(800); 
+    } else if (q107.test(q)) { 
+     $("#message").slideFadeToggle(800); 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     $output.html(msg); 
+     console.log(msg); 
+     $("#message").delay(10000).slideFadeToggle(800); 
+    } else if (q108.test(q)) { 
+     $("#message").slideFadeToggle(800); 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     $output.html(msg); 
+     console.log(msg); 
+     $("#message").delay(10000).slideFadeToggle(800); 
+    } else if (q109.test(q)) { 
+     $("#message").slideFadeToggle(800); 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     $output.html(msg); 
+     console.log(msg); 
+     $("#message").delay(10000).slideFadeToggle(800); 
+    } else if (q110.test(q)) { 
+     $("#message").slideFadeToggle(800); 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     $output.html(msg); 
+     console.log(msg); 
+     $("#message").delay(10000).slideFadeToggle(800); 
+    } else if (q111.test(q)) { 
+     $("#message").slideFadeToggle(800); 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     $output.html(msg); 
+     console.log(msg); 
+     $("#message").delay(10000).slideFadeToggle(800); 
+    } else if (q112.test(q)) { 
+     $("#message").slideFadeToggle(800); 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     $output.html(msg); 
+     console.log(msg); 
+     $("#message").delay(10000).slideFadeToggle(800); 
+    } else if (q113.test(q)) { 
+     $("#message").slideFadeToggle(800); 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     $output.html(msg); 
+     console.log(msg); 
+     $("#message").delay(10000).slideFadeToggle(800); 
+    } else if (q114.test(q)) { 
+     $("#message").slideFadeToggle(800); 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     $output.html(msg); 
+     console.log(msg); 
+     $("#message").delay(10000).slideFadeToggle(800); 
+    } else if (q115.test(q)) { 
+     $("#message").slideFadeToggle(800); 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     $output.html(msg); 
+     console.log(msg); 
+     $("#message").delay(10000).slideFadeToggle(800); 
+    } else if (q116.test(q)) { 
+     $("#message").slideFadeToggle(800); 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     $output.html(msg); 
+     console.log(msg); 
+     $("#message").delay(10000).slideFadeToggle(800); 
+    } else if (q117.test(q)) { 
+     $("#message").slideFadeToggle(800); 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     $output.html(msg); 
+     console.log(msg); 
+     $("#message").delay(10000).slideFadeToggle(800); 
+    } else if (q118.test(q)) { 
+     $("#message").slideFadeToggle(800); 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     $output.html(msg); 
+     console.log(msg); 
+     $("#message").delay(10000).slideFadeToggle(800); 
+    } else if (q119.test(q)) { 
+     $("#message").slideFadeToggle(800); 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     $output.html(msg); 
+     console.log(msg); 
+     $("#message").delay(10000).slideFadeToggle(800); 
+    } else if (q120.test(q)) { 
+     $("#message").slideFadeToggle(800); 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     $output.html(msg); 
+     console.log(msg); 
+     $("#message").delay(10000).slideFadeToggle(800); 
+    } else if (q121.test(q)) { 
+     $("#message").slideFadeToggle(800); 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     $output.html(msg); 
+     console.log(msg); 
+     $("#message").delay(10000).slideFadeToggle(800); 
+    } else if (q122.test(q)) { 
+     $("#message").slideFadeToggle(800); 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     $output.html(msg); 
+     console.log(msg); 
+     $("#message").delay(10000).slideFadeToggle(800); 
+    } else if (q123.test(q)) { 
+     $("#message").slideFadeToggle(800); 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     $output.html(msg); 
+     console.log(msg); 
+     $("#message").delay(10000).slideFadeToggle(800); 
+    } else if (q124.test(q)) { 
+     $("#message").slideFadeToggle(800); 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     $output.html(msg); 
+     console.log(msg); 
+     $("#message").delay(10000).slideFadeToggle(800); 
+    } else if (q125.test(q)) { 
+     $("#message").slideFadeToggle(800); 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     $output.html(msg); 
+     console.log(msg); 
+     $("#message").delay(10000).slideFadeToggle(800); 
+    } else if (q126.test(q)) { 
+     $("#message").slideFadeToggle(800); 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     $output.html(msg); 
+     console.log(msg); 
+     $("#message").delay(10000).slideFadeToggle(800); 
+    } else if (q127.test(q)) { 
+     $("#message").slideFadeToggle(800); 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     $output.html(msg); 
+     console.log(msg); 
+     $("#message").delay(10000).slideFadeToggle(800); 
+    } else if (q128.test(q)) { 
+     $("#message").slideFadeToggle(800); 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     $output.html(msg); 
+     console.log(msg); 
+     $("#message").delay(10000).slideFadeToggle(800); 
+    } else if (q129.test(q)) { 
+     $("#message").slideFadeToggle(800); 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     $output.html(msg); 
+     console.log(msg); 
+     $("#message").delay(10000).slideFadeToggle(800); 
+    } else if (q130.test(q)) { 
+     $("#message").slideFadeToggle(800); 
+     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     $output.html(msg); 
+     console.log(msg); 
+     $("#message").delay(10000).slideFadeToggle(800); 
+    } else { 
      $("#message").slideFadeToggle(800); 
      msg = "Sorry yaar, program ab bhi development may hay, mayray developers key mujhay improve karnay may zyaada say zyaada koshish rahegi."; 
      $output.html(msg); 
