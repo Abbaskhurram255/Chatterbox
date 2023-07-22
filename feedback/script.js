@@ -68,6 +68,29 @@ onload = function () {
                     botMsgSound.play();
                     showMsg(`Thank you for your valuable feedback, luv! Your feedback💌 means the world to me as it helps me improve &hearts;<br/><br/><span style="color:red" id="anim">Here's some local news of the day, by the way:</span><br/> ${await functionsArr[1 - 1]()}<br/><br/><span id="anim2" style="color:purple">And a random fact of the day:</span><br/>${await functionsArr[3 - 1]()}<br/><br/>Apki feedback ka behad shukria 💋`, "botMsg");
                     playText("aapki feedback ka bay had shukria. ab aap yay window close kar sakte hay. bonus... neechay likhi hay aap kay area say related aaj kee taaza khabar");
+                    setTimeout(() => {
+                        switch (parseInt(this.newMsg)) {
+                            case 1:
+                            playText("I'm sorry, kya mene kuch galat kardia? Ya kuch galat keh dia? Don't worry. Aapki complain kay mutaabik mujhay jald hee improve kia ja'i ga! Please come back anytime and report anything. Mere developers aap kay ek ek lafz ki value rakhtay hay. Aapki complain kisi bhi soorat may zaa'yaa nahi ja'i gi");
+                            break;
+
+                            case 2, 3:
+                            playText("mujhay yay jaan kar dukh hua kay may aap ko pasand nahi ai. Apki I hope aap ko future mujh say koi complain nahi hogi.");
+                            break;
+
+                            case 4:
+                            playText("mujhay yay jaan kar khushi hui kay may aap ko pasand hu");
+                            break;
+
+                            case 5:
+                            playText("Wow, 5 stars? Oh my goodness, thank you, thank you, thank you! Aap ka bay had shukria.", 1.5);
+                            break;
+
+                            default:
+                            return ;
+                        }
+                        setTimeout(() => { playText("ab aap yay window close kar saktay hay")}, 5000);
+                    }, 500);
                     chatEnd = true;
                     setTimeout(
                         function () {
@@ -281,7 +304,7 @@ utterance.addEventListener("boundary", (e) => {
   currentCharacter = e.charIndex;
 });
 
-function playText(text) {
+function playText(text, pitch = 1.0) {
   if (speechSynthesis.paused && speechSynthesis.speaking) {
     return speechSynthesis.resume();
   }
@@ -292,7 +315,7 @@ function playText(text) {
     voices = window.speechSynthesis.getVoices();
   };
   utterance.voice = voices[10];
-  utterance.pitch = 1;
+  utterance.pitch = pitch;
   utterance.voiceURI = "native";
   utterance.lang = "hi";
   utterance.volume = 1;
