@@ -1506,9 +1506,9 @@
      let ludoWin = window.open("./ludo/", "_blank"); 
      if (ludoWin) { 
        window.focus(); 
-       msg = "Classical Ludo... simple, yet powerful!";
-       playText(msg);
-       log("Launched Classical ayeshLudo"); 
+       msg = "Players select karo zaraa. Kitne players ho aap?";
+       playText(msg, 1.0);
+       log("Launched ayeshLudo"); 
      } else { 
        alert("Please enable popups for this site!"); 
      } 
@@ -1808,11 +1808,20 @@
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
     } else if (q122.test(q)) { 
-     $("#message").slideFadeToggle(800); 
-     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     stopText(); 
+     msg = ""; 
      $output.html(msg); 
-     console.log(msg); 
-     $("#message").delay(10000).slideFadeToggle(800); 
+     let newsWin = window.open("./feedback/", "_blank"); 
+     if (newsWin) { 
+       window.focus(); 
+       log("Launched Feedback window BUT MAINLY FOR NEWS!!!");
+       msg = "News chahi'yay. Bilkul dugi. Par ek shart par. Agar feedback do gay tou hee dugi";
+       let arr = ["", ". May bhee ziddi hu"];
+       arr = msg += arr[Math.floor(Math.random() * arr.length)];
+       playText(msg);
+     } else { 
+       alert("Please enable popups for this site!"); 
+     } 
     } else if (q123.test(q)) { 
      $("#message").slideFadeToggle(800); 
      msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hay aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
