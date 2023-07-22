@@ -92,11 +92,6 @@ onload = function () {
                         setTimeout(() => { playText("ab aap yay window close kar saktay hay")}, 5000);
                     }, 500);
                     chatEnd = true;
-                    setTimeout(
-                        function () {
-                            window.close();
-                        }, 70000
-                    );
                 }
                 else {
                     botMsgSound.play();
