@@ -12,9 +12,13 @@
 			<a href="?clear=1" alt="refresh" rel="noopener">
 				<h1>ayeshaBrusha</h1>
 			</a>
-		</div>
+		</div><img style="position: relative; top:2rem" id="loading" alt="loading" height="256" width=256" src="loading.gif" />
 		<div class="main"></div>
+		
 
+        <script>
+        	setTimeout(() => document.querySelector("#loading").style = "display: none", 5000);
+        </script>
 		<script src="./src/render.js"></script>
 		<script src="./src/ayeshaBrusha.js"></script>
 	</body>
