@@ -64,47 +64,77 @@ onload = function () {
         botRender: async function () {
             let totalOptions = 4;
             if (this.newMsg != "" && this.newMsg.length < 9 && /^(1|2|3|4|5)( ?stars?)?$/gm.test(this.newMsg)) {
-                if (chatEnd === false) {
+                if (chatEnd == false) {
+                	chatEnd = true;
+                    (function () {
+                    	document.querySelector("#loading").style = "display: block";
+                       setTimeout(() => document.querySelector("#loading").style = "display: none", 1500);
+                    })();
                     botMsgSound.play();
-                    showMsg(`Thank you for your valuable feedback, luv! Your feedback💌 means the world to me as it helps me improve &hearts;<br/><br/><span style="color:red" id="anim">Here's some local news of the day, by the way:</span><br/> ${await functionsArr[1 - 1]()}<br/><br/><span id="anim2" style="color:purple">And a random fact of the day:</span><br/>${await functionsArr[3 - 1]()}<br/><br/>Apki feedback ka behad shukria 💋`, "botMsg");
+                    showMsg(`Thank you for your valuable feedback, luv! Your feedback means the world to me as it helps me improve &hearts;<br/><br/><span style="color:red" id="anim">Here's some local news of the day, by the way:</span><br/> ${await functionsArr[1 - 1]()}<br/><br/><span id="anim2" style="color:purple">And a random fact of the day:</span><br/>${await functionsArr[3 - 1]()}<br/><br/>Apki feedback ka behad shukria `, "botMsg");
+                    
                     playText("aapki feedback ka bay had shukria. ab aap yay window close kar sakte hay. bonus... neechay likhi hay aap kay area say related aaj kee taaza khabar");
-                    setTimeout(() => {
+                    utterance.onend = () => { setTimeout(() => {
                         switch (parseInt(this.newMsg)) {
                             case 1:
-                            playText("I'm sorry, kya mene kuch galat kardia? Ya kuch galat keh dia? Don't worry. Aapki complain kay mutaabik mujhay jald hee improve kia ja'i ga! Please come back anytime and report anything. Mere developers aap kay ek ek lafz ki value rakhtay hay. Aapki complain kisi bhi soorat may zaa'yaa nahi ja'i gi");
+                            case "1 star":
+                            case "1 stars":
+                            playText("I'm sorry, kya mene kuch galat kardia? Ya kuch galat keh dia? Pareshaan na ho. Aap ki complain kay mutaabik mujhay jald hee improve kia ja'i gaa! Please come back anytime and report anything. May'ray developers aap kay ek ek lafz ki value rakhtay hay. Aapki complain kisi bhi soorat may zaa'yaa nahi ja'i gi, yay waada rahaa.");
                             break;
 
-                            case 2, 3:
-                            playText("mujhay yay jaan kar dukh hua kay may aap ko pasand nahi ai. Apki I hope aap ko future mujh say koi complain nahi hogi.");
+                            case 2:
+                            case "2 star":
+                            case "2 stars":
+                            playText("mujhay yay jaan kar dukh hua kay may aap ko pasand nahi ai. I hope aap ko future may mujh say koi complain nahi hogi, kyu kay mujhay improve kar dia jai gaa.");
+                            break;
+                            
+                            case 3:
+                            case "3 star":
+                            case "3 stars":
+                            playText("mujhay yay jaan kar dukh hua kay may aap ko pasand nahi ai. I hope aap ko future may mujh say koi complain nahi hogi, kyu kay mujhay improve kar dia jai gaa.");
                             break;
 
                             case 4:
-                            playText("mujhay yay jaan kar khushi hui kay may aap ko pasand hu");
+                            case "4 star":
+                            case "4 stars":
+                            playText("mujhay yay jaan kar khushi hoo'ee kay may aap ko pasand hu");
                             break;
 
                             case 5:
-                            playText("Wow, 5 stars? Oh my goodness, thank you, thank you, thank you! Aap ka bay had shukria.", 1.5);
+                            case "5 star":
+                            case "5 stars":
+                            playText("Wow, 5 stars? Oh my goodness, thank you, thank you, thank you! Aap ka bay had shukria.", 1.2);
                             break;
 
                             default:
                             return ;
                         }
-                        setTimeout(() => { playText("ab aap yay window close kar saktay hay")}, 5000);
-                    }, 500);
-                    chatEnd = true;
+                        utterance.onend = () => {setTimeout(() => { playText("or jaysa ki may'nay kaha. ab aap yay window close kar saktay hay"); utterance.onend = "";}, 500); }
+                    }, 10);
+                    
+                    }
+                    
                 }
                 else {
+                	(function () {
+                    	document.querySelector("#loading2").style = "display: block";
+                       setTimeout(() => document.querySelector("#loading2").style = "display: none", 500);
+                    })();
                     botMsgSound.play();
-                    showMsg("<span style='color:red'>Feedback already submitted, you may close the window now!!</span>", "botMsg");
+                    showMsg("<span style='color:red'>Feedback already submitted, you may close the feedback window now!!</span>", "botMsg");
                     playText("aap feedback day chukay jee. side may likhay cross yani X button ko dabaa kar may'ri taraf waapis aao jald hee");
                 }
                 return;
             }
             if (chatEnd === true) {
-                if (this.newMsg.toLowerCase() === "reset" || this.newMsg.toLowerCase() === "'reset'") {
-                    location.reload();
+                if (this.newMsg.toLowerCase() == "reset" || this.newMsg.toLowerCase() == "'reset'") {
+                    window.location.reload();
                 }
                 else {
+                	(function () {
+                    	document.querySelector("#loading2").style = "display: block";
+                       setTimeout(() => document.querySelector("#loading2").style = "display: none", 500);
+                    })();
                     botMsgSound.play();
                     showMsg("Mene kaha feedback submit ho chuki he, ab ap ye window close karke AyeshaPT continue kar sakte he, shukria!", "botMsg");
                     playText("aap feedback day chukay jee. side may likhay cross yani X button ko dabaa kar may'ri taraf waapis aao jald hee");
@@ -185,7 +215,7 @@ async function getNews() {
         const response = await fetch('https://gnews.io/api/v3/' + rnd3 + rnd1 + rnd2);
         const jsonResp = await response.json();
         jsonObj.newsJson = jsonResp;
-        console.log("total articles= " + jsonObj.newsJson.articleCount);
+        console.log("news articles found for today = " + jsonObj.newsJson.articleCount);
         askedNews = true;
         newsCnt++;
         let artLinkStr = jsonResp.articles[0].source.url;
