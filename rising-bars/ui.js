@@ -25,10 +25,6 @@ go_to_menu = () => {
     document.getElementById("help").style.display = "none";
     
     h2.add("lights");
-    if (h2.contains("lights")) {
-    	
-        
-        }
         
     if (!returning_from_settings) {
     	document.querySelector("footer").style.display = "block";
