@@ -15,8 +15,8 @@ onload = function () {
     chatEnd = false;
 
     /// sounds initialisation
-    userMsgSound = new Sound("media/userMsgSound.mp3");
-    botMsgSound = new Sound("media/botMsgSound.mp3");
+    userMsgSound = new Sound("media/audio/userMsgSound.mp3");
+    botMsgSound = new Sound("media/audio/botMsgSound.mp3");
 
     /// chat object
     var chatObj = {
@@ -71,8 +71,9 @@ onload = function () {
                        setTimeout(() => document.querySelector("#loading").style = "display: none", 1500);
                     })();
                     botMsgSound.play();
-                    showMsg(`Thank you for your valuable feedback, luv! Your feedback means the world to me as it helps me improve &hearts;<br/><br/><span style="color:red" id="anim">Here's some local news of the day, by the way:</span><br/> ${await functionsArr[1 - 1]()}<br/><br/><span id="anim2" style="color:purple">And a random fact of the day:</span><br/>${await functionsArr[3 - 1]()}<br/><br/>Apki feedback ka behad shukria `, "botMsg");
+                    showMsg(`Thank you for your valuable feedback, luv! Your feedback means the world to me as it helps me improve &hearts;<br/><br/><span style="color:red" id="anim">Here's some local news of the day, by the way:</span><br/> ${await functionsArr[1 - 1]()}<br/><br/><span id="anim2" style="color:purple">And a random fact of the day:</span><br/>${await functionsArr[3 - 1]()}<br/><br/>Apki feedback ka behad shukria<br/><img alt="cat" id="cat" src="media/img/cat.gif" style="position: relative; left: 8.2rem;" height="128" width="128" />`, "botMsg");
                     
+                    document.querySelector("#thank-you").style.display = "block";
                     playText("aapki feedback ka bay had shukria. ab aap yay window close kar sakte hay. bonus... neechay likhi hay aap kay area say related aaj kee taaza khabar");
                     utterance.onend = () => { setTimeout(() => {
                         switch (parseInt(this.newMsg)) {
@@ -153,7 +154,7 @@ onload = function () {
                 // var data = await eval("functionsArr[optionNo - 1]()");
             }
             else {
-                data = "<span style='color:red'>Sorry, numbers under 5 only!</span>";
+                data = "<span style='color:red; font-size: 1.2rem;'>&times; </span><span style='color: whitesmoke'>Sorry, numbers under 5 only!</span>";
                 playText("please sirf numbers may hee rating deej'yay... jaysay kay. Ek. Do. 3. 4. 5!");
             }
             botMsgSound.play();

@@ -31,10 +31,11 @@ ol li::marker { color:red; font-weight: bold; font-style: italic;}
     font-family: 'Arial Narrow Bold', sans-serif;
     font-weight: bolder;
     font-size: large;
-    background-color: #3b4866;
+    /*background-color: #3b4866;*/
     border: rgba(70, 69, 69, 0.582) ridge 1px;
     padding: 1%;
     border-radius: 10px;
+    background: linear-gradient(indigo, #111);
 }
 
 #msgBox {
@@ -47,6 +48,9 @@ ol li::marker { color:red; font-weight: bold; font-style: italic;}
     padding: 1%;
     width: 98%;
     /* display: inline; */
+}
+#typeBox::placeholder {
+	color: gold;
 }
 #sendBtn{
     padding: 1%;
@@ -66,18 +70,20 @@ ol li::marker { color:red; font-weight: bold; font-style: italic;}
     margin-right: 35%;
     margin-bottom: 3%;
     /* background-color: rgb(118, 157, 231); */
-    background-color: rgb(144, 238, 144);
+    
 }
 
 /* style for user messages */
 .userMsg{
     border: rgba(70, 69, 69, 0.582) ridge 1px;
     padding: 2%;
-    border-radius: 10px;
+    border-radius: 1.6rem .3rem;
     margin-left: 35%;
     margin-bottom: 3%;
     /* background-color: rgb(144, 238, 144); */
     background-color: rgb(138, 174, 241);
+    color: lavender;
+    background: linear-gradient(90deg, green, transparent);
 }
 
 #anim {
@@ -89,7 +95,7 @@ ol li::marker { color:red; font-weight: bold; font-style: italic;}
 }
 #anim2 {
 	-webkit-animation: blink2 1s infinite;
-	   -moz-animation: blink2 1s infinite;
+       -moz-animation: blink2 1s infinite;
 	     -ms-animation: blink2 1s infinite;
 	        -o-animation: blink2 1s infinite;
 	             animation: blink2 1s infinite;
@@ -97,7 +103,7 @@ ol li::marker { color:red; font-weight: bold; font-style: italic;}
 
 @-webkit-keyframes blink {
 	0%, 100% {
-		color: red;
+		color: yellow;
 	}
 	50% {
 		color: green;
@@ -110,20 +116,7 @@ ol li::marker { color:red; font-weight: bold; font-style: italic;}
 }
 @-moz-keyframes blink {
 	0%, 100% {
-		color: red;
-	}
-	50% {
-		color: green;
-		-webkit-box-shadow: 4px 6px 20px 3.5px red;
-		-moz-box-shadow: 4px 6px 20px 3.5px red;
-		-ms-box-shadow: 4px 6px 20px 3.5px red;
-		-o-box-shadow: 4px 6px 20px 3.5px red;
-		box-shadow: 4px 6px 20px 3.5px red;
-	}
-}
-@-o-keyframes blink {
-	0%, 100% {
-		color: red;
+		color: yellow;
 	}
 	50% {
 		color: green;
@@ -136,7 +129,20 @@ ol li::marker { color:red; font-weight: bold; font-style: italic;}
 }
 @-ms-keyframes blink {
 	0%, 100% {
-		color: red;
+		color: yellow;
+	}
+	50% {
+		color: green;
+		-webkit-box-shadow: 4px 6px 20px 3.5px red;
+		-moz-box-shadow: 4px 6px 20px 3.5px red;
+		-ms-box-shadow: 4px 6px 20px 3.5px red;
+		-o-box-shadow: 4px 6px 20px 3.5px red;
+		box-shadow: 4px 6px 20px 3.5px red;
+	}
+}
+@-o-keyframes blink {
+	0%, 100% {
+		color: yellow;
 	}
 	50% {
 		color: green;
@@ -149,7 +155,7 @@ ol li::marker { color:red; font-weight: bold; font-style: italic;}
 }
 @keyframes blink {
 	0%, 100% {
-		color: red;
+		color: yellow;
 	}
 	50% {
 		color: green;
@@ -157,13 +163,13 @@ ol li::marker { color:red; font-weight: bold; font-style: italic;}
 		-moz-box-shadow: 4px 6px 20px 3.5px red;
 		-ms-box-shadow: 4px 6px 20px 3.5px red;
 		-o-box-shadow: 4px 6px 20px 3.5px red;
-		box-shadow: 4px 6px 20px 3.5px red;
+		box-shadow: 4px 6px 20px 3.5px yellow;
 	}
 }
 
 @-webkit-keyframes blink2 {
 	0%, 100%{
-		color: orchid;
+		color: orange;
 	}
 	50%{
 		color: #111;
@@ -171,15 +177,7 @@ ol li::marker { color:red; font-weight: bold; font-style: italic;}
 }
 @-moz-keyframes blink2 {
 	0%, 100%{
-		color: orchid;
-	}
-	50%{
-		color: #111;
-	}
-}
-@-o-keyframes blink2 {
-	0%, 100%{
-		color: orchid;
+		color: orange;
 	}
 	50%{
 		color: #111;
@@ -187,7 +185,15 @@ ol li::marker { color:red; font-weight: bold; font-style: italic;}
 }
 @-ms-keyframes blink2 {
 	0%, 100%{
-		color: orchid;
+		color: orange;
+	}
+	50%{
+		color: #111;
+	}
+}
+@-o-keyframes blink2 {
+	0%, 100%{
+		color: orange;
 	}
 	50%{
 		color: #111;
@@ -195,7 +201,7 @@ ol li::marker { color:red; font-weight: bold; font-style: italic;}
 }
 @keyframes blink2 {
 	0%, 100%{
-		color: orchid;
+		color: orange;
 	}
 	50%{
 		color: #111;
