@@ -107,11 +107,11 @@ ol li::marker { color:red; font-weight: bold; font-style: italic;}
 	}
 	50% {
 		color: green;
-		-webkit-box-shadow: 4px 6px 20px 3.5px red;
-		-moz-box-shadow: 4px 6px 20px 3.5px red;
-		-ms-box-shadow: 4px 6px 20px 3.5px red;
-		-o-box-shadow: 4px 6px 20px 3.5px red;
-		box-shadow: 4px 6px 20px 3.5px red;
+		-webkit-box-shadow: 4px 6px 20px 3.5px yellow;
+		-moz-box-shadow: 4px 6px 20px 3.5px yellow;
+		-ms-box-shadow: 4px 6px 20px 3.5px yellow;
+		-o-box-shadow: 4px 6px 20px 3.5px yellow;
+		box-shadow: 4px 6px 20px 3.5px yellow;
 	}
 }
 @-moz-keyframes blink {
@@ -120,11 +120,11 @@ ol li::marker { color:red; font-weight: bold; font-style: italic;}
 	}
 	50% {
 		color: green;
-		-webkit-box-shadow: 4px 6px 20px 3.5px red;
-		-moz-box-shadow: 4px 6px 20px 3.5px red;
-		-ms-box-shadow: 4px 6px 20px 3.5px red;
-		-o-box-shadow: 4px 6px 20px 3.5px red;
-		box-shadow: 4px 6px 20px 3.5px red;
+		-webkit-box-shadow: 4px 6px 20px 3.5px yellow;
+		-moz-box-shadow: 4px 6px 20px 3.5px yellow;
+		-ms-box-shadow: 4px 6px 20px 3.5px yellow;
+		-o-box-shadow: 4px 6px 20px 3.5px yellow;
+		box-shadow: 4px 6px 20px 3.5px yellow;
 	}
 }
 @-ms-keyframes blink {
@@ -133,11 +133,11 @@ ol li::marker { color:red; font-weight: bold; font-style: italic;}
 	}
 	50% {
 		color: green;
-		-webkit-box-shadow: 4px 6px 20px 3.5px red;
-		-moz-box-shadow: 4px 6px 20px 3.5px red;
-		-ms-box-shadow: 4px 6px 20px 3.5px red;
-		-o-box-shadow: 4px 6px 20px 3.5px red;
-		box-shadow: 4px 6px 20px 3.5px red;
+		-webkit-box-shadow: 4px 6px 20px 3.5px yellow;
+		-moz-box-shadow: 4px 6px 20px 3.5px yellow;
+		-ms-box-shadow: 4px 6px 20px 3.5px yellow;
+		-o-box-shadow: 4px 6px 20px 3.5px yellow;
+		box-shadow: 4px 6px 20px 3.5px yellow;
 	}
 }
 @-o-keyframes blink {
@@ -146,11 +146,11 @@ ol li::marker { color:red; font-weight: bold; font-style: italic;}
 	}
 	50% {
 		color: green;
-		-webkit-box-shadow: 4px 6px 20px 3.5px red;
-		-moz-box-shadow: 4px 6px 20px 3.5px red;
-		-ms-box-shadow: 4px 6px 20px 3.5px red;
-		-o-box-shadow: 4px 6px 20px 3.5px red;
-		box-shadow: 4px 6px 20px 3.5px red;
+		-webkit-box-shadow: 4px 6px 20px 3.5px yellow;
+		-moz-box-shadow: 4px 6px 20px 3.5px yellow;
+		-ms-box-shadow: 4px 6px 20px 3.5px yellow;
+		-o-box-shadow: 4px 6px 20px 3.5px yellow;
+		box-shadow: 4px 6px 20px 3.5px yellow;
 	}
 }
 @keyframes blink {
@@ -159,10 +159,10 @@ ol li::marker { color:red; font-weight: bold; font-style: italic;}
 	}
 	50% {
 		color: green;
-		-webkit-box-shadow: 4px 6px 20px 3.5px red;
-		-moz-box-shadow: 4px 6px 20px 3.5px red;
-		-ms-box-shadow: 4px 6px 20px 3.5px red;
-		-o-box-shadow: 4px 6px 20px 3.5px red;
+		-webkit-box-shadow: 4px 6px 20px 3.5px yellow;
+		-moz-box-shadow: 4px 6px 20px 3.5px yellow;
+		-ms-box-shadow: 4px 6px 20px 3.5px yellow;
+		-o-box-shadow: 4px 6px 20px 3.5px yellow;
 		box-shadow: 4px 6px 20px 3.5px yellow;
 	}
 }
