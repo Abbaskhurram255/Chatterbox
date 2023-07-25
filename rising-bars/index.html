@@ -21,6 +21,8 @@
     <link rel="icon" type="image/x-icon" sizes="48x48 32x32 24x24 16x16" href="icons/favicon.ico" />
 
     <style>
+    	@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+    
         .noselect {
             -webkit-touch-callout: none;
             /* iOS Safari */
@@ -159,6 +161,7 @@
         	animation: multicolor 3s infinite;
             -webkit-animation: multicolor 3s infinite;
             font-size: 18px;
+            font-family: 'Montserrat', cursive;
         }
         @keyframes multicolor {
         	0%, 100% {
@@ -222,6 +225,13 @@
 			    color: yellow;
 		    }
 	    }
+	    @-ms-keyframes yellowMe {
+		    from {
+			    color: red;
+		    } to {
+			    color: yellow;
+		    }
+	    }
 	    @-o-keyframes yellowMe {
 		    from {
 			    color: red;
@@ -236,16 +246,75 @@
 			    color: yellow;
 		    }
 	    }
+	
+	#flower:active, #flower:hover, #flower:focus {
+		-webkit-animation: scale 5s infinite;
+	       -moz-animation: scale 5s infinite;
+	         -ms-animation: scale 5s infinite;
+	            -o-animation: scale 5s infinite;
+	                 animation: scale 5s infinite;
+	}
+	
+	@-webkit-keyframes scale {
+		from { transform: scale(1);}
+		     to {
+			           -webkit-transform: scale(1.4) skewX(2deg);
+			              -moz-transform: scale(1.4) skewX(2deg);
+			                 -ms-transform: scale(1.4) skewX(2deg);
+			                    -o-transform: scale(1.4) skewX(2deg);
+                                     transform: scale(1.4) skewX(2deg);
+           }
+		}
+		@-moz-keyframes scale {
+			from { transform: scale(1);}
+		         to {
+			           -webkit-transform: scale(1.4) skewX(2deg);
+			              -moz-transform: scale(1.4) skewX(2deg);
+			                 -ms-transform: scale(1.4) skewX(2deg);
+			                    -o-transform: scale(1.4) skewX(2deg);
+                                     transform: scale(1.4) skewX(2deg);
+           }
+		} 
+		@-ms-keyframes scale {
+			from { transform: scale(1);}
+		         to {
+			           -webkit-transform: scale(1.4) skewX(2deg);
+			              -moz-transform: scale(1.4) skewX(2deg);
+			                 -ms-transform: scale(1.4) skewX(2deg);
+			                    -o-transform: scale(1.4) skewX(2deg);
+                                     transform: scale(1.4) skewX(2deg);
+           }
+		} 
+		@-o-keyframes scale {
+			from { transform: scale(1);}
+		         to {
+			           -webkit-transform: scale(1.4) skewX(2deg);
+			              -moz-transform: scale(1.4) skewX(2deg);
+			                 -ms-transform: scale(1.4) skewX(2deg);
+			                    -o-transform: scale(1.4) skewX(2deg);
+                                     transform: scale(1.4) skewX(2deg);
+           }
+		} 
+		@keyframes scale {
+			from { transform: scale(1);}
+		         to {
+			           -webkit-transform: scale(1.4) skewX(2deg);
+			              -moz-transform: scale(1.4) skewX(2deg);
+			                 -ms-transform: scale(1.4) skewX(2deg);
+			                    -o-transform: scale(1.4) skewX(2deg);
+                                     transform: scale(1.4) skewX(2deg);
+           }
+		} 
     </style>
 </head>
 
 <body class="noselect">
     <div id="displayarea">
         <div id="menu" style="padding-left: 0.5%;">
-            <h2 class="lights" style="margin-left:10%;font-size:10vh;font-weight:bold;box-shadow: red 4px 16px 40px 6px;-webkit-box-shadow: red 4px 16px 40px 6px;border:1px dotted yellow;border-radius:500px 10px 500px 25px;background:linear-gradient(225deg, deeppink, transparent);text-align:center;font-style:italic;color:#ccc">Rising Bars</h2><h2 style="font-size:28px;font-style:italic;margin-left:80%;color:rgba(255,255,0,0.6)"><sup>Beta</sup></h2>
+            <h2 class="lights" style="margin-left:10%;font-size:10vh;font-weight:bold;box-shadow: red 4px 16px 40px 6px; -webkit-box-shadow: red 4px 16px 40px 6px; -moz-box-shadow: red 4px 16px 40px 6px; -ms-box-shadow: red 4px 16px 40px 6px; -o-box-shadow: red 4px 16px 40px 6px; border:1px dotted yellow;border-radius:500px 10px 500px 25px;background:linear-gradient(225deg, deeppink, transparent);text-align:center;font-style:italic;color:#ccc">Rising Bars</h2><h2 style="font-size:28px;font-style:italic;margin-left:80%;color:rgba(255,255,0,0.6)"><sup>Beta</sup></h2>
             <br><br><br><br><br><br>
 
-            <div align="center">
+            <div align="center" style="font-family: 'Montserrat';">
                 <a class="btn" id="menu_start_btn" onclick="start_from_menu()"
                     style="font-size:200%; color:#A9A9A9;"><b>Start</b></a><br><br>
                 <a class="btn" style="display:none" style="font-size:200%; color: #A9A9A9"><b>Scores</b></a>
@@ -358,7 +427,7 @@
                 <h4>On personal computers:</h4>
                 <p>Use the left or right arrow keys to move the ball to the left or right. Use escape button to pause.
                 </p>
-                <p>The speed of the bars increases gradually during gameplay</p><br /><br /><span style="color: #777; align: center; margin-left: 30%;">Licensed under GPL-3</span><br /><br />
+                <p>The speed of the bars increases gradually during gameplay</p><br /><br /><span style="color: #777; align: center; margin-left: 30%;">Licensed under <span style="font-family: 'Montserrat';">GPL-3</span></span><br /><br />
                 <span class="multicolor">&copy; AyeshaPT</span>
             </div>
 
@@ -410,6 +479,12 @@
             </div>
         </div>
     </div>
+    <footer>
+        <img style="position: relative; top: .8rem; float: left; clear: both;" height="96" width="96" src="flower.gif" alt="" id="flower" />
+        <article style="font-size:1.7rem;position: relative; top: 2.5rem; font-family: 'Montserrat';">
+<em><strong><span style="box-shadow: .4rem .2rem .5rem .3rem gold; color: goldenrod;border-radius:3rem;">ayeshaPT, <br /></span><span style="color: yellow;"><span>Inc</span>orporated</span></strong></em>
+        </article>
+    </footer>
 
 </body>
 <script>

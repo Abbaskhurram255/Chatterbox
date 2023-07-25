@@ -1,8 +1,11 @@
 const h2 = document.querySelector("h2").classList;
+var returning_from_settings = false;
 
 start_from_menu = () => {
     document.getElementById("menu").style.display = "none";
     document.getElementById("game_display").style.display = "block";
+    document.querySelector("footer").style.display = "none";
+    returning_from_settings = !true;
     if (toggle_game_button.innerHTML == "Start") {
         bars_initialization();
         startgame();
@@ -15,7 +18,6 @@ go_to_menu = () => {
         if (toggle_game_button.innerHTML == "Pause") {
             game_session = false;
             toggle_game_button.innerHTML = "Resume";
-            
         }
     }
     document.getElementById("game_display").style.display = "none";
@@ -23,6 +25,17 @@ go_to_menu = () => {
     document.getElementById("help").style.display = "none";
     
     h2.add("lights");
+    if (h2.contains("lights")) {
+    	
+        
+        }
+        
+    if (!returning_from_settings) {
+    	document.querySelector("footer").style.display = "block";
+    } else {
+    	document.querySelector("#flower").style.display = "block";
+    document.querySelector("article").style.display = "block";
+    }
 
     document.getElementById("menu").style.display = "block";
 }
@@ -31,6 +44,8 @@ open_settings = () => {
     document.getElementById("game_display").style.display = "none";
     document.getElementById("menu").style.display = "none";
     document.getElementById("help").style.display = "none";
+    returning_from_settings = true;
+    document.querySelector("article").style.display = "none";
     
     
 
@@ -43,7 +58,7 @@ open_settings = () => {
             document.getElementById("swipecontrol").click();
         }
     } catch (error) {
-        
+        console.log(`${error}\n\nFailed to parse controls from your local storage, so recreating controls based on the device resolution... again!`);
     }
 }
 
@@ -53,6 +68,7 @@ open_help = () => {
     document.getElementById("settings").style.display = "none";
     
     h2.remove("lights");
+    returning_from_settings = !true;
 
     document.getElementById("help").style.display = "block";
 }
