@@ -212,6 +212,7 @@ var jsonObj = {
 async function getNews() {
     if (askedNews === false) {
         console.log("news api called");
+        try {
         const response = await fetch('https://gnews.io/api/v3/' + rnd3 + rnd1 + rnd2);
         const jsonResp = await response.json();
         jsonObj.newsJson = jsonResp;
@@ -220,8 +221,10 @@ async function getNews() {
         newsCnt++;
         let artLinkStr = jsonResp.articles[0].source.url;
         return jsonResp.articles[0].title + "<br><br>Source: <a href='" + artLinkStr + "' target='_blank'>" + jsonResp.articles[0].source.name + "</a><br/>";
-    }
-    else {
+        } catch(e) {
+        	console.log(e);
+        }
+    } else {
 
         let foo = jsonObj.newsJson;
         let ind = newsCnt % (foo.articleCount);
