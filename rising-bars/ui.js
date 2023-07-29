@@ -12,7 +12,13 @@ start_from_menu = () => {
         bars_initialization();
         startgame();
         toggle_game_button.innerHTML = "Pause";
-    }
+    } else if (toggle_game_button.innerText == "Resume") {
+            toggle_game_button.classList.remove("tgbtn_anim");
+            document.querySelector("#pauseAnim").style.display ="block";
+        } else {
+        	toggle_game_button.classList.add("tgbtn_anim");
+        document.querySelector("#pauseAnim").style.display ="none";
+        }
 }
 
 go_to_menu = () => {
@@ -44,6 +50,7 @@ open_settings = () => {
     document.getElementById("help").style.display = "none";
     returning_from_settings = true;
     document.querySelector("article").style.display = "none";
+    document.querySelector("#pauseAnim").style.display ="none";
     
     
 
@@ -64,6 +71,7 @@ open_help = () => {
     document.getElementById("game_display").style.display = "none";
     document.getElementById("menu").style.display = "none";
     document.getElementById("settings").style.display = "none";
+    document.querySelector("#pauseAnim").style.display ="none";
     
     h2.remove("lights");
     returning_from_settings = !true;
