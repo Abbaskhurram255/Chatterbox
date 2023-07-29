@@ -1,3 +1,5 @@
+
+
 const h2 = document.querySelector("h2").classList;
 var returning_from_settings = false;
 
@@ -68,3 +70,15 @@ open_help = () => {
 
     document.getElementById("help").style.display = "block";
 }
+
+toggle_game_button.onclick = () => {
+	controller();
+	if (toggle_game_button.innerText == "Resume") {
+            toggle_game_button.classList.remove("tgbtn_anim");
+            document.querySelector("#pauseAnim").style.display ="block";
+        } else {
+        	toggle_game_button.classList.add("tgbtn_anim");
+        document.querySelector("#pauseAnim").style.display ="none";
+        }
+}
+

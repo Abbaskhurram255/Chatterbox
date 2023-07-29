@@ -13,7 +13,7 @@
     <meta name="apple-mobile-web-app-title" content="Rising Bars" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" />
     <!-- <script src="https://ajax.googleappis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bopotpstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
     <title>Rising Bars</title>
@@ -34,6 +34,8 @@
             /* Firefox */
             -ms-user-select: none;
             /* Internet Explorer/Edge */
+            -o-user-select: none;
+            /* Opera 12 */
             user-select: none;
             /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
@@ -69,8 +71,23 @@
         }
         
         .lights {
-        	animation: lights .25s infinite;
-            -webkit-animation: lights 0.25s infinite;
+                   	 margin-left: 10%;
+                           font-size: 10vh;
+                       font-weight: bold;
+                       box-shadow: red 4px 16px 40px 6px;
+           -webkit-box-shadow: red 4px 16px 40px 6px;
+              -moz-box-shadow: red 4px 16px 40px 6px;
+                 -ms-box-shadow: red 4px 16px 40px 6px;
+                    -o-box-shadow: red 4px 16px 40px 6px;
+                                  border: 1px dotted yellow;
+                       border-radius: 500px 10px 500px 25px;
+                          background: linear-gradient(225deg, deeppink, transparent);
+                            text-align: center;
+                            font-style: italic;
+                                    color: #ccc;
+              -webkit-animation: lights .25s infinite;
+                 -moz-animation: lights .25s infinite;
+                           animation: lights .25s infinite;
         }
         
         /*h2:hover, h2:focus, h2:active {
@@ -81,11 +98,11 @@
         */
         @keyframes lights {
         	from { outline: 12px dotted pink;}
-            to { outline: none;}
+                 to { outline: none;}
         }
         @-webkit-keyframes lights {
         	from { outline: 12px dotted pink;}
-            to { outline: none;}
+                 to { outline: none;}
         }
 
         button {
@@ -93,95 +110,116 @@
         }
         
         .btn {
-        	outline: 1px solid gold;
-            background: linear-gradient(to right, red, transparent);
-            border-radius: 20% 40% 32% 90%;
-            animation: borderDance 2s infinite, multicolor-2 2s infinite;
+                         	outline: 1px solid gold;
+                       background: linear-gradient(to right, red, transparent);
+                    border-radius: 20% 40% 32% 90%;
             -webkit-animation: borderDance 2s infinite, multicolor-2 2s infinite;
-            
+               -moz-animation: borderDance 2s infinite, multicolor-2 2s infinite;
+                         animation: borderDance 2s infinite, multicolor-2 2s infinite;
         }
         
-@keyframes borderDance {
-	0, 60%, 100% {
-		border-radius: 50%;
-		-webkit-transform: translateX(0);
-        transform: translateX(0);
-	}
-	50% {
-		border-radius: 12.5%;
-		-webkit-transform: translateX(16px);
-        transform: translateX(16px);
-        /*top: 9px;*/
-	}
-}
+        #toggle_game_button {
+                         	outline: 1px solid gold;
+                       background: linear-gradient(to right, red, transparent);
+                    border-radius: 20% 40% 32% 90%;
+        }
+        .tgbtn_anim {
+            -webkit-animation: borderDance 2s infinite, multicolor-2 2s infinite;
+               -moz-animation: borderDance 2s infinite, multicolor-2 2s infinite;
+                         animation: borderDance 2s infinite, multicolor-2 2s infinite;
+        }
+        
+
 @-webkit-keyframes borderDance {
 	0%, 60%, 100% {
+		        border-radius: 50%;
 		-webkit-transform: translateX(0);
-        transform: translateX(0);
+		   -moz-transform: translateX(0);
+                     transform: translateX(0);
 	}
 	50% {
-		border-radius: 12.5%;
+		        border-radius: 12.5%;
 		-webkit-transform: translateX(16px);
-        transform: translateX(16px);
+                     transform: translateX(16px);
+	}
+}
+@-moz-keyframes borderDance {
+	0, 60%, 100% {
+		        border-radius: 50%;
+		-webkit-transform: translateX(0);
+		   -moz-transform: translateX(0);
+                     transform: translateX(0);
+	}
+	50% {
+		        border-radius: 12.5%;
+		-webkit-transform: translateX(16px);
+                     transform: translateX(16px);
+	}
+}
+@keyframes borderDance {
+	0, 60%, 100% {
+		        border-radius: 50%;
+		-webkit-transform: translateX(0);
+		   -moz-transform: translateX(0);
+                     transform: translateX(0);
+	}
+	50% {
+		        border-radius: 12.5%;
+		-webkit-transform: translateX(16px);
+                     transform: translateX(16px);
 	}
 }
 
-@keyframes multicolor-2 {
+@-webkit-keyframes multicolor-2 {
         	0%, 100% {
-        	    color: #fff;
+        	                             color: #fff;
                 -webkit-box-shadow: 4px 3px 5px 7px rgba(255, 191, 0, 0.2);
-                box-shadow: 4px 3px 5px 7px rgba(255, 191, 0, 0.2);
+                             box-shadow: 4px 3px 5px 7px rgba(255, 191, 0, 0.2);
             }
             
             50% {
-            	color: yellow;
+                                    	color: yellow;
                 -webkit-box-shadow: 4px 3px 5px 7px rgba(255, 191, 0, 0.5);
-                box-shadow: 4px 3px 5px 7px rgba(255, 191, 0, 0.5);
+                             box-shadow: 4px 3px 5px 7px rgba(255, 191, 0, 0.5);
             }
             
         }
-@-webkit-keyframes multicolor-2 {
+        @-moz-keyframes multicolor-2 {
         	0%, 100% {
-        	    color: #fff;
+        	                             color: #fff;
                 -webkit-box-shadow: 4px 3px 5px 7px rgba(255, 191, 0, 0.2);
-                box-shadow: 4px 3px 5px 7px rgba(255, 191, 0, 0.2);
+                             box-shadow: 4px 3px 5px 7px rgba(255, 191, 0, 0.2);
             }
             
             50% {
-            	color: yellow;
+                                    	color: yellow;
                 -webkit-box-shadow: 4px 3px 5px 7px rgba(255, 191, 0, 0.5);
-                box-shadow: 4px 3px 5px 7px rgba(255, 191, 0, 0.5);
+                             box-shadow: 4px 3px 5px 7px rgba(255, 191, 0, 0.5);
+            }
+            
+        }
+        @keyframes multicolor-2 {
+        	0%, 100% {
+        	                            color: #fff;
+                -webkit-box-shadow: 4px 3px 5px 7px rgba(255, 191, 0, 0.2);
+                             box-shadow: 4px 3px 5px 7px rgba(255, 191, 0, 0.2);
+            }
+            
+            50% {
+                                    	color: yellow;
+                -webkit-box-shadow: 4px 3px 5px 7px rgba(255, 191, 0, 0.5);
+                             box-shadow: 4px 3px 5px 7px rgba(255, 191, 0, 0.5);
             }
             
         }
         
         .multicolor {
-        	margin-left: 65%;
-            display: inline;
-        	animation: multicolor 3s infinite;
+                  	margin-left: 65%;
+                              display: inline;
+                    	animation: multicolor 3s infinite;
             -webkit-animation: multicolor 3s infinite;
-            font-size: 18px;
-            font-family: 'Montserrat', cursive;
-        }
-        @keyframes multicolor {
-        	0%, 100% {
-        	    color: black;
-            }
-            20% {
-            	color: red;
-            }
-            40% {
-            	color: green;
-            }
-            /*50 % {
-                color: aquamarine;
-            }*/
-            60% {
-            	color: yellow;
-            }
-            80% {
-            	color: blue;
-            }
+                            font-size: 18px;
+                        font-family: 'Montserrat', cursive;
         }
         @-webkit-keyframes multicolor {
         	0%, 100% {
@@ -193,7 +231,47 @@
             40% {
             	color: green;
             }
-            /*50 % {
+            /*50% {
+                color: aquamarine;
+            }*/
+            60% {
+            	color: yellow;
+            }
+            80% {
+            	color: blue;
+            }
+        }
+        @-moz-keyframes multicolor {
+        	0%, 100% {
+        	    color: black;
+            }
+            20% {
+            	color: red;
+            }
+            40% {
+            	color: green;
+            }
+            /*50% {
+                color: aquamarine;
+            }*/
+            60% {
+            	color: yellow;
+            }
+            80% {
+            	color: blue;
+            }
+        }
+        @keyframes multicolor {
+        	0%, 100% {
+        	    color: black;
+            }
+            20% {
+            	color: red;
+            }
+            40% {
+            	color: green;
+            }
+            /*50% {
                 color: aquamarine;
             }*/
             60% {
@@ -204,42 +282,42 @@
             }
         }
 
-	.yellowMe {
-		-webkit-animation: yellowMe 1s infinite
-		-moz-animation: yellowMe 1s infinite;
-		-o-animation: yellowMe 1s infinite;
-		animation: yellowMe 1s infinite;
+	.highlightMe {
+		-webkit-animation: highlightMe 1s infinite;
+		   -moz-animation: highlightMe 1s infinite;
+		        -o-animation: highlightMe 1s infinite;
+		             animation: highlightMe 1s infinite;
 	    }
 
-	    @-webkit-keyframes yellowMe {
+	    @-webkit-keyframes highlightMe {
 		    from {
 			    color: red;
 		    } to {
 			    color: yellow;
 		    }
 	    }
-	    @-moz-keyframes yellowMe {
+	    @-moz-keyframes highlightMe {
 		    from {
 			    color: red;
 		    } to {
 			    color: yellow;
 		    }
 	    }
-	    @-ms-keyframes yellowMe {
+	    @-ms-keyframes highlightMe {
 		    from {
 			    color: red;
 		    } to {
 			    color: yellow;
 		    }
 	    }
-	    @-o-keyframes yellowMe {
+	    @-o-keyframes highlightMe {
 		    from {
 			    color: red;
 		    } to {
 			    color: yellow;
 		    }
 	    }
-	    @keyframes yellowMe {
+	    @keyframes highlightMe {
 		    from {
 			    color: red;
 		    } to {
@@ -256,7 +334,7 @@
 	}
 	
 	@-webkit-keyframes scale {
-		from { transform: scale(1);}
+		from {                transform: scale(1);}
 		     to {
 			           -webkit-transform: scale(1.4) skewX(2deg);
 			              -moz-transform: scale(1.4) skewX(2deg);
@@ -266,8 +344,8 @@
            }
 		}
 		@-moz-keyframes scale {
-			from { transform: scale(1);}
-		         to {
+			from {            transform: scale(1);
+ .             } to {
 			           -webkit-transform: scale(1.4) skewX(2deg);
 			              -moz-transform: scale(1.4) skewX(2deg);
 			                 -ms-transform: scale(1.4) skewX(2deg);
@@ -305,13 +383,21 @@
                                      transform: scale(1.4) skewX(2deg);
            }
 		} 
+		
+		#pauseAnim {
+			animation: pauseAnim 2s infinite ;
+		}
+		@-webkit-keyframes pauseAnim {
+			from{ color:yellow;}
+			to { color:red;}
+		}
     </style>
 </head>
 
 <body class="noselect">
     <div id="displayarea">
         <div id="menu" style="padding-left: 0.5%;">
-            <h2 class="lights" style="margin-left:10%;font-size:10vh;font-weight:bold;box-shadow: red 4px 16px 40px 6px; -webkit-box-shadow: red 4px 16px 40px 6px; -moz-box-shadow: red 4px 16px 40px 6px; -ms-box-shadow: red 4px 16px 40px 6px; -o-box-shadow: red 4px 16px 40px 6px; border:1px dotted yellow;border-radius:500px 10px 500px 25px;background:linear-gradient(225deg, deeppink, transparent);text-align:center;font-style:italic;color:#ccc">Rising Bars</h2><h2 style="font-size:28px;font-style:italic;margin-left:80%;color:rgba(255,255,0,0.6)"><sup>Beta</sup></h2>
+            <h2 class="lights" style="">Rising Bars</h2><h2 style="font-size:28px;font-style:italic;margin-left:80%;color:rgba(255,255,0,0.6)"><sup>Beta</sup></h2>
             <br><br><br><br><br><br>
 
             <div align="center" style="font-family: 'Montserrat';">
@@ -329,11 +415,11 @@
             <canvas id="gamecanvas" width="500" height="500" style="border:5px solid white;"></canvas>
             <br><br><br>
 
-            <button id="toggle_game_button" onclick="controller()" class="btn noselect" unselectable="on"
+            <button id="toggle_game_button" class="tgbtn_anim" unselectable="on"
                 onselectstart="return false;">Start</button>
             <button id="close_game" onclick="go_to_menu()" class="btn">Menu</button>
 
-            <div style="float:right; font-size: 150%; padding-right: 0.5%">
+            <div id="level-container" class="level-container" style="float:right; font-size: 150%; padding-right: 1.5%; font-family: cursive;">
                 <span>Level:</span> <span id="level_display">0</span>
             </div>
 
@@ -479,10 +565,11 @@
             </div>
         </div>
     </div>
+    <p id="pauseAnim" style="position: absolute; top: 22rem; left: 11rem; font-size: 5.5rem; font-family: cursive; display: none;">Paused!</p>
     <footer>
-        <img style="position: relative; top: 0; float: left; clear: both;" height="96" width="96" src="flower.gif" alt="" id="flower" />
-        <article style="font-size:1.7rem;position: relative; top: 1rem; ">
-<em><strong><span style="box-shadow: .4rem .2rem .5rem .3rem gold; color: goldenrod;border-radius:3rem;">ayeshaPT, <br /></span><span style="color: yellow;"><span>Inc</span>orporated</span></strong></em>
+        <img style="position: relative; left: .1rem; top: 3rem; float: left; clear: both;" height="64" width="64" src="flower.gif" alt="" id="flower" />
+        <article style="font-size: 1.3rem; position: relative; top: 3.5rem;">
+<em><strong><span style="box-shadow: .2rem .1rem .5rem .2rem gold; color: goldenrod; border-radius:3rem; background: rgba(0,0,0,0);">ayeshaPT, <br /></span><span style="color: yellow;"><span>Inc</span>orporated</span></strong></em>
         </article>
     </footer>
 
@@ -492,8 +579,8 @@
         window.addEventListener('load', () => {
             navigator.serviceWorker
                 .register('sw_cached_pages.js')
-                .then(reg => console.log('Service Worker: Registered'))
-                .catch(err => console.log(`Service Worker Error: ${err}`));
+                .then(reg => console.log('Service Worker Registered Successfully!'))
+                .catch(err => console.log(`Service Worker failed to register with exception: ${err}`));
         });
     }
 
@@ -504,7 +591,7 @@
     var ctx = gamecanvas.getContext("2d");
     var toggle_game_button = document.getElementById("toggle_game_button");
     var game_session = false; // true if the game is being played (bars and ball are moving)
-    var bar_objects = []; //container for all the bar
+    var bar_objects = []; //container for all the bars
 
     // dimensions of the canvas
     if (window.innerHeight > window.innerWidth) {
