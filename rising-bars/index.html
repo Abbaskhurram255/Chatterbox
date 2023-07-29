@@ -385,11 +385,13 @@
 		} 
 		
 		#pauseAnim {
-			animation: pauseAnim 2s infinite ;
+			-webkit-animation: pauseAnim 2s infinite;
+			   -moz-animation: pauseAnim 2s infinite;
+			             animation: pauseAnim 2s infinite;
 		}
 		@-webkit-keyframes pauseAnim {
 			from{ color:yellow;}
-			to { color:red;}
+			    to { color:red;}
 		}
     </style>
 </head>
