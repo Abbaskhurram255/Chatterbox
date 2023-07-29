@@ -155,7 +155,7 @@ onload = function () {
             }
             else {
                 data = "<span style='color:red; font-size: 1.2rem;'>&times; </span><span style='color: whitesmoke'>Sorry, numbers under 5 only!</span>";
-                playText("please sirf numbers may hee rating deej'yay... jaysay kay. Ek. Do. 3. 4. 5!");
+                playText("please sirf numbers may hee rating deej'yay... jaysay kay. Ek. Do. Teen. Chaar. Paanch!");
             }
             botMsgSound.play();
             showMsg(data, "botMsg");
