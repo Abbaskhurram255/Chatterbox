@@ -50,7 +50,7 @@ btn.addEventListener('click', () => {
                 </p>
                  <p class="word-example">`;
                  for (let num = 0; num < data[0].meanings[0].synonyms.length; ++num) {
-                 	result.innerHTML += `<strong style="font-size:20px;color:green">:</strong> ${data[0].meanings[0].synonyms[num] || ""}<br />`;
+                 	result.innerHTML += `<strong style="font-size:20px;color:green">:</strong> <span id="synClick" onclick="document.querySelector('input').value=document.querySelector('#synClick').innerText">${data[0].meanings[0].synonyms[num] || ""}</span><br />`;
                  }
                     result.innerHTML += 
                 `</p>`;
