@@ -34,12 +34,34 @@ translateBtn.addEventListener("click", () => {
     translateTo = selectTag[1].value;
     if(!text) return;
     toText.setAttribute("placeholder", "Translating...");
-    let apiUrl = `https://api.mymemory.translated.net/get?q=${text}&langpair=${translateFrom}|${translateTo}`;
+    let apiUrl, tempapiUrl, tempapiVal;
+    apiUrl = `https://api.mymemory.translated.net/get?q=${text}&langpair=${translateFrom}|${translateTo}`;
+    if (translateTo == "ur-PK") {
+    	tempapiUrl = `https://api.mymemory.translated.net/get?q=${text}&langpair=${translateFrom}|hi-IN`;
+    fetch(tempapiUrl).then(res => res.json()).then(data => {
+        tempapiVal = data.responseData.translatedText;
+        data.matches.forEach(data => {
+            if(data.id === 0) {
+                tempapiVal = data.translation;
+                
+            }
+        });
+        toText.setAttribute("placeholder", "Translation");
+    });
+
+    }
+    
     fetch(apiUrl).then(res => res.json()).then(data => {
         toText.value = data.responseData.translatedText;
         data.matches.forEach(data => {
             if(data.id === 0) {
                 toText.value = data.translation;
+                if (translateTo == "ur-PK" && tempapiVal != null && tempapiVal != "") {
+                	playText(tempapiVal);
+                } else {
+                	playText(toText.value);
+                }
+                
             }
         });
         toText.setAttribute("placeholder", "Translation");
@@ -68,3 +90,43 @@ icons.forEach(icon => {
         }
     });
 });
+
+fromText.onkeydown = function (e) {
+    let code = e.keyCode ? e.keyCode : e.which;
+    if (code == 13) {
+    	document.querySelector("#btn").click();
+    }
+}
+
+
+const utterance = new SpeechSynthesisUtterance();
+utterance.addEventListener("end", () => {
+  fromText.disabled = false;
+});
+utterance.addEventListener("boundary", (e) => {
+  currentCharacter = e.charIndex;
+});
+
+function playText(text, pitch = 1.0) {
+  if (speechSynthesis.paused && speechSynthesis.speaking) {
+    return speechSynthesis.resume();
+  }
+  if (speechSynthesis.speaking) return;
+  utterance.text = text;
+  var voices = window.speechSynthesis.getVoices();
+  window.speechSynthesis.onvoiceschanged = function () {
+    voices = window.speechSynthesis.getVoices();
+  };
+  utterance.voice = voices[10];
+  utterance.pitch = pitch;
+  utterance.voiceURI = "native";
+  utterance.lang = selectTag[1].value;
+  if (utterance.lang == "ur-PK") {
+  	utterance.lang = "hi";
+  }
+  utterance.volume = 1;
+  utterance.rate = 1;
+  fromText.disabled = true;
+  speechSynthesis.speak(utterance);
+}
+
