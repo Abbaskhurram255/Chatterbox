@@ -26,12 +26,14 @@ body{
   background: linear-gradient(225deg, purple, chocolate);
 }
 .container{
+  position: relative;
   max-width: 690px;
   width: 100%;
   padding: 30px;
   background: #fff;
   border-radius: 70px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.01);
+  top: -1.7rem;
 }
 .wrapper{
   border-radius: 5px;
@@ -167,11 +169,11 @@ body{
 
 
 #txt-ayesh {
-	-webkit-animation: starDance 2s infinite;
-	   -moz-animation: starDance 2s infinite;
-	      -ms-animation: starDance 2s infinite;
-	         -o-animation: starDance 2s infinite;
-	              animation: starDance 2s infinite;
+	-webkit-animation: starDance 3s infinite;
+	   -moz-animation: starDance 3s infinite;
+	      -ms-animation: starDance 3s infinite;
+	         -o-animation: starDance 3s infinite;
+	              animation: starDance 3s infinite;
 }
 @-webkit-keyframes starDance {
 	from{ }
