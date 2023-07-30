@@ -50,7 +50,7 @@ btn.addEventListener('click', () => {
                 </p>
                  <p class="word-example">`;
                  for (let num = 0; num < data[0].meanings[0].synonyms.length; ++num) {
-                 	result.innerHTML += `<strong style="font-size:20px;color:green">:</strong> <span id="synClick" onclick="document.querySelector('input').value=document.querySelector('#synClick').innerText">${data[0].meanings[0].synonyms[num] || ""}</span><br />`;
+                 	result.innerHTML += `<strong style="font-size:20px;color:green">:</strong> <span id="synClick" onclick="document.querySelector('input').value=document.querySelectorAll('#synClick')[${num}].innerText">${data[0].meanings[0].synonyms[num] || ""}</span><br />`;
                  }
                     result.innerHTML += 
                 `</p>`;
@@ -69,7 +69,7 @@ btn.addEventListener('click', () => {
     }
     
 document.body.onload = () => {
-	const example = () => {
+	const exampleValue = () => {
 		let newInitialValue = "Babe";
 		document.querySelector("input").value = newInitialValue;
 		btn.click();
@@ -81,5 +81,5 @@ document.body.onload = () => {
 		document.querySelector("input").value = "";
 	}
 	
-    window.setTimeout(example, 10000); 
+    window.setTimeout(exampleValue, 10000); 
 }
