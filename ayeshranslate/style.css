@@ -5,7 +5,18 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-}
+  }
+  
+  *, body, html {
+  -webkit-touch-callout: none;
+     -webkit-user-select: none;
+       -khtml-user-select: none;
+        -moz-user-select: none;
+          -ms-user-select: none;
+                  user-select: none;
+            
+  }
+  
 body{
   display: flex;
   align-items: center;
@@ -152,4 +163,17 @@ body{
   .controls .exchange{
     font-size: 14px;
   }
+}
+
+
+#txt-ayesh {
+	-webkit-animation: starDance 2s infinite;
+	   -moz-animation: starDance 2s infinite;
+	      -ms-animation: starDance 2s infinite;
+	         -o-animation: starDance 2s infinite;
+	              animation: starDance 2s infinite;
+}
+@-webkit-keyframes starDance {
+	from{ }
+	to { text-emphasis: '✨' red;}
 }
