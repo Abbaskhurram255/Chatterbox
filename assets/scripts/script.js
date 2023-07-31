@@ -605,7 +605,7 @@ utterance.addEventListener("boundary", (e) => {
   currentCharacter = e.charIndex;
 });
 
-function playText(text) {
+function playText(text, pitch = 1) {
   if (speechSynthesis.paused && speechSynthesis.speaking) {
     return speechSynthesis.resume();
   }
@@ -616,7 +616,7 @@ function playText(text) {
     voices = window.speechSynthesis.getVoices();
   };
   utterance.voice = voices[10];
-  utterance.pitch = 1;
+  utterance.pitch = pitch || 1;
   utterance.voiceURI = "native";
   utterance.lang = "hi";
   utterance.volume = 1;
@@ -728,7 +728,7 @@ const sound = (src, delay = 10000, format = "mp3", speed = 1.0) => {
 	} else {
 		//format not found, *.mp3 will be added automatically 
 		if (format == null || format == undefined || format == "" || format == 0) {
-			format = this.format || "mp3"; 
+			format = format || "mp3"; 
 		}
 		audio.src = `${dir}/${src}.${format}`;
 		log("\nPlaying Audio");
@@ -740,7 +740,7 @@ const sound = (src, delay = 10000, format = "mp3", speed = 1.0) => {
      audio.play();
      }
      if (delay == null || delay == undefined || delay == "" || delay == 0) {
-			delay = this.delay || 10000;
+			delay = delay || 10000;
 		}
      setTimeout(() => { utterance.onend = ""; }, delay); 
 }
