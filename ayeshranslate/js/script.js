@@ -122,7 +122,7 @@ function playText(text, pitch = 1.0) {
   utterance.voiceURI = "native";
   utterance.lang = selectTag[1].value;
   if (utterance.lang == "ur-PK") {
-  	utterance.lang = "hi";
+  	utterance.lang = utterance.lang.replace("ur-PK", "hi");
   }
   utterance.volume = 1;
   utterance.rate = 1;
