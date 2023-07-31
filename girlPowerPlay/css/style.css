@@ -68,7 +68,7 @@ input {
 
 .container {
     width: 100%;
-    height: 85%;
+    height: 55%;
     display: flex;
     -webkit-flex-wrap: nowrap;
     -moz-flex-wrap: nowrap;
