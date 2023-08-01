@@ -90,11 +90,15 @@
          document.querySelector("h1").classList.remove("animateMe");
          bartext.innerHTML = "<span style=\"font-size: 4rem\">⬇️</span> <span style='position: relative; bottom: .25rem'>Download Zip</span>";
       });
-      const d = new Date();
+      
       function log(x) {
       	return console.log(x);
       }
+      
+      /* adding date signature (aka timestamp) to the file */
+      const d = new Date();
       const day = dow => {
+      	/* dow here stands for 'day of the week' */
       	this.dow = parseInt(dow);
       	switch(dow) {
           case 0:
@@ -121,9 +125,21 @@
       }
       let mins = d.getMinutes();
   	mins = mins < 10 ? "0" + mins : mins;
-      let ampm = d.getHours() >= 12 ? "pm" : "am";
-      const timestamp = day(d.getDay())+ "-" + d.getHours() + "-" + mins + "-" + ampm.toUpperCase() + "-" + d.getDate() + "-" + d.getMonth() + "-" + d.getFullYear();
+      let hour, ampm;
+      hour = parseInt(d.getHours());
+      if (hour >= 12) {
+      	hour -= 12; /* "varName -= integer" (3 being the integer, for example) is a shortcut for "varName = varName - 12" --- its rather descriptive form. So, one way could be to replace this line with "hour = hour - 12;" to be a little more descriptive. Both of these work. One could use both interchangeably! */
+      	ampm = "pm";
+      } else {
+      	ampm = "am";
+      }
+      if (hour == 0 && ampm == "am") {
+              hour = 12;
+      }
+      const timestamp = day(d.getDay())+ "-" + hour + "-" + mins + "-" + ampm.toUpperCase() + "-" + d.getDate() + "-" + d.getMonth() + "-" + d.getFullYear();
       log(timestamp);
+      
+      /* zipping the files */
       function zipFiles() {
         var filesInput = document.getElementById("fileInput");
         var files = filesInput.files;
@@ -137,7 +153,7 @@
 
         zip.generateAsync({ type: "blob" })
           .then(function(content) {
-          saveAs(content, `ayeshapt_archiver - extracted zip files ${timestamp}.zip`);
+          saveAs(content, `ayeshapt_archiver - ${timestamp}.zip`);
         });
       }
     </script>
