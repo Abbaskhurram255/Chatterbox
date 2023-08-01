@@ -18,7 +18,7 @@
    q15 = /tic( |-)?tac( |-)?toe/i, 
    q16 = /(temperature today)|(is it a (hot|rainy|cloudy|sunny) day today)|(weather)|(m(o|au)sam)|(a?aj k(e|ai)sa din (ra)?h(e|ai)(ga)?$)/i, 
    q17 = /^$/, 
-   q18 = /(^calculator)|((open|ayesha?) ?(cal)?culator)|(calculate(?:bmi))/i, 
+   q18 = /(^calculator)|((open|ayesha?) ?(cal)?culator)|(\d+ ?(\+|-|(\*|x|×)|÷|(\/|\\)) ?\d+)|(calculate(?:bmi))/i, 
    q19 = 
    /(tts)|(speech engine)|(text to speech)|((e|text)?(-| )?book( to |2)audio(book)?)|((document|text) reader)/i, 
    q20 = /feedback/i, 
@@ -54,7 +54,7 @@
    q49 = /^voice ?(notes?|recorder)$/i, 
    q50 = /(smash cube|(box|slice|cube) game)/i, 
    q51 = /(percent(age)? calculat(or|e))|(calculate ?\b\d*\b percent(age)?)/i, 
-   q52 = /temperature( units)? conver(sion|ter)/i, 
+   q52 = /XXXXYYYY/i, 
    q53 = 
    /(how to (cook|bake))|((k(e|ai)se pakaa?te|pakaa?te k(e|ai)se) h(e|ai)n?)|(k(e|ai)se paka((u|oo|e|ai)n?|ya))|(help me( with)? (cook|bake?)(ing)?)|(ingredients)/i, 
    q54 = 
@@ -137,7 +137,7 @@
    q121 = /(who is your (aa?shik|lover|husband|b(oy)?f(riend)?))|((t(umhaa?|e)raa?|aa?p ?ka) (aa?shik|lover|husband|b(oy)?f(riend)?) k(o|au)n?)/i,
    q122 = /(news)|(headlines)/i,
    q123 = /(m(ujh|ere)|h(u|a)m(aa?r(e|ai))?) se shaa?di kar((( ?l)?(o|(e|(e|a)i)n?|iji?ye))| ?ne ke baa?r(e|a(y|i)) m(e|ai)n?)? ?(k(y|(ai|e)s)aa?|gi)?/i, 
-   q124 = /(ult(i|aa?) gin((ti|o|(i?y?e|ai)n?))?( (kar|k(i|ee)j)(i?y?e|(e|ai)n?|o))? 5 (se|to) (0|1))|(5 (se|to) (0|1)( (ki|tak( ki)?))? ult(i|aa?) gin((ti|o|(i?y?e|ai)n?))?)/i,
+   q124 = /(ult(i|aa?) gin(ti|o|(i?y?e|ai)n?)( (kar|k(i|ee)j)(i?y?e|(e|ai)n?|o))? 5 (se|to) (0|1))|((5|paa?n(ch)?) (se|to) (0|1|(e|ai)k)( (ki|tak( ki)?))? ult(i|aa?) gin((ti|o|(i?y?e|ai)n?))?)/i,
    q125 = /(count to (10|ten))|(10 tak gin((ti|o|(i?y?e|ai)n?))?)/i,
    q126 = /(gaa?na|lori)? gaa?(( ?ke)? sunaa?)? ?d?((o|ei?|ai|ij?i?y?e)n?|(sak|pa)? ?ti)/i,
    q127 = /XXXXXXXX/i,

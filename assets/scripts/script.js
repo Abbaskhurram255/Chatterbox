@@ -470,13 +470,13 @@ function startTime() {
     min = "0" + min;
   }
   let ampm = "am";
-  if (hr > 12) {
+  if (hr >= 12) {
     hr -= 12;
     ampm = "pm";
   }
   if (hr < 10) {
     hr = "0" + hr;
-    if (hr == "00" && ampm == "am") {
+    if (hr == "00") {
     	hr = "12";
     }
   }
@@ -616,7 +616,7 @@ function playText(text, pitch = 1) {
     voices = window.speechSynthesis.getVoices();
   };
   utterance.voice = voices[10];
-  utterance.pitch = pitch || 1;
+  utterance.pitch = pitch;
   utterance.voiceURI = "native";
   utterance.lang = "hi";
   utterance.volume = 1;
