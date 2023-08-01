@@ -5,15 +5,51 @@
     <title>Percentage Calculator</title>
     <style>
       body {
-        margin: 10vh;
-        padding: 3px;
+        margin: 10vh 5vh 0 7vh;
+        padding: 2px;
         color: white;
         background: linear-gradient(
-          to right,
-          teal,
-          mediumturquoise /*cadetblue would also look better here*/,
-          lightseagreen
+          green, 
+          lightseagreen,
+          orange,
+          crimson
         );
+      }
+      
+      form {
+      	margin-right: 9rem;
+      }
+      
+      input[type='button'] {
+      	background: -webkit-radial-gradient(deeppink, crimson);
+          color: whitesmoke;
+          border-radius: 92px 25px 98px 42px;
+      }
+      
+      input[type='reset'] {
+      	background: linear-gradient(goldenrod, mediumvioletred);
+          color: whitesmoke;
+      }
+      
+      #total1, #total2 {
+          border-radius: 25%;
+          box-shadow: 3px 5px 7px 2px rgba(50, 50, 50, 0.8);
+          background: rgba(0,0,0,0);
+          border: none;
+          border: 1px solid #333;
+          color: white;
+      }
+      
+      div.results {
+      	position: relative;
+      	left: 5rem;
+      }
+      
+      footer {
+      	position: relative;
+                  top: 10rem;
+                  left: .5rem;
+                color: yellow;
       }
     </style>
     <script>
@@ -22,7 +58,7 @@
         var b = a * document.form1.b.value;
         document.form1.total1.value = b;
         if (/^[0-9(.)]*$/g.test(document.form1.total1.value) != true) {
-          document.form1.total1.value = "";
+          document.form1.total1.value = "Nums only!";
         }
       }
       function perc2() {
@@ -35,6 +71,7 @@
           document.form1.total2.value = "";
         }
       }
+      
     </script>
   </head>
   <body>
@@ -43,35 +80,43 @@
         <tbody>
           <tr>
             <td align="middle" colspan="3">
-              <b><font size="4">Percentage Calculator</font></b>
+              <b style="position: relative; bottom: 30px"><font size="8">Percentage Calculator</font></b>
             </td>
           </tr>
 
           <tr>
             <td>
-              What is <input size="5" name="a" /> % of
+              What is <input size="5" name="a" /> % of
               <input size="5" name="b" />?
             </td>
+            <div class="results">
             <td>Answer: <input id="total1" maxlength="40" size="5" name="total1" /></td>
             <td><input onclick="perc1()" type="button" value="Calculate" /></td>
+            </div>
           </tr>
-
           <tr>
             <td>
-              <input size="5" name="c" /> is what percent of
+              <input size="5" name="c" /> is what percent of
               <input size="5" name="d" />?
             </td>
-            <td>Answer: <input size="5" id="total2" name="total2" /> %</td>
-            <td><input onclick="perc2()" type="button" value="Calculate" /></td>
+            <div class="results">
+              <td>Answer: <input size="5" id="total2" name="total2" /> %</td>
+              <td><input onclick="perc2()" type="button" value="Calculate" /></td>
+            </div>
           </tr>
 
           <tr>
-            <td align="middle" colspan="3">
-              <input type="reset" value="Reset" />
-            </td>
+            <div class="results">
+              <td align="middle" colspan="3">
+                <input type="reset" value="Reset" />
+              </td>
+            </div>
           </tr>
         </tbody>
       </table>
     </form>
+    <footer>
+    	Will be improved in the future! Mazrat, bad experience ke lie.
+    </footer>
   </body>
 </html>
