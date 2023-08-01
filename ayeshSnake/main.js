@@ -30,6 +30,7 @@ music.autoplay = true;
 music.volume = 0.9;
 const eatAudio = new Audio('sfx/eat.wav');
 const dieAudio = new Audio('sfx/die.mp3');
+const dieAudio2 = new Audio('sfx/oh no.mp3');
 let newHiScoreAudio = new Audio('sfx/success.mp3');
 
 document.body.onload = () => {
@@ -178,6 +179,7 @@ function draw() {
         bumpedInto(newSnakeHeadPosition, snake)) {
         gameOver()
         dieAudio.play()
+        dieAudio.onended = () => dieAudio2.play()
     }
 
     // SnakeHead new position
