@@ -133,8 +133,8 @@
       } else {
       	ampm = "am";
       }
-      if (hour == 0 && ampm == "am") {
-              hour = 12;
+      if (hour == 0) {
+          hour = 12;
       }
       const timestamp = day(d.getDay())+ "-" + hour + "-" + mins + "-" + ampm.toUpperCase() + "-" + d.getDate() + "-" + d.getMonth() + "-" + d.getFullYear();
       log(timestamp);
