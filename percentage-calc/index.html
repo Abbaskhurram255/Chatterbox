@@ -29,6 +29,8 @@
       input[type='reset'] {
       	background: linear-gradient(goldenrod, mediumvioletred);
           color: whitesmoke;
+          border-radius: 45% 25% 55% 45%;
+          height: 1.8rem;
       }
       
       #total1, #total2 {
@@ -50,6 +52,8 @@
                   top: 10rem;
                   left: .5rem;
                 color: yellow;
+    box-shadow: 2px 5px 8px 4px #333;
+      background: blck;
       }
     </style>
     <script>
@@ -58,7 +62,10 @@
         var b = a * document.form1.b.value;
         document.form1.total1.value = b;
         if (/^[0-9(.)]*$/g.test(document.form1.total1.value) != true) {
+          document.form1.total1.style.color = "red";
           document.form1.total1.value = "Nums only!";
+        } else {
+        	document.form1.total1.style.color = "white";
         }
       }
       function perc2() {
@@ -68,7 +75,10 @@
         var d = c * 100;
         document.form1.total2.value = d;
         if (/^[0-9(.)]*$/g.test(document.form1.total2.value) != true) {
-          document.form1.total2.value = "";
+          document.form1.total2.style.color = "red";
+          document.form1.total2.value = "Nums only!";
+        } else {
+        	document.form1.total2.style.color = "white";
         }
       }
       
@@ -116,7 +126,7 @@
       </table>
     </form>
     <footer>
-    	Will be improved in the future! Mazrat, bad experience ke lie.
+    	Will be further improved in the future! Mazrat, bad experience ke lie.
     </footer>
   </body>
 </html>
