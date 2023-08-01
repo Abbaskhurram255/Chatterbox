@@ -134,11 +134,11 @@
    q118 = /(kahaa? chali)|(meri (wife|lover|g(irl)?f(riend)?) kahaa? (h(e|ai)|gai))/i,
    q119 = /(miss (yo)?u)|((aa?p|tum|tere) ko miss kar rah(aa?|i|e) h(u|oo|e|ai)n?)/i,
    q120 = /(time bataa?( d)?(o|e|ai|iy?e)n?)|(time( (bataa?o|ayesha))? kyaa? (((ho|baj) ?ra?haa?) ?)?h(e|ai))/i,
-   q121 = /(who is your (aa?shik|lover|husband|b(oy)?f(riend)?))|((t(umhaa?|e)raa?|aa?p ?ka) (aa?shik|lover|husband|b(oy)?f(riend)?) k(o|au)n?)/i,
+   q121 = /((who is your|k(o|ai)n h(e|ai) t(e|umhaa?)raa?) (aa?shik|lover|husband|b(oy)?f(riend)?))|((t(umhaa?|e)raa?|aa?p ?kaa?) (aa?shik|lover|husband|b(oy)?f(riend)?) k(o|au)n?)/i,
    q122 = /(news)|(headlines)/i,
    q123 = /(m(ujh|ere)|h(u|a)m(aa?r(e|ai))?) se shaa?di kar((( ?l)?(o|(e|(e|a)i)n?|iji?ye))| ?ne ke baa?r(e|a(y|i)) m(e|ai)n?)? ?(k(y|(ai|e)s)aa?|gi)?/i, 
    q124 = /(ult(i|aa?) gin(ti|o|(i?y?e|ai)n?)( (kar|k(i|ee)j)(i?y?e|(e|ai)n?|o))? 5 (se|to) (0|1))|((5|paa?n(ch)?) (se|to) (0|1|(e|ai)k)( (ki|tak( ki)?))? ult(i|aa?) gin((ti|o|(i?y?e|ai)n?))?)/i,
-   q125 = /(count to (10|ten))|(10 tak gin((ti|o|(i?y?e|ai)n?))?)/i,
+   q125 = /(count( (from )?1)? (to(o)?|2|karo) (10|ten|das))|((10|das) tak (ki )?gin((ti|o|(i?y?e|ai)n?))?)/i,
    q126 = /(gaa?na|lori)? gaa?(( ?ke)? sunaa?)? ?d?((o|ei?|ai|ij?i?y?e)n?|(sak|pa)? ?ti)/i,
    q127 = /XXXXXXXX/i,
    q128 = /ch(u|o)d( ?ne|ai) (pe kesi|ki) awaa?z nikaa?l(o|i?y?e|ai)n?( gi)?/i,
@@ -1636,6 +1636,7 @@
        "./one-tap-instrument", 
        "./ayeshEdit", 
        "./ayeshPapers", 
+       "./roseday", 
        ];
        let entertainmentAppsWin = window.open( 
        entertainmentApps[Math.floor(Math.random() * entertainmentApps.length)], 
@@ -1832,14 +1833,16 @@
      $("#message").delay(10000).slideFadeToggle(800); 
     } else if (q124.test(q)) { 
      $("#message").slideFadeToggle(800); 
-     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed he aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     msg = "Oolti ginti paanch say ek..."; 
      $output.html(msg); 
+     sound("54321");
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
     } else if (q125.test(q)) { 
      $("#message").slideFadeToggle(800); 
-     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed he aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     msg = "Ek say dus tak kee ginti... I mean, ek say no tak" + lol3; 
      $output.html(msg); 
+     sound("count2ten");
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
     } else if (q126.test(q)) { 
