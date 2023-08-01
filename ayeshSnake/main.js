@@ -32,6 +32,8 @@ const eatAudio = new Audio('sfx/eat.wav');
 const dieAudio = new Audio('sfx/die.mp3');
 const dieAudio2 = new Audio('sfx/oh no.mp3');
 let newHiScoreAudio = new Audio('sfx/success.mp3');
+let newHiScoreAudio2 = new Audio('sfx/woo-hoo.mp3');
+
 
 document.body.onload = () => {
 	window.setTimeout(() => music.play(), 2500);
@@ -154,13 +156,24 @@ function draw() {
     	if (!newHiScoreAudio.isPlaying) {
     	try {
             newHiScoreAudio.play();
+            
         } catch (e) {
             newHiScoreAudio = "";
+            
+        }
+        try {
+        	setTimeout(() => {
+                newHiScoreAudio2.play();
+            }, 
+            1000);
+        } catch (e) {
+        	newHiScoreAudio2 = "";
         }
         
     }
     document.querySelector("#hiScore").classList.add(".blink");
         setTimeout(() => { newHiScoreAudio = "new Audio()";}, 5000);
+        setTimeout(() => { newHiScoreAudio2 = "new Audio()";}, 1500);
     } else {
     	document.querySelector("#hiScore").classList.remove(".blink");
     }
