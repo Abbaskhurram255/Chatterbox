@@ -8,7 +8,7 @@
       	input::file-selector-button {
       	color: #eee;
           background: linear-gradient(45deg, crimson, darkgreen);
-          border-radipus: 6px 22px 10px 22px;
+          border-radius: var(--newRadius);
       }
       
       	* {
@@ -76,9 +76,11 @@
     <button style="outline: 3px groove #b29; background: linear-gradient(yellow, orange);" onclick="zipFiles();" id="btn">⬇️Get Zip</button>
 
     <script>
+      const $$ = document.querySelectorAll.bind(document);
       const foo = document.querySelector("input");
+      const fooCss = foo.style;
       const bar = document.querySelector("button").style;
-      var bartext = document.querySelector("#btn"); 
+      const barText = document.querySelector("#btn"); 
       foo.addEventListener("input", () => {
       	foo.style="background: rgba(0,175,0,0.7); colpor: lavender; border:8px solid plum; -webkit-box-shadow: 2px 2.5px .7rem 8px green; -moz-box-shadow: 2px 2.5px .7rem 8px green; -ms-box-shadow: 2px 2.5px .7rem 8px green; -o-box-shadow: 2px 2.5px .7rem 8px green; box-shadow: 2px 2.5px .7rem 8px green;";
          bar.position = "absolute";
@@ -87,8 +89,9 @@
          bar.top = "22rem";
          bar.right = "5rem";
          bar.borderRadius = "2rem 3rem .25rem 3rem";
+         fooCss.setProperty("--newRadius", "42px 6px 32px 10px");
          document.querySelector("h1").classList.remove("animateMe");
-         bartext.innerHTML = "<span style=\"font-size: 4rem\">⬇️</span> <span style='position: relative; bottom: .25rem'>Download Zip</span>";
+         barText.innerHTML = "<span style=\"font-size: 4rem\">⬇️</span> <span style='position: relative; bottom: .25rem'>Download Zip</span>";
       });
       
       function log(x) {
