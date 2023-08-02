@@ -45,7 +45,7 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
     *   Voice-controlled PDF Viewer/ Book Reader (again, Speech Recognition isn't supported by browsers other than Chrome, Safari & Samsung Internet)
  
     * ##### Conversion, and Math
-    *   ayeshCulator
+    *   ayeshCulator: The Professional Calculators!
     *   Currency Converter
     *   Stopwatch/ Timer
     *   Expense Tracker
@@ -60,12 +60,13 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
     *   Password Generator
     *   Anonymous Proverbs Generator
     *   Quote of the Day
-    *   Joke Machine (English only, sorry!)
+    *   Joke Machine (English only for now, sorry!)
+    *   News of the Day
    
     * ##### Music
     *   ayeshBeat Maker: Make music anywhere, anytime!
     *   Audio Visualizer: girlPowerPlay/ Soundjam
-    *   Tap Music!: A One-Tap Magical Instrument
+    *   Tap Music!: A One-Tap Mus-Magical Instrument... Hello Euphoric Vibes, Where Have You Been?!
     *   Metronome: Learn to play music... on time!
     *   Jukebox: gaane!
  
@@ -77,13 +78,13 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
     *   breakOut!
     *   Rising Bars <beta>
     *   ayeshSnake: a simple, yet brilliant snake game!
-    *   Fotoflick
+    *   Fotoflick: Can't Solve A Puzzle?! Bet You Can't Solve Life Either, no offense.
     *   muskyBird: an Elon Musk roast! For he deserves it🤫
     *   Game Of Dragons: City Under Havoc, an adventurous RPG!
-    *   Hangman
+    *   Hangman: Don't Let Me Be Hung to Death Just Because You're A Little Stupid To Guess Some Words!
     *   Speed Typer: Let's see how fast you can type!
-    *   Math Flash Cards: Let's test your math skills <beta>
-    *   The Maze: What Would You Do If You Were Stuck, And Had Nowhere To Go? Almost... Nowhere To Go!
+    *   Math Flash Cards: Let's test your Math skills <beta>
+    *   The Maze: What Would You Do If You Were Stuck, And Had Nowhere To Go? Well, Almost... Nowhere To Go! Whispers, 'an old man once said "there's always a way out, even when there isn't! Even when things go wrong, you can make them right. You just have to be brilliant enough, which I believe you are"'
     *   Monopoly (experimental)
     *   Memory Game
     *   Rock, Paper, Scissors, Lizard, Spock
@@ -98,8 +99,10 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
 
 * * *
 
-v1.0.1
+v1.0.2
 ### Changelogs
 * bug fixes
 * add some easter eggs
+* Upgraded UI for dictionary, and translator
+* Music Jukebox now has 150+ songs to play! Bye, boriat, my old enemy!
   <!-- <br/><br/><center>Changelogs will be listed here</center> -->
