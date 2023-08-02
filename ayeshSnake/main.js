@@ -156,24 +156,21 @@ function draw() {
     	if (!newHiScoreAudio.isPlaying) {
     	try {
             newHiScoreAudio.play();
+            setTimeout(() => { newHiScoreAudio = "new Audio()"; }, 5000);
             
         } catch (e) {
             newHiScoreAudio = "";
             
         }
         try {
-        	setTimeout(() => {
                 newHiScoreAudio2.play();
-            }, 
-            1000);
+                setTimeout(() => { newHiScoreAudio2 = "new Audio()"; }, 1500);
         } catch (e) {
         	newHiScoreAudio2 = "";
         }
         
     }
     document.querySelector("#hiScore").classList.add(".blink");
-        setTimeout(() => { newHiScoreAudio = "new Audio()";}, 5000);
-        setTimeout(() => { newHiScoreAudio2 = "new Audio()";}, 1500);
     } else {
     	document.querySelector("#hiScore").classList.remove(".blink");
     }
