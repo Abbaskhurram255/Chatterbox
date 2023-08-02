@@ -45,7 +45,7 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
     *   Voice-controlled PDF Viewer/ Book Reader (again, Speech Recognition isn't supported by any browsers other than Chrome, Safari, & Samsung Internet)
  
     * ##### Conversion, and Math
-    *   ayeshCulator: The Professional Calculators!
+    *   ayeshCulator: The Professional Calculator!
     *   Currency Converter
     *   Stopwatch/ Timer
     *   Expense Tracker
