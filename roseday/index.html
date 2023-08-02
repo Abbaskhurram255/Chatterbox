@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>Surprise✨</title>
+    <title>Surprise!</title>
     <link rel="icon" type="img/jpg" href="https://c4.wallpaperflare.com/wallpaper/812/187/770/kimi-no-na-wa-tachibana-taki-miyamizu-mitsuha-anime-wallpaper-preview.jpg" />
 
 </head>
@@ -46,6 +46,55 @@
   </div>
 </div>
 <span id="prompt" style="text-align:center;justify-content:center;justify-items:center;"><center>I have a surprise<br><br>Touch me to find out!</center></span>
+<script>
+	
+	const utterance = new SpeechSynthesisUtterance();
+utterance.addEventListener("boundary", (e) => {
+  currentCharacter = e.charIndex;
+});
+
+let playText = (text, pitch = 1.0) =>  {
+  if (speechSynthesis.paused && speechSynthesis.speaking) {
+    return speechSynthesis.resume();
+  }
+  if (speechSynthesis.speaking) return;
+  utterance.text = text;
+  var voices = window.speechSynthesis.getVoices();
+  window.speechSynthesis.onvoiceschanged = function () {
+    voices = window.speechSynthesis.getVoices();
+  };
+  utterance.voice = voices[10];
+  utterance.pitch = pitch;
+  utterance.voiceURI = "native";
+  utterance.lang = "hi";
+  utterance.volume = 1;
+  utterance.rate = 1;
+  speechSynthesis.speak(utterance);
+  /* or you could simply import say.js. The link to it: https://rawit.com/JudahRR/Say.js/master/libs/say.js */
+}
+
+//Call this function to (immediately) stop the Speech synthesis:
+function stopText() {
+  speechSynthesis.resume();
+  speechSynthesis.cancel();
+}
+//end of Speech_Synth block
+	
+	
+	
+	let rose = document.querySelector(".rose");
+	rose.addEventListener("click", () => {
+		try {
+	        playText("I like you!"); 
+	        setTimeout(() => { playText = ""; rose = ""; }, 1500);
+		  
+		} catch (e) {
+			playText = "";
+			rose = "";
+		}
+	});
+	
+</script>
 
 </body>
 </html>
