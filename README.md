@@ -38,11 +38,11 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
     *   Voice Notes <beta>
  
     * ##### Word-processing
-    *   Ayeshnary: An English Dictionary!
+    *   Ayeshnary: A Modern English Dictionary!
     *   ayeshRanslate: Let I... Shranslate it, for you!
     *   ayeshPedia: A Two-in-one Lyrics app/ Encyclopedia (otherwise referred to as Lyricopedia)
     *   book2Audio (can read you any sort of text from a book or an article, loudly!) <beta, WIP>
-    *   Voice-controlled PDF Viewer/ Book Reader (again, Speech Recognition isn't supported by browsers other than Chrome, Safari & Samsung Internet)
+    *   Voice-controlled PDF Viewer/ Book Reader (again, Speech Recognition isn't supported by any browsers other than Chrome, Safari, & Samsung Internet)
  
     * ##### Conversion, and Math
     *   ayeshCulator: The Professional Calculators!
