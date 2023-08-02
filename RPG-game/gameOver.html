@@ -5,15 +5,56 @@
 	<meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<style>
-		
-	</style>
+	<link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
 	<h1 class="tc">You died<h1>
 	<div class="tc"><img src="assets/rip.jpg"></div>
 	<h3 class="tc">Chune huo me se ek the tum... And now you are dead<br /> Afsos 😔😩</h3><br />
 	<a href="index.html" class="center"><button class="actionButton">Try again</button></a>
+	<script>
+		const utterance = new SpeechSynthesisUtterance();
+utterance.addEventListener("boundary", (e) => {
+  currentCharacter = e.charIndex;
+});
+
+function playText(text, pitch = 1.0) {
+  if (speechSynthesis.paused && speechSynthesis.speaking) {
+    return speechSynthesis.resume();
+  }
+  if (speechSynthesis.speaking) return;
+  utterance.text = text;
+  var voices = window.speechSynthesis.getVoices();
+  window.speechSynthesis.onvoiceschanged = function () {
+    voices = window.speechSynthesis.getVoices();
+  };
+  utterance.voice = voices[10];
+  utterance.pitch = pitch;
+  utterance.voiceURI = "native";
+  utterance.lang = "hi";
+  utterance.volume = 1;
+  utterance.rate = 1;
+  speechSynthesis.speak(utterance);
+  /* or you could simply import say.js. The link to it: https://rawit.com/JudahRR/Say.js/master/libs/say.js */
+}
+
+//Call this function to (immediately) stop the Speech synthesis:
+function stopText() {
+  speechSynthesis.resume();
+  speechSynthesis.cancel();
+}
+//end of Speech_Synth block
+		
+		
+		
+		document.body.onload = () => {
+			setTimeout(() => {
+				let audio = new Audio("oh-no.mp3");
+				let audio2 = new Audio("angry.mp3");
+				audio.play();
+				audio.onended = () => audio2.play();
+			}, 2000);
+		}
+	</script>
 </body>
 </html>

@@ -1,3 +1,40 @@
+
+const utterance = new SpeechSynthesisUtterance();
+utterance.addEventListener("boundary", (e) => {
+  currentCharacter = e.charIndex;
+});
+
+function playText(text, pitch = 1.0) {
+  if (speechSynthesis.paused && speechSynthesis.speaking) {
+    return speechSynthesis.resume();
+  }
+  if (speechSynthesis.speaking) return;
+  utterance.text = text;
+  var voices = window.speechSynthesis.getVoices();
+  window.speechSynthesis.onvoiceschanged = function () {
+    voices = window.speechSynthesis.getVoices();
+  };
+  utterance.voice = voices[10];
+  utterance.pitch = pitch;
+  utterance.voiceURI = "native";
+  utterance.lang = "hi";
+  utterance.volume = 1;
+  utterance.rate = 1;
+  speechSynthesis.speak(utterance);
+  /* or you could simply import say.js. The link to it: https://rawit.com/JudahRR/Say.js/master/libs/say.js */
+}
+
+//Call this function to (immediately) stop the Speech synthesis:
+function stopText() {
+  speechSynthesis.resume();
+  speechSynthesis.cancel();
+}
+//end of Speech_Synth block
+
+
+
+
+
 // ======================== 1. CHARACTER, ENEMIES AND EQUIPMENT DEFINITIONS============================
 // ==== 1.1 CHARACTER
 const hero = {
@@ -787,7 +824,8 @@ function attack(attacker, defender) {
 				}
 			} // It maps items from lootChests and monsters to equipment.		
 		} else if (defender === hero) { // 
-			window.location.replace("gameOver.html");
+		    playText("aray yaar, may tou tumhay ek hero samajhti thee...");
+		    window.location.replace("gameOver.html");
 		}
 	}
 }
