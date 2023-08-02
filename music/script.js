@@ -452,39 +452,39 @@ $(() => {
                     "file": "Harry Styles - Adore You"
                 }, {
                     "track": 86,
-                    "name": "Imagine Dragons - Bad Liar",
-                    "duration": "4:44",
-                    "file": "Imagine Dragons - Bad Liar"
+                    "name": "Arash - Boro Boro ",
+                    "duration": "2:46",
+                    "file": "Arash - Boro Boro"
                 }, {
                     "track": 87,
-                    "name": "Jonas Brothers - Five More Minutes",
-                    "duration": "2:33",
-                    "file": "Jonas Brothers - Five More Minutes"
+                    "name": "Arash x Helena - One Night In Dubai",
+                    "duration": "2:40",
+                    "file": "Arash x Helena - One Night In Dubai"
                 }, {
                     "track": 88,
-                    "name": "Jonas Brothers - Only Human",
-                    "duration": "3:04",
-                    "file": "Jonas Brothers - Only Human"
+                    "name": "Arash x Helena - Pure Love",
+                    "duration": "4:11",
+                    "file": "Arash x Helena - Pure Love"
                 }, {
                     "track": 89,
-                    "name": "Jonas Brothers - Sucker",
-                    "duration": "3:20",
-                    "file": "Jonas Brothers - Sucker"
+                    "name": "Arash - Temptation",
+                    "duration": "3:41",
+                    "file": "Arash - Temptation"
                 }, {
                     "track": 90,
-                    "name": "Juice WRLD & The Weeknd - Smile",
-                    "duration": "3:28",
-                    "file": "Juice WRLD & The Weeknd - Smile"
+                    "name": "Vicetone - Barcelona Nights",
+                    "duration": "3:00",
+                    "file": "Vicetone - Barcelona Nights"
                 }, {
                     "track": 91,
-                    "name": "Kane Brown, Swae Lee, Khalid - Be Like That",
-                    "duration": "3:11",
-                    "file": "Kane Brown, Swae Lee, Khalid - Be Like That (feat. Swae Lee & Khalid)"
+                    "name": "Sia - Chandelier",
+                    "duration": "3:35",
+                    "file": "Sia - Chandelier"
                 }, {
                     "track": 92,
-                    "name": "Kid Ink - Hotel ft. Chris Brown",
-                    "duration": "3:40",
-                    "file": "Kid Ink - Hotel ft. Chris Brown"
+                    "name": "Sia - Cheap Thrills",
+                    "duration": "3:33",
+                    "file": "Sia - Cheap Thrills"
                 }, {
                     "track": 93,
                     "name": "Kid Ink - Main Chick (Explicit) ft. Chris Brown & Tyga",
