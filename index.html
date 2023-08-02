@@ -252,12 +252,16 @@ integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
 
 <!-- Registering sw.js/ service worker -->
     <script>
-       if("serviceWorker" in navigator){ navigator.serviceWorker.register("sw.js").then(function(registration){
-      console.log("Service worker registered successfully!");
-}).catch(function(error){
-      console.log("Service worker failed to be registered with error: ",error);
+    	if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("sw.js")
+            .then(function(registration) {
+                console.log("Service worker registered successfully!");
+       })
+            .catch(function(error) {
+                console.log("Service worker failed to register with error: ", error);
    });
 }    
+
      </script>
      
      <!-- In case the browser does not support JavaScript, which is pretty rare ofc... but still possible -->
