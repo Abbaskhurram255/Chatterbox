@@ -1,4 +1,4 @@
-﻿# Ayesha... she assists you!
+# Ayesha... she assists you!
 
 Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-started/)
 
@@ -28,7 +28,7 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
     *   CaloTracker <Work-in-progress/beta>
  
     * ##### Images
-    * ayesh'dEd_it²!: I should Edit It 2oo!... A Simple Photo Editor! (Otherwise referred to as ayeshEdit, simply)
+    * ayesh'dEd_it²!: I should Edit It 2oo!... A Simple Photo Editor! (Otherwise simply referred to as ayeshEdit)
     * ayeshGIFs: Say Goodbye to Boredom with these animated pictures!
     * ayeshPapers: Download wallpapers for your home screen!
  
@@ -106,3 +106,4 @@ v1.0.2
 * Upgraded UI for dictionary, and translator
 * Music Jukebox now has 150+ songs to play! Bye, boriat, my old enemy!
   <!-- <br/><br/><center>Changelogs will be listed here</center> -->
+  
