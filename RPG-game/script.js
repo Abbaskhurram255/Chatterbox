@@ -772,7 +772,10 @@ function attack(attacker, defender) {
 	}
 	function isDead() {
 		if (defender === currentEnemy) {
-			if (currentEnemy.name === "Small Crippled DRAGON(!)") window.location.replace("victory.html");
+			if (currentEnemy.name === "Small Crippled DRAGON(!)") {                  
+                playText("unbelievable. aap tou waakai may ek winner niklay");
+                window.location.replace("victory.html"); 
+            }
 			addTextTobattleLogArea(`${defender.name} is dead!`);
 			addTextTobattleLogArea(`You gain +${defender.experienceWorth} experience`);
 			if (monsterLoot.length > 0) {
