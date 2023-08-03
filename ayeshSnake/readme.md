@@ -2,6 +2,8 @@
 
 ## A simple, yet responsive snake game
 ### Touch-Controlled
+---
+[Try Online!](https://abbaskhurram255.github.io/Chatterbox/ayeshSnake/) | [Get for Android](https://github.com/Abbaskhurram255/Chatterbox/raw/master/ayeshSnake/binary/ayeSnake_1.apk)
 
 <em>&copy;2023 ayeshaPT, Game licensed under GPL-3.
 <br/>&copy;2023 Music/ Backing Track licensed under <a href="https://routenote.com">RouteNote</a> & <a href="https://support.google.com/youtube/answer/2797370?hl=en">(YouTube+Facebook+Tiktok) Content ID</a></em>.
