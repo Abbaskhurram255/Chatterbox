@@ -40,10 +40,10 @@
     }
   ],
   "start_url": "./index.html",
-  "background_color": "#3367D6",
+  "background_color": "#FF49D4",
   "display": "standalone",
   "scope": "./index.html",
-  "theme_color": "#3367D6",
+  "theme_color": "#FF49D4",
   "shortcuts": [],
   "description": "A girly music player PWA resembling girl power",
   "screenshots": []
