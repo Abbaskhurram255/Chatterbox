@@ -135,7 +135,7 @@
    q119 = /(miss (yo)?u)|((aa?p|tum|tere) ko miss kar rah(aa?|i|e) h(u|oo|e|ai)n?)/i,
    q120 = /(time bataa?( d)?(o|e|ai|iy?e)n?)|(time( (bataa?o|ayesha))? kyaa? (((ho|baj) ?ra?haa?) ?)?h(e|ai))/i,
    q121 = /((who is your|k(o|ai)n h(e|ai) t(e|umhaa?)raa?) (aa?shik|lover|husband|b(oy)?f(riend)?))|((t(umhaa?|e)raa?|aa?p ?kaa?) (aa?shik|lover|husband|b(oy)?f(riend)?) k(o|au)n?)/i,
-   q122 = /(news)|(headlines)/i,
+   q122 = /(news)|(headlines)|(khabr(e|ai)n?)/i,
    q123 = /(m(ujh|ere)|h(u|a)m(aa?r(e|ai))?) se shaa?di kar((( ?l)?(o|(e|(e|a)i)n?|iji?ye))| ?ne ke baa?r(e|a(y|i)) m(e|ai)n?)? ?(k(y|(ai|e)s)aa?|gi)?/i, 
    q124 = /(ult(i|aa?) gin(ti|o|(i?y?e|ai)n?)( (kar|k(i|ee)j)(i?y?e|(e|ai)n?|o))? 5 (se|to) (0|1))|((5|paa?n(ch)?) (se|to) (0|1|(e|ai)k)( (ki|tak( ki)?))? ult(i|aa?) gin((ti|o|(i?y?e|ai)n?))?)/i,
    q125 = /(count( (from )?1)? (to(o)?|2|karo) (10|ten|das))|((10|das) tak (ki )?gin((ti|o|(i?y?e|ai)n?))?)/i,
