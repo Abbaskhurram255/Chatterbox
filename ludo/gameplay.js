@@ -287,8 +287,8 @@ var playerTurn = function(p, diceValue) {
         showSnack("6 ane ka wait kijiye please, <span style='color:" + document.querySelector('#curPlayer').style.color + "'>" + document.querySelector('#curPlayer').innerHTML + "</span>!");
         
         play(playerCycle(p, diceValue));
-        let q1 = `${document.querySelector('#curPlayer').innerText} kee baari hay abb`;
-        let q2 = `ab ${document.querySelector('#curPlayer').innerText} kee baari hay`;
+        let q1 = `${document.querySelector('#curPlayer').innerText} kee baari hey abb`;
+        let q2 = `ab ${document.querySelector('#curPlayer').innerText} kee baari hey`;
         let arr = [q1, q2];
         playText(arr[Math.floor(Math.random() * arr.length)]); 
     } else {
@@ -414,7 +414,7 @@ utterance.addEventListener("boundary", (e) => {
   currentCharacter = e.charIndex;
 });
 
-function playText(text) {
+function playText(text, pitch = 1.0) {
   if (speechSynthesis.paused && speechSynthesis.speaking) {
     return speechSynthesis.resume();
   }
@@ -425,7 +425,7 @@ function playText(text) {
     voices = window.speechSynthesis.getVoices();
   };
   utterance.voice = voices[10];
-  utterance.pitch = 1;
+  utterance.pitch = pitch;
   utterance.voiceURI = "native";
   utterance.lang = "hi";
   utterance.volume = 1;
@@ -440,3 +440,12 @@ function stopText() {
   speechSynthesis.cancel();
 }
 //end of Speech_Synth block
+
+
+document.body.onload = () => {
+	let audio = new Audio("music.mp3");
+	audio.volume = 0.6;
+	audio.autoplay = true;
+	audio.loop = true;
+	audio.play();
+}
