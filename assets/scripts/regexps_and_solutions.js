@@ -44,7 +44,7 @@
    q39 = /(what (date|day) (will it|is it (going to|gon(na)?)) be tomorrow)|((k|c)al (k(y|i)aa?|k(o|au)n ?s(aa?|i|ee)) (din|day|date|tar(i|ee)kh) ((ho|rah(e|ai)) ?g(aa?|i|ee))|(hon(e|ai) (jaa?rah|waa?l)(i|aa?) h(e|ai)))/i, 
    q40 = /(monopoly|k((o|au)n)? ?b(an(e|ai)ga)? ?c(rorepati)?)|(crorepati game)|(^crorepati$)|(board games)/i, 
    q41 = /(canvas(es)?)|((drawings?|arts?|paint(ings?)?|brush) (app|tool))|(((draw|paint)(ings?)? (kar|banaa?)n(i|aa?|e))|((sketch|canvas|painting)(e?s)? (banaa?n(aa?|e|ai)|karnaa?)) ((chaa?ha?t(a(a|i|y)?|i|ee?) )?h(u|oo|e|ai)n?))/i, 
-   q42 = /(audio (visuali(z|s)er?|player))|(play (local )?audio)|(soundjam)/i, 
+   q42 = /(audio (visuali(z|s)er?|player))|(play (local )?audio)|(soundjam)|(poweramp)|(girlpowerplay)/i, 
    q43 = /((ayesh|t)ranslat(e|or))|(english to (hindi|urdu|chinese|german|spanish|arabic|french|italian|russian))|((hindi|urdu|arabic|spanish|russian|chinese|german) to english)/i, 
    q44 = /((ayesh ?)?dict(ionary)?)|(ayesh ?nary)|(english ?(lafz k(i|a))? m(eaning|atlab))/i, 
    q45 = /(^(execute|launch|play( me)?|run) (the )?mai?ze)|(the mai?ze game)/i, 
@@ -84,7 +84,7 @@
    /((movies?'? (cast|ratings?))|(ratings? (for|of) movies?))|(movies? app)/i, 
    q73 = /(day (planner|scheduler))|((plan|schedule)( my)? day)/i, 
    q74 = /(some advi(c|s)e)|(advi(c|s)e generator)|(proverbs)|(quotes?)/i, 
-   q75 = /(giphy)|(ayesha? ?gifs)|(^gifs$)|((random|love|some) gifs)/i, 
+   q75 = /(giphy)|(ayesha? ?gifs)|(^gifs$)|((random|love|some) gifs)|(internet fun)/i, 
    q76 = 
    /(pass(code|word|phrase) (generat(e|or)|chahi?y?e))|(random pass(code|word))/i, 
    q77 = /the (logic game|constructor)/i, 
@@ -94,7 +94,7 @@
    q80 = /(ba(r|ll) game)|(rising bars)/i, 
    q81 = /((units?|\bmet(er|re)s?\b|f(oo|ee)t|area|minutes?|seconds?|hours?|time|measure|°?(c(elsius|entigrade)?|f(ahrenheit)?|k(elvin)?)) (to|conver(sion|ter)))|(to (\bmet(er|re)s?\b|f(oo|ee)t|minutes?|seconds?|hours?|time|measure|°?(c(elsius|entigrade)?|f(ahrenheit)?|k(elvin)?)))/i, 
    q82 = /(^game of (adventure|dragon)s?$)|((adventur(ous|e)|dragon|dinosaur|city|castle|battle) game)/i, 
-   q83 = /(my( fave?(orite)?)? ?books?'? ?list)|(books? (in|to) my wishlist)/i, 
+   q83 = /(my( fave?(orite)?)? ?books?'? ?(wish)list)|(books? (in|(in)?to) my wishlist)/i, 
    q84 = /(math flash ?cards)|((arithmetic|math) game)/i, 
    q85 = /((files?|images?|content) (compress|zip)((o|e)r|ion)?)|((win|7) ?(zip|rar))|((Ayesha?)? ?(zipp|archiv)er)/i, 
    q86 = /((ayesha? ?)?ludo)|(board game)/i, 
@@ -138,11 +138,11 @@
    q122 = /(news)|(headlines)|(khabr(e|ai)n?)/i,
    q123 = /(m(ujh|ere)|h(u|a)m(aa?r(e|ai))?) se shaa?di kar((( ?l)?(o|(e|(e|a)i)n?|iji?ye))| ?ne ke baa?r(e|a(y|i)) m(e|ai)n?)? ?(k(y|(ai|e)s)aa?|gi)?/i, 
    q124 = /(ult(i|aa?) gin(ti|o|(i?y?e|ai)n?)( (kar|k(i|ee)j)(i?y?e|(e|ai)n?|o))? 5 (se|to) (0|1))|((5|paa?n(ch)?) (se|to) (0|1|(e|ai)k)( (ki|tak( ki)?))? ult(i|aa?) gin((ti|o|(i?y?e|ai)n?))?)/i,
-   q125 = /(count( (from )?1)? (to(o)?|2|karo) (10|ten|das))|((10|das) tak (ki )?gin((ti|o|(i?y?e|ai)n?))?)/i,
+   q125 = /(count( (from )?1)? (to(o)?|2|karo|se) (10|ten|das))|((10|das) tak (ki )?gin((ti|o|(i?y?e|ai)n?))?)/i,
    q126 = /(gaa?na|lori)? gaa?(( ?ke)? sunaa?)? ?d?((o|ei?|ai|ij?i?y?e)n?|(sak|pa)? ?ti)/i,
-   q127 = /XXXXXXXX/i,
+   q127 = /sharm((i|ee)li|a(( k(yu|ese|iss? (l(i|ee)y(e|ay)|se)))? a?rahi|ga(i|e|y) (lagta )?h(o|e|ai)n?|aa? ?rahi) h(o|e|ai)n? kya)/i,
    q128 = /ch(u|o)d( ?ne|ai) (pe kesi|ki) awaa?z nikaa?l(o|i?y?e|ai)n?( gi)?/i,
-   q129 = /dil ki dha(r|d) ?kan sunaa?(o(gi)?|i?y?e|ai)n?/i,
+   q129 = /dil ki dha(r|d) ?kan sun(ni|aa?(o(gi)?|i?y?e|ai)n?)/i,
    q130 = /(me|h(u|a)m) t(um ?(haa?r)?|er)e se tang( ho ?gay?(aa?|e|i)?)? h(u|oo|e|ai)n?/i;
    
   
@@ -1854,8 +1854,9 @@
      $("#message").delay(10000).slideFadeToggle(800); 
     } else if (q127.test(q)) { 
      $("#message").slideFadeToggle(800); 
-     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hey aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
+     msg = "Aray nahi jee. Aap say kya sharmaanaa" + blush + inLove + hehe; 
      $output.html(msg); 
+     sound("sudden_laugh"); 
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
     } else if (q128.test(q)) { 
@@ -1866,8 +1867,10 @@
      $("#message").delay(10000).slideFadeToggle(800); 
     } else if (q129.test(q)) { 
      $("#message").slideFadeToggle(800); 
-     msg = "Barhia hoon ji may, poochne kay liye thanks. Umeed hey aap bhi ac'chay or sehti'yaab hongay? As a friend, I deeply care" + hearts; 
-     $output.html(msg); 
+     msg = ["Leejiye, suniye" + lol, "Lo. Suno..." + smirk]; 
+     let res = msg[Math.floor(Math.random() * msg.length)];
+     $output.html(res); 
+     sound("heartbeat");
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
     } else if (q130.test(q)) { 
