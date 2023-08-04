@@ -18,6 +18,12 @@ body {
   padding: 20px;
 }
 
+.top {
+	align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
 h1 {
   color: var(--primary-color);
 }
@@ -40,17 +46,17 @@ p {
 }
 
 .currency {
-  padding: 40px 0;
+  padding: 40px 20px 15px 20px;
   display: flex;
-  align-items: center;
+  align-items: centerl;
   justify-content: space-between;
 }
 
 .currency select {
   padding: 10px 20px 10px 10px;
-  -moz-appearance: none;
+     -moz-appearance: none;
   -webkit-appearance: none;
-  appearance: none;
+               appearance: none;
   border: 1px solid #dedede;
   font-size: 16px;
   /*  You may not need these following lines. The arrow did not show for me on MacOS/Chrome so I added it. Just remove it if you would like  */
@@ -64,7 +70,7 @@ p {
 .currency input {
   border: 0;
   background: transparent;
-  font-size: 30px;
+  font-size: 40px;
   text-align: right;
 }
 
@@ -88,6 +94,8 @@ button:focus {
 
 @media (max-width: 600px) {
   .currency input {
-    width: 200px;
+    width: 50px;
+    margin-left: 10px;
+    overflow: scroll;
   }
 }
