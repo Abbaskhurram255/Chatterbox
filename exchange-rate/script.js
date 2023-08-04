@@ -19,7 +19,16 @@ function calculate() {
 
       rateEl.innerText = `1 ${currency_one} = ${rate} ${currency_two}`;
 
-      amountEl_two.value = (amountEl_one.value * rate).toFixed(2);
+      let newVal = (amountEl_one.value * rate).toFixed(2);
+      amountEl_two.value = newVal;
+      console.log(newVal.split(".")[0]);
+      if (/\d\d\d./g.test(newVal)) {
+      	amountEl_two.style.fontSize = "10px" ;
+      } else if (/\d\d./g.test(newVal)) {
+      	amountEl_two.style.fontSize = "40px" ;
+      } else if (/\d./g.test(newVal)) {
+      	amountEl_two.style.fontSize = "20px" ;
+      }
     });
 }
 
@@ -36,4 +45,6 @@ swap.addEventListener('click', () => {
   calculate();
 });
 
-calculate();
+document.body.onload = () => {
+	calculate();
+}
