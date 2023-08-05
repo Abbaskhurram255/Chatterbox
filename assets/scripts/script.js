@@ -6,6 +6,19 @@ const $snack = $("#snackbar");
 
 window.onload = () => {
   startTime();
+  // playing bubbles_audio on startup
+  let bubbles_audio = new Audio('bubbles.mp3');
+  bubbles_audio.autoplay = "autoplay";
+  bubbles_audio.loop = "loop";
+  bubbles_audio.volume = "0.5";
+  setTimeout(() => bubbles_audio.play(), 5000);
+  setTimeout(() => bubbles_audio.play(), 10000);
+  setTimeout(() => bubbles_audio.play(), 15000);
+  setTimeout(() => bubbles_audio.play(), 25000);
+  setTimeout(() => bubbles_audio.play(), 35000);
+  setTimeout(() => bubbles_audio.play(), 45000);
+  setTimeout(() => bubbles_audio.play(), 50000);
+  
   /*
   $lTheme.attr("media", "");
   $dTheme.attr("media", "none");
@@ -561,7 +574,7 @@ function dateTime() {
 
 
 
-// shortcut to console/ debugger
+// shortcut ways to output stuff to the console
 //start
 function log(x) {
   return console.log(x);
@@ -569,7 +582,8 @@ function log(x) {
 
 function debug(x) {
   return console.debug(x);
-} //end
+} 
+//end
 
 // Get User's Timezone
 function seconds_with_leading_zeros(d) {
