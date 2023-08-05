@@ -765,26 +765,19 @@ const sound = (src, delay = 10000, format = "mp3", speed = 1.0) => {
 /* Function for switching Themes
 
 
-
 var lTheme, dTheme, islTh, isdTh, snack, $Theme, $dTheme;
 $lTheme = $(".lightTh");
 $dTheme = $(".darkTh");
-let snack = document.querySelector("#snackbar");
 function switchTheme() {
   if (islTh && !isdTh) {
     $lTheme.attr("media", "none");
     $dTheme.attr("media", "");
     islTh = false;
     isdTh = !islTh;
-    
-    
-   
-    
-    
-    snack.innerText = "Switched to Dark theme";
-    snack.className = "show";
+    $snack.text("Switched to Dark Theme");
+    $snack.addClass("show");
     setTimeout(function () {
-      snack.className = snack.className.replace("show", "");
+        $snack.removeClass("show");
     }, 3000);
     console.log("Switched to Dark Theme");
   } else if (isdTh && !islTh) {
@@ -792,14 +785,10 @@ function switchTheme() {
     $dTheme.attr("media", "none");
     isdTh = false;
     islTh = !isdTh;
-    
-    
-    
-    snack = document.querySelector("#snackbar");
-    snack.innerText = "Switched to Light Theme";
-    snack.className = "show";
+    $snack.text("Switched to Light Theme");
+    $snack.addClass("show");
     setTimeout(function () {
-      snack.className = snack.className.replace("show", "");
+        $snack.removeClass("show");
     }, 3000);
     console.log("Switched to Light Theme");
   }
@@ -807,17 +796,3 @@ function switchTheme() {
 
 theme switcher end block */
 
-
-// function greet() {
-//   stopText();
-//   let m = `Hi ${userName.slice(0, 4)}, kese khidmat kar sakti hu me apki?`;
-//   msg =
-//     `Hi ${userName.slice(0, 4)}, kese khidmat kar sakti hu me apki?`;
-//   playText(msg);
-//   let aBugFix = () => {
-//     return (textInput.disabled = !true);
-//   };
-//   setTimeout(aBugFix(), 2000);
-//   return
-// }
-// setTimeout(greet, 3000);
