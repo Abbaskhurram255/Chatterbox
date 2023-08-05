@@ -115,7 +115,7 @@
    q99 = /(favou?rite|pasand(ee|i)daa?) ((ghumne ki )?jagh?(aa?|(e|ai)n?)|places to (go|visit|be))/i,
    q100 = /(I('| )?a?m sorry)|(mujh(e|a?y|ai) maa?f kar ?d(o|e|ai|iji?ye)n?)|(mujhe ((e|ai)sa|ye( sab)?) nahi kehnaa? chahi?y?e tha)|((aa?p|tum|tere) ko buraa? laga( hogaa?)?)/i,
    q101 = /(fu?c?k you)|(aj(i|ee)b ho)|(ghat(iy?|y)aa? (au|o)rat)/i,
-   q102 = /(I hate you)|(you('?re| are)? stupid)/i,
+   q102 = /(I hate you)|(you(('?| a)re)? stupid)/i,
    q103 = /meri friend ban(o|(e|ai)n?)gi/i,
    q104 = /((m(e|ai)n?|h(u|a)m) b(u|o)h(o|a)t pareshaa?n h(u|oo|e|ai)n?)|(I'?( ?a)?m depressed)/i,
    q105 = /(I hate m(e|yself))|((mujh(e|ai)|h(u|a)m((e|ai)n?)?|m(e|ai)n?) khud se nafrat (kart(aa?|a?i|e))? ?h(u|oo|e|ai)n?)/i,
@@ -817,6 +817,9 @@
        alert("Please enable popups for this site!"); 
      } 
    } else if (q29.test(q)) { 
+     stopText(); 
+     msg = ""; 
+     $output.html(msg); 
      let rockPSWin = window.open( 
        "./Rock-Paper-Scissor-master/", 
        "_blank"
@@ -827,9 +830,6 @@
      } else { 
        alert("Please enable popups for this site!"); 
      } 
-     stopText(); 
-     msg = ""; 
-     $output.html(msg); 
    } else if (q30.test(q)) { 
      stopText(); 
      msg = ""; 
@@ -844,6 +844,9 @@
        alert("Please enable popups for this site!"); 
      } 
    } else if (q31.test(q)) {
+     stopText(); 
+     msg = ""; 
+     $output.html(msg); 
      let curConvAppWin = window.open("./exchange-rate/", "_blank", 
        "width=600,height=800,resizable=no,toolbar=no,menubar=no" 
      ); 
@@ -854,9 +857,6 @@
      } else { 
        alert("Conversion API failed to load, Adblocker me jake ye webpage pehle whitelist kijie please!"); 
      } 
-     stopText(); 
-     msg = ""; 
-     $output.html(msg); 
    } else if (q32.test(q)) { 
      $("#message").slideFadeToggle(800); 
      msg = 
@@ -1646,6 +1646,7 @@
      if (entertainmentAppsWin) { 
        window.focus(); 
        log("Launched a random entertainment app!"); 
+       playText("are ye bhi bolne wali baat hay? Abhi karti hu entertain aapko");
      } else { 
        alert("Please enable popups for this site!"); 
      } 
