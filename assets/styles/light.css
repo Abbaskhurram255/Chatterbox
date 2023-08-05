@@ -616,7 +616,7 @@
     } 7% {
     	background-image: url("../images/backgrounds/14.jpg");
     } 7.5% {
-    	background-image: url("../images/backgrounds/15.gif");
+    	background-image: url("../images/backgrounds/15.png");
     } 8% {
     	background-image: url("../images/backgrounds/16.jpg");
     } 8.5% {
@@ -1013,6 +1013,7 @@
    margin-left: -125px;
    background: linear-gradient(to right, #67032f, chocolate, transparent);
    /*background: linear-gradient(to right, #67032f, pink, transparent);*/
+   /* background: linear-gradient(to right, #67032f, deeppink, transparent); */
    border: 4px dotted aliceblue;
    color: #fff;
    text-align: center;
