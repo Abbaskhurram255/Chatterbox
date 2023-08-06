@@ -288,7 +288,7 @@ a {
 		<h1>Smash Cube</h1>
 		<button type="button" class="play-normal-btn">PLAY GAME</button>
 		<button type="button" class="play-casual-btn">CASUAL MODE</button>
-		<div class="credits">Copyright ⓒ 2022 AyeshaPT</div>
+		<div class="credits">Copyright ⓒ 2023 AyeshaPT</div>
 	</div>
 	<div class="menu menu--pause">
 		<h1>Paused</h1>
@@ -308,36 +308,14 @@ a {
 	
 document.body.onload = () => {
 	const backgrMusic = new Audio("music.mp3");
-	backgrMusic.id = "audio";
 	backgrMusic.volume = 0.7;
 	backgrMusic.autoplay = true;
 	backgrMusic.loop = true;
 	window.setTimeout(() => {
 		backgrMusic.play();
 	}, 2500);
-	getSoundAndFadeAudio(document.querySelector("#audio"));
 };
 
-function getSoundAndFadeAudio (audiosnippetId) {
-
-    var sound = document.getElementById(audiosnippetId);
-
-    // Set the point in playback that fadeout begins. This is for a 2 second fade out.
-    var fadePoint = sound.duration - 2; 
-
-    var fadeAudio = setInterval(function () {
-
-        // Only fade if past the fade out point or not at zero already
-        if ((sound.currentTime >= fadePoint) && (sound.volume != 0.0)) {
-            sound.volume -= 0.1;
-        }
-        // When volume at zero stop all the intervalling
-        if (sound.volume === 0.0) {
-            clearInterval(fadeAudio);
-        }
-    }, 200);
-
-}
 
 	// globalConfig.js
 // ============================================================================
@@ -1675,10 +1653,13 @@ renderMenus();
 ////////////////////
 
 // Main Menu
+let resume = new Audio("slice2.mp3");
+let replay = new Audio("slice4.mp3");
 handleClick($('.play-normal-btn'), () => {
 	setGameMode(GAME_MODE_RANKED);
 	setActiveMenu(null);
 	resetGame();
+	
 });
 
 handleClick($('.play-casual-btn'), () => {
@@ -1688,13 +1669,14 @@ handleClick($('.play-casual-btn'), () => {
 });
 
 // Pause Menu
-handleClick($('.resume-btn'), () => resumeGame());
+handleClick($('.resume-btn'), () => { resumeGame(); resume.play(); } );
 handleClick($('.menu-btn--pause'), () => setActiveMenu(MENU_MAIN));
 
 // Score Menu
 handleClick($('.play-again-btn'), () => {
 	setActiveMenu(null);
 	resetGame();
+	replay.play(); 
 });
 
 handleClick($('.menu-btn--score'), () => setActiveMenu(MENU_MAIN));
@@ -1761,6 +1743,8 @@ function setScore(score) {
 function incrementScore(inc) {
 	if (isInGame()) {
 		state.game.score += inc;
+		let brickbreak = new Audio("brickbreak.mp3");
+		setTimeout(() => { brickbreak.play()}, 250);
 		if (state.game.score < 0) {
 			state.game.score = 0;
 		}
@@ -1986,6 +1970,8 @@ function tick(width, height, simTime, simSpeed, lag) {
 					incrementScore(-25);
 				} else {
 					endGame();
+					let angry = new Audio("loser.mp3");
+					angry.play();
 				}
 			}
 			continue;
@@ -2442,6 +2428,7 @@ function handleCanvasPointerDown(x, y) {
 		pointerIsDown = true;
 		pointerScreen.x = x;
 		pointerScreen.y = y;
+		
 		// On when menus are open, point down/up toggles an interactive mode.
 		// We just need to rerender the menu system for it to respond.
 		if (isMenuVisible()) renderMenus();
@@ -2455,6 +2442,8 @@ function handleCanvasPointerUp() {
 			touchBreak: true,
 			life: touchPointLife
 		});
+		let slice = new Audio("slice.mp3");
+		slice.play();
 		// On when menus are open, point down/up toggles an interactive mode.
 		// We just need to rerender the menu system for it to respond.
 		if (isMenuVisible()) renderMenus();
@@ -2507,6 +2496,7 @@ if ('PointerEvent' in window) {
 		for (let touch of event.changedTouches) {
 			if (touch.identifier === activeTouchId) {
 				handleCanvasPointerMove(touch.clientX, touch.clientY);
+				
 				event.preventDefault();
 				break;
 			}
