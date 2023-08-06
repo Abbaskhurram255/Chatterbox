@@ -15,10 +15,12 @@
 	<script>
 		document.body.onload = () => {
 			setTimeout(() => {
-				let audio = new Audio("oh-no.mp3");
-				let audio2 = new Audio("angry.mp3");
+				let audio = new Audio("failure.mp3");
+				let audio2 = new Audio("oh-no.mp3");
+				let audio3 = new Audio("angry.mp3");
 				audio.play();
 				audio.onended = () => audio2.play();
+				audio2.onended = () => audio3.play();
 			}, 2000);
 		}
 	</script>
