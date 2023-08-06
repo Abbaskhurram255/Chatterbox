@@ -626,7 +626,7 @@
     } 9.5% {
     	background-image: url("../images/backgrounds/19.webp");
     } 10% {
-    	background-image: url("../images/backgrounds/20.webp");
+    	background-image: url("../images/backgrounds/20.webp") center fixed;
     } 10.5% {
     	background-image: url("../images/backgrounds/21.webp");
     } 11% {
