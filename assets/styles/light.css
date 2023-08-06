@@ -626,7 +626,7 @@
     } 9.5% {
     	background-image: url("../images/backgrounds/19.webp");
     } 10% {
-    	background-image: url("../images/backgrounds/20.webp") center fixed;
+    	background: url("../images/backgrounds/20.webp") center fixed;
     } 10.5% {
     	background-image: url("../images/backgrounds/21.webp");
     } 11% {
@@ -636,7 +636,7 @@
     } 12% {
     	background-image: url("../images/backgrounds/24.webp");
     } 12.5% {
-    	background-image: url("../images/backgrounds/25.webp");
+    	background: url("../images/backgrounds/25.webp") top fixed;
     } 13% {
     	background-image: url("../images/backgrounds/26.webp");
     } 13.5% {
