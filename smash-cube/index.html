@@ -2428,6 +2428,8 @@ function handleCanvasPointerDown(x, y) {
 		pointerIsDown = true;
 		pointerScreen.x = x;
 		pointerScreen.y = y;
+		let slice = new Audio("slice.mp3");
+		slice.play();
 		
 		// On when menus are open, point down/up toggles an interactive mode.
 		// We just need to rerender the menu system for it to respond.
@@ -2442,8 +2444,7 @@ function handleCanvasPointerUp() {
 			touchBreak: true,
 			life: touchPointLife
 		});
-		let slice = new Audio("slice.mp3");
-		slice.play();
+		
 		// On when menus are open, point down/up toggles an interactive mode.
 		// We just need to rerender the menu system for it to respond.
 		if (isMenuVisible()) renderMenus();
