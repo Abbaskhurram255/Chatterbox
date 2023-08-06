@@ -713,7 +713,7 @@
      $output.html(msg); 
    } else if (q24.test(q)) { 
      let games = [ 
-       "./tic-tac-toe/", 
+       "./tic-tac-toe", 
        "./hangman-master/", 
        "./Monopoly-master", 
        "https://alexs-maze-game.netlify.app/", 
@@ -726,14 +726,21 @@
        "../math-flash-cards/", 
        "https://truth-or-dare-by-alex.netlify.app", 
        "./RPG-game/", 
+       "./RPG-game/", 
+       "./smash-cube/", 
+       "./smash-cube/", 
        "./smash-cube/", 
        "./breakout-mobile", 
        "./sodoku", 
        "./ludo", 
-       "./rising-bars/", 
-       "./save-ayesha/", 
+       "./ludo", 
+       "./ludo", 
+       "./rising-bars", 
+       "./save-ayesha", 
+       "./save-ayesha", 
        "./ayeshSnake", 
-       "./muskyBird/", 
+       "./muskyBird", 
+       "./muskyBird", 
        "./Rock-Paper-Scissor-master", 
      ]; 
      if ( 
