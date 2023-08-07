@@ -39,16 +39,16 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+      -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+       -ms-flex-direction: row;
+               flex-direction: row;
+          -webkit-box-pack: center;
+               -ms-flex-pack: center;
+            justify-content: center;
+        -webkit-box-align: center;
+             -ms-flex-align: center;
+                 align-items: center;
 }
 button {
   padding: 0.5rem 2.5rem;
@@ -118,10 +118,10 @@ main {
   /* ----- results ----- */
   .player-pick,
   .enemy-pick {
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: reverse !important;
+       -webkit-box-orient: vertical !important;
+   -webkit-box-direction: reverse !important;
         -ms-flex-direction: column-reverse !important;
-            flex-direction: column-reverse !important;
+                flex-direction: column-reverse !important;
     width: 12rem !important;
     margin: 2rem 0 5rem 0;
   }
@@ -131,7 +131,8 @@ main {
   }
   .win {
     -webkit-box-shadow: 0px 0px 0px 2.5rem rgba(255, 255, 255, 0.025), 0px 0px 0px 4rem rgba(255, 255, 255, 0.025), 0px 0px 0px 6rem rgba(255, 255, 255, 0.025) !important;
-            box-shadow: 0px 0px 0px 2.5rem rgba(255, 255, 255, 0.025), 0px 0px 0px 4rem rgba(255, 255, 255, 0.025), 0px 0px 0px 6rem rgba(255, 255, 255, 0.025) !important;
+      -moz-box-shadow: 0px 0px 0px 2.5rem rgba(255, 255, 255, 0.025), 0px 0px 0px 4rem rgba(255, 255, 255, 0.025), 0px 0px 0px 6rem rgba(255, 255, 255, 0.025) !important;
+                box-shadow: 0px 0px 0px 2.5rem rgba(255, 255, 255, 0.025), 0px 0px 0px 4rem rgba(255, 255, 255, 0.025), 0px 0px 0px 6rem rgba(255, 255, 255, 0.025) !important;
   }
   .verdict {
     position: absolute;
@@ -149,16 +150,24 @@ main {
     width: 100vw;
   }
   .rules header {
-    margin-top: -30%;
-    margin-bottom: 30% !important;
+           margin-top: -30%;
+     margin-bottom: 30% !important;
     -webkit-box-pack: center !important;
-        -ms-flex-pack: center !important;
-            justify-content: center !important;
+         -ms-flex-pack: center !important;
+      justify-content: center !important;
   }
   .rules .close {
     position: absolute;
     bottom: 10%;
     left: calc(50% - 0.625rem);
+  }
+  .pink {
+  	background: pink;
+  }
+  .pink:hover {
+  -webkit-box-shadow: 3px 2px 4px 5px gray;
+     -moz-box-shadow: 3px 2px 4px 5px gray;
+               box-shadow: 3px 2px 4px 5px gray;
   }
 }
 @media only screen and (max-width: 500px) {
