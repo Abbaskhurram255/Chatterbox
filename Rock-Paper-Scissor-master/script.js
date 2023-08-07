@@ -11,6 +11,7 @@ close_rules.addEventListener("click", toggleRules);
 
 function toggleRules() {
   rules.classList.toggle("hidden");
+  document.querySelector('.change-game').classList.toggle("pink");
 }
 
 /* ------------------------- score init ------------------------- */
@@ -109,14 +110,14 @@ function optionPick(option, number_of_options) {
 
     switch (counters[picks.indexOf(pick_type)][enemy]) {
       case -1:
-        verdict_text.innerText = "YOU LOSE";
+        verdict_text.innerText = "AYESHA KI JEET";
         enemy_pick.classList.add("win");
         break;
       case 0:
-        verdict_text.innerText = "DRAW";
+        verdict_text.innerText = "DONO KI HAR";
         break;
       case 1:
-        verdict_text.innerText = "YOU WIN";
+        verdict_text.innerText = "AP KI JEET";
         player_pick.classList.add("win");
         break;
     }
