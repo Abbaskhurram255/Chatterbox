@@ -21,7 +21,7 @@ function searchMeal(e) {
       .then(res => res.json())
       .then(data => {
         console.log(data);
-        resultHeading.innerHTML = `<h2>Search results for '${term}':</h2>`;
+        resultHeading.innerHTML = `<h2>Search results for '${term}'</h2>`;
 
         if (data.meals === null) {
           resultHeading.innerHTML = `<p>Oops, we found nada. Try again!<p>`;
@@ -124,3 +124,14 @@ mealsEl.addEventListener('click', e => {
     getMealById(mealID);
   }
 });
+
+
+document.body.onload = () => {
+	setTimeout(() => {
+		let newVal = "Biryani";
+		search.value = newVal;
+		document.querySelector(".search-btn").click();
+		search.value = newVal + " - example";
+		setTimeout(() => search.value = "", 2000);
+	}, 1000);
+}
