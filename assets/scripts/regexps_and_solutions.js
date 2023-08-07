@@ -1847,7 +1847,7 @@
      $("#message").delay(10000).slideFadeToggle(800); 
     } else if (q125.test(q)) { 
      $("#message").slideFadeToggle(800); 
-     msg = "Ek say dus tak kee ginti... I mean, ek say no tak" + lol3; 
+     msg = "Ek say dus tak kee ginti..."; 
      $output.html(msg); 
      sound("count2ten");
      console.log(msg); 
