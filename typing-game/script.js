@@ -573,3 +573,12 @@ settingsForm.addEventListener('change', e => {
   difficulty = e.target.value;
   localStorage.setItem('difficulty', difficulty);
 });
+
+//play music on start
+document.body.onload = () => {
+	const music = new Audio('music.mp3');
+	music.volume = 0.5;
+	music.autoplay = "autoplay";
+	music.loop = "loop";
+	music.play();
+}
