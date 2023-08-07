@@ -717,7 +717,6 @@
        "./hangman-master/", 
        "./Monopoly-master", 
        "https://alexs-maze-game.netlify.app/", 
-       "https://alexs-simon-says.netlify.app/", 
        "./typing-game/", 
        "./mem-game/", 
        "../foto-flick/", 
@@ -1163,7 +1162,7 @@
      let typingGameWin = window.open("./typing-game/", "_blank"); 
      if (typingGameWin) { 
        window.focus(); 
-       msg = "How fast do you type? Let's test!"; 
+       msg = "Kitnaa tayz likh saktay hey aap?. Abhi pata chal ja'i gaa."; 
        playText(msg); 
        log("Launched Speed Typer"); 
      } else { 
@@ -1622,7 +1621,6 @@
        "../Trivia-Db/", 
        "./The Constructor/", 
        "../math-flash-cards/", 
-       "https://alexs-simon-says.netlify.app/", 
        "https://truth-or-dare-by-alex.netlify.app", 
        "../yoMovies", 
        "./music", 
@@ -1653,7 +1651,7 @@
      if (entertainmentAppsWin) { 
        window.focus(); 
        log("Launched a random entertainment app!"); 
-       playText("are ye bhi bolne wali baat hay? Abhi karti hu entertain aapko");
+       playText("abb ye bhi koi bolne wali baat hey? Abhi karti hu entertain aapko");
      } else { 
        alert("Please enable popups for this site!"); 
      } 
