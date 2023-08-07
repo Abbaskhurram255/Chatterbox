@@ -1,7 +1,7 @@
 const search = document.getElementById('search'),
   submit = document.getElementById('submit'),
   random = document.getElementById('random'),
-  mealsEl = document.getElementById('meals'),
+  mealsEl = document.querySelector('#meals'),
   resultHeading = document.getElementById('result-heading'),
   single_mealEl = document.getElementById('single-meal');
 
@@ -89,7 +89,7 @@ function addMealToDOM(meal) {
 
   single_mealEl.innerHTML = `
     <div class="single-meal">
-      <h1>${meal.strMeal}</h1>
+      <h1 id="mealName">${meal.strMeal}</h1>
       <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
       <div class="single-meal-info">
         ${meal.strCategory ? `<p>${meal.strCategory}</p>` : ''}
@@ -110,28 +110,29 @@ function addMealToDOM(meal) {
 submit.addEventListener('submit', searchMeal);
 random.addEventListener('click', getRandomMeal);
 
-mealsEl.addEventListener('click', e => {
-  const mealInfo = e.path.find(item => {
+for (let i = 0; i < mealsEl.length; i++) {
+     mealsEl[i].addEventListener("click", function(e) {
+       const mealInfo = e.path.find(item => {
     if (item.classList) {
       return item.classList.contains('meal-info');
     } else {
       return false;
     }
-  });
-
-  if (mealInfo) {
-    const mealID = mealInfo.getAttribute('data-mealid');
+    if (mealInfo) {
+    const mealID = mealInfo.getAttribute('data-mealID');
     getMealById(mealID);
   }
-});
+     });
+     
+     });
+ }
+ 
 
 
 document.body.onload = () => {
+	search.value = "generating random...";
 	setTimeout(() => {
-		let newVal = "Biryani";
-		search.value = newVal;
-		document.querySelector(".search-btn").click();
-		search.value = newVal + " - example";
-		setTimeout(() => search.value = "", 2000);
-	}, 1000);
+		getRandomMeal();
+	}, 100);
+	setTimeout(() => search.value = "", 500);
 }
