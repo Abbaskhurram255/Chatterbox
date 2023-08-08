@@ -1,3 +1,7 @@
+const ls = window.localStorage || localStorage;
+var hi = parseInt(ls.getItem('hiscore')) || 0;
+
+
 // Hides the crash screen so it can be unhidden later
 document.getElementById("crash-panel").classList.toggle("hidden");
 // Hides the completed screen so it can be unhidden later
@@ -11,7 +15,7 @@ document.getElementById("mute").addEventListener("click", toggleMute);
 // Reloads page when game restarted / reset button pressed
 document.getElementById("reset").addEventListener("click", reload);
 // Launches animations when Start Game button pressed
-document.getElementById("start-btn").addEventListener("click", initialiseGame);
+document.getElementById("start-btn").addEventListener("click", initializeGame);
 
 // -- Global Variables --
 
@@ -240,9 +244,11 @@ function notZeroRange(min, max) {
 // Mute button functionality
 function toggleMute() {
   music.muted = !music.muted;
+  /*
   explosion.muted = !explosion.muted;
   start.muted = !start.muted;
   completed.muted = !completed.muted;
+  */
   document.getElementById("i-muted").classList.toggle("hidden");
   document.getElementById("i-not-muted").classList.toggle("hidden");
 }
@@ -386,7 +392,7 @@ function keyDown(e) {
   } else if (e.key === "ArrowRight" || e.key === "Right") {
     moveRight();
   } else if (e.key === "Enter" && score < -99) {
-    initialiseGame();
+    initializeGame();
   } else if (e.key === "Enter" && endGame) {
     reload();
   }
@@ -426,7 +432,8 @@ document
 
 // Reloads page
 function reload() {
-  window.location.reload();
+  let string = "?track=ayesha+mehnaaz+heading+back+home&noob=true";
+  window.location.href = string;
 }
 
 // Functions to convert angle into X and Y positions of the Ship object on canvas - Used to create an array for collision detection
@@ -533,13 +540,15 @@ function drawScore() {
   } else {
     ctx.font = "2vw Orbitron, sans-serif";
   }
-  ctx.strokeText("SCORE:" + score, 10, cnvsHeight - 10);
+  ctx.strokeText("SCORE: " + score, 10, cnvsHeight - 10);
   ctx.strokeStyle = "rgba(252, 252, 252, 0.486)";
 }
 
 // Increases the value of score per frame
 function scoreIncrease() {
   score += 1;
+  if (score > 0 && score > hi) { hi = score; ls.setItem('hiscore', hi);}
+  if (score > 0 && hi == 0) { hi += 1;}
   // When player wins the game
   if (score == 10000) {
     completedScreen();
@@ -550,13 +559,21 @@ function scoreIncrease() {
 function countdown() {
   if (score < -66) {
     document.getElementById("countdowntimer").innerHTML = "3";
+    document.getElementById("start").play();
   } else if (score < -33) {
     document.getElementById("countdowntimer").innerHTML = "2";
+    document.getElementById("start").play();
   } else if (score < 0) {
     document.getElementById("countdowntimer").innerHTML = "1";
+    document.getElementById("start").play();
+  } else if (score < 66 && score > 33) {
+    document.getElementById("countdowntimer").innerHTML = "GO!";
+    document.getElementById("start").play();
   } else {
     document.getElementById("countdowntimer").innerHTML = null;
-  }
+    setTimeout(() => { document.getElementById("music").play();
+  document.getElementById("music").volume = 0.5; }, 1500);
+    }
 }
 
 // Increases the speed per frame
@@ -618,7 +635,7 @@ function update() {
   } else {
     window.requestAnimationFrame(update);
     drawStars();
-    document.getElementById("score-output").innerHTML = score;
+    document.getElementById("score-output").innerHTML = score + " | HI: " + hi;
   }
 }
 
@@ -637,13 +654,12 @@ for (var i = 0; i < numberOfStars; i++) {
 drawStars();
 
 // Called when Start Game button is pressed - Starts game rendering Sprite objects and triggering main loop
-function initialiseGame() {
+function initializeGame() {
   // Hides start panel and GitHub icon, shows direction buttons, plays audio
   document.getElementById("start-panel").classList.toggle("hidden");
   document.getElementById("bottom-banner").classList.toggle("hidden");
   document.getElementById("github").classList.toggle("hidden");
-  document.getElementById("start").play();
-  document.getElementById("music").play();
+  
 
   // Generates new Sprite object per array iteration and maintains Sprite numbers to numberOfSprites
   for (var i = 0; i < numberOfSprites; i++) {
