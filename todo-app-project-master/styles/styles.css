@@ -20,6 +20,13 @@ $desktop-breakpoint: 45rem;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 
 html {
@@ -27,7 +34,7 @@ html {
 }
 
 body {
-    background: #2B292E;
+  background: #AB297E;
   color: #fafafa;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 1.6rem;
@@ -38,7 +45,7 @@ button {
 }
 
 a {
-    color: #6F439C;
+    color: red !important;
 }
 
 /* Container */
@@ -71,7 +78,7 @@ a {
 /* Actions Bar */
 
 .actions {
-    background-color: #353239;
+    background-color: #857691;
     /* border-bottom: 1px solid #dedfe0; */
     /* color: #333333; */
     padding: 1rem
@@ -100,6 +107,10 @@ a {
     margin-right: 1.6rem;
     padding: .4rem .8rem;
 }
+input[type='checkbox'] {
+	position: relative;
+    top: .3rem;
+}
 
 .checkbox {
     display: flex;
@@ -108,6 +119,8 @@ a {
 
 .checkbox > input {
     margin-right: .4rem;
+    position: relative;
+    top: 1.2rem;
 }
 
 .button {
@@ -138,6 +151,9 @@ a {
     background: none;
     border: none;
     color: #aaa;
+}
+.removeBtn {
+    color: lavender;
 }
 
 .button--text:hover {
@@ -175,9 +191,11 @@ a {
 .list-item {
     text-decoration: none;
     color: #fafafa;
+    accent-color: yellow;
     cursor: pointer;
-    background: #353239;
+    background: linear-gradient(225deg, #880, red);
     border: 1px solid #423e47;
+    border-radius: 7rem 2rem 8rem 3rem;
     margin: 1.6rem 0;
     padding: 1rem 1.6rem;
     display: block;
