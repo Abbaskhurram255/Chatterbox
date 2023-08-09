@@ -7,36 +7,62 @@ const $snack = $("#snackbar");
 window.onload = () => {
   startTime();
   // playing bubbles_audio on startup
-  let bubbles_audio = new Audio('bubbles.mp3');
+  const bubbles_audio = new Audio('bubbles.mp3');
   bubbles_audio.autoplay = "autoplay";
   bubbles_audio.loop = "loop";
   bubbles_audio.volume = "0.5";
-  setTimeout(() => bubbles_audio.play(), 5000);
-  setTimeout(() => bubbles_audio.play(), 10000);
-  setTimeout(() => bubbles_audio.play(), 15000);
-  setTimeout(() => bubbles_audio.play(), 25000);
-  setTimeout(() => bubbles_audio.play(), 35000);
-  setTimeout(() => bubbles_audio.play(), 45000);
-  setTimeout(() => bubbles_audio.play(), 50000);
+  // keep trying to play the bubbles sfx every 5 seconds until the user finally interacts with the app, resulting the audio finally playing for real!
+  setInterval(() => {
+  	if (bubbles_audio
+  .paused || bubbles_audio
+  .currentTime)
+  	bubbles_audio.play();
+  },
+  5000);
+  // automatic speeches making the app interactive
+ const random_speech = () => {
+ 	let flirt_responses = ["hey handsome, kaysee khidmat kar sakti hu may aapki", "boariyat ho rahi ho. to abhi entertain me bolo. or fun dekho"];
+  if (
+    userName != null &&
+    userName.length >= 3 &&
+    /^[a-z\s]+$/i.test(userName) &&
+    userName != ""
+  ) {
+  	flirt_responses[1] += `, ${userName} ji`;
+  }
+  let main_responses = ["music chaalane ka bolo to music chalaaoon?", "khabray? wo bhi mil ja'i gi. sirf news bolke tou dekhiye", "reminder set karna he tou sirf reminders bolo or abhi set karo"];
+  let arr = [];
+  //joining flirt responses with main responses
+  arr.push(...flirt_responses, ...main_responses);
+  log(`Automatic responses found: ${arr.length}\n${arr}`);
+  	return arr[Math.floor(Math.random() * arr.length)];
+  }
+  //making a random speech play every 15s from the array
+  setInterval(() => {
+      if (!speechSynthesis.speaking && document.hasFocus())
+          playText(random_speech());
+  }, 15000);
   
   /*
+  extras
   $lTheme.attr("media", "");
   $dTheme.attr("media", "none");
   islTh = true;
   isdTh = false;
   */
-  //check if jQuery has finished loading every time the window loads
+  
+  //check if jQuery has finished loading every time the window loads as 90% of the relies on it!
   if (jQuery) {
     log("JQuery loaded successfully!");
   } else {
     log("Failed to load JQuery :(");
   }
-  //adding a tooltop on the input as soon as the window finishes loading
+  //add a tooltop to the input as soon as the window finishes loading
   const tippy1 = document.querySelector("#searchInput");
   tippy(tippy1, {
     content: "Mujh se pucho batane ke lie ke <strong onclick=\"document.querySelector('#searchInput').value = this.innerText;\" onmouseover=\"$(this).css('cursor', 'pointer');\">mosam kesa he?</strong> Ya pucho <strong onclick=\"$('#searchInput').val($(this).text());\" onmouseover=\"$(this).css('cursor', 'pointer')\">calendar</strong> kholne ke lie, ya pucho latest <strong onclick=\"$('#searchInput').val($(this).text())\" onmouseover=\"$(this).css('cursor', 'pointer')\">currency rates</strong> batane ke lie, sab karugi me!",
     followCursor: "horizontal",
-    interactive: true /* To add interactions to and make your tippy's text highlight-able and clickable*/ ,
+    interactive: true /* To add interactions to and make the text content of your tippy highlight-able and clickable */ ,
     appendTo: document.body,
     animation: "scale",
     duration: 1200,
@@ -46,7 +72,7 @@ window.onload = () => {
     maxWidth: 370,
   });
 
-  // Run ASK function whenever the user presses return (enter) key when they are done typing the query
+  // Run ASK function everytime the user presses return (enter) key when they are done typing their query
   $("#searchInput").keydown(function (e) {
     const code = e.keyCode ? e.keyCode : e.which;
     if (code == 13) {
@@ -56,7 +82,7 @@ window.onload = () => {
           stopText();
         }
         playText(mesg.innerText);
-        //Show a snackbar the first time the Speech Synthesis reads this text
+        //Show a snackbar everytime the user presses ENTER, making the Speech Synthesis read the text content of the message
         	$snack.text("Speech synthesis is ongoing. You cannot enter any text in the input field until it finishes.");
             $snack.addClass("show");
         setTimeout(function () {

@@ -22,7 +22,7 @@
    q19 = 
    /(tts)|(speech engine)|(text to speech)|((e|text)?(-| )?book( to |2)audio(book)?)|((document|text) reader)/i, 
    q20 = /feedback/i, 
-   q21 = /(todos?)|(reminders?)|(remind (me to|karna))|((bucket|shopping) list)|(mujh(e|ai) yaa?d (dil|kar)w?a?a?naa?)|(notes?)/i, 
+   q21 = /(todos?)|(reminders?)|(remind (me to|karna))|((bucket|shopping) list)|(mujh(e|ai) yaa?d (dil|kar)w?a?a?naa?)|(^(ayesha|open|(open )?sticky)? ?notes?)/i, 
    q22 = /(music)|(songs?)|(jukebox)|(gaa?n(e|ay))/i, 
    q23 = /((weight|mass) conver(sion|ter))|((\b\d*\b )?((k?(ilo)?s?)?g(ram)?s?|pounds?|ounces?|oz) (to|and|in|ko|((equals|(is|are) equal to|=)( how many)?)|(baraa?bar h(e|ai)n?)))/i, 
    q24 = /(random games?)|(games)|(play( me)? a game)/i, 
@@ -51,12 +51,12 @@
    q46 = /calendar/i, 
    q47 = /(world (time|clock|zones))|((time|world) ?zones)|(time around the world)|(time in \b\w+\b)|(\w+ (ka|m(e|ai)n?) time)/i, 
    q48 = /((image|pic(ture)?|photo) edit(or)?)|(ayesh('?d?| )?edit)/i, 
-   q49 = /^voice ?(notes?|recorder)$/i, 
+   q49 = /voice ?(notes?|recorder)/i, 
    q50 = /(smash cube|(box|slice|cube) game)/i, 
    q51 = /(percent(age)? calculat(or|e))|(calculate ?\b\d*\b percent(age)?)/i, 
    q52 = /XXXXYYYY/i, 
    q53 = 
-   /(how to (cook|bake))|((k(e|ai)se pakaa?te|pakaa?te k(e|ai)se) h(e|ai)n?)|(k(e|ai)se paka((u|oo|e|ai)n?|ya))|(help me( with)? (cook|bake?)(ing)?)|(ingredients)/i, 
+   /(how to (cook|bake))|((k(e|ai)se pakaa?te|pakaa?te k(e|ai)se) h(e|ai)n?)|(k(e|ai)se pakaa?((u|oo|e|ai)n?|yaa?))|(help me( with)? (cook|bake?)(ing)?)|(ingredients)/i, 
    q54 = 
    /(I'?( ?a)?m (anxious|tired|scared))|(help me (calm down|relax|with my anxiety))|(relaxer)|(thakk? (chuk|gay?)(aa?|i|e) h(u|oo|ai|e)n? (m(e|ai)n?|h(u|a)m))|((mer|h(u|a)maa?r)(a?i|e) (lag|(f|ph)at)(a?i|e) pa(r|d)(a?i|e) h(e|ai)n?)/i, 
    q55 = 
@@ -1651,7 +1651,16 @@
      if (entertainmentAppsWin) { 
        window.focus(); 
        log("Launched a random entertainment app!"); 
-       playText("abb ye bhi koi bolne wali baat hey? Abhi karti hu entertain aapko");
+       let arr = ["boar ho rahe ho? ab nahi hoge, may jo hoo aapko entertain karne ke lie. ye application use karo. or boriat bhagao", "boar ho rahe ho? abb ye bhi koi bolne wali baat hey? Abhi karti hu entertain aapko"];
+       if (
+    userName != null &&
+    userName.length >= 3 &&
+    /^[a-z\s]+$/i.test(userName) &&
+    userName != ""
+  ) {
+  	arr[1] += `, ${userName} ji`;
+  }
+       playText(arr[Math.floor(Math.random() * arr.length)]);
      } else { 
        alert("Please enable popups for this site!"); 
      } 
