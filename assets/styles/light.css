@@ -405,6 +405,7 @@
    cursor: default;
  }
  
+ /* emoji styles */
  #message .emoji {
  	position: relative;
      top: 1vh;
@@ -416,6 +417,34 @@
        -moz-align-content: left;
      -webkit-align-content: left;
                            margin: 5% 0 0 10%;
+ }
+ 
+ /* footer */
+ #butterfly {
+ 	border: 3px dotted white;
+     border-radius: 2rem;
+     background: radial-gradient(seagreen, deeppink);
+     opacity: 0.6;
+     position: relative;
+     display: block;
+     top: 16.5rem;
+ }
+ .animated-butterfly {
+ 	-webkit-animation: slide 3s infinite;
+        -moz-animation: slide 3s infinite;
+                  animation: slide 3s infinite;
+ }
+ @-webkit-keyframes slide {
+ 	from {left: 0;}
+          to {left: 3rem; opacity: 0.8;}
+ }
+ @-moz-keyframes slide {
+ 	from {left: 0;}
+          to {left: 3rem; opacity: 0.8;}
+ }
+ @keyframes slide {
+ 	from {left: 0;}
+          to {left: 3rem; opacity: 0.8;}
  }
  
  /* the "non" animated bubbles behind #message container */
