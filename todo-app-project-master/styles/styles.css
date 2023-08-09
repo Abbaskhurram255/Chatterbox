@@ -111,6 +111,9 @@ input[type='checkbox'] {
 	position: relative;
     top: .3rem;
 }
+.completed {
+	accent-color: red;
+}
 
 .checkbox {
     display: flex;
