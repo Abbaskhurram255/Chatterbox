@@ -25,7 +25,7 @@ const removeTodo = (id) => {
     return todos;
 }
 
-// Render applicatin todos
+// Render todos
 const generateTodoDOM = (todos) => {
     todos.forEach( (todo) => {
 
@@ -57,7 +57,7 @@ const generateTodoDOM = (todos) => {
 
         // Create remove button
         removeButton.textContent = 'remove';
-        removeButton.classList.add('button', 'button--text')
+        removeButton.classList.add('button', 'button--text', 'removeBtn')
         todoElement.appendChild(removeButton);
         removeButton.addEventListener('click', () =>{
             todos = removeTodo(todo.id);
