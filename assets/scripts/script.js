@@ -105,6 +105,7 @@ $(document).ready(function () {
   //JQuery onload functions go here
   $("#recIcon").click(() => {
   	$("#recIcon").addClass("mikeAnim");
+      $("#butterfly").removeClass("animated-butterfly");
   })
 });
 /* To remind you that the variable holds a jQuery selection, use $(varName) method to declare it. Plain JavaScript's method of variable declarations also work tho */
@@ -139,6 +140,7 @@ if ("SpeechRecognition" in window || "webkitSpeechRecognition" in window) {
 
     if (mobileRepeatBug == false) {
   	$("#recIcon").removeClass("mikeAnim");
+      $("#butterfly").addClass("animated-butterfly");
       noteContent = transcript;
       noteTextarea.val(noteContent);
       ask();
@@ -161,6 +163,7 @@ if ("SpeechRecognition" in window || "webkitSpeechRecognition" in window) {
       stopText();
       playText("Samjhi nahi, zaraa dubaara boli'ay");
     	$("#recIcon").removeClass("mikeAnim");
+        $("#butterfly").addClass("animated-butterfly");
     return ;
     }
   };
@@ -168,6 +171,7 @@ if ("SpeechRecognition" in window || "webkitSpeechRecognition" in window) {
   recognition.onend = () => {
   	log('Speech recognition service disconnected.');
       $("#recIcon").removeClass("mikeAnim");
+      $("#butterfly").addClass("animated-butterfly");
       $("#askBtn").click();
   }
 
