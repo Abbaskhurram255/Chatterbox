@@ -184,5 +184,9 @@ const ouch = bandage = that_hurt = that_hurts = pain = in_pain = " <img alt='emo
 let apology, apologize, uhoh, oops, oopsie, oopsy;
 const sorry = apology = apologize = uhoh = oops = oopsie = oopsy = " <img alt='emoji' class='emoji' src='assets/images/emo/sorry.png' />";
 
+let hbd;
+const cake = hbd = " <img alt='emoji' class='emoji' height='32' width='32' style='border-radius: 50%' src='assets/images/emo/cake.gif' />";
 
+let cupid_arrow, cupid, deep_in_love, love_arrow;
+const cupids_arrow = cupid_arrow = cupid = deep_in_love = love_arrow = " <img alt='emoji' class='emoji' height='32' width='32' style='border-radius: 50%' src='assets/images/emo/cupids_arrow.gif' />";
 

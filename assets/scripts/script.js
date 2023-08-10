@@ -105,7 +105,7 @@ $(document).ready(function () {
   //JQuery onload functions go here
   $("#recIcon").click(() => {
   	$("#recIcon").addClass("mikeAnim");
-      $("#butterfly").removeClass("animated-butterfly");
+      $("#disco").removeClass("animated-disco");
   })
 });
 /* To remind you that the variable holds a jQuery selection, use $(varName) method to declare it. Plain JavaScript's method of variable declarations also work tho */
@@ -140,7 +140,7 @@ if ("SpeechRecognition" in window || "webkitSpeechRecognition" in window) {
 
     if (mobileRepeatBug == false) {
   	$("#recIcon").removeClass("mikeAnim");
-      $("#butterfly").addClass("animated-butterfly");
+      $("#disco").addClass("animated-disco");
       noteContent = transcript;
       noteTextarea.val(noteContent);
       ask();
@@ -163,7 +163,7 @@ if ("SpeechRecognition" in window || "webkitSpeechRecognition" in window) {
       stopText();
       playText("Samjhi nahi, zaraa dubaara boli'ay");
     	$("#recIcon").removeClass("mikeAnim");
-        $("#butterfly").addClass("animated-butterfly");
+        $("#disco").addClass("animated-disco");
     return ;
     }
   };
@@ -171,7 +171,7 @@ if ("SpeechRecognition" in window || "webkitSpeechRecognition" in window) {
   recognition.onend = () => {
   	log('Speech recognition service disconnected.');
       $("#recIcon").removeClass("mikeAnim");
-      $("#butterfly").addClass("animated-butterfly");
+      $("#disco").addClass("animated-disco");
       $("#askBtn").click();
   }
 
@@ -427,21 +427,24 @@ if (ls.getItem("lsbday") == null) {
 //Show a snackbar if it's user's birthday today
 bday = toTitleCase(bday);
 if (isBday(bday)) {
-  $snack.text("Happy birthday");
+	$snack.text("Happy birthday");
   if (
     userName != null &&
     userName.length >= 3 &&
     /^[a-z\s]+$/i.test(userName) &&
     userName != ""
   ) {
-    $snack.append(`, ${userName}! `);
+      $snack.append(`, ${userName}! `);
   } else {
-    $snack.append("! ");
+      $snack.append("!");
   }
+  let cupids_arrow = " <img alt='emoji' class='emoji' height='32' width='32' style='border-radius: 50%' src='assets/images/emo/cupids_arrow.gif' />";
+  let cake = " <img alt='emoji' class='emoji' height='32' width='32' style='border-radius: 50%' src='assets/images/emo/cake.gif' />";
+  $snack.append(cupids_arrow);
   log("Snack text: " + $snack.text());
   $snack.addClass("show");
   setTimeout(function () {
-    $snack.removeClass("show");
+      $snack.removeClass("show");
   }, 5000);
 }
 if (

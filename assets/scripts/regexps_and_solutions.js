@@ -213,7 +213,7 @@
      if ((!isNaN(parseInt(age)) && age >= 8) && (age != "" && age.length != 0)) { 
        msg += age; 
      } else { 
-       msg += "Aapki birthday na jannay ki wajaa say calculate na karpa'i."; 
+       msg += "Aapki birthday na jannay ki wajaa say calculate na karpaa'i."; 
      } 
      msg += "</li></ul></em>"; 
      $output.html(msg); 
@@ -229,7 +229,7 @@
          function (response) { 
          	console.log(response);
            $("#message").append( 
-             `<br><b>Mazid data... jo ke app ke IP Address se lia gaya (oops, ye harkat thori jasusana nahi thi? Whisphers, <em>"sorry!"</em>) </b><br>Apki andazana location: ${response.country_name} <img src="${response.flag}" height="15vh" width="22vw"> <sup><small>[${response.country_code}]</small></sup><br>Apki national language: zyada tar ${response.languages[1].native}<br>Apka timezone: UTC ${response.time_zone.offset.slice(0,3)} ${response.time_zone.name} [${response.time_zone.abbr}]<br>Note: We value your privacy! Hence we assure you that none of your data will be shared with a third-party (not unless we have your written consent). We also assure you that this is just a demonstraion of how far the AI can go, hence the "<em>precise</em>" location.` 
+             `<br /><b>Mazid data... jo ke app ke IP Address se lia gaya (oops, ye harkat thori jasusana nahi thi? Whisphers, <em>"sorry!"</em>) </b><br />Apki andazana location: ${response.country_name} <img src="${response.flag}" height="15vh" width="22vw"> <sup><small>[${response.country_code}]</small></sup><br />Apki national language: zyada tar ${response.languages[1].native}<br />Apka timezone: UTC ${response.time_zone.offset.slice(0,3)} ${response.time_zone.name} [${response.time_zone.abbr}]<br />Note: We value your privacy! Hence we assure you that none of your data will be shared with a third-party (not unless we have your written consent). We also assure you that this is just a demonstraion of how far the AI can go, hence the "<em>precise</em>" location.` 
            ); 
          }, 
          "jsonp" 
@@ -306,7 +306,7 @@
        log(msg); 
        if (isBday(bday)) { 
          msg += 
-           " (jo kay aaj hey)<br>Happy birthday by the way" + kiss; 
+           " (jo kay aaj hey)<br />Happy birthday by the way" + love_arrow + kiss; 
            sound("hbd.mp3");
        } 
      } else { 
@@ -338,7 +338,7 @@
      bday = toTitleCase(bday);
      if (isBday(bday)) { 
          msg += 
-           "<br>Happy birthday by the way" + kiss;
+           "<br />Happy birthday by the way" + cake;
            } 
        }
      }
@@ -359,10 +359,10 @@
         if ((!isNaN(parseInt(age)) && age >= 8) && (age != "" && age.length != 0)) {
        msg = `Aap ho... ${age} kay!`; 
        if (age <= 18) { 
-         msg += "<br>Kaafi young ho yar aap to" + what2 + "... still cute though" + in_love + blush; 
+         msg += "<br />Kaafi young ho yar aap to" + what2 + "... still cute though" + in_love + blush; 
          console.log(msg); 
        }  else if (age >= 40) {
-       	msg += "<br>Don't worry, age doesn't matter... Not to me at least!<br>Aap mayray leeyay abb bhi athaara saal kay no jawaan hi ho!" + hearts;
+       	msg += "<br />Don't worry, age doesn't matter... Not to me at least!<br />Aap mayray leeyay abb bhi athaara saal kay no jawaan hi ho!" + hearts + love_arrow;
        console.log(msg);
        sound("ily");
        }
@@ -385,10 +385,10 @@
        if ((!isNaN(parseInt(age)) && age >= 8) && (age != "" && age.length != 0)) {
        msg = "Aap ho... " + age + " kay!"; 
        if (age <= 18) { 
-         msg += "<br>Kaafi young ho yar aap to" + what2 + "... still cute though" + in_love + blush;
+         msg += "<br />Kaafi young ho yar aap to" + what2 + "... still cute though" + in_love + blush;
          console.log(msg); 
        } else if (age >= 40) {
-       	msg += "<br>Don't worry, age doesn't matter... Not to me at least!<br>Aap mayray leeyay abb bhi athaara saal kay no jawaan hi ho!" + hearts;
+       	msg += "<br />Don't worry, age doesn't matter... Not to me at least!<br />Aap mayray leeyay abb bhi athaara saal kay no jawaan hi ho!" + hearts + love_arrow;
        sound("ily");
        console.log(msg);
        }
@@ -1585,7 +1585,7 @@
      $("#message").delay(10000).slideFadeToggle(800); 
      } else if (q93.test(q)) { 
      $("#message").slideFadeToggle(800); 
-     msg = "Satch?..." + blush + in_love + "<br>Oh I love you too" ;
+     msg = "Satch?..." + blush + in_love + "<br/>Oh I love you too" ;
      if ( 
        userName != null && 
        userName.length >= 3 && 
@@ -1596,7 +1596,7 @@
      } else {
      	msg += "";
      }
-     msg += hearts + kiss2; 
+     msg += hearts + kiss2 + love_arrow; 
      let audio = new Audio();
      audio.src = "assets/audio/kiss.mp3"; 
      utterance.onend = function () { audio.play(); } 
