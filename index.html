@@ -2,7 +2,8 @@
 <html lang="en-US">
   <head>
   	
-    <!-- Adding responsiveness to the website, and turning it into a progressive web application so that it's Android, iOS, and Desktop -installable -->
+    <!-- Adding responsiveness to the website, and turning it into a progressive web application so that it's Android, iOS, and Desktop -installable : -->
+    
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
@@ -17,38 +18,49 @@
     <link rel="apple-touch-icon" href="assets/images/icons/icon-192x192.png" type="image/png" />
     <link rel="icon" type="image/x-icon" sizes="64x64 32x32 24x24 16x16" href="assets/images/icons/favicon.ico" />
     
-    <!-- SEO -->
-    <!-- author's name -->
+    <!-- Some SEO : -->
+    
+    <!-- author's name :: -->
     <meta name="author" content="Ayesha Mehnaaz" />
-    <!-- app description -->
-    <meta name="description" content="AyeshaPT, your virtual girlfriend!" />
+    <!-- app description :: -->
+    <!-- for search engines ::: -->
+    <meta name="description" content="AyeshaPT, your virtual girlfriend! Makes assistance easy as hell. Just say the word, and in an instant, you'll get what you desire from the flirty girlfriend of yours! Yeah, that's right. She's both your girlfriend, and your assistant! The fun part? She speaks Hindi!" />
+    <!-- for social media ::: -->
+    <meta name="og:description" content="AyeshaPT, your virtual girlfriend! Makes assistance easy as hell. Just say the word, and get what you desire... in Hindi!" />
+    <meta property="og:type" content="website" />
+    <!-- keywords the robots should look for in a user's query. If present: show my website on the page. Else: Don't :: -->
     <meta
       name="keywords"
-      content="HTML,CSS,JavaScript,JS,bot,assistant,chatterbox,ayesha,aisha,ayeshaPT"
+      content="HTML,CSS,JavaScript,JS,bot,assistant,chatterbox,ayesha,aisha,ayeshaPT,ayesha_mehnaaz"
     />
-    
-    <!-- app title -->
+    <!-- Let the Google bots know the website is meant to be Google indexable, and should hence---along with all of its webpages---show up in the search results :: -->
+    <meta name="robots" content="index, follow" />
+    <!-- app title :: -->
+    <!-- for most social media sites, incl. LinkedIn, Facebook, and Instagram --- definitely NOT TWITTER though ::: -->
+    <meta
+      property="og:title"
+      content="ayeshaPT, a Hindi speaking robot"
+    />
+    <!-- for the browser tab ::: -->
     <title>AyeshaPT</title>
     
-    <!-- Importing Stylesheets -->
-    
-    <!-- scale animation for Tippy -->
+    <!-- Importing Stylesheets : -->
+    	
+    <!-- scale animation for Tippy :: -->
     <link
       rel="stylesheet"
       href="assets/styles/scale.css"
       type="text/css"
     />
-    <!-- translucent animation for Tippy -->
+    <!-- translucent animation for Tippy :: -->
     <link
       rel="stylesheet"
       href="assets/styles/translucent.css"
       type="text/css"
     />
-    
-    <!-- stylesheet for Light Theme -->
+    <!-- stylesheet for Light Theme :: -->
     <link class="lightTh" rel="stylesheet" href="assets/styles/light.css" />
-    
-    <!-- stylesheet for Dark Theme -->
+    <!-- stylesheet for Dark Theme :: -->
     <!-- disabled! <link class="darkTh" rel="stylesheet" href="assets/styles/style.css" /> -->
     
   </head>
@@ -56,7 +68,7 @@
 	
     <!-- <button id="thSwitcher" onclick="switchTheme()">Switch theme</button> -->
     
-    <!-- Navigation Bar -->
+    <!-- Navigation Bar : -->
     <div class="navbar-container">
       <input type="checkbox" name="menu" id="menu" class="menu-toggler" />
       <label for="menu" class="menu-toggler-label">☰</label>
@@ -66,33 +78,34 @@
         <li style="--i: 2" onclick="showPortfolio();">About Me</li>
       </ul>
     </div>
-    <!-- The time section -->
+    <!-- The time section :: -->
     <div class="hover-shadow-box-animation" id="time"></div>
     
-    <!-- Main App Container -->
+    <!-- Main App Container : -->
     <div name="app-container">
-    <!-- the logo -->
+    <!-- the logo :: -->
     <h2 no-style="background-color: green;border-radius:50% 0 90% 0%;box-shadow:darkcyan -12px -32px;"><em>AyeshaPT</em></h2>
-    <div class="container">
-      <!-- the searchbar -->
-      <input
-        id="searchInput"
-        type="text"
-        placeholder="Say 'hi'"
-        name="searchbar"
-        autocomplete="off" autofocus
-      />
-      <!-- mike icon -->
-      <img alt="mike" src="assets/images/whitemike.png" id="recIcon" name="mike-icon" class-to-be-later-added-for-animation="mikeAnim" height="34px" width="34px" class="hvr-sink">
-      <!-- the button -->
-      <button id="askBtn" onclick="ask()">Ask</button>
+    <!-- search section :: -->
+    <div class="search-section search-container">
+    	<!-- the searchbar ::: -->
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="Say 'hi'"
+          name="searchbar"
+          autocomplete="off" autofocus
+        />
+        <!-- mike icon ::: -->
+        <img alt="mike" src="assets/images/whitemike.png" id="recIcon" name="mike-icon" class-to-be-later-added-for-animation="mikeAnim" height="34px" width="34px" class="hvr-sink" />
+        <!-- the button ::: -->
+        <button id="askBtn" onclick="ask()">Ask</button>
     </div>
-    <!-- message container -->
+    <!-- message container :: -->
     <div id="message" class="thought"></div>
     </div>
-    <!-- the snackbar -->
+    <!-- the snackbar :: -->
     <div id="snackbar"></div>
-    <!-- the modal -->
+    <!-- the modal :: -->
     <div id="myModal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
@@ -105,8 +118,7 @@
           ></iframe>
         </p>
       </div>
-    </div>
-    <!-- the animated bubbles -->
+      <!-- the animated bubbles :: -->
     <div class="bubbles-container">
 		<svg class="bubbles" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 701 1024" style="overflow: visible;">		
         <g class="bubbles-large" stroke-width="7">
@@ -190,9 +202,13 @@
         </g>
     </svg>
 	</div>
-	<footer>
-	<img id="butterfly" class="animated-butterfly" src="butterfly2.gif" alt="butterfly" height="48" width="48" />
+    </div>
+    
+    <!-- footer : -->
+    <footer>
+	<img id="disco" class="animated-disco" src="disco.gif" alt="disco" height="48" width="48" />
 	</footer>
+    
 	<!-- bubbles animation end block -->
 	<!-- cube animation 
 	<div class="cube-container">
@@ -200,9 +216,9 @@
       </div>
     </div>
     <script>
-      var cube =
+      const cube =
       document.querySelector('.cube');
-      var parts = [
+      let parts = [
         'front',
         'back',
         'right',
@@ -212,19 +228,19 @@
       ];
 
       parts.forEach(part => {
-        var wrapper =
+        let wrapper =
         document.createElement('div');
         wrapper.classList.add(part);
 
         for(let i = 1; i <= 3; i++){
-          var side =
+          let side =
           document.createElement('div');
           wrapper.appendChild(side);
 
           for(let y = 1; y <= 3; y++){
-            var box =
+            let box =
             document.createElement('p');
-            box.id = "bug-fix";
+            box.id = "a-bug-fix";
             side.appendChild(box);
           }
         }
