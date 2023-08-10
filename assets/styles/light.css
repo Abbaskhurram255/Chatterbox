@@ -427,8 +427,9 @@
      opacity: 0.6;
      position: relative;
      display: block;
-     top: -15rem;
+     top: 16.5rem;
      left: 1rem;
+     overflow-y: visible;
      z-index: ;
  }
  .animated-disco {
@@ -586,7 +587,9 @@
  body, 
  html {
  	overflow-x: hidden;
+     overflow-y: visible;
      width: 100%;
+     height: 100%;
      margin: 0;
      padding: 0;
  }
