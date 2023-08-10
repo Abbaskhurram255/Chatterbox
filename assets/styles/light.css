@@ -411,7 +411,7 @@
      top: 1vh;
  }
  
- .container {
+ .search-section {
                             display: block;
                  align-content: left;
        -moz-align-content: left;
@@ -420,7 +420,7 @@
  }
  
  /* footer */
- #butterfly {
+ #disco {
  	border: 3px dotted white;
      border-radius: 2rem;
      background: radial-gradient(seagreen, deeppink);
@@ -428,23 +428,25 @@
      position: relative;
      display: block;
      top: 16.5rem;
+     left: 1rem;
+     z-index: ;
  }
- .animated-butterfly {
+ .animated-disco {
  	-webkit-animation: slide 3s infinite;
         -moz-animation: slide 3s infinite;
                   animation: slide 3s infinite;
  }
  @-webkit-keyframes slide {
- 	from {left: 0;}
-          to {left: 3rem; opacity: 0.8;}
+ 	from {left: 1rem;}
+          to {left: 4rem; opacity: 0.8;}
  }
  @-moz-keyframes slide {
- 	from {left: 0;}
-          to {left: 3rem; opacity: 0.8;}
+ 	from {left: 1rem;}
+          to {left: 4rem; opacity: 0.8;}
  }
  @keyframes slide {
- 	from {left: 0;}
-          to {left: 3rem; opacity: 0.8;}
+ 	from {left: 1rem;}
+          to {left: 4rem; opacity: 0.8;}
  }
  
  /* the "non" animated bubbles behind #message container */
@@ -1024,7 +1026,7 @@
     	background-image: url("../images/backgrounds/100.webp");
     }
 }
-/* bubbles animation for body on the bottom of the stylesheet! */
+/* note: bubbles animation for body on the bottom of the stylesheet! */
  
  /* if the device's maximum width is 500px, set padding for the body to 8px */
  @media screen and (max-width: 500px) {
@@ -1668,13 +1670,16 @@
   }
 }
 
+
+/* Cube animation overlay */
+/*
 .cube-container{
       width: 50px;
       height: 50px;
       position: relative;
       margin: 200px auto;
       opacity: 0.7;
-      /*z-index: -999999;*/
+      //z-index: -999999;
     }
     .cube{
       width: 50%;
@@ -1700,7 +1705,7 @@
  -webkit-display: flex;
     -moz-display: flex;
     }
-    #bug-fix{
+    #a-bug-fix{
       display: block;
       width: 100%;
       height: 63px;
@@ -2100,3 +2105,4 @@
       rotateX(-90deg)
       translateZ(100px);
     }
+    */
