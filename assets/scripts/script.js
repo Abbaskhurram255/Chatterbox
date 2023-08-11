@@ -21,7 +21,7 @@ window.onload = () => {
   5000);
   // automatic speeches making the app interactive
  const random_speech = () => {
- 	let flirt_responses = ["hey handsome, kaysee khidmat kar sakti hu may aapki", "boariyat ho rahi ho. to abhi entertain me bolo. or fun dekho"];
+ 	let flirt_responses = ["hey handsome, kaysee khidmat kar sakti hu may aapki", "boaree'yat ho rahi ho. to abhi entertain me bolo. or fun dekho"];
   if (
     userName != null &&
     userName.length >= 3 &&
@@ -29,6 +29,7 @@ window.onload = () => {
     userName != ""
   ) {
   	flirt_responses[1] += `, ${userName} ji`;
+      flirt_responses.push("oo. naam hee itnaa accha hey, to khud kaisay hoge");
   }
   let main_responses = ["music chaalane ka bolo to music chalaaoon?", "khabray? wo bhi mil ja'i gi. sirf news bolke tou dekhiye", "reminder set karna he tou sirf reminders bolo or abhi set karo"];
   let arr = [];
@@ -307,7 +308,7 @@ const daystilXmas = () => {
       $snack.removeClass("show");
     }, 4000);
   } else if (rslt == 1) {
-    $snack.text("Reminder: Kal Christmas hay!");
+    $snack.text("Reminder: Kal Christmas hey!");
     $snack.addClass("show");
     setTimeout(function () {
       $snack.removeClass("show");
@@ -699,7 +700,7 @@ const showFeatures = () => {
   modal.style.display = "block";
   stopText();
   msg =
-    "Mujhay kam naa samjho, Math tak kar sakti hoo may. Maslan, if you asked me to inform you whether 2020 or 2021 were a leap year, I'd let you know. And if you asked me to inform you of the date it is going to be tomorrow or the date it was yesterday lol, I'd let you know. What's more, if you asked me to inform you whether it is a weekday today or the weekend yet, I'd let you know. Aaj saal ka kaunsa din hay yay tak bata sakti hu may";
+    "Mujhay kam naa samjho, Math tak kar sakti hoo may. Maslan, if you asked me to inform you whether 2020 or 2021 were a leap year, I'd let you know. And if you asked me to inform you of the date it is going to be tomorrow or the date it was yesterday lol, I'd let you know. What's more, if you asked me to inform you whether it is a weekday today or the weekend yet, I'd let you know. Aaj saal ka kaunsa din hey yay tak bataa sakti hu may";
   playText(msg);
   let aBugFix = () => {
     return (textInput.disabled = !true);
@@ -756,7 +757,7 @@ const sound = (src, delay = 10000, format = "mp3", speed = 1.0) => {
 	if (regex.test(src)) {
 		//format found, saving for later!
 		formatFound = src.match(regex)[0];
-		log("Saved for later! Now let's just wipe it for now... so that we have a better structure.");
+		log("Saved for later! Now let's just wipe the original for now... so that we have a better coding structure afterwards.");
 		src = src.replace(regex, "");
 		log(src);
 		/* optionally, the above statement--- ie the second last statement--- could be <em>replaced</em> with these three lines:

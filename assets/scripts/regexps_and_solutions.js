@@ -92,7 +92,7 @@
    /(fisave)|(net ?worth track(er|ing))|(track (my )?net ?worth)|((my|meri) savings)|(mer(e|ay) p(e|ai)s(e|a?y) calculate karo)|(^mer(e|ay) p(e|ai)s(e|a?y)$)/i, 
    q79 = /(analog|physical|live|real(( |-)life)?) clock/i, 
    q80 = /(ba(r|ll) game)|(rising bars)/i, 
-   q81 = /((units?|\bmet(er|re)s?\b|f(oo|ee)t|area|minutes?|seconds?|hours?|time|measure|°?(c(elsius|entigrade)?|f(ahrenheit)?|k(elvin)?)) (to|conver(sion|ter)))|(to (\bmet(er|re)s?\b|f(oo|ee)t|minutes?|seconds?|hours?|time|measure|°?(c(elsius|entigrade)?|f(ahrenheit)?|k(elvin)?)))/i, 
+   q81 = /((units?|\bmet(er|re)s?\b|f(oo|ee)t|area|minutes?|seconds?|hours?|time|measure|°?(c(elsius|entigrade)?|f(ahrenheit)?|k(elvin)?)) (to|conver(sion|t(er)?)))|((t|k)o (\bmet(er|re)s?\b|f(oo|ee)t|minutes?|seconds?|hours?|time|measure|°?(c(elsius|entigrade)?|f(ahrenheit)?|k(elvin)?)))/i, 
    q82 = /(^game of (adventure|dragon)s?$)|((adventur(ous|e)|dragon|dinosaur|city|castle|battle) game)/i, 
    q83 = /(my( fave?(orite)?)? ?books?'? ?(wish)?list)|(books? (in|(in)?to) my wishlist)/i, 
    q84 = /(math flash ?cards)|((arithmetic|math) game)/i, 
@@ -1447,7 +1447,7 @@
      stopText(); 
      msg = ""; 
      $output.html(msg); 
-   } else if (q81.test(q)) { 
+   } else if (q81.test(q)) {
      let unitConvAppWin = window.open("./unit-conv/", "_blank"); 
      if (unitConvAppWin) { 
        window.focus(); 
