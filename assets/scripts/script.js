@@ -15,8 +15,13 @@ window.onload = () => {
   setInterval(() => {
   	if (bubbles_audio
   .paused || bubbles_audio
-  .currentTime)
-  	bubbles_audio.play();
+  .currentTime) {
+          if (document.hasFocus()) {
+          	bubbles_audio.play();
+          } else {
+          	bubbles_audio.pause();
+          }
+      }
   },
   5000);
   // automatic speeches making the app interactive
@@ -455,12 +460,26 @@ if (
   userName != ""
 ) { 
   if (ls.getItem("lsuserName") == null || ls.getItem("lsbday") == null) {
+  	/*
+  	swal({
+  content: {
+    element: "input",
+    attributes: {
+      placeholder: "Enter any Number",
+      // Type can be range,can be 
+      // password and can be text
+      type: "text", 
+     },
+  },
+});
+*/
   	alert(`Welcome, ${userName}!`);
       console.log(`Welcome, ${userName}. This is probably your first time!`);
   } else {
   	alert(`Welcome back, ${userName}!`);
       console.log(`Welcome back. You're definitely not new to this application!`);
   }
+  //if doesn't submit any of the prompts, and HASN'T
 } else {
   alert("Welcome, luv!");
   console.log("Welcome, luv!");
