@@ -460,28 +460,26 @@ if (
   userName != ""
 ) { 
   if (ls.getItem("lsuserName") == null || ls.getItem("lsbday") == null) {
-  	/*
-  	swal({
-  content: {
-    element: "input",
-    attributes: {
-      placeholder: "Enter any Number",
-      // Type can be range,can be 
-      // password and can be text
-      type: "text", 
-     },
-  },
+
+/*
+      Swal.fire({
+  title: 'Sweet!',
+  text: 'Modal with a custom image.',
+  imageUrl: 'https://unsplash.it/400/200',
+  imageWidth: 400,
+  imageHeight: 200,
+  imageAlt: 'Custom image',
 });
 */
-  	alert(`Welcome, ${userName}!`);
+  	Swal.fire({title: `Welcome, ${userName}`});
       console.log(`Welcome, ${userName}. This is probably your first time!`);
   } else {
-  	alert(`Welcome back, ${userName}!`);
+  	Swal.fire({title: `Welcome back, ${userName}`});
       console.log(`Welcome back. You're definitely not new to this application!`);
   }
   //if doesn't submit any of the prompts, and HASN'T
 } else {
-  alert("Welcome, luv!");
+  Swal.fire({title: "Welcome, luv!"});
   console.log("Welcome, luv!");
 }
 

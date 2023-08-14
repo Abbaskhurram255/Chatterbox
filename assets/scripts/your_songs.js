@@ -4,12 +4,12 @@ const mySelfMadeEDM = [
   {src: "bar.mp3", name: "", group: "", year:"", cover: ""},
 ];
 
-let audio = new Audio();
+let bgAmbience = new Audio();
 
 const playRandomFile = () => {
-  audio.src = mySelfMadeEDM[~~(Math.random() * mySelfMadeEDM.length)].src;
-  audio.volume = 0.3;
-  audio.play();
+  bgAmbience.src = mySelfMadeEDM[~~(Math.random() * mySelfMadeEDM.length)].src;
+  bgAmbience.volume = 0.3;
+  bgAmbience.play();
 };
 
-audio.addEventListener("ended", playRandomFile);
+bgAmbience.addEventListener("ended", playRandomFile);
