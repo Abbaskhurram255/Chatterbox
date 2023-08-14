@@ -23,9 +23,9 @@
    /(tts)|(speech engine)|(text to speech)|((e|text)?(-| )?book( to |2)audio(book)?)|((document|text) reader)/i, 
    q20 = /feedback/i, 
    q21 = /(todos?)|(reminders?)|(remind (me to|karna))|((bucket|shopping) list)|(mujh(e|ai) yaa?d (dil|kar)w?a?a?naa?)|(^(ayesha|open|(open )?sticky)? ?notes?)/i, 
-   q22 = /(music)|(songs?)|(jukebox)|(gaa?n(e|ay))/i, 
+   q22 = /(music)|(songs?)|(jukebox)|(gaa?n(e|ay?))/i, 
    q23 = /((weight|mass) conver(sion|ter))|((\b\d*\b )?((k?(ilo)?s?)?g(ram)?s?|pounds?|ounces?|oz) (to|and|in|ko|((equals|(is|are) equal to|=)( how many)?)|(baraa?bar h(e|ai)n?)))/i, 
-   q24 = /((ayesha|random|k(uch|oi)) games?)|(games)|(play( me)? a game)/i, 
+   q24 = /(((ayesha|yaa?r)|random|k(uch|oi)) games?)|(games)|(play( me)? a game)/i, 
    q25 = /(breakout)|(brick (game|breaker))/i, 
    q26 = /sodoku/i, 
    q27 = /(^(play( me)?|run|launch|execute|open) hangman)|((hollywood|word) game)/i, 
@@ -713,9 +713,7 @@
      $output.html(msg); 
    } else if (q24.test(q)) { 
      let games = [ 
-       "./tic-tac-toe", 
-       "./hangman-master/", 
-       "./Monopoly-master", 
+       "./Rock-Paper-Scissor-master", 
        "https://alexs-maze-game.netlify.app/", 
        "./typing-game/", 
        "./mem-game/", 
@@ -740,7 +738,9 @@
        "./ayeshSnake", 
        "./muskyBird", 
        "./muskyBird", 
-       "./Rock-Paper-Scissor-master", 
+       "./tic-tac-toe", 
+       "./hangman-master/", 
+       "./Monopoly-master", 
      ]; 
      if ( 
        bday != null && 
