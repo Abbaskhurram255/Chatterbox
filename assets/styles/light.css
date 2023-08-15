@@ -28,9 +28,9 @@
    /*padding: 4vh;*/
    position: relative;
    /*top: 2.5vh;*/
-   top: 1.1rem;
-   height: 2.5rem;
-   width: 2.5rem;
+   top: 1rem;
+   height: 2.6rem;
+   width: 2.6rem;
                border-radius: 15px;
   -webkit-border-radius: 15px;
      -moz-border-radius: 15px;
@@ -176,18 +176,21 @@
   -webkit-animation: rotateOut 2s 1 reverse;
      -moz-animation: rotateOut 2s 1 reverse;
                animation: rotateOut 2s 1 reverse;
-  /*default prop for its color:   color: black;    */
  }
  
+ #time:active {
+ 	color: gold;
+ }
  
  /* time hover animation 1: 360 degree spin */
- #time:active, #time:hover, #time:focus {
+ #time:hover, #time:focus {
    -webkit-animation: rotate360 2s 1 reverse;
       -moz-animation: rotate360 2s 1 reverse;
         -ms-animation: rotate360 2s 1 reverse;
            -o-animation: rotate360 2s 1 reverse;
                 animation: rotate360 2s 1 reverse;
  }
+ 
  
  @-webkit-keyframes rotate360 {
  	    from {-webkit-transform: rotate(0);}
@@ -321,48 +324,82 @@
     	from { color: white;}
              to { color: darkred;}
       }
-
- 
- #time:active {
-   color: gold;
- }
  
  
- input {
+ #searchInput {
   margin: 0 5px ;
-  padding: 0 0 0 10px;
-  letter-spacing: 0.7px;
+  padding: 10px 0 0 10px;
+  letter-spacing: 1.4px;
   outline: none;
   border: 3px solid rgba(225, 0,125, 0.4);
   height: 48px;
   border-radius: 35px 5px;
   width: 65%;
-  background: rgba(45,100,100, 0.3);
-  color: rgba(225,225,225,0.7);
+  backgroupnd: linear-gradient(45deg, rgba(45,100,100, 0.3), rgba(140, 170, 140, 0.7), transparent);
+  background: linear-gradient(45deg, rgba(173, 129, 0, 0.8), transparent);
+  color: rgba(225, 225, 225, 0.7);
   font-family: 'Creepster', helvetica;
+  backdrop-filter: blur(0px);
+ }
+ .glassy-input {
+  -webkit-animation: glass 3s infinite;
+     -moz-animation: glass 3s infinite;
+       -ms-animation: glass 3s infinite;
+          -o-animation: glass 3s infinite;
+               animation: glass 3s infinite;
  }
  
- input::placeholder {
-     color: rgba(225,225,220,0.7);
+ /* glass animation */
+ @-webkit-keyframes glass {
+ 	0%, 60%, 100% {background: linear-gradient(45deg, rgba(173, 129, 0, 0.8), transparent);}
+         70% {background: linear-gradient(45deg, transparent, rgba(173, 129, 0, 0.8));}
+ }
+ @-moz-keyframes glass {
+ 	0%, 60%, 100% {background: linear-gradient(45deg, rgba(173, 129, 0, 0.8), transparent);}
+         70% {background: linear-gradient(45deg, transparent, rgba(173, 129, 0, 0.8));}
+ }
+ @-ms-keyframes glass {
+ 	0%, 60%, 100% {background: linear-gradient(45deg, rgba(173, 129, 0, 0.8), transparent);}
+         70% {background: linear-gradient(45deg, transparent, rgba(173, 129, 0, 0.8));}
+ }
+ @-o-keyframes glass {
+ 	0%, 60%, 100% {background: linear-gradient(45deg, rgba(173, 129, 0, 0.8), transparent);}
+         70% {background: linear-gradient(45deg, transparent, rgba(173, 129, 0, 0.8));}
+ }
+ @keyframes glass {
+ 	0%, 60%, 100% {background: linear-gradient(45deg, rgba(173, 129, 0, 0.8), transparent);}
+         70% {background: linear-gradient(45deg, transparent, rgba(173, 129, 0, 0.8));}
+ }
+ 
+ #searchInput::placeholder {
+     color: rgba(225, 225, 225, 0.7);
  }
  
   #searchInput:active {
-   /*background-color: rgba(205,165, 0, 0.4);*/
-   background-color: rgba(108, 0, 32, 0.4);
+   /*background: rgba(205,165, 0, 0.4);*/
+   background: rgba(108, 0, 32, 0.4);
+   -webkit-animation: none;
+      -moz-animation: none;
+        -ms-animation: none;
+           -o-animation: none;
+                animation: none;
  }
  
+ 
+ /* app title */
  h2 {
-  font-size: 42px;
+  font-size: 48px;
   font-family: 'Gloria Hallelujah', sans-serif;
   font-weight: 800; /* bold */
   color: rgba(225,225,225,0.7);
   text-align: center;
   -webkit-text-shadow: 3px 2px 2px seagreen;
      -moz-text-shadow: 3px 2px 2px seagreen;
+       -ms-text-shadow: 3px 2px 2px seagreen;
           -o-text-shadow: 3px 2px 2px seagreen;
                text-shadow: 3px 2px 2px seagreen;
-  padding: 25px;
-  margin: 45px 25px 25px 25px;
+  padding: 4rem 2rem 1rem 2rem;
+  margin: 45px 25px 25px 0px;
   /*
   border: 9px dotted darkgray;
   border-radius: 40px 1px 30px;
@@ -370,6 +407,107 @@
   */
  }
  
+ .band:hover, .band:focus, .band:active {
+                -webkit-animation-name: rubberEffect;
+                -webkit-animation-direction: linear;
+                -webkit-animation-duration: 1s;
+                
+                -moz-animation-name: rubberEffect;
+                -moz-animation-direction: linear;
+                -moz-animation-duration: 1s;
+                
+                -ms-animation-name: rubberEffect;
+                -ms-animation-direction: linear;
+                -ms-animation-duration: 1s;
+                
+                -o-animation-name: rubberEffect;
+                -o-animation-direction: linear;
+                -o-animation-duration: 1s;
+                
+                animation-name: rubberEffect;
+                animation-direction: linear;
+                animation-duration: 1s;
+            }
+ 
+            @-webkit-keyframes rubberEffect {
+                0% {
+                    -webkit-transform: scale(1, 1);
+                }
+                25% {
+                    -webkit-transform: scale(1.3, 0.6);
+                }
+ 
+                50% {
+                    -webkit-transform: scale(1.1, 0.9);
+                }
+                100% {
+                    -webkit-transform: scale(1, 1);
+                }
+            }
+            @-moz-keyframes rubberEffect {
+                0% {
+                    -moz-transform: scale(1, 1);
+                }
+                25% {
+                    -moz-transform: scale(1.3, 0.6);
+                }
+ 
+                50% {
+                    -moz-transform: scale(1.1, 0.9);
+                }
+                100% {
+                    -moz-transform: scale(1, 1);
+                }
+            }
+            @-ms-keyframes rubberEffect {
+                0% {
+                    -ms-transform: scale(1, 1);
+                }
+                25% {
+                    -ms-transform: scale(1.3, 0.6);
+                }
+ 
+                50% {
+                    -ms-transform: scale(1.1, 0.9);
+                }
+                100% {
+                    -ms-transform: scale(1, 1);
+                }
+            }
+            @-o-keyframes rubberEffect {
+                0% {
+                    -o-transform: scale(1, 1);
+                }
+                25% {
+                    -o-transform: scale(1.3, 0.6);
+                }
+ 
+                50% {
+                    -o-transform: scale(1.1, 0.9);
+                }
+                100% {
+                    -o-transform: scale(1, 1);
+                }
+            }
+            @keyframes rubberEffect {
+                0% {
+                    transform: scale(1, 1);
+                }
+                25% {
+                    transform: scale(1.3, 0.6);
+                }
+ 
+                50% {
+                    transform: scale(1.1, 0.9);
+                }
+                100% {
+                    transform: scale(1, 1);
+                }
+            }
+ 
+ 
+ 
+ /* styles for the message container */
  #message {
   padding: 25px;
   border-radius: 32px 16px 32px;
@@ -411,13 +549,17 @@
      top: 1vh;
  }
  
+ 
+ 
  .search-section {
                             display: block;
                  align-content: left;
        -moz-align-content: left;
      -webkit-align-content: left;
-                           margin: 5% 0 0 10%;
+                           margin: 15% 0 0 10%;
  }
+ 
+ 
  
  /* footer */
  #disco {
@@ -523,7 +665,7 @@
 /* end block */
 
  
-  button {
+  #askBtn {
  /* box-shadow: 1px 4px 5px 1px rgba(30,30,30,0.3);*/
   font-family: 'Caesar Dressing', cursive;
   width: 20%;
@@ -552,7 +694,7 @@
                              color: #fff;
  }
  
- button:hover {
+ #askBtn:hover {
                          cursor: pointer;
                          border: 1px solid;
                 box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
@@ -574,7 +716,7 @@
                            color: plum;
  }
  
- button:active {
+ #askBtn:active {
    color: aqua;
  }
   
