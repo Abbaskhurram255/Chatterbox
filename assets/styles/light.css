@@ -332,7 +332,7 @@
   letter-spacing: 1.4px;
   outline: none;
   border: 3px solid rgba(225, 0,125, 0.4);
-  height: 2.6rem;
+  height: 48px;
   border-radius: 35px 5px;
   width: 65%;
   backgroupnd: linear-gradient(45deg, rgba(45,100,100, 0.3), rgba(140, 170, 140, 0.7), transparent);
