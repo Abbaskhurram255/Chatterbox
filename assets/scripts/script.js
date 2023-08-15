@@ -111,8 +111,13 @@ $(document).ready(function () {
   //JQuery onload functions go here
   $("#recIcon").click(() => {
   	$("#recIcon").addClass("mikeAnim");
+      $("#searchInput").removeClass("glassy-input");
       $("#disco").removeClass("animated-disco");
-  })
+  });
+  $("#logo").on("click", () => {
+  	$("#logo").addClass("band");
+      setTimeout(() => $("#logo").removeClass("band"), 1000);
+  });
 });
 /* To remind you that the variable holds a jQuery selection, use $(varName) method to declare it. Plain JavaScript's method of variable declarations also work tho */
 
@@ -146,6 +151,7 @@ if ("SpeechRecognition" in window || "webkitSpeechRecognition" in window) {
 
     if (mobileRepeatBug == false) {
   	$("#recIcon").removeClass("mikeAnim");
+      $("#searchInput").addClass("glassy-input");
       $("#disco").addClass("animated-disco");
       noteContent = transcript;
       noteTextarea.val(noteContent);
@@ -169,6 +175,7 @@ if ("SpeechRecognition" in window || "webkitSpeechRecognition" in window) {
       stopText();
       playText("Samjhi nahi, zaraa dubaara boli'ay");
     	$("#recIcon").removeClass("mikeAnim");
+        $("#searchInput").addClass("glassy-input");
         $("#disco").addClass("animated-disco");
     return ;
     }
@@ -177,6 +184,7 @@ if ("SpeechRecognition" in window || "webkitSpeechRecognition" in window) {
   recognition.onend = () => {
   	log('Speech recognition service disconnected.');
       $("#recIcon").removeClass("mikeAnim");
+      $("#searchInput").addClass("glassy-input");
       $("#disco").addClass("animated-disco");
       $("#askBtn").click();
   }
@@ -389,6 +397,24 @@ const daystilNYD = () => {
   }
 };
 
+/*
+Swal.fire({
+  title: 'Naam jan sakti hu me apka?',
+  input: 'text',
+  inputPlaceholder: 'aapka naam?',
+  imageUrl: 'welcome.png',
+  imageWidth: 400,
+  imageHeight: 200,
+  imageAlt: 'Welcome to my application',
+}).then((result) => {
+	let val = result.value;
+	if (val) {
+		log(val);
+		return setTimeout(() => { userName = val; }, 2000);
+	}
+});
+*/
+
 var msg;
 const ls = localStorage || window.localStorage;
 var userName = ls.getItem("lsuserName") || prompt("Hello ji! Naam jan sakti hu me apka? Apparently, ap ek first time user hen!");
@@ -462,14 +488,7 @@ if (
   if (ls.getItem("lsuserName") == null || ls.getItem("lsbday") == null) {
 
 /*
-      Swal.fire({
-  title: 'Sweet!',
-  text: 'Modal with a custom image.',
-  imageUrl: 'https://unsplash.it/400/200',
-  imageWidth: 400,
-  imageHeight: 200,
-  imageAlt: 'Custom image',
-});
+      
 */
   	Swal.fire({title: `Welcome, ${userName}`});
       console.log(`Welcome, ${userName}. This is probably your first time!`);
