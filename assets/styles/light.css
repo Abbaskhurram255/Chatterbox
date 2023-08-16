@@ -565,12 +565,15 @@
  #disco {
  	border: 3px dotted white;
      border-radius: 2rem;
+     background: -webkit-radial-gradient(seagreen, deeppink);
+     background: -moz-radial-gradient(seagreen, deeppink);
+     background: -ms-radial-gradient(seagreen, deeppink);
      background: radial-gradient(seagreen, deeppink);
      opacity: 0.6;
      position: relative;
      display: block;
-     top: 15.5rem;
      left: 1rem;
+     top: 47vh;
      z-index: ;
  }
  .animated-disco {
@@ -1177,6 +1180,35 @@
      padding: 8px;
    }
  }
+@media screen and (max-width: 400px) {
+ img#disco { top: 30vh; height: 48px; width: 48px; border-radius: 50%;}
+ }
+@media screen and (max-width: 500px) and (max-height: 700px) {
+ img#disco { top: 25vh; height: 96px; width: 96px; border-radius: 50%;}
+ }
+@media screen and (max-width: 768px) and (min-height: 700px) {
+ img#disco { top: 40vh; height: 96px; width: 96px; border-radius: 50%;}
+ }
+@media screen and (max-width: 600px) and (max-height: 800px) {
+ img#disco { top: 25vh; height: 96px; width: 96px; border-radius: 50%;}
+ }
+@media screen and (max-height: 600px) and (max-height: 600px) {
+ #recIcon {top: 3vh !important}
+ body {padding: .5rem}
+ img#disco { top: 13vh; height: 48px; width: 48px; border-radius: 50%;}
+ }
+@media screen and (min-width: 1200px) and (min-height: 700px) {
+ #recIcon {top: 2.2vh !important}
+ body {padding: .5rem}
+ img#disco { top: 13vh; height: 48px; width: 48px; border-radius: 50%;}
+ }
+@media screen and (min-width: 800px) and (min-height: 700px) {
+ h2#logo {font-size: 8rem !important;}
+ input{height: 8vh !important}
+ #recIcon {top: 4vh !important; padding: 3vh !important; height: 2vh !important; width: 3vh !important;}
+ #askBtn {height: 9vh}
+ img#disco { top: 30vh; height: 128px; width: 128px; border-radius: 50%;}
+}
  
  
  /* Snackbar section */
