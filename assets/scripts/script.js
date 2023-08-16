@@ -415,6 +415,33 @@ Swal.fire({
 });
 */
 
+/*
+prompt("Hello ji! Naam jan sakti hu me apka? Apparently, ap ek first time user hen!");
+*/
+/*
+const fetch = async function() {
+	Swal.fire({
+  title: 'Naam jan sakti hu me apka?',
+  input: 'text',
+  inputPlaceholder: 'aapka naam?',
+  imageUrl: 'welcome.png',
+  imageWidth: 400,
+  imageHeight: 200,
+  imageAlt: 'Welcome to my application',
+}).then((result) => {
+	let val = result.value;
+	if (val) {
+		log(val);
+		return setTimeout(() => { userName = val; }, 2000);
+	}
+});
+}
+async function now() {
+	let res = await fetch();
+	return res;
+}
+*/
+
 var msg;
 const ls = localStorage || window.localStorage;
 var userName = ls.getItem("lsuserName") || prompt("Hello ji! Naam jan sakti hu me apka? Apparently, ap ek first time user hen!");
@@ -486,19 +513,19 @@ if (
   userName != ""
 ) { 
   if (ls.getItem("lsuserName") == null || ls.getItem("lsbday") == null) {
-
-/*
-      
-*/
-  	Swal.fire({title: `Welcome, ${userName}`});
+  	Swal.fire({title: `Welcome, <br/>\@${userName}`, confirmButtonText:
+    'Thanks👍',
+  confirmButtonAriaLabel: 'Thumbs up, great!'});
       console.log(`Welcome, ${userName}. This is probably your first time!`);
   } else {
-  	Swal.fire({title: `Welcome back, ${userName}`});
+  	Swal.fire({title: `Welcome back, <br/>\@${userName}`, confirmButtonText:
+    'That\'s great😃',
+  confirmButtonAriaLabel: 'Thumbs up, great!'});
       console.log(`Welcome back. You're definitely not new to this application!`);
   }
   //if doesn't submit any of the prompts, and HASN'T
 } else {
-  Swal.fire({title: "Welcome, luv!"});
+  Swal.fire({title: "Welcome, l💗v!", confirmButtonText: "Okay"});
   console.log("Welcome, luv!");
 }
 
