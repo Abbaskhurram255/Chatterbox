@@ -26,7 +26,7 @@ window.onload = () => {
   5000);
   // automatic speeches making the app interactive
  const random_speech = () => {
- 	let flirt_responses = ["hey handsome, kaysee khidmat kar sakti hu may aapki", "boaree'yat ho rahi ho. to abhi entertain me bolo. or fun dekho"];
+ 	let flirt_responses = ["hey handsome, kaysee khidmat kar sakti hu may aapki", "boaree'yat ho rahi ho. to abhi entertain me bolo. or fun dekho", "boaree'yat ho rahi ho. tou saath may ludo khele?", "sketches aur arts se pyaar hey? how sweet, mujhe bhi. Abhi brush tool ya canvas likho, or banaao apne khud kay sketches", "boaree'yat ho rahi ho. to abhi internet fun bolo. or fun dekho"];
   if (
     userName != null &&
     userName.length >= 3 &&
@@ -34,10 +34,10 @@ window.onload = () => {
     userName != ""
   ) {
   	flirt_responses[1] += `, ${userName} ji`;
+      flirt_responses[2] += `, ${userName} ji`;
       flirt_responses.push("oo. naam hee itnaa accha hey, to khud kaisay hoge");
-      log("hi");
   }
-  let main_responses = ["music chaalane ka bolo to music chalaaoon?", "khabray? wo bhi mil ja'i gi. sirf news bolke tou dekhiye", "reminder set karna hey tou sirf reminders bolo or abhi set karo", "words translate karne hey tou sirf translate now bolo, or translation haasil karo", "dictionary bhi available hey", "apne shay'here ka mausam bolo tou wo bhi bataa sakti hu", "photo editor bhi available hey", "currency converter bhi available hey, jab chaaho ek currency se dusri currency ka exchange rate pataa karo", "youtube chalaane ke lee'yay bolo tou wo bhi chalaaoon?", "encyclopedia bhi available hey", "Bank say lee'ya hua loan kaysay chukta hoga. ye tak bataa sakti hu may"];
+  let main_responses = ["music chaalane ka bolo to music chalaaoon?", "khabray? wo bhi mil ja'i gi. sirf news bolke tou dekhiye", "reminder set karna hey tou sirf reminders bolo or abhi set karo", "words translate karne hey tou sirf translate now bolo, or translation haasil karo", "dictionary bhi available hey", "apne shay'here ka mausam bolo tou wo bhi bataa sakti hu", "photo editor bhi available hey", "currency converter bhi available hey, jab chaaho ek currency se doosri currency ka exchange rate pataa karo", "youtube chalaane ke lee'yay bolo tou wo bhi chalaaoon?", "encyclopedia bhi available hey, jahaa aap ek ek cheez ki jaankaari paa sakte hey sirf oos ka naam likh kay. Kya cheez hay, kab bani, or kis ne banaaya. wagayra, wagayra", "Bank say lee'ya hua loan kaysay chukta hoga. ye tak bataa sakti hu may. sirf loan calculator likho tou", "strong password chaheeyay taakay koi bhi aapkay kisi bhi account ka password na tor sakay to abhi password generator likho, or. ek mazboot password haasil karo. . advice. is password ko ek acchi see jagaa save karke rakheeyay gaa taakay aap khud hee na bhool jaa'ay haha!", "life me behtree laane ki salaah chahte ho tou abhi advice generator bolo, or salaah haasil karo"];
   let arr = [];
   //joining flirt responses with main responses
   arr.push(...flirt_responses, ...main_responses);

@@ -43,7 +43,7 @@
    q38 = /(what (date|day) was it yesterday)|((k|c)al (k(y|i)aa?|k(o|au)n ?s(aa?|i|ee)) (din|day|date|tar(i|ee)kh) (rah|th)(aa?|i|ee))/i, 
    q39 = /(what (date|day) (will it|is it (going to|gon(na)?)) be tomorrow)|((k|c)al (k(y|i)aa?|k(o|au)n ?s(aa?|i|ee)) (din|day|date|tar(i|ee)kh) ((ho|rah(e|ai)) ?g(aa?|i|ee))|(hon(e|ai) (jaa?rah|waa?l)(i|aa?) h(e|ai)))/i, 
    q40 = /(monopoly|k((o|au)n)? ?b(an(e|ai)gaa?)? ?(c|k)a?(ro(r|d)e? ?pati)?)|((c|k)a?ro(r|d)e? ?pati game)|(^crorepati$)|(board games)/i, 
-   q41 = /(canvas(es)?)|((drawings?|arts?|paint(ings?)?|brush) (app|tool))|(((draw|paint)(ings?)? (kar|banaa?)n(i|aa?|e))|((sketch|canvas|painting)(e?s)? (banaa?n(aa?|e|ai)|karnaa?)) ((chaa?ha?t(a(a|i|y)?|i|ee?) )?h(u|oo|e|ai)n?))/i, 
+   q41 = /(canvas(es)?)|((drawings?|arts?|paint(ings?)?|brush|sketches) (app|tool))|(((draw|paint)(ings?)? (kar|banaa?)n(i|aa?|e))|((sketch|canvas|painting)(e?s)? (banaa?n(aa?|e|ai)|karnaa?)) ((chaa?ha?t(a(a|i|y)?|i|ee?) )?h(u|oo|e|ai)n?))|(I (want|love|like)( to)? (sketch|draw|paint)(ing)?)/i, 
    q42 = /(audio (visuali(z|s)er?|player))|(play (local )?audio)|(soundjam)|(poweramp)|(girl ?power ?play)/i, 
    q43 = /((ayesh|t)ranslat(e|or))|(english to (hindi|urdu|chinese|german|spanish|arabic|french|italian|russian))|((hindi|urdu|arabic|spanish|russian|chinese|german) to english)/i, 
    q44 = /((ayesh ?)?dict(ionary)?)|(ayesh ?nary)|(english ?(lafz k(i|a))? m(eaning|atlab))/i, 
@@ -83,7 +83,7 @@
    q72 = 
    /((movies?'? (cast|ratings?))|(ratings? (for|of) movies?))|(movies? app)/i, 
    q73 = /(day (planner|scheduler))|((plan|schedule)( my)? day)/i, 
-   q74 = /(some advi(c|s)e)|(advi(c|s)e generator)|(proverbs)|(quotes?)/i, 
+   q74 = /(some advi(c|s)e)|(advi(c|s)e generator)|(proverbs)|(quotes?)|(salaah)/i, 
    q75 = /(giphy)|(ayesha? ?gifs)|(^gifs$)|((random|love|some) gifs)|(internet fun)/i, 
    q76 = 
    /(pass(code|word|phrase) (generat(e|or)|chahi?y?e))|(random pass(code|word))/i, 
@@ -129,7 +129,7 @@
    q113 = /crap|brat|fool|(mother)?fuck(er)?s?|mf|mofo|twats?|cunts?|cock(biter|sucker)?s?|boobs?|morons?|douche?(bag)?s?|pricks?|dicks?|(ass|arse) ?(hole)?s?|dick(head)?s?|fag(got)?|nigg?(a|er)|fucking|f\*cking|f\*ck|bitch|b\*tch|shit|sh\*t|fool|dumb|couch potato|\*ssh\*l\*|\*\*\*\*|c\*ck|\*\*\*\*sucker|c\*cks\*ck\*r|\*\*\*\*|c\*nt|dickhead|d\*c\*h\*a\*|\*\*\*\*|f\*c\*|\*\*\*\*wit|f\*ckw\*t|fuk|f\*k|fuking|f\*k\*ng|mother\*\*\*\*er|m\*th\*rf\*ck\*r|\*\*\*\*\*\*|n\*gg\*r|pussy|p\*ssy|\*\*\*\*|sh\*t|wanker|w\*nk\*r|wankers|w\*nk\*rs|whore|wh\*r\*|slag| sl\*g|\*\*\*\*\*|b\*tch|f u c k|f\*c\*|b.i.t.c.h|b\*tch|d-i-c-k|d\*\*\*/i,
    q114 = /(be ?wafaa? (h((e|ai)n|o)|nikli)$)|(^be ?wafaa?$)/i,
    q115 = /meri (girlfriend|wife|lover) k(o|au)n( h(e|ai))?$/i,
-   q116 = /meri (dusri )?(g(irl)?f(riend)?|cousin|wife|lover) ka kya$/i,
+   q116 = /meri (d(u|oo)sri )?(g(irl)?f(riend)?|cousin|wife|lover) ka kya$/i,
    q117 = /par (aa?p|tum) to (e|ai)k (robot|machine|ai) h(o|e|ai)n?/i,
    q118 = /(kahaa? chali)|(meri (wife|lover|g(irl)?f(riend)?) kahaa? (h(e|ai)|gai))/i,
    q119 = /(miss (yo)?u)|((aa?p|tum|tere) ko miss kar rah(aa?|i|e) h(u|oo|e|ai)n?)/i,
@@ -967,7 +967,7 @@
      if (canvasAppWin) { 
        window.focus(); 
        log("Launched ayeshaBrusha: A Modern Brush Tool!"); 
-       msg = "Chalo saath may paintings banaa'y";
+       msg = "Chalo saath may paintings banaa'ay";
        playText(msg);
      } else { 
        alert("Please enable popups for this site!"); 
@@ -1370,16 +1370,18 @@
        alert("Please enable popups for this site!"); 
      } 
    } else if (q74.test(q)) { 
+     stopText(); 
+     msg = ""; 
+     $output.html(msg); 
      let adviceGenWin = window.open("./advice-gen/", "_blank"); 
      if (adviceGenWin) { 
        window.focus(); 
        log("Launched Advice Generator"); 
+       msg = "Filhaal ziada tar English available hey, sorry!";
+       playText(msg);
      } else { 
        alert("Please enable popups for this site!"); 
      } 
-     stopText(); 
-     msg = ""; 
-     $output.html(msg); 
    } else if (q75.test(q)) { 
      let giphyAppWin = window.open("./giphy/", "_blank"); 
      if (giphyAppWin) { 
