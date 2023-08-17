@@ -11,7 +11,7 @@ async function getAdvice() {
     const response = await fetch(apiUrl);
     const data = await response.json();
 
-    title.innerText = `advice #${data.slip.id}`;
+    title.innerText = `salaah #${data.slip.id}`;
     advice.innerText = `“${data.slip.advice}”`;
   } catch (error) {
     console.log('Your error is: ', error);
