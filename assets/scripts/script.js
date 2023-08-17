@@ -116,7 +116,11 @@ $(document).ready(function () {
   });
   $("#logo").on("click", () => {
   	$("#logo").addClass("band");
-      setTimeout(() => $("#logo").removeClass("band"), 1000);
+      setTimeout(() => $("#logo").removeClass("band"), 1100);
+  });
+  $(".animated-butterfly").on("click", () => {
+  	$(".animated-butterfly").addClass("flipX");
+      setTimeout(() => $(".animated-butterfly").removeClass("flipX"), 3100);
   });
 });
 /* To remind you that the variable holds a jQuery selection, use $(varName) method to declare it. Plain JavaScript's method of variable declarations also work tho */
