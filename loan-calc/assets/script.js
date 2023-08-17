@@ -41,7 +41,7 @@ function calculateResults(){
         y = y.replace(".", "point"),
         z = z.replace(".", "point");
         
-        playText(`aapko mahaana rakam adaa karni hogi: ${x}rupa'ay. . kul rakam. ${y}. . ${z} sood milaa kay`);
+        playText(`aapko mahaana rakam adaa karni hogi: ${x}rupa'ay. . kul rakam. ${y}. . ${z}rupa'ay sood milaa kay`);
         document.getElementById("results").style.display = "block";
         //hide loader
         document.getElementById("loading").style.display = "none";
