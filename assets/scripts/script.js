@@ -109,6 +109,11 @@ window.onload = () => {
 
 $(document).ready(function () {
   //JQuery onload functions go here
+  
+  setInterval(() => {
+  	$("#butterfly").attr('src', 'buffly2.gif');
+      setInterval(() => $("#butterfly").attr('src', 'buffly.gif'), 5000);
+  }, 25000);
   $("#recIcon").click(() => {
   	$("#recIcon").addClass("mikeAnim");
       $("#searchInput").removeClass("glassy-input");
@@ -519,17 +524,26 @@ if (
   if (ls.getItem("lsuserName") == null || ls.getItem("lsbday") == null) {
   	Swal.fire({title: `Welcome, <br/>\@${userName}`, confirmButtonText:
     'Thanks👍',
-  confirmButtonAriaLabel: 'Thumbs up, great!'});
+  confirmButtonAriaLabel: 'Thumbs up, great!', imageUrl: 'thumbs-up.gif',
+imageWidth: 400,
+imageHeight: 200,
+imageAlt: 'Welcome to my application'});
       console.log(`Welcome, ${userName}. This is probably your first time!`);
   } else {
   	Swal.fire({title: `Welcome back, <br/>\@${userName}`, confirmButtonText:
     'That\'s great😃',
-  confirmButtonAriaLabel: 'Thumbs up, great!'});
+  confirmButtonAriaLabel: 'Thumbs up, great!', imageUrl: 'thumbs-up.gif',
+imageWidth: 400,
+imageHeight: 200,
+imageAlt: 'Welcome to my application'});
       console.log(`Welcome back. You're definitely not new to this application!`);
   }
   //if doesn't submit any of the prompts, and HASN'T
 } else {
-  Swal.fire({title: "Welcome, l💗v!", confirmButtonText: "Okay"});
+  Swal.fire({title: "Welcome, l💗v!", confirmButtonText: "Okay", imageUrl: 'thumbs-up.gif',
+  imageWidth: 400,
+  imageHeight: 200,
+  imageAlt: 'Welcome to my application'});
   console.log("Welcome, luv!");
 }
 
