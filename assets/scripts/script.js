@@ -35,8 +35,9 @@ window.onload = () => {
   ) {
   	flirt_responses[1] += `, ${userName} ji`;
       flirt_responses.push("oo. naam hee itnaa accha hey, to khud kaisay hoge");
+      log("hi");
   }
-  let main_responses = ["music chaalane ka bolo to music chalaaoon?", "khabray? wo bhi mil ja'i gi. sirf news bolke tou dekhiye", "reminder set karna he tou sirf reminders bolo or abhi set karo"];
+  let main_responses = ["music chaalane ka bolo to music chalaaoon?", "khabray? wo bhi mil ja'i gi. sirf news bolke tou dekhiye", "reminder set karna hey tou sirf reminders bolo or abhi set karo", "words translate karne hey tou sirf translate now bolo, or translation haasil karo", "dictionary bhi available hey", "apne shay'here ka mausam bolo tou wo bhi bataa sakti hu", "photo editor bhi available hey", "currency converter bhi available hey, jab chaaho ek currency se dusri currency ka exchange rate pataa karo", "youtube chalaane ke lee'yay bolo tou wo bhi chalaaoon?", "encyclopedia bhi available hey", "Bank say lee'ya hua loan kaysay chukta hoga. ye tak bataa sakti hu may"];
   let arr = [];
   //joining flirt responses with main responses
   arr.push(...flirt_responses, ...main_responses);
@@ -47,7 +48,7 @@ window.onload = () => {
   setInterval(() => {
       if (!speechSynthesis.speaking && document.hasFocus())
           playText(random_speech());
-  }, 15000);
+  }, 20000);
   
   /*
   extras
@@ -57,7 +58,7 @@ window.onload = () => {
   isdTh = false;
   */
   
-  //check if jQuery has finished loading every time the window loads as 90% of the relies on it!
+  //check if jQuery has finished loading every time the window loads as 90% of the app relies on it!
   if (jQuery) {
     log("JQuery loaded successfully!");
   } else {

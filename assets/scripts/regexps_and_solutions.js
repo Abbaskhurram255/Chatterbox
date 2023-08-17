@@ -1211,7 +1211,7 @@
      let loanCalcWin = window.open("./loan-calc/", "_blank"); 
      if (loanCalcWin) { 
        window.focus(); 
-       msg = "Aap logo (ya log aap) kay kitnay karz'daar hey jaani'yay"; 
+       msg = "Bank say lee'ya hua loan kaysay chukta hoga? Abhi pataa chal jaa'i gaa"; 
        playText(msg); 
        log("Launched Loan Calculator"); 
      } else { 
