@@ -652,7 +652,7 @@
      background: -moz-radial-gradient(seagreen, deeppink);
      background: -ms-radial-gradient(seagreen, deeppink);
      background: radial-gradient(seagreen, deeppink);
-     opacity: 0.6;
+     opacity: 0;
      position: relative;
      display: block;
      left: 1rem;
@@ -666,15 +666,19 @@
  }
  @-webkit-keyframes slide {
  	from {left: 1rem;}
-          to {left: 4rem; opacity: 0.8;}
+          to {left: 17rem; opacity: 0.8;}
  }
  @-moz-keyframes slide {
  	from {left: 1rem;}
-          to {left: 4rem; opacity: 0.8;}
+          to {left: 17rem; opacity: 0.8;}
+ }
+ @-ms-keyframes slide {
+ 	from {left: 1rem;}
+          to {left: 17rem; opacity: 0.8;}
  }
  @keyframes slide {
  	from {left: 1rem;}
-          to {left: 4rem; opacity: 0.8;}
+          to {left: 17rem; opacity: 0.8;}
  }
  
  /* the "non" animated bubbles behind #message container */
@@ -712,12 +716,13 @@
 .thought:after {
   content:"";
   background-color:#fff;
-                  border-radius: 50%;
-     -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
+  border-radius: 50%;
   display:block;
   position:absolute;
   z-index:-1;
+   animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+               animation-direction: alternate;
 }
 
 .thought:before {
@@ -725,9 +730,13 @@
   height:44px;
   top:-12px;
   left:28px;
-  box-shadow:-50px 30px 0 -12px #fff;
-  -webkit-box-shadow:-50px 30px 0 -12px #fff;
+  -webkit-box-shadow:-50px 30px 0 -12px #fff;
   -moz-box-shadow:-50px 30px 0 -12px #fff;
+  -ms-box-shadow:-50px 30px 0 -12px #fff;
+  -o-box-shadow:-50px 30px 0 -12px #fff;
+  box-shadow:-50px 30px 0 -12px #fff;
+  animation-duration: 10s;
+  animation-name: tbefore;
 }
 
 .thought:after {
@@ -735,19 +744,121 @@
   right:26px;
   width:30px;
   height:30px;
-  box-shadow:40px -34px 0 0 #fff,
+ -webkit-box-shadow: 40px -34px 0 0 #fff,
              -28px -6px 0 -2px #fff,
              -24px 17px 0 -6px #fff,
              -5px 25px 0 -10px #fff;
- -webkit-box-shadow:40px -34px 0 0 #fff,
+     -moz-box-shadow: 40px -34px 0 0 #fff,
              -28px -6px 0 -2px #fff,
              -24px 17px 0 -6px #fff,
              -5px 25px 0 -10px #fff;
- -moz-box-shadow:40px -34px 0 0 #fff,
+               box-shadow: 40px -34px 0 0 #fff,
              -28px -6px 0 -2px #fff,
              -24px 17px 0 -6px #fff,
              -5px 25px 0 -10px #fff;
-}
+       animation-name: tafter;
+   animation-duration: 8s;
+}
+
+@-webkit-keyframes tafter{
+  0%{
+      box-shadow:
+              40px -34px 0 3px #fff,
+             -28px 3px 0 -2px #fff,
+             -24px 17px 0 -6px #fff,
+             -5px 20px 0 -12px #fff;
+  }
+  100%{
+      box-shadow:
+              30px -24px 0 1px #fff,
+             -38px -3px 0 -3px #fff,
+             -14px 7px 0 -3px #fff,
+             -12px 30px 0 -10px #fff;
+  }
+}
+@-moz-keyframes tafter{
+  0%{
+      box-shadow:
+              40px -34px 0 3px #fff,
+             -28px 3px 0 -2px #fff,
+             -24px 17px 0 -6px #fff,
+             -5px 20px 0 -12px #fff;
+  }
+  100%{
+      box-shadow:
+              30px -24px 0 1px #fff,
+             -38px -3px 0 -3px #fff,
+             -14px 7px 0 -3px #fff,
+             -12px 30px 0 -10px #fff;
+  }
+}
+@-ms-keyframes tafter{
+  0%{
+      box-shadow:
+              40px -34px 0 3px #fff,
+             -28px 3px 0 -2px #fff,
+             -24px 17px 0 -6px #fff,
+             -5px 20px 0 -12px #fff;
+  }
+  100%{
+      box-shadow:
+              30px -24px 0 1px #fff,
+             -38px -3px 0 -3px #fff,
+             -14px 7px 0 -3px #fff,
+             -12px 30px 0 -10px #fff;
+  }
+}
+@keyframes tafter{
+  0%{
+      box-shadow:
+              40px -34px 0 3px #fff,
+             -28px 3px 0 -2px #fff,
+             -24px 17px 0 -6px #fff,
+             -5px 20px 0 -12px #fff;
+  }
+  100%{
+      box-shadow:
+              30px -24px 0 1px #fff,
+             -38px -3px 0 -3px #fff,
+             -14px 7px 0 -3px #fff,
+             -12px 30px 0 -10px #fff;
+  }
+}
+
+
+@-webkit-keyframes tbefore{
+  0%{
+    box-shadow:-50px 30px 0 -10px #fff;
+  }
+  100%{
+    box-shadow:-55px 40px 0 -7px #fff;
+  }
+}
+@-moz-keyframes tbefore{
+  0%{
+    box-shadow:-50px 30px 0 -10px #fff;
+  }
+  100%{
+    box-shadow:-55px 40px 0 -7px #fff;
+  }
+}
+@-ms-keyframes tbefore{
+  0%{
+    box-shadow:-50px 30px 0 -10px #fff;
+  }
+  100%{
+    box-shadow:-55px 40px 0 -7px #fff;
+  }
+}
+@keyframes tbefore{
+  0%{
+    box-shadow:-50px 30px 0 -10px #fff;
+  }
+  100%{
+    box-shadow:-55px 40px 0 -7px #fff;
+  }
+}
+
 /* end block */
 
  
@@ -2044,17 +2155,13 @@
    color: white;
    border: 2px solid gray;
    background-color: rgba(149, 53, 83, 0.9);
-               border-radius: 8px;
-  -webkit-border-radius: 8px;
-     -moz-border-radius: 8px;
+   border-radius: 8px;
    padding: 0 10px 0;
  }
  
  .stagger-menu {
                   background: linear-gradient(to right, rgba(149, 53, 83, 0.7), transparent);
                border-radius: 3px;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
                list-style-type: none;
   -webkit-list-style-type: none;
      -moz-list-style-type: none;
@@ -2063,6 +2170,8 @@
  }
  
  .stagger-menu li {
+   font-family: cursive;
+   font-weight: bold;
    cursor: pointer;
    color: white;
    margin-bottom: 8px;
@@ -2088,13 +2197,13 @@
  }
  
  .menu-toggler:checked ~ .stagger-menu li {
-   opacity: 1;
-               transform: translateX(0);
-   -webkit-transform: translateX(0);
-      -moz-transform: translateX(0);
-   transition-delay: calc(0.055s * var(--i));
-   -webkit-ransition-delay: calc(0.055s * var(--i));
-   -moz-ransition-delay: calc(0.055s * var(--i));
+                            opacity: 1;
+          -webkit-transform: translateX(0);
+             -moz-transform: translateX(0);
+                       transform: translateX(0);
+              transition-delay: calc(0.055s * var(--i));
+   -webkit-transition-delay: calc(0.055s * var(--i));
+      -moz-transition-delay: calc(0.055s * var(--i));
  }
  
  .modal {
@@ -2597,6 +2706,7 @@
   }
 }
 
+
 
 /* Cube animation overlay */
 /*
