@@ -34,6 +34,14 @@ function calculateResults(){
         totalPayment.value = (monthly * calculatedPayments).toFixed(2);
         totalInterest.value = ((monthly * calculatedPayments) - principal).toFixed(2);
         //show results
+        let x = monthlyPayment.value,
+             y = totalPayment.value,
+             z = totalInterest.value;
+        x = x.replace(".", "point"),
+        y = y.replace(".", "point"),
+        z = z.replace(".", "point");
+        
+        playText(`aapko mahaana rakam adaa karni hogi: ${x}rupa'ay. . kul rakam. ${y}. . ${z} sood milaa kay`);
         document.getElementById("results").style.display = "block";
         //hide loader
         document.getElementById("loading").style.display = "none";
@@ -71,3 +79,36 @@ function showError(error){
 function clearError(){
     document.querySelector(".alert").remove();
 }
+
+
+const utterance = new SpeechSynthesisUtterance();
+utterance.addEventListener("boundary", (e) => {
+  currentCharacter = e.charIndex;
+});
+
+function playText(text, pitch = 1.0) {
+  if (speechSynthesis.paused && speechSynthesis.speaking) {
+    return speechSynthesis.resume();
+  }
+  if (speechSynthesis.speaking) return;
+  utterance.text = text;
+  var voices = window.speechSynthesis.getVoices();
+  window.speechSynthesis.onvoiceschanged = function () {
+    voices = window.speechSynthesis.getVoices();
+  };
+  utterance.voice = voices[10];
+  utterance.pitch = pitch;
+  utterance.voiceURI = "native";
+  utterance.lang = "hi";
+  utterance.volume = 1;
+  utterance.rate = 1;
+  speechSynthesis.speak(utterance);
+  /* or you could simply import say.js. The link to it: https://rawit.com/JudahRR/Say.js/master/libs/say.js */
+}
+
+//Call this function to (immediately) stop the Speech synthesis:
+function stopText() {
+  speechSynthesis.resume();
+  speechSynthesis.cancel();
+}
+//end of Speech_Synth block
