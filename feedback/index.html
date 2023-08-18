@@ -6,7 +6,6 @@
     <meta name='viewport' content='width=device-width, initial-scale=1' />
     <title>Feedback</title>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css' />
-    <script src='script.js'></script>
     <style>
     	* {
   -webkit-touch-callout: none;
@@ -23,19 +22,19 @@
        width: 100%;
        margin: 0;
        padding: 0;
-       //overflow: hidden;
+       /*overflow: hidden;*/
        background: linear-gradient(aquamarine, turquoise, darkred);
-       background: url(media/img/fantasy.jpg) right fixed;
-       background-size: 130%;
+       background: url(media/img/fantasy.webp) left fixed no-repeat;
+       background-size: cover;
   }
   
   #heading {
       box-sizing: border-box; 
-     -webkit-box-shadow: .2rem -.1rem 4px 5px lightseagreen;
-        -moz-box-shadow: .2rem -.1rem 4px 5px lightseagreen;
-          -ms-box-shadow: .2rem -.1rem 4px 5px lightseagreen;
-             -o-box-shadow: .2rem -.1rem 4px 5px lightseagreen;
-                 box-shadow: .2rem -.1rem 4px 5px lightseagreen;
+     -webkit-box-shadow: .2rem -.1rem 4px 5px gray;
+        -moz-box-shadow: .2rem -.1rem 4px 5px gray;
+          -ms-box-shadow: .2rem -.1rem 4px 5px gray;
+             -o-box-shadow: .2rem -.1rem 4px 5px gray;
+                 box-shadow: .2rem -.1rem 4px 5px gray;
   }
   
   a { color: chocolate}
@@ -46,19 +45,20 @@
   }
   
   .botMsg {
-  	background: radial-gradient(darkred, mediumvioletred, purple, rgba(0,0,0,0));
+  	background: linear-gradient(darkred, mediumvioletred, purple, rgba(0,0,0,0));
       color: white;
       border-radius: 1.5rem 4rem .3rem 5rem;
   }
     </style>
 </head>
 <body>
+	<div class="app-container">
     
     <div id="chatBox">
 
         <!-- heading -->
         <div id="heading">
-            <span styple="border:2px ridge yellow; background:purple;border-radius:30px">AyeshaPT</span> User Feedback
+            <span style=" font-family: 'cursive', sans-serif;">AyeshaPT</span> User Feedback
         </div>
 
         <!-- box where messages are displayed -->
@@ -82,7 +82,7 @@
         <!-- text input box -->
         <!-- <textarea name="typebox" id="typebox" class="boxes" placeholder="Enter your message"  rows="2"></textarea> -->
         <input type="text" id="typeBox" class="boxes" placeholder="Enter your feedback please!" style="background: linear-gradient(to right, purple, rgba(0,0,0,0));border:5px dotted rgba(128, 0, 0, 0.8);border-radius:42px .5rem;color:yellow;">
-        <input type="button" id="sendBtn" class="boxes" value="Send" style="background: -webkit-radial-gradient(lavender, brown);background: -moz-radial-gradient(lavender, brown);background: -ms-radial-gradient(lavender, brown);background: -o-radial-gradient(lavender, brown);background: radial-gradient(rgba(118, 0, 118, 0.9), hotpink);border-radius:22px 5px 28px;color:white" />
+        <input type="button" id="sendBtn" class="boxes" value="Send" />
     </div>
     <!-- progress bars -->
     <img alt="loading" id="loading" src="media/img/loading.gif" style="position: relative; top: 2rem; display: none;" height="64" width="64" />
@@ -93,6 +93,10 @@
         <img alt="star" id="star" src="media/img/star.gif" style="position: relative; top: 2rem; display: ;" height="64" width="128" />
         <img alt="mail" id="mail" src="media/img/mail.gif" style="position: relative; top: 2rem; display: ;" height="64" width="64" />
     </div>
+  </div>
+  
+  
+  <script src='script.js'></script>
 
 </body>
 </html>

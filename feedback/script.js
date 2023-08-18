@@ -5,7 +5,6 @@
 var data;
 /// onload function
 document.body.onload = function () {
-    console.log("here onload");
     askedWeather = false;
     askedNews = false;
     rnd2 = 'd61d4157accb44';

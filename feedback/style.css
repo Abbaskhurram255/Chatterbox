@@ -8,11 +8,15 @@
 	font-family: 'cursive', sans-serif;
 }*/
 
+.app-container {
+	margin: 1.2rem;
+}
+
 ol li::before {
 	content: "⭐";
 	margin-left: -.75rem;
 }
-ol li::marker { color:red; font-weight: bold; font-style: italic;}
+ol li::marker { color: red; font-weight: bold; font-style: italic;}
 
 .boxes{
     /* position: absolute; */
@@ -53,8 +57,11 @@ ol li::marker { color:red; font-weight: bold; font-style: italic;}
 	color: gold;
 }
 #sendBtn{
-    padding: 1%;
-    /* width: 6%; */
+    padding: 3%;
+    background: linear-gradient(45deg, rgba(118, 0, 118, 0.9), hotpink);
+    border-radius: 22px 5px 28px;
+    color: white;
+    /* width: 18%; */
 }
 #msgList{
     list-style-type: none;
@@ -207,3 +214,4 @@ ol li::marker { color:red; font-weight: bold; font-style: italic;}
 		color: #111;
 	}
 }
+
