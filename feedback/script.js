@@ -4,7 +4,7 @@
 
 var data;
 /// onload function
-onload = function () {
+document.body.onload = function () {
     console.log("here onload");
     askedWeather = false;
     askedNews = false;
@@ -14,11 +14,11 @@ onload = function () {
     replyCnt = -1;
     chatEnd = false;
 
-    /// sounds initialisation
+    /// sound initialization
     userMsgSound = new Sound("media/audio/userMsgSound.mp3");
     botMsgSound = new Sound("media/audio/botMsgSound.mp3");
 
-    /// chat object
+    /// init chat object
     var chatObj = {
         /// initialisation
         init: function () {
@@ -45,9 +45,8 @@ onload = function () {
             rnd4 = 'current.json?key=c2cf5e10';
         },
 
-        /// renders user message on screen
+        /// renders user's message to the DOM
         userRender: async function () {
-            // console.log("here render");
             scrollBottom();
             if (this.newMsg.length != 0) {
                 userMsgSound.play();
@@ -60,7 +59,7 @@ onload = function () {
             scrollBottom();
         },
 
-        /// rrenders bot message on screen
+        /// renders bot messages to the DOM
         botRender: async function () {
             let totalOptions = 4;
             if (this.newMsg != "" && this.newMsg.length < 9 && /^(1|2|3|4|5)( ?stars?)?$/gm.test(this.newMsg)) {
@@ -74,13 +73,13 @@ onload = function () {
                     showMsg(`Thank you for your valuable feedback, luv! Your feedback means the world to me as it helps me improve &hearts;<br/><br/><span style="color:red" id="anim">Here's some local news of the day, by the way:</span><br/> ${await functionsArr[1 - 1]()}<br/><br/><span id="anim2" style="color:purple">And a random fact of the day:</span><br/>${await functionsArr[3 - 1]()}<br/><br/>Apki feedback ka behad shukria<br/><img alt="cat" id="cat" src="media/img/cat.gif" style="position: relative; left: 8.2rem;" height="128" width="128" />`, "botMsg");
                     
                     document.querySelector("#thank-you").style.display = "block";
-                    playText("aapki feedback ka bay had shukria. ab aap yay window close kar sakte hay. bonus... neechay likhi hay aap kay area say related aaj kee taaza khabar");
+                    playText("aapki feedback ka bay had shukria. ab aap yay window close kar sakte hey. bonus... neechay likhi hey aap kay area say related aaj kee taaza khabar");
                     utterance.onend = () => { setTimeout(() => {
                         switch (parseInt(this.newMsg)) {
                             case 1:
                             case "1 star":
                             case "1 stars":
-                            playText("I'm sorry, kya mene kuch galat kardia? Ya kuch galat keh dia? Pareshaan na ho. Aap ki complain kay mutaabik mujhay jald hee improve kia ja'i gaa! Please come back anytime and report anything. May'ray developers aap kay ek ek lafz ki value rakhtay hay. Aapki complain kisi bhi soorat may zaa'yaa nahi ja'i gi, yay waada rahaa.");
+                            playText("I'm sorry, kya mene kuch galat kardia? Ya kuch galat keh dia? Pareshaan na ho. Aap ki complain kay mutaabik mujhay jald hee improve kia ja'i gaa! Please come back anytime and report anything. May'ray developers aap kay ek ek lafz ki value rakhtay hey. Aapki complain kisi bhi soorat may zaa'yaa nahi ja'i gi, yay waada rahaa.");
                             break;
 
                             case 2:
@@ -110,7 +109,7 @@ onload = function () {
                             default:
                             return ;
                         }
-                        utterance.onend = () => {setTimeout(() => { playText("or jaysa ki may'nay kaha. ab aap yay window close kar saktay hay"); utterance.onend = "";}, 500); }
+                        utterance.onend = () => {setTimeout(() => { playText("or jaysa ki may'nay kaha. ab aap yay window close kar saktay hey"); utterance.onend = "";}, 500); }
                     }, 10);
                     
                     }
@@ -163,7 +162,7 @@ onload = function () {
             if (replyCnt === 0) {
                 setTimeout(
                     function () {
-                        showMsg("Great !! Keep entering option numbers to keep chatting with me. <br><br>You can enter ' # ' anytime to see the options menu again ! :) <br><br> Enter 'bye' to end the chat at any time.", "botMsg");
+                        showMsg("Great! Keep entering option numbers to keep chatting with me. <br><br>You can enter ' # ' anytime to see the options menu again ! :) <br><br> Enter 'bye' to end the chat at any time.", "botMsg");
                         botMsgSound.play();
                     }, 1000
                 );
