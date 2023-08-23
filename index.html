@@ -87,9 +87,10 @@ assets/styles/sweetalert2.min.css
       <input type="checkbox" name="menu" id="menu" class="menu-toggler" />
       <label for="menu" class="menu-toggler-label">☰</label>
       <ul class="stagger-menu">
-        <li style="--i: 0" onclick="showFeatures();">Features</li>
-        <li style="--i: 1" onclick="showLicense();">License</li>
-        <li style="--i: 2" onclick="showPortfolio();">About Me</li>
+      	<li style="--i: 0" onclick="makeAFeedback();">Feedback</li>
+          <li style="--i: 1" onclick="showFeatures();">Features</li>
+          <li style="--i: 2" onclick="showLicense();">License</li>
+          <li style="--i: 3" onclick="showPortfolio();">About Me</li>
       </ul>
     </div>
     <!-- The time section :: -->
@@ -97,135 +98,135 @@ assets/styles/sweetalert2.min.css
     
     <!-- Main App Container : -->
     <div name="app-container">
-    <!-- the logo :: -->
-    <h2 no-style="background-color: green;border-radius:50% 0 90% 0%;box-shadow:darkcyan -12px -32px;" id="logo" class="logo"><em>Ayesha<span style="color: choc" id="pt" class="pt flipX"><span id="p">P</span><span id="t">T</span></span></em></h2>
-    <!-- search section :: -->
-    <div class="search-section search-container">
-    	<!-- the searchbar ::: -->
-        <input
-          id="searchInput"
-          class="glassy-input"
-          type="text"
-          placeholder="Say 'hi'"
-          name="searchbar"
-          autocomplete="off" autofocus
-        />
-        <!-- mike icon ::: -->
-        <img alt="mike" src="assets/images/whitemike.png" id="recIcon" name="mike-icon" class-to-be-later-added-for-animation="mikeAnim" height="34px" width="34px" class="hvr-sink" />
-        <!-- the button ::: -->
-        <button id="askBtn" onclick="ask()">Ask</button>
-    </div>
-    <!-- message container :: -->
-    <div id="message" class="thought"></div>
-    </div>
-    <!-- the snackbar :: -->
-    <div id="snackbar"></div>
-    <!-- the modal :: -->
-    <div id="myModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>
-          <iframe
-            src="./Features/"
-            style="border: none"
-            height="600"
-            width="90%"
-          ></iframe>
-        </p>
-      </div>
-      <!-- the animated bubbles :: -->
-    <div class="bubbles-container">
-		<svg class="bubbles" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 701 1024" style="overflow: visible;">
-        <g class="bubbles-large" stroke-width="7">
-            <g>
-                <g transform="translate(10 940)">
-                    <circle cx="35" cy="35" r="35"/>
+        <!-- the logo :: -->
+        <h2 no-style="background-color: green;border-radius:50% 0 90% 0%;box-shadow:darkcyan -12px -32px;" id="logo" class="logo"><em>Ayesha<span style="color: choc" id="pt" class="pt flipX"><span id="p">P</span><span id="t">T</span></span></em></h2>
+        <!-- search section :: -->
+        <div class="search-section search-container">
+    	    <!-- the searchbar ::: -->
+            <input
+              id="searchInput"
+              class="glassy-input"
+              type="text"
+              placeholder="Say 'hi'"
+              name="searchbar"
+              autocomplete="off" autofocus
+             />
+            <!-- mike icon ::: -->
+            <img alt="mike" src="assets/images/whitemike.png" id="recIcon" name="mike-icon" class-to-be-later-added-for-animation="mikeAnim" height="34px" width="34px" class="hvr-sink" />
+            <!-- the button ::: -->
+            <button id="askBtn" onclick="ask()">Ask</button>
+        </div>
+        <!-- message container :: -->
+        <div id="message" class="thought"></div>
+        <!-- the snackbar :: -->
+        <div id="snackbar"></div>
+        <!-- the modal :: -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>
+                    <iframe
+                      src="./Features/"
+                      style="border: none"
+                      height="600"
+                      width="90%">
+                    </iframe>
+                </p>
+            </div>
+        </div>
+        <!-- the animated bubbles :: -->
+        <div class="bubbles-container">
+		    <svg class="bubbles" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 701 1024" style="overflow: visible;">
+                <g class="bubbles-large" stroke-width="7">
+                    <g>
+                        <g transform="translate(10 940)">
+                            <circle cx="35" cy="35" r="35"/>
+                        </g>
+                    </g>
+                    <g>
+                        <g transform="translate(373 940)">
+                            <circle cx="35" cy="35" r="35"/>
+                        </g>
+                    </g>
+                    <g>
+                        <g transform="translate(408 940)">
+                            <circle cx="35" cy="35" r="35"/>
+                        </g>
+                    </g>
+                    <g>
+                        <g transform="translate(621 940)">
+                            <circle cx="35" cy="35" r="35"/>
+                        </g>
+                    </g>
+                    <g>
+                        <g transform="translate(179 940)">
+                            <circle cx="35" cy="35" r="35"/>
+                        </g>
+                    </g>
                 </g>
-            </g>
-            <g>
-                <g transform="translate(373 940)">
-                    <circle cx="35" cy="35" r="35"/>
+                <g class="bubbles-small" stroke-width="4">
+                    <g>
+                        <g transform="translate(147 984)">
+                            <circle cx="15" cy="15" r="15"/>
+                        </g>
+                    </g>
+                    <g>
+                        <g transform="translate(255 984)">
+                            <circle cx="15" cy="15" r="15"/>
+                        </g>
+                    </g>
+                    <g>
+                        <g transform="translate(573 984)">
+                            <circle cx="15" cy="15" r="15"/>
+                        </g>
+                    </g>
+                    <g>
+                        <g transform="translate(429 984)">
+                            <circle cx="15" cy="15" r="15"/>
+                        </g>
+                    </g>
+                    <g>
+                        <g transform="translate(91 984)">
+                            <circle cx="15" cy="15" r="15"/>
+                        </g>
+                    </g>
+                    <g>
+                        <g transform="translate(640 984)">
+                            <circle cx="15" cy="15" r="15"/>
+                        </g>
+                    </g>
+                    <g>
+                        <g transform="translate(321 984)">
+                            <circle cx="15" cy="15" r="15"/>
+                        </g>
+                    </g>
+                    <g>
+                        <g transform="translate(376 984)">
+                            <circle cx="15" cy="15" r="15"/>
+                        </g>
+                    </g>
+                    <g>
+                        <g transform="translate(376 984)">
+                            <circle cx="15" cy="15" r="15"/>
+                        </g>
+                    </g>
+                    <g>
+                        <g transform="translate(497 984)">
+                            <circle cx="15" cy="15" r="15"/>
+                        </g>
+                    </g>
                 </g>
-            </g>
-            <g>
-                <g transform="translate(408 940)">
-                    <circle cx="35" cy="35" r="35"/>
-                </g>
-            </g>
-            <g>
-                <g transform="translate(621 940)">
-                    <circle cx="35" cy="35" r="35"/>
-                </g>
-            </g>
-            <g>
-                <g transform="translate(179 940)">
-                    <circle cx="35" cy="35" r="35"/>
-                </g>
-            </g>
-        </g>
-        <g class="bubbles-small" stroke-width="4">
-            <g>
-                <g transform="translate(147 984)">
-                    <circle cx="15" cy="15" r="15"/>
-                </g>
-            </g>
-            <g>
-                <g transform="translate(255 984)">
-                    <circle cx="15" cy="15" r="15"/>
-                </g>
-            </g>
-            <g>
-                <g transform="translate(573 984)">
-                    <circle cx="15" cy="15" r="15"/>
-                </g>
-            </g>
-            <g>
-                <g transform="translate(429 984)">
-                    <circle cx="15" cy="15" r="15"/>
-                </g>
-            </g>
-            <g>
-                <g transform="translate(91 984)">
-                    <circle cx="15" cy="15" r="15"/>
-                </g>
-            </g>
-            <g>
-                <g transform="translate(640 984)">
-                    <circle cx="15" cy="15" r="15"/>
-                </g>
-            </g>
-            <g>
-                <g transform="translate(321 984)">
-                    <circle cx="15" cy="15" r="15"/>
-                </g>
-            </g>
-            <g>
-                <g transform="translate(376 984)">
-                    <circle cx="15" cy="15" r="15"/>
-                </g>
-            </g>
-            <g>
-                <g transform="translate(376 984)">
-                    <circle cx="15" cy="15" r="15"/>
-                </g>
-            </g>
-            <g>
-                <g transform="translate(497 984)">
-                    <circle cx="15" cy="15" r="15"/>
-                </g>
-            </g>
-        </g>
-    </svg>
-	</div>
-    </div>
-    <!-- bubbles animation end block /:: -->
-    <!-- main app container end block /: -->
+            </svg>
+        </div>
+        <!-- bubbles animation end block /:: --
     
-    <!-- footer : -->
-    <footer>
-    	<img id="disco" class="animated-disco" src="disco.gif" alt="disco ball" height="48" width="48" />
-    <img id="butterfly" class="animated-butterfly" src="buffly.gif" alt="butterfly" height="64" width="96" />
-	</footer>
+        <!-- footer : -->
+        <footer>
+        	<img id="disco" class="animated-disco" src="disco.gif" alt="disco ball" height="48" width="48" />
+            <img id="butterfly" class="animated-butterfly" src="buffly.gif" alt="butterfly" height="64" width="96" />
+	    </footer>
+    </div>
+    <!-- main app container end block /: -->
 	
 	<!-- cube animation 
 	<div class="cube-container">
