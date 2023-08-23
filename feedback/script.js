@@ -69,7 +69,7 @@ document.body.onload = function () {
                        setTimeout(() => document.querySelector("#loading").style = "display: none", 1500);
                     })();
                     botMsgSound.play();
-                    showMsg(`Thank you for your valuable feedback, luv! Your feedback means the world to me as it helps me improve &hearts;<br/><br/><span style="color:red" id="anim">Here's some local news of the day, by the way:</span><br/> ${await functionsArr[1 - 1]()}<br/><br/><span id="anim2" style="color:purple">And a random fact of the day:</span><br/>${await functionsArr[3 - 1]()}<br/><br/>Apki feedback ka behad shukria<br/><img alt="cat" id="cat" src="media/img/cat.gif" style="position: relative; left: 8.2rem;" height="128" width="128" />`, "botMsg");
+                    showMsg(`Thank you for your valuable feedback, luv! Your feedbackmeans the world to me as it helps me improve &hearts;<br/><br/><span style="color:red" id="anim">Here's some local news of the day, by the way:</span><br/> ${await functionsArr[1 - 1]()}<br/><br/><span id="anim2" style="color:purple">And a random fact of the day:</span><br/>${await functionsArr[3 - 1]()}<br/><br/>Apki feedback ka behad shukria<br/><img alt="cat" id="cat" src="media/img/cat.gif" style="position: relative; left: 8.2rem;" height="128" width="128" />`, "botMsg");
                     
                     document.querySelector("#thank-you").style.display = "block";
                     playText("aapki feedback ka bay had shukria. ab aap yay window close kar sakte hey. bonus... neechay likhi hey aap kay area say related aaj kee taaza khabar");
@@ -96,7 +96,7 @@ document.body.onload = function () {
                             case 4:
                             case "4 star":
                             case "4 stars":
-                            playText("mujhay yay jaan kar khushi hoo'ee kay may aap ko pasand hu");
+                            playText("mujhay yay jaan kar khushi hoo'vee kay may aap ko pasand hu");
                             break;
 
                             case 5:
@@ -120,7 +120,7 @@ document.body.onload = function () {
                        setTimeout(() => document.querySelector("#loading2").style = "display: none", 500);
                     })();
                     botMsgSound.play();
-                    showMsg("<span style='color:red'>Feedback already submitted, you may close the feedback window now!!</span>", "botMsg");
+                    showMsg("<span style='color:yellow'>Feedback already submitted, you may close the feedback window now!!</span>", "botMsg");
                     playText("aap feedback day chukay jee. side may likhay cross yani X button ko dabaa kar may'ri taraf waapis aao jald hee");
                 }
                 return;
