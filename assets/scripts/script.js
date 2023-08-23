@@ -823,6 +823,24 @@ const showPortfolio = () => {
   return;
 };
 
+const makeAFeedback = () => {
+	stopText(); 
+     let feedbackWin = window.open("./feedback/", "_blank"); 
+     if (feedbackWin) { 
+       window.focus(); 
+       log("Launched Feedback window!");
+       msg = "Kya may aapko pasand hu. Or agar hoo bhi tou kitni? Numbers ke hisab say rating deej'yay please. Aapki dee jaanay wali rating mujhe improve karnay may bayhad madadgaar sabit hogi.";
+       playText(msg);
+     } else { 
+       alert("Please enable popups for this site!"); 
+     } 
+     let aBugFix = () => {
+     	return (textInput.disabled = !true);
+     };
+      setTimeout(aBugFix(), 2000);
+      return;
+}
+
 $(document).bind("mouseleave", function (e) {
   if (e.pageY - $(window).scrollTop() <= 1) {
     stopText();
