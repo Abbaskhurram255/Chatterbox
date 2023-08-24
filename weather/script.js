@@ -20,7 +20,7 @@ window.onload = function() {
       playText(`${city} ka mosam`);
       }
       return ;
-  }, 1000);
+  }, 1500);
 }
 
 
