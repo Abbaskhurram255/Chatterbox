@@ -487,9 +487,9 @@ $(() => {
                     "file": "Sia - Cheap Thrills"
                 }, {
                     "track": 93,
-                    "name": "Kid Ink - Main Chick (Explicit) ft. Chris Brown & Tyga",
-                    "duration": "3:13",
-                    "file": "Kid Ink - Main Chick (Explicit) ft. Chris Brown & Tyga"
+                    "name": "Jim Yosef, Laura Brehm - Into the Sky",
+                    "duration": "3:58",
+                    "file": "Jim Yosef x Laura Brehm - Into the Sky"
                 }, {
                     "track": 94,
                     "name": "Lewis Capaldi - Before You Go",
@@ -547,9 +547,9 @@ $(() => {
                     "file": "Mike Posner - I Took A Pill In Ibiza (Seeb Remix) (Explicit)"
                 }, {
                     "track": 105,
-                    "name": "Post Malone - A Thousand Bad Times",
-                    "duration": "3:42",
-                    "file": "Post Malone - A Thousand Bad Times"
+                    "name": "Vicetone - Voices In My Head feat. Chelsea Collins",
+                    "duration": "3:00",
+                    "file": "Vicetone - Voices In My Head feat. Chelsea Collins"
                 }, {
                     "track": 106,
                     "name": "Post Malone - Circles",
@@ -637,9 +637,9 @@ $(() => {
                     "file": "Selena Gomez - Rare"
                 }, {
                     "track": 123,
-                    "name": "Selena Gomez - She",
-                    "duration": "2:53",
-                    "file": "Selena Gomez - She"
+                    "name": "Selena Gomez - Wolves ft. Marshmello",
+                    "duration": "3:32",
+                    "file": "Selena Gomez, Marshmello - Wolves"
                 }, {
                     "track": 124,
                     "name": "Selena Gomez - Souvenir",
@@ -657,19 +657,19 @@ $(() => {
                     "file": "Selena Gomez - Vulnerable"
                 }, {
                     "track": 127,
-                    "name": "Shawn Mendes - If I Can't Have You",
-                    "duration": "3:12",
-                    "file": "Shawn Mendes - If I Can't Have You"
+                    "name": "Selena Gomez - Same Old Love",
+                    "duration": "3:48",
+                    "file": "Selena Gomez - Same Old Love"
                 }, {
                     "track": 128,
+                    "name": "Selena Gomez - A Year Without Rain",
+                    "duration": "3:28",
+                    "file": "Selena Gomez - A Year Without Rain"
+                }, {
+                    "track": 129,
                     "name": "Shawn Mendes - Stitches",
                     "duration": "4:00",
                     "file": "Shawn Mendes - Stitches"
-                }, {
-                    "track": 129,
-                    "name": "Shawn Mendes - There's Nothing Holdin' Me Back",
-                    "duration": "3:57",
-                    "file": "Shawn Mendes - There's Nothing Holdin' Me Back"
                 }, {
                     "track": 130,
                     "name": "Shawn Mendes - Treat You Better",
@@ -822,19 +822,19 @@ $(() => {
                     "file": "Wiz Khalifa - See You Again ft. Charlie Puth (Furious 7 Soundtrack)"
                 }, {
                     "track": 160,
-                    "name": "Xxxtentacion - Moonlight",
-                    "duration": "2:17",
-                    "file": "XXXTENTACION - MOONLIGHT"
+                    "name": "Selena Gomez - It Aint Me",
+                    "duration": "3:41",
+                    "file": "Selena Gomez - It Aint Me"
                 }, {
                     "track": 161,
-                    "name": "Xxxtentacion - Sad!",
-                    "duration": "2:47",
-                    "file": "XXXTENTACION - SAD!"
+                    "name": "Selena Gomez - Fetish ft. Gucci Mane",
+                    "duration": "3:04",
+                    "file": "Selena Gomez - Fetish ft. Gucci Mane"
                 }, {
                     "track": 162,
-                    "name": "XXXTENTACION - Changes",
-                    "duration": "2:02",
-                    "file": "XXXTENTACION - changes"
+                    "name": "XXXTENTACION - SAD!",
+                    "duration": "2:47",
+                    "file": "XXXTENTACION - SAD!"
                 }, {
                     "track": 163,
                     "name": "Young Thug, 2 Chainz, Wiz Khalifa & PnB Rock – Gang Up (The Fate of the Furious- The Album)",
