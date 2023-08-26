@@ -99,7 +99,7 @@ Wanna try it? [Click here](https://abbaskhurram255.github.io/Chatterbox/getting-
 
 * * *
 
-v1.0.2
+v1.0.18
 ### Changelogs
 * bug fixes
 * add some easter eggs
