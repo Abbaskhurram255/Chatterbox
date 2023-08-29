@@ -1,5 +1,8 @@
 ﻿
 const $snack = $("#snackbar");
+const randFrom = arr => {
+	return arr[Math.floor(Math.random() * arr.length)];
+};
 
 /* load default (light) theme every time the window (aka body object (DOM document.body) loads) nd show a tooltip whenever searchInput is active. Run startTime function too */
 
@@ -37,12 +40,12 @@ window.onload = () => {
       flirt_responses[2] += `, ${userName} ji`;
       flirt_responses.push("oo. naam hee itnaa accha hey, to khud kaisay hoge");
   }
-  let main_responses = ["music chaalane ka bolo to music chalaaoon?", "khabray? wo bhi mil ja'i gi. sirf news bolke tou dekhiye", "reminder set karna hey tou sirf reminders bolo or abhi set karo", "words translate karne hey tou sirf translate now bolo, or translation haasil karo", "dictionary bhi available hey", "aapkay shay'here ka mausam bolo tou wo bhi bataa sakti hu", "photo editor bhi available hey. Will be improved in the future.", "currency converter bhi available hey, jab chaaho ek currency se doosri currency ka exchange rate pataa karo", "youtube chalaanay ke lee'yay bolo tou wo bhi chalaaoon?", "encyclopedia bhi available hey, jahaa aap ek ek cheez ki jaankaari paa saktay hey sirf oos ka naam likh kay. Kya cheez hey, kab k'yoo or kaisay bani. or kis ne banaaya. wagayra, wagayra", "Bank say lee'ya hua loan kaysay chukta hoga. ye tak bataa sakti hu may. sirf loan calculator likho tou", "strong password chaaheeyay, taakay koi bhi aapkay kisi bhi account ka password naa tor sakay, to abhi password generator likho, or. ek mazboot password haasil karo. . advice. is password ko ek acchi see jagaa save karkay rakheeyay gaa taakay aap khud hee na bhool jaa'ay haha!", "life may behtree laanay ki salaah chahte ho tou abhi advice generator bolo, or salaah haasil karo"];
+  let main_responses = ["music chaalane ka bolo to music chalaaoon?", "khabray? wo bhi mil ja'i gi. sirf news bolke tou dekhiye", "reminder set karna hey tou sirf reminders bolo or abhi set karo", "words translate karne hey tou sirf translate now bolo, or translation haasil karo", "dictionary bhi available hey", "aapkay shay'here ka mausam bolo tou wo bhi bataa sakti hu", "photo editor bhi available hey. Will be improved in the future.", "currency converter bhi available hey, jab chaaho ek currency se doosri currency ka exchange rate pataa karo", "youtube chalaanay ke lee'yay bolo tou wo bhi chalaaoon?", "encyclopedia bhi available hey, jahaa aap ek ek cheez ki jaankaari paa saktay hey sirf oos ka naam likh kay. Kya cheez hey, kab k'yoo or kaisay bani. or kis ne banaaya. wagayra, wagayra", "Bank say lee'ya hua loan kaysay chukta hoga. ye tak bataa sakti hu may. sirf loan calculator likho tou", "strong password chaaheeyay, taakay koi bhi aapkay kisi bhi account ka password naa tor sakay, to abhi password generator likho, or. ek mazboot password haasil karo. . advice. is password ko ek acchi see jagaa save karkay rakheeyay gaa taakay aap khud hee na bhool jaa'ay haha!", "life may behtree laanay ki salaah chahte ho tou abhi advice generator bolo, or salaah haasil karo", "smash cube likho, or lootf lo iss platform ki sab say behtareen puzzle game kaa", "ludo likho, or lootf lo iss platform ki sab say acchi board game kaa"];
   let arr = [];
   //joining flirt responses with main responses
   arr.push(...flirt_responses, ...main_responses);
-  log(`Automatic responses found: ${arr.length}\n${arr}`);
-  	return arr[Math.floor(Math.random() * arr.length)];
+  log(`Automatic speech responses found: ${arr.length}\n${arr}`);
+  	return randFrom(arr);
   }
   //making a random speech play every 15s from the array
   setInterval(() => {
@@ -127,6 +130,18 @@ $(document).ready(function () {
   $(".animated-butterfly").on("click", () => {
   	$(".animated-butterfly").addClass("flipX");
       setTimeout(() => $(".animated-butterfly").removeClass("flipX"), 3100);
+  });
+  
+  $("#disco").on("click", () => {
+  	let $input = $("#searchInput");
+      let arr = ["entertain karo mujhe", "random fun", "music chalaao", "koi game chalaao", "ludo chalaao", "play smash cube"];
+  	$input.val(randFrom(arr));
+      setTimeout(() => {
+      	if (q94.test($input.val())) {
+      	stopText();
+      	$("#askBtn").click();
+      }
+      }, 3000);
   });
 });
 /* To remind you that the variable holds a jQuery selection, use $(varName) method to declare it. Plain JavaScript's method of variable declarations also work tho */

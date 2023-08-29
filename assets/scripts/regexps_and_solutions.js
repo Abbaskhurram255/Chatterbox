@@ -597,9 +597,9 @@
      $("#message").slideFadeToggle(800); 
      msg = 
        ["Hello jee, batai'yay kaysee khidmat kar sakti hu may aapki? <a onclick='$(\"#searchInput\").val(\"mosam ke surati hal\");stopText();ask();' onmouseover='$(this).css(\"cursor\", \"pointer\")' style='font-weight:500;font-style:italic;color:rgba(165,25,25,0.8);text-decoration:underline;'>mosam ka hal</a> bataa kay, <a onclick='$(\"#searchInput\").val(\"ayesha gaane chalao\");stopText();ask();' onmouseover='$(this).css(\"cursor\", \"pointer\")' style='font-weight:500;font-style:italic;color:rgba(165,25,25,0.8);text-decoration:underline;'>gaane</a> chala kay, <a onclick='$(\"#searchInput\").val(\"news ke surati hal\");stopText();ask();' onmouseover='$(this).css(\"cursor\", \"pointer\")' style='font-weight:500;font-style:italic;color:rgba(165,25,25,0.8);text-decoration:underline;'>news</a> bataa kay, ya koi <a onclick='$(\"#searchInput\").val(\"set a new reminder\");' onmouseover='$(this).css(\"cursor\", \"pointer\")' style='font-weight:500;font-style:italic;color:rgba(165,25,25,0.8);text-decoration:underline;'>reminder</a> set kar kay?", `Hi there. ${flip}Ayesha at your service, what can I help you with? I can get you some news, the weather, help you translate some words, open the dictionary, even help you download some wallpapers for your homescreen, play you some downloadable music... and much more${smiles}`, smiles + " Hello jee, batai'yay kaysee khidmat kar sakti hu may aapki? <a onclick='$(\"#searchInput\").val(\"mosam ke surati hal\");stopText();ask();' onmouseover='$(this).css(\"cursor\", \"pointer\")' style='font-weight:500;font-style:italic;color:rgba(165,25,25,0.8);text-decoration:underline;'>mosam ka hal</a> bataa kay, <a onclick='$(\"#searchInput\").val(\"ayesha gaane chalao\");stopText();ask();' onmouseover='$(this).css(\"cursor\", \"pointer\")' style='font-weight:500;font-style:italic;color:rgba(165,25,25,0.8);text-decoration:underline;'>gaane</a> chala kay, <a onclick='$(\"#searchInput\").val(\"news ke surati hal\");stopText();ask();' onmouseover='$(this).css(\"cursor\", \"pointer\")' style='font-weight:500;font-style:italic;color:rgba(165,25,25,0.8);text-decoration:underline;'>news</a> bataa kay, ya koi <a onclick='$(\"#searchInput\").val(\"set a new reminder\");' onmouseover='$(this).css(\"cursor\", \"pointer\")' style='font-weight:500;font-style:italic;color:rgba(165,25,25,0.8);text-decoration:underline;'>reminder</a> set kar kay?"]; 
-       let res = msg[Math.floor(Math.random() * msg.length)];
-     $output.html(res); 
-     console.log(res); 
+       msg = randFrom(msg);
+     $output.html(msg); 
+     console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
    } else if (q15.test(q)) { 
      let ticTacToeWin = window.open( 
@@ -639,7 +639,7 @@
      $("#message").delay(10000).slideFadeToggle(800); 
    } else if (q18.test(q)) { 
      let calcApps = ["./girly-calc/", "./ayeshculator/"]
-     let calcAppsWin = window.open(calcApps[Math.floor(Math.random() * calcApps.length)], "_blank"); 
+     let calcAppsWin = window.open(randFrom(calcApps), "_blank"); 
      if (calcAppsWin) { 
        window.focus(); 
        log("Launched Calculator"); 
@@ -682,8 +682,8 @@
        window.focus(); 
        log("Launched Todo app"); 
        msg = ["kya kyaa yaad rakhna hey? Mujhe bataao. May ek robot hu, or aap ek insaan. Aap bhul saktay ho. Par may nahi.", "shopping ka samaan yaad rakhna hey? Aray koi baat nahi yaar, may bhala kab kaam augi? Abhi ek ek item idhar iss list may likh kar save kijiye"];
-       let res = msg[Math.floor(Math.random() * msg.length)];
-       playText(res);
+       msg = randFrom(msg);
+       playText(msg);
      } else { 
        alert("Please enable popups for this site!"); 
      } 
@@ -757,7 +757,7 @@
         }
         }
      let gamesWin = window.open( 
-       games[Math.floor(Math.random() * games.length)], 
+       randFrom(games), 
        "_blank" 
      ); 
      if (gamesWin) { 
@@ -978,7 +978,7 @@
      $output.html(msg); 
      let localAudioPlayers = ["../soundjam", "./girlPowerPlay"];
      let audioVisualizerWin = window.open( 
-       localAudioPlayers[Math.floor(Math.random() * localAudioPlayers.length)], 
+       randFrom(localAudioPlayers), 
        "_blank" 
      ); 
      if (audioVisualizerWin) { 
@@ -1395,7 +1395,7 @@
      $output.html(msg); 
    } else if (q76.test(q)) { 
      let passGenApps = ["./Passwordgen/", "./Passwordgen2"];
-     let pwGenAppWin = window.open(passGenApps[Math.floor(Math.random() * passGenApps.length)], "_blank"); 
+     let pwGenAppWin = window.open(randFrom(passGenApps), "_blank"); 
      if (pwGenAppWin) { 
        window.focus(); 
        log("Launched Password Generator"); 
@@ -1647,13 +1647,13 @@
        "./roseday", 
        ];
        let entertainmentAppsWin = window.open( 
-       entertainmentApps[Math.floor(Math.random() * entertainmentApps.length)], 
+       randFrom(entertainmentApps), 
        "_blank" 
      ); 
      if (entertainmentAppsWin) { 
        window.focus(); 
        log("Launched a random entertainment app!"); 
-       let arr = ["boar ho rahe ho? ab nahi hoge, may jo hoo aapko entertain karne ke lie. ye application use karo. or boriat bhagao", "boar ho rahe ho? abb ye bhi koi bolne wali baat hey? Abhi karti hu entertain aapko"];
+       let arr = ["boar ho rahe ho? ab nahi hoge, may jo hoo aapko entertain karne kay leeyay. yay application use karo. or boriat bhagaao", "boar ho rahe ho? abb ye bhi koi bolne wali baat hey? Abhi karti hu entertain aapko"];
        if (
     userName != null &&
     userName.length >= 3 &&
@@ -1662,7 +1662,7 @@
   ) {
   	arr[1] += `, ${userName} ji`;
   }
-       playText(arr[Math.floor(Math.random() * arr.length)]);
+       playText(randFrom(arr));
      } else { 
        alert("Please enable popups for this site!"); 
      } 
@@ -1838,7 +1838,7 @@
        log("Launched Feedback window BUT MAINLY FOR NEWS!!!");
        msg = "News chahi'yay. Bilkul dugi. Par ek shart par. Agar feedback do gay tou hee dugi";
        let arr = ["", ". May bhee ziddi hu"];
-       arr = msg += arr[Math.floor(Math.random() * arr.length)];
+       arr = msg += randFrom(arr);
        playText(msg);
      } else { 
        alert("Please enable popups for this site!"); 
@@ -1885,8 +1885,8 @@
     } else if (q129.test(q)) { 
      $("#message").slideFadeToggle(800); 
      msg = ["Leejiye, suniye" + lol, "Lo. Suno..." + smirk]; 
-     let res = msg[Math.floor(Math.random() * msg.length)];
-     $output.html(res); 
+     msg = randFrom(msg);
+     $output.html(msg); 
      sound("heartbeat");
      console.log(msg); 
      $("#message").delay(10000).slideFadeToggle(800); 
