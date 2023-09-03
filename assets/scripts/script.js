@@ -134,12 +134,12 @@ $(document).ready(function () {
   
   $("#disco").on("click", () => {
   	let $input = $("#searchInput");
-      let arr = ["entertain karo mujhe", "random fun", "music chalaao", "koi game chalaao", "ludo chalaao", "play smash cube"];
+      let arr = ["entertain karo mujhe", "random fun", "music chalaao", "koi game chalaao", "ludo chalaao", "play smash cube", "dictionary kholiye", "translate karo English ko Urdu me"];
   	$input.val(randFrom(arr));
       setTimeout(() => {
       	if (q94.test($input.val())) {
-      	stopText();
-      	$("#askBtn").click();
+      	    stopText();
+      	    $("#askBtn").click();
       }
       }, 3000);
   });
