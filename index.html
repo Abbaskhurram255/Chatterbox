@@ -64,7 +64,7 @@
       type="text/css"
     />
     <!-- stylesheet for Light Theme :: -->
-    <link class="lightTh" rel="stylesheet" href="assets/styles/light.css" />
+    <link class="lightTh" rel="stylesheet" href="assets/styles/light.css" type="text/css" />
     
     <!-- stylesheet for Dark Theme :: -->
     <!-- disabled! <link class="darkTh" rel="stylesheet" href="assets/styles/style.css" /> -->
@@ -73,9 +73,9 @@
     <script src="
 assets/scripts/sweetalert2.min.js">
     </script>
-    <link href="
+    <link rel="stylesheet" href="
 assets/styles/sweetalert2.min.css
-" rel="stylesheet" />
+" type="text/css" />
     
   </head>
   <body>
@@ -222,8 +222,8 @@ assets/styles/sweetalert2.min.css
     
         <!-- footer : -->
         <footer>
-        	<img id="disco" class="animated-disco" src="disco.gif" alt="disco ball" height="48" width="48" />
-            <img id="butterfly" class="animated-butterfly" src="buffly.gif" alt="butterfly" height="64" width="96" />
+        	<img id="disco" class="animated-disco disco-ball" src="disco.gif" alt="disco ball" height="48" width="48" />
+            <immg id="butterfly" class="animated-butterfly" src="buffly.gif" alt="butterfly" height="64" width="96" />
 	    </footer>
     </div>
     <!-- main app container end block /: -->
@@ -277,15 +277,15 @@ integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
     ></script>
     
     <!-- Loading Popper.js -->
-    <script src="assets/scripts/popper.min.js"></script>
+    <script defer src="assets/scripts/popper.min.js"></script>
     <!-- Loading Tippy.js -->
-    <script src="assets/scripts/tippy-bundle.umd.js"></script>
+    <script defer src="assets/scripts/tippy-bundle.umd.js"></script>
     
     <!-- Main scripts -->
     <script type="application/javascript" src="assets/scripts/script.js"></script>
-    <script type="application/javascript" src="assets/scripts/regexps_and_solutions.js"></script>
-    <script type="application/javascript" src="assets/scripts/emojis.js"></script>
-    <script type="application/javascript" src="assets/scripts/your_songs.js"></script>
+    <script type="application/javascript" defer src="assets/scripts/regexps_and_solutions.js"></script>
+    <script type="application/javascript" defer src="assets/scripts/emojis.js"></script>
+    <script type="application/javascript" defer src="assets/scripts/your_songs.js"></script>
 
 <!-- Registering sw.js/ service worker -->
     <script>
