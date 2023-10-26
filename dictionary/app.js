@@ -35,15 +35,14 @@ btn.addEventListener('click', () => {
                 <div class="details">
                     <p>${data[0].meanings[0].partOfSpeech}</p>
                     <p>${data[0].phonetic}</p>
-                </div>
-                <p class="word-meaning">`;
+                </div>`;
                 /*for (let x = 0; x < data[0].meanings.length; x++) {*/
                 	for (let y = 0; y < data[0].meanings[0].definitions.length; y++) {
-                	result.innerHTML += `${data[0].meanings[0].definitions[y].definition}<br />`;
+                	result.innerHTML += `<p class="word-meaning">${data[0].meanings[0].definitions[y].definition}</p><br />`;
                 if (isOdd(y)) result.innerHTML += '<br />';
                 /*}*/
                 }
-                result.innerHTML += `</p>
+                result.innerHTML += `
                 <p class="word-example">
                     ${data[0].meanings[0].definitions[0].
                     example || ""}
