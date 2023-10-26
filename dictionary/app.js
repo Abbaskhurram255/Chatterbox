@@ -50,7 +50,7 @@ btn.addEventListener('click', () => {
                 </p>
                  <p class="word-example">`;
                  for (let num = 0; num < data[0].meanings[0].synonyms.length; ++num) {
-                 	result.innerHTML += `<strong style="font-size:20px;color:green">:</strong> <span style="color: blue; text-decoration: underline;" id="synClick" onclick="document.querySelector('input').value=document.querySelectorAll('#synClick')[${num}].innerText; document.querySelector('#search-btn').click();">${data[0].meanings[0].synonyms[num] || ""}</span><br />`;
+                 	result.innerHTML += `<strong style="font-size:20px;color:green">:</strong> <synonym style="color: blue; text-decoration: underline;" id="synClick" onclick="document.querySelector('input').value=document.querySelectorAll('#synClick')[${num}].innerText; document.querySelector('#search-btn').click();">${data[0].meanings[0].synonyms[num] || ""}</synonym><br />`;
                  }
                     result.innerHTML += 
                 `</p>`;
@@ -88,7 +88,7 @@ document.body.onload = () => {
 
 
 function RandomObjectMover(obj, container) {
-	this.$object = obj;
+ 	this.$object = obj;
   this.$container = container;
   this.container_is_window = container === window;
   this.pixels_per_second = 250/4;
