@@ -38,7 +38,7 @@ btn.addEventListener('click', () => {
                 </div>`;
                 /*for (let x = 0; x < data[0].meanings.length; x++) {*/
                 	for (let y = 0; y < data[0].meanings[0].definitions.length; y++) {
-                	result.innerHTML += `<p class="word-meaning">${data[0].meanings[0].definitions[y].definition}</p><br />`;
+                	result.innerHTML += `<p class="word-meaning">${data[0].meanings[0].definitions[y].definition}</p>`;
                 if (isOdd(y)) result.innerHTML += '<br />';
                 /*}*/
                 }
@@ -123,7 +123,7 @@ RandomObjectMover.prototype._generateNewPosition = function() {
 }
 
 RandomObjectMover.prototype._calcDelta = function(a, b) {
-	var dx   = a.x - b.x;         
+  var dx   = a.x - b.x;         
   var dy   = a.y - b.y;         
   var dist = Math.sqrt( dx*dx + dy*dy ); 
   return dist;
